@@ -25,11 +25,19 @@
   top: 50%
   left: 50%
   transform: translate(-50%, -50%)
+  @include m.flex($jc: center, $ai: center)
   max-width: 30%
-  // @include m.gap($p: f.px(19))
-  @include m.gap($p: f.px(19))
+  @include m.media(laptop, desktop)
+    min-width: f.px(170)
+    min-height: f.px(170)
+  @include m.gap($p: f.px(20))
   border-radius: 50%
   @include m.dye(bg, c.$nu)
+  // @include m.media(phone, tablet)
+  //   max-width: 30%
+  @include m.media(laptop, desktop)
+    & > *
+      max-width: f.px(113)
 
 .top
   position: absolute
@@ -46,7 +54,7 @@
 .right
   position: absolute
   top: 50%
-  right: 5%
+  right: 4%
   max-width: 16ch
   transform: translateY(-50%)
 
@@ -70,7 +78,7 @@
   @include m.media(tablet)
     left: 8%
   @include m.media(laptop)
-    left: 6%
+    left: 3%
   @include m.media(desktop)
     left: 5%
   max-width: 17ch
