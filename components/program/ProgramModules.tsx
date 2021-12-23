@@ -11,13 +11,15 @@ const ProgramModules = () => {
   return (
     <ul className={stls.container}>
       {shortContents &&
-        shortContents.map(({ title, ShortContentsDescs }, idx) => (
-          <ProgramModule
-            key={title + idx}
-            title={title}
-            ShortContentsDescs={ShortContentsDescs}
-          />
-        ))}
+        shortContents
+          .filter((item, idx) => idx < 5)
+          .map(({ title, ShortContentsDescs }, idx) => (
+            <ProgramModule
+              key={title + idx}
+              title={title}
+              ShortContentsDescs={ShortContentsDescs}
+            />
+          ))}
     </ul>
   )
 }
