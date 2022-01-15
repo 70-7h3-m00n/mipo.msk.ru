@@ -55,7 +55,7 @@ const handleGetStaticProps = async ({
     //   ]
     // })[0]
 
-    program = programRes.data
+    program = programRes ? programRes.data : {}
   }
 
   return {
