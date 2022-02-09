@@ -1,10 +1,10 @@
 import stls from '@/styles/components/sections/ForWhom.module.sass'
-import Wrapper from '@/components/layout/Wrapper'
-import ProgramContext from '@/context/program/programContext'
 import { useContext } from 'react'
 import parse from 'html-react-parser'
 import marked from 'marked'
 import { getImageHeight } from '@/helpers/index'
+import ProgramContext from '@/context/program/programContext'
+import Wrapper from '@/components/layout/Wrapper'
 import { ImgForWhom, ImgForWhomPhoneTablet } from '@/components/imgs'
 
 const ForWhom = () => {
@@ -23,29 +23,29 @@ const ForWhom = () => {
           </div>
           <ImgForWhom
             classNames={[stls.imageLaptopDesktop]}
-            src={program.forWhomPicture && program.forWhomPicture.url}
-            width={program.forWhomPicture?.width && 523}
+            src={program?.forWhomPicture?.url}
+            width={program?.forWhomPicture?.width && 523}
             height={getImageHeight({
               width: 523,
-              widthInitial: program.forWhomPicture?.width,
-              heightInitial: program.forWhomPicture?.height
+              widthInitial: program?.forWhomPicture?.width,
+              heightInitial: program?.forWhomPicture?.height
             })}
           />
           <ImgForWhomPhoneTablet
             classNames={[stls.imagePhoneTablet]}
-            src={program.forWhomPicture && program.forWhomPicture.url}
-            width={program.forWhomPicture?.width && 708}
+            src={program?.forWhomPicture && program?.forWhomPicture?.url}
+            width={program?.forWhomPicture?.width && 708}
             height={getImageHeight({
               width: 708,
-              widthInitial: program.forWhomPicture?.width,
-              heightInitial: program.forWhomPicture?.height
+              widthInitial: program?.forWhomPicture?.width,
+              heightInitial: program?.forWhomPicture?.height
             })}
           />
         </div>
         <div className={stls.right}>
           <ul className={stls.list}>
-            {program.forWhom &&
-              program.forWhom.map(({ title, desc }, idx) => (
+            {program?.forWhom &&
+              program?.forWhom.map(({ title, desc }, idx) => (
                 <li key={title + idx} className={stls.item}>
                   {title && (
                     <div className={stls.itemTitle}>{parse(marked(title))}</div>
@@ -53,7 +53,7 @@ const ForWhom = () => {
                   {desc && (
                     <div className={stls.itemDesc}>{parse(marked(desc))}</div>
                   )}
-                  {program.forWhom[idx + 1] && (
+                  {program?.forWhom[idx + 1] && (
                     <div className={stls.divider}></div>
                   )}
                 </li>
