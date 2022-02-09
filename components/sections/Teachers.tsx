@@ -1,40 +1,31 @@
 import stls from '@/styles/components/sections/Teachers.module.sass'
-import Wrapper from '@/components/layout/Wrapper'
-import SwiperContainer from '@/components/general/SwiperContainer'
-import CardTeacher from '@/components/cards/CardTeacher'
-import BtnDelta from '@/components/btns/BtnDelta'
-import { ImgTeacher, ImgTeacher1 } from '@/components/imgs'
-import ProgramContext from '@/context/program/programContext'
 import { useContext } from 'react'
+import { getImageHeight } from '@/helpers/index'
+import ProgramContext from '@/context/program/programContext'
 import PopupTrigger from '@/components/general/PopupTrigger'
+import SwiperContainer from '@/components/general/SwiperContainer'
+import Wrapper from '@/components/layout/Wrapper'
+import CardTeacher from '@/components/cards/CardTeacher'
+import { ImgTeacher } from '@/components/imgs'
 
 const Teachers = () => {
-  const {
-    program: { teachers }
-  } = useContext(ProgramContext)
+  const { program } = useContext(ProgramContext)
 
   const list =
-    teachers &&
-    teachers.map(teacher => {
+    program?.teachers &&
+    program?.teachers?.map(teacher => {
       teacher.image = (
         <ImgTeacher
-          src={
-            teacher.portrait?.formats?.small?.url ||
-            teacher.portrait?.formats?.thumbnail?.url
-          }
-          alt={teacher.name}
-          width={
-            teacher.portrait?.formats?.small?.width ||
-            teacher.portrait?.formats?.thumbnail?.width
-          }
-          height={
-            teacher.portrait?.formats?.small?.height ||
-            teacher.portrait?.formats?.thumbnail?.height
-          }
+          src={teacher?.portrait?.url}
+          alt={teacher?.name}
+          width={teacher?.portrait?.width && 160}
+          height={getImageHeight({
+            width: 160,
+            widthInitial: teacher?.portrait?.width,
+            heightInitial: teacher?.portrait?.height
+          })}
         />
       )
-      // <ImgTeacher1 name='Иванов Иван Иванович' />
-      // item.formats.small.url
       return teacher
     })
 
@@ -42,11 +33,11 @@ const Teachers = () => {
     list &&
     list.map((teacher, idx) => (
       <CardTeacher
-        key={teacher.name + idx}
-        portrait={teacher.image}
-        name={teacher.name}
-        specialization={teacher.specialization}
-        achievements={teacher.achievements}
+        key={teacher?.name + idx}
+        portrait={teacher?.image}
+        name={teacher?.name}
+        specialization={teacher?.specialization}
+        achievements={teacher?.achievements}
       />
     ))
 

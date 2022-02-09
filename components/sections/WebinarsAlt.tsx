@@ -2,6 +2,7 @@ import stls from '@/styles/components/sections/WebinarsAlt.module.sass'
 import Wrapper from '@/components/layout/Wrapper'
 import classNames from 'classnames'
 import Popup from 'reactjs-popup'
+import { getImageHeight } from '@/helpers/index'
 import PopupTrigger from '@/components/general/PopupTrigger'
 import { PopupCta } from '@/components/popups'
 import CardWebinarAlt from '@/components/cards/CardWebinarAlt'
@@ -24,17 +25,21 @@ const WebinarsAlt = ({ webinars = null }: WebinarsAltType) => {
                   trigger={
                     <div className={stls.trigger}>
                       <CardWebinarAlt
-                        date={webinar.date}
-                        name={webinar.name}
+                        date={webinar?.date}
+                        name={webinar?.name}
                         picture={
                           <ImgWebinar
-                            src={webinar.picture?.formats?.thumbnail?.url}
-                            alt={webinar.title}
-                            width={webinar.picture?.formats?.thumbnail?.width}
-                            height={webinar.picture?.formats?.thumbnail?.height}
+                            src={webinar?.picture?.url}
+                            alt={webinar?.title}
+                            width={webinar?.picture?.width && 70}
+                            height={getImageHeight({
+                              width: 70,
+                              widthInitial: webinar?.picture?.width,
+                              heightInitial: webinar?.picture?.height
+                            })}
                           />
                         }
-                        title={webinar.title}
+                        title={webinar?.title}
                       />
                     </div>
                   }
