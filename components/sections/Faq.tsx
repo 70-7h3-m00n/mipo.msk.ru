@@ -6,9 +6,7 @@ import { useContext } from 'react'
 import PopupTrigger from '@/components/general/PopupTrigger'
 
 const Faq = () => {
-  const {
-    program: { questions }
-  } = useContext(ProgramContext)
+  const { program } = useContext(ProgramContext)
 
   // const topics = getListItemsInnerHtml(questions)
   // const titles = getParagraphInnerHtml(questions)
@@ -37,8 +35,8 @@ const Faq = () => {
 
         <div className={stls.content}>
           <ul className={stls.list}>
-            {questions &&
-              questions.map(({ question, answer }, idx) => (
+            {program?.questions &&
+              program.questions.map(({ question, answer }, idx) => (
                 <FaqAnswer
                   key={question + idx}
                   question={question}

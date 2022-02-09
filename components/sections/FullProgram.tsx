@@ -1,6 +1,5 @@
 import stls from '@/styles/components/sections/FullProgram.module.sass'
 import Wrapper from '@/components/layout/Wrapper'
-import { BtnAlpha } from '@/components/btns'
 import { ImgFullProgram1 } from '@/components/imgs'
 import PopupTrigger from '@/components/general/PopupTrigger'
 
@@ -20,7 +19,7 @@ const FullProgram = () => {
             </p>
           </div>
           <div className={stls.btn}>
-            <PopupTrigger btn='gamma' cta='submitApplication' />
+            <PopupTrigger btn='gamma' cta='getProgram' />
           </div>
         </div>
       </Wrapper>

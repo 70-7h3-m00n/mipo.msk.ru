@@ -12,9 +12,7 @@ import ProgramAdmission from '@/components/program/ProgramAdmission'
 import ProgramStudyDuration from '@/components/program/ProgramStudyDuration'
 
 const StudyCost = () => {
-  const {
-    program: { title, study_form, timenprice }
-  } = useContext(ProgramContext)
+  const { program } = useContext(ProgramContext)
 
   const info = [
     { key: 'Зачисление:', val: <ProgramAdmission /> },
@@ -24,13 +22,15 @@ const StudyCost = () => {
     // },
     {
       key: 'Форма обучения:',
-      val: study_form && study_form.label
+      val: program?.study_form && program?.study_form.label
     },
     {
       key: 'Срок обучения:',
       val: (
         <ProgramStudyDuration
-          studyMonthsDuration={timenprice && timenprice[0].studyMonthsDuration}
+          studyMonthsDuration={
+            program?.timenprice && program.timenprice?.[0]?.studyMonthsDuration
+          }
         />
       )
     }
@@ -55,7 +55,7 @@ const StudyCost = () => {
         <div className={stls.content}>
           <div className={stls.left}>
             <div className={stls.heading}>
-              <h3 className={stls.subtitle}>{title}</h3>
+              <h3 className={stls.subtitle}>{program?.title}</h3>
               <div className={stls.info}>
                 {info.map((item, idx) => (
                   <div key={item.key + idx} className={stls.infoitem}>

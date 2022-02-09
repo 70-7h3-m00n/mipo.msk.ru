@@ -25,9 +25,7 @@ type PagesProgramType = {
 }
 
 const PagesProgram = ({ ofType = null }: PagesProgramType) => {
-  const {
-    program: { resumeTitle, entrySalary, resumeSkills }
-  } = useContext(ProgramContext)
+  const { program } = useContext(ProgramContext)
 
   return (
     <>
@@ -39,9 +37,10 @@ const PagesProgram = ({ ofType = null }: PagesProgramType) => {
       {/* <YourDiploma ofType={ofType} /> */}
       <BriefProgramContents />
       <FullProgram />
-      {ofType !== 'course' && resumeTitle && entrySalary && resumeSkills && (
-        <YourResume />
-      )}
+      {ofType !== 'course' &&
+        program?.resumeTitle &&
+        program?.entrySalary &&
+        program?.resumeSkills && <YourResume />}
       {ofType !== 'course' && <YourFutureJob />}
       <Teachers />
       <Cta

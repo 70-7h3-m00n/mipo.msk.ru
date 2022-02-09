@@ -5,17 +5,15 @@ import ProgramContext from '@/context/program/programContext'
 import { useContext } from 'react'
 
 const WhatYouWillLearn = () => {
-  const {
-    program: { whatYouWillLearn }
-  } = useContext(ProgramContext)
+  const { program } = useContext(ProgramContext)
 
   return (
     <section className={stls.container}>
       <Wrapper>
         <h2 className={stls.title}>Чему вы научитесь</h2>
         <ul className={stls.whatYouWillLearn}>
-          {whatYouWillLearn &&
-            whatYouWillLearn.map(({ item }, idx) => (
+          {program?.whatYouWillLearn &&
+            program.whatYouWillLearn.map(({ item }, idx) => (
               <li key={item + idx} className={stls.item}>
                 <div className={stls.icon}>
                   <IconCircleCheck calpha />

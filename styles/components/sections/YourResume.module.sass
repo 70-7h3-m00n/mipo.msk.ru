@@ -67,6 +67,8 @@
 .heading
   @include m.media(phone, tablet)
     @include m.gap($mb: f.px(13))
+  @include m.media(laptop, desktop)
+    max-width: 50%
 
 .p
   @include m.gap($mb: f.px(5))

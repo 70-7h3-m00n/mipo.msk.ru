@@ -13,9 +13,7 @@ import PopupTrigger from '@/components/general/PopupTrigger'
 import { getImageHeight } from '@/helpers/index'
 
 const HeroProgram = () => {
-  const {
-    program: { title, description, heroPicture }
-  } = useContext(ProgramContext)
+  const { program } = useContext(ProgramContext)
 
   const { curProgramsType } = useContext(ProgramsContext)
   return (
@@ -26,9 +24,9 @@ const HeroProgram = () => {
             <div className={stls.label}>
               <ProgramLabel />
             </div>
-            <h1 className={stls.title}>{title}</h1>
+            <h1 className={stls.title}>{program?.title}</h1>
             <div className={stls.descriptionDesktop}>
-              {description && parse(marked(description))}
+              {program?.description && parse(marked(program.description))}
             </div>
             <div className={stls.btnsDesktop}>
               <PopupTrigger
@@ -52,18 +50,18 @@ const HeroProgram = () => {
             </div>
             <div className={stls.img}>
               <ImgCourse
-                src={heroPicture?.url}
-                width={heroPicture?.width && 676}
+                src={program?.heroPicture?.url}
+                width={program?.heroPicture?.width && 676}
                 height={getImageHeight({
                   width: 676,
-                  widthInitial: heroPicture?.width,
-                  heightInitial: heroPicture?.height
+                  widthInitial: program?.heroPicture?.width,
+                  heightInitial: program?.heroPicture?.height
                 })}
               />
             </div>
           </div>
           <div className={stls.descriptionMobile}>
-            {description && parse(description)}
+            {program?.description && parse(program.description)}
           </div>
         </div>
         <div className={stls.btnsMobile}>

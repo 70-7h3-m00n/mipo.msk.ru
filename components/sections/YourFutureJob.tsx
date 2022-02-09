@@ -11,9 +11,7 @@ import ProgramContext from '@/context/program/programContext'
 import { useContext } from 'react'
 
 const YourFutureJob = () => {
-  const {
-    program: { jobTitles }
-  } = useContext(ProgramContext)
+  const { program } = useContext(ProgramContext)
 
   return (
     <section className={stls.container}>
@@ -23,8 +21,8 @@ const YourFutureJob = () => {
           <div>
             <p className={stls.subtitle}>В результате обучения вы:</p>
             <ul className={stls.jobTitles}>
-              {jobTitles &&
-                jobTitles.map(({ title }, idx) => (
+              {program?.jobTitles &&
+                program?.jobTitles.map(({ title }, idx) => (
                   <li key={title + idx} className={stls.item}>
                     <p className={stls.p}>{title}</p>
                   </li>
