@@ -50,7 +50,7 @@
   @include m.media(phone, tablet)
     @include m.flex($fd: column)
   @include m.media(laptop, desktop)
-    @include m.flex($ai: flex-start)
+    @include m.flex($jc: space-between, $ai: flex-start)
   @include m.gap($p: f.px(21))
   box-shadow: 0 f.px(4) f.px(74) rgba(0, 0, 0, 0.05)
   border-radius: f.px(20)
@@ -58,9 +58,11 @@
 .diploma
   border-radius: f.px(6)
   overflow: hidden
+  @include m.media(laptop, desktop)
+    max-width: 50% - 1.8%
 
 .diploma1
   @include m.media(phone, tablet)
     @include m.gap($mb: f.px(14))
   @include m.media(laptop, desktop)
-    @include m.gap($mr: f.px(20))
+    @include m.gap($mr: 1.8%)

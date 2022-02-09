@@ -1,19 +1,17 @@
 import stls from '@/styles/components/imgs/diplomas/ImgCertificate.module.sass'
-import Image from 'next/image'
+import { TypeImg } from '@/types/index'
+import { ImgTemplate } from '@/components/imgs'
 import pic from '@/public/assets/imgs/diplomas/certificate.jpg'
 
-const ImgCertificate = ({ width = 0, height = 0 }) => {
+const ImgCertificate = ({ classNames = [], width, height }: TypeImg) => {
   return (
-    <div className={stls.container}>
-      <Image
-        src={pic}
-        alt='Сертификат'
-        className={stls.img}
-        width={width !== 0 && width}
-        height={height !== 0 && height}
-        placeholder='blur'
-      />
-    </div>
+    <ImgTemplate
+      classNames={classNames}
+      src={pic}
+      alt='Сертификат'
+      width={width}
+      height={height}
+    />
   )
 }
 

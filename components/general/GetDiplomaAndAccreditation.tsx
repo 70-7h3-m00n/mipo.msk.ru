@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { BtnIota, BtnKappa } from '@/components/btns'
 import {
   ImgDiploma,
-  ImgApplication,
+  ImgCertificate,
   ImgSupplement,
   ImgSupplementBack
 } from '@/components/imgs'
@@ -58,7 +58,7 @@ const GetDiplomaAndAccreditation = () => {
         ) : (
           <>
             <ImgDiploma classNames={[stls.diploma, stls.diploma1]} />
-            <ImgApplication classNames={[stls.diploma, stls.diploma2]} />
+            <ImgCertificate classNames={[stls.diploma, stls.diploma2]} />
           </>
         )}
       </div>
