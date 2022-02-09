@@ -8,7 +8,7 @@ const ImgApplication = ({ classNames = [], width, height }: TypeImg) => {
     <ImgTemplate
       classNames={classNames}
       src={pic}
-      alt='Приложение к диплому'
+      alt='Сапплемент'
       width={width}
       height={height}
     />

@@ -3,14 +3,14 @@ const seo = {
     type: 'website',
     locale: 'ru',
     url: 'https://mipo.msk.ru',
-    site_name: 'MIP'
+    site_name: 'МИПО'
   },
   // twitter: {
   //   handle: '@handle',
   //   site: '@site',
   //   cardType: 'summary_large_image',
   // },
-  defaultTitle: 'Московский Институт Психологии',
+  defaultTitle: 'Московский Институт Профессионального Образования',
   description:
     'Получи новую профессию или повысь квалификацию по своему нынешнему направлению дистанционно',
   canonical: 'https://mipo.msk.ru'

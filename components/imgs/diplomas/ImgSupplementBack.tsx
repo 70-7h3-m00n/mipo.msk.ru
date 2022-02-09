@@ -8,7 +8,7 @@ const ImgSupplementBack = ({ classNames = [], width, height }: TypeImg) => {
     <ImgTemplate
       classNames={classNames}
       src={pic}
-      alt='Приложение оборот'
+      alt='Сапплемент оборот'
       width={width}
       height={height}
     />

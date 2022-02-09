@@ -8,7 +8,8 @@ const FooterBottom = () => {
     <div className={stls.container}>
       <Wrapper>
         <p className={stls.copy}>
-          &copy; Московский Институт Психологии, {new Date().getFullYear()}
+          &copy; Московский Институт Профессионального Образования,{' '}
+          {new Date().getFullYear()}
         </p>
         <a
           href={routePoliciesTerms}

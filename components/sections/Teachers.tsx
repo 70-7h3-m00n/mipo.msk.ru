@@ -65,7 +65,7 @@ const Teachers = () => {
       <Wrapper>
         <h2 className={stls.title}>Преподаватели программы</h2>
         <p className={stls.desc}>
-          Преподают ведущие практикующие психологи и психоаналитики России{' '}
+          Преподают ведущие практикующие специалисты{' '}
           <span className={stls.highlight}>с опытом от 7 до 25 лет</span>
         </p>
         <div className={stls.teachers}>

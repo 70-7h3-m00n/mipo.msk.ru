@@ -8,7 +8,7 @@ const ImgForWhom = ({ classNames = [], src, alt, width, height }: TypeImg) => {
     <ImgTemplate
       classNames={classNames}
       src={defaultSrc}
-      alt={alt || 'Психолог в работе'}
+      alt={alt || 'Человек в работе'}
       width={width}
       height={height}
     />

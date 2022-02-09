@@ -31,7 +31,7 @@ const GetDiplomaAndAccreditation = () => {
             <BtnIota
               classNames={[stls.btn, stls.btn2]}
               onClick={() => setIsSupplement(true)}>
-              Приложение
+              Сапплемент
             </BtnIota>
           </>
         ) : (
@@ -44,7 +44,7 @@ const GetDiplomaAndAccreditation = () => {
             <BtnKappa
               classNames={[stls.btn, stls.btn2]}
               onClick={() => setIsSupplement(true)}>
-              Приложение
+              Сапплемент
             </BtnKappa>
           </>
         )}

@@ -24,7 +24,7 @@ const Webinars = ({ standalone = false }: WebinarsType) => {
       },
       name: 'Светлана Сергеева',
       photo: <ImgPortrait1 />,
-      topic: 'Семейная психология',
+      topic: 'Исследуем аудиторию и разрабатываем учебную программу',
       bgColor: 'cepsilon'
     },
     {
@@ -36,7 +36,7 @@ const Webinars = ({ standalone = false }: WebinarsType) => {
       },
       name: 'Селиванов Иван',
       photo: <ImgPortrait2 />,
-      topic: 'Кризисный психолог',
+      topic: 'Создаём продающий контент',
       bgColor: 'csigma',
       hex: '#F5FCFE'
     },
@@ -49,7 +49,7 @@ const Webinars = ({ standalone = false }: WebinarsType) => {
       },
       name: 'Сухарев Марк',
       photo: <ImgPortrait3 />,
-      topic: 'Психоанализ и психологическое консультирование',
+      topic: 'Погружаемся в машинное обучение',
       bgColor: 'cpi'
     }
   ]

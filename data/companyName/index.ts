@@ -1,3 +1,3 @@
-const companyName = 'Московский Институт Психологии'
+const companyName = 'Московский Институт Профессионального Образования'
 
 export default companyName

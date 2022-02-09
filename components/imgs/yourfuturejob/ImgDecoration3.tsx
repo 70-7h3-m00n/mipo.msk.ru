@@ -7,7 +7,7 @@ const ImgDecoration3 = ({ width = 0, height = 0 }) => {
     <div className={stls.container}>
       <Image
         src={pic}
-        alt='Психолог работает удалённо'
+        alt='Человек работает удалённо'
         className={stls.img}
         width={width !== 0 && width}
         height={height !== 0 && height}
