@@ -16,7 +16,7 @@ const BtnAlpha = ({
           })}
           href={href}
           target={target}
-          rel={target && 'noopener noreferrer'}>
+          rel={target === '_blank' ? 'noopener noreferrer' : undefined}>
           {text}
         </a>
       ) : (
