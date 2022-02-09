@@ -15,6 +15,7 @@ import getCasedRuYearString from '@/helpers/getCasedRuYearString'
 import getCasesRuCourseString from '@/helpers/getCasesRuCourseString'
 import getCasesRuProfessionString from '@/helpers/getCasesRuProfessionString'
 import getClassNames from '@/helpers/getClassNames'
+import getImageHeight from '@/helpers/getImageHeight'
 import getListItemsInnerHtml from '@/helpers/getListItemsInnerHtml'
 import getParagraphInnerHtml from '@/helpers/getParagraphInnerHtml'
 import getProgram from '@/helpers/getProgram'
@@ -49,6 +50,7 @@ export {
   getCasesRuCourseString,
   getCasesRuProfessionString,
   getClassNames,
+  getImageHeight,
   getListItemsInnerHtml,
   getParagraphInnerHtml,
   getProgram,

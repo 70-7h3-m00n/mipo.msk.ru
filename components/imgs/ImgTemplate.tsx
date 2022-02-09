@@ -27,8 +27,8 @@ const ImgTemplate = ({
         <Image
           src={src}
           alt={alt}
-          width={width}
-          height={height}
+          width={width || undefined}
+          height={height || undefined}
           className={stls.img}
           placeholder='blur'
           blurDataURL={base64pixel}
