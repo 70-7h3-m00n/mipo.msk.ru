@@ -14,6 +14,7 @@ import ImgPortrait1 from '@/components/imgs/webinars/ImgPortrait1'
 import ImgPortrait2 from '@/components/imgs/webinars/ImgPortrait2'
 import ImgPortrait3 from '@/components/imgs/webinars/ImgPortrait3'
 import ImgWebinar from '@/components/imgs/webinars/ImgWebinar'
+import ImgCourse from '@/components/imgs/programs/courses/ImgCourse'
 import ImgCourse1 from '@/components/imgs/programs/courses/ImgCourse1'
 import ImgCourse2 from '@/components/imgs/programs/courses/ImgCourse2'
 import ImgResume1 from '@/components/imgs/resume/ImgResume1'
@@ -57,6 +58,7 @@ export {
   ImgPortrait2,
   ImgPortrait3,
   ImgWebinar,
+  ImgCourse,
   ImgCourse1,
   ImgCourse2,
   ImgResume1,

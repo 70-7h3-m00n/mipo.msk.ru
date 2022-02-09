@@ -2,7 +2,7 @@ import stls from '@/styles/components/sections/HeroProgram.module.sass'
 import Wrapper from '@/components/layout/Wrapper'
 import ProgramLabel from '@/components/program/ProgramLabel'
 import ProgramDiscount from '@/components/program/ProgramDiscount'
-import { ImgCourse2 } from '@/components/imgs'
+import { ImgCourse } from '@/components/imgs'
 import ProgramInfo from '@/components/program/ProgramInfo'
 import ProgramContext from '@/context/program/programContext'
 import ProgramsContext from '@/context/programs/programsContext'
@@ -10,10 +10,11 @@ import { useContext } from 'react'
 import parse from 'html-react-parser'
 import marked from 'marked'
 import PopupTrigger from '@/components/general/PopupTrigger'
+import { getImageHeight } from '@/helpers/index'
 
 const HeroProgram = () => {
   const {
-    program: { title, description }
+    program: { title, description, heroPicture }
   } = useContext(ProgramContext)
 
   const { curProgramsType } = useContext(ProgramsContext)
@@ -50,7 +51,15 @@ const HeroProgram = () => {
               <ProgramDiscount />
             </div>
             <div className={stls.img}>
-              <ImgCourse2 />
+              <ImgCourse
+                src={heroPicture?.url}
+                width={heroPicture?.width && 676}
+                height={getImageHeight({
+                  width: 676,
+                  widthInitial: heroPicture?.width,
+                  heightInitial: heroPicture?.height
+                })}
+              />
             </div>
           </div>
           <div className={stls.descriptionMobile}>
