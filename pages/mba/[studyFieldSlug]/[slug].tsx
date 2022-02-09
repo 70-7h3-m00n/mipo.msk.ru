@@ -1,30 +1,22 @@
-import ProgramsContext from '@/context/programs/programsContext'
-import ProgramContext from '@/context/program/programContext'
-import { useContext, useEffect } from 'react'
 import {
-  fetchPrograms,
-  getProgram,
   handleGetStaticProps,
   handleGetStaticPathsPrograms
 } from '@/helpers/index'
 import { NextSeo } from 'next-seo'
 import truncate from 'truncate'
-import { routesFront, revalidate } from '@/config/index'
+import { routesFront } from '@/config/index'
+import { usePageHandleContext } from '@/hooks/index'
 import { routeMBA } from '@/data/routes'
 import companyName from '@/data/companyName'
 import { PagesProgram } from '@/components/pages'
 
 const MBAPage = ({ programs, program, studyFieldSlug }) => {
-  const { setPrograms, setCurProgramsType, setCurProgramsStudyFieldSlug } =
-    useContext(ProgramsContext)
-  const { setProgram } = useContext(ProgramContext)
-
-  useEffect(() => {
-    setPrograms(programs)
-    setProgram(program)
-    setCurProgramsType('mba')
-    setCurProgramsStudyFieldSlug(studyFieldSlug)
-  }, [programs, program, studyFieldSlug])
+  usePageHandleContext({
+    programs,
+    program,
+    curProgramsType: 'mba',
+    curProgramsStudyFieldSlug: studyFieldSlug
+  })
 
   return (
     <>

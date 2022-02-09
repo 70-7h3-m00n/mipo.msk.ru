@@ -1,5 +1,5 @@
 import ProgramsContext from '@/context/programs/programsContext'
-import { useContext, useEffect } from 'react'
+import { useContext } from 'react'
 import {
   handleGetStaticPathsStudyFields,
   handleGetStaticProps
@@ -7,23 +7,19 @@ import {
 import { NextSeo } from 'next-seo'
 import truncate from 'truncate'
 import { routesFront } from '@/config/index'
+import { usePageHandleContext } from '@/hooks/index'
 import { routeProfessions } from '@/data/routes'
 import companyName from '@/data/companyName'
 import { PagesPrograms } from '@/components/pages'
 
 const ProfessionsStudyFieldPage = ({ programs, studyFieldSlug }) => {
-  const {
-    setPrograms,
-    setCurProgramsType,
-    setCurProgramsStudyFieldSlug,
-    studyFields
-  } = useContext(ProgramsContext)
+  const { studyFields } = useContext(ProgramsContext)
 
-  useEffect(() => {
-    setPrograms(programs)
-    setCurProgramsType('profession')
-    setCurProgramsStudyFieldSlug(studyFieldSlug)
-  }, [programs, studyFieldSlug])
+  usePageHandleContext({
+    programs,
+    curProgramsType: 'profession',
+    curProgramsStudyFieldSlug: studyFieldSlug
+  })
 
   const studyFieldLabel =
     studyFields.filter(studyField => studyField.slug === studyFieldSlug)[0]

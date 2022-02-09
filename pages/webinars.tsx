@@ -1,22 +1,14 @@
 import { handleGetStaticProps } from '@/helpers/index'
-import ProgramsContext from '@/context/programs/programsContext'
-import { useContext, useEffect } from 'react'
 import { NextSeo } from 'next-seo'
 import truncate from 'truncate'
 import { routesFront } from '@/config/index'
+import { usePageHandleContext } from '@/hooks/index'
 import { routeWebinars } from '@/data/routes'
 import companyName from '@/data/companyName'
 import { WebinarsAlt } from '@/components/sections'
 
 const WebinarsPage = ({ programs, webinars }) => {
-  const { setPrograms, setCurProgramsType, setCurProgramsStudyFieldSlug } =
-    useContext(ProgramsContext)
-
-  useEffect(() => {
-    setPrograms(programs)
-    setCurProgramsType(null)
-    setCurProgramsStudyFieldSlug(null)
-  }, [])
+  usePageHandleContext({ programs })
 
   return (
     <>

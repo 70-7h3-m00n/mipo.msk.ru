@@ -1,9 +1,8 @@
 import { handleGetStaticProps } from '@/helpers/index'
-import ProgramsContext from '@/context/programs/programsContext'
 import { NextSeo } from 'next-seo'
 import truncate from 'truncate'
-import { Fragment, useContext, useEffect } from 'react'
 import { routesFront } from '@/config/index'
+import { usePageHandleContext } from '@/hooks/index'
 import { routeHome } from '@/data/routes'
 import companyName from '@/data/companyName'
 import {
@@ -19,14 +18,7 @@ import {
 } from '@/components/sections'
 
 const HomePage = ({ programs, reviews }) => {
-  const { setPrograms, setCurProgramsType, setCurProgramsStudyFieldSlug } =
-    useContext(ProgramsContext)
-
-  useEffect(() => {
-    setPrograms(programs)
-    setCurProgramsType(null)
-    setCurProgramsStudyFieldSlug(null)
-  }, [])
+  usePageHandleContext({ programs })
 
   return (
     <>

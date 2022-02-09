@@ -1,9 +1,8 @@
 import stls from '@/styles/pages/Legal.module.sass'
-import ProgramsContext from '@/context/programs/programsContext'
-import { useContext, useEffect } from 'react'
 import { NextSeo } from 'next-seo'
 import truncate from 'truncate'
 import { routesFront } from '@/config/index'
+import { usePageHandleContext } from '@/hooks/index'
 import { routeLegal } from '@/data/routes'
 import companyName from '@/data/companyName'
 import { handleGetStaticProps } from '@/helpers/index'
@@ -16,14 +15,7 @@ import {
 } from '@/components/sections'
 
 const LegalPage = ({ programs }) => {
-  const { setPrograms, setCurProgramsType, setCurProgramsStudyFieldSlug } =
-    useContext(ProgramsContext)
-
-  useEffect(() => {
-    setPrograms(programs)
-    setCurProgramsType(null)
-    setCurProgramsStudyFieldSlug(null)
-  }, [])
+  usePageHandleContext({ programs })
 
   return (
     <>

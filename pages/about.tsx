@@ -1,22 +1,14 @@
 import About from '@/components/sections/About'
-import { handleGetStaticProps } from '@/helpers/index'
-import ProgramsContext from '@/context/programs/programsContext'
-import { useContext, useEffect, useCallback } from 'react'
 import { NextSeo } from 'next-seo'
 import truncate from 'truncate'
+import { handleGetStaticProps } from '@/helpers/index'
 import { routesFront } from '@/config/index'
+import { usePageHandleContext } from '@/hooks/index'
 import { routeAbout } from '@/data/routes'
 import companyName from '@/data/companyName'
 
 const AboutPage = ({ programs }) => {
-  const { setPrograms, setCurProgramsType, setCurProgramsStudyFieldSlug } =
-    useContext(ProgramsContext)
-
-  useEffect(() => {
-    setPrograms(programs)
-    setCurProgramsType(null)
-    setCurProgramsStudyFieldSlug(null)
-  }, [])
+  usePageHandleContext({ programs })
 
   return (
     <>
