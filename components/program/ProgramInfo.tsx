@@ -11,9 +11,7 @@ import {
 } from '@/components/icons'
 
 const ProgramInfo = () => {
-  const {
-    program: { study_form, timenprice }
-  } = useContext(ProgramContext)
+  const { program } = useContext(ProgramContext)
 
   const vals = [
     {
@@ -23,19 +21,21 @@ const ProgramInfo = () => {
     },
     {
       key: 'Количество часов:',
-      val: `${timenprice && timenprice[0].studyHours} ч`,
+      val: `${program?.timenprice && program?.timenprice?.[0]?.studyHours} ч`,
       icon: <IconClock />
     },
     {
       key: 'Форма обучения:',
-      val: study_form && study_form.label,
+      val: program?.study_form && program?.study_form?.label,
       icon: <IconGraduateHat />
     },
     {
       key: 'Срок обучения:',
       val: (
         <ProgramStudyDuration
-          studyMonthsDuration={timenprice && timenprice[0].studyMonthsDuration}
+          studyMonthsDuration={
+            program?.timenprice && program?.timenprice?.[0]?.studyMonthsDuration
+          }
         />
       ),
       icon: <IconCalendar />

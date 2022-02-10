@@ -13,12 +13,14 @@ const ProgramDiscount = ({
   small = null,
   textOnly = null
 }: TypeProgramDiscount) => {
-  const {
-    program: { timenprice }
-  } = useContext(ProgramContext)
+  const { program } = useContext(ProgramContext)
 
-  const elDiscount = timenprice && (
-    <>{timenprice[0].discount ? `-${timenprice[0].discount}%` : discountNum}</>
+  const elDiscount = program?.timenprice && (
+    <>
+      {program?.timenprice?.[0]?.discount
+        ? `-${program.timenprice[0].discount}%`
+        : discountNum}
+    </>
   )
 
   return (

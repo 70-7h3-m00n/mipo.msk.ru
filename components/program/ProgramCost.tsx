@@ -5,12 +5,13 @@ import toNumberWithSpaces from '@/helpers/toNumberWithSpaces'
 import { discountNum } from '@/data/price'
 
 const ProgramCost = ({ withPerMonth = false }) => {
-  const {
-    program: { timenprice }
-  } = useContext(ProgramContext)
+  const { program } = useContext(ProgramContext)
 
-  const price = (timenprice && +timenprice[0].price) || 0
-  const discount = (timenprice && timenprice[0].discount) || discountNum
+  const price =
+    (program?.timenprice && Number(program?.timenprice?.[0]?.price)) || 0
+  const discount =
+    (program?.timenprice && Number(program?.timenprice?.[0]?.discount)) ||
+    discountNum
 
   const rprice =
     Math.round(Math.ceil((price / (100 - discount)) * 100) / 1000) * 1000

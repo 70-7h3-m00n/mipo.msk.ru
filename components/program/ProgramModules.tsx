@@ -4,20 +4,18 @@ import ProgramContext from '@/context/program/programContext'
 import { useContext } from 'react'
 
 const ProgramModules = () => {
-  const {
-    program: { shortContents }
-  } = useContext(ProgramContext)
+  const { program } = useContext(ProgramContext)
 
   return (
     <ul className={stls.container}>
-      {shortContents &&
-        shortContents
+      {program?.shortContents &&
+        program?.shortContents
           .filter((item, idx) => idx < 5)
-          .map(({ title, ShortContentsDescs }, idx) => (
+          .map((shortContent, idx) => (
             <ProgramModule
-              key={title + idx}
-              title={title}
-              ShortContentsDescs={ShortContentsDescs}
+              key={shortContent?.title + idx}
+              title={shortContent?.title}
+              ShortContentsDescs={shortContent?.ShortContentsDescs}
             />
           ))}
     </ul>

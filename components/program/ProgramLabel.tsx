@@ -3,13 +3,11 @@ import ProgramContext from '@/context/program/programContext'
 import { useContext } from 'react'
 
 const ProgramLabel = () => {
-  const {
-    program: { category }
-  } = useContext(ProgramContext)
+  const { program } = useContext(ProgramContext)
 
   return (
     <div className={stls.container}>
-      <p className={stls.p}>{category && category.label}</p>
+      <p className={stls.p}>{program?.category && program.category.label}</p>
     </div>
   )
 }

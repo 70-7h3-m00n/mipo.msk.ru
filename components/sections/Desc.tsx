@@ -7,9 +7,7 @@ import parse from 'html-react-parser'
 import marked from 'marked'
 
 const Desc = () => {
-  const {
-    program: { description }
-  } = useContext(ProgramContext)
+  const { program } = useContext(ProgramContext)
 
   return (
     <section className={stls.container}>
@@ -18,7 +16,7 @@ const Desc = () => {
           <IconAtom calpha barelyVisible />
         </div>
         <div className={stls.content}>
-          {description && parse(marked(description))}
+          {program?.description && parse(marked(program.description))}
         </div>
       </Wrapper>
     </section>
