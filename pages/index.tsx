@@ -35,7 +35,7 @@ const HomePage = ({ programs, reviews }) => {
         canonical={`${routesFront.root}${routeHome}`}
       />
       <Hero />
-      <Programs withTitle withBtn />
+      <Programs withTitle withBtn atIndex />
       {/* <WhyBother /> */}
       <About />
       <TrustedBy />

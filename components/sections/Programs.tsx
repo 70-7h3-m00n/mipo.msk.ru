@@ -21,6 +21,7 @@ type ProgramsType = {
   withQty?: boolean
   threerow?: boolean
   withFilters?: boolean
+  atIndex?: boolean
 }
 
 const Programs = ({
@@ -29,7 +30,8 @@ const Programs = ({
   withBtn = false,
   withQty = false,
   threerow = false,
-  withFilters = false
+  withFilters = false,
+  atIndex = false
 }: ProgramsType) => {
   const {
     courses,
@@ -67,6 +69,12 @@ const Programs = ({
     courses: curProgramsStudyFieldSlug ? coursesFiltered : courses,
     professions: curProgramsStudyFieldSlug ? professionsFiltered : professions,
     mbas: curProgramsStudyFieldSlug ? mbasFiltered : mbas
+  }
+
+  if (atIndex) {
+    data.courses = data.courses.filter((item, idx) => idx < 8)
+    data.professions = data.professions.filter((item, idx) => idx < 8)
+    data.mbas = data.mbas.filter((item, idx) => idx < 8)
   }
 
   useEffect(() => {
