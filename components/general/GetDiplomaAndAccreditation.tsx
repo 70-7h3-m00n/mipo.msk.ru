@@ -14,7 +14,7 @@ const GetDiplomaAndAccreditation = () => {
   return (
     <div className={stls.container}>
       <div className={stls.laptopdesktop}>
-        <h3 className={stls.title}>Получаете диплом с аккредитацией</h3>
+        <h3 className={stls.title}>Получаете диплом</h3>
         <p className={stls.subtitle}>
           Все наши дипломы являются установленного образца Министерством
           образования и вносятся в федеральный реестр ФИС-ФРДО

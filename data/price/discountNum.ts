@@ -1,3 +1,3 @@
-const discount: number = 30
+const discount: number = 40
 
 export default discount
