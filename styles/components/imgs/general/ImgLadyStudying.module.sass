@@ -11,6 +11,9 @@
     border-bottom-left-radius: f.px(3)
 
 .img
+  @include m.media(desktop)
+    border-top-left-radius: f.px(100)
+    transform: translateX(8%)
   @include m.media(laptop)
     transform: translateX(-8%)
   @media screen and (min-width: bp.$tablet) and (max-width: 1050px)
