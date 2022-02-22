@@ -1,15 +1,21 @@
 import stls from '@/styles/components/imgs/diplomas/ImgDiplomaTemplate.module.sass'
 import { TypeImg } from '@/types/index'
+import { useContext } from 'react'
 import { format } from 'date-fns'
 import { ru } from 'date-fns/locale'
+import programContext from '@/context/program/programContext'
 import { ImgTemplate } from '@/components/imgs'
 import defaultSrc from '@/public/assets/imgs/diplomas/diploma.jpg'
 
 const ImgDiplomaTemplate = ({ classNames = [], width, height }: TypeImg) => {
+  const { program } = useContext(programContext)
+
   const now = new Date()
-  const studyPeriod = 6
-  const programName = 'Коммерческий директор'
-  const qualification = 'Квалификация'
+  const studyPeriod = Number(program?.timenprice?.[0]?.studyMonthsDuration) || 6
+  const programName =
+    program?.title?.replace(/,/g, encodeURIComponent(',')) ||
+    'Наименование программы'
+  const qualification = program?.qualification || 'Присваемая квалификация'
 
   const src = `https://res.cloudinary.com/mipo-msk-ru/image/upload/l_text:${encodeURIComponent(
     'PT Serif'
@@ -59,8 +65,20 @@ const ImgDiplomaTemplate = ({ classNames = [], width, height }: TypeImg) => {
       { locale: ru }
     )}${encodeURIComponent(
       ','
-    )} протокол 0000 \n\n Диплом предоставляет право на ведение профессиональной деятельности в сфере \n\n «${programName}» \n\n и подтверждает присвоение квалификации \n ${qualification}`
-  )},x_283,y_169,g_north/diploma_template_806d8478b8.jpg`
+    )} протокол 0000 \n\n Диплом предоставляет право на ведение профессиональной деятельности в сфере`
+  )},x_283,y_169,g_north/w_410,c_fit,l_text:${encodeURIComponent(
+    'PT Serif'
+  )}_24_center:${encodeURIComponent(
+    `«${programName}»`
+  )},x_283,y_475,g_north/l_text:${encodeURIComponent(
+    'PT Serif'
+  )}_16_center:${encodeURIComponent(
+    'и подтверждает присвоение квалификации'
+  )},x_283,y_510,g_north/w_410,c_fit,l_text:${encodeURIComponent(
+    'PT Serif'
+  )}_24_center:${encodeURIComponent(
+    `${qualification}`
+  )},x_283,y_540,g_north/diploma_template_806d8478b8.jpg`
 
   console.log(src)
 
