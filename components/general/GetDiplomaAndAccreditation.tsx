@@ -2,6 +2,7 @@ import stls from '@/styles/components/general/GetDiplomaAndAccreditation.module.
 import { useState } from 'react'
 import { BtnIota, BtnKappa } from '@/components/btns'
 import {
+  ImgDiplomaTemplate,
   ImgDiploma,
   ImgCertificate,
   ImgSupplement,
@@ -57,11 +58,12 @@ const GetDiplomaAndAccreditation = () => {
           </>
         ) : (
           <>
-            <ImgDiploma classNames={[stls.diploma, stls.diploma1]} />
+            <ImgDiplomaTemplate classNames={[stls.diploma, stls.diploma1]} />
             <ImgCertificate classNames={[stls.diploma, stls.diploma2]} />
           </>
         )}
       </div>
+      <ImgDiplomaTemplate />
     </div>
   )
 }
