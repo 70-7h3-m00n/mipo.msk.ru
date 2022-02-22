@@ -23,14 +23,14 @@ const ProfessionsStudyFieldPage = ({ programs, studyFieldSlug }) => {
 
   const studyFieldLabel =
     studyFields.filter(studyField => studyField.slug === studyFieldSlug)[0]
-      ?.label || 'Переподготовка'
+      ?.label || 'Профессиональная переподготовка'
 
   return (
     <>
       <NextSeo
-        title={`${studyFieldLabel} | Переподготовка | ${companyName}`}
+        title={`${studyFieldLabel} | Профессиональная переподготовка | ${companyName}`}
         description={truncate(
-          `Переподготовка - длинные программы для полного погружения в направление`,
+          `Профессиональная переподготовка - длинные программы для полного погружения в направление`,
           120
         )}
         canonical={`${routesFront.root}${routeProfessions}/${studyFieldSlug}`}

@@ -45,7 +45,7 @@ const ProgramsTemplate = ({
               {ofType === 'course'
                 ? 'Повышение квалификации'
                 : ofType === 'profession'
-                ? 'Переподготовка'
+                ? 'Профессиональная переподготовка'
                 : ofType === 'mba'
                 ? 'MBA'
                 : 'Программы'}
@@ -62,7 +62,7 @@ const ProgramsTemplate = ({
               {ofType === 'course'
                 ? 'Повышение квалификации'
                 : ofType === 'profession'
-                ? 'Переподготовка'
+                ? 'Профессиональная переподготовка'
                 : ofType === 'mba'
                 ? 'MBA'
                 : 'Программы'}

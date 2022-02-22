@@ -38,7 +38,7 @@ const ProgramType = ({ close = null }) => {
               [stls.circle]: true,
               [stls.active]: curProgramsType === 'profession'
             })}></div>
-          <span className={stls.text}>Переподготовка</span>
+          <span className={stls.text}>Профессиональная переподготовка</span>
         </a>
       </Link>
 

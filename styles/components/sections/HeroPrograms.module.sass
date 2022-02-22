@@ -15,7 +15,6 @@
   @include m.media(laptop, desktop)
     @include m.flex($jc: space-between, $ai: center)
 
-    
 .title
   @include m.media(phone, tablet)
     @include m.gap($mb: f.px(28))
@@ -32,12 +31,15 @@
 
 .typeLinks
   @include m.gap($pb: f.px(23))
+  overflow: auto
 
 .link
   @include m.media(phone, tablet)
-    @include m.gap($mr: f.px(38))
+    & + .link
+      @include m.gap($ml: f.px(38))
   @include m.media(laptop, desktop)
-    @include m.gap($mr: f.px(70))
+    & + .link
+      @include m.gap($ml: f.px(70))
   @include m.gap($pb: f.px(19))
   border-bottom: f.px(4) solid transparent
   @include m.media(phone, tablet)

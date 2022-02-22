@@ -32,7 +32,7 @@ const Footer = () => {
       href: routeCourses
     },
     {
-      val: 'Переподготовка',
+      val: 'Профессиональная переподготовка',
       href: routeProfessions
     },
     // {
@@ -69,7 +69,7 @@ const Footer = () => {
     }
   ]
 
-  // const fieldsLinks = studyFields.map(field => 
+  // const fieldsLinks = studyFields.map(field =>
   //   ({ val: field.label, href: `/programs/${field.slug}` })
   // )
 

@@ -32,7 +32,7 @@ const LegalPage = ({ programs }) => {
         Сведения <br className={stls.linebrake} /> об организации
       </PageTitle>
       <ActiveLicenses />
-      <Diplomas />
+      {/* <Diplomas /> */}
       <LegalInfo />
       <LegalDocs />
     </>

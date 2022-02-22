@@ -24,7 +24,9 @@ const HeroPrograms = ({ ofType = null }) => {
               className={cn([stls.link], {
                 [stls.active]: curProgramsType === 'profession'
               })}>
-              <span className={stls.laptopdesktop}>Переподготовка</span>
+              <span className={stls.laptopdesktop}>
+                Профессиональная&nbsp;переподготовка
+              </span>
               <span className={stls.phonetablet}>ПП</span>
             </a>
           </Link>
@@ -33,7 +35,9 @@ const HeroPrograms = ({ ofType = null }) => {
               className={cn([stls.link], {
                 [stls.active]: curProgramsType === 'course'
               })}>
-              <span className={stls.laptopdesktop}>Повышение квалификации</span>
+              <span className={stls.laptopdesktop}>
+                Повышение&nbsp;квалификации
+              </span>
               <span className={stls.phonetablet}>ПК</span>
             </a>
           </Link>
