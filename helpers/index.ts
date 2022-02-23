@@ -1,5 +1,6 @@
 import addOptionalZeroToHours from '@/helpers/addOptionalZeroToHours'
 import addOptionalZeroToMinutes from '@/helpers/addOptionalZeroToMinutes'
+import calculateClosestAdmission from '@/helpers/calculateClosestAdmission'
 import closeFieldsTooltipOnOuterClick from '@/helpers/closeFieldsTooltipOnOuterClick'
 import convertMdToHtml from '@/helpers/convertMdToHtml'
 import fetchPrograms from '@/helpers/fetchPrograms'
@@ -34,6 +35,7 @@ import toNumberWithSpaces from '@/helpers/toNumberWithSpaces'
 export {
   addOptionalZeroToHours,
   addOptionalZeroToMinutes,
+  calculateClosestAdmission,
   closeFieldsTooltipOnOuterClick,
   getStudyFields,
   convertMdToHtml,
