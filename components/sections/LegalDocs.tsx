@@ -5,7 +5,7 @@ import { IconDoc } from '@/components/icons'
 const LegalDocs = () => {
   const listLeft = [
     {
-      href: '/documents/reshenie-o-sozdanii.pdf',
+      href: '/documents/rieshieniie-o-sozdanii.pdf',
       val: 'Решение о создании'
     },
     {
@@ -13,15 +13,23 @@ const LegalDocs = () => {
       val: 'ИНН'
     },
     {
-      href: '/documents/rekvizity-nanomipo.pdf',
+      href: '/documents/riekvizity-nano-mipo.pdf',
       val: 'Реквизиты НАНО МИПО'
     },
     {
-      href: '/documents/pravila-vnutrennego-trudovogo-rasporyadka.pdf',
+      href: '/documents/uvedomlenie-o-predostavlenii-licenzii-mipo.pdf',
+      val: 'Уведомление о предоставлении лицензии МИПО'
+    },
+    {
+      href: '/documents/vypiska-iz-rieiestra-litsienzii-041880.pdf',
+      val: 'Выписка из реестра лицензий № 041880'
+    },
+    {
+      href: '/documents/pravila-vnutrienniegho-trudovogho-rasporiadka.pdf',
       val: 'Правила внутреннего трудового распорядка'
     },
     {
-      href: '/documents/pravila-vnutrennego-uchebnogo-rasporyadka.pdf',
+      href: '/documents/pravila-vnutrienniegho-uchiebnogho-rasporiadka.pdf',
       val: 'Правила внутреннего учебного распорядка'
     },
     {
@@ -33,46 +41,58 @@ const LegalDocs = () => {
       val: 'Правила обучения НАНО МИПО'
     },
     {
-      href: '/documents/pravila-priema-na-obuchenie.pdf',
+      href: '/documents/pravila-priiema-na-obuchieniie.pdf',
       val: 'Правила приема на обучение'
     }
   ]
   const listRight = [
     {
-      href: '/documents/uvedomlenie-o-predostavlenii-licenzii-mipo.pdf',
-      val: 'Уведомление о предоставлении лицензии МИПО'
-    },
-    {
-      href: '/documents/vypiska-iz-reestra-licenzii-041880.pdf',
-      val: 'Выписка из реестра лицензий № 041880'
-    },
-    {
-      href: '/documents/polozhenie-o-rezhime-obucheniya.pdf',
+      href: '/documents/polozhieniie-o-riezhimie-obuchieniia.pdf',
       val: 'Положение о режиме обучения'
     },
     {
-      href: '/documents/polozhenie-o-skidkah.pdf',
+      href: '/documents/polozhieniie-o-skidkakh.pdf',
       val: 'Положение о скидках'
     },
     {
-      href: '/documents/polozhenie-o-trebovaniyah-k-soderzhaniu-dpop.pdf',
+      href: '/documents/polozhieniie-o-triebovaniiakh-k-sodierzhaniiu-dpop.pdf',
       val: 'Положение о требованиях к содержанию дпоп'
     },
     {
-      href: '/documents/polozhenie-o-yazyke-obrazovaniya.pdf',
+      href: '/documents/polozhieniie-o-iazykie-obrazovaniia.pdf',
       val: 'Положение о языке образования'
     },
     {
-      href: '/documents/polozhenie-o-obuchenii-invalidov.pdf',
+      href: '/documents/polozhieniie-ob-obuchienii-invalidov.pdf',
       val: 'Положение об обучении инвалидов'
     },
     {
-      href: '/documents/polozhenie-ob-organizacii-i-osywestvlenii-obrazovatelnoii-deyatelnosti.pdf',
+      href: '/documents/polozhieniie-ob-orghanizatsii-i-osushchiestvlienii-obrazovatiel-noi-dieiatielnosti.pdf',
       val: 'Положение об организации и осуществлении образовательной деятельности'
     },
     {
-      href: '/documents/polozhenie-ob-oficialnon-saite.pdf',
+      href: '/documents/polozhieniie-ob-ofitsial-nom-saitie.pdf',
       val: 'Положение об официальном сайте'
+    },
+    {
+      href: '/documents/polozhieniie-o-poriadkie-uchieta-khranieniia-i-vydachi-blankov-dokumntov-o-kvalifikatsii.pdf',
+      val: 'Положение о порядке учета хранения и выдачи бланков докумнтов о квалификации'
+    },
+    {
+      href: '/documents/polozhieniie-o-poriadkie-formirovaniia-viedieniia-i-khranieniia-lichnykh-diel.pdf',
+      val: 'Положение о порядке формирования, ведения и хранения личных дел'
+    },
+    {
+      href: '/documents/polozhieniie-o-priedostavlienii-pierieryva-v-obuchienii.pdf',
+      val: 'Положение о предоставлении перерыва в обучении'
+    },
+    {
+      href: '/documents/polozhieniie-o-primienienii-distantsionnykh-obrazovatiel-nykh-tiekhnologhii.pdf',
+      val: 'Положение о применении дистанционных образовательных технологий'
+    },
+    {
+      href: '/documents/polozhieniie-o-promiezhutochnoi-i-itoghovoi-attiestatsii.pdf',
+      val: 'Положение о промежуточной и итоговой аттестации'
     }
   ]
   return (
