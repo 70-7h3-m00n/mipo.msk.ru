@@ -83,12 +83,19 @@ const ImgDiplomaTemplate = ({ classNames = [], width, height }: TypeImg) => {
   )},w_450,x_283,y_169,g_north/diploma_template_806d8478b8.jpg`
 
   return (
+    // <ImgTemplate
+    //   classNames={classNames}
+    //   src={src || defaultSrc}
+    //   alt='Диплом МИПО'
+    //   width={width || 1131}
+    //   height={height || 800}
+    // />
     <ImgTemplate
       classNames={classNames}
-      src={src || defaultSrc}
+      src={defaultSrc}
       alt='Диплом МИПО'
-      width={width || 1131}
-      height={height || 800}
+      width={width}
+      height={height}
     />
   )
 }
