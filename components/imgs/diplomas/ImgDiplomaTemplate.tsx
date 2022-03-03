@@ -82,21 +82,23 @@ const ImgDiplomaTemplate = ({ classNames = [], width, height }: TypeImg) => {
     `с ${fromDate} года по ${toDate} года \n\n прошел профессиональную переподготовку в Научной автономной некоммерческой организации \n «Московский Институт Профессионального Образования» \n\n по программе «${programName}» \n\n Решением \n от ${fromDateOff}${coma} протокол 0000 \n\n Диплом предоставляет право на ведение профессиональной деятельности в сфере \n\n «${programName}» \n\n и подтверждает присвоение квалификации \n ${qualification}`
   )},w_450,x_283,y_169,g_north/diploma_template_806d8478b8.jpg`
 
+  console.log(src)
+
   return (
-    // <ImgTemplate
-    //   classNames={classNames}
-    //   src={src || defaultSrc}
-    //   alt='Диплом МИПО'
-    //   width={width || 1131}
-    //   height={height || 800}
-    // />
     <ImgTemplate
       classNames={classNames}
-      src={defaultSrc}
+      src={src || defaultSrc}
       alt='Диплом МИПО'
-      width={width}
-      height={height}
+      width={width || 1131}
+      height={height || 800}
     />
+    // <ImgTemplate
+    //   classNames={classNames}
+    //   src={defaultSrc}
+    //   alt='Диплом МИПО'
+    //   width={width}
+    //   height={height}
+    // />
   )
 }
 

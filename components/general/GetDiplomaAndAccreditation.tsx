@@ -63,6 +63,7 @@ const GetDiplomaAndAccreditation = () => {
           </>
         )}
       </div>
+      <ImgDiplomaTemplate />
     </div>
   )
 }
