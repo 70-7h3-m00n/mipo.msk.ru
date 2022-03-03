@@ -1,69 +1,34 @@
-import addOptionalZeroToHours from '@/helpers/addOptionalZeroToHours'
-import addOptionalZeroToMinutes from '@/helpers/addOptionalZeroToMinutes'
-import calculateClosestAdmission from '@/helpers/calculateClosestAdmission'
-import closeFieldsTooltipOnOuterClick from '@/helpers/closeFieldsTooltipOnOuterClick'
-import convertMdToHtml from '@/helpers/convertMdToHtml'
-import fetchPrograms from '@/helpers/fetchPrograms'
-import fetchProgramsPaths from '@/helpers/fetchProgramsPaths'
-import fetchStudyFieldsPaths from '@/helpers/fetchStudyFieldsPaths'
-import fetchReviews from '@/helpers/fetchReviews'
-import fetchTeachers from '@/helpers/fetchTeachers'
-import fetchWebinars from '@/helpers/fetchWebinars'
-import filterProgramsByStudyField from '@/helpers/filterProgramsByStudyField'
-import filterProgramsByType from '@/helpers/filterProgramsByType'
-import getCasedRuMonthString from '@/helpers/getCasedRuMonthString'
-import getCasedRuYearString from '@/helpers/getCasedRuYearString'
-import getCasesRuCourseString from '@/helpers/getCasesRuCourseString'
-import getCasesRuProfessionString from '@/helpers/getCasesRuProfessionString'
-import getClassNames from '@/helpers/getClassNames'
-import getImageHeight from '@/helpers/getImageHeight'
-import getListItemsInnerHtml from '@/helpers/getListItemsInnerHtml'
-import getParagraphInnerHtml from '@/helpers/getParagraphInnerHtml'
-import getProgram from '@/helpers/getProgram'
-import getRuDaysOfWeek from '@/helpers/getRuDaysOfWeek'
-import getStudyFields from '@/helpers/getStudyFields'
-import getStudyFieldsLabels from '@/helpers/getStudyFieldsLabels'
-import getStudyFieldsSlugs from '@/helpers/getStudyFieldsSlugs'
-import getThreeLettersRuMonths from '@/helpers/getThreeLettersRuMonths'
-import handleGetStaticPathsPrograms from '@/helpers/handleGetStaticPathsPrograms'
-import handleGetStaticPathsStudyFields from '@/helpers/handleGetStaticPathsStudyFields'
-import handleGetStaticProps from '@/helpers/handleGetStaticProps'
-import handleSwipedEvt from '@/helpers/handleSwipedEvt'
-import removeDuplicates from '@/helpers/removeDuplicates'
-import toNumberWithSpaces from '@/helpers/toNumberWithSpaces'
-
-export {
-  addOptionalZeroToHours,
-  addOptionalZeroToMinutes,
-  calculateClosestAdmission,
-  closeFieldsTooltipOnOuterClick,
-  getStudyFields,
-  convertMdToHtml,
-  fetchPrograms,
-  fetchProgramsPaths,
-  fetchStudyFieldsPaths,
-  fetchReviews,
-  fetchTeachers,
-  fetchWebinars,
-  filterProgramsByStudyField,
-  filterProgramsByType,
-  getCasedRuMonthString,
-  getCasedRuYearString,
-  getCasesRuCourseString,
-  getCasesRuProfessionString,
-  getClassNames,
-  getImageHeight,
-  getListItemsInnerHtml,
-  getParagraphInnerHtml,
-  getProgram,
-  getRuDaysOfWeek,
-  getStudyFieldsLabels,
-  getStudyFieldsSlugs,
-  getThreeLettersRuMonths,
-  handleGetStaticPathsPrograms,
-  handleGetStaticPathsStudyFields,
-  handleGetStaticProps,
-  handleSwipedEvt,
-  removeDuplicates,
-  toNumberWithSpaces
-}
+export { default as addOptionalZeroToHours } from '@/helpers/addOptionalZeroToHours'
+export { default as addOptionalZeroToMinutes } from '@/helpers/addOptionalZeroToMinutes'
+export { default as calculateClosestAdmission } from '@/helpers/calculateClosestAdmission'
+export { default as closeFieldsTooltipOnOuterClick } from '@/helpers/closeFieldsTooltipOnOuterClick'
+export { default as convertMdToHtml } from '@/helpers/convertMdToHtml'
+export { default as fetchPrograms } from '@/helpers/fetchPrograms'
+export { default as fetchProgramsPaths } from '@/helpers/fetchProgramsPaths'
+export { default as fetchStudyFieldsPaths } from '@/helpers/fetchStudyFieldsPaths'
+export { default as fetchReviews } from '@/helpers/fetchReviews'
+export { default as fetchTeachers } from '@/helpers/fetchTeachers'
+export { default as fetchWebinars } from '@/helpers/fetchWebinars'
+export { default as filterProgramsByStudyField } from '@/helpers/filterProgramsByStudyField'
+export { default as filterProgramsByType } from '@/helpers/filterProgramsByType'
+export { default as getCasedRuMonthString } from '@/helpers/getCasedRuMonthString'
+export { default as getCasedRuYearString } from '@/helpers/getCasedRuYearString'
+export { default as getCasesRuCourseString } from '@/helpers/getCasesRuCourseString'
+export { default as getCasesRuProfessionString } from '@/helpers/getCasesRuProfessionString'
+export { default as getCasesRuStudyFieldString } from '@/helpers/getCasesRuStudyFieldString'
+export { default as getClassNames } from '@/helpers/getClassNames'
+export { default as getImageHeight } from '@/helpers/getImageHeight'
+export { default as getListItemsInnerHtml } from '@/helpers/getListItemsInnerHtml'
+export { default as getParagraphInnerHtml } from '@/helpers/getParagraphInnerHtml'
+export { default as getProgram } from '@/helpers/getProgram'
+export { default as getRuDaysOfWeek } from '@/helpers/getRuDaysOfWeek'
+export { default as getStudyFields } from '@/helpers/getStudyFields'
+export { default as getStudyFieldsLabels } from '@/helpers/getStudyFieldsLabels'
+export { default as getStudyFieldsSlugs } from '@/helpers/getStudyFieldsSlugs'
+export { default as getThreeLettersRuMonths } from '@/helpers/getThreeLettersRuMonths'
+export { default as handleGetStaticPathsPrograms } from '@/helpers/handleGetStaticPathsPrograms'
+export { default as handleGetStaticPathsStudyFields } from '@/helpers/handleGetStaticPathsStudyFields'
+export { default as handleGetStaticProps } from '@/helpers/handleGetStaticProps'
+export { default as handleSwipedEvt } from '@/helpers/handleSwipedEvt'
+export { default as removeDuplicates } from '@/helpers/removeDuplicates'
+export { default as toNumberWithSpaces } from '@/helpers/toNumberWithSpaces'

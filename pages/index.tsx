@@ -11,6 +11,7 @@ import {
   About,
   HowProcessGoes,
   Programs,
+  SectionStudyFields,
   TrustedBy,
   Cta,
   Reviews,
@@ -35,7 +36,8 @@ const HomePage = ({ programs, reviews }) => {
         canonical={`${routesFront.root}${routeHome}`}
       />
       <Hero />
-      <Programs withTitle withBtn atIndex />
+      {/* <Programs withTitle withBtn atIndex /> */}
+      <SectionStudyFields withTitle withBtn atIndex />
       {/* <WhyBother /> */}
       <About />
       <TrustedBy />
