@@ -37,10 +37,10 @@ const PagesProgram = ({ ofType = null }: PagesProgramType) => {
       {/* <YourDiploma ofType={ofType} /> */}
       <BriefProgramContents />
       <FullProgram />
-      {ofType !== 'course' &&
+      {/* {ofType !== 'course' &&
         program?.resumeTitle &&
         program?.entrySalary &&
-        program?.resumeSkills && <YourResume />}
+        program?.resumeSkills && <YourResume />} */}
       {ofType !== 'course' && <YourFutureJob />}
       <Teachers />
       <Cta
