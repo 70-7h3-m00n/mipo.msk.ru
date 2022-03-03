@@ -89,6 +89,7 @@ const ImgDiplomaTemplate = ({ classNames = [], width, height }: TypeImg) => {
       alt='Диплом МИПО'
       width={width || 1131}
       height={height || 800}
+      // brakes without this
       unoptimized
     />
     // <ImgTemplate
