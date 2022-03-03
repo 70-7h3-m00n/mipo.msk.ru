@@ -10,6 +10,7 @@ type ImgTemplateType = {
   alt: string
   width?: number
   height?: number
+  unoptimized?: boolean
 }
 
 const ImgTemplate = ({
@@ -17,7 +18,8 @@ const ImgTemplate = ({
   width,
   height,
   src,
-  alt
+  alt,
+  unoptimized = false
 }: ImgTemplateType) => {
   const container = getClassNames({ classNames })
 
@@ -32,6 +34,7 @@ const ImgTemplate = ({
           className={stls.img}
           placeholder='blur'
           blurDataURL={base64pixel}
+          unoptimized={unoptimized}
         />
       )}
     </div>
