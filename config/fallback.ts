@@ -1,4 +1,6 @@
-const fallback = {
+type TypeFallback = { default: 'blocking' | boolean }
+
+const fallback: TypeFallback = {
   default: 'blocking'
 }
 

@@ -1,6 +1,13 @@
-import TypeBtn from '@/types/TypeBtn'
-import TypeCategory from '@/types/TypeCategory'
-import TypeClassNames from '@/types/TypeClassNames'
-import TypeImg from '@/types/TypeImg'
+// general
+export type { default as TypeGeneralRoutesFront } from '@/types/general/TypeGeneralRoutesFront'
 
-export type { TypeBtn, TypeCategory, TypeClassNames, TypeImg }
+// page/programs/paths
+export type { default as TypePageProgramsPaths } from '@/types/page/programs/paths/TypePageProgramsPaths'
+// page/programs/query
+export type { default as TypePageProgramsPathsQuery } from '@/types/page/programs/query/TypePageProgramsPathsQuery'
+
+// ./
+export type { default as TypeBtn } from '@/types/TypeBtn'
+export type { default as TypeCategory } from '@/types/TypeCategory'
+export type { default as TypeClassNames } from '@/types/TypeClassNames'
+export type { default as TypeImg } from '@/types/TypeImg'

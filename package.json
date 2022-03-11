@@ -10,10 +10,12 @@
     "generateicons": "npx pwa-asset-generator ./public/assets/imgs/general/icon.png ./public/assets/imgs/icons -p \"0\" -b \"#002C9F\""
   },
   "dependencies": {
+    "@apollo/client": "^3.5.10",
     "@maxmind/geoip2-node": "^3.2.0",
     "axios": "^0.21.4",
     "classnames": "^2.3.1",
     "date-fns": "^2.28.0",
+    "graphql": "^16.3.0",
     "html-react-parser": "^1.4.0",
     "marked": "^3.0.8",
     "moment": "^2.29.1",
