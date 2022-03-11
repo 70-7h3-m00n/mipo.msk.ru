@@ -11,7 +11,7 @@ const PaymentBtns = () => {
           <div className={stls.btn}>
             <BtnAlpha
               text='Оплата банковской картой'
-              href='https://3dsec.sberbank.ru/shortlink/hO9wklys'
+              href='https://securepayments.sberbank.ru/shortlink/hBSVq1jg'
               target='_blank'
             />
           </div>
