@@ -21,7 +21,7 @@ const CheckLicense = () => {
             <div className={stls.btn}>
               <BtnAlpha
                 text='Проверить'
-                href='https://isga.obrnadzor.gov.ru/rlic/details/42b83d1e-2378-34bc-8ab9-48dfc47ca619/'
+                href='https://islod.obrnadzor.gov.ru/rlic/details/42b83d1e-2378-34bc-8ab9-48dfc47ca619/'
                 target='_blank'
               />
             </div>
