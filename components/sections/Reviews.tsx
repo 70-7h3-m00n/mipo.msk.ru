@@ -18,13 +18,13 @@ const Reviews = ({ standalone = false, reviews }: ReviewsType) => {
       title={review?.title}
       photo={
         <ImgReview
-          src={review?.picture?.[0]?.formats?.small?.url}
-          alt={review?.name}
-          width={review?.picture?.[0]?.formats?.small?.width && 110}
+          src={review?.picture?.[0]?.url}
+          alt={review.name}
+          width={110}
           height={getImageHeight({
             width: 110,
-            widthInitial: review?.picture?.[0]?.formats?.small?.width,
-            heightInitial: review?.picture?.[0]?.formats?.small?.height
+            widthInitial: review?.picture?.[0]?.width,
+            heightInitial: review?.picture?.[0]?.height
           })}
         />
       }
