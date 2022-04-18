@@ -1,9 +1,8 @@
 import stls from '@/styles/components/layout/Header.module.sass'
 import Link from 'next/link'
+import cn from 'classnames'
 import Wrapper from '@/components/layout/Wrapper'
 import Logo from '@/components/general/Logo'
-import BtnPhone from '@/components/btns/BtnPhone'
-import BtnHumburger from '@/components/btns/BtnHumburger'
 import MenuMobile from '@/components/layout/MenuMobile'
 import { city, street } from '@/data/location'
 import { IconLocation } from '@/components/icons'
@@ -17,14 +16,19 @@ import {
   routeTeachers
 } from '@/data/routes'
 import MenuContext from '@/context/menu/menuContext'
+import ProgramContext from '@/context/program/programContext'
 import { useEffect, useContext } from 'react'
 import { handleSwipedEvt } from '@/helpers/index'
 import PopupTrigger from '@/components/general/PopupTrigger'
-import classNames from 'classnames'
+import BtnPhone from '@/components/btns/BtnPhone'
+import BtnHumburger from '@/components/btns/BtnHumburger'
 
 const Header = () => {
   const { menuIsOpen, openMenu, closeMenu, toggleMenu } =
     useContext(MenuContext)
+
+  const { program } = useContext(ProgramContext)
+  const atMba = program?.category?.type === 'mba'
 
   useEffect(() => {
     handleSwipedEvt({ menuIsOpen, closeMenu })
@@ -46,7 +50,7 @@ const Header = () => {
   ]
 
   return (
-    <header className={stls.container}>
+    <header className={cn(stls.container, { [stls.atMba]: atMba })}>
       <MenuMobile />
       <Wrapper>
         <div className={stls.top}>
@@ -87,7 +91,7 @@ const Header = () => {
           {list.map((item, idx) => (
             <Link key={item.href + item.val} href={item.href}>
               <a
-                className={classNames([stls.link], {
+                className={cn([stls.link], {
                   [stls.linkFirst]: idx === 0,
                   [stls.linkThird]: idx === 2
                 })}>
