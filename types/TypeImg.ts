@@ -1,3 +1,5 @@
+import { StaticImageData } from 'next/image'
+
 type TypeImg = {
   classNames?: string[]
   src?: StaticImageData | string

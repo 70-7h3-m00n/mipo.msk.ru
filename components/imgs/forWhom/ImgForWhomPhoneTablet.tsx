@@ -1,6 +1,7 @@
 import stls from '@/styles/components/imgs/forWhom/ImgForWhomPhoneTablet.module.sass'
+import { TGeneralImg } from '@/types/index'
 import { ImgTemplate } from '@/components/imgs'
-import { TypeImg } from '@/types/index'
+import { useCheckIfResourseExists } from '@/hooks/index'
 import defaultSrc from '@/public/assets/imgs/forWhom/forWhom-phone-tablet.jpg'
 
 const ImgForWhomPhoneTablet = ({
@@ -9,11 +10,13 @@ const ImgForWhomPhoneTablet = ({
   alt,
   width,
   height
-}: TypeImg) => {
+}: TGeneralImg) => {
+  const isImage = useCheckIfResourseExists({ src })
+
   return (
     <ImgTemplate
       classNames={classNames}
-      src={src || defaultSrc}
+      src={isImage && src ? src : defaultSrc}
       alt={alt || 'Человек в работе'}
       width={width}
       height={height}

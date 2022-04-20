@@ -1,9 +1,10 @@
-// general
+// ./general
+export type { default as TGeneralImg } from '@/types/general/TGeneralImg'
 export type { default as TypeGeneralRoutesFront } from '@/types/general/TypeGeneralRoutesFront'
 
-// page/programs/paths
+// ./page/programs/paths
 export type { default as TypePageProgramsPaths } from '@/types/page/programs/paths/TypePageProgramsPaths'
-// page/programs/query
+// ./page/programs/query
 export type { default as TypePageProgramsPathsQuery } from '@/types/page/programs/query/TypePageProgramsPathsQuery'
 
 // ./

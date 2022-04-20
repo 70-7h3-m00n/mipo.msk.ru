@@ -1,4 +1,5 @@
 import stls from '@/styles/components/imgs/ImgTemplate.module.sass'
+import { StaticImageData } from 'next/image'
 import Image from 'next/image'
 import classnames from 'classnames'
 import { getClassNames } from '@/helpers/index'
@@ -11,6 +12,8 @@ type ImgTemplateType = {
   width?: number
   height?: number
   unoptimized?: boolean
+  layout?: 'intrinsic' | 'fixed' | 'responsive' | 'fill'
+  objectFit?: 'contain' | 'cover' | 'fill' | 'none' | 'scale-down'
 }
 
 const ImgTemplate = ({
@@ -19,7 +22,9 @@ const ImgTemplate = ({
   height,
   src,
   alt,
-  unoptimized = false
+  unoptimized = false,
+  layout,
+  objectFit
 }: ImgTemplateType) => {
   const container = getClassNames({ classNames })
 
@@ -35,6 +40,7 @@ const ImgTemplate = ({
           placeholder='blur'
           blurDataURL={base64pixel}
           unoptimized={unoptimized}
+          layout={layout}
         />
       )}
     </div>
