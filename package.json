@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "postbuild": "next-sitemap --config next-sitemap.config.js",
-    "generateicons": "npx pwa-asset-generator ./public/assets/imgs/general/icon.png ./public/assets/imgs/icons -p \"0\" -b \"#002C9F\""
+    "generateicons": "npx pwa-asset-generator ./data/logos/logo-light.png ./public/assets/imgs/icons -p \"0\" -b \"#002C9F\""
   },
   "dependencies": {
     "@apollo/client": "^3.5.10",

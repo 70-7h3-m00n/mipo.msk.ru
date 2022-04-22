@@ -1,3 +1,6 @@
+// ./components/icons
+export { default as IconGeneralLogo } from '@/components/icons/general/IconGeneralLogo'
+
 import IconAtom from '@/components/icons/IconAtom'
 import IconBell from '@/components/icons/IconBell'
 import IconBgCircle from '@/components/icons/IconBgCircle'
@@ -16,7 +19,6 @@ import IconGraduateHat from '@/components/icons/IconGraduateHat'
 import IconHighIncome from '@/components/icons/IconHighIncome'
 import IconHumburger from '@/components/icons/IconHumburger'
 import IconLocation from '@/components/icons/IconLocation'
-import IconLogoAlt from '@/components/icons/IconLogoAlt'
 import IconMenu from '@/components/icons/IconMenu'
 import IconMinus from '@/components/icons/IconMinus'
 import IconPhone from '@/components/icons/IconPhone'
@@ -53,7 +55,6 @@ export {
   IconHighIncome,
   IconHumburger,
   IconLocation,
-  IconLogoAlt,
   IconMenu,
   IconMinus,
   IconPhone,

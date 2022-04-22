@@ -1,12 +1,13 @@
 import stls from '@/styles/components/general/ProsCircle.module.sass'
-import { IconLogoAlt, IconBgCircle } from '@/components/icons'
+import { colors } from '@/config/index'
+import { IconGeneralLogo, IconBgCircle } from '@/components/icons'
 
 const ProsCircle = () => {
   return (
     <div className={stls.container}>
       <IconBgCircle />
       <div className={stls.center}>
-        <IconLogoAlt responsive />
+        <IconGeneralLogo color={colors.beta} />
       </div>
       <div className={stls.top}>
         <h3 className={stls.subTitle}>12 лет</h3>

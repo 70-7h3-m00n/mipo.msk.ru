@@ -1,8 +1,9 @@
 import stls from '@/styles/components/general/Logo.module.sass'
 import classNames from 'classnames'
 import Link from 'next/link'
-import { ImgLogo } from '@/components/imgs'
 import { routeHome } from '@/data/routes'
+import { IconGeneralLogo } from '@/components/icons'
+import colors from '@/config/colors'
 
 const Logo = ({ atHeader = false, withTitle = true }) => {
   return (
@@ -13,7 +14,7 @@ const Logo = ({ atHeader = false, withTitle = true }) => {
             [stls.logo]: true,
             [stls.atHeader]: atHeader
           })}>
-          <ImgLogo classNames={[stls.img]} />
+          <IconGeneralLogo classNames={[stls.icon]} color={colors.nu} />
           {withTitle && (
             <p className={stls.title}>
               Московский институт <br />

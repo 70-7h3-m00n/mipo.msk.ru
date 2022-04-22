@@ -1,7 +1,7 @@
 @use "sass:math"
 @use '@/styles/utils/mixin' as m
 @use '@/styles/utils/funcs' as f
-@use '@/styles/themes/default/colors' as c
+@use '@/styles/config/Colors.module.sass' as c
 
 .container
   display: inline-block
@@ -31,5 +31,10 @@
   @media screen and (max-width: 360px)
     display: none
 
-.img
-  @include m.gap($mr: f.px(13))
+.icon
+  @include m.media(phone, tablet)
+    max-width: f.px(52)
+    margin-right: f.px(10)
+  @include m.media(laptop, desktop)
+    max-width: f.px(68)
+    margin-right: f.px(13)
