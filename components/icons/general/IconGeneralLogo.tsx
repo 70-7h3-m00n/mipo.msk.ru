@@ -13,7 +13,7 @@ const IconGeneralLogo = ({ classNames, color }: TIconGeneralLogoProps) => {
         viewBox='0 0 1000 1498'
         fill='none'
         xmlns='http://www.w3.org/2000/svg'>
-        {companyName}
+        <title>{companyName}</title>
         <path
           fillRule='evenodd'
           clipRule='evenodd'

@@ -1,13 +1,13 @@
 import stls from '@/styles/components/general/ProsCircle.module.sass'
 import { colors } from '@/config/index'
-import { IconGeneralLogoSquare, IconBgCircle } from '@/components/icons'
+import { IconGeneralLogoMinimal, IconBgCircle } from '@/components/icons'
 
 const ProsCircle = () => {
   return (
     <div className={stls.container}>
       <IconBgCircle />
       <div className={stls.center}>
-        <IconGeneralLogoSquare color={colors.beta} />
+        <IconGeneralLogoMinimal color={colors.beta} />
       </div>
       <div className={stls.top}>
         <h3 className={stls.subTitle}>12 лет</h3>
