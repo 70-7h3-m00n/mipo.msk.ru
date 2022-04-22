@@ -17,9 +17,9 @@ const Logo = ({ atHeader = false, withTitle = true }) => {
           <IconGeneralLogo classNames={[stls.icon]} color={colors.nu} />
           {withTitle && (
             <p className={stls.title}>
-              Московский институт <br />
-              профессионального <br />
-              образования
+              Московский Институт <br />
+              Профессионального <br />
+              Образования
             </p>
           )}
         </a>

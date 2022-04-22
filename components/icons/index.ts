@@ -1,5 +1,6 @@
-// ./components/icons
+// ./general
 export { default as IconGeneralLogo } from '@/components/icons/general/IconGeneralLogo'
+export { default as IconGeneralLogoSquare } from '@/components/icons/general/IconGeneralLogoSquare'
 
 import IconAtom from '@/components/icons/IconAtom'
 import IconBell from '@/components/icons/IconBell'
