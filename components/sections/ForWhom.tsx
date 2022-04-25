@@ -1,5 +1,6 @@
 import stls from '@/styles/components/sections/ForWhom.module.sass'
 import { useContext } from 'react'
+import cn from 'classnames'
 import parse from 'html-react-parser'
 import marked from 'marked'
 import { getImageHeight } from '@/helpers/index'
@@ -9,20 +10,28 @@ import { ImgForWhom, ImgForWhomPhoneTablet } from '@/components/imgs'
 
 const ForWhom = () => {
   const { program } = useContext(ProgramContext)
+  const atMba = program?.category?.type === 'mba'
 
   return (
-    <section className={stls.container}>
+    <section className={cn(stls.container, { [stls.atMba]: atMba })}>
       <Wrapper classNames={[stls.wrapper]}>
-        <div className={stls.left}>
-          <div className={stls.text}>
-            <h2 className={stls.title}>Для кого программа</h2>
-            <p className={stls.subtitle}>
+        <div className={cn(stls.left, { [stls.atMba]: atMba })}>
+          <div className={cn(stls.text, { [stls.atMba]: atMba })}>
+            <h2 className={cn(stls.title, { [stls.atMba]: atMba })}>
+              Для кого программа
+            </h2>
+            <p className={cn(stls.subtitle, { [stls.atMba]: atMba })}>
               Все наши программы сертифицированы, имеют аккредитации, а дипломы
               котируются по всему миру!
             </p>
           </div>
           <ImgForWhom
-            classNames={[stls.imageLaptopDesktop]}
+            classNames={[
+              cn(stls.imageLaptopDesktop, {
+                [stls.atMba]: atMba,
+                [stls.default]: !atMba
+              })
+            ]}
             src={program?.forWhomPicture?.url}
             width={program?.forWhomPicture?.width && 523}
             height={getImageHeight({
@@ -46,15 +55,31 @@ const ForWhom = () => {
           <ul className={stls.list}>
             {program?.forWhom &&
               program?.forWhom.map(({ title, desc }, idx) => (
-                <li key={title + idx} className={stls.item}>
-                  {title && (
-                    <div className={stls.itemTitle}>{parse(marked(title))}</div>
-                  )}
-                  {desc && (
-                    <div className={stls.itemDesc}>{parse(marked(desc))}</div>
-                  )}
+                <li
+                  key={title + idx}
+                  className={cn(stls.item, { [stls.atMba]: atMba })}>
+                  <div
+                    className={cn(stls.itemBody, {
+                      [stls.atMba]: atMba
+                    })}>
+                    {title && (
+                      <div
+                        className={cn(stls.itemTitle, { [stls.atMba]: atMba })}>
+                        {parse(marked(title))}
+                      </div>
+                    )}
+                    {desc && (
+                      <div
+                        className={cn(stls.itemDesc, { [stls.atMba]: atMba })}>
+                        {parse(marked(desc))}
+                      </div>
+                    )}
+                  </div>
                   {program?.forWhom[idx + 1] && (
-                    <div className={stls.divider}></div>
+                    <div
+                      className={cn(stls.divider, {
+                        [stls.atMba]: atMba
+                      })}></div>
                   )}
                 </li>
               ))}

@@ -1,6 +1,7 @@
 import stls from '@/styles/components/forms/FormAlpha.module.sass'
 import { useRouter } from 'next/router'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useContext } from 'react'
+import ProgramContext from '@/context/program/programContext'
 import Popup from 'reactjs-popup'
 import { useForm } from 'react-hook-form'
 import hitContactRoute from '@/components/funcs/hitContactRoute'
@@ -32,6 +33,9 @@ const FormAlpha = ({
 
   const [isDisabled, setIsDisabled] = useState(false)
   const [thanksIsOpen, setThanksIsOpen] = useState(false)
+
+  const { program } = useContext(ProgramContext)
+  const atMba = program?.category?.type === 'mba'
 
   useEffect(() => {
     popup && setFocus('name')
@@ -68,9 +72,9 @@ const FormAlpha = ({
       </Popup>
       <form
         method='post'
-        className={classNames({
-          [stls.containet]: true,
-          [stls.atFooter]: atFooter
+        className={classNames(stls.container, {
+          [stls.atFooter]: atFooter,
+          [stls.atMba]: atMba
         })}
         onSubmit={handleSubmit(data => onSubmit(data))}>
         <div className={stls.group}>

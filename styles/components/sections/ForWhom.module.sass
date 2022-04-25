@@ -7,6 +7,8 @@
     @include m.gap($pt: f.px(80))
   @include m.media(laptop, desktop)
     @include m.gap($pt: f.px(180), $pb: f.px(137))
+  &.atMba
+    @include m.dye(bg, c.$pi-2)
 
 .wrapper
   @include m.media(laptop, desktop)
@@ -17,6 +19,9 @@
     position: relative
     @include m.flex($fb: 47%)
     max-width: f.px(523)
+    &.atMba
+      flex-direction: column
+      align-items: flex-start
 
 .right
   @include m.media(laptop, desktop)
@@ -29,14 +34,32 @@
     position: relative
     overflow: hidden
     border-radius: f.px(100) 0
-    &::after
-      content: ''
-      position: absolute
-      top: 0
-      left: 0
-      width: 100%
-      height: 100%
-      background: linear-gradient(0, rgba(#000, .4), rgba(#000, .4))
+    &.default
+      min-width: 100%
+      max-width: 100%
+      & img
+        width: initial !important
+        // min-width: initial !important
+        min-width: 100% !important
+        max-width: initial !important
+      &::after
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background: linear-gradient(0, rgba(#000, .4), rgba(#000, .4))
+    &.atMba
+      flex-grow: 1
+      min-width: 100%
+      max-width: 100%
+      & img
+        margin: initial !important
+        border-radius: f.px(100) 0
+        min-height: auto !important
+        height: auto !important
+        max-height: auto !important
 
 .imagePhoneTablet
   @include m.media(phone, tablet)
@@ -53,6 +76,12 @@
     left: 50%
     transform: translate(-50%, -50%)
     z-index: 2
+    &.atMba
+      position: initial
+      top: initial
+      left: initial
+      transform: initial
+      z-index: initial
 
 .title,
 .subtitle
@@ -62,10 +91,14 @@
     @include m.dye(c, c.$nu)
 
 .title
-  @include m.gap($mb: f.px(10))
+  margin-bottom: f.px(10)
   @include m.media(phone, tablet)
+    &.atMba
+      margin-bottom: f.px(20)
     font-size: f.px(26)
   @include m.media(laptop, desktop)
+    &.atMba
+      margin-bottom: f.px(30)
     font-size: f.px(44)
   font-weight: 500
 
@@ -79,12 +112,29 @@
     font-size: f.px(20)
     line-height: 130%
     font-weight: 200
+    &.atMba
+      margin-bottom: f.px(50)
 
 .list
   @include m.gap($p: 0)
 
 .item
   @include m.flex($fd: column)
+  &.atMba
+    & + .atMba
+      margin-top: f.px(40)
+    padding: 1px
+    border-radius: f.px(25)
+    background: linear-gradient(38.5deg, c.$nu-2 2.09%, c.$xi-2 57.98%)
+
+.itemBody
+  &.atMba
+    border-radius: inherit
+    @include m.media(phone, tablet)
+      padding: f.px(20)
+    @include m.media(laptop, desktop)
+      padding: f.px(30)
+    @include m.dye(bg, c.$pi-2)
 
 .itemTitle,
 .itemDesc
@@ -105,6 +155,12 @@
     font-size: f.px(28)
   font-weight: 500
   line-height: 120%
+  &.atMba
+    @include m.media(phone, tablet)
+      font-size: f.px(20)
+    @include m.media(laptop, desktop)
+      font-size: f.px(22)
+    @include m.dye(c, c.$xi-2)
 
 .itemDesc
   @include m.media(phone, tablet)
@@ -115,6 +171,8 @@
     font-size: f.px(18)
     font-weight: 300
   line-height: 120%
+  &.atMba
+    @include m.dye(c, c.$nu)
 
 .divider
   @include m.media(phone, tablet)
@@ -122,3 +180,5 @@
   @include m.media(laptop, desktop)
     @include m.gap($mtb: f.px(40))
   border: f.px(1) solid rgba(#000, .1)
+  &.atMba
+    display: none

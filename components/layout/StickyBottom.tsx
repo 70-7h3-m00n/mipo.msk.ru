@@ -1,16 +1,20 @@
 import stls from '@/styles/components/layout/StickyBottom.module.sass'
 import { useRouter } from 'next/router'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useContext } from 'react'
 import { discount, until } from '@/data/price'
 import { routePayment } from '@/data/routes'
+import ProgramContext from '@/context/program/programContext'
 import Wrapper from '@/components/layout/Wrapper'
 import IconWavyShape from '@/components/icons/IconWavyShape'
 import PopupTrigger from '@/components/general/PopupTrigger'
 import { IconCloseCircle } from '@/components/icons'
-import classNames from 'classnames'
+import cn from 'classnames'
 
 const StickyBottom = () => {
   const router = useRouter()
+
+  const { program } = useContext(ProgramContext)
+  const atMba = program?.category?.type === 'mba'
 
   const [isShown, setIsShown] = useState(false)
   const [isClosed, setIsClosed] = useState(false)
@@ -31,13 +35,14 @@ const StickyBottom = () => {
 
   return (
     <div
-      className={classNames({
+      className={cn({
         [stls.container]: true,
         [stls.isShown]: isShown,
-        [stls.isClosed]: isClosed
+        [stls.isClosed]: isClosed,
+        [stls.atMba]: atMba
       })}>
       <Wrapper>
-        <div className={stls.shape}>
+        <div className={cn(stls.shape, { [stls.atMba]: atMba })}>
           <IconWavyShape />
         </div>
         <p className={stls.discount}>

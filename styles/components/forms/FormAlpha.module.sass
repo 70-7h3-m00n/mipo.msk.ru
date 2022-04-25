@@ -2,6 +2,12 @@
 @use '@/styles/utils/funcs' as f
 @use '@/styles/config/Colors.module.sass' as c
 
+.container
+  &.atMba
+    & input
+      &:focus
+        @include m.dye(border, c.$nu-2)
+
 .group
   @include m.media(laptop, desktop)
     @include m.flex($fw: wrap, $jc: space-between)

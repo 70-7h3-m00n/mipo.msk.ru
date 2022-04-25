@@ -19,6 +19,8 @@
   box-shadow: 0 f.px(4) f.px(4) rgba(0, 0, 0, .25)
   @include m.dye(bg, c.$alpha)
   @include m.dye(c, c.$nu)
+  &.atMba
+    @include m.dye(bg, c.$xi-2)
   & > *
     position: relative
     @include m.flex($jc: space-between, $ai: center)
@@ -49,6 +51,9 @@
     min-height: f.px(82)
     & > *
       min-height: f.px(82)
+  &.atMba
+    & path
+      @include m.dye(fill, c.$nu-2)
 
 .discount
   position: relative

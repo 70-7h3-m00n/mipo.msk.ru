@@ -1,6 +1,14 @@
 @use '@/styles/utils/mixin' as m
 @use '@/styles/utils/funcs' as f
+@use '@/styles/config/Colors.module.sass' as c
 
 .container
   @include m.gap(f.px(6, em))
   @include m.gap($mr: 0, $pr: 0)
+  border-radius: 50%
+  &:focus-within
+    outline: 1px solid
+    outline-offset: -1px
+    @include m.dye(outline, c.$alpha)
+    &.atMba
+      @include m.dye(outline, c.$nu-2)
