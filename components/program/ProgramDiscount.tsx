@@ -1,6 +1,6 @@
 import stls from '@/styles/components/program/ProgramDiscount.module.sass'
 import { discountNum, until } from '@/data/price'
-import classNames from 'classnames'
+import cn from 'classnames'
 import ProgramContext from '@/context/program/programContext'
 import { useContext } from 'react'
 
@@ -14,6 +14,7 @@ const ProgramDiscount = ({
   textOnly = null
 }: TypeProgramDiscount) => {
   const { program } = useContext(ProgramContext)
+  const atMba = program?.category?.type === 'mba'
 
   const elDiscount = program?.timenprice && (
     <>
@@ -29,12 +30,15 @@ const ProgramDiscount = ({
         elDiscount
       ) : (
         <div
-          className={classNames({
+          className={cn({
             [stls.container]: true,
-            [stls.small]: small
+            [stls.small]: small,
+            [stls.atMba]: atMba
           })}>
-          <p className={stls.discount}>{elDiscount}</p>
-          <p className={stls.until}>{until}</p>
+          <p className={cn(stls.discount, { [stls.atMba]: atMba })}>
+            {elDiscount}
+          </p>
+          <p className={cn(stls.until, { [stls.atMba]: atMba })}>{until}</p>
         </div>
       )}
     </>

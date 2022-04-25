@@ -14,6 +14,12 @@
   text-align: center
   @include m.dye(bg, rgba(c.$omicron, .4))
   @include m.dye(c, c.$nu)
+  &.atMba
+    border: 1px solid
+    border-radius: f.px(15)
+    @include m.dye(border, c.$nu)
+    font-weight: 700
+    @include m.dye(bg, c.$mu-2)
 
   &::after
     content: ''

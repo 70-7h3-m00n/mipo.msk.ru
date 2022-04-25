@@ -42,6 +42,42 @@
         font-size: f.px(38)
       & .until
         font-size: f.px(13)
+  &.atMba
+    position: relative
+    justify-content: center
+    @include m.media(phone, tablet)
+      align-items: flex-end
+      min-width: f.px(166)
+      max-width: f.px(166)
+      min-height: f.px(96)
+      max-height: f.px(96)
+    @include m.media(laptop, desktop)
+      align-items: flex-start
+      min-width: f.px(170)
+      max-width: f.px(170)
+      min-height: f.px(96)
+      max-height: f.px(96)
+    padding: initial
+    padding-left: f.px(20)
+    padding-right: f.px(20)
+    border-radius: f.px(25)
+    transform: initial
+    @include m.dye(bg, c.$xi-2)
+    &::after
+      content: ''
+      position: absolute
+      top: 50%
+      @include m.media(phone, tablet)
+        left: f.px(10)
+      @include m.media(laptop, desktop)
+        right: f.px(10)
+      transform: translateY(-50%)
+      min-width: f.px(20)
+      max-width: f.px(20)
+      min-height: f.px(20)
+      max-height: f.px(20)
+      border-radius: 50%
+      @include m.dye(bg, c.$mu-2)
 
 .discount
   @include m.gap($mb: 0)
@@ -50,6 +86,11 @@
   @include m.media(laptop, desktop)
     font-size: f.px(47)
   font-weight: 500
+  &.atMba
+  @include m.media(phone, tablet)
+    font-size: f.px(34)
+  @include m.media(laptop, desktop)
+    font-size: f.px(34)
 
 .until
   @include m.gap($mb: 0)
@@ -58,3 +99,8 @@
   @include m.media(laptop, desktop)
     font-size: f.px(16)
   font-weight: 500
+  &.atMba
+  @include m.media(phone, tablet)
+    font-size: f.px(15)
+  @include m.media(laptop, desktop)
+    font-size: f.px(15)

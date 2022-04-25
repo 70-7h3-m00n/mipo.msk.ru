@@ -1,5 +1,7 @@
 import stls from '@/styles/components/btns/BtnAlpha.module.sass'
-import classNames from 'classnames'
+import { useContext } from 'react'
+import cn from 'classnames'
+import ProgramContext from '@/context/program/programContext'
 
 const BtnAlpha = ({
   text = '',
@@ -7,12 +9,16 @@ const BtnAlpha = ({
   href = null,
   target = null
 }) => {
+  const { program } = useContext(ProgramContext)
+  const atMba = program?.category?.type === 'mba'
+
   return (
     <>
       {href ? (
         <a
-          className={classNames({
-            [stls.container]: true
+          className={cn({
+            [stls.container]: true,
+            [stls.atMba]: atMba
           })}
           href={href}
           target={target}
@@ -21,9 +27,10 @@ const BtnAlpha = ({
         </a>
       ) : (
         <button
-          className={classNames({
+          className={cn({
             [stls.container]: true,
-            [stls.isDisabled]: isDisabled
+            [stls.isDisabled]: isDisabled,
+            [stls.atMba]: atMba
           })}
           disabled={isDisabled}>
           {text}

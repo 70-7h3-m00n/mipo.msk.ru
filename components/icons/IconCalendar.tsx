@@ -1,12 +1,18 @@
 import stls from '@/styles/components/icons/IconCalendar.module.sass'
-import classNames from 'classnames'
+import { useContext } from 'react'
+import cn from 'classnames'
+import ProgramContext from '@/context/program/programContext'
 
 const IconCalendar = ({ theta = false, halfopacity = false }) => {
+  const { program } = useContext(ProgramContext)
+  const atMba = program?.category?.type === 'mba'
+
   return (
     <div
-      className={classNames([stls.container], {
+      className={cn([stls.container], {
         [stls.theta]: theta,
-        [stls.halfopacity]: halfopacity
+        [stls.halfopacity]: halfopacity,
+        [stls.atMba]: atMba
       })}>
       <svg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
         <title>Срок обучения</title>

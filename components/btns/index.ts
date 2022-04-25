@@ -1,3 +1,4 @@
+import Btn from '@/components/btns/Btn'
 import BtnAlpha from '@/components/btns/BtnAlpha'
 import BtnBeta from '@/components/btns/BtnBeta'
 import BtnClose from '@/components/btns/BtnClose'
@@ -24,6 +25,7 @@ import BtnYt from '@/components/btns/BtnYt'
 import BtnZeta from '@/components/btns/BtnZeta'
 
 export {
+  Btn,
   BtnAlpha,
   BtnBeta,
   BtnClose,

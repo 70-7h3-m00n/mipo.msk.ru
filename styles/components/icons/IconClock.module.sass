@@ -4,6 +4,9 @@
 
 .container
   @include m.sizeIcon($w: 18, $h: 18)
+  &.atMba
+    & path
+      @include m.dye(fill, c.$nu-2)
   // @include m.flex
   // width: 100%
   // @include m.gap($m: f.px(10, em))

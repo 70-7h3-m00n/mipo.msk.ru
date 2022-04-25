@@ -1,12 +1,18 @@
 import stls from '@/styles/components/btns/BtnBeta.module.sass'
-import classNames from 'classnames'
+import { useContext } from 'react'
+import cn from 'classnames'
+import ProgramContext from '@/context/program/programContext'
 
 const BtnBeta = ({ text = '', isDisabled = false }) => {
+  const { program } = useContext(ProgramContext)
+  const atMba = program?.category?.type === 'mba'
+
   return (
     <button
-      className={classNames({
+      className={cn({
         [stls.container]: true,
-        [stls.isDisabled]: isDisabled
+        [stls.isDisabled]: isDisabled,
+        [stls.atMba]: atMba
       })}
       disabled={isDisabled}>
       {text}

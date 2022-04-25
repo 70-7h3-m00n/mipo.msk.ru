@@ -6,15 +6,21 @@
   overflow: visible
   & > *
     position: relative
-  @include m.dye(bg, c.$alpha)
   @include m.media(phone, tablet)
     @include m.gap($pt: f.px(16), $pb: f.px(170))
   @include m.media(laptop, desktop)
     @include m.gap($pt: f.px(52), $pb: f.px(116))
+  @include m.dye(bg, c.$alpha)
+  &.atMba
+    @include m.dye(bg, c.$mu-2)
 
 .top
   @include m.media(laptop, desktop)
     @include m.flex($jc: space-between, $ai: center)
+  &.atMba
+    @include m.media(phone, tablet)
+      display: flex
+      flex-direction: column
 
 .heading
   @include m.media(laptop, desktop)
@@ -52,6 +58,9 @@
         @include m.gap($mb: f.px(0))  
       & strong
         font-weight: 500
+    &.atMba
+      & p
+        font-weight: 500
 
 .descriptionMobile
   @include m.media(phone, tablet)
@@ -64,6 +73,10 @@
         @include m.gap($mb: f.px(0))  
       & strong
         font-weight: 500
+    &.atMba
+      order: 2
+      & p
+        font-weight: 500
   @include m.media(laptop, desktop)
     display: none
 
@@ -73,6 +86,9 @@
     @include m.gap($mb: f.px(30))
   // @include m.media(laptop, desktop)
   //   @include m.gap($mb: f.px(87))
+  &.atMba
+    @include m.media(phone, tablet)
+      order: 3
 
 .discount
   position: absolute
@@ -82,9 +98,23 @@
   @include m.media(laptop, desktop)
     left: f.px(-30)
   z-index: 1
+  &.atMba
+    @include m.media(phone, tablet)
+      top: f.px(-3)
+      left: initial
+      right: 0
+    @include m.media(laptop, desktop)
+      top: f.px(85)
+      left: 0
+      transform: translateX(-55%)
 
 .img
   border-radius: f.px(100) 0
+  &.atMba
+    @include m.media(phone, tablet)
+      border-radius: 0 f.px(100) 0 f.px(100)
+    @include m.media(laptop, desktop)
+      border-radius: 0 f.px(206) f.px(206) f.px(206)
   overflow: hidden
   @include m.media(phone, tablet)
     max-width: 670px
