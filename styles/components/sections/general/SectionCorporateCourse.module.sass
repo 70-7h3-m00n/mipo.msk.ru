@@ -5,6 +5,7 @@
 @use '@/styles/utils/mixin/media' as bp
 
 .container
+  overflow: hidden
   @include m.media(phone, tablet)
     padding-top: f.px(50)
     padding-bottom: f.px(50)
@@ -21,16 +22,22 @@
 $right_ld_ml: 5%
 .left
   @include m.media(laptop, desktop)
-    flex-basis: math.div(100% - $right_ld_ml * 1, 2) + 3%
+    flex-basis: math.div(100% - $right_ld_ml * 1, 2) + 12%
 
 .right
   position: relative
+  display: flex
+  align-items: center
   @include m.media(phone, tablet)
+    max-width: f.px(347)
+    justify-content: center
     margin-top: f.px(50)
+    margin-left: auto
+    margin-right: auto
+    padding-top: f.px(50)
+    padding-bottom: f.px(50)
   @include m.media(laptop, desktop)
-    display: flex
     justify-content: flex-end
-    align-items: center
     flex-basis: math.div(100% - $right_ld_ml * 1, 2)
     margin-left: $right_ld_ml
   &::after
@@ -79,14 +86,55 @@ $right_ld_ml: 5%
   @include m.dye(c, rgba(c.$nu, .5))
 
 .btn
+  position: relative
+  z-index: 3
   @include m.media(laptop, desktop)
     & button
       min-width: f.px(270)
 
 .img
   @include m.media(phone, tablet)
-    max-width: max-content
+    max-width: f.px(265)
   @include m.media(laptop, desktop)
-    max-width: f.px(470)
+    max-width: f.px(350)
+  transform: rotate(8deg)
   overflow: hidden
-  border-radius: f.px(100) 0
+  border-radius: f.px(25)
+
+.IconGeneralSquare
+  position: absolute
+  z-index: 3
+  @include m.media(phone, tablet)
+    bottom: 10%
+    left: 0
+    max-width: f.px(146)
+  @include m.media(laptop, desktop)
+    bottom: 3%
+    left: 10%
+    max-width: f.px(270)
+  transform: rotate(-15deg)
+  backdrop-filter: blur(6px)
+
+.IconGeneralLiniarSpiral
+  position: absolute
+  z-index: 2
+  @include m.media(phone, tablet)
+    top: f.px(-70)
+    left: 0
+    max-width: f.px(194)
+  @include m.media(laptop, desktop)
+    top: f.px(-100)
+    left: 9%
+    max-width: f.px(270)
+
+.IconGeneral3dSpiral
+  position: absolute
+  transform: rotate(45deg)
+  @include m.media(phone, tablet)
+    bottom: 0
+    right: 24%
+    max-width: f.px(17)
+  @include m.media(laptop, desktop)
+    bottom: f.px(-20)
+    right: 10%
+    max-width: f.px(24)

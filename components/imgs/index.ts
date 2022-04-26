@@ -1,4 +1,5 @@
 import ImgTemplate from '@/components/imgs/ImgTemplate'
+import ImgCorporateCourseStudentsStudying from '@/components/imgs/corporate-course/ImgCorporateCourseStudentsStudying'
 import ImgApplication from '@/components/imgs/diplomas/ImgApplication'
 import ImgDiploma from '@/components/imgs/diplomas/ImgDiploma'
 import ImgDiploma1 from '@/components/imgs/diplomas/ImgDiploma1'
@@ -45,6 +46,7 @@ import ImgFullProgram1 from '@/components/imgs/fullprogram/ImgFullProgram1'
 
 export {
   ImgTemplate,
+  ImgCorporateCourseStudentsStudying,
   ImgApplication,
   ImgDiploma,
   ImgDiploma1,

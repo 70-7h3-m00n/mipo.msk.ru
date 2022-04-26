@@ -1,9 +1,11 @@
 // ./general
 export { default as IconGeneral3dSpiral } from '@/components/icons/general/IconGeneral3dSpiral'
 export { default as IconGeneralCircle } from '@/components/icons/general/IconGeneralCircle'
+export { default as IconGeneralLiniarSpiral } from '@/components/icons/general/IconGeneralLiniarSpiral'
 export { default as IconGeneralLogo } from '@/components/icons/general/IconGeneralLogo'
 export { default as IconGeneralLogoMinimal } from '@/components/icons/general/IconGeneralLogoMinimal'
 export { default as IconGeneralLogoSquare } from '@/components/icons/general/IconGeneralLogoSquare'
+export { default as IconGeneralSquare } from '@/components/icons/general/IconGeneralSquare'
 export { default as IconGeneralWaterDrop } from '@/components/icons/general/IconGeneralWaterDrop'
 
 import IconAtom from '@/components/icons/IconAtom'
