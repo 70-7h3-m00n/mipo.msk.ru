@@ -6,7 +6,6 @@
   @include m.sizeIcon($w: 20, $h: 20)
   @include m.flex
   // @include m.gap($m: f.px(10, em))
-
   &.calpha
     border-radius: 50%
     @include m.dye(bg, c.$nu)
@@ -14,7 +13,6 @@
       @include m.dye(stroke, c.$alpha)
     & rect
       @include m.dye(stroke, c.$nu)
-
   &.inverse
     border-radius: 50%
     @include m.dye(bg, c.$beta)
@@ -22,6 +20,16 @@
       @include m.dye(stroke, c.$nu)
     & rect
       @include m.dye(stroke, c.$beta)
-
+  &.atMba
+    border-radius: 50%
+    padding: 1px
+    background: linear-gradient(38.5deg, c.$nu-2 2.09%, c.$rho-2 57.98%)
+    & svg
+      border-radius: inherit
+      @include m.dye(bg, c.$mu-2)
+    & path
+      @include m.dye(stroke, c.$nu)
+    & rect
+      @include m.dye(stroke, c.$nu-2)
   // & path, & rect
   //   @include m.dye(stroke, c.$beta)

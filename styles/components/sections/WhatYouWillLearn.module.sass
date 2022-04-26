@@ -8,6 +8,8 @@
   @include m.media(laptop, desktop)
     @include m.gap($mb: f.px(97), $ptb: f.px(97))
   @include m.dye(bg, c.$epsilon)
+  &.atMba
+    @include m.dye(bg, c.$mu-2)
 
 .title
   @include m.media(phone, tablet)
@@ -17,6 +19,8 @@
     font-size: f.px(44)
   font-weight: 500
   @include m.dye(c, c.$theta)
+  &.atMba
+    @include m.dye(c, c.$nu)
 
 .whatYouWillLearn
   @include m.gap($p: 0)
@@ -51,3 +55,5 @@
     @include m.gap($mb: 0)
     font-size: f.px(20)
     font-weight: 300
+  &.atMba
+    @include m.dye(c, c.$nu)
