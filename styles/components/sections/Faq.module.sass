@@ -13,6 +13,9 @@
   @include m.dye(bg, c.$epsilon)
   &.atMba
     margin: 0
+    @include m.media(laptop, desktop)
+      padding-top: f.px(100)
+      padding-bottom: f.px(100)
     @include m.dye(bg, c.$pi-2)
 
 .heading

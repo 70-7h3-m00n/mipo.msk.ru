@@ -3,7 +3,9 @@
 @use '@/styles/config/Colors.module.sass' as c
 
 .container
-  @include m.flex($fd: column, $jc: center)
+  display: flex
+  flex-direction: column
+  justify-content: center
   @include m.media(phone, tablet)
     margin-bottom: f.px(10)
   @include m.media(laptop, desktop)
@@ -18,9 +20,16 @@
       width: 100%
       height: f.px(1)
       @include m.dye(bg, c.$mu)
-    &.atMba
-      &::after
-        background: linear-gradient(63.38deg, c.$nu-2 44.82%, c.$xi-2 87.9%)
+  &.atMba
+    &::after
+      content: ''
+      position: absolute
+      right: 0
+      bottom: 0
+      left: initial
+      width: calc(100% - f.px(57))
+      height: f.px(1)
+      background: linear-gradient(63.38deg, c.$nu-2 44.82%, c.$xi-2 87.9%)
   &:nth-last-child(1)
     margin-bottom: 0
 

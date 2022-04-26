@@ -1,4 +1,5 @@
 // ./general
+export { default as SectionCorporateCourse } from '@/components/sections/general/SectionCorporateCourse'
 export { default as SectionMoreRelevant } from '@/components/sections/general/SectionMoreRelevant'
 
 export { default as About } from '@/components/sections/About'

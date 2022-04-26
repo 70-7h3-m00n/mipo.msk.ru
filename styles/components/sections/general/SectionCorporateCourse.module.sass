@@ -11,6 +11,7 @@
   @include m.media(laptop, desktop)
     padding-top: f.px(100)
     padding-bottom: f.px(100)
+  @include m.dye(bg, c.$mu-2)
 
 .wrapper
   @include m.media(laptop, desktop)
@@ -45,7 +46,7 @@ $right_ld_ml: 5%
       max-height: f.px(74)
       filter: blur(50px)
     @include m.media(laptop, desktop)
-      left: f.px(-85)
+      left: f.px(-15)
       min-width: f.px(170)
       max-width: f.px(170)
       min-height: f.px(170)
@@ -62,10 +63,11 @@ $right_ld_ml: 5%
     font-size: f.px(44)
   font-weight: 500
   line-height: 120%
-  @include m.dye(c, c.$mu-2)
+  @include m.dye(c, c.$nu)
 
 .p
   margin: 0
+  margin-bottom: f.px(50)
   @include m.media(phone, tablet)
     margin-top: f.px(20)
     font-size: f.px(15)
@@ -74,7 +76,12 @@ $right_ld_ml: 5%
     font-size: f.px(20)
   font-weight: 500
   line-height: 130%
-  @include m.dye(c, c.$kappa)
+  @include m.dye(c, rgba(c.$nu, .5))
+
+.btn
+  @include m.media(laptop, desktop)
+    & button
+      min-width: f.px(270)
 
 .img
   @include m.media(phone, tablet)

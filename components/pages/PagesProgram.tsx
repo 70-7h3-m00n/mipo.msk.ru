@@ -14,7 +14,8 @@ import {
   HelpWithEmployment,
   YourFutureJob,
   StudyCost,
-  Faq
+  Faq,
+  SectionCorporateCourse
 } from '@/components/sections'
 import { useContext } from 'react'
 import ProgramContext from '@/context/program/programContext'
@@ -56,6 +57,7 @@ const PagesProgram = ({ ofType = null }: PagesProgramType) => {
       {/* <HelpWithEmployment /> */}
       <StudyCost />
       <Faq />
+      {atMba && <SectionCorporateCourse />}
     </>
   )
 }
