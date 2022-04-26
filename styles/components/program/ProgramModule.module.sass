@@ -30,6 +30,8 @@
   @include m.media(laptop, desktop)
     font-size: f.px(22)
   font-weight: 300
+  &.atMba
+    @include m.dye(c, c.$nu)
 
 .p
   @include m.gap($mb: 0)

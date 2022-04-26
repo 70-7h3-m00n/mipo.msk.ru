@@ -14,7 +14,7 @@ const ForWhom = () => {
 
   return (
     <section className={cn(stls.container, { [stls.atMba]: atMba })}>
-      <Wrapper classNames={[stls.wrapper]}>
+      <Wrapper classNames={[cn(stls.wrapper)]}>
         <div className={cn(stls.left, { [stls.atMba]: atMba })}>
           <div className={cn(stls.text, { [stls.atMba]: atMba })}>
             <h2 className={cn(stls.title, { [stls.atMba]: atMba })}>

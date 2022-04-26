@@ -7,6 +7,12 @@
   max-width: f.px(286)
   border-radius: f.px(80)
   @include m.dye(bg, c.$nu)
+  &.atMba
+    border-top: 1px solid
+    border-right: 1px solid
+    border-bottom: 1px solid
+    @include m.dye(border, c.$nu)
+    @include m.dye(bg, c.$pi-2)
 
 .qty
   @include m.flex($jc: center, $ai: center)
@@ -24,6 +30,19 @@
     font-size: f.px(48)
   @include m.dye(bg, c.$alpha)
   @include m.dye(c, c.$nu)
+  &.atMba
+    @include m.media(phone, tablet)
+      min-width: f.px(92)
+      max-width: f.px(92)
+      min-height: f.px(92)
+      max-height: f.px(92)
+    @include m.media(laptop, desktop)
+      min-width: f.px(98)
+      max-width: f.px(98)
+      min-height: f.px(98)
+      max-height: f.px(98)
+    font-size: f.px(36)
+    @include m.dye(bg, c.$xi-2)
 
 .text
   @include m.gap($mb: 0)
@@ -33,3 +52,13 @@
     @include m.gap($ptb: f.px(20), $plr: f.px(30))
     font-size: f.px(18)
   font-weight: 300
+  &.atMba
+    padding: f.px(20)
+    @include m.media(phone, tablet)
+      font-size: f.px(20)
+    @include m.media(laptop, desktop)
+      font-size: f.px(22)
+    line-height: 130%
+    text-align: right
+    font-weight: 500
+    @include m.dye(c, c.$nu)

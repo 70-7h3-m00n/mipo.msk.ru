@@ -21,7 +21,12 @@
   text-align: center
   @include m.dye(bg, c.$alpha)
   @include m.dye(c, c.$nu)
-
+  &.atMba
+    border-radius: f.px(15)
+    padding-right: f.px(8)
+    padding-left: f.px(8)
+    @include m.dye(border, c.$nu-2)
+    @include m.dye(bg, c.$nu-2)
   &::after
     content: ''
     position: absolute
