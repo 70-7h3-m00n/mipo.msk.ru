@@ -4,6 +4,7 @@ import {
   HowProcessGoes,
   WhatYouWillLearn,
   ForWhom,
+  SectionMoreRelevant,
   YourDiploma,
   BriefProgramContents,
   FullProgram,
@@ -26,12 +27,14 @@ type PagesProgramType = {
 
 const PagesProgram = ({ ofType = null }: PagesProgramType) => {
   const { program } = useContext(ProgramContext)
+  const atMba = program?.category?.type === 'mba'
 
   return (
     <>
       <HeroProgram />
       {/* <Desc /> */}
       <ForWhom />
+      {atMba && <SectionMoreRelevant />}
       <WhatYouWillLearn />
       <HowProcessGoes />
       {/* <YourDiploma ofType={ofType} /> */}

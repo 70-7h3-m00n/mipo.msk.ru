@@ -52,7 +52,7 @@ const ForWhom = () => {
           />
         </div>
         <div className={stls.right}>
-          <ul className={stls.list}>
+          <ul className={cn(stls.list, { [stls.atMba]: atMba })}>
             {program?.forWhom &&
               program?.forWhom.map(({ title, desc }, idx) => (
                 <li

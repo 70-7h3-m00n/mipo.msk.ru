@@ -1,3 +1,6 @@
+// ./general
+export { default as SectionMoreRelevant } from '@/components/sections/general/SectionMoreRelevant'
+
 export { default as About } from '@/components/sections/About'
 export { default as ActiveLicenses } from '@/components/sections/ActiveLicenses'
 export { default as BriefProgramContents } from '@/components/sections/BriefProgramContents'

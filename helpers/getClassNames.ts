@@ -1,19 +1,16 @@
-type getClassNamesType = {
-  classNames: string[]
+import { TPropClassNames } from '@/types/index'
+
+type TypegetClassNamesProps = TPropClassNames
+
+type TypeGetClassNamesOutput = {
+  readonly [key: string]: boolean
 }
 
-type OutputType = {
-  [key: string]: boolean
-}
-
-const getClassNames = ({ classNames }: getClassNamesType) => {
-  const output: OutputType = {}
-
-  classNames.forEach(className => {
-    className && (output[className] = true)
-  })
-
-  return output
-}
+const getClassNames = ({
+  classNames = []
+}: TypegetClassNamesProps): TypeGetClassNamesOutput =>
+  classNames
+    .filter(className => className)
+    .reduce((acc, cur) => ({ ...acc, [cur]: true }), {})
 
 export default getClassNames

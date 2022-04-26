@@ -51,15 +51,31 @@
         height: 100%
         background: linear-gradient(0, rgba(#000, .4), rgba(#000, .4))
     &.atMba
+      z-index: 1
       flex-grow: 1
       min-width: 100%
       max-width: 100%
+      overflow: visible
       & img
         margin: initial !important
         border-radius: f.px(100) 0
         min-height: auto !important
         height: auto !important
         max-height: auto !important
+      @include m.media(laptop, desktop)
+        &::after
+          content: ''
+          position: absolute
+          z-index: -1
+          top: f.px(-20)
+          left: 0
+          min-width: f.px(170)
+          max-width: f.px(170)
+          min-height: f.px(170)
+          max-height: f.px(170)
+          border-radius: 50%
+          filter: blur(90px)
+          @include m.dye(bg, rgba(c.$tau-2, .4))
 
 .imagePhoneTablet
   @include m.media(phone, tablet)
@@ -118,6 +134,7 @@
       margin-bottom: f.px(50)
 
 .list
+  overflow: visible
   @include m.gap($p: 0)
 
 .item
@@ -128,6 +145,25 @@
     padding: 1px
     border-radius: f.px(25)
     background: linear-gradient(38.5deg, c.$nu-2 2.09%, c.$xi-2 57.98%)
+    @include m.media(laptop, desktop)
+      &:nth-last-child(1)
+        & .itemBody
+          position: relative
+          z-index: 1
+          &::after
+            content: ''
+            position: absolute
+            z-index: -1
+            bottom: 0
+            right: f.px(40)
+            transform: translateY(50%)
+            min-width: f.px(170)
+            max-width: f.px(170)
+            min-height: f.px(170)
+            max-height: f.px(170)
+            border-radius: 50%
+            filter: blur(100px)
+            @include m.dye(bg, rgba(c.$tau-2, .4))
 
 .itemBody
   &.atMba

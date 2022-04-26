@@ -9,6 +9,8 @@ import ImgForWhom from '@/components/imgs/forWhom/ImgForWhom'
 import ImgForWhomPhoneTablet from '@/components/imgs/forWhom/ImgForWhomPhoneTablet'
 import ImgCertificate from '@/components/imgs/diplomas/ImgCertificate'
 import ImgLadyStudying from '@/components/imgs/general/ImgLadyStudying'
+import ImgLicence from '@/components/imgs/legal/ImgLicence'
+import ImgMoreRelevantPeopleStudying from '@/components/imgs/more-relevant/ImgMoreRelevantPeopleStudying'
 import ImgOnlinePayment from '@/components/imgs/payment/ImgOnlinePayment'
 import ImgPortrait1 from '@/components/imgs/webinars/ImgPortrait1'
 import ImgPortrait2 from '@/components/imgs/webinars/ImgPortrait2'
@@ -53,6 +55,8 @@ export {
   ImgForWhomPhoneTablet,
   ImgCertificate,
   ImgLadyStudying,
+  ImgLicence,
+  ImgMoreRelevantPeopleStudying,
   ImgOnlinePayment,
   ImgPortrait1,
   ImgPortrait2,

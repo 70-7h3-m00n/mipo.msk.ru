@@ -1,6 +1,8 @@
 import stls from '@/styles/components/layout/Footer.module.sass'
 import classNames from 'classnames'
 import { useContext } from 'react'
+import cn from 'classnames'
+import ProgramContext from '@/context/program/programContext'
 import ProgramsContext from '@/context/programs/programsContext'
 import Link from 'next/link'
 import Wrapper from '@/components/layout/Wrapper'
@@ -25,6 +27,8 @@ import { FormAlpha } from '@/components/forms'
 
 const Footer = () => {
   const { studyFields } = useContext(ProgramsContext)
+  const { program } = useContext(ProgramContext)
+  const atMba = program?.category?.type === 'mba'
 
   const staticLinks = [
     {
@@ -74,7 +78,7 @@ const Footer = () => {
   // )
 
   return (
-    <footer className={stls.container}>
+    <footer className={cn(stls.container, { [stls.atMba]: atMba })}>
       <Wrapper>
         <div className={stls.left}>
           <div className={stls.top}>
