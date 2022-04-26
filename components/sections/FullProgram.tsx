@@ -26,7 +26,7 @@ const FullProgram = () => {
               направления
             </p>
           </div>
-          <div className={stls.btn}>
+          <div className={cn(stls.btn, { [stls.atMba]: atMba })}>
             <PopupTrigger btn='gamma' cta='getProgram' />
           </div>
         </div>

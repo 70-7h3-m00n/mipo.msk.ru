@@ -13,6 +13,10 @@ import { useContext } from 'react'
 const YourFutureJob = () => {
   const { program } = useContext(ProgramContext)
 
+  if (!program?.jobTitles || program?.jobTitles.length === 0) {
+    return null
+  }
+
   return (
     <section className={stls.container}>
       <Wrapper>

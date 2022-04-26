@@ -1,12 +1,14 @@
 import stls from '@/styles/components/sections/Faq.module.sass'
+import { useContext } from 'react'
+import cn from 'classnames'
+import ProgramContext from '@/context/program/programContext'
 import Wrapper from '@/components/layout/Wrapper'
 import FaqAnswer from '@/components/general/FaqAnswer'
-import ProgramContext from '@/context/program/programContext'
-import { useContext } from 'react'
 import PopupTrigger from '@/components/general/PopupTrigger'
 
 const Faq = () => {
   const { program } = useContext(ProgramContext)
+  const atMba = program?.category?.type === 'mba'
 
   // const topics = getListItemsInnerHtml(questions)
   // const titles = getParagraphInnerHtml(questions)
@@ -20,13 +22,15 @@ const Faq = () => {
   //   }))
 
   return (
-    <section className={stls.container}>
+    <section className={cn(stls.container, { [stls.atMba]: atMba })}>
       <Wrapper>
         <div className={stls.heading}>
           {' '}
-          <h2 className={stls.title}>Часто задаваемые вопросы</h2>
-          <div className={stls.laptopdesktop}>
-            <p className={stls.p}>
+          <h2 className={cn(stls.title, { [stls.atMba]: atMba })}>
+            Часто задаваемые вопросы
+          </h2>
+          <div className={cn(stls.laptopdesktop, { [stls.atMba]: atMba })}>
+            <p className={cn(stls.p, { [stls.atMba]: atMba })}>
               У Вас есть вопросы? Оставьте заявку! <br />И мы перезвоним Вам!
             </p>
             <PopupTrigger btn='zeta' cta='askQuestion' />
@@ -44,13 +48,13 @@ const Faq = () => {
                 />
               ))}
           </ul>
-          <div className={stls.phonetablet}>
+          <div className={cn(stls.phonetablet, { [stls.atMba]: atMba })}>
             <p className={stls.p}>
               У Вас есть вопросы? Оставьте заявку! И мы перезвоним Вам!
             </p>
           </div>
         </div>
-        <div className={stls.phonetablet}>
+        <div className={cn(stls.phonetablet, { [stls.atMba]: atMba })}>
           <PopupTrigger btn='zeta' cta='askQuestion' />
         </div>
       </Wrapper>

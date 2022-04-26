@@ -5,6 +5,11 @@
 .container
   @include m.sizeIcon($w: 39, $h: 39)
   @include m.flex
+  &.atMba
+    & circle
+      @include m.dye(fill, c.$nu-2)
+    & line
+      @include m.dye(stroke, c.$nu)
   // @include m.gap($m: f.px(10, em))
 
   // & path

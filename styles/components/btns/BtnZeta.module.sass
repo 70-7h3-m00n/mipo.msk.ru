@@ -17,6 +17,13 @@
   border: f.px(2) solid
   @include m.dye(border, c.$alpha)
   @include m.dye(c, c.$alpha)
+  &.atMba
+    @include m.media(laptop, desktop)
+      min-width: f.px(270)
+    border-radius: f.px(15)
+    @include m.dye(border, c.$xi-2)
+    @include m.dye(bg, c.$xi-2)
+    @include m.dye(c, c.$nu)
   &:hover
     transform: scale(1.02)
   &:focus

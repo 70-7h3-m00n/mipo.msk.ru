@@ -1,8 +1,14 @@
 import stls from '@/styles/components/icons/IconMinus.module.sass'
+import { useContext } from 'react'
+import cn from 'classnames'
+import ProgramContext from '@/context/program/programContext'
 
 const IconMinus = () => {
+  const { program } = useContext(ProgramContext)
+  const atMba = program?.category?.type === 'mba'
+
   return (
-    <div className={stls.container}>
+    <div className={cn(stls.container, { [stls.atMba]: atMba })}>
       <svg viewBox='0 0 39 39' fill='none' xmlns='http://www.w3.org/2000/svg'>
         <title>Закрыть</title>
         <circle cx='19.5' cy='19.5' r='19.5' fill='#fff' />

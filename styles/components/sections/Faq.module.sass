@@ -3,47 +3,69 @@
 @use '@/styles/config/Colors.module.sass' as c
 
 .container
-  @include m.gap($ptb: f.px(50))
+  padding-top: f.px(50)
+  padding-bottom: f.px(50)
   @include m.media(laptop, desktop)
-    @include m.gap($mlr: 1%)
+    margin-left: 1%
+    margin-right: 1%
     & > *
       @include m.flex
   @include m.dye(bg, c.$epsilon)
+  &.atMba
+    margin: 0
+    @include m.dye(bg, c.$pi-2)
 
 .heading
   @include m.media(laptop)
-    @include m.flex($display: false, $fb: 55%)
-    @include m.gap($mr: 8%)
+    flex-basis: 55%
+    margin-right: 8%
   @include m.media(desktop)
-    @include m.flex($display: false, $fb: 45%)
-    @include m.gap($mr: 8%)
+    flex-basis: 45%
+    margin-right: 8%
 
 .title
+  margin-bottom: f.px(20)
   @include m.media(phone, tablet)
-    @include m.gap($mb: f.px(20))
     font-size: f.px(26)
   @include m.media(laptop, desktop)
-    @include m.gap($mb: f.px(20))
     font-size: f.px(44)
   font-weight: 500
   @include m.dye(c, c.$theta)
+  &.atMba
+    margin-bottom: f.px(30)
+    @include m.dye(c, c.$nu)
 
 .phonetablet
   @include m.media(laptop, desktop)
+    display: none
+  &.atMba
     display: none
 
 .laptopdesktop
   @include m.media(phone, tablet)
     display: none
+    &.atMba
+      display: block
+      margin-bottom: f.px(50)
 
 .list
-  @include m.gap($mb: f.px(20), $p: 0)
+  margin-bottom: f.px(20)
+  padding: 0
 
 .p
   @include m.media(phone, tablet)
-    @include m.gap($mb: f.px(20))
+    margin-bottom: f.px(20)
     font-size: f.px(15)
   @include m.media(laptop, desktop)
-    @include m.gap($mb: f.px(50))
+    margin-bottom: f.px(50)
     font-size: f.px(18)
   font-weight: 300
+  &.atMba
+    @include m.media(phone, tablet)
+      margin-bottom: f.px(50)
+      font-size: f.px(15)
+    @include m.media(laptop, desktop)
+      font-size: f.px(20)
+    font-weight: 500
+    line-height: 120%
+    @include m.dye(c, rgba(c.$nu, .5))

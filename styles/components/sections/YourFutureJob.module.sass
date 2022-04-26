@@ -4,10 +4,11 @@
 
 .container
   position: relative
+  padding-bottom: 0
   @include m.media(phone, tablet)
-    @include m.gap($ptb: f.px(50))
+    padding-top: f.px(50)
   @include m.media(laptop, desktop)
-    @include m.gap($ptb: f.px(95))
+    padding-top: f.px(95)
   overflow: visible
 
 .title

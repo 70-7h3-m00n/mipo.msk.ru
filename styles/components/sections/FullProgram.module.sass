@@ -5,9 +5,13 @@
 .container
   @include m.gap($pb: 0)
   @include m.media(laptop, desktop)
-    transform: translateY(f.px(-116))
+    margin-top: f.px(-116)
     & > *
       @include m.gap($plr: f.px(0))
+  &.atMba
+    @include m.media(phone, tablet)
+      padding: 1px
+      margin-top: f.px(-52)
 
 .wrapper
   @include m.media(phone, tablet)
@@ -19,6 +23,7 @@
     border-radius: 0 0 f.px(100) 0 
   @include m.dye(bg, c.$delta)
   &.atMba
+    border-radius: 0 0 f.px(25) 0
     border: 1px solid
     @include m.dye(border, c.$pi-2)
     @include m.dye(bg, c.$nu)
@@ -76,3 +81,8 @@
       width: 100%
       & > *
         width: 100%
+    &.atMba
+      margin: 0
+      display: flex
+      justify-content: center
+      align-items: center

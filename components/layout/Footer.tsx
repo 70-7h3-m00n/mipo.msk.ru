@@ -156,7 +156,7 @@ const Footer = () => {
             <FooterBottom />
           </div>
         </div>
-        <div className={stls.right}>
+        <div className={cn(stls.right, { [stls.atMba]: atMba })}>
           <div className={stls.formTitles}>
             <p className={stls.formTitle}>Остались вопросы?</p>
             <p className={stls.formTitle}>Свяжитесь с нами!</p>
@@ -168,7 +168,7 @@ const Footer = () => {
       <div className={stls.footerBottom}>
         <FooterBottom />
       </div>
-      <div className={stls.bgRight}></div>
+      <div className={cn(stls.bgRight, { [stls.atMba]: atMba })}></div>
     </footer>
   )
 }

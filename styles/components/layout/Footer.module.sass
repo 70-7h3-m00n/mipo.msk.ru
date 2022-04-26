@@ -89,6 +89,8 @@
     @include m.flex($display: false, $fb: 30%)
     @include m.gap($p: f.px(50))
     @include m.dye(bg, c.$gamma-2)
+    &.atMba
+      @include m.dye(bg, c.$upsilon-2)
 
 .formTitles
   @include m.gap($mb: f.px(17))
@@ -112,3 +114,5 @@
     width: 30%
     height: 100%
     @include m.dye(bg, c.$gamma-2)
+    &.atMba
+      @include m.dye(bg, c.$upsilon-2)

@@ -2,6 +2,12 @@
 @use '@/styles/utils/funcs' as f
 @use '@/styles/config/Colors.module.sass' as c
 
+.container
+  @include m.media(phone, tablet)
+    padding-top: f.px(50)
+  @include m.media(laptop, desktop)
+    padding-top: f.px(95)
+
 .title
   @include m.media(phone, tablet)
     @include m.gap($mb: f.px(11))
