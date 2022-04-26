@@ -75,6 +75,8 @@
         font-weight: 500
     &.atMba
       order: 2
+      @include m.media(phone, tablet)
+        margin-bottom: f.px(50)
       & p
         font-weight: 500
   @include m.media(laptop, desktop)
@@ -104,6 +106,36 @@
         filter: blur(192px)
         @include m.dye(bg, c.$nu-2)
 
+.IconGeneral3dSpiral,
+.IconGeneral3dSpiral2,
+.IconGeneralCircle,
+.IconGeneralWaterDrop
+  position: absolute
+  z-index: 2
+
+.IconGeneral3dSpiral
+  @include m.media(phone, tablet)
+    top: f.px(-30)
+    left: f.px(5)
+    max-width: f.px(42)
+  @include m.media(laptop, desktop)
+    top: f.px(-60)
+    left: f.px(-70)
+    max-width: f.px(46)
+
+.IconGeneralCircle
+  bottom: 0
+  left: f.px(10)
+  max-width: f.px(34)
+
+.IconGeneralWaterDrop
+  @include m.media(phone, tablet)
+    display: none
+  @include m.media(laptop, desktop)
+    top: 0
+    right: f.px(10)
+    max-width: f.px(57)
+
 .discount
   position: absolute
   top: f.px(-20)
@@ -125,14 +157,14 @@
 
 .img
   border-radius: f.px(100) 0
+  overflow: hidden
   &.atMba
     @include m.media(phone, tablet)
-      border-radius: 0 f.px(100) 0 f.px(100)
+      border-radius: 0 f.px(130) 0 f.px(130)
     @include m.media(laptop, desktop)
       position: relative
       z-index: 1
       border-radius: 0 f.px(206) f.px(206) f.px(206)
-  overflow: hidden
   @include m.media(phone, tablet)
     max-width: 670px
     margin: 0 auto

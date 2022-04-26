@@ -35,5 +35,17 @@ type TGeneralColorKeys =
   | 'kappa-2'
   | 'lambda-2'
   | 'mu-2'
+  | 'nu-2'
+  | 'xi-2'
+  | 'omicron-2'
+  | 'pi-2'
+  | 'rho-2'
+  | 'sigma-2'
+  | 'tau-2'
+  | 'upsilon-2'
+  | 'phi-2'
+  | 'chi-2'
+  | 'psi-2'
+  | 'omega-2'
 
 export default TGeneralColorKeys

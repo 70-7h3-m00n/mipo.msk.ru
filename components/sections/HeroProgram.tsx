@@ -1,17 +1,23 @@
 import stls from '@/styles/components/sections/HeroProgram.module.sass'
+import { useContext } from 'react'
 import cn from 'classnames'
+import parse from 'html-react-parser'
+import marked from 'marked'
+import { colors } from '@/config/index'
+import { getImageHeight } from '@/helpers/index'
+import ProgramContext from '@/context/program/programContext'
+import ProgramsContext from '@/context/programs/programsContext'
 import Wrapper from '@/components/layout/Wrapper'
 import ProgramLabel from '@/components/program/ProgramLabel'
 import ProgramDiscount from '@/components/program/ProgramDiscount'
-import { ImgCourse } from '@/components/imgs'
 import ProgramInfo from '@/components/program/ProgramInfo'
-import ProgramContext from '@/context/program/programContext'
-import ProgramsContext from '@/context/programs/programsContext'
-import { useContext } from 'react'
-import parse from 'html-react-parser'
-import marked from 'marked'
 import PopupTrigger from '@/components/general/PopupTrigger'
-import { getImageHeight } from '@/helpers/index'
+import {
+  IconGeneral3dSpiral,
+  IconGeneralCircle,
+  IconGeneralWaterDrop
+} from '@/components/icons'
+import { ImgCourse } from '@/components/imgs'
 
 const HeroProgram = () => {
   const { program } = useContext(ProgramContext)
@@ -51,6 +57,15 @@ const HeroProgram = () => {
             <div className={cn(stls.discount, { [stls.atMba]: atMba })}>
               <ProgramDiscount />
             </div>
+            {atMba && (
+              <>
+                <IconGeneral3dSpiral classNames={[stls.IconGeneral3dSpiral]} />
+                <IconGeneralCircle classNames={[stls.IconGeneralCircle]} />
+                <IconGeneralWaterDrop
+                  classNames={[stls.IconGeneralWaterDrop]}
+                />
+              </>
+            )}
             <div className={cn(stls.img, { [stls.atMba]: atMba })}>
               <ImgCourse
                 src={program?.heroPicture?.url}
