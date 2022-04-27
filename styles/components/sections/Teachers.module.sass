@@ -7,6 +7,8 @@
     padding-top: f.px(50)
   @include m.media(laptop, desktop)
     padding-top: f.px(95)
+  &.atMba
+    @include m.dye(bg, c.$pi-2)
 
 .title
   @include m.media(phone, tablet)
@@ -17,6 +19,9 @@
     font-size: f.px(44)
   font-weight: 500
   @include m.dye(c, c.$theta)
+  &.atMba
+    margin-bottom: f.px(30)
+    @include m.dye(c, c.$nu)
 
 .desc
   @include m.media(phone, tablet)
@@ -26,14 +31,19 @@
     @include m.gap($mb: f.px(60))
     font-size: f.px(20)
   @include m.dye(c, c.$theta)
+  &.atMba
+    @include m.dye(c, rgba(c.$nu, .5))
 
 .highlight
   font-weight: 500
+  &.atMba
+    font-weight: initial
+    @include m.dye(c, c.$xi-2)
 
 .teachers
   position: relative
   @include m.media(laptop, desktop)
-    @include m.gap($mb: f.px(50, em))
+    margin-bottom: f.px(50, em)
     &::after
       content: ''
       position: absolute
@@ -45,6 +55,9 @@
       pointer-events: none
       background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%)
       transform: rotate(180deg)
+    &.atMba
+      &::after
+        display: none
 
 .btnContainer
   @include m.media(phone, tablet)

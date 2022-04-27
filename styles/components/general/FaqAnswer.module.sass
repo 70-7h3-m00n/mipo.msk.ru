@@ -21,13 +21,17 @@
       height: f.px(1)
       @include m.dye(bg, c.$mu)
   &.atMba
+    position: relative
     &::after
       content: ''
       position: absolute
       right: 0
       bottom: 0
       left: initial
-      width: calc(100% - f.px(57))
+      @include m.media(tablet)
+        width: calc(100% - f.px(68))
+      @include m.media(phone, laptop, desktop)
+        width: calc(100% - f.px(57))
       height: f.px(1)
       background: linear-gradient(63.38deg, c.$nu-2 44.82%, c.$xi-2 87.9%)
   &:nth-last-child(1)

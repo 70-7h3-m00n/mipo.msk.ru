@@ -1,5 +1,6 @@
 import stls from '@/styles/components/sections/Teachers.module.sass'
 import { useContext } from 'react'
+import cn from 'classnames'
 import { getImageHeight } from '@/helpers/index'
 import ProgramContext from '@/context/program/programContext'
 import PopupTrigger from '@/components/general/PopupTrigger'
@@ -10,6 +11,7 @@ import { ImgTeacher } from '@/components/imgs'
 
 const Teachers = () => {
   const { program } = useContext(ProgramContext)
+  const atMba = program?.category?.type === 'mba'
 
   const list =
     program?.teachers &&
@@ -42,24 +44,28 @@ const Teachers = () => {
     ))
 
   const mobileSwiperOptions = {
-    slidesNum: 1.75,
+    slidesNum: atMba ? 1 : 1.75,
     spaceBetween: 40
   }
 
   const tabletSwiperOptions = {
     slidesNum: 2,
-    spaceBetween: 40
+    spaceBetween: atMba ? 20 : 40
   }
 
   return (
-    <section className={stls.container}>
+    <section className={cn(stls.container, { [stls.atMba]: atMba })}>
       <Wrapper>
-        <h2 className={stls.title}>Преподаватели программы</h2>
-        <p className={stls.desc}>
+        <h2 className={cn(stls.title, { [stls.atMba]: atMba })}>
+          Преподаватели программы
+        </h2>
+        <p className={cn(stls.desc, { [stls.atMba]: atMba })}>
           Преподают ведущие практикующие специалисты{' '}
-          <span className={stls.highlight}>с опытом от 7 до 25 лет</span>
+          <span className={cn(stls.highlight, { [stls.atMba]: atMba })}>
+            с опытом от 7 до 25 лет
+          </span>
         </p>
-        <div className={stls.teachers}>
+        <div className={cn(stls.teachers, { [stls.atMba]: atMba })}>
           <SwiperContainer
             teachers
             slides={teachersSlides}

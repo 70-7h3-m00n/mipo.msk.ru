@@ -37,7 +37,8 @@ const PagesProgram = ({ ofType = null }: PagesProgramType) => {
       <ForWhom />
       {atMba && <SectionMoreRelevant />}
       <WhatYouWillLearn />
-      <HowProcessGoes />
+      {!atMba && <HowProcessGoes />}
+
       {/* <YourDiploma ofType={ofType} /> */}
       <BriefProgramContents />
       <FullProgram />

@@ -1,12 +1,27 @@
 @use '@/styles/utils/mixin' as m
 @use '@/styles/utils/funcs' as f
 @use '@/styles/config/Colors.module.sass' as c
-  
+
 .container
-  @include m.flex
+  display: flex
+  height: 100%
+  &.atMba
+    padding: 1px
+    border-radius: f.px(25)
+    background: linear-gradient(38.5deg, c.$nu-2 2.09%, c.$xi-2 57.98%)
+
+.cardBody
+  display: flex
   height: 100%
   @include m.media(phone, tablet)
-    @include m.flex($fd: column)
+    flex-direction: column
+  &.atMba
+    @include m.media(phone, tablet)
+      padding: f.px(20)
+    @include m.media(laptop, desktop)
+      padding: f.px(25)
+    border-radius: inherit
+    @include m.dye(bg, c.$pi-2)
 
 .portrait
   border-radius: 50%
@@ -16,35 +31,40 @@
   min-height: 160px
   max-height: 160px
   @include m.media(phone, tablet)
-    @include m.gap($mb: f.px(18))
+    margin-bottom: f.px(18)
   @include m.media(laptop, desktop)
-    @include m.gap($mr: f.px(38))
-    
+    margin-right: f.px(38)
 
 .content
   @include m.flex($fd: column)
 
 .name
   max-width: 15ch
-  @include m.gap($mb: f.px(5))
+  margin-bottom: f.px(5)
   @include m.media(phone, tablet)
     font-size: f.px(18)
   @include m.media(laptop, desktop)
     font-size: f.px(22)
   font-weight: 500
+  &.atMba
+    @include m.dye(c, c.$nu)
 
 .specialization
-  @include m.gap($mb: f.px(11))
+  margin-bottom: f.px(11)
   @include m.media(phone, tablet)
     font-size: f.px(15)
   @include m.media(laptop, desktop)
     font-size: f.px(18)
   font-weight: 300
+  &.atMba
+    @include m.dye(c, c.$nu)
 
 .achievements
-  @include m.gap($mb: 0)
+  margin-bottom: 0
   @include m.media(phone, tablet)
     font-size: f.px(11)
   @include m.media(laptop, desktop)
     font-size: f.px(13)
   @include m.dye(c, c.$kappa)
+  &.atMba
+    @include m.dye(c, rgba(c.$nu, .5))
