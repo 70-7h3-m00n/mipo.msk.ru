@@ -2,6 +2,7 @@ import {
   HeroProgram,
   Desc,
   HowProcessGoes,
+  SectionHowProcessGoesAlt,
   WhatYouWillLearn,
   ForWhom,
   SectionMoreRelevant,
@@ -37,6 +38,7 @@ const PagesProgram = ({ ofType = null }: PagesProgramType) => {
       <ForWhom />
       {atMba && <SectionMoreRelevant />}
       <WhatYouWillLearn />
+      {atMba && <SectionHowProcessGoesAlt />}
       {!atMba && <HowProcessGoes />}
 
       {/* <YourDiploma ofType={ofType} /> */}

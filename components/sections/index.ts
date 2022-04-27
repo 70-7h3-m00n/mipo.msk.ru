@@ -1,7 +1,9 @@
 // ./general
 export { default as SectionCorporateCourse } from '@/components/sections/general/SectionCorporateCourse'
+export { default as SectionHowProcessGoesAlt } from '@/components/sections/general/SectionHowProcessGoesAlt'
 export { default as SectionMoreRelevant } from '@/components/sections/general/SectionMoreRelevant'
 
+// ./
 export { default as About } from '@/components/sections/About'
 export { default as ActiveLicenses } from '@/components/sections/ActiveLicenses'
 export { default as BriefProgramContents } from '@/components/sections/BriefProgramContents'

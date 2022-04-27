@@ -5,7 +5,10 @@
 .container
   @include m.media(laptop, desktop)
     & > *
-      @include m.gap($pt: f.px(100), $plr: f.px(100), $pb: f.px(70))
+      padding-top: f.px(100)
+      padding-right: f.px(100)
+      padding-bottom: f.px(70)
+      padding-left: f.px(100)
       border-radius: f.px(100) f.px(5) 0 0
       box-shadow: 0 f.px(4) f.px(40) rgba(0, 0, 0, .05)
       @include m.dye(bg, c.$epsilon)
