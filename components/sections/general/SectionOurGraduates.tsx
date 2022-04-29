@@ -42,17 +42,24 @@ const SectionOurGraduates = ({ classNames }: TSectionOurGraduates) => {
           </p>
           <ul className={stls.list}>
             {list.map((item, idx) => (
-              <li key={`${item.title}-${idx}`} className={stls.listItem}>
-                <p className={stls.listItemTitle}>{item.title}</p>
-                <p className={stls.listItemText}>{item.text}</p>
+              <li
+                key={`${item.title}-${idx}`}
+                className={cn(stls.listItem, stls.listItemTestimonial)}>
+                <div className={stls.listItemTestimonialBody}>
+                  <p className={stls.listItemTitle}>{item.title}</p>
+                  <p className={stls.listItemText}>{item.text}</p>
+                </div>
               </li>
             ))}
-            <li>
+            <li className={stls.listItem}>
               <Popup
                 trigger={() => (
-                  <div>
-                    <BtnZeta classNames={[stls.btn]}>
-                      Оставить заявку <IconGeneralArrowRightAlt />
+                  <div className={stls.btnContainer}>
+                    <BtnZeta classNames={[stls.btn, stls.btnZeta]}>
+                      Оставить заявку{' '}
+                      <IconGeneralArrowRightAlt
+                        classNames={[stls.IconGeneralArrowRightAlt]}
+                      />
                     </BtnZeta>
                   </div>
                 )}
