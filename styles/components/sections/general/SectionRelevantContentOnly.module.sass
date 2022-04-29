@@ -4,3 +4,74 @@
 @use '@/styles/config/Colors.module.sass' as c
 @use '@/styles/utils/mixin/media' as bp
 
+.container
+  @include m.media(phone, tablet)
+    padding-top: f.px(50)
+    padding-bottom: f.px(50)
+  @include m.media(laptop, desktop)
+    padding-top: f.px(100)
+    padding-bottom: f.px(100)
+
+.title
+  margin: 0
+  @include m.media(phone, tablet)
+    font-size: f.px(26)
+  @include m.media(laptop, desktop)
+    font-size: f.px(44)
+  font-weight: 500
+  line-height: 120%
+
+.content
+  margin-top: f.px(30)
+  @include m.media(laptop, desktop)
+    display: flex
+
+$right_ld_ml: 4%
+.left
+  @include m.media(laptop, desktop)
+    flex-basis: math.div(100% - ($right_ld_ml * 1), 2)
+
+.right
+  @include m.media(phone, tablet)
+    display: flex
+    align-items: center
+    justify-content: center
+    margin-top: f.px(50)
+  @include m.media(laptop, desktop)
+    display: flex
+    justify-content: flex-end
+    flex-basis: math.div(100% - ($right_ld_ml * 1), 2)
+    margin-left: $right_ld_ml
+
+.list
+  margin: 0
+  padding: 0
+
+.listItem
+  display: flex
+  & + .listItem
+    @include m.media(phone, tablet)
+      margin-top: f.px(15)
+    @include m.media(laptop, desktop)
+      margin-top: f.px(25)
+
+.p
+  margin: 0
+  @include m.media(phone, tablet)
+    font-size: f.px(15)
+  @include m.media(laptop, desktop)
+    font-size: f.px(20)
+  font-weight: 400
+  line-height: 120%
+  @include m.dye(c, c.$pi-2)
+
+.IconRicleCheck
+  display: flex
+  align-items: flex-start
+  min-width: f.px(20)
+  max-width: f.px(20)
+  min-height: f.px(20)
+  max-height: f.px(20)
+  margin-right: f.px(20)
+  border-radius: 50%
+  @include m.dye(bg, c.$nu-2)

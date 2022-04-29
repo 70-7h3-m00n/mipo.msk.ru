@@ -1,15 +1,22 @@
 import stls from '@/styles/components/sections/general/SectionRelevantContentOnly.module.sass'
 import { TPropClassNames } from '@/types/index'
+import { useContext } from 'react'
 import cn from 'classnames'
+import { colors } from '@/config/index'
 import { getClassNames } from '@/helpers/index'
+import ProgramContext from '@/context/program/programContext'
 import Wrapper from '@/components/layout/Wrapper'
 import { ImgSectionRelevantContentOnlyImages } from '@/components/imgs'
+import { IconCircleCheck } from '@/components/icons'
 
 type TSectionRelevantContentOnly = TPropClassNames
 
 const SectionRelevantContentOnly = ({
   classNames
 }: TSectionRelevantContentOnly) => {
+  const { program } = useContext(ProgramContext)
+  const atMba = program?.category?.type === 'mba'
+
   const list = [
     'Мы постоянно проводим внутренние исследования, на основе которых обновляем наши программы',
 
@@ -26,15 +33,24 @@ const SectionRelevantContentOnly = ({
       }>
       <Wrapper classNames={[stls.wrapper]}>
         <h2 className={stls.title}>Только актуальный контент</h2>
-        <div className={stls.left}>
-          <ul className={stls.list}>
-            {list.map((item, idx) => (
-              <li key={`${item}-${idx}`}>{item}</li>
-            ))}
-          </ul>
-        </div>
-        <div className={stls.right}>
-          <ImgSectionRelevantContentOnlyImages />
+        <div className={stls.content}>
+          <div className={stls.left}>
+            <ul className={stls.list}>
+              {list.map((item, idx) => (
+                <li key={`${item}-${idx}`} className={stls.listItem}>
+                  <IconCircleCheck
+                    classNames={[stls.IconRicleCheck]}
+                    color1={colors.nu}
+                    color2={colors['nu-2']}
+                  />
+                  <p className={stls.p}>{item}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className={stls.right}>
+            <ImgSectionRelevantContentOnlyImages />
+          </div>
         </div>
       </Wrapper>
     </section>
