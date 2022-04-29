@@ -1,9 +1,11 @@
 import stls from '@/styles/components/sections/TrustedBy.module.sass'
 import { TypeClassNames } from '@/types/index'
+import { useContext } from 'react'
 import cn from 'classnames'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Grid } from 'swiper'
 import { getClassNames } from '@/helpers/index'
+import ProgramContext from '@/context/program/programContext'
 import Wrapper from '@/components/layout/Wrapper'
 import { breakpoints } from '@/config/index'
 import {
@@ -22,7 +24,8 @@ type TypeTrustedBy = {
 }
 
 const TrustedBy = ({ classNames = [] }: TypeTrustedBy) => {
-  const container = getClassNames({ classNames })
+  const { program } = useContext(ProgramContext)
+  const atMba = program?.category?.type === 'mba'
 
   const slides = [
     { img: <ImgLogoLenovo classNames={[stls.img]} /> },
@@ -35,9 +38,16 @@ const TrustedBy = ({ classNames = [] }: TypeTrustedBy) => {
     { img: <ImgLogoTatneft classNames={[stls.img]} /> }
   ]
   return (
-    <section className={cn([stls.container], container)}>
+    <section
+      className={
+        cn(stls.container, getClassNames({ classNames }), {
+          [stls.atMba]: atMba
+        }) || undefined
+      }>
       <Wrapper>
-        <h2 className={stls.title}>Нам доверяют обучение</h2>
+        <h2 className={cn(stls.title, { [stls.atMba]: atMba })}>
+          {atMba ? 'Обучают своих сотрудников у нас' : 'Нам доверяют обучение'}
+        </h2>
         <Swiper
           modules={[Grid]}
           grid={{ rows: 2, fill: 'row' }}

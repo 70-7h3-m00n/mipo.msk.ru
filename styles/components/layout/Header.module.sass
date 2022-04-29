@@ -22,6 +22,22 @@ $esbp: 850px
   @include m.media(laptop, desktop)
     @include m.flex($jc: space-between)
     @include m.gap($ptb: f.px(24))
+  &.atMba
+    @include m.media(laptop, desktop)
+      position: relative
+      &::after
+        content: '',
+        position: absolute
+        bottom: f.px(-400)
+        right: f.px(280)
+        z-index: 0
+        min-width: f.px(270)
+        max-width: f.px(270)
+        min-height: f.px(270)
+        max-height: f.px(270)
+        border-radius: 50%
+        filter: blur(192px)
+        @include m.dye(bg, c.$nu-2)
 
 .topleft
   @include m.media(laptop, desktop)
@@ -87,6 +103,8 @@ $esbp: 850px
     display: none
 
 .link
+  position: relative
+  z-index: 2
   @include m.media(phone, tablet)
     display: none
   @include m.media(laptop, desktop)

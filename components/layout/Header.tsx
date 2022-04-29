@@ -53,7 +53,7 @@ const Header = () => {
     <header className={cn(stls.container, { [stls.atMba]: atMba })}>
       <MenuMobile />
       <Wrapper>
-        <div className={stls.top}>
+        <div className={cn(stls.top, { [stls.atMba]: atMba })}>
           <div className={stls.topleft}>
             <Link href={routeLegal}>
               <a className={stls.linkInfo}>

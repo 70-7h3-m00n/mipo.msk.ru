@@ -37,7 +37,6 @@ type PagesProgramType = {
 const PagesProgram = ({ ofType = null, reviews }: PagesProgramType) => {
   const { program } = useContext(ProgramContext)
   const atMba = program?.category?.type === 'mba'
-  console.log(program)
 
   return (
     <>
@@ -69,7 +68,7 @@ const PagesProgram = ({ ofType = null, reviews }: PagesProgramType) => {
         cta='reserve'
       />
       {atMba && <TrustedBy />}
-      {atMba && <Reviews reviews={reviews} />}
+      {/* {atMba && <Reviews reviews={reviews} />} */}
       {/* <HelpWithEmployment /> */}
       <StudyCost />
       <Faq />
