@@ -1,8 +1,23 @@
 import stls from '@/styles/components/popups/PopupCta.module.sass'
+import { FC, ReactElement, MouseEventHandler } from 'react'
 import { FormAlpha } from '@/components/forms'
 import { BtnClose } from '@/components/btns'
 
-const PopupCta = ({ title, desc, cta, close, question = false }) => {
+type TPopupCta = {
+  title?: string | ReactElement
+  desc?: string | ReactElement
+  cta?: string
+  close: MouseEventHandler
+  question?: boolean
+}
+
+const PopupCta: FC<TPopupCta> = ({
+  title = 'Оставить заявку',
+  desc = 'Оставьте заявку, мы свяжемся с Вами в рабочие часы, ответим на Ваши вопросы и решим проблему',
+  cta = 'Отправить',
+  close,
+  question = false
+}) => {
   return (
     <div className={stls.container}>
       <div className={stls.close}>

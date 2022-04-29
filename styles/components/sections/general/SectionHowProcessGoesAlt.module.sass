@@ -3,3 +3,21 @@
 @use '@/styles/utils/funcs' as f
 @use '@/styles/config/Colors.module.sass' as c
 @use '@/styles/utils/mixin/media' as bp
+
+.container
+  @include m.media(phone, tablet)
+    padding-top: f.px(50)
+    padding-bottom: f.px(50)
+  @include m.media(laptop, desktop)
+    padding-top: f.px(100)
+    padding-bottom: f.px(100)
+  @include m.dye(bg, c.$pi-2)
+
+.IconGeneral3dSpiralInfo
+  max-width: f.px(22)
+
+.IconGeneral3dSpiralRight
+  @include m.media(phone, tablet)
+    display: none
+  @include m.media(laptop, desktop)
+    max-width: f.px(69)

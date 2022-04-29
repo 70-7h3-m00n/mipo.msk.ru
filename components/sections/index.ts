@@ -1,7 +1,11 @@
 // ./general
 export { default as SectionCorporateCourse } from '@/components/sections/general/SectionCorporateCourse'
 export { default as SectionHowProcessGoesAlt } from '@/components/sections/general/SectionHowProcessGoesAlt'
+export { default as SectionInternationalExperts } from '@/components/sections/general/SectionInternationalExperts'
 export { default as SectionMoreRelevant } from '@/components/sections/general/SectionMoreRelevant'
+export { default as SectionOurGraduates } from '@/components/sections/general/SectionOurGraduates'
+export { default as SectionRelevantContentOnly } from '@/components/sections/general/SectionRelevantContentOnly'
+export { default as SectionYourDiplomasAlt } from '@/components/sections/general/SectionYourDiplomasAlt'
 
 // ./
 export { default as About } from '@/components/sections/About'

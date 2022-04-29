@@ -3,6 +3,9 @@ import {
   Desc,
   HowProcessGoes,
   SectionHowProcessGoesAlt,
+  SectionYourDiplomasAlt,
+  SectionOurGraduates,
+  SectionRelevantContentOnly,
   WhatYouWillLearn,
   ForWhom,
   SectionMoreRelevant,
@@ -11,6 +14,7 @@ import {
   FullProgram,
   YourResume,
   Cta,
+  SectionInternationalExperts,
   Teachers,
   HelpWithEmployment,
   YourFutureJob,
@@ -40,7 +44,9 @@ const PagesProgram = ({ ofType = null }: PagesProgramType) => {
       <WhatYouWillLearn />
       {atMba && <SectionHowProcessGoesAlt />}
       {!atMba && <HowProcessGoes />}
-
+      {atMba && <SectionYourDiplomasAlt />}
+      {atMba && <SectionOurGraduates />}
+      {atMba && <SectionRelevantContentOnly />}
       {/* <YourDiploma ofType={ofType} /> */}
       <BriefProgramContents />
       <FullProgram />
@@ -48,7 +54,8 @@ const PagesProgram = ({ ofType = null }: PagesProgramType) => {
         program?.resumeTitle &&
         program?.entrySalary &&
         program?.resumeSkills && <YourResume />} */}
-      {ofType !== 'course' && <YourFutureJob />}
+      {ofType !== 'course' && !atMba && <YourFutureJob />}
+      {atMba && <SectionInternationalExperts />}
       <Teachers />
       <Cta
         title={'Начните обучаться со скидкой'}

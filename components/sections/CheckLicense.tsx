@@ -1,6 +1,7 @@
 import stls from '@/styles/components/sections/CheckLicense.module.sass'
 import Wrapper from '@/components/layout/Wrapper'
 import { BtnAlpha } from '@/components/btns'
+import { routesExternal } from '@/config/index'
 import { ImgFullProgram1 } from '@/components/imgs'
 
 const CheckLicense = () => {
@@ -21,7 +22,7 @@ const CheckLicense = () => {
             <div className={stls.btn}>
               <BtnAlpha
                 text='Проверить'
-                href='https://islod.obrnadzor.gov.ru/rlic/details/42b83d1e-2378-34bc-8ab9-48dfc47ca619/'
+                href={routesExternal.licence}
                 target='_blank'
               />
             </div>
