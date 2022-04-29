@@ -4,3 +4,114 @@
 @use '@/styles/config/Colors.module.sass' as c
 @use '@/styles/utils/mixin/media' as bp
 
+.container
+  @include m.media(phone, tablet)
+    padding-top: f.px(50)
+    padding-bottom: f.px(50)
+  @include m.media(laptop, desktop)
+    padding-top: f.px(100)
+    padding-bottom: f.px(100)
+  @include m.dye(bg, c.$mu-2)
+
+.wrapper
+  @include m.media(laptop, desktop)
+    display: flex
+
+$right_ld_ml: 4%
+.left
+  @include m.media(laptop, desktop)
+    flex-basis: math.div(100% - ($right_ld_ml * 1), 2)
+
+.right
+  @include m.media(laptop, desktop)
+    flex-basis: math.div(100% - ($right_ld_ml * 1), 2)
+    margin-left: $right_ld_ml
+
+.title
+  margin: 0
+  @include m.media(phone, tablet)
+    font-size: f.px(26)
+  @include m.media(laptop, desktop)
+    font-size: f.px(44)
+  font-weight: 500
+  line-height: 120%
+  @include m.dye(c, c.$nu)
+
+.list
+  margin: 0
+  padding: 0
+  @include m.media(phone, tablet)
+    margin-top: f.px(30)
+  @include m.media(laptop, desktop)
+    margin-top: f.px(50)
+
+.listItem
+  display: flex
+  align-items: flex-start
+  @include m.media(phone, tablet)
+    & + .listItem
+      margin-top: f.px(30)
+  @include m.media(laptop, desktop)
+    & + .listItem
+      margin-top: f.px(40)
+
+.IconGeneralCircleArrorRight
+  @include m.media(phone, tablet)
+    max-width: f.px(39)
+    margin-right: f.px(20)
+  @include m.media(laptop, desktop)
+    max-width: f.px(70)
+    margin-right: f.px(30)
+
+.listItemTitle
+  margin: 0
+  @include m.media(phone, tablet)
+    font-size: f.px(18)
+  @include m.media(laptop, desktop)
+    font-size: f.px(20)
+  font-weight: 500
+  line-height: 120%
+  @include m.dye(c, c.$nu)
+
+.listItemContent
+  margin: 0
+  margin-top: f.px(10)
+  @include m.media(phone, tablet)
+    font-size: f.px(15)
+  @include m.media(laptop, desktop)
+    font-size: f.px(18)
+  font-weight: 400
+  line-height: 120%
+  @include m.dye(c, c.$nu)
+
+.ImgSectionInternationalExpertsImages
+  position: relative
+  z-index: 1
+  @include m.media(phone, tablet)
+    &::after
+      content: ''
+      position: absolute
+      z-index: -1
+      top: 0
+      left: 0
+      min-width: f.px(196)
+      max-width: f.px(196)
+      min-height: f.px(196)
+      max-height: f.px(196)
+      border-radius: 50%
+      filter: blur(192px)
+      @include m.dye(bg, rgba(c.$gamma, .4))
+  @include m.media(laptop, desktop)
+    &::after
+      content: ''
+      position: absolute
+      z-index: -1
+      top: 0
+      left: 0
+      min-width: f.px(270)
+      max-width: f.px(270)
+      min-height: f.px(270)
+      max-height: f.px(270)
+      border-radius: 50%
+      filter: blur(192px)
+      @include m.dye(bg, rgba(c.$gamma, .4))

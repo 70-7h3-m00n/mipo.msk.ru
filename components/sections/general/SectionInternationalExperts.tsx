@@ -5,6 +5,7 @@ import { colors } from '@/config/index'
 import { getClassNames } from '@/helpers/index'
 import Wrapper from '@/components/layout/Wrapper'
 import { ImgSectionInternationalExpertsImages } from '@/components/imgs'
+import { IconGeneralCircleArrorRight } from '@/components/icons'
 
 type TSectionInternationalExperts = TPropClassNames
 
@@ -39,14 +40,21 @@ const SectionInternationalExperts = ({
           <ul className={stls.list}>
             {list.map((item, idx) => (
               <li key={`${item.title}-${idx}`} className={stls.listItem}>
-                <h3 className={stls.listItemTitle}>{item.title}</h3>
-                <p className={stls.listItemContent}>{item.content}</p>
+                <IconGeneralCircleArrorRight
+                  classNames={[stls.IconGeneralCircleArrorRight]}
+                />
+                <div className={stls.listItemText}>
+                  <h3 className={stls.listItemTitle}>{item.title}</h3>
+                  <p className={stls.listItemContent}>{item.content}</p>
+                </div>
               </li>
             ))}
           </ul>
         </div>
         <div className={stls.right}>
-          <ImgSectionInternationalExpertsImages />
+          <ImgSectionInternationalExpertsImages
+            classNames={[stls.ImgSectionInternationalExpertsImages]}
+          />
         </div>
       </Wrapper>
     </section>
