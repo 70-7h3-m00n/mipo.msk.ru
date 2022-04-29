@@ -1,10 +1,12 @@
 import stls from '@/styles/components/sections/general/SectionYourDiplomasAlt.module.sass'
 import { TPropClassNames } from '@/types/index'
+import { useContext } from 'react'
 import cn from 'classnames'
 import Popup from 'reactjs-popup'
 import { colors, routesExternal } from '@/config/index'
 import { getClassNames } from '@/helpers/index'
 import Wrapper from '@/components/layout/Wrapper'
+import ProgramContext from '@/context/program/programContext'
 import { PopupImage } from '@/components/popups'
 import {
   ImgCertificate,
@@ -17,6 +19,9 @@ import { BtnZeta } from '@/components/btns'
 type TSectionYourDiplomasAlt = TPropClassNames
 
 const SectionYourDiplomasAlt = ({ classNames }: TSectionYourDiplomasAlt) => {
+  const { program } = useContext(ProgramContext)
+  const atMba = program?.category?.type === 'mba'
+
   return (
     <section
       className={
@@ -24,25 +29,29 @@ const SectionYourDiplomasAlt = ({ classNames }: TSectionYourDiplomasAlt) => {
       }>
       <Wrapper classNames={[stls.wrapper]}>
         <div className={stls.top}>
-          <div className={stls.left}>
-            <h2 className={stls.title}>Ваши будущие дипломы</h2>
-            <p className={stls.p}>
-              Все наши программы лицензированы, а дипломы имеют международные
-              приложения, поэтому они ценятся клиентами и профессиональным
-              сообществом как в России, так и за рубежом!
-            </p>
-          </div>
-          <div className={stls.right}>
-            <BtnZeta
-              href={routesExternal.licence}
-              target='_blank'
-              classNames={[stls.licenceLink]}>
-              Уведомление о предоставлении лицензии{' '}
-              <span className={stls.highlight}>№041221</span>
-              <IconGeneralArrowRightAlt
-                classNames={[stls.IconGeneralArrowRightAlt]}
-              />
-            </BtnZeta>
+          <h2 className={stls.title}>Ваши будущие дипломы</h2>
+          <div className={stls.content}>
+            <div className={stls.left}>
+              <p className={stls.p}>
+                Все наши программы лицензированы, а дипломы имеют международные
+                приложения, поэтому они ценятся клиентами и профессиональным
+                сообществом как в России, так и за рубежом!
+              </p>
+            </div>
+            <div className={stls.right}>
+              <BtnZeta
+                href={routesExternal.licence}
+                target='_blank'
+                classNames={[cn(stls.licenceLink, { [stls.atMba]: atMba })]}>
+                <span>
+                  Уведомление о предоставлении лицензии{' '}
+                  <span className={stls.highlight}>№041221</span>
+                </span>
+                <IconGeneralArrowRightAlt
+                  classNames={[stls.IconGeneralArrowRightAlt]}
+                />
+              </BtnZeta>
+            </div>
           </div>
         </div>
         <div className={stls.diplomas}>
@@ -77,7 +86,7 @@ const SectionYourDiplomasAlt = ({ classNames }: TSectionYourDiplomasAlt) => {
           <div className={stls.right}>
             <Popup
               trigger={
-                <a href='#!' className={stls.diploma}>
+                <a href='#!' className={cn(stls.diploma, stls.mb0)}>
                   <ImgSupplement />
                 </a>
               }
