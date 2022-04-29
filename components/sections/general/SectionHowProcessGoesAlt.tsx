@@ -24,13 +24,16 @@ const SectionHowProcessGoesAlt = ({
         cn(stls.container, getClassNames({ classNames })) || undefined
       }>
       <Wrapper classNames={[stls.wrapper]}>
-        <div className={stls.left}>
-          <h2 className={stls.title}>Как проходит обучение</h2>
-          <p className={stls.p}>
-            Обучение осуществляется по заочной форме с применением дистанционных
-            <span className={stls.highlight}>*</span> технологий. Лекции,
-            общение, тестирование проходят в онлайн-формате через
-            образовательную платформу
+        <h2 className={stls.title}>Как проходит обучение</h2>
+        <div className={stls.content}>
+          <div className={stls.left}>
+            <p className={stls.p}>
+              Обучение осуществляется по заочной форме с применением
+              дистанционных
+              <span className={stls.highlight}>*</span> технологий. Лекции,
+              общение, тестирование проходят в онлайн-формате через
+              образовательную платформу
+            </p>
             <ImgSectionHowProcessGoesAltPersonStudying
               classNames={[stls.img, stls.laptopDesktop]}
             />
@@ -43,27 +46,29 @@ const SectionHowProcessGoesAlt = ({
                 classNames={[stls.IconGeneral3dSpiralInfo]}
               />
             </p>
-          </p>
-        </div>
-        <div className={stls.right}>
-          <IconGeneral3dSpiral
-            color={colors.nu}
-            classNames={[stls.IconGeneral3dSpiralRight]}
-          />
-          <h3 className={stls.h3}>
-            В программу дистанционного обучения входит:
-          </h3>
-          <ol className={stls.list}>
-            {program?.whatYouWillLearn?.map((item, idx) => (
-              <li key={`${item?.item}-${idx}`} className={stls.listItem}>
-                <div className={stls.idx}>{idx + 1}</div>
-                <p className={stls.listItemP}>{item?.item}</p>
-              </li>
-            ))}
-          </ol>
-          <ImgSectionHowProcessGoesAltPersonStudying
-            classNames={[stls.img, stls.phonetablet]}
-          />
+          </div>
+          <div className={stls.right}>
+            <div className={stls.rightBody}>
+              <IconGeneral3dSpiral
+                color={colors.nu}
+                classNames={[stls.IconGeneral3dSpiralRight]}
+              />
+              <h3 className={stls.h3}>
+                В программу дистанционного обучения входит:
+              </h3>
+              <ol className={stls.list}>
+                {program?.whatYouWillLearn?.map((item, idx) => (
+                  <li key={`${item?.item}-${idx}`} className={stls.listItem}>
+                    <div className={stls.idx}>{idx + 1}</div>
+                    <p className={stls.listItemP}>{item?.item}</p>
+                  </li>
+                ))}
+              </ol>
+            </div>
+            <ImgSectionHowProcessGoesAltPersonStudying
+              classNames={[stls.img, stls.phoneTablet]}
+            />
+          </div>
         </div>
       </Wrapper>
     </section>

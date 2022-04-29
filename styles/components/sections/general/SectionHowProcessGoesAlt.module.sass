@@ -13,11 +13,192 @@
     padding-bottom: f.px(100)
   @include m.dye(bg, c.$pi-2)
 
+.title
+  margin: 0
+  @include m.media(phone, tablet)
+    font-size: f.px(26)
+  @include m.media(laptop, desktop)
+    font-size: f.px(44)
+    font-weight: 500
+    line-height: 120%
+  @include m.dye(c, c.$nu)
+
+.content
+  @include m.media(phone, tablet)
+    margin-top: f.px(20)
+  @include m.media(laptop, desktop)
+    display: flex
+    margin-top: f.px(30)
+
+$right_ld_ml: 2.6%
+.left
+  @include m.media(laptop, desktop)
+    flex-basis: math.div(100% - ($right_ld_ml * 1), 2)
+
+.right
+  @include m.media(phone, tablet)
+    margin-top: f.px(50)
+  @include m.media(laptop, desktop)
+    flex-basis: math.div(100% - ($right_ld_ml * 1), 2)
+    margin-left: $right_ld_ml
+
+.p
+  @include m.media(phone, tablet)
+    font-size: f.px(15)
+  @include m.media(laptop, desktop)
+    font-size: f.px(20)
+  font-weight: 500
+  line-height: 130%
+  @include m.dye(c, rgba(c.$nu, .5))
+
+.img
+  @include m.media(laptop, desktop)
+    max-width: max-content
+  margin-top: f.px(50)
+  border-radius: f.px(25)
+  overflow: hidden
+
+.info
+  position: relative
+  margin: 0
+  padding: f.px(20)
+  border-radius: f.px(25)
+  @include m.media(phone, tablet)
+    margin-top: f.px(30)
+    font-size: f.px(15)
+    line-height: 130%
+  @include m.media(laptop, desktop)
+    margin-top: f.px(50)
+    font-size: f.px(20)
+    line-height: 120%
+  font-weight: 500
+  @include m.dye(bg, c.$nu)
+  @include m.dye(c, c.$pi-2)
+
 .IconGeneral3dSpiralInfo
+  position: absolute
+  bottom: f.px(15)
+  right: f.px(15)
   max-width: f.px(22)
+
+.rightBody
+  position: relative
+  @include m.media(phone, tablet)
+    padding: f.px(20)
+  @include m.media(laptop, desktop)
+    padding: f.px(30)
+  border: 1px solid
+  @include m.dye(border, c.$nu)
+  border-radius: f.px(25)
 
 .IconGeneral3dSpiralRight
   @include m.media(phone, tablet)
     display: none
   @include m.media(laptop, desktop)
     max-width: f.px(69)
+    position: absolute
+    top: f.px(-55)
+    right: f.px(10)
+    transform: scaleX(-1)
+
+.h3
+  margin: 0
+  @include m.media(phone, tablet)
+    font-size: f.px(20)
+  @include m.media(laptop, desktop)
+    font-size: f.px(22)
+  font-weight: 500
+  line-height: 120%
+  @include m.dye(c, c.$xi-2)
+
+$idx_wh: f.px(32)
+.list
+  position: relative
+  overflow: hidden
+  margin: 0
+  padding: 0
+  @include m.media(phone, tablet)
+    margin-top: f.px(26)
+  @include m.media(laptop, desktop)
+    margin-top: f.px(23)
+  &::before
+    content: ''
+    position: absolute
+    z-index: 1
+    top: $idx_wh / 2
+    left: $idx_wh / 2
+    min-width: f.px(1)
+    max-width: f.px(1)
+    min-height: 100%
+    max-height: 100%
+    @include m.dye(bg, c.$nu)
+
+.listItem
+  position: relative
+  z-index: 2
+  display: flex
+  & + .listItem
+    margin-top: f.px(25)
+  &:nth-last-child(1)
+    &::after
+      content: ''
+      position: absolute
+      bottom: 0
+      left: $idx_wh / 2
+      min-width: f.px(3)
+      max-width: f.px(3)
+      min-height: 100%
+      max-height: 100%
+      @include m.dye(bg, c.$pi-2)
+
+.idx
+  position: relative
+  z-index: 3
+  display: flex
+  justify-content: center
+  align-items: center
+  transform-style: preserve-3d
+  min-width: $idx_wh
+  max-width: $idx_wh
+  min-height: $idx_wh
+  max-height: $idx_wh
+  @include m.media(phone, tablet)
+    margin-right: f.px(11)
+  @include m.media(laptop, desktop)
+    margin-right: f.px(20)
+  border-radius: 50%
+  @include m.dye(bg, c.$xi-2)
+  @include m.dye(c, c.$nu)
+  &::before
+    content: ''
+    position: absolute
+    z-index: -1
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%) translateZ(-1px)
+    min-width: f.px(3)
+    max-width: f.px(3)
+    min-height: 140%
+    max-height: 140%
+    @include m.dye(bg, c.$pi-2)
+
+.listItemP
+  margin: 0
+  @include m.media(phone, tablet)
+    font-size: f.px(15)
+  @include m.media(laptop, desktop)
+    font-size: f.px(20)
+  font-weight: 400
+  line-height: 130%
+  @include m.dye(c, c.$nu)
+    
+.highlight
+  @include m.dye(c, c.$nu-2)
+
+.phoneTablet
+  @include m.media(laptop, desktop)
+    display: none
+
+.laptopDesktop
+  @include m.media(phone, tablet)
+    display: none
