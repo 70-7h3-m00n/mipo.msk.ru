@@ -10,7 +10,7 @@ import { routeCourses } from '@/data/routes'
 import companyName from '@/data/companyName'
 import { PagesProgram } from '@/components/pages'
 
-const CoursePage = ({ programs, program, studyFieldSlug }) => {
+const CoursePage = ({ programs, program, studyFieldSlug, reviews }) => {
   usePageHandleContext({
     programs,
     program,
@@ -25,7 +25,7 @@ const CoursePage = ({ programs, program, studyFieldSlug }) => {
         description={truncate(program.description, 120)}
         canonical={`${routesFront.root}${routeCourses}/${studyFieldSlug}/${program.slug}`}
       />
-      <PagesProgram ofType={'course'} />
+      <PagesProgram ofType={'course'} reviews={reviews} />
     </>
   )
 }

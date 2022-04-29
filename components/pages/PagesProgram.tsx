@@ -14,6 +14,8 @@ import {
   FullProgram,
   YourResume,
   Cta,
+  TrustedBy,
+  Reviews,
   SectionInternationalExperts,
   Teachers,
   HelpWithEmployment,
@@ -29,11 +31,13 @@ import { TypeCategory } from '@/types/index'
 
 type PagesProgramType = {
   ofType: TypeCategory
+  reviews?: any // TODO: figure out the type
 }
 
-const PagesProgram = ({ ofType = null }: PagesProgramType) => {
+const PagesProgram = ({ ofType = null, reviews }: PagesProgramType) => {
   const { program } = useContext(ProgramContext)
   const atMba = program?.category?.type === 'mba'
+  console.log(program)
 
   return (
     <>
@@ -64,6 +68,8 @@ const PagesProgram = ({ ofType = null }: PagesProgramType) => {
         )}`}
         cta='reserve'
       />
+      {atMba && <TrustedBy />}
+      {atMba && <Reviews reviews={reviews} />}
       {/* <HelpWithEmployment /> */}
       <StudyCost />
       <Faq />

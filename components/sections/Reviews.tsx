@@ -12,27 +12,29 @@ type ReviewsType = {
 }
 
 const Reviews = ({ standalone = false, reviews }: ReviewsType) => {
-  const slides = reviews.map((review, idx) => (
-    <CardReview
-      key={review?.title + idx}
-      title={review?.title}
-      photo={
-        <ImgReview
-          src={review?.picture?.[0]?.url}
-          alt={review.name}
-          width={110}
-          height={getImageHeight({
-            width: 110,
-            widthInitial: review?.picture?.[0]?.width,
-            heightInitial: review?.picture?.[0]?.height
-          })}
-        />
-      }
-      name={review?.name}
-      occupation={review?.profession}
-      story={review?.story}
-    />
-  ))
+  if (!reviews || reviews?.length === 0) return null
+  const slides =
+    reviews?.map((review, idx) => (
+      <CardReview
+        key={review?.title + idx}
+        title={review?.title}
+        photo={
+          <ImgReview
+            src={review?.picture?.[0]?.url}
+            alt={review.name}
+            width={110}
+            height={getImageHeight({
+              width: 110,
+              widthInitial: review?.picture?.[0]?.width,
+              heightInitial: review?.picture?.[0]?.height
+            })}
+          />
+        }
+        name={review?.name}
+        occupation={review?.profession}
+        story={review?.story}
+      />
+    )) || []
 
   return (
     <section
