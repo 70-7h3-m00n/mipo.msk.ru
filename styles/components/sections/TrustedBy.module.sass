@@ -29,6 +29,14 @@
     @include m.dye(c, c.$nu)
 
 .img
-  @include m.flex($jc: center, $ai: center)
+  display: flex
+  justify-content: center
+  align-items: center
   opacity: 0.5
   filter: drop-shadow(0px 7px 100px rgba(0, 0, 0, 0.09)) grayscale(100%)
+  &.atMba
+    opacity: initial
+    filter: initial
+    & > *
+      border-radius: f.px(25)
+      @include m.dye(bg, c.$pi-2)

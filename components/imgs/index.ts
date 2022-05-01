@@ -30,6 +30,11 @@ export { default as ImgSectionInternationalExpertsImages } from '@/components/im
 export { default as ImgSectionOurGraduatesPeopleStudying } from '@/components/imgs/sections/SectionOurGraduates/ImgSectionOurGraduatesPeopleStudying'
 // ./sections/SectionRelevantContentOnly
 export { default as ImgSectionRelevantContentOnlyImages } from '@/components/imgs/sections/SectionRelevantContentOnly/ImgSectionRelevantContentOnlyImages'
+// ./sections/SectionTrustedByAlt
+export { default as ImgSectionTruestedByAltLenovoLogo } from '@/components/imgs/sections/SectionTrustedByAlt/ImgSectionTruestedByAltLenovoLogo'
+export { default as ImgSectionTruestedByAltRosneft } from '@/components/imgs/sections/SectionTrustedByAlt/ImgSectionTruestedByAltRosneft'
+export { default as ImgSectionTruestedByAltRzhdLogo } from '@/components/imgs/sections/SectionTrustedByAlt/ImgSectionTruestedByAltRzhdLogo'
+export { default as ImgSectionTruestedByAltVtbLogo } from '@/components/imgs/sections/SectionTrustedByAlt/ImgSectionTruestedByAltVtbLogo'
 export { default as ImgTeacher } from '@/components/imgs/teachers/ImgTeacher'
 export { default as ImgTeacher1 } from '@/components/imgs/teachers/ImgTeacher1'
 export { default as ImgLogoGasprom } from '@/components/imgs/trustedBy/ImgLogoGasprom'

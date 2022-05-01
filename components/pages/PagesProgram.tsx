@@ -15,6 +15,7 @@ import {
   YourResume,
   Cta,
   TrustedBy,
+  SectionTrustedByAlt,
   Reviews,
   SectionInternationalExperts,
   Teachers,
@@ -67,7 +68,8 @@ const PagesProgram = ({ ofType = null, reviews }: PagesProgramType) => {
         )}`}
         cta='reserve'
       />
-      {atMba && <TrustedBy />}
+      {!atMba && <TrustedBy />}
+      {atMba && <SectionTrustedByAlt />}
       {/* {atMba && <Reviews reviews={reviews} />} */}
       {/* <HelpWithEmployment /> */}
       <StudyCost />

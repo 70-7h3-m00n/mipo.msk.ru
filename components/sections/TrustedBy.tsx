@@ -28,14 +28,44 @@ const TrustedBy = ({ classNames = [] }: TypeTrustedBy) => {
   const atMba = program?.category?.type === 'mba'
 
   const slides = [
-    { img: <ImgLogoLenovo classNames={[stls.img]} /> },
-    { img: <ImgLogoVtb classNames={[stls.img]} /> },
-    { img: <ImgLogoRzhd classNames={[stls.img]} /> },
-    { img: <ImgLogoRosneft classNames={[stls.img]} /> },
-    { img: <ImgLogoGasprom classNames={[stls.img]} /> },
-    { img: <ImgLogoSberbank classNames={[stls.img]} /> },
-    { img: <ImgLogoSovkombank classNames={[stls.img]} /> },
-    { img: <ImgLogoTatneft classNames={[stls.img]} /> }
+    {
+      img: (
+        <ImgLogoLenovo classNames={[cn(stls.img, { [stls.atMba]: atMba })]} />
+      )
+    },
+    {
+      img: <ImgLogoVtb classNames={[cn(stls.img, { [stls.atMba]: atMba })]} />
+    },
+    {
+      img: <ImgLogoRzhd classNames={[cn(stls.img, { [stls.atMba]: atMba })]} />
+    },
+    {
+      img: (
+        <ImgLogoRosneft classNames={[cn(stls.img, { [stls.atMba]: atMba })]} />
+      )
+    },
+    {
+      img: (
+        <ImgLogoGasprom classNames={[cn(stls.img, { [stls.atMba]: atMba })]} />
+      )
+    },
+    {
+      img: (
+        <ImgLogoSberbank classNames={[cn(stls.img, { [stls.atMba]: atMba })]} />
+      )
+    },
+    {
+      img: (
+        <ImgLogoSovkombank
+          classNames={[cn(stls.img, { [stls.atMba]: atMba })]}
+        />
+      )
+    },
+    {
+      img: (
+        <ImgLogoTatneft classNames={[cn(stls.img, { [stls.atMba]: atMba })]} />
+      )
+    }
   ]
   return (
     <section

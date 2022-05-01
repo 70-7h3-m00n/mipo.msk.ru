@@ -56,7 +56,7 @@ const SectionOurGraduates = ({ classNames }: TSectionOurGraduates) => {
                 trigger={() => (
                   <div className={stls.btnContainer}>
                     <BtnZeta classNames={[stls.btn, stls.btnZeta]}>
-                      Оставить заявку{' '}
+                      <span className={stls.btnText}>Оставить заявку</span>
                       <IconGeneralArrowRightAlt
                         classNames={[stls.IconGeneralArrowRightAlt]}
                       />

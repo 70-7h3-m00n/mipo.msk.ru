@@ -64,6 +64,7 @@ $right_ld_ml: 2.8%
 
 $listItem_ld_ml: 5.2%
 .listItem
+  display: flex
   @include m.media(phone, tablet)
     & + .listItem
       margin-top: f.px(20)
@@ -81,12 +82,14 @@ $listItem_ld_ml: 5.2%
   background: linear-gradient(38.5deg, c.$nu-2 2.09%, c.$xi-2 57.98%)
 
 .listItemTestimonialBody
+  min-width: 100%
+  max-width: 100%
+  min-height: 100%
+  max-height: 100%
   @include m.media(phone, tablet)
     padding: f.px(20)
   @include m.media(laptop, desktop)
     padding: f.px(25)
-  min-height: 100%
-  max-height: 100%
   border-radius: inherit
   @include m.dye(bg, c.$mu-2)
 
@@ -113,18 +116,18 @@ $listItem_ld_ml: 5.2%
   @include m.dye(c, c.$nu)
 
 .btnContainer
+  min-width: 100%
+  max-width: 100%
   @include m.media(laptop, desktop)
     display: flex
-    min-width: 100%
-    max-width: 100%
     min-height: 100%
     max-height: 100%
 
 .btn
   display: flex
   align-items: center
-  justify-content: space-between
   @include m.media(laptop, desktop)
+    justify-content: space-between
     &.btnZeta
       padding-right: f.px(25)
       padding-left: f.px(25)
@@ -133,9 +136,16 @@ $listItem_ld_ml: 5.2%
       min-height: 100%
       max-height: 100%
 
+.btnText
+  @include m.media(phone, tablet)
+    margin-left: auto
+
 .IconGeneralArrowRightAlt
   max-width: f.px(24)
-  margin-left: 6%
+  @include m.media(phone, tablet)
+    margin-left: auto
+  @include m.media(laptop, desktop)
+    margin-left: 6%
 
 .img
   position: relative
