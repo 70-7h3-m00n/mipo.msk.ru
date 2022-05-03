@@ -1,9 +1,10 @@
 import stls from '@/styles/components/icons/IconCircleCheck.module.sass'
 import { TGeneralColorHex, TPropClassNames } from '@/types/index'
-import { FC } from 'react'
+import { FC, useContext } from 'react'
 import cn from 'classnames'
 import { colors } from '@/config/index'
 import { getClassNames } from '@/helpers/index'
+import ProgramContext from '@/context/program/programContext'
 
 type TIconCirccleCheck = TPropClassNames & {
   calpha?: boolean
@@ -21,6 +22,8 @@ const IconCircleCheck: FC<TIconCirccleCheck> = ({
   color1,
   color2
 }) => {
+  const { program } = useContext(ProgramContext)
+
   return (
     <div
       className={

@@ -1,5 +1,6 @@
 import stls from '@/styles/components/sections/StudyCost.module.sass'
 import Wrapper from '@/components/layout/Wrapper'
+import cn from 'classnames'
 import ProgramDiscount from '@/components/program/ProgramDiscount'
 import ProgramCost from '@/components/program/ProgramCost'
 import { BtnEta, BtnGamma, BtnText } from '@/components/btns'
@@ -13,6 +14,7 @@ import ProgramStudyDuration from '@/components/program/ProgramStudyDuration'
 
 const StudyCost = () => {
   const { program } = useContext(ProgramContext)
+  const atMba = program?.category?.type === 'mba'
 
   const info = [
     { key: 'Зачисление:', val: <ProgramAdmission /> },
@@ -46,9 +48,9 @@ const StudyCost = () => {
   ]
 
   return (
-    <section className={stls.container}>
+    <section className={cn(stls.container, { [stls.atMba]: atMba })}>
       <Wrapper>
-        <h2 className={stls.title}>
+        <h2 className={cn(stls.title, { [stls.atMba]: atMba })}>
           <span className={stls.phonetablet}>Стоимость обучения</span>{' '}
           <span className={stls.laptopdesktop}>Запишитесь на программу</span>
         </h2>

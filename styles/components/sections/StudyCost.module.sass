@@ -9,6 +9,8 @@
   @include m.media(laptop, desktop)
     @include m.gap($ptb: f.px(95))
   @include m.dye(bg, c.$epsilon)
+  &.atMba
+    @include m.dye(bg, c.$mu-2)
 
 .title
   @include m.media(phone, tablet)
@@ -18,6 +20,9 @@
     @include m.gap($mb: f.px(30))
     font-size: f.px(44)
   font-weight: 500
+  &.atMba
+    margin-bottom: f.px(50)
+    @include m.dye(c, c.$nu)
 
 .phonetablet
   @include m.media(laptop, desktop)
