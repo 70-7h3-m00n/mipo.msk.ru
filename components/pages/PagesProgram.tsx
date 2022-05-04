@@ -72,7 +72,8 @@ const PagesProgram = ({ ofType = null, reviews }: PagesProgramType) => {
       {atMba && <SectionTrustedByAlt />}
       {/* {atMba && <Reviews reviews={reviews} />} */}
       {/* <HelpWithEmployment /> */}
-      <StudyCost />
+      {!atMba && <StudyCost />}
+      {/* <StudyCost /> */}
       <Faq />
       {atMba && <SectionCorporateCourse />}
     </>
