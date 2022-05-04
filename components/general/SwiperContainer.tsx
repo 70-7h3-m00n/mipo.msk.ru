@@ -1,9 +1,11 @@
 import stls from '@/styles/components/general/SwiperContainer.module.sass'
+import { useContext } from 'react'
 import { useMediaQuery } from 'react-responsive'
 import Popup from 'reactjs-popup'
 import SwiperCore, { Navigation, Pagination, Grid } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import classNames from 'classnames'
+import ProgramContext from '@/context/program/programContext'
 import { PopupImage } from '../popups'
 
 SwiperCore.use([Navigation, Pagination])
@@ -19,6 +21,9 @@ const SwiperContainer = ({
   alwaysDisabledOnDesktop = false,
   isMultiRow = false
 }) => {
+  const { program } = useContext(ProgramContext)
+  const atMba = program?.category?.type === 'mba'
+
   const isMobileLayout = useMediaQuery({ query: '(max-width: 480px)' })
   const isTabletLayout = useMediaQuery({
     query: '(min-width: 481px) and (max-width: 768px)'
@@ -97,7 +102,8 @@ const SwiperContainer = ({
       className={classNames({
         [stls.container]: true,
         [stls.teachers]: teachers,
-        [stls.diplomas]: diplomas
+        [stls.diplomas]: diplomas,
+        [stls.atMba]: atMba
       })}>
       {slides &&
         slides.map((slide, idx) => (
