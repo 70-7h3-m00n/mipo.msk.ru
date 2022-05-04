@@ -1,16 +1,17 @@
 import stls from '@/styles/components/sections/StudyCost.module.sass'
-import Wrapper from '@/components/layout/Wrapper'
+import { useContext } from 'react'
 import cn from 'classnames'
+import { colors } from '@/config/index'
+import Wrapper from '@/components/layout/Wrapper'
+import ProgramContext from '@/context/program/programContext'
 import ProgramDiscount from '@/components/program/ProgramDiscount'
 import ProgramCost from '@/components/program/ProgramCost'
 import { BtnEta, BtnGamma, BtnText } from '@/components/btns'
-import ProgramContext from '@/context/program/programContext'
-import { useContext } from 'react'
-import classNames from 'classnames'
 import { IconCircleCheck } from '@/components/icons'
 import PopupTrigger from '@/components/general/PopupTrigger'
 import ProgramAdmission from '@/components/program/ProgramAdmission'
 import ProgramStudyDuration from '@/components/program/ProgramStudyDuration'
+import { number } from '@/data/contact'
 
 const StudyCost = () => {
   const { program } = useContext(ProgramContext)
@@ -47,6 +48,38 @@ const StudyCost = () => {
     'Практические упражнения с решением ситуационных задач'
   ]
 
+  const testimonials = [
+    {
+      title: 'Возврат денег',
+      content: (
+        <>
+          Если вы передумаете учиться, то мы вернем полную сумму в&nbsp;течение
+          первых двух недель
+        </>
+      )
+    },
+    {
+      title: 'Сэкономьте 13%',
+      content: (
+        <>
+          Получите налоговый вычет. <br /> Все подробности у менеджера при
+          записи на курс
+        </>
+      )
+    },
+    {
+      title: 'Остались вопросы?',
+      content: (
+        <>
+          Позвоните или напишите нам:{' '}
+          <a className={stls.phoneNumber} href={number.href}>
+            {number.val}
+          </a>
+        </>
+      )
+    }
+  ]
+
   return (
     <section className={cn(stls.container, { [stls.atMba]: atMba })}>
       <Wrapper>
@@ -54,52 +87,69 @@ const StudyCost = () => {
           <span className={stls.phonetablet}>Стоимость обучения</span>{' '}
           <span className={stls.laptopdesktop}>Запишитесь на программу</span>
         </h2>
-        <div className={stls.content}>
-          <div className={stls.left}>
+        <div className={cn(stls.content, { [stls.atMba]: atMba })}>
+          <div className={cn(stls.left, { [stls.atMba]: atMba })}>
             <div className={stls.heading}>
-              <h3 className={stls.subtitle}>{program?.title}</h3>
-              <div className={stls.info}>
+              <h3 className={cn(stls.subtitle, { [stls.atMba]: atMba })}>
+                {program?.title}
+              </h3>
+              <div className={cn(stls.info, { [stls.atMba]: atMba })}>
                 {info.map((item, idx) => (
                   <div key={item.key + idx} className={stls.infoitem}>
-                    <p className={stls.infokey}>{item.key}</p>
-                    <p className={stls.infoval}>{item.val}</p>
+                    <p className={cn(stls.infokey, { [stls.atMba]: atMba })}>
+                      {item.key}
+                    </p>
+                    <p className={cn(stls.infoval, { [stls.atMba]: atMba })}>
+                      {item.val}
+                    </p>
                   </div>
                 ))}
               </div>
-              <div className={stls.discount}>
+              <div className={cn(stls.discount, { [stls.atMba]: atMba })}>
                 <ProgramDiscount small />
               </div>
             </div>
-            <div className={stls.cost}>
+            <div className={cn(stls.cost, { [stls.atMba]: atMba })}>
               <ProgramCost withPerMonth />
             </div>
-            <div className={stls.btns}>
+            <div className={cn(stls.btns, { [stls.atMba]: atMba })}>
               <div
-                className={classNames({
-                  [stls.btncta]: true
+                className={cn(stls.btncta, {
+                  [stls.atMba]: atMba
                 })}>
                 <PopupTrigger btn='gamma' cta='signUp' />
               </div>
               <div
-                className={classNames({
-                  [stls.btnquestion]: true
+                className={cn(stls.btnquestion, {
+                  [stls.atMba]: atMba
                 })}>
                 <PopupTrigger btn='eta' cta='askQuestion' />
               </div>
               <div
-                className={classNames({
+                className={cn({
                   [stls.btnmore]: true
                 })}>
                 {/* <BtnText text={'Подробнее'} arrowBottom /> */}
               </div>
             </div>
           </div>
-          <div className={stls.right}>
-            <ul className={stls.points}>
+          <div className={cn(stls.right, { [stls.atMba]: atMba })}>
+            <ul className={cn(stls.points, { [stls.atMba]: atMba })}>
               {points.map((point, idx) => (
-                <li key={point + idx} className={stls.point}>
+                <li
+                  key={point + idx}
+                  className={cn(stls.point, { [stls.atMba]: atMba })}>
                   <span className={stls.pointicon}>
-                    <IconCircleCheck inverse />
+                    <IconCircleCheck
+                      classNames={[
+                        cn(stls.IconCircleCheck, { [stls.atMba]: atMba })
+                      ]}
+                      inverse={!atMba}
+                      {...(atMba && {
+                        color1: colors.nu,
+                        color2: colors['nu-2']
+                      })}
+                    />
                   </span>
                   <span>{point}</span>
                 </li>
@@ -107,6 +157,28 @@ const StudyCost = () => {
             </ul>
           </div>
         </div>
+        {atMba && (
+          <ul className={cn(stls.testimonials, { [stls.atMba]: atMba })}>
+            {testimonials.map((testimonial, idx) => (
+              <li
+                key={`${testimonial.title}-${idx}`}
+                className={cn(stls.testimonial, { [stls.atMba]: atMba })}>
+                <p
+                  className={cn(stls.testimonialTitle, {
+                    [stls.atMba]: atMba
+                  })}>
+                  {testimonial.title}
+                </p>
+                <p
+                  className={cn(stls.testimonialContent, {
+                    [stls.atMba]: atMba
+                  })}>
+                  {testimonial.content}
+                </p>
+              </li>
+            ))}
+          </ul>
+        )}
       </Wrapper>
     </section>
   )

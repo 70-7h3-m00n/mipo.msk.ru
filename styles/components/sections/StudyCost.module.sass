@@ -1,3 +1,4 @@
+@use 'sass:math'
 @use '@/styles/utils/mixin' as m
 @use '@/styles/utils/funcs' as f
 @use '@/styles/config/Colors.module.sass' as c
@@ -5,19 +6,21 @@
 
 .container
   @include m.media(phone, tablet)
-    @include m.gap($ptb: f.px(50))
+    padding-top: f.px(50)
+    padding-bottom: f.px(50)
   @include m.media(laptop, desktop)
-    @include m.gap($ptb: f.px(95))
+    padding-top: f.px(95)
+    padding-bottom: f.px(95)
   @include m.dye(bg, c.$epsilon)
   &.atMba
     @include m.dye(bg, c.$mu-2)
 
 .title
   @include m.media(phone, tablet)
-    @include m.gap($mb: f.px(20))
+    margin-bottom: f.px(20)
     font-size: f.px(26)
   @include m.media(laptop, desktop)
-    @include m.gap($mb: f.px(30))
+    margin-bottom: f.px(30)
     font-size: f.px(44)
   font-weight: 500
   &.atMba
@@ -34,21 +37,50 @@
 
 .content
   @include m.media(phone, tablet)
-    @include m.gap($ptb: f.px(26), $plr: f.px(19))
+    padding-top: f.px(26)
+    padding-right: f.px(26)
+    padding-bottom: f.px(26)
+    padding-left: f.px(26)
     border-radius: f.px(25) 0 0 0
   @include m.media(laptop, desktop)
-    @include m.flex
-    @include m.gap($pt: f.px(72), $pb: f.px(46), $plr: f.px(70))
+    display: flex
+    padding-top: f.px(72)
+    padding-right: f.px(70)
+    padding-bottom: f.px(46)
+    padding-left: f.px(70)
     border-radius: f.px(100) 0 0 0
   box-shadow: 0 f.px(4) f.px(40) rgba(0, 0, 0, .05)
   @include m.dye(bg, c.$nu)
+  &.atMba
+    padding-top: 0
+    padding-right: 0
+    padding-bottom: 0
+    padding-left: 0
+    border: 1px solid
+    @include m.dye(border, c.$nu)
+    @include m.dye(bg, c.$mu-2)
 
+$inner_sides_p: 8%
 .left
+  @include m.media(phone, tablet)
+    padding-top: f.px(50)
+    padding-right: f.px(20)
+    padding-bottom: f.px(50)
+    padding-left: f.px(20)
   @include m.media(laptop, desktop)
     position: relative
     max-width: f.px(585)
-    @include m.flex($display: false, $fb: 55%)
-    @include m.gap($pr: f.px(70))
+    flex-basis: 55%
+    padding-right: f.px(70)
+    &.atMba
+      padding-top: f.px(100)
+      padding-right: $inner_sides_p
+      padding-bottom: f.px(57)
+      padding-left: $inner_sides_p
+      border-right: 1px solid
+      @include m.dye(border, c.$nu)
+      &::after
+        display: none
     &::after
       content: ''
       position: absolute
@@ -60,49 +92,83 @@
       transform: translateY(f.px(-72))
       box-shadow: 0 f.px(4) f.px(40) rgba(0, 0, 0, .05)
 
+.right
+  @include m.media(phone, tablet)
+    display: none
+  @include m.media(laptop, desktop)
+    padding-left: f.px(70)
+    flex-basis: 45%
+  &.atMba
+    @include m.media(phone, tablet)
+      display: block
+    @include m.media(laptop, desktop)
+      display: flex
+      justify-content: center
+      align-items: center
+      flex-basis: 50%
+      padding-top: f.px(100)
+      padding-left: $inner_sides_p
+      padding-right: $inner_sides_p
+      padding-bottom: f.px(57)
+
 .heading
   @include m.media(phone, tablet)
-    @include m.flex($jc: space-between)
+    display: flex
+    justify-content: space-between
   @include m.media(laptop, desktop)
-    @include m.flex($fd: column, $jc: space-between)
+    display: flex
+    flex-direction: column
+    justify-content: space-between
   position: relative
 
 .info
   @include m.media(phone, tablet)
     display: none
   @include m.media(laptop, desktop)
-    @include m.flex
+    display: flex
     max-width: f.px(429)
-    @include m.gap($mb: f.px(71), $pb: f.px(22))
+    margin-bottom: f.px(71)
+    padding-bottom: f.px(22)
     border-bottom: f.px(1) solid
     @include m.dye(border, c.$mu)
+  &.atMba
+    @include m.media(laptop, desktop)
+      margin-bottom: f.px(50)
 
 .infoitem
   @include m.media(laptop, desktop)
-    @include m.gap($mr: f.px(30))
+    margin-right: f.px(30)
 
 .infokey
   @include m.media(laptop, desktop)
-    @include m.gap($mb: f.px(5))
+    margin-bottom: f.px(5)
     font-size: f.px(13)
     font-weight: 300
     @include m.dye(c, rgba(c.$chi, .5))
+  &.atMba
+    @include m.dye(c, rgba(c.$nu, .5))
 
 .infoval
   @include m.media(laptop, desktop)
     font-size: f.px(13)
     font-weight: 300
+  &.atMba
+    @include m.dye(c, c.$nu)
 
 .subtitle
   @include m.media(phone, tablet)
     max-width: 70%
-    @include m.gap($mb: f.px(18))
+    margin-bottom: f.px(18)
     font-size: f.px(20)
     font-weight: 500
   @include m.media(laptop, desktop)
-    @include m.gap($mb: f.px(31))
+    margin-bottom: f.px(31)
     font-size: f.px(34)
     font-weight: 300
+  &.atMba
+    padding-right: f.px(60)
+    font-weight: 500
+    @include m.dye(c, c.$nu)
 
 .discount
   @include m.media(phone, tablet)
@@ -116,10 +182,18 @@
     right: f.px(-130)
     // transform: translate(10%, -20%)
     z-index: 2
+    &.atMba
+      top: f.px(-60)
+      right: f.px(-150)
+      & > *
+        align-items: flex-end
+        &::after
+          left: 10%
+          right: initial
 
 .cost
-  @include m.gap($mb: f.px(10))
-  @media screen and ( max-width: 405px)
+  margin-bottom: f.px(10)
+  @media screen and (max-width: 405px)
     & > *
       & > *:nth-child(1)
         display: block
@@ -128,26 +202,50 @@
       & > *:nth-child(1)
         display: block
   @include m.media(laptop, desktop)
-    @include m.gap($mb: f.px(45))
+    margin-bottom: f.px(45)
+    &.atMba
+      margin-bottom: f.px(50)
 
 .btns
+  display: flex
   @include m.media(phone, tablet)
-    @include m.flex($jc: space-evenly, $ai: center)
+    justify-content: space-evenly
+    align-items: center
+    &.atMba
+      flex-direction: column
   @media screen and ( max-width: 985px ) and (min-width: bp.$tablet)
-    @include m.flex($fd: column)
-  @include m.media(laptop, desktop)
-    @include m.flex
+    flex-direction: column
 
 .btncta
   @include m.media(phone, tablet)
-    @include m.flex($jc: center, $fb: 55%)
-    @include m.gap($mr: 5%)
+    display: flex
+    justify-content: center
+    flex-basis: 55%
+    margin-right: 5%
     & > *
       width: 100%
+    &.atMba
+      flex-basis: 100%
+      min-width: 100%
+      margin-right: 0
+      margin-bottom: f.px(20)
   @include m.media(laptop, desktop)
-    @include m.gap($mr: f.px(10))
+    margin-right: f.px(10)
+    &.atMba
+      flex-basis: math.div(100% - 3%, 2)
+      margin-right: f.px(20)
+      & > *
+        min-width: 100%
+        max-width: 100%
+        & > *
+          min-width: 100%
+          max-width: 100%
   @media screen and ( max-width: 985px ) and (min-width: bp.$tablet)
-    @include m.gap($mb: f.px(10), $mr: 0)
+    margin-bottom: f.px(10)
+    margin-right: 0
+    &.atMba
+      margin-right: 0
+      margin-bottom: f.px(20)
     & > *
       width: 100%
       & > *
@@ -156,6 +254,10 @@
 .btnquestion
   @include m.media(phone, tablet)
     display: none
+    &.atMba
+      display: block
+      flex-basis: 100%
+      min-width: 100%
   @media screen and ( max-width: 985px ) and (min-width: bp.$tablet)
     & > *
       width: 100%
@@ -163,28 +265,98 @@
         width: 100%
   @include m.media(laptop, desktop)
     & > * > *
-      @include m.gap($plr: f.px(28))
+      padding-left: f.px(28)
+      padding-right: f.px(28)
+    &.atMba
+      flex-basis: math.div(100% - 3%, 2)
+      & > *
+        min-width: 100%
+        max-width: 100%
+        & > *
+          min-width: 100%
+          max-width: 100%
+          padding-right: 5%
+          padding-left: 5%
 
 .btnmore
   @include m.media(phone, tablet)
-    @include m.flex($jc: center, $fb: 40%)
+    display: flex
+    justify-content: center
+    flex-basis: 40%
   @include m.media(laptop, desktop)
     display: none
 
-.right
-  @include m.media(phone, tablet)
-    display: none
-  @include m.media(laptop, desktop)
-    @include m.gap($pl: f.px(70))
-    @include m.flex($display: false, $fb: 45%)
+.points
+  &.atMba
+    margin: 0
+    padding: 0
 
 .point
   @include m.media(laptop, desktop)
     @include m.flex
-    @include m.gap($mb: f.px(11))
+    display: flex
+    margin-bottom: f.px(11)
     font-size: f.px(18)
     font-weight: 300
+  &.atMba
+    @include m.dye(c, c.$nu)
 
 .pointicon
   @include m.media(laptop, desktop)
-    @include m.gap($mr: f.px(22))
+    margin-right: f.px(22)
+
+.IconCircleCheck
+  &.atMba
+    border-radius: 50%
+    @include m.dye(bg, c.$nu-2)
+
+.testimonials
+  margin: 0
+  padding: 0
+  &.atMba
+    display: flex
+    @include m.media(phone, tablet)
+      border-bottom-right-radius: f.px(25)
+    @include m.media(laptop, desktop)
+      padding-top: f.px(50)
+      padding-right: $inner_sides_p
+      padding-bottom: f.px(50)
+      padding-left: $inner_sides_p
+      border-bottom-right-radius: f.px(100)
+    border-right: 1px solid
+    border-bottom: 1px solid
+    border-left: 1px solid
+    @include m.dye(border, c.$nu)
+
+$testimonial_ld_mr: 7%
+.testimonial
+  display: flex
+  flex-direction: column
+  @include m.media(laptop, desktop)
+    flex-basis: math.div(100% - ($testimonial_ld_mr * 2), 3)
+    margin-right: $testimonial_ld_mr
+    &:nth-child(3n)
+      margin-right: 0
+
+.testimonialTitle
+  margin: 0
+  &.atMba
+    font-size: f.px(22)
+    font-weight: 500
+    line-height: 130%
+    @include m.dye(c, c.$xi-2)
+
+.testimonialContent
+  margin: 0
+  &.atMba
+    max-width: 23ch
+    margin-top: f.px(20)
+    font-size: f.px(18)
+    font-weight: 400
+    line-height: 120%
+    @include m.dye(c, rgba(c.$nu, .5))
+
+.phoneNumber
+  display: inline-block
+  text-decoration: underline
+  @include m.dye(c, rgba(c.$nu, .5))

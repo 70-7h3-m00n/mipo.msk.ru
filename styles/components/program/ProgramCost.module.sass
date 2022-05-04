@@ -18,6 +18,8 @@
   @include m.media(laptop, desktop)
     @include m.gap($mb: f.px(3))
     font-size: f.px(18)
+  &.atMba
+    @include m.dye(c, c.$nu)
 
 .discount
   @include m.media(phone, tablet)
@@ -31,6 +33,8 @@
     font-size: f.px(60)
     font-weight: 500
     line-height: f.px(77)
+  &.atMba
+    @include m.dye(c, c.$nu)
 
 .regular
   position: relative
@@ -41,6 +45,10 @@
     font-size: f.px(30)
     line-height: f.px(39)
   @include m.dye(c, c.$psi)
+  &.atMba
+    @include m.dye(c, rgba(c.$psi, .5))
+    &::after
+      @include m.dye(bg, rgba(c.$psi, .5))
   &::after
     content: ''
     position: absolute
