@@ -72,7 +72,9 @@ const StudyCost = () => {
       content: (
         <>
           Позвоните или напишите нам:{' '}
-          <a className={stls.phoneNumber} href={number.href}>
+          <a
+            className={cn(stls.phoneNumber, { [stls.atMba]: atMba })}
+            href={number.href}>
             {number.val}
           </a>
         </>
@@ -89,7 +91,7 @@ const StudyCost = () => {
         </h2>
         <div className={cn(stls.content, { [stls.atMba]: atMba })}>
           <div className={cn(stls.left, { [stls.atMba]: atMba })}>
-            <div className={stls.heading}>
+            <div className={cn(stls.heading, { [stls.atMba]: atMba })}>
               <h3 className={cn(stls.subtitle, { [stls.atMba]: atMba })}>
                 {program?.title}
               </h3>
@@ -106,7 +108,7 @@ const StudyCost = () => {
                 ))}
               </div>
               <div className={cn(stls.discount, { [stls.atMba]: atMba })}>
-                <ProgramDiscount small />
+                <ProgramDiscount small={!atMba} />
               </div>
             </div>
             <div className={cn(stls.cost, { [stls.atMba]: atMba })}>
@@ -139,7 +141,7 @@ const StudyCost = () => {
                 <li
                   key={point + idx}
                   className={cn(stls.point, { [stls.atMba]: atMba })}>
-                  <span className={stls.pointicon}>
+                  <span className={cn(stls.pointicon, { [stls.atMba]: atMba })}>
                     <IconCircleCheck
                       classNames={[
                         cn(stls.IconCircleCheck, { [stls.atMba]: atMba })
