@@ -3,7 +3,7 @@ import { useContext } from 'react'
 import cn from 'classnames'
 import ProgramContext from '@/context/program/programContext'
 
-const IconClock = () => {
+const IconClock = ({ color = null }) => {
   const { program } = useContext(ProgramContext)
   const atMba = program?.category?.type === 'mba'
   return (

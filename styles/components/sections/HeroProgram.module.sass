@@ -7,9 +7,11 @@
   & > *
     position: relative
   @include m.media(phone, tablet)
-    @include m.gap($pt: f.px(16), $pb: f.px(170))
+    padding-top: f.px(16)
+    padding-bottom: f.px(170)
   @include m.media(laptop, desktop)
-    @include m.gap($pt: f.px(52), $pb: f.px(116))
+    padding-top: f.px(52)
+    padding-bottom: f.px(116)
   @include m.dye(bg, c.$alpha)
   &.atMba
     @include m.dye(bg, c.$mu-2)
@@ -190,7 +192,11 @@
 
 .info
   position: absolute
-  bottom: f.px(-210)
+  z-index: 2
+  @include m.media(phone, tablet)
+    bottom: f.px(-630)
+  @include m.media(laptop, desktop)
+    bottom: f.px(-210)
   left: 50%
   transform: translateX(-50%)
   width: calc(100% - #{f.px(30)})

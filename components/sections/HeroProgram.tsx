@@ -11,6 +11,7 @@ import Wrapper from '@/components/layout/Wrapper'
 import ProgramLabel from '@/components/program/ProgramLabel'
 import ProgramDiscount from '@/components/program/ProgramDiscount'
 import ProgramInfo from '@/components/program/ProgramInfo'
+import ProgramInfoAlt from '@/components/program/ProgramInfoAlt'
 import PopupTrigger from '@/components/general/PopupTrigger'
 import {
   IconGeneral3dSpiral,
@@ -98,7 +99,7 @@ const HeroProgram = () => {
           <PopupTrigger btn='beta' cta='askQuestion' />
         </div>
         <div className={stls.info}>
-          <ProgramInfo />
+          <ProgramInfoAlt />
         </div>
       </Wrapper>
     </section>

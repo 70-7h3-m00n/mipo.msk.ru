@@ -17,11 +17,11 @@ const SectionOurGraduates = ({ classNames }: TSectionOurGraduates) => {
   const list = [
     {
       title: '72%',
-      text: 'перешли в более пристижную компанию'
+      text: 'перешли в более престижную компанию'
     },
     {
       title: '94%',
-      text: 'увеличили свои финансовые показатели в бизнасе'
+      text: 'увеличили свои финансовые показатели в бизнесе'
     },
     {
       title: '96%',

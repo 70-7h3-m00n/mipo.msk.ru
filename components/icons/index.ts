@@ -1,13 +1,18 @@
 // ./general
 export { default as IconGeneral3dSpiral } from '@/components/icons/general/IconGeneral3dSpiral'
 export { default as IconGeneralArrowRightAlt } from '@/components/icons/general/IconGeneralArrowRightAlt'
+export { default as IconGeneralCalendarAlt } from '@/components/icons/general/IconGeneralCalendarAlt'
 export { default as IconGeneralCircle } from '@/components/icons/general/IconGeneralCircle'
 export { default as IconGeneralCircleArrorRight } from '@/components/icons/general/IconGeneralCircleArrorRight'
+export { default as IconGeneralClockAlt } from '@/components/icons/general/IconGeneralClockAlt'
+export { default as IconGeneralDocument } from '@/components/icons/general/IconGeneralDocument'
 export { default as IconGeneralLiniarSpiral } from '@/components/icons/general/IconGeneralLiniarSpiral'
 export { default as IconGeneralLogo } from '@/components/icons/general/IconGeneralLogo'
 export { default as IconGeneralLogoMinimal } from '@/components/icons/general/IconGeneralLogoMinimal'
 export { default as IconGeneralLogoSquare } from '@/components/icons/general/IconGeneralLogoSquare'
+export { default as IconGeneralMap } from '@/components/icons/general/IconGeneralMap'
 export { default as IconGeneralSquare } from '@/components/icons/general/IconGeneralSquare'
+export { default as IconGeneralUsers } from '@/components/icons/general/IconGeneralUsers'
 export { default as IconGeneralWaterDrop } from '@/components/icons/general/IconGeneralWaterDrop'
 
 import IconAtom from '@/components/icons/IconAtom'

@@ -12,6 +12,7 @@ const contact = async (req, res) => {
   process.env.TZ = 'Europe/Moscow'
   // data from the client
   let {
+    id,
     name,
     phone,
     email,
@@ -98,7 +99,7 @@ const contact = async (req, res) => {
   const locationData = await getUserLocation()
 
   const data = {
-    id: uuidv4() || null,
+    id: id || uuidv4() || null,
     date: now.format('DD-MM-YYYY') || null,
     time: now.format('HH:mm:ss') || null,
     utc: now.format('Z') || null,

@@ -4,9 +4,10 @@
 
 .container
   @include m.media(phone, tablet)
-    @include m.gap($pt: f.px(80))
+    padding-top: f.px(490)
   @include m.media(laptop, desktop)
-    @include m.gap($pt: f.px(180), $pb: f.px(137))
+    padding-top: f.px(180)
+    padding-bottom: f.px(137)
   &.atMba
     @include m.dye(bg, c.$pi-2)
 
