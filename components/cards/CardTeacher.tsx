@@ -16,8 +16,8 @@ const CardTeacher = ({ portrait, name, specialization, achievements }) => {
         <div className={stls.content}>
           <h3 className={cn(stls.name, { [stls.atMba]: atMba })}>{name}</h3>
           <p className={cn(stls.specialization, { [stls.atMba]: atMba })}>
-            {/* {specialization} */}
-            Семейная психолохия и частная практика
+            {specialization}
+            {/* Семейная психолохия и частная практика */}
           </p>
           <p className={cn(stls.achievements, { [stls.atMba]: atMba })}>
             {achievements}

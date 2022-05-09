@@ -19,6 +19,7 @@ import {
   Reviews,
   SectionInternationalExperts,
   Teachers,
+  SectionGeneralTeachersAlt,
   HelpWithEmployment,
   YourFutureJob,
   StudyCost,
@@ -60,7 +61,8 @@ const PagesProgram = ({ ofType = null, reviews }: PagesProgramType) => {
         program?.resumeSkills && <YourResume />} */}
       {ofType !== 'course' && !atMba && <YourFutureJob />}
       {atMba && <SectionInternationalExperts />}
-      <Teachers />
+
+      {atMba ? <SectionGeneralTeachersAlt /> : <Teachers />}
       <Cta
         title={'Начните обучаться со скидкой'}
         desc={`Забронируйте программу по спеццене — со скидкой ${discount.substring(

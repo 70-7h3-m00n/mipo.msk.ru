@@ -76,3 +76,5 @@ const PopupThankyou = ({ close, id = null }) => {
 }
 
 export default PopupThankyou
+
+// Cross-Origin Read Blocking (CORB) blocked cross-origin response https://go.leadgid.ru/aff_goal?a=l&goal_id=5405&adv_sub=3d95d0c5-9cc5-4cef-879b-1e09c92d6e95 with MIME type text/html. See https://www.chromestatus.com/feature/5629709824032768 for more details.

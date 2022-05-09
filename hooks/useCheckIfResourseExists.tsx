@@ -1,5 +1,6 @@
 import { useEffect, useState, FC } from 'react'
 import axios from 'axios'
+import { dev } from '@/config/index'
 
 type TUseCheckIfResourseExists = {
   src: string
@@ -14,7 +15,9 @@ const useCheckIfResourseExists = ({ src }: TUseCheckIfResourseExists) => {
         const res = await axios.head(src)
         if (res.status === 200) setIsImage(true)
       } catch (err) {
-        console.error(`Error at useCheckIfResourseExists: ${err}`)
+        if (dev) {
+          console.error(`Error at useCheckIfResourseExists: ${err}`)
+        }
       }
     }
     getImage()
