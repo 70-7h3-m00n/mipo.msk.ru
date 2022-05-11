@@ -6,6 +6,7 @@ export { default as IconGeneralCircle } from '@/components/icons/general/IconGen
 export { default as IconGeneralCircleArrorRight } from '@/components/icons/general/IconGeneralCircleArrorRight'
 export { default as IconGeneralClockAlt } from '@/components/icons/general/IconGeneralClockAlt'
 export { default as IconGeneralDocument } from '@/components/icons/general/IconGeneralDocument'
+export { default as IconGeneralInfo } from '@/components/icons/general/IconGeneralInfo'
 export { default as IconGeneralLiniarSpiral } from '@/components/icons/general/IconGeneralLiniarSpiral'
 export { default as IconGeneralLogo } from '@/components/icons/general/IconGeneralLogo'
 export { default as IconGeneralLogoMinimal } from '@/components/icons/general/IconGeneralLogoMinimal'

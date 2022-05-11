@@ -3,7 +3,7 @@ import { useContext } from 'react'
 import cn from 'classnames'
 import parse from 'html-react-parser'
 import marked from 'marked'
-import { colors } from '@/config/index'
+import { selectors, colors } from '@/config/index'
 import { getImageHeight } from '@/helpers/index'
 import ProgramContext from '@/context/program/programContext'
 import ProgramsContext from '@/context/programs/programsContext'
@@ -26,7 +26,12 @@ const HeroProgram = () => {
 
   const { curProgramsType } = useContext(ProgramsContext)
   return (
-    <section className={cn(stls.container, { [stls.atMba]: atMba })}>
+    <section
+      className={cn(
+        stls.container,
+        { [stls.atMba]: atMba },
+        selectors.sectionHero
+      )}>
       <Wrapper>
         <div className={cn(stls.top, { [stls.atMba]: atMba })}>
           <div className={stls.heading}>

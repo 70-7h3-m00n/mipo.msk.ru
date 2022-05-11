@@ -10,6 +10,7 @@ import fallback from '@/config/fallback'
 import themeColor from '@/config/themeColor'
 import routesBack from '@/config/routesBack'
 import routesFront from '@/config/routesFront'
+import selectors from '@/config/selectors'
 import routesExternal from '@/config/routesExternal'
 
 export {
@@ -25,5 +26,6 @@ export {
   base64pixel,
   themeColor,
   revalidate,
+  selectors,
   routesExternal
 }

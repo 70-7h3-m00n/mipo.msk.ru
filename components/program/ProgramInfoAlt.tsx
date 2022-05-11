@@ -2,7 +2,8 @@ import stls from '@/styles/components/program/ProgramInfoAlt.module.sass'
 import { TPropClassNames } from '@/types/index'
 import { FC, useContext } from 'react'
 import cn from 'classnames'
-import { colors } from '@/config/index'
+import Popup from 'reactjs-popup'
+import { selectors, colors } from '@/config/index'
 import { getClassNames } from '@/helpers/index'
 import ProgramContext from '@/context/program/programContext'
 import ProgramAdmission from '@/components/program/ProgramAdmission'
@@ -17,7 +18,8 @@ import {
   IconGraduateHat,
   IconPaperScroll,
   IconClock,
-  IconDoc
+  IconDoc,
+  IconGeneralInfo
 } from '@/components/icons'
 
 type TProgramInfoAltProps = TPropClassNames
@@ -37,7 +39,18 @@ const ProgramInfoAlt: FC<TProgramInfoAltProps> = ({ classNames }) => {
           }
         />
       ),
-      icon: IconGeneralCalendarAlt
+      icon: IconGeneralCalendarAlt,
+      info: {
+        label: 'Как сократить?',
+        content: (
+          <>
+            <p className={stls.infoContentP}>
+              Можно окончить экстерном, тем самым сократив срок обучения
+            </p>
+            {/* <span className={cn(stls.highlight, {[stls.atMba]: atMba})}> до 1 года 8 мес.</span> */}
+          </>
+        )
+      }
     },
     {
       key: 'Форма обучения:',
@@ -57,7 +70,30 @@ const ProgramInfoAlt: FC<TProgramInfoAltProps> = ({ classNames }) => {
     {
       key: 'Документ об окончании:',
       val: atCourse ? 'Сертификат' : 'Диплом о переподготовке',
-      icon: IconGeneralDocument
+      icon: IconGeneralDocument,
+      info: {
+        label: (
+          <IconGeneralInfo
+            classNames={[stls.IconGeneralInfo]}
+            color={atMba ? colors['xi-2'] : undefined}
+          />
+        ),
+        content: (
+          <>
+            <p className={stls.infoContentP}>
+              {atMba
+                ? 'Диплом о переподготовке — это официальный документ, который подтверждает прохождение программы.'
+                : 'Диплом о переподготовке — это официальный документ, который даёт право вести профессиональную деятельность по полученной специальности.'}
+            </p>
+            <p className={stls.infoContentP}>
+              Все выданные дипломы вносятся в{' '}
+              <span className={cn(stls.highlight, { [stls.atMba]: atMba })}>
+                ФРДО — Федеральный реестр сведений о документах об образовании.
+              </span>
+            </p>
+          </>
+        )
+      }
     }
   ]
 
@@ -66,8 +102,27 @@ const ProgramInfoAlt: FC<TProgramInfoAltProps> = ({ classNames }) => {
       className={
         cn(stls.container, getClassNames({ classNames })) || undefined
       }>
-      {vals.map(({ key, val, icon: Icon }, idx) => (
-        <div key={key + val + idx} className={stls.group}>
+      {vals.map(({ key, val, icon: Icon, info }, idx) => (
+        <div
+          key={key + val + idx}
+          className={cn(stls.group, {
+            [stls.withInfo]: info
+          })}>
+          {info?.label && (
+            <Popup
+              trigger={open => (
+                <a
+                  href='#!'
+                  className={cn(stls.infoLabel, { [stls.atMba]: atMba })}>
+                  {info.label}
+                </a>
+              )}
+              position='top right'
+              closeOnDocumentClick
+              keepTooltipInside={`.${selectors.sectionHero}`}>
+              <div className={stls.infoContent}> {info.content} </div>
+            </Popup>
+          )}
           <div className={stls.icon}>
             {<Icon color={atMba ? colors['nu-2'] : undefined} />}
           </div>

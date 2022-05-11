@@ -18,16 +18,18 @@
   
 $group_lp_mr: 2.6%
 .group
+  position: relative
   display: flex
   @include m.media(phone, tablet)
     flex-grow: 1
     flex-shrink: 1
     flex-basis: 100%
     padding-top: f.px(30)
+    &.withInfo
+      padding-right: f.px(110)
     padding-bottom: f.px(30)
     border-bottom: 1px solid
   @include m.media(laptop, desktop)
-    position: relative
     flex-direction: column
     flex-grow: 1
     flex-shrink: 1
@@ -38,6 +40,44 @@ $group_lp_mr: 2.6%
     padding-bottom: f.px(30)
     border-right: 1px solid
   @include m.dye(border, rgba(c.$theta, .1))
+
+.infoLabel
+  position: absolute
+  @include m.media(phone, tablet)
+    top: 50%
+    right: 0
+    transform: translateY(-50%)
+  @include m.media(laptop, desktop)
+    top: f.px(15)
+    right: f.px(15)
+  font-size: f.px(13)
+  font-weight: 700
+  line-height: 120%
+  text-decoration: underline
+  @include m.dye(c, c.$beta)
+  &.atMba
+    @include m.dye(c, c.$xi-2)
+
+.IconGeneralInfo
+  min-width: f.px(26)
+  max-width: f.px(26)
+  min-height: f.px(26)
+  max-height: f.px(26)
+
+.infoContent
+  min-width: 22ch
+  padding: f.px(20)
+  border-radius: f.px(15)
+  @include m.dye(bg, c.$nu)
+
+.infoContentP
+  margin: 0
+  & + .infoContentP
+    margin-top: f.px(11)
+  font-size: f.px(14)
+  font-weight: 500
+  line-height: 120%
+  @include m.dye(c, c.$kappa)
 
 .icon
   min-width: f.px(24)
@@ -63,3 +103,8 @@ $group_lp_mr: 2.6%
   @include m.media(laptop, desktop)
     font-size: f.px(18)
   font-weight: 500
+
+.highlight
+  @include m.dye(c, c.$alpha)
+  &.atMba
+    @include m.dye(c, c.$nu-2)
