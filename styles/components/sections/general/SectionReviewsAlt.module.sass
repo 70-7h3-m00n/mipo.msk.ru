@@ -14,6 +14,10 @@
   overflow: hidden
   @include m.dye(bg, c.$pi-2)
 
+.heading
+  display: flex
+  justify-content: space-between
+
 .title
   margin: 0
   @include m.media(phone, tablet)
@@ -24,6 +28,27 @@
   line-height: 120%
   @include m.dye(c, c.$nu)
 
+.controls
+  display: flex
+  justify-content: center
+  align-items: center
+  @include m.media(phone, tablet)
+    display: none
+
+.controlsIcon
+  min-width: f.px(14)
+  max-width: f.px(14)
+  min-height: f.px(14)
+  max-height: f.px(14)
+  &.dim
+    opacity: .5
+
+.controlsArrowLeftIcon
+  transform: rotate(180deg)
+
+.controlsArrowRight
+  margin-left: f.px(27)
+
 .list
   margin: 0
   padding: 0
@@ -31,6 +56,7 @@
   @include m.media(phone, tablet)
   @include m.media(laptop, desktop)
     display: flex
+    transition: transform .15s ease-out
 
 .listItem
   display: flex

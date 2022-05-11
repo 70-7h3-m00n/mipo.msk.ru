@@ -1,11 +1,12 @@
 import stls from '@/styles/components/sections/general/SectionReviewsAlt.module.sass'
 import { TPropClassNames } from '@/types/index'
-import { FC } from 'react'
+import { FC, useState } from 'react'
 import cn from 'classnames'
 import { colors } from '@/config/index'
 import { getClassNames, getImageHeight } from '@/helpers/index'
 import Wrapper from '@/components/layout/Wrapper'
 import { ImgReview } from '@/components/imgs'
+import { IconGeneralArrowRightAlt } from '@/components/icons'
 
 type TSectionReviewsAlt = TPropClassNames & {
   programReviews: any // TODO: figure out types
@@ -20,7 +21,32 @@ const SectionReviewsAlt: FC<TSectionReviewsAlt> = ({
   console.log(programReviews)
   console.log(reviews)
 
+  const [curTranslateX, setCurTranslateX] = useState(0)
+
   const list = programReviews?.length === 0 ? reviews : programReviews
+
+  const distance = 300
+  const reviewItemLength = 479 + 30
+  const handleMove = (
+    dir: 'left' | 'right',
+    distance: number,
+    reviewItemLength: number
+  ) => {
+    if (dir === 'left') {
+      if (curTranslateX - distance < 0) {
+        setCurTranslateX(0)
+        return
+      }
+      setCurTranslateX(curTranslateX - distance)
+      return
+    }
+    if (dir === 'right') {
+      if (curTranslateX + distance > reviewItemLength * (list.length - 1)) {
+        return
+      }
+      setCurTranslateX(curTranslateX + distance)
+    }
+  }
 
   if (!list || list.length === 0) return null
 
@@ -30,8 +56,40 @@ const SectionReviewsAlt: FC<TSectionReviewsAlt> = ({
         cn(stls.container, getClassNames({ classNames })) || undefined
       }>
       <Wrapper classNames={[stls.wrapper]}>
-        <h2 className={stls.title}>Что о нас говорят выпускники</h2>
-        <ul className={stls.list}>
+        <div className={stls.heading}>
+          <h2 className={stls.title}>Что о нас говорят выпускники</h2>
+          <div className={stls.controls}>
+            <a
+              href='#!'
+              className={stls.controlsArrowLeft}
+              onClick={() => handleMove('left', distance, reviewItemLength)}>
+              <IconGeneralArrowRightAlt
+                classNames={[
+                  cn(stls.controlsIcon, stls.controlsArrowLeftIcon, {
+                    [stls.dim]: curTranslateX === 0
+                  })
+                ]}
+              />
+            </a>
+            <a
+              href='#!'
+              className={stls.controlsArrowRight}
+              onClick={() => handleMove('right', distance, reviewItemLength)}>
+              <IconGeneralArrowRightAlt
+                classNames={[
+                  cn(stls.controlsIcon, stls.controlsArrowRightIcon, {
+                    [stls.dim]:
+                      curTranslateX + distance >
+                      reviewItemLength * (list.length - 1)
+                  })
+                ]}
+              />
+            </a>
+          </div>
+        </div>
+        <ul
+          className={stls.list}
+          style={{ transform: `translateX(${-curTranslateX}px)` }}>
           {list?.map((item, idx) => (
             <li
               key={`${item?.title || 'SectionReviewsAlt__item'}-${idx}`}
