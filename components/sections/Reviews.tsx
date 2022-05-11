@@ -8,7 +8,7 @@ import { ImgReview } from '@/components/imgs'
 
 type ReviewsType = {
   standalone?: boolean
-  reviews: any
+  reviews: any // TODO: figure out types
 }
 
 const Reviews = ({ standalone = false, reviews }: ReviewsType) => {

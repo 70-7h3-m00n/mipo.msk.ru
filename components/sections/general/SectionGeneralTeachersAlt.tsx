@@ -36,8 +36,6 @@ const SectionGeneralTeachersAlt: FC<TSectionGeneralTeachersAlt> = ({
       )
     }))
 
-  console.log(teachers)
-
   return (
     <section
       className={
@@ -66,7 +64,9 @@ const SectionGeneralTeachersAlt: FC<TSectionGeneralTeachersAlt> = ({
                       )}
                     </div>
                   </div>
-                  <p className={stls.achievements}>{teacher?.achievements}</p>
+                  {teacher?.achievements && (
+                    <p className={stls.achievements}>{teacher?.achievements}</p>
+                  )}
                 </div>
               </div>
             </li>

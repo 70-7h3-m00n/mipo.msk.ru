@@ -13,6 +13,22 @@
     padding-bottom: f.px(100)
   @include m.dye(bg, c.$pi-2)
 
+.wrapper
+  position: relative
+  &::after
+    content: ''
+    position: absolute
+    top: f.px(30)
+    left: 0
+    transform: translateX(-40%)
+    min-width: f.px(270)
+    max-width: f.px(270)
+    min-height: f.px(270)
+    max-height: f.px(270)
+    border-radius: 50%
+    filter: blur(117px)
+    @include m.dye(bg, rgba(c.$xi-2, .2))
+
 .title
   margin: 0
   @include m.media(phone, tablet)

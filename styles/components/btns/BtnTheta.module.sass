@@ -21,7 +21,6 @@
   text-align: center
   @include m.dye(bg, c.$nu)
   @include m.dye(c, c.$chi)
-
   &::after
     content: ''
     position: absolute
@@ -39,6 +38,10 @@
     transform: scale(0.98)
     &::after
       opacity: 0
+  &.atMba
+    &::after
+      border-radius: inherit
+    border-radius: f.px(15)
 
 .isDisabled
   font-weight: 400
