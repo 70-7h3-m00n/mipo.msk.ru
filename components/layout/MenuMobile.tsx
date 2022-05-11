@@ -14,10 +14,13 @@ import {
   routeReviews,
   routeAbout
 } from '@/data/routes'
+import ProgramContext from '@/context/program/programContext'
 
 const MenuMobile = () => {
   const { menuIsOpen, openMenu, closeMenu, toggleMenu } =
     useContext(MenuContext)
+  const { program } = useContext(ProgramContext)
+  const atMba = program?.category?.type === 'mba'
 
   const links = [
     { text: 'Направления обучения', href: routePrograms, withIcon: true },
@@ -30,7 +33,8 @@ const MenuMobile = () => {
     <div
       className={classNames({
         [stls.container]: true,
-        [stls.menuIsOpen]: menuIsOpen
+        [stls.menuIsOpen]: menuIsOpen,
+        [stls.atMba]: atMba
       })}>
       <Wrapper>
         <div className={stls.row}>

@@ -6,7 +6,6 @@ import PopupTrigger from '@/components/general/PopupTrigger'
 import { ImgTeacher } from '@/components/imgs'
 
 const MeetYourTeachers = ({ teachers }) => {
-  console.log(teachers)
   return (
     <section className={stls.container}>
       <Wrapper>

@@ -13,8 +13,6 @@ const Teachers = () => {
   const { program } = useContext(ProgramContext)
   const atMba = program?.category?.type === 'mba'
 
-  console.log(program.teachers)
-
   const list =
     program?.teachers &&
     program?.teachers?.map(teacher => {

@@ -41,8 +41,6 @@ const PagesProgram = ({ ofType = null, reviews }: PagesProgramType) => {
   const { program } = useContext(ProgramContext)
   const atMba = program?.category?.type === 'mba'
 
-  console.log(program)
-  console.log(reviews)
   return (
     <>
       <HeroProgram />

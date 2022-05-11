@@ -18,9 +18,6 @@ const SectionReviewsAlt: FC<TSectionReviewsAlt> = ({
   programReviews,
   reviews
 }) => {
-  console.log(programReviews)
-  console.log(reviews)
-
   const [curTranslateX, setCurTranslateX] = useState(0)
 
   const list = programReviews?.length === 0 ? reviews : programReviews

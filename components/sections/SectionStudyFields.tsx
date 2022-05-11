@@ -53,11 +53,6 @@ const SectionStudyFields = ({
 
   const router = useRouter()
 
-  console.log(studyFields)
-  console.log(studyFieldsProfessions)
-  console.log(studyFieldsCourses)
-  console.log(studyFieldsMbas)
-
   const list: {
     title: string
     type: TypeCategory
