@@ -44,8 +44,8 @@ const SectionGeneralTeachersAlt: FC<TSectionGeneralTeachersAlt> = ({
       <Wrapper classNames={[stls.wrapper]}>
         <h2 className={stls.title}>Преподаватели программы</h2>
         <p className={stls.subtitle}>
-          Преподают ведущие практикующие психологи и психоаналитики России с{' '}
-          <span className={stls.highlight}>опытом от 7 до 25 лет</span>
+          Преподают ведущие российские и зарубежные эксперты{' '}
+          <span className={stls.highlight}>с опытом от 7 до 25 лет</span>
         </p>
         <ul className={stls.teachers}>
           {teachers?.map((teacher, idx) => (
