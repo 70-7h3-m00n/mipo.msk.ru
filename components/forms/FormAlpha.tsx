@@ -53,11 +53,10 @@ const FormAlpha = ({
     data.leadPage = router.asPath
     const utms = JSON.parse(sessionStorage.getItem('utms'))
     data.utms = utms
-    sessionStorage.removeItem('utms')
     const referer = JSON.parse(sessionStorage.getItem('referer'))
     data.referer = referer
-    sessionStorage.removeItem('referer')
-    const req = await hitContactRoute({ ...data, id })
+    const ymUid = localStorage.getItem('_ym_uid')
+    const req = await hitContactRoute({ ...data, id, ymUid })
     if (req === 200) {
       console.log('Success')
     } else {

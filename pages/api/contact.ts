@@ -23,7 +23,8 @@ const contact = async (req, res) => {
     programTitle,
     leadPage,
     utms,
-    referer
+    referer,
+    ymUid
   } = req.body
 
   if (name?.includes('@')) {
@@ -114,6 +115,7 @@ const contact = async (req, res) => {
     root: root || null,
     leadPage: root + leadPage || null,
     ip: ip || null,
+    ymUid: ymUid || null,
     cityEn: (locationData && locationData.city.names.en) || null,
     cityRu: (locationData && locationData.city.names.ru) || null,
     countryCode: (locationData && locationData.country.code) || null,
@@ -279,7 +281,7 @@ const contact = async (req, res) => {
       },
       {
         tdKey: 'Yandex Metrics ID',
-        tdVal: null
+        tdVal: ymUid
       },
       {
         tdKey: 'Устройство пользователя',

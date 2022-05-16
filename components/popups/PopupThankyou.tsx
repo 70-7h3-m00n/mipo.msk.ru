@@ -9,6 +9,7 @@ const PopupThankyou = ({ close, id = null }) => {
   const { program } = useContext(ProgramContext)
 
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [isLeadFromLeadgid, setIsLeadFromLeadgid] = useState(false)
 
   const idThankyou = uuidv4()
 
@@ -16,6 +17,9 @@ const PopupThankyou = ({ close, id = null }) => {
   const atProfession = program?.category?.type === 'profession'
 
   useEffect(() => {
+    const utms = JSON.parse(sessionStorage.getItem('utms'))
+    setIsLeadFromLeadgid(utms?.utm_source === 'LG')
+
     const tagManagerArgs = {
       dataLayer: {
         event: 'lead',
@@ -39,8 +43,11 @@ const PopupThankyou = ({ close, id = null }) => {
     }
     TagManager.dataLayer(tagManagerArgs)
 
+    sessionStorage.removeItem('referer')
+    sessionStorage.removeItem('utms')
     setIsSubmitted(true)
   }, [program, atMba, atProfession])
+
   return (
     <div className={stls.container}>
       <div className={stls.close}>
@@ -52,7 +59,7 @@ const PopupThankyou = ({ close, id = null }) => {
       </p>
       <p className={stls.thanks}>Спасибо!</p>
       {isSubmitted &&
-        (atMba ? (
+        (atMba && isLeadFromLeadgid ? (
           // eslint-disable-next-line
           <img
             src={`https://go.leadgid.ru/aff_goal?a=l&goal_id=5405&adv_sub=${
@@ -61,7 +68,7 @@ const PopupThankyou = ({ close, id = null }) => {
             width='1'
             height='1'
           />
-        ) : atProfession ? (
+        ) : atProfession && isLeadFromLeadgid ? (
           // eslint-disable-next-line
           <img
             src={`https://go.leadgid.ru/aff_l?offer_id=5740&adv_sub=${
