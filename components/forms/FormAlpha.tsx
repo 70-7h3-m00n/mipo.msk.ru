@@ -55,7 +55,7 @@ const FormAlpha = ({
     data.utms = utms
     const referer = JSON.parse(sessionStorage.getItem('referer'))
     data.referer = referer
-    const ymUid = localStorage.getItem('_ym_uid')
+    const ymUid = JSON.parse(localStorage.getItem('_ym_uid'))
     const req = await hitContactRoute({ ...data, id, ymUid })
     if (req === 200) {
       console.log('Success')

@@ -46,8 +46,17 @@ const PopupThankyou = ({ close, id = null }) => {
     sessionStorage.removeItem('referer')
     sessionStorage.removeItem('utms')
     setIsSubmitted(true)
-  }, [program, atMba, atProfession])
+  }, [
+    program,
+    atMba,
+    atProfession,
+    isLeadFromLeadgid,
+    id,
+    idThankyou,
+    setIsLeadFromLeadgid
+  ])
 
+  console.log(isLeadFromLeadgid)
   return (
     <div className={stls.container}>
       <div className={stls.close}>
