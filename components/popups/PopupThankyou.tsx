@@ -18,7 +18,7 @@ const PopupThankyou = ({ close, id = null }) => {
 
   useEffect(() => {
     const utms = JSON.parse(sessionStorage.getItem('utms'))
-    setIsLeadFromLeadgid(utms?.utm_source === 'LG')
+    setIsLeadFromLeadgid(isLeadFromLeadgid || utms?.utm_source === 'LG')
 
     const tagManagerArgs = {
       dataLayer: {
@@ -56,7 +56,6 @@ const PopupThankyou = ({ close, id = null }) => {
     setIsLeadFromLeadgid
   ])
 
-  console.log(isLeadFromLeadgid)
   return (
     <div className={stls.container}>
       <div className={stls.close}>
