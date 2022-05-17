@@ -32,7 +32,11 @@ const GetDiplomaAndAccreditation = () => {
             <BtnKappa
               classNames={[stls.btn, stls.btn1]}
               onClick={() => setIsSupplement(false)}>
-              Первая&nbsp;страница
+              {atProfession ? (
+                'Диплом о квалификации'
+              ) : (
+                <>Первая&nbsp;страница</>
+              )}
             </BtnKappa>
             <BtnIota
               classNames={[stls.btn, stls.btn2]}
@@ -45,7 +49,11 @@ const GetDiplomaAndAccreditation = () => {
             <BtnIota
               classNames={[stls.btn, stls.btn1]}
               onClick={() => setIsSupplement(false)}>
-              Первая&nbsp;страница
+              {atProfession ? (
+                'Диплом о квалификации'
+              ) : (
+                <>Первая&nbsp;страница</>
+              )}
             </BtnIota>
             <BtnKappa
               classNames={[stls.btn, stls.btn2]}
