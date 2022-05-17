@@ -34,14 +34,16 @@ const FormAlpha = ({
 
   const [isDisabled, setIsDisabled] = useState(false)
   const [thanksIsOpen, setThanksIsOpen] = useState(false)
+  const [userUuid, setUserUuid] = useState(null)
+  const [id, setId] = useState(null)
 
   const { program } = useContext(ProgramContext)
   const atMba = program?.category?.type === 'mba'
 
-  const id = uuidv4()
-
   useEffect(() => {
     popup && setFocus('name')
+    setUserUuid(JSON.parse(sessionStorage.getItem('user_uuid')))
+    if (!id) setId(uuidv4())
   }, [setFocus, popup])
 
   const router = useRouter()
@@ -56,6 +58,8 @@ const FormAlpha = ({
     const referer = JSON.parse(sessionStorage.getItem('referer'))
     data.referer = referer
     const ymUid = JSON.parse(localStorage.getItem('_ym_uid'))
+    const userUuid = JSON.parse(sessionStorage.getItem('user_uuid'))
+    console.log('formalpha id: ', id)
     const req = await hitContactRoute({ ...data, id, ymUid })
     if (req === 200) {
       console.log('Success')

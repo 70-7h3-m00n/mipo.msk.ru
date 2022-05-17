@@ -100,7 +100,7 @@ const contact = async (req, res) => {
   const locationData = await getUserLocation()
 
   const data = {
-    id: id || uuidv4() || null,
+    id: id || null,
     date: now.format('DD-MM-YYYY') || null,
     time: now.format('HH:mm:ss') || null,
     utc: now.format('Z') || null,
@@ -422,6 +422,7 @@ const contact = async (req, res) => {
     })
 
     console.log('Message sent: %s', emailRes.messageId)
+    console.log(data.id)
     res.status(200).json({ status: 200, msg: 'Email is sent' })
   } catch (err) {
     res.status(500).json({ status: 500, err, msg: 'Unexpected server error' })

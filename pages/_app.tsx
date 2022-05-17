@@ -14,6 +14,7 @@ import SEO from '../seo.config'
 
 import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
+import { v4 as uuidv4 } from 'uuid'
 
 import { prod, gtmId, routesFront } from '@/config/index'
 
@@ -29,6 +30,8 @@ import StickyBottom from '@/components/layout/StickyBottom'
 
 function MyApp({ Component, pageProps, router }) {
   const [loading, setLoading] = useState(false)
+
+  const userUuid = uuidv4()
 
   useEffect(() => {
     TagManager.initialize({ gtmId, dataLayerName: 'dataLayer' })
@@ -58,6 +61,10 @@ function MyApp({ Component, pageProps, router }) {
     const referer = sessionStorage.getItem('referrer')
     if (!referer) {
       sessionStorage.setItem('referer', JSON.stringify(document.referrer))
+    }
+
+    if (!sessionStorage.getItem('user_uuid')) {
+      sessionStorage.setItem('user_uuid', JSON.stringify(userUuid))
     }
 
     NProgress.configure({

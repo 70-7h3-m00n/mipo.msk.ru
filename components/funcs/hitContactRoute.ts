@@ -5,6 +5,7 @@ const hitContactRoute = async values => {
   try {
     const res = await axios.post(`${routesFront.root}/api/contact`, values)
     let output
+    console.log('hit contact route id: ', values.id)
     res.status === 200 && (output = 200)
     res.status === 500 && (output = 500)
     return output

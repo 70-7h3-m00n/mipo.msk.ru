@@ -10,15 +10,19 @@ const PopupThankyou = ({ close, id = null }) => {
 
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [isLeadFromLeadgid, setIsLeadFromLeadgid] = useState(false)
+  const [userUuid, setUserUuid] = useState(null)
 
   const idThankyou = uuidv4()
 
   const atMba = program?.category?.type === 'mba'
   const atProfession = program?.category?.type === 'profession'
 
+  console.log('popup thankyou id: ', id)
+
   useEffect(() => {
     const utms = JSON.parse(sessionStorage.getItem('utms'))
     setIsLeadFromLeadgid(isLeadFromLeadgid || utms?.utm_source === 'LG')
+    setUserUuid(JSON.parse(sessionStorage.getItem('user_uuid')))
 
     const tagManagerArgs = {
       dataLayer: {
@@ -26,7 +30,7 @@ const PopupThankyou = ({ close, id = null }) => {
         ecommerce: {
           add: {
             actionField: {
-              id: id || idThankyou
+              id
             },
             products: [
               {
@@ -45,15 +49,18 @@ const PopupThankyou = ({ close, id = null }) => {
 
     sessionStorage.removeItem('referer')
     sessionStorage.removeItem('utms')
+    sessionStorage.removeItem('user_uuid')
+    sessionStorage.setItem('user_uuid', JSON.stringify(uuidv4()))
     setIsSubmitted(true)
   }, [
     program,
     atMba,
     atProfession,
     isLeadFromLeadgid,
-    id,
-    idThankyou,
-    setIsLeadFromLeadgid
+    id
+    // id,
+    // idThankyou,
+    // userUuid
   ])
 
   return (
@@ -70,18 +77,14 @@ const PopupThankyou = ({ close, id = null }) => {
         (atMba && isLeadFromLeadgid ? (
           // eslint-disable-next-line
           <img
-            src={`https://go.leadgid.ru/aff_goal?a=l&goal_id=5405&adv_sub=${
-              id || idThankyou
-            }`}
+            src={`https://go.leadgid.ru/aff_goal?a=l&goal_id=5405&adv_sub=${id}`}
             width='1'
             height='1'
           />
         ) : atProfession && isLeadFromLeadgid ? (
           // eslint-disable-next-line
           <img
-            src={`https://go.leadgid.ru/aff_l?offer_id=5740&adv_sub=${
-              id || idThankyou
-            }`}
+            src={`https://go.leadgid.ru/aff_l?offer_id=5740&adv_sub=${id}`}
             width='1'
             height='1'
           />
