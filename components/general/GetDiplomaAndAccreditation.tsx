@@ -1,16 +1,21 @@
 import stls from '@/styles/components/general/GetDiplomaAndAccreditation.module.sass'
-import { useState } from 'react'
+import { useState, useContext } from 'react'
+import ProgramContext from '@/context/program/programContext'
 import { BtnIota, BtnKappa } from '@/components/btns'
 import {
   ImgDiplomaTemplate,
   ImgDiploma,
   ImgCertificate,
   ImgSupplement,
-  ImgSupplementBack
+  ImgSupplementBack,
+  ImgDiplomaInternational
 } from '@/components/imgs'
 
 const GetDiplomaAndAccreditation = () => {
   const [isSupplement, setIsSupplement] = useState(false)
+  const { program } = useContext(ProgramContext)
+
+  const atProfession = program?.category?.type === 'profession'
 
   return (
     <div className={stls.container}>
@@ -32,7 +37,7 @@ const GetDiplomaAndAccreditation = () => {
             <BtnIota
               classNames={[stls.btn, stls.btn2]}
               onClick={() => setIsSupplement(true)}>
-              Сапплемент
+              {atProfession ? 'Международный диплом ID' : 'Сапплемент'}
             </BtnIota>
           </>
         ) : (
@@ -45,7 +50,7 @@ const GetDiplomaAndAccreditation = () => {
             <BtnKappa
               classNames={[stls.btn, stls.btn2]}
               onClick={() => setIsSupplement(true)}>
-              Сапплемент
+              {atProfession ? 'Международный диплом ID' : 'Сапплемент'}
             </BtnKappa>
           </>
         )}
@@ -53,8 +58,18 @@ const GetDiplomaAndAccreditation = () => {
       <div className={stls.diplomas}>
         {isSupplement ? (
           <>
-            <ImgSupplement classNames={[stls.diploma, stls.diploma1]} />
-            <ImgSupplementBack classNames={[stls.diploma, stls.diploma2]} />
+            {atProfession ? (
+              <>
+                <ImgDiplomaInternational
+                  classNames={[stls.diploma, stls.diploma1]}
+                />
+              </>
+            ) : (
+              <>
+                <ImgSupplement classNames={[stls.diploma, stls.diploma1]} />
+                <ImgSupplementBack classNames={[stls.diploma, stls.diploma2]} />
+              </>
+            )}
           </>
         ) : (
           <>
