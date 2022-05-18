@@ -24,15 +24,14 @@ const contact = async (req, res) => {
     leadPage,
     utms,
     referer,
-    ymUid
+    ymUid,
+    promocode
   } = req.body
 
   if (name?.includes('@')) {
     email = name
     name = ''
   }
-
-  const promocode = null
 
   // geoip2 init
   const geoip2 = new WebServiceClient('550199', process.env.GEO2_APIKEY, {

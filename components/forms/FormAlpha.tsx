@@ -13,6 +13,8 @@ import { PopupThankyou } from '@/components/popups'
 type FormValues = {
   name: string
   phone: string
+  email: string
+  promocode: string
   question: string
   leadPage: string
 }
@@ -114,6 +116,44 @@ const FormAlpha = ({
               })}
             />
             <p className={stls.err}>{errors.phone && errors.phone.message}</p>
+          </div>
+          <div className={classNames(stls.inpt, stls.email)}>
+            <input
+              type='email'
+              aria-label='Ваша электронная почта'
+              placeholder='Ваша электронная почта'
+              disabled={isDisabled}
+              {...register('email', {
+                pattern: {
+                  value:
+                    /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/,
+                  message:
+                    '*Пожалуйста, введите корректный адрес электронной почты'
+                },
+                maxLength: {
+                  value: 75,
+                  message: `*Максимальная длинна промокода 75 символов`
+                }
+              })}
+            />
+            <p className={stls.err}>{errors.email && errors.email.message}</p>
+          </div>
+          <div className={classNames(stls.inpt, stls.promocode)}>
+            <input
+              type='text'
+              aria-label='Промокод'
+              placeholder='Промокод'
+              disabled={isDisabled}
+              {...register('promocode', {
+                maxLength: {
+                  value: 50,
+                  message: `*Максимальная длинна промокода 50 символов`
+                }
+              })}
+            />
+            <p className={stls.err}>
+              {errors.promocode && errors.promocode.message}
+            </p>
           </div>
           {question && (
             <div className={classNames(stls.inpt, stls.question)}>

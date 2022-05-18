@@ -15,11 +15,15 @@
 .atFooter
   & .name,
   & .phone,
+  & .email,
+  & .promocode,
   & .btn
     @include m.media(laptop, desktop)
-      @include m.flex($display: false, $fb: 100%)
+      flex-basis: 100%
   & .name,
-  & .phone
+  & .phone,
+  & .email,
+  & .promocode
     & input
       @include m.media(laptop, desktop)
         font-size: f.px(16)
@@ -30,6 +34,9 @@
         @include m.dye(c, c.$nu)
         &::placeholder
           @include m.dye(c, c.$psi)
+  & .btn
+    & > *
+      width: 100%
 
 .inpt
   & input,
@@ -44,7 +51,9 @@
     outline: none
 
 .name,
-.phone
+.phone,
+.email,
+.promocode
   @include m.media(laptop, desktop)
     @include m.flex($display: false, $fb: 48%)
 
@@ -54,9 +63,9 @@
 
 .btn
   @include m.media(laptop, desktop)
-    @include m.flex($display: false, $fb: 48%)
+    @include m.flex($display: false, $fb: 100%)
     & > *
-      width: 100%
+      width: 48%
 
 .agreement
   @include m.gap($mt: f.px(30))
