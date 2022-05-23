@@ -16,15 +16,23 @@
 .wrapper
   @include m.media(laptop, desktop)
     display: flex
+    justify-content: space-between
 
-$right_ld_ml: 4%
+$right_ld_ml: 2.5%
+$left_ld_fb: 57%
 .left
   @include m.media(laptop, desktop)
-    flex-basis: math.div(100% - ($right_ld_ml * 1), 2)
+    // flex-basis: math.div(100% - ($right_ld_ml * 1), 2)
+    flex-basis: $left_ld_fb
 
 .right
+  @include m.media(phone, tablet)
+    display: flex
+    justify-content: center
+    align-items: center
   @include m.media(laptop, desktop)
-    flex-basis: math.div(100% - ($right_ld_ml * 1), 2)
+    // flex-basis: math.div(100% - ($right_ld_ml * 1), 2)
+    flex-basis: 100% - $left_ld_fb - $right_ld_ml
     margin-left: $right_ld_ml
 
 .title
@@ -32,6 +40,7 @@ $right_ld_ml: 4%
   @include m.media(phone, tablet)
     font-size: f.px(26)
   @include m.media(laptop, desktop)
+    max-width: 20ch
     font-size: f.px(44)
   font-weight: 500
   line-height: 120%

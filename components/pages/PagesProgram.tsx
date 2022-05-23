@@ -1,3 +1,4 @@
+import stls from '@/styles/components/pages/PagesProgram.module.sass'
 import {
   HeroProgram,
   Desc,
@@ -31,6 +32,7 @@ import { useContext } from 'react'
 import ProgramContext from '@/context/program/programContext'
 import { discount } from '@/data/price'
 import { TypeCategory } from '@/types/index'
+import { IconGeneralTextDecorativeUnderline } from '@/components/icons'
 
 type PagesProgramType = {
   ofType: TypeCategory
@@ -66,10 +68,25 @@ const PagesProgram = ({ ofType = null, reviews }: PagesProgramType) => {
       {atMba ? <SectionGeneralTeachersAlt /> : <Teachers />}
       <Cta
         title={'Начните обучаться со скидкой'}
-        desc={`Забронируйте программу по спеццене — со скидкой ${discount.substring(
-          1
-        )}`}
-        cta='reserve'
+        desc={
+          atMba ? (
+            <>
+              Забронируйте программу по спеццене —{' '}
+              <span className={stls.highlightFw}>
+                со скидкой{' '}
+                <span className={stls.highlightC}>{discount.substring(1)}</span>
+                <IconGeneralTextDecorativeUnderline
+                  classNames={[stls.IconGeneralTextDecorativeUnderline]}
+                />
+              </span>
+            </>
+          ) : (
+            `Забронируйте программу по спеццене — со скидкой ${discount.substring(
+              1
+            )}`
+          )
+        }
+        cta={atMba ? 'getProgram' : 'reserve'}
       />
       {!atMba && <TrustedBy />}
       {atMba && <SectionTrustedByAlt />}

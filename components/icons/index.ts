@@ -4,6 +4,7 @@ export { default as IconGeneralArrowRightAlt } from '@/components/icons/general/
 export { default as IconGeneralCalendarAlt } from '@/components/icons/general/IconGeneralCalendarAlt'
 export { default as IconGeneralCircle } from '@/components/icons/general/IconGeneralCircle'
 export { default as IconGeneralCircleArrorRight } from '@/components/icons/general/IconGeneralCircleArrorRight'
+export { default as IconGeneralCircleCheckAlt } from '@/components/icons/general/IconGeneralCircleCheckAlt'
 export { default as IconGeneralClockAlt } from '@/components/icons/general/IconGeneralClockAlt'
 export { default as IconGeneralDocument } from '@/components/icons/general/IconGeneralDocument'
 export { default as IconGeneralInfo } from '@/components/icons/general/IconGeneralInfo'
@@ -12,7 +13,9 @@ export { default as IconGeneralLogo } from '@/components/icons/general/IconGener
 export { default as IconGeneralLogoMinimal } from '@/components/icons/general/IconGeneralLogoMinimal'
 export { default as IconGeneralLogoSquare } from '@/components/icons/general/IconGeneralLogoSquare'
 export { default as IconGeneralMap } from '@/components/icons/general/IconGeneralMap'
+export { default as IconGeneralPercent } from '@/components/icons/general/IconGeneralPercent'
 export { default as IconGeneralSquare } from '@/components/icons/general/IconGeneralSquare'
+export { default as IconGeneralTextDecorativeUnderline } from '@/components/icons/general/IconGeneralTextDecorativeUnderline'
 export { default as IconGeneralUsers } from '@/components/icons/general/IconGeneralUsers'
 export { default as IconGeneralWaterDrop } from '@/components/icons/general/IconGeneralWaterDrop'
 

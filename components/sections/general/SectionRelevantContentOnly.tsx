@@ -7,7 +7,7 @@ import { getClassNames } from '@/helpers/index'
 import ProgramContext from '@/context/program/programContext'
 import Wrapper from '@/components/layout/Wrapper'
 import { ImgSectionRelevantContentOnlyImages } from '@/components/imgs'
-import { IconCircleCheck } from '@/components/icons'
+import { IconGeneralCircleCheckAlt } from '@/components/icons'
 
 type TSectionRelevantContentOnly = TPropClassNames
 
@@ -38,10 +38,8 @@ const SectionRelevantContentOnly = ({
             <ul className={stls.list}>
               {list.map((item, idx) => (
                 <li key={`${item}-${idx}`} className={stls.listItem}>
-                  <IconCircleCheck
-                    classNames={[stls.IconRicleCheck]}
-                    color1={colors.nu}
-                    color2={colors['nu-2']}
+                  <IconGeneralCircleCheckAlt
+                    classNames={[stls.IconGeneralCircleCheckAlt]}
                   />
                   <p className={stls.p}>{item}</p>
                 </li>

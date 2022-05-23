@@ -1,14 +1,15 @@
 import stls from '@/styles/components/sections/Cta.module.sass'
-import { useContext } from 'react'
+import { ReactNode, useContext } from 'react'
 import cn from 'classnames'
 import Wrapper from '@/components/layout/Wrapper'
 import ProgramContext from '@/context/program/programContext'
 import { ImgCta1 } from '@/components/imgs'
+import { IconGeneralPercent } from '@/components/icons'
 import PopupTrigger from '@/components/general/PopupTrigger'
 
 type CtaType = {
   title: string
-  desc: string
+  desc: string | ReactNode
   cta:
     | 'askQuestion'
     | 'callMeBack'
@@ -20,6 +21,7 @@ type CtaType = {
     | 'submitApplication'
     | 'reserve'
     | 'learnAboutTeachers'
+    | 'getProgram'
   question?: boolean
 }
 
@@ -30,12 +32,19 @@ const Cta = ({ title = null, desc = null, cta }: CtaType) => {
   return (
     <section className={cn(stls.container, { [stls.atMba]: atMba })}>
       <Wrapper classNames={[cn(stls.wrapper, { [stls.atMba]: atMba })]}>
-        <div className={stls.img}>
-          <ImgCta1 />
-        </div>
-        <div className={stls.text}>
-          <h2 className={stls.title}>{title}</h2>
-          <p className={stls.p}>{desc}</p>
+        {atMba ? (
+          <IconGeneralPercent
+            classNames={[cn(stls.IconGeneralPercent, { [stls.atMba]: atMba })]}
+          />
+        ) : (
+          <div className={stls.img}>
+            <ImgCta1 />
+          </div>
+        )}
+
+        <div className={cn(stls.text, { [stls.atMba]: atMba })}>
+          <h2 className={cn(stls.title, { [stls.atMba]: atMba })}>{title}</h2>
+          <p className={cn(stls.p, { [stls.atMba]: atMba })}>{desc}</p>
         </div>
         <div className={cn(stls.btn, { [stls.atMba]: atMba })}>
           <PopupTrigger btn='gamma' cta={cta} />

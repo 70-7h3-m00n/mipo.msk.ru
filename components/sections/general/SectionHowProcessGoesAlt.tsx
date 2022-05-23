@@ -16,7 +16,32 @@ const SectionHowProcessGoesAlt = ({
 }: TSectionHowProcessGoesAlt) => {
   const { program } = useContext(ProgramContext)
 
-  if (!program?.whatYouWillLearn) return null
+  // const list = program?.whatYouWillLearn
+  const list = [
+    {
+      item: 'Онлайн-вебинары с возможностью просмотра записей в течение всего курса обучения'
+    },
+    {
+      item: 'Онлайн-встречи с разбором вопросов от слушателей'
+    },
+    {
+      item: 'Лекционные и полезные дополнительные материалы к дисциплинам'
+    },
+    {
+      item: 'Индивидуальные и групповые домашние задания с обратной связью от преподавателей'
+    },
+    {
+      item: 'Общение с одногруппниками и единомышленниками в чатах'
+    },
+    {
+      item: 'Тестирование и работа над ошибками после каждой дисциплины'
+    },
+    {
+      item: 'Практические упражнения с решением ситуационных задач'
+    }
+  ]
+
+  // if (!program?.whatYouWillLearn) return null
 
   return (
     <section
@@ -57,7 +82,7 @@ const SectionHowProcessGoesAlt = ({
                 В программу дистанционного обучения входит:
               </h3>
               <ol className={stls.list}>
-                {program?.whatYouWillLearn?.map((item, idx) => (
+                {list.map((item, idx) => (
                   <li key={`${item?.item}-${idx}`} className={stls.listItem}>
                     <div className={stls.idx}>{idx + 1}</div>
                     <p className={stls.listItemP}>{item?.item}</p>

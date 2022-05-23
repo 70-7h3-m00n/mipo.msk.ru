@@ -37,13 +37,14 @@
     margin-top: f.px(90)
 
 $right_lp_ml: 2.6%
+$leftright_ld_difference: 1%
 .left
   @include m.media(laptop, desktop)
-    flex-basis: math.div(100% - ($right_lp_ml * 1), 2)
+    flex-basis: math.div(100% - ($right_lp_ml * 1), 2) - $leftright_ld_difference
 
 .right
   @include m.media(laptop, desktop)
-    flex-basis: math.div(100% - ($right_lp_ml * 1), 2)
+    flex-basis: math.div(100% - ($right_lp_ml * 1), 2) + $leftright_ld_difference
     margin-left: $right_lp_ml
 
 .p

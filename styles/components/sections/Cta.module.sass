@@ -5,9 +5,11 @@
 
 .container
   @include m.media(phone, tablet)
-    @include m.gap($plr: f.px(15))
+    padding-right: f.px(15)
+    padding-left: f.px(15)
   @include m.media(laptop, desktop)
-    @include m.gap($plr: f.px(15))
+    padding-right: f.px(15)
+    padding-left: f.px(15)
     overflow: visible
   &.atMba
     @include m.media(phone, tablet)
@@ -17,24 +19,38 @@
     @include m.dye(bg, c.$pi-2)
 
 .wrapper
+  &.atMba
+    @include m.media(laptop, desktop)
+      padding-top: f.px(56)
+      padding-right: f.px(73)
+      padding-bottom: f.px(56)
+      padding-left: f.px(73) 
+    @include m.dye(bg, c.$nu)
+    @include m.dye(c, c.$chi)
   @include m.media(phone, tablet)
-    @include m.gap($ptb: f.px(50), $plr: f.px(25))
+    padding-top: f.px(50)
+    padding-right: f.px(25)
+    padding-bottom: f.px(50)
+    padding-left: f.px(25)
     border-radius: f.px(50) 0
   @include m.media(laptop, desktop)
     position: relative
-    @include m.flex($ai: flex-start)
+    display: flex
+    align-items: center
+    padding-top: f.px(43)
+    padding-bottom: f.px(43)
     border-radius: f.px(100) 0
   @include m.media(laptop)
-    @include m.gap($ptb: f.px(43), $plr: f.px(50))
+    padding-right: f.px(50)
+    padding-left: f.px(50)
   @include m.media(desktop)
-    @include m.gap($ptb: f.px(43), $plr: f.px(100))
+    padding-right: f.px(100)
+    padding-left: f.px(100)
   @include m.dye(bg, c.$beta)
   @include m.dye(c, c.$nu)
   @media screen and (min-width: bp.$tablet) and (max-width: 920px)
-    @include m.flex($jc: space-between)
-  &.atMba
-    @include m.dye(bg, c.$nu)
-    @include m.dye(c, c.$chi)
+    display: flex
+    justify-content: space-between
   
 .img
   @include m.media(phone, tablet)
@@ -49,43 +65,71 @@
   @media screen and (min-width: bp.$tablet) and (max-width: 920px)
     display: none
 
+.IconGeneralPercent
+  &.atMba
+    @include m.media(phone, tablet)
+      min-width: 50%
+      max-width: 50%
+      margin-left: auto
+      margin-right: auto
+      margin-bottom: f.px(20)
+    @include m.media(laptop, desktop)
+      margin-right: f.px(30)
+      min-width: 18.5%
+      max-width: 18.5%
+
 .text
+  &.atMba
+    margin-left: 0
+    margin-right: f.px(30)
   @include m.media(laptop)
-    @include m.flex($display: false, $fb: 60%)
-    @include m.gap($ml: 30%)
+    flex-basis: 60%
+    margin-left: 30%
   @include m.media(desktop)
-    @include m.flex($display: false, $fb: 50%)
-    @include m.gap($ml: 20%)
+    flex-basis: 50%
+    margin-left: 20%
   @media screen and (min-width: bp.$tablet) and (max-width: 920px)
-    @include m.gap($ml: f.px(0))
+    margin-left: 0
 
 .title
   @include m.media(phone, tablet)
-    @include m.gap($mb: f.px(10))
+    margin-bottom: f.px(10)
     font-size: f.px(26)
   @include m.media(laptop)
     max-width: 9ch
-    @include m.gap($mb: f.px(20), $mr: f.px(84))
+    margin-bottom: f.px(20)
+    margin-right: f.px(84)
     font-size: f.px(44)
   @include m.media(desktop)
-    @include m.gap($mb: f.px(20), $mr: f.px(70))
+    margin-bottom: f.px(20)
+    margin-right: f.px(70)
     font-size: f.px(44)
   font-weight: 500
   @media screen and (min-width: bp.$tablet) and (max-width: 920px)
     max-width: 15ch
-    @include m.gap($mr: 0)
+    margin-right: 0
+  &.atMba
+    @include m.media(phone, tablet)
+      margin-bottom: f.px(20)
+    @include m.media(laptop, desktop)
+      margin-bottom: f.px(30)
 
 .p
+  &.atMba
+    font-weight: 400
+    max-width: 30ch
+    @include m.media(phone, tablet)
+      margin-bottom: f.px(30)
   @include m.media(phone, tablet)
-    @include m.gap($mb: f.px(37))
+    margin-bottom: f.px(37)
     font-size: f.px(18)
   @include m.media(laptop)
     max-width: 28ch
-    @include m.gap($mb: 0)
+    margin-bottom: 0
     font-size: f.px(20)
   @include m.media(desktop)
     max-width: 34ch
-    @include m.gap($mb: 0)
+    margin-bottom: 0
     font-size: f.px(20)
   font-weight: 300
   line-height: 130%
@@ -97,6 +141,6 @@
       & > *
         width: 100%
   @include m.media(laptop)
-    @include m.flex($display: false, $fb: 40%)
+    flex-basis: 40%
   @include m.media(desktop)
-    @include m.flex($display: false, $fb: 30%)
+    flex-basis: 30%

@@ -55,13 +55,11 @@ const SectionGeneralTeachersAlt: FC<TSectionGeneralTeachersAlt> = ({
                 <div className={stls.right}>
                   <div className={stls.top}>
                     <div className={stls.phoneTablet}>{teacher.img}</div>
-                    <div>
+                    <div className={stls.nameSpecializationContainer}>
                       <h3 className={stls.name}>{teacher?.name}</h3>
-                      {teacher?.specialization && (
-                        <p className={stls.specialization}>
-                          {teacher?.specialization}
-                        </p>
-                      )}
+                      <p className={stls.specialization}>
+                        {teacher?.specialization || program?.title}
+                      </p>
                     </div>
                   </div>
                   {teacher?.achievements && (
