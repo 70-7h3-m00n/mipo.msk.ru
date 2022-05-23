@@ -127,7 +127,7 @@ const ProgramInfoAlt: FC<TProgramInfoAltProps> = ({ classNames }) => {
             {<Icon color={atMba ? colors['nu-2'] : undefined} />}
           </div>
           <div>
-            <p className={stls.key}>{key}</p>
+            <p className={cn(stls.key, { [stls.atMba]: atMba })}>{key}</p>
             <p className={stls.val}>{val}</p>
           </div>
         </div>

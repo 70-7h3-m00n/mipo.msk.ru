@@ -132,11 +132,9 @@
     line-height: 130%
     font-weight: 200
     &.atMba
-      margin-bottom: f.px(50)
-
-.list
-  overflow: visible
-  @include m.gap($p: 0)
+      font-weight: 500
+      @include m.dye(c, rgba(c.$nu, .5))
+  padding: 0
 
 .item
   @include m.flex($fd: column)

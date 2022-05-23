@@ -3,14 +3,20 @@
 @use '@/styles/config/Colors.module.sass' as c
 
 .container
-  @include m.media(phone, tablet)
-    @include m.gap($mb: f.px(50), $ptb: f.px(50))
-  @include m.media(laptop, desktop)
-    @include m.gap($mb: f.px(97), $ptb: f.px(97))
-  @include m.dye(bg, c.$epsilon)
   &.atMba
     margin: 0
+    padding-top: f.px(100)
+    padding-bottom: f.px(100)
     @include m.dye(bg, c.$mu-2)
+  @include m.media(phone, tablet)
+    margin-bottom: f.px(50)
+    padding-top: f.px(50)
+    padding-bottom: f.px(50)
+  @include m.media(laptop, desktop)
+    padding-top: f.px(97)
+    padding-bottom: f.px(97)
+    margin-bottom: f.px(97)
+  @include m.dye(bg, c.$epsilon)
 
 .title
   @include m.media(phone, tablet)
@@ -24,18 +30,23 @@
     @include m.dye(c, c.$nu)
 
 .whatYouWillLearn
-  @include m.gap($p: 0)
+  padding: 0
+  margin: 0
   @include m.media(laptop, desktop)
     @include m.flex($fw: wrap)
 
 .item
   @include m.media(phone, tablet)
-    @include m.flex
+    display: flex
   @include m.media(laptop, desktop)
-    @include m.flex($fb: 31%)
-    @include m.gap($mr: 3%, $mb: f.px(30))
+    display: flex
+    flex-basis: 31%
+    margin-right: 3%
+    margin-top: f.px(30)
+    &:nth-child(-n + 3)
+      margin-top: 0
     &:nth-child(3n)
-      @include m.gap($mr: 0)
+      margin-right: 0
   
 .icon
   @include m.media(phone, tablet)
