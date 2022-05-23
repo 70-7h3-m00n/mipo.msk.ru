@@ -45,7 +45,15 @@ const ProgramInfoAlt: FC<TProgramInfoAltProps> = ({ classNames }) => {
         content: (
           <>
             <p className={stls.infoContentP}>
-              Можно окончить экстерном, тем самым сократив срок обучения
+              Можно окончить экстерном, тем самым сократив срок обучения до{' '}
+              <span className={cn(stls.highlight, { [stls.atMba]: atMba })}>
+                <ProgramStudyDuration
+                  studyMonthsDuration={
+                    program?.timenprice?.[0]?.studyMonthsDuration / 2 || 0
+                  }
+                  nonBrakingSpace
+                />
+              </span>
             </p>
             {/* <span className={cn(stls.highlight, {[stls.atMba]: atMba})}> до 1 года 8 мес.</span> */}
           </>

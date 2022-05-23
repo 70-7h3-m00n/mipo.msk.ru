@@ -17,9 +17,13 @@ const SectionHowProcessGoesAlt = ({
   const { program } = useContext(ProgramContext)
 
   // const list = program?.whatYouWillLearn
+
   const list = [
     {
       item: 'Онлайн-вебинары с возможностью просмотра записей в течение всего курса обучения'
+    },
+    {
+      item: 'Разборы реальных клинических ситуаций'
     },
     {
       item: 'Онлайн-встречи с разбором вопросов от слушателей'

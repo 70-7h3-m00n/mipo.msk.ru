@@ -1,27 +1,29 @@
-import { getCasedRuYearString, getCasedRuMonthString } from '@/helpers/index'
+import {
+  getCasedRuYearString,
+  getCasedRuMonthString,
+  replaceSpacesWithNonBrakingSpaces
+} from '@/helpers/index'
 
 type TypeProgramStudyDuration = {
   studyMonthsDuration: number
   monthsOnly?: boolean
+  nonBrakingSpace?: boolean
 }
 
 const ProgramStudyDuration = ({
   studyMonthsDuration,
-  monthsOnly
+  monthsOnly,
+  nonBrakingSpace
 }: TypeProgramStudyDuration) => {
   const years = Math.floor(+studyMonthsDuration / 12)
   const months = +studyMonthsDuration - 12 * years
 
+  const output = monthsOnly
+    ? getCasedRuMonthString({ months: studyMonthsDuration })
+    : `${getCasedRuYearString({ years })} ${getCasedRuMonthString({ months })}`
+
   return (
-    <>
-      {monthsOnly ? (
-        getCasedRuMonthString({ months: studyMonthsDuration })
-      ) : (
-        <>
-          {getCasedRuYearString({ years })} {getCasedRuMonthString({ months })}
-        </>
-      )}
-    </>
+    <>{nonBrakingSpace ? replaceSpacesWithNonBrakingSpaces(output) : output}</>
   )
 }
 

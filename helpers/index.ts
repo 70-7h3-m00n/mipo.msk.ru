@@ -31,4 +31,5 @@ export { default as handleGetStaticPathsStudyFields } from '@/helpers/handleGetS
 export { default as handleGetStaticProps } from '@/helpers/handleGetStaticProps'
 export { default as handleSwipedEvt } from '@/helpers/handleSwipedEvt'
 export { default as removeDuplicates } from '@/helpers/removeDuplicates'
+export { default as replaceSpacesWithNonBrakingSpaces } from '@/helpers/replaceSpacesWithNonBrakingSpaces'
 export { default as toNumberWithSpaces } from '@/helpers/toNumberWithSpaces'

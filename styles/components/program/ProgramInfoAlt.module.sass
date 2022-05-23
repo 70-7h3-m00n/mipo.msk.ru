@@ -55,8 +55,11 @@ $group_lp_mr: 2.6%
   line-height: 120%
   text-decoration: underline
   @include m.dye(c, c.$beta)
+  transition: transform .15s ease-in-out
   &.atMba
     @include m.dye(c, c.$xi-2)
+  &:focus-visible
+    transform: scale(1.06)
 
 .IconGeneralInfo
   min-width: f.px(26)

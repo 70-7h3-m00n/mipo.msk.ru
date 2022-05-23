@@ -58,6 +58,16 @@ $leftright_ld_difference: 1%
   @include m.dye(c, c.$kappa)
 
 .licenceLink
+  &.atMba
+    align-items: center
+    border-radius: f.px(25)
+    font-weight: 500
+    @include m.media(laptop, desktop)
+      padding-top: f.px(27)
+      padding-right: f.px(30)
+      padding-bottom: f.px(27)
+      padding-left: f.px(30)
+    @include m.dye(c, rgba(c.$nu, .5))
   display: flex
   justify-content: space-between
   font-weight: 300
@@ -65,11 +75,12 @@ $leftright_ld_difference: 1%
     margin-top: f.px(50)
     padding: f.px(20)
     font-size: f.px(15)
-  &.atMba
-    @include m.dye(c, rgba(c.$nu, .5))
 
 .IconGeneralArrowRightAlt
-  max-width: f.px(24)
+  min-width: f.px(14)
+  max-width: f.px(14)
+  min-height: f.px(14)
+  max-height: f.px(14)
   margin-left: 6%
 
 .diploma
@@ -83,7 +94,6 @@ $leftright_ld_difference: 1%
   border-radius: f.px(25)
 
 .highlight
-  font-weight: 500
   @include m.dye(c, c.$nu)
 
 .mb0
