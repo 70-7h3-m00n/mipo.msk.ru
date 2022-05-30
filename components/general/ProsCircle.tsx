@@ -16,7 +16,7 @@ const ProsCircle = () => {
       <div className={stls.right}>
         <h3 className={stls.subTitle}>2500+</h3>
         <p className={stls.p}>
-          Учаться
+          Учатся
           <br /> прямо сейчас
         </p>
       </div>
