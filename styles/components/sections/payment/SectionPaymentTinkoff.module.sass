@@ -2,7 +2,7 @@
 @use '@/styles/utils/funcs' as f
 @use '@/styles/config/Colors.module.sass' as c
 @use '@/styles/utils/mixin/media' as bp
-@use '@/styles/layout/btns' as btns
+@use '@/styles/layout/btns/btnGamma' as btnGamma
 
 .container
   @include m.media(phone, tablet)
@@ -22,8 +22,39 @@
   font-weight: 500
   @include m.dye(c, c.$theta)
 
-.submitBtn
-  @include btns.container
+.form
+  display: flex
+  flex-direction: column
+  max-width: f.px(570)
 
-.isDisabled
-  @include btns.isDisabled
+.inputGroup
+  display: flex
+  & + .inputGroup
+    margin-top: f.px(15)
+
+.submitBtn
+  flex-basis: 50%
+
+.input
+  flex-grow: 1
+  padding-top: f.px(19)
+  padding-right: f.px(20)
+  padding-left: f.px(20)
+  padding-bottom: f.px(19)
+  outline: none
+  border: 1px solid
+  @include m.dye(border, c.$iota)
+  font-size: f.px(16)
+  font-weight: 300
+  line-height: 120%
+  &::placeholder
+    font-size: f.px(16)
+    font-weight: 300
+    line-height: 120%
+    @include m.dye(c, c.$kappa)
+  &:focus-visible
+    border: 1px solid
+    @include m.dye(border, c.$alpha)
+
+.submitBtn
+  @include btnGamma.container
