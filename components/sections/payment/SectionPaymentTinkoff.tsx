@@ -64,7 +64,6 @@ const SectionPaymentTinkoff = () => {
   // </div>
 
   const onSubmit = async formValues => {
-    console.log(formValues)
     try {
       const res = await axios.post('https://securepay.tinkoff.ru/v2/Init', {
         TerminalKey: '1650440757930DEMO',
