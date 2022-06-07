@@ -66,7 +66,7 @@ const SectionPaymentTinkoff = () => {
   const onSubmit = async formValues => {
     try {
       const res = await axios.post('https://securepay.tinkoff.ru/v2/Init', {
-        TerminalKey: '1650440757930DEMO',
+        TerminalKey: '1650440757930', // * use 1650440757930DEMO for test environment
         Amount: (Number(formValues?.programPrice) * 100).toString() || '',
         OrderId: formValues?.contractNumber?.toString() || '',
         Description: 'Оплата обучения в НАНО «МИПО»',
