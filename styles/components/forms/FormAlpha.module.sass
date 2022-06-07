@@ -42,7 +42,10 @@
   & input,
   & textarea
     width: 100%
-    @include m.gap($ptb: f.px(17), $plr: f.px(20))
+    padding-top: f.px(17)
+    padding-right: f.px(20)
+    padding-bottom: f.px(17)
+    padding-left: f.px(20)
     border-radius: f.px(4)
     font-weight: 300
     &::placeholder
@@ -55,23 +58,23 @@
 .email,
 .promocode
   @include m.media(laptop, desktop)
-    @include m.flex($display: false, $fb: 48%)
+    flex-basis: 48%
 
 .question
   @include m.media(laptop, desktop)
-    @include m.flex($display: false, $fb: 100%)
+    flex-basis: 100%
 
 .btn
   @include m.media(laptop, desktop)
-    @include m.flex($display: false, $fb: 100%)
+    flex-basis: 100%
     & > *
       width: 48%
 
 .agreement
-  @include m.gap($mt: f.px(30))
+  margin-top: f.px(30)
   font-size: f.px(13)
   @include m.dye(c, c.$kappa)
 
 .err
-  @include m.gap($mt: f.px(5))
+  margin-top: f.px(5)
   @include m.dye(c, c.$nu)

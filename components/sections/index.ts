@@ -10,6 +10,9 @@ export { default as SectionReviewsAlt } from '@/components/sections/general/Sect
 export { default as SectionTrustedByAlt } from '@/components/sections/general/SectionTrustedByAlt'
 export { default as SectionYourDiplomasAlt } from '@/components/sections/general/SectionYourDiplomasAlt'
 
+// ./payment
+export { default as SectionPaymentTinkoff } from '@/components/sections/payment/SectionPaymentTinkoff'
+
 // ./
 export { default as About } from '@/components/sections/About'
 export { default as ActiveLicenses } from '@/components/sections/ActiveLicenses'

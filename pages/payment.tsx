@@ -10,7 +10,8 @@ import PageTitle from '@/components/layout/PageTitle'
 import {
   PaymentBtns,
   PaymentDebitCard,
-  PaymentInfo
+  PaymentInfo,
+  SectionPaymentTinkoff
 } from '@/components/sections'
 
 const PaymentPage = ({ programs }) => {
@@ -30,6 +31,7 @@ const PaymentPage = ({ programs }) => {
       <PaymentDebitCard />
       <PaymentInfo />
       <PaymentBtns />
+      {/* <SectionPaymentTinkoff /> */}
     </>
   )
 }

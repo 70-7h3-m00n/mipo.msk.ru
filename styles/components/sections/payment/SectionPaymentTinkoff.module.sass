@@ -1,0 +1,29 @@
+@use '@/styles/utils/mixin' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/config/Colors.module.sass' as c
+@use '@/styles/utils/mixin/media' as bp
+@use '@/styles/layout/btns' as btns
+
+.container
+  @include m.media(phone, tablet)
+    // padding-top: f.px(50)
+    padding-bottom: f.px(50)
+  @include m.media(laptop, desktop)
+    // padding-top: f.px(100)
+    padding-bottom: f.px(100)
+
+.title
+  @include m.media(phone, tablet)
+    margin-bottom: f.px(10)
+    font-size: f.px(26)
+  @include m.media(laptop, desktop)
+    margin-bottom: f.px(60)
+    font-size: f.px(44)
+  font-weight: 500
+  @include m.dye(c, c.$theta)
+
+.submitBtn
+  @include btns.container
+
+.isDisabled
+  @include btns.isDisabled
