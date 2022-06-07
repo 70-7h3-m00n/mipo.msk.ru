@@ -20,7 +20,18 @@
     min-height: f.px(32)
     max-height: f.px(32)
     font-size: f.px(18)
-  @include m.gap($mr: f.px(5))
+    @supports(aspect-ratio: 1 / 1)
+      min-width: initial
+      max-width: initial
+      min-height: initial
+      max-height: initial
+      padding-top: f.px(5)
+      padding-bottom: f.px(5)
+      padding-left: f.px(5)
+      padding-right: f.px(5)
+      aspect-ratio: 1 / 1
+      margin-right: f.px(7)
+  margin-right: f.px(5)
   border-radius: 50%
   font-weight: 300
   &.bgbeta

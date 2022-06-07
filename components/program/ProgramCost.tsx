@@ -33,13 +33,13 @@ const ProgramCost = ({ withPerMonth = false }) => {
             <span className={stls.bold}>
               {toNumberWithSpaces(perMonthPrice) || ''}
             </span>{' '}
-            <span className={stls.light}>&#8381;</span>
+            <span className={cn(stls.light, stls.perMonth)}>&#8381;/мес</span>
           </span>
           <span className={cn(stls.regular, { [stls.atMba]: atMba })}>
             <span className={stls.bold}>
               {toNumberWithSpaces(perMonthRPrice) || ''}
             </span>{' '}
-            <span className={stls.light}>&#8381;</span>
+            <span className={cn(stls.light, stls.perMonth)}>&#8381;/мес</span>
           </span>
         </div>
       )}
@@ -49,11 +49,13 @@ const ProgramCost = ({ withPerMonth = false }) => {
             Единоразовый платёж
           </p>
           <span className={cn(stls.discount, { [stls.atMba]: atMba })}>
-            <span className={stls.bold}>{toNumberWithSpaces(price)}</span>{' '}
+            <span className={stls.bold}>{toNumberWithSpaces(price)}</span>
+            {'\u00A0'}
             <span className={stls.light}>&#8381;</span>
           </span>
           <span className={cn(stls.regular, { [stls.atMba]: atMba })}>
-            <span className={stls.bold}>{toNumberWithSpaces(rprice)}</span>{' '}
+            <span className={stls.bold}>{toNumberWithSpaces(rprice)}</span>
+            {'\u00A0'}
             <span className={stls.light}>&#8381;</span>
           </span>
         </div>
