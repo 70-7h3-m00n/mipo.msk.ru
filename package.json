@@ -29,6 +29,7 @@
     "react-dom": "^18.0.0",
     "react-gtm-module": "^2.0.11",
     "react-hook-form": "^7.19.3",
+    "react-nextjs-toast": "^1.2.5",
     "react-responsive": "^8.2.0",
     "react-transition-group": "^4.4.2",
     "reactjs-popup": "^2.0.4",

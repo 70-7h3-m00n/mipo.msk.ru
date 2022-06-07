@@ -29,6 +29,7 @@
 
 .inputGroup
   display: flex
+  flex-direction: column
   & + .inputGroup
     margin-top: f.px(15)
 
@@ -56,5 +57,8 @@
     border: 1px solid
     @include m.dye(border, c.$alpha)
 
-.submitBtn
-  @include btnGamma.container
+.err
+  margin: 0
+  margin-top: f.px(10)
+  margin-bottom: f.px(10)
+  font-size: f.px(16)
