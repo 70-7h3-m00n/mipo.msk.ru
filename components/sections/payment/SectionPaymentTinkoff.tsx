@@ -9,7 +9,7 @@ import PopupTrigger from '@/components/general/PopupTrigger'
 const SectionPaymentTinkoff = () => {
   const router = useRouter()
 
-  const handleSubmit = e => {
+  const handleSubmit = function (e) {
     try {
       // @ts-ignore
       pay(e)
