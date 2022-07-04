@@ -11,7 +11,7 @@
     & > *
       @include m.flex
   @include m.dye(bg, c.$epsilon)
-  &.atMba
+  &.altStyles
     margin: 0
     @include m.media(laptop, desktop)
       padding-top: f.px(100)
@@ -34,20 +34,20 @@
     font-size: f.px(44)
   font-weight: 500
   @include m.dye(c, c.$theta)
-  &.atMba
+  &.altStyles
     margin-bottom: f.px(30)
     @include m.dye(c, c.$nu)
 
 .phonetablet
   @include m.media(laptop, desktop)
     display: none
-  &.atMba
+  &.altStyles
     display: none
 
 .laptopdesktop
   @include m.media(phone, tablet)
     display: none
-    &.atMba
+    &.altStyles
       display: block
       margin-bottom: f.px(50)
 
@@ -63,7 +63,7 @@
     margin-bottom: f.px(50)
     font-size: f.px(18)
   font-weight: 300
-  &.atMba
+  &.altStyles
     @include m.media(phone, tablet)
       margin-bottom: f.px(50)
       font-size: f.px(15)

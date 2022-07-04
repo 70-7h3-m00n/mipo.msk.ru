@@ -14,7 +14,7 @@ const PopupThankyou = ({ close, id = null }) => {
 
   const idThankyou = uuidv4()
 
-  const atMba =
+  const altStyles =
     program?.category?.type === 'mba' ||
     program?.category?.type === 'profession'
   const atProfession = program?.category?.type === 'profession'
@@ -56,7 +56,7 @@ const PopupThankyou = ({ close, id = null }) => {
     setIsSubmitted(true)
   }, [
     program,
-    atMba,
+    altStyles,
     atProfession,
     isLeadFromLeadgid,
     id
@@ -76,7 +76,7 @@ const PopupThankyou = ({ close, id = null }) => {
       </p>
       <p className={stls.thanks}>Спасибо!</p>
       {isSubmitted &&
-        (atMba && isLeadFromLeadgid ? (
+        (altStyles && isLeadFromLeadgid ? (
           // eslint-disable-next-line
           <img
             src={`https://go.leadgid.ru/aff_goal?a=l&goal_id=5405&adv_sub=${id}`}

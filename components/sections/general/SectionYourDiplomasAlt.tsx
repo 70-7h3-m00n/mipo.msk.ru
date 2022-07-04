@@ -20,7 +20,7 @@ type TSectionYourDiplomasAlt = TPropClassNames
 
 const SectionYourDiplomasAlt = ({ classNames }: TSectionYourDiplomasAlt) => {
   const { program } = useContext(ProgramContext)
-  const atMba =
+  const altStyles =
     program?.category?.type === 'mba' ||
     program?.category?.type === 'profession'
 
@@ -44,7 +44,9 @@ const SectionYourDiplomasAlt = ({ classNames }: TSectionYourDiplomasAlt) => {
               <BtnZeta
                 href={routesExternal.licence}
                 target='_blank'
-                classNames={[cn(stls.licenceLink, { [stls.atMba]: atMba })]}>
+                classNames={[
+                  cn(stls.licenceLink, { [stls.altStyles]: altStyles })
+                ]}>
                 <span>
                   Уведомление о предоставлении лицензии{' '}
                   <span className={stls.highlight}>№041221</span>

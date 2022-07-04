@@ -7,9 +7,11 @@ import { discountNum } from '@/data/price'
 
 const ProgramCost = ({ withPerMonth = false }) => {
   const { program } = useContext(ProgramContext)
-  const atMba =
+  const altStyles =
     program?.category?.type === 'mba' ||
     program?.category?.type === 'profession'
+
+  const atProfession = program?.category?.type === 'profession'
 
   const price =
     (program?.timenprice && Number(program?.timenprice?.[0]?.price)) || 0
@@ -28,16 +30,16 @@ const ProgramCost = ({ withPerMonth = false }) => {
     <div className={stls.container}>
       {withPerMonth && (
         <div className={stls.content}>
-          <p className={cn(stls.label, { [stls.atMba]: atMba })}>
+          <p className={cn(stls.label, { [stls.altStyles]: altStyles })}>
             Беспроцентная рассрочка на 12 месяцев
           </p>
-          <span className={cn(stls.discount, { [stls.atMba]: atMba })}>
+          <span className={cn(stls.discount, { [stls.altStyles]: altStyles })}>
             <span className={stls.bold}>
               {toNumberWithSpaces(perMonthPrice) || ''}
             </span>{' '}
             <span className={cn(stls.light, stls.perMonth)}>&#8381;/мес</span>
           </span>
-          <span className={cn(stls.regular, { [stls.atMba]: atMba })}>
+          <span className={cn(stls.regular, { [stls.altStyles]: altStyles })}>
             <span className={stls.bold}>
               {toNumberWithSpaces(perMonthRPrice) || ''}
             </span>{' '}
@@ -45,17 +47,17 @@ const ProgramCost = ({ withPerMonth = false }) => {
           </span>
         </div>
       )}
-      {!atMba && (
+      {atProfession && (
         <div className={stls.content}>
-          <p className={cn(stls.label, { [stls.atMba]: atMba })}>
+          <p className={cn(stls.label, { [stls.altStyles]: altStyles })}>
             Единоразовый платёж
           </p>
-          <span className={cn(stls.discount, { [stls.atMba]: atMba })}>
+          <span className={cn(stls.discount, { [stls.altStyles]: altStyles })}>
             <span className={stls.bold}>{toNumberWithSpaces(price)}</span>
             {'\u00A0'}
             <span className={stls.light}>&#8381;</span>
           </span>
-          <span className={cn(stls.regular, { [stls.atMba]: atMba })}>
+          <span className={cn(stls.regular, { [stls.altStyles]: altStyles })}>
             <span className={stls.bold}>{toNumberWithSpaces(rprice)}</span>
             {'\u00A0'}
             <span className={stls.light}>&#8381;</span>

@@ -16,9 +16,12 @@ const SectionHowProcessGoesAlt = ({
 }: TSectionHowProcessGoesAlt) => {
   const { program } = useContext(ProgramContext)
 
-  // const list = program?.whatYouWillLearn
+  const listDynamic =
+    program?.whatYouWillLearn && program?.whatYouWillLearn?.length > 0
+      ? program.whatYouWillLearn
+      : null
 
-  const list = [
+  const list = listDynamic || [
     {
       item: 'Онлайн-вебинары с возможностью просмотра записей в течение всего курса обучения'
     },

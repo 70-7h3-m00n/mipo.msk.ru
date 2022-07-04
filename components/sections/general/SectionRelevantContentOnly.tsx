@@ -15,11 +15,18 @@ const SectionRelevantContentOnly = ({
   classNames
 }: TSectionRelevantContentOnly) => {
   const { program } = useContext(ProgramContext)
-  const atMba =
+  const altStyles =
     program?.category?.type === 'mba' ||
     program?.category?.type === 'profession'
 
-  const list = [
+  const listDynamic =
+    program?.SectionRelevantContentOnly &&
+    program?.SectionRelevantContentOnly?.length > 0
+      ? program?.SectionRelevantContentOnly.map(item => item?.item).filter(
+          item => item
+        )
+      : null
+  const list = listDynamic || [
     'Мы постоянно проводим внутренние исследования, на основе которых обновляем наши программы',
 
     'При составлении программ используем опыт лучших бизнес-школ со всего мира',

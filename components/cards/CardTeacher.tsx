@@ -5,23 +5,28 @@ import ProgramContext from '@/context/program/programContext'
 
 const CardTeacher = ({ portrait, name, specialization, achievements }) => {
   const { program } = useContext(ProgramContext)
-  const atMba =
+  const altStyles =
     program?.category?.type === 'mba' ||
     program?.category?.type === 'profession'
 
   return (
-    <article className={cn(stls.container, { [stls.atMba]: atMba })}>
-      <div className={cn(stls.cardBody, { [stls.atMba]: atMba })}>
-        <div className={cn(stls.portrait, { [stls.atMba]: atMba })}>
+    <article className={cn(stls.container, { [stls.altStyles]: altStyles })}>
+      <div className={cn(stls.cardBody, { [stls.altStyles]: altStyles })}>
+        <div className={cn(stls.portrait, { [stls.altStyles]: altStyles })}>
           {portrait}
         </div>
         <div className={stls.content}>
-          <h3 className={cn(stls.name, { [stls.atMba]: atMba })}>{name}</h3>
-          <p className={cn(stls.specialization, { [stls.atMba]: atMba })}>
+          <h3 className={cn(stls.name, { [stls.altStyles]: altStyles })}>
+            {name}
+          </h3>
+          <p
+            className={cn(stls.specialization, {
+              [stls.altStyles]: altStyles
+            })}>
             {specialization}
             {/* Семейная психолохия и частная практика */}
           </p>
-          <p className={cn(stls.achievements, { [stls.atMba]: atMba })}>
+          <p className={cn(stls.achievements, { [stls.altStyles]: altStyles })}>
             {achievements}
           </p>
         </div>

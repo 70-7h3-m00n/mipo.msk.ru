@@ -20,7 +20,7 @@ const MenuMobile = () => {
   const { menuIsOpen, openMenu, closeMenu, toggleMenu } =
     useContext(MenuContext)
   const { program } = useContext(ProgramContext)
-  const atMba =
+  const altStyles =
     program?.category?.type === 'mba' ||
     program?.category?.type === 'profession'
 
@@ -36,7 +36,7 @@ const MenuMobile = () => {
       className={classNames({
         [stls.container]: true,
         [stls.menuIsOpen]: menuIsOpen,
-        [stls.atMba]: atMba
+        [stls.altStyles]: altStyles
       })}>
       <Wrapper>
         <div className={stls.row}>

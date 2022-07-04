@@ -27,16 +27,18 @@ type CtaType = {
 
 const Cta = ({ title = null, desc = null, cta }: CtaType) => {
   const { program } = useContext(ProgramContext)
-  const atMba =
+  const altStyles =
     program?.category?.type === 'mba' ||
     program?.category?.type === 'profession'
 
   return (
-    <section className={cn(stls.container, { [stls.atMba]: atMba })}>
-      <Wrapper classNames={[cn(stls.wrapper, { [stls.atMba]: atMba })]}>
-        {atMba ? (
+    <section className={cn(stls.container, { [stls.altStyles]: altStyles })}>
+      <Wrapper classNames={[cn(stls.wrapper, { [stls.altStyles]: altStyles })]}>
+        {altStyles ? (
           <IconGeneralPercent
-            classNames={[cn(stls.IconGeneralPercent, { [stls.atMba]: atMba })]}
+            classNames={[
+              cn(stls.IconGeneralPercent, { [stls.altStyles]: altStyles })
+            ]}
           />
         ) : (
           <div className={stls.img}>
@@ -44,11 +46,13 @@ const Cta = ({ title = null, desc = null, cta }: CtaType) => {
           </div>
         )}
 
-        <div className={cn(stls.text, { [stls.atMba]: atMba })}>
-          <h2 className={cn(stls.title, { [stls.atMba]: atMba })}>{title}</h2>
-          <p className={cn(stls.p, { [stls.atMba]: atMba })}>{desc}</p>
+        <div className={cn(stls.text, { [stls.altStyles]: altStyles })}>
+          <h2 className={cn(stls.title, { [stls.altStyles]: altStyles })}>
+            {title}
+          </h2>
+          <p className={cn(stls.p, { [stls.altStyles]: altStyles })}>{desc}</p>
         </div>
-        <div className={cn(stls.btn, { [stls.atMba]: atMba })}>
+        <div className={cn(stls.btn, { [stls.altStyles]: altStyles })}>
           <PopupTrigger btn='gamma' cta={cta} />
         </div>
       </Wrapper>

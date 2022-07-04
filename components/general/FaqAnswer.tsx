@@ -10,7 +10,7 @@ const FaqAnswer = ({ question = null, answer = null }) => {
   const [isOpen, setOpen] = useState(false)
 
   const { program } = useContext(ProgramContext)
-  const atMba =
+  const altStyles =
     program?.category?.type === 'mba' ||
     program?.category?.type === 'profession'
 
@@ -18,17 +18,21 @@ const FaqAnswer = ({ question = null, answer = null }) => {
     <li
       className={cn(stls.container, {
         [stls.isOpen]: isOpen,
-        [stls.atMba]: atMba
+        [stls.altStyles]: altStyles
       })}>
       <div className={stls.title} onClick={() => setOpen(!isOpen)}>
-        <div className={cn(stls.icon, { [stls.atMba]: atMba })}>
+        <div className={cn(stls.icon, { [stls.altStyles]: altStyles })}>
           {isOpen ? <IconMinus /> : <IconPlus />}
         </div>
-        <p className={cn(stls.p, { [stls.bold]: isOpen, [stls.atMba]: atMba })}>
+        <p
+          className={cn(stls.p, {
+            [stls.bold]: isOpen,
+            [stls.altStyles]: altStyles
+          })}>
           {question}
         </p>
       </div>
-      <div className={cn(stls.answer, { [stls.atMba]: atMba })}>
+      <div className={cn(stls.answer, { [stls.altStyles]: altStyles })}>
         {parse(marked(answer))}
       </div>
     </li>

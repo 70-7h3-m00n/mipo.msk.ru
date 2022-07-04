@@ -15,7 +15,7 @@ const SectionGeneralTeachersAlt: FC<TSectionGeneralTeachersAlt> = ({
   classNames
 }) => {
   const { program } = useContext(ProgramContext)
-  const atMba =
+  const altStyles =
     program?.category?.type === 'mba' ||
     program?.category?.type === 'profession'
 

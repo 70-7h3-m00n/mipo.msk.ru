@@ -18,10 +18,13 @@
   @include m.media(laptop, desktop)
     @include m.gap($mb: f.px(3))
     font-size: f.px(18)
-  &.atMba
+  &.altStyles
     @include m.dye(c, c.$nu)
 
 .discount
+  &.altStyles
+    display: inline-block
+    @include m.dye(c, c.$nu)
   @include m.media(phone, tablet)
     margin-right: f.px(16)
     font-size: f.px(32)
@@ -33,13 +36,13 @@
     font-size: f.px(60)
     font-weight: 500
     line-height: f.px(77)
-  &.atMba
-    @include m.dye(c, c.$nu)
 
 .perMonth
   display: inline-block
 
 .regular
+  &.altStyles
+    display: inline-block
   position: relative
   @include m.media(phone, tablet)
     font-size: f.px(24)
@@ -48,7 +51,7 @@
     font-size: f.px(30)
     line-height: f.px(39)
   @include m.dye(c, c.$psi)
-  &.atMba
+  &.altStyles
     @include m.dye(c, rgba(c.$psi, .5))
     &::after
       @include m.dye(bg, rgba(c.$psi, .5))

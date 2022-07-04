@@ -5,7 +5,7 @@
 .container
   @include m.media(phone, tablet)
     @include m.gap($mb: f.px(50))
-  &.atMba
+  &.altStyles
     @include m.media(phone, tablet)
       padding-top: f.px(50)
       padding-bottom: f.px(50)
@@ -24,7 +24,7 @@
   font-weight: 500
   line-height: 120%
   @include m.dye(c, c.$theta)
-  &.atMba
+  &.altStyles
     margin-bottom: f.px(50)
     @include m.dye(c, c.$nu)
 
@@ -34,7 +34,7 @@
   align-items: center
   opacity: 0.5
   filter: drop-shadow(0px 7px 100px rgba(0, 0, 0, 0.09)) grayscale(100%)
-  &.atMba
+  &.altStyles
     opacity: initial
     filter: initial
     & > *

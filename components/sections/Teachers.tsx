@@ -11,7 +11,7 @@ import { ImgTeacher } from '@/components/imgs'
 
 const Teachers = () => {
   const { program } = useContext(ProgramContext)
-  const atMba =
+  const altStyles =
     program?.category?.type === 'mba' ||
     program?.category?.type === 'profession'
 
@@ -46,28 +46,28 @@ const Teachers = () => {
     ))
 
   const mobileSwiperOptions = {
-    slidesNum: atMba ? 1 : 1.75,
+    slidesNum: altStyles ? 1 : 1.75,
     spaceBetween: 40
   }
 
   const tabletSwiperOptions = {
     slidesNum: 2,
-    spaceBetween: atMba ? 20 : 40
+    spaceBetween: altStyles ? 20 : 40
   }
 
   return (
-    <section className={cn(stls.container, { [stls.atMba]: atMba })}>
+    <section className={cn(stls.container, { [stls.altStyles]: altStyles })}>
       <Wrapper>
-        <h2 className={cn(stls.title, { [stls.atMba]: atMba })}>
+        <h2 className={cn(stls.title, { [stls.altStyles]: altStyles })}>
           Преподаватели программы
         </h2>
-        <p className={cn(stls.desc, { [stls.atMba]: atMba })}>
+        <p className={cn(stls.desc, { [stls.altStyles]: altStyles })}>
           Преподают ведущие практикующие специалисты{' '}
-          <span className={cn(stls.highlight, { [stls.atMba]: atMba })}>
+          <span className={cn(stls.highlight, { [stls.altStyles]: altStyles })}>
             с опытом от 7 до 25 лет
           </span>
         </p>
-        <div className={cn(stls.teachers, { [stls.atMba]: atMba })}>
+        <div className={cn(stls.teachers, { [stls.altStyles]: altStyles })}>
           <SwiperContainer
             teachers
             slides={teachersSlides}

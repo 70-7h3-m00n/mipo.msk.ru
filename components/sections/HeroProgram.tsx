@@ -22,7 +22,7 @@ import { ImgCourse } from '@/components/imgs'
 
 const HeroProgram = () => {
   const { program } = useContext(ProgramContext)
-  const atMba =
+  const altStyles =
     program?.category?.type === 'mba' ||
     program?.category?.type === 'profession'
 
@@ -31,21 +31,24 @@ const HeroProgram = () => {
     <section
       className={cn(
         stls.container,
-        { [stls.atMba]: atMba },
+        { [stls.altStyles]: altStyles },
         selectors.sectionHero
       )}>
       <Wrapper>
-        <div className={cn(stls.top, { [stls.atMba]: atMba })}>
-          <div className={stls.heading}>
+        <div className={cn(stls.top, { [stls.altStyles]: altStyles })}>
+          <div className={cn(stls.heading, { [stls.altStyles]: altStyles })}>
             <div className={stls.label}>
               <ProgramLabel />
             </div>
             <h1 className={stls.title}>{program?.title}</h1>
             <div
-              className={cn(stls.descriptionDesktop, { [stls.atMba]: atMba })}>
+              className={cn(stls.descriptionDesktop, {
+                [stls.altStyles]: altStyles
+              })}>
               {program?.description && parse(marked(program.description))}
             </div>
-            <div className={stls.btnsDesktop}>
+            <div
+              className={cn(stls.btnsDesktop, { [stls.altStyles]: altStyles })}>
               <PopupTrigger
                 btn='alpha'
                 cta={
@@ -61,11 +64,11 @@ const HeroProgram = () => {
               <PopupTrigger btn='beta' cta='askQuestion' />
             </div>
           </div>
-          <div className={cn(stls.pic, { [stls.atMba]: atMba })}>
-            <div className={cn(stls.discount, { [stls.atMba]: atMba })}>
+          <div className={cn(stls.pic, { [stls.altStyles]: altStyles })}>
+            <div className={cn(stls.discount, { [stls.altStyles]: altStyles })}>
               <ProgramDiscount />
             </div>
-            {atMba && (
+            {altStyles && (
               <>
                 <IconGeneral3dSpiral classNames={[stls.IconGeneral3dSpiral]} />
                 <IconGeneralCircle classNames={[stls.IconGeneralCircle]} />
@@ -74,7 +77,7 @@ const HeroProgram = () => {
                 />
               </>
             )}
-            <div className={cn(stls.img, { [stls.atMba]: atMba })}>
+            <div className={cn(stls.img, { [stls.altStyles]: altStyles })}>
               <ImgCourse
                 src={program?.heroPicture?.url}
                 width={program?.heroPicture?.width && 676}
@@ -86,7 +89,10 @@ const HeroProgram = () => {
               />
             </div>
           </div>
-          <div className={cn(stls.descriptionMobile, { [stls.atMba]: atMba })}>
+          <div
+            className={cn(stls.descriptionMobile, {
+              [stls.altStyles]: altStyles
+            })}>
             {program?.description && parse(program.description)}
           </div>
         </div>

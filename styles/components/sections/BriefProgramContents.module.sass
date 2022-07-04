@@ -12,7 +12,7 @@
       border-radius: f.px(100) f.px(5) 0 0
       box-shadow: 0 f.px(4) f.px(40) rgba(0, 0, 0, .05)
       @include m.dye(bg, c.$epsilon)
-  &.atMba
+  &.altStyles
     @include m.media(phone, tablet)
       padding-right: f.px(16)
       padding-left: f.px(16)
@@ -27,7 +27,7 @@
 .top
   @include m.media(laptop, desktop)
     @include m.flex($jc: space-between)
-  &.atMba
+  &.altStyles
     @include m.media(phone, tablet)
       display: flex
       flex-direction: column
@@ -36,7 +36,7 @@
   @include m.media(laptop, desktop)
     @include m.flex($display: false, $fb: 65%)
     @include m.gap($mr: 8%, $mb: f.px(40))
-  &.atMba
+  &.altStyles
     @include m.media(phone, tablet)
       order: 2
 
@@ -49,7 +49,7 @@
     font-size: f.px(40)
   font-weight: 500
   @include m.dye(c, c.$theta)
-  &.atMba
+  &.altStyles
     @include m.media(phone, tablet)
       margin-bottom: f.px(20)
     @include m.dye(c, c.$nu)
@@ -63,7 +63,7 @@
     font-size: f.px(20)
   font-weight: 300
   @include m.dye(c, c.$theta)
-  &.atMba
+  &.altStyles
     font-weight: 400
     @include m.media(phone, tablet)
       margin-bottom: f.px(50)
@@ -75,7 +75,7 @@
     @include m.gap($mb: f.px(17))
   @include m.media(laptop, desktop)
     @include m.flex($display: false, $fb: 25%)
-  &.atMba
+  &.altStyles
     @include m.media(phone, tablet)
       order: 1
       display: flex

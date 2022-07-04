@@ -26,7 +26,7 @@ type TProgramInfoAltProps = TPropClassNames
 
 const ProgramInfoAlt: FC<TProgramInfoAltProps> = ({ classNames }) => {
   const { program } = useContext(ProgramContext)
-  const atMba =
+  const altStyles =
     program?.category?.type === 'mba' ||
     program?.category?.type === 'profession'
   const atCourse = program?.category?.type === 'course'
@@ -48,7 +48,8 @@ const ProgramInfoAlt: FC<TProgramInfoAltProps> = ({ classNames }) => {
           <>
             <p className={stls.infoContentP}>
               Можно окончить экстерном, тем самым сократив срок обучения до{' '}
-              <span className={cn(stls.highlight, { [stls.atMba]: atMba })}>
+              <span
+                className={cn(stls.highlight, { [stls.altStyles]: altStyles })}>
                 <ProgramStudyDuration
                   studyMonthsDuration={
                     program?.timenprice?.[0]?.studyMonthsDuration / 2 || 0
@@ -57,7 +58,7 @@ const ProgramInfoAlt: FC<TProgramInfoAltProps> = ({ classNames }) => {
                 />
               </span>
             </p>
-            {/* <span className={cn(stls.highlight, {[stls.atMba]: atMba})}> до 1 года 8 мес.</span> */}
+            {/* <span className={cn(stls.highlight, {[stls.altStyles]: altStyles})}> до 1 года 8 мес.</span> */}
           </>
         )
       }
@@ -85,19 +86,20 @@ const ProgramInfoAlt: FC<TProgramInfoAltProps> = ({ classNames }) => {
         label: (
           <IconGeneralInfo
             classNames={[stls.IconGeneralInfo]}
-            color={atMba ? colors['xi-2'] : undefined}
+            color={altStyles ? colors['xi-2'] : undefined}
           />
         ),
         content: (
           <>
             <p className={stls.infoContentP}>
-              {atMba
+              {altStyles
                 ? 'Диплом о переподготовке — это официальный документ, который подтверждает прохождение программы.'
                 : 'Диплом о переподготовке — это официальный документ, который даёт право вести профессиональную деятельность по полученной специальности.'}
             </p>
             <p className={stls.infoContentP}>
               Все выданные дипломы вносятся в{' '}
-              <span className={cn(stls.highlight, { [stls.atMba]: atMba })}>
+              <span
+                className={cn(stls.highlight, { [stls.altStyles]: altStyles })}>
                 ФРДО — Федеральный реестр сведений о документах об образовании.
               </span>
             </p>
@@ -123,7 +125,9 @@ const ProgramInfoAlt: FC<TProgramInfoAltProps> = ({ classNames }) => {
               trigger={open => (
                 <a
                   href='#!'
-                  className={cn(stls.infoLabel, { [stls.atMba]: atMba })}>
+                  className={cn(stls.infoLabel, {
+                    [stls.altStyles]: altStyles
+                  })}>
                   {info.label}
                 </a>
               )}
@@ -134,10 +138,12 @@ const ProgramInfoAlt: FC<TProgramInfoAltProps> = ({ classNames }) => {
             </Popup>
           )}
           <div className={stls.icon}>
-            {<Icon color={atMba ? colors['nu-2'] : undefined} />}
+            {<Icon color={altStyles ? colors['nu-2'] : undefined} />}
           </div>
           <div>
-            <p className={cn(stls.key, { [stls.atMba]: atMba })}>{key}</p>
+            <p className={cn(stls.key, { [stls.altStyles]: altStyles })}>
+              {key}
+            </p>
             <p className={stls.val}>{val}</p>
           </div>
         </div>

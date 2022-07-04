@@ -22,7 +22,7 @@ const SwiperContainer = ({
   isMultiRow = false
 }) => {
   const { program } = useContext(ProgramContext)
-  const atMba =
+  const altStyles =
     program?.category?.type === 'mba' ||
     program?.category?.type === 'profession'
 
@@ -105,7 +105,7 @@ const SwiperContainer = ({
         [stls.container]: true,
         [stls.teachers]: teachers,
         [stls.diplomas]: diplomas,
-        [stls.atMba]: atMba
+        [stls.altStyles]: altStyles
       })}>
       {slides &&
         slides.map((slide, idx) => (

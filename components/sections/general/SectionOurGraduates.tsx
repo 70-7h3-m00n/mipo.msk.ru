@@ -1,31 +1,39 @@
 import stls from '@/styles/components/sections/general/SectionOurGraduates.module.sass'
 import { TPropClassNames } from '@/types/index'
+import { useContext, MouseEventHandler } from 'react'
 import cn from 'classnames'
 import Popup from 'reactjs-popup'
 import { colors } from '@/config/index'
 import { getClassNames } from '@/helpers/index'
 import Wrapper from '@/components/layout/Wrapper'
+import ProgramContext from '@/context/program/programContext'
 import { PopupCta } from '@/components/popups'
 import { BtnZeta } from '@/components/btns'
 import { IconGeneralArrowRightAlt } from '@/components/icons'
 import { ImgSectionOurGraduatesPeopleStudying } from '@/components/imgs'
-import { MouseEventHandler } from 'react'
 
 type TSectionOurGraduates = TPropClassNames
 
 const SectionOurGraduates = ({ classNames }: TSectionOurGraduates) => {
-  const list = [
+  const { program } = useContext(ProgramContext)
+
+  const listDynamic =
+    program?.sectionOurGraduates && program?.sectionOurGraduates?.length > 0
+      ? program.sectionOurGraduates
+      : null
+
+  const list = listDynamic || [
     {
       title: '72%',
-      text: 'перешли в более престижную компанию'
+      desc: 'перешли в более престижную компанию'
     },
     {
       title: '94%',
-      text: 'увеличили свои финансовые показатели в бизнесе'
+      desc: 'увеличили свои финансовые показатели в бизнесе'
     },
     {
       title: '96%',
-      text: 'остались довольны обучением'
+      desc: 'остались довольны обучением'
     }
   ]
   return (
@@ -47,7 +55,7 @@ const SectionOurGraduates = ({ classNames }: TSectionOurGraduates) => {
                 className={cn(stls.listItem, stls.listItemTestimonial)}>
                 <div className={stls.listItemTestimonialBody}>
                   <p className={stls.listItemTitle}>{item.title}</p>
-                  <p className={stls.listItemText}>{item.text}</p>
+                  <p className={stls.listItemText}>{item.desc}</p>
                 </div>
               </li>
             ))}

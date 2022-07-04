@@ -10,19 +10,19 @@ import { ImgForWhom, ImgForWhomPhoneTablet } from '@/components/imgs'
 
 const ForWhom = () => {
   const { program } = useContext(ProgramContext)
-  const atMba =
+  const altStyles =
     program?.category?.type === 'mba' ||
     program?.category?.type === 'profession'
 
   return (
-    <section className={cn(stls.container, { [stls.atMba]: atMba })}>
+    <section className={cn(stls.container, { [stls.altStyles]: altStyles })}>
       <Wrapper classNames={[cn(stls.wrapper)]}>
-        <div className={cn(stls.left, { [stls.atMba]: atMba })}>
-          <div className={cn(stls.text, { [stls.atMba]: atMba })}>
-            <h2 className={cn(stls.title, { [stls.atMba]: atMba })}>
+        <div className={cn(stls.left, { [stls.altStyles]: altStyles })}>
+          <div className={cn(stls.text, { [stls.altStyles]: altStyles })}>
+            <h2 className={cn(stls.title, { [stls.altStyles]: altStyles })}>
               Для кого программа
             </h2>
-            <p className={cn(stls.subtitle, { [stls.atMba]: atMba })}>
+            <p className={cn(stls.subtitle, { [stls.altStyles]: altStyles })}>
               Все наши программы сертифицированы, имеют аккредитации, а дипломы
               котируются по всему миру!
             </p>
@@ -30,8 +30,8 @@ const ForWhom = () => {
           <ImgForWhom
             classNames={[
               cn(stls.imageLaptopDesktop, {
-                [stls.atMba]: atMba,
-                [stls.default]: !atMba
+                [stls.altStyles]: altStyles,
+                [stls.default]: !altStyles
               })
             ]}
             src={program?.forWhomPicture?.url}
@@ -54,25 +54,29 @@ const ForWhom = () => {
           />
         </div>
         <div className={stls.right}>
-          <ul className={cn(stls.list, { [stls.atMba]: atMba })}>
+          <ul className={cn(stls.list, { [stls.altStyles]: altStyles })}>
             {program?.forWhom &&
               program?.forWhom.map(({ title, desc }, idx) => (
                 <li
                   key={title + idx}
-                  className={cn(stls.item, { [stls.atMba]: atMba })}>
+                  className={cn(stls.item, { [stls.altStyles]: altStyles })}>
                   <div
                     className={cn(stls.itemBody, {
-                      [stls.atMba]: atMba
+                      [stls.altStyles]: altStyles
                     })}>
                     {title && (
                       <div
-                        className={cn(stls.itemTitle, { [stls.atMba]: atMba })}>
+                        className={cn(stls.itemTitle, {
+                          [stls.altStyles]: altStyles
+                        })}>
                         {parse(marked(title))}
                       </div>
                     )}
                     {desc && (
                       <div
-                        className={cn(stls.itemDesc, { [stls.atMba]: atMba })}>
+                        className={cn(stls.itemDesc, {
+                          [stls.altStyles]: altStyles
+                        })}>
                         {parse(marked(desc))}
                       </div>
                     )}
@@ -80,7 +84,7 @@ const ForWhom = () => {
                   {program?.forWhom[idx + 1] && (
                     <div
                       className={cn(stls.divider, {
-                        [stls.atMba]: atMba
+                        [stls.altStyles]: altStyles
                       })}></div>
                   )}
                 </li>

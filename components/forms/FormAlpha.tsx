@@ -40,7 +40,7 @@ const FormAlpha = ({
   const [id, setId] = useState(null)
 
   const { program } = useContext(ProgramContext)
-  const atMba =
+  const altStyles =
     program?.category?.type === 'mba' ||
     program?.category?.type === 'profession'
 
@@ -84,7 +84,7 @@ const FormAlpha = ({
         method='post'
         className={classNames(stls.container, {
           [stls.atFooter]: atFooter,
-          [stls.atMba]: atMba
+          [stls.altStyles]: altStyles
         })}
         onSubmit={handleSubmit(data => onSubmit(data))}>
         <div className={stls.group}>

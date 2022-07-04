@@ -10,7 +10,7 @@ const BtnAlpha = ({
   target = null
 }) => {
   const { program } = useContext(ProgramContext)
-  const atMba =
+  const altStyles =
     program?.category?.type === 'mba' ||
     program?.category?.type === 'profession'
 
@@ -20,7 +20,7 @@ const BtnAlpha = ({
         <a
           className={cn({
             [stls.container]: true,
-            [stls.atMba]: atMba
+            [stls.altStyles]: altStyles
           })}
           href={href}
           target={target}
@@ -32,7 +32,7 @@ const BtnAlpha = ({
           className={cn({
             [stls.container]: true,
             [stls.isDisabled]: isDisabled,
-            [stls.atMba]: atMba
+            [stls.altStyles]: altStyles
           })}
           disabled={isDisabled}>
           {text}

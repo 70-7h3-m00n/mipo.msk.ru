@@ -6,20 +6,22 @@ import ProgramContext from '@/context/program/programContext'
 
 const BtnDelta = ({ text = '', href = null }) => {
   const { program } = useContext(ProgramContext)
-  const atMba =
+  const altStyles =
     program?.category?.type === 'mba' ||
     program?.category?.type === 'profession'
 
   if (!href)
     return (
-      <button className={cn(stls.container, { [stls.atMba]: atMba })}>
+      <button className={cn(stls.container, { [stls.altStyles]: altStyles })}>
         {text}
       </button>
     )
   if (href)
     return (
       <Link href={href}>
-        <a className={cn(stls.container, { [stls.atMba]: atMba })}>{text}</a>
+        <a className={cn(stls.container, { [stls.altStyles]: altStyles })}>
+          {text}
+        </a>
       </Link>
     )
 }

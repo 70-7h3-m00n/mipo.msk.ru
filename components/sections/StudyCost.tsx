@@ -15,9 +15,11 @@ import { number } from '@/data/contact'
 
 const StudyCost = () => {
   const { program } = useContext(ProgramContext)
-  const atMba =
+  const altStyles =
     program?.category?.type === 'mba' ||
     program?.category?.type === 'profession'
+
+  const atProfession = program?.category?.type === 'profession'
 
   const info = [
     { key: 'Зачисление:', val: <ProgramAdmission /> },
@@ -41,7 +43,12 @@ const StudyCost = () => {
     }
   ]
 
-  const points = [
+  const pointsDynamic =
+    program?.StudyCostItems && program.StudyCostItems?.length > 0
+      ? program.StudyCostItems.map(item => item?.item).filter(item => item)
+      : null
+
+  const points = pointsDynamic || [
     'Онлайн вебинары с возможностью просмотра записей в течение всего курса обучения',
     'Тестирование и работа над ошибками после каждой дисциплины',
     'Лекционные и полезные дополнительные материалы к дисциплинам',
@@ -75,7 +82,7 @@ const StudyCost = () => {
         <>
           Позвоните или напишите нам:{' '}
           <a
-            className={cn(stls.phoneNumber, { [stls.atMba]: atMba })}
+            className={cn(stls.phoneNumber, { [stls.altStyles]: altStyles })}
             href={number.href}>
             {number.val}
           </a>
@@ -85,47 +92,55 @@ const StudyCost = () => {
   ]
 
   return (
-    <section className={cn(stls.container, { [stls.atMba]: atMba })}>
+    <section className={cn(stls.container, { [stls.altStyles]: altStyles })}>
       <Wrapper>
-        <h2 className={cn(stls.title, { [stls.atMba]: atMba })}>
+        <h2 className={cn(stls.title, { [stls.altStyles]: altStyles })}>
           <span className={stls.phonetablet}>Стоимость обучения</span>{' '}
           <span className={stls.laptopdesktop}>Запишитесь на программу</span>
         </h2>
-        <div className={cn(stls.content, { [stls.atMba]: atMba })}>
-          <div className={cn(stls.left, { [stls.atMba]: atMba })}>
-            <div className={cn(stls.heading, { [stls.atMba]: atMba })}>
-              <h3 className={cn(stls.subtitle, { [stls.atMba]: atMba })}>
+        <div className={cn(stls.content, { [stls.altStyles]: altStyles })}>
+          <div className={cn(stls.left, { [stls.altStyles]: altStyles })}>
+            <div className={cn(stls.heading, { [stls.altStyles]: altStyles })}>
+              <h3
+                className={cn(stls.subtitle, { [stls.altStyles]: altStyles })}>
                 {program?.title}
               </h3>
-              <div className={cn(stls.info, { [stls.atMba]: atMba })}>
+              <div className={cn(stls.info, { [stls.altStyles]: altStyles })}>
                 {info.map((item, idx) => (
                   <div key={item.key + idx} className={stls.infoitem}>
-                    <p className={cn(stls.infokey, { [stls.atMba]: atMba })}>
+                    <p
+                      className={cn(stls.infokey, {
+                        [stls.altStyles]: altStyles
+                      })}>
                       {item.key}
                     </p>
-                    <p className={cn(stls.infoval, { [stls.atMba]: atMba })}>
+                    <p
+                      className={cn(stls.infoval, {
+                        [stls.altStyles]: altStyles
+                      })}>
                       {item.val}
                     </p>
                   </div>
                 ))}
               </div>
-              <div className={cn(stls.discount, { [stls.atMba]: atMba })}>
-                <ProgramDiscount small={!atMba} />
+              <div
+                className={cn(stls.discount, { [stls.altStyles]: altStyles })}>
+                <ProgramDiscount small={!altStyles} />
               </div>
             </div>
-            <div className={cn(stls.cost, { [stls.atMba]: atMba })}>
+            <div className={cn(stls.cost, { [stls.altStyles]: altStyles })}>
               <ProgramCost withPerMonth />
             </div>
-            <div className={cn(stls.btns, { [stls.atMba]: atMba })}>
+            <div className={cn(stls.btns, { [stls.altStyles]: altStyles })}>
               <div
                 className={cn(stls.btncta, {
-                  [stls.atMba]: atMba
+                  [stls.altStyles]: altStyles
                 })}>
                 <PopupTrigger btn='gamma' cta='signUp' />
               </div>
               <div
                 className={cn(stls.btnquestion, {
-                  [stls.atMba]: atMba
+                  [stls.altStyles]: altStyles
                 })}>
                 <PopupTrigger btn='eta' cta='askQuestion' />
               </div>
@@ -137,19 +152,24 @@ const StudyCost = () => {
               </div>
             </div>
           </div>
-          <div className={cn(stls.right, { [stls.atMba]: atMba })}>
-            <ul className={cn(stls.points, { [stls.atMba]: atMba })}>
+          <div className={cn(stls.right, { [stls.altStyles]: altStyles })}>
+            <ul className={cn(stls.points, { [stls.altStyles]: altStyles })}>
               {points.map((point, idx) => (
                 <li
                   key={point + idx}
-                  className={cn(stls.point, { [stls.atMba]: atMba })}>
-                  <span className={cn(stls.pointicon, { [stls.atMba]: atMba })}>
+                  className={cn(stls.point, { [stls.altStyles]: altStyles })}>
+                  <span
+                    className={cn(stls.pointicon, {
+                      [stls.altStyles]: altStyles
+                    })}>
                     <IconCircleCheck
                       classNames={[
-                        cn(stls.IconCircleCheck, { [stls.atMba]: atMba })
+                        cn(stls.IconCircleCheck, {
+                          [stls.altStyles]: altStyles
+                        })
                       ]}
-                      inverse={!atMba}
-                      {...(atMba && {
+                      inverse={!altStyles}
+                      {...(altStyles && {
                         color1: colors.nu,
                         color2: colors['nu-2']
                       })}
@@ -161,21 +181,24 @@ const StudyCost = () => {
             </ul>
           </div>
         </div>
-        {atMba && (
-          <ul className={cn(stls.testimonials, { [stls.atMba]: atMba })}>
+        {altStyles && (
+          <ul
+            className={cn(stls.testimonials, { [stls.altStyles]: altStyles })}>
             {testimonials.map((testimonial, idx) => (
               <li
                 key={`${testimonial.title}-${idx}`}
-                className={cn(stls.testimonial, { [stls.atMba]: atMba })}>
+                className={cn(stls.testimonial, {
+                  [stls.altStyles]: altStyles
+                })}>
                 <p
                   className={cn(stls.testimonialTitle, {
-                    [stls.atMba]: atMba
+                    [stls.altStyles]: altStyles
                   })}>
                   {testimonial.title}
                 </p>
                 <p
                   className={cn(stls.testimonialContent, {
-                    [stls.atMba]: atMba
+                    [stls.altStyles]: altStyles
                   })}>
                   {testimonial.content}
                 </p>

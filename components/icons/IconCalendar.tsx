@@ -5,7 +5,7 @@ import ProgramContext from '@/context/program/programContext'
 
 const IconCalendar = ({ theta = false, halfopacity = false }) => {
   const { program } = useContext(ProgramContext)
-  const atMba =
+  const altStyles =
     program?.category?.type === 'mba' ||
     program?.category?.type === 'profession'
 
@@ -14,7 +14,7 @@ const IconCalendar = ({ theta = false, halfopacity = false }) => {
       className={cn([stls.container], {
         [stls.theta]: theta,
         [stls.halfopacity]: halfopacity,
-        [stls.atMba]: atMba
+        [stls.altStyles]: altStyles
       })}>
       <svg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
         <title>Срок обучения</title>

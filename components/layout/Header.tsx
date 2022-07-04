@@ -28,7 +28,7 @@ const Header = () => {
     useContext(MenuContext)
 
   const { program } = useContext(ProgramContext)
-  const atMba =
+  const altStyles =
     program?.category?.type === 'mba' ||
     program?.category?.type === 'profession'
 
@@ -52,10 +52,10 @@ const Header = () => {
   ]
 
   return (
-    <header className={cn(stls.container, { [stls.atMba]: atMba })}>
+    <header className={cn(stls.container, { [stls.altStyles]: altStyles })}>
       <MenuMobile />
       <Wrapper>
-        <div className={cn(stls.top, { [stls.atMba]: atMba })}>
+        <div className={cn(stls.top, { [stls.altStyles]: altStyles })}>
           <div className={stls.topleft}>
             <Link href={routeLegal}>
               <a className={stls.linkInfo}>

@@ -28,7 +28,7 @@ import { FormAlpha } from '@/components/forms'
 const Footer = () => {
   const { studyFields } = useContext(ProgramsContext)
   const { program } = useContext(ProgramContext)
-  const atMba =
+  const altStyles =
     program?.category?.type === 'mba' ||
     program?.category?.type === 'profession'
 
@@ -80,7 +80,7 @@ const Footer = () => {
   // )
 
   return (
-    <footer className={cn(stls.container, { [stls.atMba]: atMba })}>
+    <footer className={cn(stls.container, { [stls.altStyles]: altStyles })}>
       <Wrapper>
         <div className={stls.left}>
           <div className={stls.top}>
@@ -158,7 +158,7 @@ const Footer = () => {
             <FooterBottom />
           </div>
         </div>
-        <div className={cn(stls.right, { [stls.atMba]: atMba })}>
+        <div className={cn(stls.right, { [stls.altStyles]: altStyles })}>
           <div className={stls.formTitles}>
             <p className={stls.formTitle}>Остались вопросы?</p>
             <p className={stls.formTitle}>Свяжитесь с нами!</p>
@@ -170,7 +170,7 @@ const Footer = () => {
       <div className={stls.footerBottom}>
         <FooterBottom />
       </div>
-      <div className={cn(stls.bgRight, { [stls.atMba]: atMba })}></div>
+      <div className={cn(stls.bgRight, { [stls.altStyles]: altStyles })}></div>
     </footer>
   )
 }

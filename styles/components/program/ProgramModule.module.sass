@@ -3,38 +3,46 @@
 @use '@/styles/config/Colors.module.sass' as c
 
 .container
-  @include m.flex($fd: column, $jc: center)
-  @include m.gap($mb: f.px(10))
+  display: flex
+  flex-direction: column
+  justify-content: center
+  margin-bottom: f.px(10)
   &:nth-last-child(1)
-    @include m.gap($mb: 0)
+    margin-bottom: 0
 
 .isOpen
   & .ShortContentsDescs
     display: block
 
 .title
-  @include m.flex($ai: center)
+  display: flex
+  align-items: center
   @include m.media(phone, tablet)
-    @include m.gap($mb: f.px(10))
+    margin-bottom: f.px(10)
   @include m.media(laptop, desktop)
-    @include m.gap($mb: f.px(15))
-  // cursor: pointer
+    margin-bottom: f.px(15)
+  cursor: initial
+  &.isShortContentsDescs
+    cursor: pointer
 
 .icon
-  @include m.gap($mr: f.px(20))
+  margin-right: f.px(20)
 
 .pTitle
-  @include m.gap($mb: 0)
+  margin-bottom: 0
   @include m.media(phone, tablet)
     font-size: f.px(15)
   @include m.media(laptop, desktop)
     font-size: f.px(22)
   font-weight: 300
-  &.atMba
+  &.altStyles
     @include m.dye(c, c.$nu)
 
 .p
-  @include m.gap($mb: 0)
+  &.altStyles
+    font-weight: 500
+    @include m.dye(c, rgba(c.$nu, .5))
+  margin-bottom: 0
   @include m.media(phone, tablet)
     font-size: f.px(15)
   @include m.media(laptop, desktop)
@@ -48,27 +56,36 @@
   display: none
   & > .p
     @include m.media(phone, tablet)
-      @include m.gap($mb: f.px(8), $ml: f.px(60))
+      margin-bottom: f.px(8)
+      margin-left: f.px(60)
     @include m.media(laptop, desktop)
-      @include m.gap($mb: f.px(10), $ml: f.px(60))
+      margin-bottom: f.px(10)
+      margin-left: f.px(60)
 
 .list
-  @include m.gap($mtb: f.px(0), $pl: f.px(82))
+  margin-top: 0
+  margin-bottom: 0
+  padding-left: f.px(82)
   list-style-type: '•'
 
 .item
+  &.altStyles
+    @include m.dye(c, c.$nu)
   @include m.media(phone, tablet)
-    @include m.gap($mb: f.px(8))
+    margin-bottom: f.px(8)
   @include m.media(laptop, desktop)
-    @include m.flex($ai: center)
-    @include m.gap($mb: f.px(12))
+    display: flex
+    align-items: center
+    margin-bottom: f.px(12)
     font-size: f.px(18)
+    font-weight: 400
+    line-height: 120%
     &::before
       content: '•'
       font-size: f.px(35)
       line-height: 10%
-      @include m.gap($mr: f.px(14))
-
+      margin-right: f.px(14)
   & > .p
     @include m.media(phone, tablet)
-      @include m.gap($pl: f.px(12))
+      padding-left: f.px(12)
+  

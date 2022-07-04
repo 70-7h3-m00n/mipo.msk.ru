@@ -14,7 +14,7 @@ const StickyBottom = () => {
   const router = useRouter()
 
   const { program } = useContext(ProgramContext)
-  const atMba =
+  const altStyles =
     program?.category?.type === 'mba' ||
     program?.category?.type === 'profession'
 
@@ -41,10 +41,10 @@ const StickyBottom = () => {
         [stls.container]: true,
         [stls.isShown]: isShown,
         [stls.isClosed]: isClosed,
-        [stls.atMba]: atMba
+        [stls.altStyles]: altStyles
       })}>
       <Wrapper>
-        <div className={cn(stls.shape, { [stls.atMba]: atMba })}>
+        <div className={cn(stls.shape, { [stls.altStyles]: altStyles })}>
           <IconWavyShape />
         </div>
         <p className={stls.discount}>

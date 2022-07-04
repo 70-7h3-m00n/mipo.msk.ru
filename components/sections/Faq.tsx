@@ -8,7 +8,7 @@ import PopupTrigger from '@/components/general/PopupTrigger'
 
 const Faq = () => {
   const { program } = useContext(ProgramContext)
-  const atMba =
+  const altStyles =
     program?.category?.type === 'mba' ||
     program?.category?.type === 'profession'
 
@@ -24,15 +24,16 @@ const Faq = () => {
   //   }))
 
   return (
-    <section className={cn(stls.container, { [stls.atMba]: atMba })}>
+    <section className={cn(stls.container, { [stls.altStyles]: altStyles })}>
       <Wrapper>
         <div className={stls.heading}>
           {' '}
-          <h2 className={cn(stls.title, { [stls.atMba]: atMba })}>
+          <h2 className={cn(stls.title, { [stls.altStyles]: altStyles })}>
             Часто задаваемые вопросы
           </h2>
-          <div className={cn(stls.laptopdesktop, { [stls.atMba]: atMba })}>
-            <p className={cn(stls.p, { [stls.atMba]: atMba })}>
+          <div
+            className={cn(stls.laptopdesktop, { [stls.altStyles]: altStyles })}>
+            <p className={cn(stls.p, { [stls.altStyles]: altStyles })}>
               У Вас есть вопросы? Оставьте заявку! <br />И мы перезвоним Вам!
             </p>
             <PopupTrigger btn='zeta' cta='askQuestion' />
@@ -50,13 +51,14 @@ const Faq = () => {
                 />
               ))}
           </ul>
-          <div className={cn(stls.phonetablet, { [stls.atMba]: atMba })}>
+          <div
+            className={cn(stls.phonetablet, { [stls.altStyles]: altStyles })}>
             <p className={stls.p}>
               У Вас есть вопросы? Оставьте заявку! И мы перезвоним Вам!
             </p>
           </div>
         </div>
-        <div className={cn(stls.phonetablet, { [stls.atMba]: atMba })}>
+        <div className={cn(stls.phonetablet, { [stls.altStyles]: altStyles })}>
           <PopupTrigger btn='zeta' cta='askQuestion' />
         </div>
       </Wrapper>

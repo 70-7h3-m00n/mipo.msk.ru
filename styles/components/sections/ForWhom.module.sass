@@ -8,7 +8,7 @@
   @include m.media(laptop, desktop)
     padding-top: f.px(180)
     padding-bottom: f.px(137)
-  &.atMba
+  &.altStyles
     @include m.dye(bg, c.$pi-2)
 
 .wrapper
@@ -20,7 +20,7 @@
     position: relative
     @include m.flex($fb: 47%)
     max-width: f.px(523)
-    &.atMba
+    &.altStyles
       flex-direction: column
       align-items: flex-start
 
@@ -51,7 +51,7 @@
         width: 100%
         height: 100%
         background: linear-gradient(0, rgba(#000, .4), rgba(#000, .4))
-    &.atMba
+    &.altStyles
       z-index: 1
       flex-grow: 1
       min-width: 100%
@@ -93,7 +93,7 @@
     left: 50%
     transform: translate(-50%, -50%)
     z-index: 2
-    &.atMba
+    &.altStyles
       position: initial
       top: initial
       left: initial
@@ -106,43 +106,48 @@
     @include m.dye(c, c.$theta)
   @include m.media(laptop, desktop)
     @include m.dye(c, c.$nu)
-  &.atMba
+  &.altStyles
     @include m.dye(c, c.$nu)
 
 .title
   margin-bottom: f.px(10)
   @include m.media(phone, tablet)
-    &.atMba
+    &.altStyles
       margin-bottom: f.px(20)
     font-size: f.px(26)
   @include m.media(laptop, desktop)
-    &.atMba
+    &.altStyles
       margin-bottom: f.px(30)
     font-size: f.px(44)
   font-weight: 500
 
 .subtitle
   @include m.media(phone, tablet)
-    &.atMba
+    &.altStyles
       margin-bottom: f.px(40)
     margin-bottom: f.px(27)
     font-size: f.px(15)
     line-height: 120%
     font-weight: 300
   @include m.media(laptop, desktop)
-    &.atMba
+    &.altStyles
       margin-bottom: f.px(50)
     font-size: f.px(20)
     line-height: 130%
     font-weight: 200
-    &.atMba
+    &.altStyles
       font-weight: 500
       @include m.dye(c, rgba(c.$nu, .5))
   padding: 0
 
+.list
+  margin: 0
+  padding: 0
+
 .item
-  @include m.flex($fd: column)
-  &.atMba
+  display: flex
+  flex-direction: column
+  &.altStyles
     & + .atMba
       margin-top: f.px(40)
     padding: 1px
@@ -169,7 +174,7 @@
             @include m.dye(bg, rgba(c.$tau-2, .4))
 
 .itemBody
-  &.atMba
+  &.altStyles
     border-radius: inherit
     @include m.media(phone, tablet)
       padding: f.px(20)
@@ -196,7 +201,7 @@
     font-size: f.px(28)
   font-weight: 500
   line-height: 120%
-  &.atMba
+  &.altStyles
     @include m.media(phone, tablet)
       font-size: f.px(20)
     @include m.media(laptop, desktop)
@@ -212,7 +217,7 @@
     font-size: f.px(18)
     font-weight: 300
   line-height: 120%
-  &.atMba
+  &.altStyles
     @include m.dye(c, c.$nu)
 
 .divider
@@ -221,5 +226,5 @@
   @include m.media(laptop, desktop)
     @include m.gap($mtb: f.px(40))
   border: f.px(1) solid rgba(#000, .1)
-  &.atMba
+  &.altStyles
     display: none

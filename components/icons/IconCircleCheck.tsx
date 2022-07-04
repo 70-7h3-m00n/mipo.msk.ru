@@ -9,7 +9,7 @@ import ProgramContext from '@/context/program/programContext'
 type TIconCirccleCheck = TPropClassNames & {
   calpha?: boolean
   inverse?: boolean
-  atMba?: boolean
+  altStyles?: boolean
   color1?: TGeneralColorHex
   color2?: TGeneralColorHex
 }
@@ -18,7 +18,7 @@ const IconCircleCheck: FC<TIconCirccleCheck> = ({
   classNames,
   calpha = false,
   inverse = false,
-  atMba = false,
+  altStyles = false,
   color1,
   color2
 }) => {
@@ -32,7 +32,7 @@ const IconCircleCheck: FC<TIconCirccleCheck> = ({
             [stls.container]: true,
             [stls.calpha]: calpha,
             [stls.inverse]: inverse,
-            [stls.atMba]: atMba
+            [stls.altStyles]: altStyles
           },
           getClassNames({ classNames })
         ) || undefined

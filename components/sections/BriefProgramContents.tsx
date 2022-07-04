@@ -8,20 +8,20 @@ import { useContext } from 'react'
 
 const BriefProgramContents = () => {
   const { program } = useContext(ProgramContext)
-  const atMba =
+  const altStyles =
     program?.category?.type === 'mba' ||
     program?.category?.type === 'profession'
 
   return (
-    <section className={cn(stls.container, { [stls.atMba]: atMba })}>
+    <section className={cn(stls.container, { [stls.altStyles]: altStyles })}>
       <Wrapper>
-        <div className={cn(stls.top, { [stls.atMba]: atMba })}>
-          <div className={cn(stls.heading, { [stls.atMba]: atMba })}>
-            <h2 className={cn(stls.title, { [stls.atMba]: atMba })}>
+        <div className={cn(stls.top, { [stls.altStyles]: altStyles })}>
+          <div className={cn(stls.heading, { [stls.altStyles]: altStyles })}>
+            <h2 className={cn(stls.title, { [stls.altStyles]: altStyles })}>
               Краткая программа курса
             </h2>
-            <p className={cn(stls.p, { [stls.atMba]: atMba })}>
-              {atMba ? (
+            <p className={cn(stls.p, { [stls.altStyles]: altStyles })}>
+              {altStyles ? (
                 <>
                   По результатам исследования предложений на рынке
                   образовательных услуг мы составили список лучших практик. На
@@ -37,7 +37,7 @@ const BriefProgramContents = () => {
               )}
             </p>
           </div>
-          <div className={cn(stls.qty, { [stls.atMba]: atMba })}>
+          <div className={cn(stls.qty, { [stls.altStyles]: altStyles })}>
             <ProgramModulesQty />
           </div>
         </div>

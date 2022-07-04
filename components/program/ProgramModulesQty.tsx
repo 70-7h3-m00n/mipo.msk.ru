@@ -5,16 +5,16 @@ import { useContext } from 'react'
 
 const ProgramModulesQty = () => {
   const { program } = useContext(ProgramContext)
-  const atMba =
+  const altStyles =
     program?.category?.type === 'mba' ||
     program?.category?.type === 'profession'
 
   return (
-    <div className={cn(stls.container, { [stls.atMba]: atMba })}>
-      <p className={cn(stls.qty, { [stls.atMba]: atMba })}>
+    <div className={cn(stls.container, { [stls.altStyles]: altStyles })}>
+      <p className={cn(stls.qty, { [stls.altStyles]: altStyles })}>
         {program?.shortContents && program?.shortContents.length}
       </p>
-      <p className={cn(stls.text, { [stls.atMba]: atMba })}>
+      <p className={cn(stls.text, { [stls.altStyles]: altStyles })}>
         Тематических модулей
       </p>
     </div>

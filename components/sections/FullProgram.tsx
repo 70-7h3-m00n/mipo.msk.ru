@@ -8,27 +8,27 @@ import { ImgFullProgram1 } from '@/components/imgs'
 
 const FullProgram = () => {
   const { program } = useContext(ProgramContext)
-  const atMba =
+  const altStyles =
     program?.category?.type === 'mba' ||
     program?.category?.type === 'profession'
 
   return (
-    <section className={cn(stls.container, { [stls.atMba]: atMba })}>
+    <section className={cn(stls.container, { [stls.altStyles]: altStyles })}>
       <Wrapper>
-        <div className={cn(stls.wrapper, { [stls.atMba]: atMba })}>
+        <div className={cn(stls.wrapper, { [stls.altStyles]: altStyles })}>
           <div className={stls.img}>
             <ImgFullProgram1 />
           </div>
-          <div className={cn(stls.text, { [stls.atMba]: atMba })}>
-            <h2 className={cn(stls.title, { [stls.atMba]: atMba })}>
+          <div className={cn(stls.text, { [stls.altStyles]: altStyles })}>
+            <h2 className={cn(stls.title, { [stls.altStyles]: altStyles })}>
               Полная программа
             </h2>
-            <p className={cn(stls.p, { [stls.atMba]: atMba })}>
+            <p className={cn(stls.p, { [stls.altStyles]: altStyles })}>
               Оставьте свои контактные данные, чтобы мы прислали учебный план
               направления
             </p>
           </div>
-          <div className={cn(stls.btn, { [stls.atMba]: atMba })}>
+          <div className={cn(stls.btn, { [stls.altStyles]: altStyles })}>
             <PopupTrigger btn='gamma' cta='getProgram' />
           </div>
         </div>

@@ -5,7 +5,7 @@
 .container
   display: flex
   height: 100%
-  &.atMba
+  &.altStyles
     padding: 1px
     border-radius: f.px(25)
     background: linear-gradient(38.5deg, c.$nu-2 2.09%, c.$xi-2 57.98%)
@@ -15,7 +15,7 @@
   height: 100%
   @include m.media(phone, tablet)
     flex-direction: column
-  &.atMba
+  &.altStyles
     @include m.media(phone, tablet)
       padding: f.px(20)
     @include m.media(laptop, desktop)
@@ -46,7 +46,7 @@
   @include m.media(laptop, desktop)
     font-size: f.px(22)
   font-weight: 500
-  &.atMba
+  &.altStyles
     @include m.dye(c, c.$nu)
 
 .specialization
@@ -56,7 +56,7 @@
   @include m.media(laptop, desktop)
     font-size: f.px(18)
   font-weight: 300
-  &.atMba
+  &.altStyles
     @include m.dye(c, c.$nu)
 
 .achievements
@@ -66,5 +66,5 @@
   @include m.media(laptop, desktop)
     font-size: f.px(13)
   @include m.dye(c, c.$kappa)
-  &.atMba
+  &.altStyles
     @include m.dye(c, rgba(c.$nu, .5))

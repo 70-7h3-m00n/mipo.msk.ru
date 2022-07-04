@@ -20,7 +20,7 @@ const BtnZeta: FC<TBtnZeta> = ({
   target
 }) => {
   const { program } = useContext(ProgramContext)
-  const atMba =
+  const altStyles =
     program?.category?.type === 'mba' ||
     program?.category?.type === 'profession'
 
@@ -30,7 +30,7 @@ const BtnZeta: FC<TBtnZeta> = ({
     <Tag
       className={
         cn(stls.container, getClassNames({ classNames }), {
-          [stls.atMba]: atMba
+          [stls.altStyles]: altStyles
         }) || undefined
       }
       {...(href ? { href } : undefined)}

@@ -14,7 +14,7 @@ const ProgramDiscount = ({
   textOnly = null
 }: TypeProgramDiscount) => {
   const { program } = useContext(ProgramContext)
-  const atMba =
+  const altStyles =
     program?.category?.type === 'mba' ||
     program?.category?.type === 'profession'
 
@@ -35,12 +35,14 @@ const ProgramDiscount = ({
           className={cn({
             [stls.container]: true,
             [stls.small]: small,
-            [stls.atMba]: atMba
+            [stls.altStyles]: altStyles
           })}>
-          <p className={cn(stls.discount, { [stls.atMba]: atMba })}>
+          <p className={cn(stls.discount, { [stls.altStyles]: altStyles })}>
             {elDiscount}
           </p>
-          <p className={cn(stls.until, { [stls.atMba]: atMba })}>{until}</p>
+          <p className={cn(stls.until, { [stls.altStyles]: altStyles })}>
+            {until}
+          </p>
         </div>
       )}
     </>

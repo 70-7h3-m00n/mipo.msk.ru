@@ -41,7 +41,7 @@ type PagesProgramType = {
 
 const PagesProgram = ({ ofType = null, reviews }: PagesProgramType) => {
   const { program } = useContext(ProgramContext)
-  const atMba =
+  const altStyles =
     program?.category?.type === 'mba' ||
     program?.category?.type === 'profession'
 
@@ -50,13 +50,13 @@ const PagesProgram = ({ ofType = null, reviews }: PagesProgramType) => {
       <HeroProgram />
       {/* <Desc /> */}
       <ForWhom />
-      {atMba && <SectionMoreRelevant />}
+      {altStyles && <SectionMoreRelevant />}
       <WhatYouWillLearn />
-      {atMba && <SectionHowProcessGoesAlt />}
-      {!atMba && <HowProcessGoes />}
-      {atMba && <SectionYourDiplomasAlt />}
-      {atMba && <SectionOurGraduates />}
-      {atMba && <SectionRelevantContentOnly />}
+      {altStyles && <SectionHowProcessGoesAlt />}
+      {!altStyles && <HowProcessGoes />}
+      {altStyles && <SectionYourDiplomasAlt />}
+      {altStyles && <SectionOurGraduates />}
+      {altStyles && <SectionRelevantContentOnly />}
       {/* <YourDiploma ofType={ofType} /> */}
       <BriefProgramContents />
       <FullProgram />
@@ -64,14 +64,14 @@ const PagesProgram = ({ ofType = null, reviews }: PagesProgramType) => {
         program?.resumeTitle &&
         program?.entrySalary &&
         program?.resumeSkills && <YourResume />} */}
-      {ofType !== 'course' && !atMba && <YourFutureJob />}
-      {atMba && <SectionInternationalExperts />}
+      {ofType !== 'course' && !altStyles && <YourFutureJob />}
+      {altStyles && <SectionInternationalExperts />}
 
-      {atMba ? <SectionGeneralTeachersAlt /> : <Teachers />}
+      {altStyles ? <SectionGeneralTeachersAlt /> : <Teachers />}
       <Cta
         title={'Начните обучаться со скидкой'}
         desc={
-          atMba ? (
+          altStyles ? (
             <>
               Забронируйте программу по спеццене —{' '}
               <span className={stls.highlightFw}>
@@ -88,12 +88,12 @@ const PagesProgram = ({ ofType = null, reviews }: PagesProgramType) => {
             )}`
           )
         }
-        cta={atMba ? 'getProgram' : 'reserve'}
+        cta={altStyles ? 'getProgram' : 'reserve'}
       />
-      {!atMba && <TrustedBy />}
-      {atMba && <SectionTrustedByAlt />}
-      {/* {atMba && <Reviews reviews={reviews} />} */}
-      {atMba && (
+      {!altStyles && <TrustedBy />}
+      {altStyles && <SectionTrustedByAlt />}
+      {/* {altStyles && <Reviews reviews={reviews} />} */}
+      {altStyles && (
         <SectionReviewsAlt
           programReviews={program?.reviews}
           reviews={reviews}
@@ -102,7 +102,7 @@ const PagesProgram = ({ ofType = null, reviews }: PagesProgramType) => {
       {/* <HelpWithEmployment /> */}
       <StudyCost />
       <Faq />
-      {atMba && <SectionCorporateCourse />}
+      {altStyles && <SectionCorporateCourse />}
     </>
   )
 }

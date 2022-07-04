@@ -1,7 +1,9 @@
 import stls from '@/styles/components/sections/general/SectionInternationalExperts.module.sass'
 import { TPropClassNames } from '@/types/index'
+import { useContext } from 'react'
 import cn from 'classnames'
 import { colors } from '@/config/index'
+import ProgramContext from '@/context/program/programContext'
 import { getClassNames } from '@/helpers/index'
 import Wrapper from '@/components/layout/Wrapper'
 import { ImgSectionInternationalExpertsImages } from '@/components/imgs'
@@ -12,19 +14,31 @@ type TSectionInternationalExperts = TPropClassNames
 const SectionInternationalExperts = ({
   classNames
 }: TSectionInternationalExperts) => {
-  const list = [
+  const { program } = useContext(ProgramContext)
+  const altStyles =
+    program?.category?.type === 'mba' ||
+    program?.category?.type === 'profession'
+
+  const atProfession = program?.category?.type === 'profession'
+
+  const listDynamic =
+    program?.SectionInternationalExpertsItems &&
+    program.SectionInternationalExpertsItems?.length > 0
+      ? program.SectionInternationalExpertsItems
+      : null
+
+  const list = listDynamic || [
     {
       title: 'Каждый из специалистов эксперт в своей области',
-      content: 'Реализовывали крупные проекты в России и за границей'
+      desc: 'Реализовывали крупные проекты в России и за границей'
     },
     {
       title: 'Имеют международный опыт преподавания',
-      content: 'Преподают в ведущих бизнес-школах мира'
+      desc: 'Преподают в ведущих бизнес-школах мира'
     },
     {
       title: 'Каждый эксперт проходит внутреннюю проверку',
-      content:
-        'Мы проводим внутреннюю многоэтоапную проверку, чтобы быть уверенными, что спикеры соответствуют всем нашим строгим критериям отбора'
+      desc: 'Мы проводим внутреннюю многоэтоапную проверку, чтобы быть уверенными, что спикеры соответствуют всем нашим строгим критериям отбора'
     }
   ]
   return (
@@ -45,7 +59,7 @@ const SectionInternationalExperts = ({
                 />
                 <div className={stls.listItemText}>
                   <h3 className={stls.listItemTitle}>{item.title}</h3>
-                  <p className={stls.listItemContent}>{item.content}</p>
+                  <p className={stls.listItemContent}>{item.desc}</p>
                 </div>
               </li>
             ))}
