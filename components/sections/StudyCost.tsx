@@ -15,7 +15,9 @@ import { number } from '@/data/contact'
 
 const StudyCost = () => {
   const { program } = useContext(ProgramContext)
-  const atMba = program?.category?.type === 'mba' || 'profession'
+  const atMba =
+    program?.category?.type === 'mba' ||
+    program?.category?.type === 'profession'
 
   const info = [
     { key: 'Зачисление:', val: <ProgramAdmission /> },

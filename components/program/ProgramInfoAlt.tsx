@@ -26,7 +26,9 @@ type TProgramInfoAltProps = TPropClassNames
 
 const ProgramInfoAlt: FC<TProgramInfoAltProps> = ({ classNames }) => {
   const { program } = useContext(ProgramContext)
-  const atMba = program?.category?.type === 'mba' || 'profession'
+  const atMba =
+    program?.category?.type === 'mba' ||
+    program?.category?.type === 'profession'
   const atCourse = program?.category?.type === 'course'
 
   const vals = [

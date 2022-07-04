@@ -28,7 +28,9 @@ import { FormAlpha } from '@/components/forms'
 const Footer = () => {
   const { studyFields } = useContext(ProgramsContext)
   const { program } = useContext(ProgramContext)
-  const atMba = program?.category?.type === 'mba' || 'profession'
+  const atMba =
+    program?.category?.type === 'mba' ||
+    program?.category?.type === 'profession'
 
   const staticLinks = [
     {

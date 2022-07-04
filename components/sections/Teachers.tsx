@@ -11,7 +11,9 @@ import { ImgTeacher } from '@/components/imgs'
 
 const Teachers = () => {
   const { program } = useContext(ProgramContext)
-  const atMba = program?.category?.type === 'mba' || 'profession'
+  const atMba =
+    program?.category?.type === 'mba' ||
+    program?.category?.type === 'profession'
 
   const list =
     program?.teachers &&

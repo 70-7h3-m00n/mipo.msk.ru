@@ -5,7 +5,9 @@ import ProgramContext from '@/context/program/programContext'
 
 const IconCalendar = ({ theta = false, halfopacity = false }) => {
   const { program } = useContext(ProgramContext)
-  const atMba = program?.category?.type === 'mba' || 'profession'
+  const atMba =
+    program?.category?.type === 'mba' ||
+    program?.category?.type === 'profession'
 
   return (
     <div

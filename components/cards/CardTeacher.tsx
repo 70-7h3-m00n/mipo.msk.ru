@@ -5,7 +5,9 @@ import ProgramContext from '@/context/program/programContext'
 
 const CardTeacher = ({ portrait, name, specialization, achievements }) => {
   const { program } = useContext(ProgramContext)
-  const atMba = program?.category?.type === 'mba' || 'profession'
+  const atMba =
+    program?.category?.type === 'mba' ||
+    program?.category?.type === 'profession'
 
   return (
     <article className={cn(stls.container, { [stls.atMba]: atMba })}>

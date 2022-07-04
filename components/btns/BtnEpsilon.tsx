@@ -5,7 +5,9 @@ import ProgramContext from '@/context/program/programContext'
 
 const BtnEpsilon = ({ text = '' }) => {
   const { program } = useContext(ProgramContext)
-  const atMba = program?.category?.type === 'mba' || 'profession'
+  const atMba =
+    program?.category?.type === 'mba' ||
+    program?.category?.type === 'profession'
 
   return (
     <button className={cn(stls.container, { [stls.atMba]: atMba })}>

@@ -20,7 +20,9 @@ type TSectionYourDiplomasAlt = TPropClassNames
 
 const SectionYourDiplomasAlt = ({ classNames }: TSectionYourDiplomasAlt) => {
   const { program } = useContext(ProgramContext)
-  const atMba = program?.category?.type === 'mba' || 'profession'
+  const atMba =
+    program?.category?.type === 'mba' ||
+    program?.category?.type === 'profession'
 
   return (
     <section

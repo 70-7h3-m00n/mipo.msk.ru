@@ -7,7 +7,9 @@ import { discountNum } from '@/data/price'
 
 const ProgramCost = ({ withPerMonth = false }) => {
   const { program } = useContext(ProgramContext)
-  const atMba = program?.category?.type === 'mba' || 'profession'
+  const atMba =
+    program?.category?.type === 'mba' ||
+    program?.category?.type === 'profession'
 
   const price =
     (program?.timenprice && Number(program?.timenprice?.[0]?.price)) || 0

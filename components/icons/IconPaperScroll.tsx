@@ -5,7 +5,9 @@ import ProgramContext from '@/context/program/programContext'
 
 const IconPaperScroll = () => {
   const { program } = useContext(ProgramContext)
-  const atMba = program?.category?.type === 'mba' || 'profession'
+  const atMba =
+    program?.category?.type === 'mba' ||
+    program?.category?.type === 'profession'
 
   return (
     <div className={cn(stls.container, { [stls.atMba]: atMba })}>

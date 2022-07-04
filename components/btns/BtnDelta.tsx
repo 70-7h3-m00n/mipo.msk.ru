@@ -6,7 +6,9 @@ import ProgramContext from '@/context/program/programContext'
 
 const BtnDelta = ({ text = '', href = null }) => {
   const { program } = useContext(ProgramContext)
-  const atMba = program?.category?.type === 'mba' || 'profession'
+  const atMba =
+    program?.category?.type === 'mba' ||
+    program?.category?.type === 'profession'
 
   if (!href)
     return (

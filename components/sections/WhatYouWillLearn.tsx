@@ -7,7 +7,9 @@ import { useContext } from 'react'
 
 const WhatYouWillLearn = () => {
   const { program } = useContext(ProgramContext)
-  const atMba = program?.category?.type === 'mba' || 'profession'
+  const atMba =
+    program?.category?.type === 'mba' ||
+    program?.category?.type === 'profession'
 
   return (
     <section className={cn(stls.container, { [stls.atMba]: atMba })}>

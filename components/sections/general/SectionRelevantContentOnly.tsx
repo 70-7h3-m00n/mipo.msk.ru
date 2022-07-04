@@ -15,7 +15,9 @@ const SectionRelevantContentOnly = ({
   classNames
 }: TSectionRelevantContentOnly) => {
   const { program } = useContext(ProgramContext)
-  const atMba = program?.category?.type === 'mba' || 'profession'
+  const atMba =
+    program?.category?.type === 'mba' ||
+    program?.category?.type === 'profession'
 
   const list = [
     'Мы постоянно проводим внутренние исследования, на основе которых обновляем наши программы',

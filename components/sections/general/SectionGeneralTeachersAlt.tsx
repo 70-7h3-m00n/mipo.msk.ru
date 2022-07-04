@@ -15,7 +15,9 @@ const SectionGeneralTeachersAlt: FC<TSectionGeneralTeachersAlt> = ({
   classNames
 }) => {
   const { program } = useContext(ProgramContext)
-  const atMba = program?.category?.type === 'mba' || 'profession'
+  const atMba =
+    program?.category?.type === 'mba' ||
+    program?.category?.type === 'profession'
 
   const teachers = program?.teachers
     ?.filter((_, idx) => idx < 6)

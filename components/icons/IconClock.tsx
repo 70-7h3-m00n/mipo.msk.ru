@@ -5,7 +5,9 @@ import ProgramContext from '@/context/program/programContext'
 
 const IconClock = ({ color = null }) => {
   const { program } = useContext(ProgramContext)
-  const atMba = program?.category?.type === 'mba' || 'profession'
+  const atMba =
+    program?.category?.type === 'mba' ||
+    program?.category?.type === 'profession'
   return (
     <div className={cn(stls.container, { [stls.atMba]: atMba })}>
       <svg viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'>

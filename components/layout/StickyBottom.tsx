@@ -14,7 +14,9 @@ const StickyBottom = () => {
   const router = useRouter()
 
   const { program } = useContext(ProgramContext)
-  const atMba = program?.category?.type === 'mba' || 'profession'
+  const atMba =
+    program?.category?.type === 'mba' ||
+    program?.category?.type === 'profession'
 
   const [isShown, setIsShown] = useState(false)
   const [isClosed, setIsClosed] = useState(false)
