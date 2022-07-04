@@ -10,7 +10,7 @@ import { ImgForWhom, ImgForWhomPhoneTablet } from '@/components/imgs'
 
 const ForWhom = () => {
   const { program } = useContext(ProgramContext)
-  const atMba = program?.category?.type === 'mba'
+  const atMba = program?.category?.type === 'mba' || 'profession'
 
   return (
     <section className={cn(stls.container, { [stls.atMba]: atMba })}>

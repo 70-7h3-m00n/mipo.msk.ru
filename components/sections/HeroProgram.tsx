@@ -22,7 +22,7 @@ import { ImgCourse } from '@/components/imgs'
 
 const HeroProgram = () => {
   const { program } = useContext(ProgramContext)
-  const atMba = program?.category?.type === 'mba'
+  const atMba = program?.category?.type === 'mba' || 'profession'
 
   const { curProgramsType } = useContext(ProgramsContext)
   return (

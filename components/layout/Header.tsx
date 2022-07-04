@@ -28,7 +28,7 @@ const Header = () => {
     useContext(MenuContext)
 
   const { program } = useContext(ProgramContext)
-  const atMba = program?.category?.type === 'mba'
+  const atMba = program?.category?.type === 'mba' || 'profession'
 
   useEffect(() => {
     handleSwipedEvt({ menuIsOpen, closeMenu })

@@ -14,7 +14,7 @@ const PopupThankyou = ({ close, id = null }) => {
 
   const idThankyou = uuidv4()
 
-  const atMba = program?.category?.type === 'mba'
+  const atMba = program?.category?.type === 'mba' || 'profession'
   const atProfession = program?.category?.type === 'profession'
 
   console.log('popup thankyou id: ', id)

@@ -10,7 +10,7 @@ const FaqAnswer = ({ question = null, answer = null }) => {
   const [isOpen, setOpen] = useState(false)
 
   const { program } = useContext(ProgramContext)
-  const atMba = program?.category?.type === 'mba'
+  const atMba = program?.category?.type === 'mba' || 'profession'
 
   return (
     <li

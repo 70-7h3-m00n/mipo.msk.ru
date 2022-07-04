@@ -8,7 +8,7 @@ import PopupTrigger from '@/components/general/PopupTrigger'
 
 const Faq = () => {
   const { program } = useContext(ProgramContext)
-  const atMba = program?.category?.type === 'mba'
+  const atMba = program?.category?.type === 'mba' || 'profession'
 
   // const topics = getListItemsInnerHtml(questions)
   // const titles = getParagraphInnerHtml(questions)

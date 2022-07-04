@@ -5,7 +5,7 @@ import { useContext } from 'react'
 
 const ProgramModulesQty = () => {
   const { program } = useContext(ProgramContext)
-  const atMba = program?.category?.type === 'mba'
+  const atMba = program?.category?.type === 'mba' || 'profession'
 
   return (
     <div className={cn(stls.container, { [stls.atMba]: atMba })}>

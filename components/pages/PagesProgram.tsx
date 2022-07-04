@@ -41,7 +41,7 @@ type PagesProgramType = {
 
 const PagesProgram = ({ ofType = null, reviews }: PagesProgramType) => {
   const { program } = useContext(ProgramContext)
-  const atMba = program?.category?.type === 'mba'
+  const atMba = program?.category?.type === 'mba' || 'profession'
 
   return (
     <>

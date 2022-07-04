@@ -40,7 +40,7 @@ const FormAlpha = ({
   const [id, setId] = useState(null)
 
   const { program } = useContext(ProgramContext)
-  const atMba = program?.category?.type === 'mba'
+  const atMba = program?.category?.type === 'mba' || 'profession'
 
   useEffect(() => {
     popup && setFocus('name')

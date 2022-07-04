@@ -7,7 +7,7 @@ import { IconCircleCheck, IconMinus, IconPlus } from '@/components/icons'
 const ProgramModule = ({ title, ShortContentsDescs }) => {
   // const [isOpen, setOpen] = useState(false)
   const { program } = useContext(ProgramContext)
-  const atMba = program?.category?.type === 'mba'
+  const atMba = program?.category?.type === 'mba' || 'profession'
 
   return (
     <li

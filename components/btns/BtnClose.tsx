@@ -9,7 +9,7 @@ const BtnClose = ({ onClick = null, iconCloseCircle = false }) => {
   const { closeMenu } = useContext(MenuContext)
 
   const { program } = useContext(ProgramContext)
-  const atMba = program?.category?.type === 'mba'
+  const atMba = program?.category?.type === 'mba' || 'profession'
 
   return (
     <button

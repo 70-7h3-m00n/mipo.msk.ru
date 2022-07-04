@@ -20,7 +20,7 @@ const BtnZeta: FC<TBtnZeta> = ({
   target
 }) => {
   const { program } = useContext(ProgramContext)
-  const atMba = program?.category?.type === 'mba'
+  const atMba = program?.category?.type === 'mba' || 'profession'
 
   const Tag = href ? 'a' : 'button'
 

@@ -20,7 +20,7 @@ const MenuMobile = () => {
   const { menuIsOpen, openMenu, closeMenu, toggleMenu } =
     useContext(MenuContext)
   const { program } = useContext(ProgramContext)
-  const atMba = program?.category?.type === 'mba'
+  const atMba = program?.category?.type === 'mba' || 'profession'
 
   const links = [
     { text: 'Направления обучения', href: routePrograms, withIcon: true },

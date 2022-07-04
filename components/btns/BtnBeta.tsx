@@ -5,7 +5,7 @@ import ProgramContext from '@/context/program/programContext'
 
 const BtnBeta = ({ text = '', isDisabled = false }) => {
   const { program } = useContext(ProgramContext)
-  const atMba = program?.category?.type === 'mba'
+  const atMba = program?.category?.type === 'mba' || 'profession'
 
   return (
     <button

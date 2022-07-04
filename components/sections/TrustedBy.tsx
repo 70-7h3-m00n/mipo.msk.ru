@@ -25,7 +25,7 @@ type TypeTrustedBy = {
 
 const TrustedBy = ({ classNames = [] }: TypeTrustedBy) => {
   const { program } = useContext(ProgramContext)
-  const atMba = program?.category?.type === 'mba'
+  const atMba = program?.category?.type === 'mba' || 'profession'
 
   const slides = [
     {

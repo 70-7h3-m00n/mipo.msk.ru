@@ -22,7 +22,7 @@ const SwiperContainer = ({
   isMultiRow = false
 }) => {
   const { program } = useContext(ProgramContext)
-  const atMba = program?.category?.type === 'mba'
+  const atMba = program?.category?.type === 'mba' || 'profession'
 
   const isMobileLayout = useMediaQuery({ query: '(max-width: 480px)' })
   const isTabletLayout = useMediaQuery({

@@ -8,7 +8,7 @@ import { ImgFullProgram1 } from '@/components/imgs'
 
 const FullProgram = () => {
   const { program } = useContext(ProgramContext)
-  const atMba = program?.category?.type === 'mba'
+  const atMba = program?.category?.type === 'mba' || 'profession'
 
   return (
     <section className={cn(stls.container, { [stls.atMba]: atMba })}>

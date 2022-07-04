@@ -14,7 +14,7 @@ const ProgramDiscount = ({
   textOnly = null
 }: TypeProgramDiscount) => {
   const { program } = useContext(ProgramContext)
-  const atMba = program?.category?.type === 'mba'
+  const atMba = program?.category?.type === 'mba' || 'profession'
 
   const elDiscount = program?.timenprice && (
     <>

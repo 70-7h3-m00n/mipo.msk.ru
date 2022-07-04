@@ -5,7 +5,7 @@ import ProgramContext from '@/context/program/programContext'
 
 const BtnEta = ({ text = '' }) => {
   const { program } = useContext(ProgramContext)
-  const atMba = program?.category?.type === 'mba'
+  const atMba = program?.category?.type === 'mba' || 'profession'
 
   return (
     <button className={cn(stls.container, { [stls.atMba]: atMba })}>
