@@ -10,6 +10,7 @@ import ProgramContext from '@/context/program/programContext'
 import { PopupImage } from '@/components/popups'
 import {
   ImgCertificate,
+  ImgDiplomaInternational,
   ImgDiplomaTemplate,
   ImgSupplement
 } from '@/components/imgs'
@@ -23,6 +24,10 @@ const SectionYourDiplomasAlt = ({ classNames }: TSectionYourDiplomasAlt) => {
   const altStyles =
     program?.category?.type === 'mba' ||
     program?.category?.type === 'profession'
+
+  const atMba = program?.category?.type === 'mba'
+
+  const imgDiploma = atMba ? <ImgDiplomaInternational /> : <ImgCertificate />
 
   return (
     <section
@@ -63,14 +68,14 @@ const SectionYourDiplomasAlt = ({ classNames }: TSectionYourDiplomasAlt) => {
             <Popup
               trigger={
                 <a href='#!' className={stls.diploma}>
-                  <ImgCertificate />
+                  {imgDiploma}
                 </a>
               }
               modal
               lockScroll
               nested
               closeOnDocumentClick>
-              {close => <PopupImage image={<ImgCertificate />} close={close} />}
+              {close => <PopupImage image={imgDiploma} close={close} />}
             </Popup>
             <Popup
               trigger={

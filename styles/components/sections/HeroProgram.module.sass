@@ -26,26 +26,26 @@
       display: flex
       flex-direction: column
 
-$heading_ld_atMba_fb: 65%
-$heading_ld_atMba_mr: 12%
+$heading_ld_altStyles_fb: 65%
+$heading_ld_altStyles_mr: 12%
 .heading
   @include m.media(laptop, desktop)
     &.altStyles
-      flex-basis: $heading_ld_atMba_fb
+      flex-basis: $heading_ld_altStyles_fb
       justify-content: flex-start
       align-items: flex-start
     display: flex
     flex-direction: column
     justify-content: center
     align-items: center
-    margin-right: $heading_ld_atMba_mr
+    margin-right: $heading_ld_altStyles_mr
 
 .pic
   &.altStyles
     @include m.media(phone, tablet)
       order: 3
     @include m.media(laptop, desktop)
-      flex-basis: 100% - $heading_ld_atMba_fb - $heading_ld_atMba_mr
+      flex-basis: 100% - $heading_ld_altStyles_fb - $heading_ld_altStyles_mr
       display: flex
       justify-content: center
       align-items: center

@@ -148,8 +148,10 @@
   display: flex
   flex-direction: column
   &.altStyles
-    & + .atMba
+    @include m.media(phone, tablet)
       margin-top: f.px(40)
+    @include m.media(laptop, desktop)
+      margin-top: f.px(30)
     padding: 1px
     border-radius: f.px(25)
     background: linear-gradient(38.5deg, c.$nu-2 2.09%, c.$xi-2 57.98%)
