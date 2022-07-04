@@ -80,7 +80,7 @@
 
 .imagePhoneTablet
   @include m.media(phone, tablet)
-    @include m.gap($mb: f.px(40))
+    margin-bottom: f.px(40)
     overflow: hidden
     border-radius: f.px(50) 0
   @include m.media(laptop, desktop)
@@ -123,11 +123,15 @@
 
 .subtitle
   @include m.media(phone, tablet)
-    @include m.gap($mb: f.px(27))
+    &.atMba
+      margin-bottom: f.px(40)
+    margin-bottom: f.px(27)
     font-size: f.px(15)
     line-height: 120%
     font-weight: 300
   @include m.media(laptop, desktop)
+    &.atMba
+      margin-bottom: f.px(50)
     font-size: f.px(20)
     line-height: 130%
     font-weight: 200
