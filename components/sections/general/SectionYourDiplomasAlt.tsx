@@ -28,6 +28,7 @@ const SectionYourDiplomasAlt = ({ classNames }: TSectionYourDiplomasAlt) => {
   const atMba = program?.category?.type === 'mba'
 
   const imgDiploma = atMba ? <ImgDiplomaInternational /> : <ImgCertificate />
+  const imgSupplement = atMba ? <ImgSupplement /> : <ImgDiplomaInternational />
 
   return (
     <section
@@ -96,14 +97,14 @@ const SectionYourDiplomasAlt = ({ classNames }: TSectionYourDiplomasAlt) => {
             <Popup
               trigger={
                 <a href='#!' className={cn(stls.diploma, stls.mb0)}>
-                  <ImgSupplement />
+                  {imgSupplement}
                 </a>
               }
               modal
               lockScroll
               nested
               closeOnDocumentClick>
-              {close => <PopupImage image={<ImgSupplement />} close={close} />}
+              {close => <PopupImage image={imgSupplement} close={close} />}
             </Popup>
           </div>
         </div>
