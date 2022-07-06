@@ -17,8 +17,9 @@ const SectionHowProcessGoesAlt = ({
   const { program } = useContext(ProgramContext)
 
   const listDynamic =
-    program?.whatYouWillLearn && program?.whatYouWillLearn?.length > 0
-      ? program.whatYouWillLearn
+    program?.SectionHowStudyingGoesItems &&
+    program?.SectionHowStudyingGoesItems?.length > 0
+      ? program.SectionHowStudyingGoesItems
       : null
 
   const list = listDynamic || [
