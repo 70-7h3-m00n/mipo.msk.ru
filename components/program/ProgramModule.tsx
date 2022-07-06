@@ -55,9 +55,9 @@ const ProgramModule = ({ title, ShortContentsDescs }) => {
         {/* </div> */}
       </a>
       <div className={stls.ShortContentsDescs}>
-        <p className={cn(stls.p, { [stls.altStyles]: altStyles })}>
+        {/* <p className={cn(stls.p, { [stls.altStyles]: altStyles })}>
           В результате обучения вы:
-        </p>
+        </p> */}
         <ul className={stls.list}>
           {ShortContentsDescs?.map((ShortContentsDescs, idx) => (
             <li
