@@ -1,6 +1,8 @@
 import stls from '@/styles/components/program/ProgramModule.module.sass'
 import { useState, useContext } from 'react'
 import cn from 'classnames'
+import parse from 'html-react-parser'
+import marked from 'marked'
 import ProgramContext from '@/context/program/programContext'
 import { IconCircleCheck, IconMinus, IconPlus } from '@/components/icons'
 
@@ -12,7 +14,8 @@ const ProgramModule = ({ title, ShortContentsDescs }) => {
     program?.category?.type === 'profession'
 
   const isShortContentsDescs =
-    ShortContentsDescs && ShortContentsDescs?.length > 0
+    ShortContentsDescs &&
+    ShortContentsDescs?.filter(desc => desc?.desc).length > 0
 
   return (
     <li className={cn({ [stls.container]: true, [stls.isOpen]: isOpen })}>
@@ -60,7 +63,7 @@ const ProgramModule = ({ title, ShortContentsDescs }) => {
             <li
               key={ShortContentsDescs.desc + idx}
               className={cn(stls.item, { [stls.altStyles]: altStyles })}>
-              <p className={stls.p}>{ShortContentsDescs.desc}</p>
+              <p className={stls.p}>{parse(marked(ShortContentsDescs.desc))}</p>
             </li>
           ))}
         </ul>
