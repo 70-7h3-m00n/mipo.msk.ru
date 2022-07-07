@@ -63,7 +63,11 @@ const ProgramModule = ({ title, ShortContentsDescs }) => {
             <li
               key={ShortContentsDescs.desc + idx}
               className={cn(stls.item, { [stls.altStyles]: altStyles })}>
-              <p className={stls.p}>{parse(marked(ShortContentsDescs.desc))}</p>
+              {ShortContentsDescs?.desc && (
+                <p className={stls.p}>
+                  parse(marked(ShortContentsDescs?.desc))
+                </p>
+              )}
             </li>
           ))}
         </ul>
