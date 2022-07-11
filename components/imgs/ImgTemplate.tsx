@@ -14,6 +14,7 @@ type ImgTemplateType = {
   unoptimized?: boolean
   layout?: 'intrinsic' | 'fixed' | 'responsive' | 'fill'
   objectFit?: 'contain' | 'cover' | 'fill' | 'none' | 'scale-down'
+  priority?: boolean
 }
 
 const ImgTemplate = ({
@@ -24,7 +25,8 @@ const ImgTemplate = ({
   alt,
   unoptimized = false,
   layout,
-  objectFit
+  objectFit,
+  priority
 }: ImgTemplateType) => {
   const container = getClassNames({ classNames })
 
@@ -41,6 +43,7 @@ const ImgTemplate = ({
           blurDataURL={base64pixel}
           unoptimized={unoptimized}
           layout={layout}
+          {...(priority ? { priority } : undefined)}
         />
       )}
     </div>
