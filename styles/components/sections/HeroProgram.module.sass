@@ -179,6 +179,13 @@ $heading_ld_altStyles_mr: 12%
       min-height: f.px(370)
       max-height: f.px(370)
       border-radius: 0 f.px(206) f.px(206) f.px(206)
+      & > *
+        position: absolute
+        top: 50%
+        left: 50%
+        width: 100%
+        height: auto
+        transform: translate(-50%, -50%)
   @include m.media(phone, tablet)
     max-width: 670px
     margin: 0 auto

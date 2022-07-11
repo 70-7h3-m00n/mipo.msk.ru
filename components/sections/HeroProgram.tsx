@@ -80,9 +80,9 @@ const HeroProgram = () => {
             <div className={cn(stls.img, { [stls.altStyles]: altStyles })}>
               <ImgCourse
                 src={program?.heroPicture?.url}
-                width={program?.heroPicture?.width && 676}
+                width={program?.heroPicture?.width && (altStyles ? 500 : 676)}
                 height={getImageHeight({
-                  width: 676,
+                  width: altStyles ? 500 : 676,
                   widthInitial: program?.heroPicture?.width,
                   heightInitial: program?.heroPicture?.height
                 })}
