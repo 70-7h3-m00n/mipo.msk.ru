@@ -38,6 +38,7 @@ const FormAlpha = ({
   const [thanksIsOpen, setThanksIsOpen] = useState(false)
   const [userUuid, setUserUuid] = useState(null)
   const [id, setId] = useState(null)
+  const [leadIsSentTimeout, setLeadIsSentTimeout] = useState(false)
 
   const { program } = useContext(ProgramContext)
   const altStyles =
@@ -63,10 +64,18 @@ const FormAlpha = ({
     data.referer = referer
     const ymUid = JSON.parse(localStorage.getItem('_ym_uid'))
     const userUuid = JSON.parse(sessionStorage.getItem('user_uuid'))
-    console.log('formalpha id: ', id)
+
+    // console.log('formalpha id: ', id)
+
+    if (leadIsSentTimeout) return
+
     const req = await hitContactRoute({ ...data, id, ymUid })
     if (req === 200) {
       console.log('Success')
+      setLeadIsSentTimeout(true)
+      setTimeout(() => {
+        setLeadIsSentTimeout(false)
+      }, 5000)
     } else {
       console.log('err')
     }
