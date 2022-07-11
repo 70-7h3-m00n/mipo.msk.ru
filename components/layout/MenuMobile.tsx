@@ -12,7 +12,8 @@ import {
   routePrograms,
   routeWebinars,
   routeReviews,
-  routeAbout
+  routeAbout,
+  routeLegal
 } from '@/data/routes'
 import ProgramContext from '@/context/program/programContext'
 
@@ -28,7 +29,12 @@ const MenuMobile = () => {
     { text: 'Направления обучения', href: routePrograms, withIcon: true },
     { text: 'Вебинары', href: routeWebinars, withIcon: false },
     { text: 'Отзывы', href: routeReviews, withIcon: false },
-    { text: 'Об институте', href: routeAbout, withIcon: false }
+    { text: 'Об институте', href: routeAbout, withIcon: false },
+    {
+      text: 'Сведения об образовательной организации',
+      href: routeLegal,
+      withIcon: false
+    }
   ]
 
   return (
