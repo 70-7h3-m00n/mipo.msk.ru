@@ -77,15 +77,15 @@ const Programs = ({
     data.mbas = data.mbas.filter((item, idx) => idx < 8)
   }
 
-  useEffect(() => {
-    ofType === 'course' &&
-      data.courses.length === 0 &&
-      router.replace(routeCourses)
-    ofType === 'profession' &&
-      data.professions.length === 0 &&
-      router.replace(routeProfessions)
-    ofType === 'mba' && data.mbas.length === 0 && router.replace(routeMBA)
-  }, [])
+  // useEffect(() => {
+  //   ofType === 'course' &&
+  //     data.courses.length === 0 &&
+  //     router.replace(routeCourses)
+  //   ofType === 'profession' &&
+  //     data.professions.length === 0 &&
+  //     router.replace(routeProfessions)
+  //   ofType === 'mba' && data.mbas.length === 0 && router.replace(routeMBA)
+  // }, [])
 
   const filteredProgramsIds = filteredPrograms.map(item => item.id)
 
