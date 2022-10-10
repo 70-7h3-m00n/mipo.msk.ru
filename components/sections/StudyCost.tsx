@@ -17,6 +17,7 @@ const StudyCost = () => {
   const { program } = useContext(ProgramContext)
 
   const atProfession = program?.category?.type === 'profession'
+  const atCourse = program?.category?.type === 'course'
   const atMba = program?.category?.type === 'mba'
   const altStyles = atProfession || atMba
 
@@ -138,7 +139,7 @@ const StudyCost = () => {
               </div>
             </div>
             <div className={cn(stls.cost, { [stls.altStyles]: altStyles })}>
-              <ProgramCost withPerMonth />
+              <ProgramCost withPerMonth={!atCourse} />
             </div>
             <div className={cn(stls.btns, { [stls.altStyles]: altStyles })}>
               <div

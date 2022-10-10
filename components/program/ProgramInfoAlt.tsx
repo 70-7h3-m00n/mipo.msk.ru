@@ -29,7 +29,10 @@ const ProgramInfoAlt: FC<TProgramInfoAltProps> = ({ classNames }) => {
   const altStyles =
     program?.category?.type === 'mba' ||
     program?.category?.type === 'profession'
+
   const atCourse = program?.category?.type === 'course'
+
+  console.log(program?.timenprice?.[0]?.studyMonthsDuration)
 
   const vals = [
     {
@@ -80,7 +83,7 @@ const ProgramInfoAlt: FC<TProgramInfoAltProps> = ({ classNames }) => {
     },
     {
       key: 'Документ об окончании:',
-      val: atCourse ? 'Сертификат' : 'Диплом о переподготовке',
+      val: atCourse ? 'Удостоверение' : 'Диплом о переподготовке',
       icon: IconGeneralDocument,
       info: {
         label: (
@@ -92,7 +95,9 @@ const ProgramInfoAlt: FC<TProgramInfoAltProps> = ({ classNames }) => {
         content: (
           <>
             <p className={stls.infoContentP}>
-              {altStyles
+              {atCourse
+                ? 'Удостоверение о повышении квалификации, это официальный документ свидетельствующий, об актуализации теоретических и практических знаний'
+                : altStyles
                 ? 'Диплом о переподготовке — это официальный документ, который подтверждает прохождение программы.'
                 : 'Диплом о переподготовке — это официальный документ, который даёт право вести профессиональную деятельность по полученной специальности.'}
             </p>
@@ -100,7 +105,7 @@ const ProgramInfoAlt: FC<TProgramInfoAltProps> = ({ classNames }) => {
               Все выданные дипломы вносятся в{' '}
               <span
                 className={cn(stls.highlight, { [stls.altStyles]: altStyles })}>
-                ФРДО — Федеральный реестр сведений о документах об образовании.
+                ФРДО — Федеральный реестр сведений о документах об образовании
               </span>
             </p>
           </>

@@ -10,6 +10,7 @@ export { default as ImgSupplementBack } from '@/components/imgs/diplomas/ImgSupp
 export { default as ImgForWhom } from '@/components/imgs/forWhom/ImgForWhom'
 export { default as ImgForWhomPhoneTablet } from '@/components/imgs/forWhom/ImgForWhomPhoneTablet'
 export { default as ImgCertificate } from '@/components/imgs/diplomas/ImgCertificate'
+export { default as ImgCourseCertificate } from '@/components/imgs/diplomas/ImgCourseCertificate'
 export { default as ImgLadyStudying } from '@/components/imgs/general/ImgLadyStudying'
 export { default as ImgLicence } from '@/components/imgs/legal/ImgLicence'
 export { default as ImgMoreRelevantPeopleStudying } from '@/components/imgs/more-relevant/ImgMoreRelevantPeopleStudying'

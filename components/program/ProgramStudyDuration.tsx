@@ -22,9 +22,15 @@ const ProgramStudyDuration = ({
     ? getCasedRuMonthString({ months: studyMonthsDuration })
     : `${getCasedRuYearString({ years })} ${getCasedRuMonthString({ months })}`
 
-  return (
-    <>{nonBrakingSpace ? replaceSpacesWithNonBrakingSpaces(output) : output}</>
-  )
+  if (studyMonthsDuration <= 0.25) return <>недели</>
+
+  if (studyMonthsDuration <= 0.5) return <>двух недель</>
+
+  if (studyMonthsDuration <= 0.75) return <>трёх недель</>
+
+  if (nonBrakingSpace) return <>{replaceSpacesWithNonBrakingSpaces(output)}</>
+
+  return <>{output}</>
 }
 
 export default ProgramStudyDuration

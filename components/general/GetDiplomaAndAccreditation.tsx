@@ -8,7 +8,8 @@ import {
   ImgCertificate,
   ImgSupplement,
   ImgSupplementBack,
-  ImgDiplomaInternational
+  ImgDiplomaInternational,
+  ImgCourseCertificate
 } from '@/components/imgs'
 
 const GetDiplomaAndAccreditation = () => {
@@ -16,55 +17,64 @@ const GetDiplomaAndAccreditation = () => {
   const { program } = useContext(ProgramContext)
 
   const atProfession = program?.category?.type === 'profession'
+  const atCourse = program?.category?.type === 'course'
 
   return (
     <div className={stls.container}>
       <div className={stls.laptopdesktop}>
-        <h3 className={stls.title}>Получаете диплом</h3>
+        <h3 className={stls.title}>
+          Получаете {atCourse ? 'удостоверение' : 'диплом'}{' '}
+        </h3>
         <p className={stls.subtitle}>
-          Все наши дипломы являются установленного образца Министерством
-          образования и вносятся в федеральный реестр ФИС-ФРДО
+          Все наши {atCourse ? 'удостоверения' : 'дипломы'} являются
+          установленного образца Министерством образования и вносятся в
+          федеральный реестр ФИС-ФРДО
         </p>
       </div>
-      <div className={stls.btns}>
-        {isSupplement ? (
-          <>
-            <BtnKappa
-              classNames={[stls.btn, stls.btn1]}
-              onClick={() => setIsSupplement(false)}>
-              {atProfession ? (
-                'Диплом о квалификации'
-              ) : (
-                <>Первая&nbsp;страница</>
-              )}
-            </BtnKappa>
-            <BtnIota
-              classNames={[stls.btn, stls.btn2]}
-              onClick={() => setIsSupplement(true)}>
-              {atProfession ? 'Международный диплом ID' : 'Сапплемент'}
-            </BtnIota>
-          </>
-        ) : (
-          <>
-            <BtnIota
-              classNames={[stls.btn, stls.btn1]}
-              onClick={() => setIsSupplement(false)}>
-              {atProfession ? (
-                'Диплом о квалификации'
-              ) : (
-                <>Первая&nbsp;страница</>
-              )}
-            </BtnIota>
-            <BtnKappa
-              classNames={[stls.btn, stls.btn2]}
-              onClick={() => setIsSupplement(true)}>
-              {atProfession ? 'Международный диплом ID' : 'Сапплемент'}
-            </BtnKappa>
-          </>
-        )}
-      </div>
+      {!atCourse && (
+        <div className={stls.btns}>
+          {isSupplement ? (
+            <>
+              <BtnKappa
+                classNames={[stls.btn, stls.btn1]}
+                onClick={() => setIsSupplement(false)}>
+                {atProfession ? (
+                  'Диплом о квалификации'
+                ) : (
+                  <>Первая&nbsp;страница</>
+                )}
+              </BtnKappa>
+              <BtnIota
+                classNames={[stls.btn, stls.btn2]}
+                onClick={() => setIsSupplement(true)}>
+                {atProfession ? 'Международный диплом ID' : 'Сапплемент'}
+              </BtnIota>
+            </>
+          ) : (
+            <>
+              <BtnIota
+                classNames={[stls.btn, stls.btn1]}
+                onClick={() => setIsSupplement(false)}>
+                {atProfession ? (
+                  'Диплом о квалификации'
+                ) : (
+                  <>Первая&nbsp;страница</>
+                )}
+              </BtnIota>
+              <BtnKappa
+                classNames={[stls.btn, stls.btn2]}
+                onClick={() => setIsSupplement(true)}>
+                {atProfession ? 'Международный диплом ID' : 'Сапплемент'}
+              </BtnKappa>
+            </>
+          )}
+        </div>
+      )}
+
       <div className={stls.diplomas}>
-        {isSupplement ? (
+        {atCourse ? (
+          <ImgCourseCertificate />
+        ) : isSupplement ? (
           <>
             {atProfession ? (
               <>
