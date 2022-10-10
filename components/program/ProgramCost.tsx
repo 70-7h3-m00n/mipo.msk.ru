@@ -48,25 +48,23 @@ const ProgramCost = ({ withPerMonth = false }) => {
           </span>
         </div>
       )}
-      {atProfession ||
-        (atCourse && (
-          <div className={stls.content}>
-            <p className={cn(stls.label, { [stls.altStyles]: altStyles })}>
-              Единоразовый платёж
-            </p>
-            <span
-              className={cn(stls.discount, { [stls.altStyles]: altStyles })}>
-              <span className={stls.bold}>{toNumberWithSpaces(price)}</span>
-              {'\u00A0'}
-              <span className={stls.light}>&#8381;</span>
-            </span>
-            <span className={cn(stls.regular, { [stls.altStyles]: altStyles })}>
-              <span className={stls.bold}>{toNumberWithSpaces(rprice)}</span>
-              {'\u00A0'}
-              <span className={stls.light}>&#8381;</span>
-            </span>
-          </div>
-        ))}
+      {(atProfession || atCourse) && (
+        <div className={stls.content}>
+          <p className={cn(stls.label, { [stls.altStyles]: altStyles })}>
+            Единоразовый платёж
+          </p>
+          <span className={cn(stls.discount, { [stls.altStyles]: altStyles })}>
+            <span className={stls.bold}>{toNumberWithSpaces(price)}</span>
+            {'\u00A0'}
+            <span className={stls.light}>&#8381;</span>
+          </span>
+          <span className={cn(stls.regular, { [stls.altStyles]: altStyles })}>
+            <span className={stls.bold}>{toNumberWithSpaces(rprice)}</span>
+            {'\u00A0'}
+            <span className={stls.light}>&#8381;</span>
+          </span>
+        </div>
+      )}
     </div>
   )
 }
