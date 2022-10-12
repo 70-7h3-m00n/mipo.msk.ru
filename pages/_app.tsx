@@ -95,7 +95,6 @@ function MyApp({ Component, pageProps, router }) {
     console.log = function () {}
   }
 
-  // test
   return (
     <>
       <DefaultSeo {...SEO} />
