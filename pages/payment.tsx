@@ -31,7 +31,7 @@ const PaymentPage = ({ programs }) => {
       <PaymentDebitCard />
       <PaymentInfo />
       <PaymentBtns />
-      <SectionPaymentTinkoff />
+      {/* <SectionPaymentTinkoff /> */}
     </>
   )
 }
