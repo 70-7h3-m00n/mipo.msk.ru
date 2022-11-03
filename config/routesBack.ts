@@ -1,7 +1,7 @@
 import { dev } from '@/config/index'
 
 type TypeRoutesBack = {
-  root: 'http://localhost:1337' | 'https://api-mipo-msk-ru.herokuapp.com'
+  root: 'http://localhost:1337' | 'https://api.mipo.msk.ru'
   home: '/'
   programs: '/programs' // /programs || /programs/:id
   teachers: '/teachers'
@@ -14,7 +14,7 @@ type TypeRoutesBack = {
 }
 
 const routesBack: TypeRoutesBack = {
-  root: dev ? 'http://localhost:1337' : 'https://api-mipo-msk-ru.herokuapp.com',
+  root: dev ? 'http://localhost:1337' : 'https://api.mipo.msk.ru',
   home: '/',
   programs: '/programs', // /programs || /programs/:id
   teachers: '/teachers',
