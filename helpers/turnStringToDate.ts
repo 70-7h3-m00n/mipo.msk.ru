@@ -3,7 +3,17 @@ import { dev } from '@/config/index'
 const turnStringToDate = (dateString: string): Date | null => {
   const dateStringFormat = 'YYYY-MM-DD'
 
-  const [year, month, date] = dateString.split('-')
+  if (!dateString) return null
+
+  if (typeof dateString !== 'string') {
+    if (dev)
+      throw new Error(
+        `Error at turnStringToDate(). Invalid date string. Use the following format: ${dateStringFormat}`
+      )
+    return null
+  }
+
+  const [year, month, date] = dateString?.toString()?.split('-')
 
   if (!year || !month || !date) {
     if (dev)
@@ -35,7 +45,17 @@ const turnStringToDate = (dateString: string): Date | null => {
     return null
   }
 
-  return new Date(numbers.year, numbers.month, numbers.date)
+  const output = new Date(numbers.year, numbers.month, numbers.date)
+
+  if (output.toString() === 'Invalid Date') {
+    if (dev)
+      throw new Error(
+        `Error at turnStringToDate(). Invalid Date. Use the following format: ${dateStringFormat}`
+      )
+    return null
+  }
+
+  return output
 }
 
 export default turnStringToDate

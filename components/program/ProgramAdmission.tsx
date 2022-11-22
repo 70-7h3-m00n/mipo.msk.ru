@@ -18,12 +18,10 @@ const ProgramAdmission = () => {
   const closestAdmissionIsOutdated =
     checkIfClosestAdmissionIsOutdated(closestAdmission)
 
-  if (closestAdmission && !closestAdmissionIsOutdated)
+  if (closestAdmissionDate && !closestAdmissionIsOutdated)
     return `${closestAdmissionDate.getDate()} ${
       ruMonths[closestAdmissionDate.getMonth()]
     }`
-
-  // const test = new Date('2021-09-01')
 
   return calculateClosestAdmission()
 }
