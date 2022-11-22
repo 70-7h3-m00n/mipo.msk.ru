@@ -32,8 +32,6 @@ const ProgramInfoAlt: FC<TProgramInfoAltProps> = ({ classNames }) => {
 
   const atCourse = program?.category?.type === 'course'
 
-  console.log(program?.timenprice?.[0]?.studyMonthsDuration)
-
   const vals = [
     {
       key: 'Срок обучения:',

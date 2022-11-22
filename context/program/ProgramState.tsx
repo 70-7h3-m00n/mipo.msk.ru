@@ -5,7 +5,7 @@ import { SET_PROGRAM } from '@/context/types'
 
 const ProgramState = props => {
   const initialState = {
-    program: {}
+    program: props?.pageProps?.program || {}
   }
 
   const [state, dispatch] = useReducer(programReducer, initialState)

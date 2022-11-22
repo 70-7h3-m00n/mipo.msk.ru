@@ -102,8 +102,8 @@ function MyApp({ Component, pageProps, router }) {
         logo={`${routesFront.root}/assets/imgs/icons/manifest-icon-512.png`}
         url={routesFront.root}
       />
-      <ProgramsState>
-        <ProgramState>
+      <ProgramsState pageProps={pageProps}>
+        <ProgramState pageProps={pageProps}>
           <MenuState>
             <FieldsTooltipState>
               <Header />

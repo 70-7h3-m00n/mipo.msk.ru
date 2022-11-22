@@ -7,22 +7,61 @@ import {
   SET_CUR_PROGRAMS_STUDY_FIELD_SLUG,
   SET_SEARCH_TERM
 } from '@/context/types'
+import { filterProgramsByType, getStudyFields } from '@/helpers/index'
 
 const ProgramsState = props => {
+  const initialProgramsState =
+    props?.pageProps?.programs && props?.pageProps?.programs?.length
+      ? props?.pageProps?.programs
+      : []
+
+  const courses = filterProgramsByType({
+    programs: initialProgramsState,
+    type: 'course'
+  })
+
+  const professions = filterProgramsByType({
+    programs: initialProgramsState,
+    type: 'profession'
+  })
+
+  const mbas = filterProgramsByType({
+    programs: initialProgramsState,
+    type: 'mba'
+  })
+
+  const studyFields = getStudyFields(initialProgramsState)
+
+  const studyFieldsProfessions = getStudyFields(professions)
+
+  const studyFieldsCourses = getStudyFields(courses)
+
+  const studyFieldsMbas = getStudyFields(mbas)
+
   const initialState = {
-    programs: [],
-    courses: [],
-    professions: [],
-    mbas: [],
-    studyFields: [],
-    studyFieldsCourses: [],
-    studyFieldsProfessions: [],
-    studyFieldsMbas: [],
-    curProgramsType: null,
-    curProgramsStudyFieldSlug: null,
+    programs: initialProgramsState,
+    courses: courses && courses?.length ? courses : [],
+    professions: professions && professions?.length ? professions : [],
+    mbas: mbas && mbas?.length ? mbas : [],
+    studyFields: studyFields && studyFields?.length ? studyFields : [],
+    studyFieldsCourses:
+      studyFieldsCourses && studyFieldsCourses?.length
+        ? studyFieldsCourses
+        : [],
+    studyFieldsProfessions:
+      studyFieldsProfessions && studyFieldsProfessions?.length
+        ? studyFieldsProfessions
+        : [],
+    studyFieldsMbas:
+      studyFieldsMbas && studyFieldsMbas?.length ? studyFieldsMbas : [],
+    curProgramsType: props?.pageProps?.program?.category?.type || null,
+    curProgramsStudyFieldSlug:
+      props?.pageProps?.program?.study_field?.slug || null,
     searchTerm: null,
     filteredPrograms: []
   }
+
+  console.log(initialState)
 
   const [state, dispatch] = useReducer(programsReducer, initialState)
 
