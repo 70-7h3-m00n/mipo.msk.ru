@@ -61,8 +61,6 @@ const ProgramsState = props => {
     filteredPrograms: []
   }
 
-  console.log(initialState)
-
   const [state, dispatch] = useReducer(programsReducer, initialState)
 
   const setPrograms = (programs = []) => {

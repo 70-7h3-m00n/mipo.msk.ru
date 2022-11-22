@@ -1,14 +1,15 @@
 import stls from '@/styles/components/layout/StickyBottom.module.sass'
+import cn from 'classnames'
 import { useRouter } from 'next/router'
 import { useState, useEffect, useContext } from 'react'
-import { discount, until } from '@/data/price'
+import { discount } from '@/data/price'
 import { routePayment } from '@/data/routes'
 import ProgramContext from '@/context/program/programContext'
 import Wrapper from '@/components/layout/Wrapper'
 import IconWavyShape from '@/components/icons/IconWavyShape'
 import PopupTrigger from '@/components/general/PopupTrigger'
 import { IconCloseCircle } from '@/components/icons'
-import cn from 'classnames'
+import ProgramDiscountUntil from '@/components/program/ProgramDiscountUntil'
 
 const StickyBottom = () => {
   const router = useRouter()
@@ -50,7 +51,7 @@ const StickyBottom = () => {
         <p className={stls.discount}>
           <span className={stls.highlight}>Скидка {discount}</span>{' '}
           <br className={stls.smallMobileOnly} /> на все программы{' '}
-          <br className={stls.mobileOnly} /> {until}!
+          <br className={stls.mobileOnly} /> <ProgramDiscountUntil />!
         </p>
         <div className={stls.btns}>
           <PopupTrigger btn='theta' cta='learnAboutUs' />

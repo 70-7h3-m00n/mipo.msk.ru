@@ -1,8 +1,9 @@
 import stls from '@/styles/components/program/ProgramDiscount.module.sass'
-import { discountNum, until } from '@/data/price'
+import { discountNum } from '@/data/price'
 import cn from 'classnames'
 import ProgramContext from '@/context/program/programContext'
 import { useContext } from 'react'
+import ProgramDiscountUntil from './ProgramDiscountUntil'
 
 type TypeProgramDiscount = {
   small?: boolean
@@ -41,7 +42,7 @@ const ProgramDiscount = ({
             {elDiscount}
           </p>
           <p className={cn(stls.until, { [stls.altStyles]: altStyles })}>
-            {until}
+            <ProgramDiscountUntil />
           </p>
         </div>
       )}

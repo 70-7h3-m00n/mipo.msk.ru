@@ -1,21 +1,10 @@
+import { getRuMonths } from '@/helpers/index'
+
 const calculateClosestAdmission = () => {
   const currentDate = new Date()
   const currentDay = currentDate.getDate()
-  let currentMonth = currentDate.getMonth()
-  const months = [
-    'января',
-    'февраля',
-    'марта',
-    'апреля',
-    'мая',
-    'июня',
-    'июля',
-    'августа',
-    'сентября',
-    'октября',
-    'ноября',
-    'декабря'
-  ]
+  const currentMonth = currentDate.getMonth()
+  const months = getRuMonths()
   const day = currentDay < 20 ? '20' : '5'
 
   let output
