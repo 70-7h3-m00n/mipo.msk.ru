@@ -17,7 +17,7 @@ type FormValues = {
   promocode: string
   question: string
   leadPage: string
-  formName?: string
+  formName?: string | null
 }
 
 const FormAlpha = ({
@@ -26,7 +26,7 @@ const FormAlpha = ({
   popup = false,
   atFooter = false,
   agreement = false,
-  formName = ''
+  formName = null
 }) => {
   const {
     register,
