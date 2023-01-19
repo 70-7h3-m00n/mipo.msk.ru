@@ -17,6 +17,7 @@ type FormValues = {
   promocode: string
   question: string
   leadPage: string
+  formName?: string
 }
 
 const FormAlpha = ({
@@ -24,7 +25,8 @@ const FormAlpha = ({
   question = false,
   popup = false,
   atFooter = false,
-  agreement = false
+  agreement = false,
+  formName
 }) => {
   const {
     register,
@@ -69,7 +71,7 @@ const FormAlpha = ({
 
     if (leadIsSentTimeout) return
 
-    const req = await hitContactRoute({ ...data, id, ymUid })
+    const req = await hitContactRoute({ ...data, id, ymUid, formName })
     if (req === 200) {
       console.log('Success')
       setLeadIsSentTimeout(true)

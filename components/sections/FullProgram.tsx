@@ -29,7 +29,11 @@ const FullProgram = () => {
             </p>
           </div>
           <div className={cn(stls.btn, { [stls.altStyles]: altStyles })}>
-            <PopupTrigger btn='gamma' cta='getProgram' />
+            <PopupTrigger
+              btn='gamma'
+              cta='getProgram'
+              formName='Требуется полный учебный план'
+            />
           </div>
         </div>
       </Wrapper>

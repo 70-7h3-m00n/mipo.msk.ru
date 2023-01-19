@@ -25,7 +25,8 @@ const contact = async (req, res) => {
     utms,
     referer,
     ymUid,
-    promocode
+    promocode,
+    formName
   } = req.body
 
   if (name?.includes('@')) {
@@ -134,7 +135,8 @@ const contact = async (req, res) => {
     utmMedium: (utms && utms.utm_medium) || null,
     utmCampaign: (utms && utms.utm_campaign) || null,
     utmContent: (utms && utms.utm_content) || null,
-    utmTerm: (utms && utms.utm_term) || null
+    utmTerm: (utms && utms.utm_term) || null,
+    formName: formName || null
   }
 
   const subject = 'Новая заявка с mipo.msk.ru'
@@ -309,6 +311,10 @@ const contact = async (req, res) => {
       {
         tdKey: 'Дубль',
         tdVal: null
+      },
+      {
+        tdKey: 'Информация для менеджера по продажам',
+        tdVal: data.formName
       }
     ]
 

@@ -42,9 +42,10 @@ type PopupTriggerType = {
     | 'learnMore'
     | 'consultMe'
     | 'getProgram'
+  formName?: string
 }
 
-const PopupTrigger = ({ btn, cta }: PopupTriggerType) => {
+const PopupTrigger = ({ btn, cta, formName }: PopupTriggerType) => {
   const question = cta === 'askQuestion'
 
   const strs = {
@@ -283,6 +284,7 @@ const PopupTrigger = ({ btn, cta }: PopupTriggerType) => {
           cta={strs.cta}
           question={question}
           close={close}
+          formName={formName}
         />
       )}
     </Popup>
