@@ -158,163 +158,163 @@ const contact = async (req, res) => {
     const tbodyTrs = [
       {
         tdKey: 'ID',
-        tdVal: data.id
+        tdVal: data.id || ''
       },
       {
         tdKey: 'Дата',
-        tdVal: data.date
+        tdVal: data.date || ''
       },
       {
         tdKey: 'Время',
-        tdVal: data.time
+        tdVal: data.time || ''
       },
       {
         tdKey: 'UTC',
-        tdVal: data.utc
+        tdVal: data.utc || ''
       },
       {
         tdKey: 'Имя',
-        tdVal: data.name
+        tdVal: data.name || ''
       },
       {
         tdKey: 'Телефон',
-        tdVal: data.phone
+        tdVal: data.phone || ''
       },
       {
         tdKey: 'Почта',
-        tdVal: data.email
+        tdVal: data.email || ''
       },
       {
         tdKey: 'ВКонтакте',
-        tdVal: data.vk
+        tdVal: data.vk || ''
       },
       {
         tdKey: 'Промокод',
-        tdVal: data.promocode
+        tdVal: data.promocode || ''
       },
       {
         tdKey: 'Способ связи',
-        tdVal: data.contactWay
+        tdVal: data.contactWay || ''
       },
       {
         tdKey: 'Как связаться',
-        tdVal: data.contactMethod
+        tdVal: data.contactMethod || ''
       },
       {
         tdKey: 'Вопрос',
-        tdVal: data.question
+        tdVal: data.question || ''
       },
       {
         tdKey: 'Лид сайт',
-        tdVal: data.root
+        tdVal: data.root || ''
       },
       {
         tdKey: 'Лид страница',
-        tdVal: data.leadPage
+        tdVal: data.leadPage || ''
       },
       {
         tdKey: 'IP',
-        tdVal: data.ip
+        tdVal: data.ip || ''
       },
       {
         tdKey: 'Город (en)',
-        tdVal: data.cityEn
+        tdVal: data.cityEn || ''
       },
       {
         tdKey: 'Город (ru)',
-        tdVal: data.cityRu
+        tdVal: data.cityRu || ''
       },
       {
         tdKey: 'Код страны',
-        tdVal: data.countryCode
+        tdVal: data.countryCode || ''
       },
       {
         tdKey: 'Страна (en)',
-        tdVal: data.countryEn
+        tdVal: data.countryEn || ''
       },
       {
         tdKey: 'Страна (ru)',
-        tdVal: data.countryRu
+        tdVal: data.countryRu || ''
       },
       {
         tdKey: 'Континент код',
-        tdVal: data.continentCode
+        tdVal: data.continentCode || ''
       },
       {
         tdKey: 'Континент (en)',
-        tdVal: data.continentEn
+        tdVal: data.continentEn || ''
       },
       {
         tdKey: 'Континент (ru)',
-        tdVal: data.continentRu
+        tdVal: data.continentRu || ''
       },
       {
         tdKey: 'Погрешность (м)',
-        tdVal: data.accuracyRadius
+        tdVal: data.accuracyRadius || ''
       },
       {
         tdKey: 'Широта',
-        tdVal: data.latitude
+        tdVal: data.latitude || ''
       },
       {
         tdKey: 'Долгота',
-        tdVal: data.longitude
+        tdVal: data.longitude || ''
       },
       {
         tdKey: 'Часовой пояс',
-        tdVal: data.timeZone
+        tdVal: data.timeZone || ''
       },
       {
         tdKey: 'Зип код',
-        tdVal: data.postalCode
+        tdVal: data.postalCode || ''
       },
       {
         tdKey: 'Направление',
-        tdVal: data.programTitle
+        tdVal: data.programTitle || ''
       },
       {
         tdKey: 'Университет',
-        tdVal: null
+        tdVal: null || ''
       },
       {
         tdKey: 'Google Client ID',
-        tdVal: null
+        tdVal: null || ''
       },
       {
         tdKey: 'Yandex Metrics ID',
-        tdVal: ymUid
+        tdVal: ymUid || ''
       },
       {
         tdKey: 'Устройство пользователя',
-        tdVal: null
+        tdVal: null || ''
       },
       {
         tdKey: 'Источник рекламы',
-        tdVal: data.utmSource
+        tdVal: data.utmSource || ''
       },
       {
         tdKey: 'Тип трафика',
-        tdVal: data.utmMedium
+        tdVal: data.utmMedium || ''
       },
       {
         tdKey: 'Название РК',
-        tdVal: data.utmCampaign
+        tdVal: data.utmCampaign || ''
       },
       {
         tdKey: 'Объявление',
-        tdVal: data.utmContent
+        tdVal: data.utmContent || ''
       },
       {
         tdKey: 'Ключевое слово',
-        tdVal: data.utmTerm
+        tdVal: data.utmTerm || ''
       },
       {
         tdKey: 'Дубль',
-        tdVal: null
+        tdVal: null || ''
       },
       {
         tdKey: 'Информация для менеджера по продажам',
-        tdVal: data.formName
+        tdVal: data.formName || ''
       }
     ]
 
