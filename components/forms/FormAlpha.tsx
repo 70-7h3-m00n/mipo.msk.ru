@@ -26,7 +26,7 @@ const FormAlpha = ({
   popup = false,
   atFooter = false,
   agreement = false,
-  formName
+  formName = ''
 }) => {
   const {
     register,
