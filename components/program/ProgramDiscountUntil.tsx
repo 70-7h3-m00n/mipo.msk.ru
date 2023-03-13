@@ -18,7 +18,11 @@ const ProgramDiscountUntil = () => {
 
   // const until = `до ${output}`
 
-  return <>до {ProgramAdmission()}</>
+  return (
+    <>
+      до <ProgramAdmission />
+    </>
+  )
 }
 
 export default ProgramDiscountUntil
