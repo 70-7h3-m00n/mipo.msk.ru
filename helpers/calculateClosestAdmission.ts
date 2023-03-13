@@ -3,13 +3,15 @@ const setLastDayOfMonth = (currentDate: Date) => {
   currentDate.setDate(0)
 }
 
-const calculateClosestAdmission = () => {
-  const currentDate = new Date()
-  const currentDay = currentDate.getDate()
-
+const setNextDay = (currentDate: Date, currentDay: number) =>
   currentDay <= 20
     ? currentDate.setDate(currentDay <= 10 ? 10 : 20)
     : setLastDayOfMonth(currentDate)
+
+const calculateClosestAdmission = () => {
+  const currentDate = new Date()
+
+  setNextDay(currentDate, currentDate.getDate())
 
   return currentDate.toLocaleString('ru-RU', { day: 'numeric', month: 'long' })
 }
