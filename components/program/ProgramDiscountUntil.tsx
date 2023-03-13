@@ -1,4 +1,3 @@
-import { getRuMonths } from '@/helpers/index'
 import ProgramAdmission from '@/components/program/ProgramAdmission'
 
 const ProgramDiscountUntil = () => {
@@ -19,11 +18,7 @@ const ProgramDiscountUntil = () => {
 
   // const until = `до ${output}`
 
-  return (
-    <>
-      до <ProgramAdmission />
-    </>
-  )
+  return <>до {ProgramAdmission()}</>
 }
 
 export default ProgramDiscountUntil
