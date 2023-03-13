@@ -1,4 +1,3 @@
-import { getRuMonths } from '@/helpers/index'
 import ProgramAdmission from '@/components/program/ProgramAdmission'
 
 const ProgramDiscountUntil = () => {
