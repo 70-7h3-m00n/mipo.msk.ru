@@ -1,22 +1,23 @@
 import { getRuMonths } from '@/helpers/index'
 
+function getLastDayOfMonth(year: number, month: number) {
+  let date = new Date(year, month + 1, 0)
+  return date.getDate()
+}
+
 const calculateClosestAdmission = () => {
   const currentDate = new Date()
   const currentDay = currentDate.getDate()
   const currentMonth = currentDate.getMonth()
+  const currentYear = currentDate.getFullYear()
   const months = getRuMonths()
-  const day = currentDay < 20 ? '20' : '5'
+  const day =
+    (currentDay <= 10 && '10') ||
+    (currentDay <= 20 && '20') ||
+    getLastDayOfMonth(currentYear, currentMonth)
 
-  let output
-  if (currentDay < 20) {
-    output = `${day} ${months[currentMonth]}`
-  } else {
-    currentMonth === 11
-      ? (output = `${day} ${months[0]}`)
-      : (output = `${day} ${months[currentMonth + 1]}`)
-  }
+  let output = `${day} ${months[currentMonth]}`
 
-  return '10 марта'
   return output
 }
 
