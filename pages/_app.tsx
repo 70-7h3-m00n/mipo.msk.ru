@@ -118,10 +118,11 @@ function MyApp({ Component, pageProps, router }) {
       </ProgramsState>
       <Script src='/assets/js/vendors/swiped-events.min.js' />
       {!dev && (
-        <Script
-          id={'gooogle-tag-manager-prevent-click-bot-spam'}
-          dangerouslySetInnerHTML={{
-            __html: `
+        <>
+          <Script
+            id={'gooogle-tag-manager-prevent-click-bot-spam'}
+            dangerouslySetInnerHTML={{
+              __html: `
             (function(w, d, s, l, i) {
               w[l] = w[l] || [];
               w[l].push({
@@ -137,8 +138,9 @@ function MyApp({ Component, pageProps, router }) {
                   'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
               f.parentNode.insertBefore(j, f);
           })(window, document, 'script', 'dataLayer', 'GTM-WCX7NFX');`
-          }}
-        />
+            }}
+          />
+        </>
       )}
     </>
   )
