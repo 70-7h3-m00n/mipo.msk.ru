@@ -9,6 +9,8 @@ import hitContactRoute from '@/components/funcs/hitContactRoute'
 import { BtnAlpha, BtnBeta } from '@/components/btns'
 import classNames from 'classnames'
 import { PopupThankyou } from '@/components/popups'
+import { getCookie } from 'cookies-next'
+import { UTM_KEYS, UTM_KEYS_OBJ } from '@/config/index'
 
 type FormValues = {
   name: string
@@ -39,7 +41,8 @@ const FormAlpha = ({
   const [isDisabled, setIsDisabled] = useState(false)
   const [thanksIsOpen, setThanksIsOpen] = useState(false)
   const [userUuid, setUserUuid] = useState(null)
-  const [id, setId] = useState(null)
+  const [id, setId] = useState(() => uuidv4())
+  const [clickid, setClickid] = useState(() => uuidv4())
   const [leadIsSentTimeout, setLeadIsSentTimeout] = useState(false)
 
   const { program } = useContext(ProgramContext)
@@ -50,7 +53,6 @@ const FormAlpha = ({
   useEffect(() => {
     popup && setFocus('name')
     setUserUuid(JSON.parse(sessionStorage.getItem('user_uuid')))
-    if (!id) setId(uuidv4())
   }, [setFocus, popup])
 
   const router = useRouter()
@@ -60,7 +62,10 @@ const FormAlpha = ({
     setThanksIsOpen(true)
     // handle loader
     data.leadPage = router.asPath
-    const utms = JSON.parse(sessionStorage.getItem('utms'))
+    const utms = UTM_KEYS.reduce(
+      (acc, cur) => ({ ...acc, [cur]: getCookie(cur) }),
+      {} as { [key in (typeof UTM_KEYS)[number]]: string | undefined }
+    )
     data.utms = utms
     const referer = JSON.parse(sessionStorage.getItem('referer'))
     data.referer = referer
@@ -71,7 +76,7 @@ const FormAlpha = ({
 
     if (leadIsSentTimeout) return
 
-    const req = await hitContactRoute({ ...data, id, ymUid, formName })
+    const req = await hitContactRoute({ ...data, id, ymUid, clickid, formName })
     if (req === 200) {
       console.log('Success')
       setLeadIsSentTimeout(true)
@@ -89,7 +94,11 @@ const FormAlpha = ({
         open={thanksIsOpen}
         closeOnDocumentClick
         onClose={() => setThanksIsOpen(false)}>
-        <PopupThankyou close={() => setThanksIsOpen(false)} id={id} />
+        <PopupThankyou
+          close={() => setThanksIsOpen(false)}
+          id={id}
+          clickid={clickid}
+        />
       </Popup>
       <form
         method='post'

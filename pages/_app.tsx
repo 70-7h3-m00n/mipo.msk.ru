@@ -30,6 +30,8 @@ import StickyBottom from '@/components/layout/StickyBottom'
 
 import { dev } from 'config'
 
+import { useHandleUtms } from '@/hooks/index'
+
 function MyApp({ Component, pageProps, router }) {
   const [loading, setLoading] = useState(false)
 
@@ -37,28 +39,6 @@ function MyApp({ Component, pageProps, router }) {
 
   useEffect(() => {
     TagManager.initialize({ gtmId, dataLayerName: 'dataLayer' })
-
-    // console.log(document.referrer)
-
-    const utms = JSON.parse(sessionStorage.getItem('utms')) || {}
-    let utmsAreEmpty = false
-
-    for (const key in utms) {
-      if (utms.hasOwnProperty(key)) {
-        utmsAreEmpty = true
-        break
-      }
-    }
-
-    if (!utmsAreEmpty) {
-      const urlUtmsArr = router.asPath.split('?')[1]
-
-      urlUtmsArr &&
-        urlUtmsArr.split('&').forEach(utm => {
-          utms[utm.split('=')[0]] = utm.split('=')[1]
-        })
-      sessionStorage.setItem('utms', JSON.stringify(utms))
-    }
 
     const referer = sessionStorage.getItem('referrer')
     if (!referer) {
@@ -91,6 +71,8 @@ function MyApp({ Component, pageProps, router }) {
     }
   }, [])
 
+  useHandleUtms()
+
   if (prod) {
     console.log = function () {}
   }
@@ -106,12 +88,17 @@ function MyApp({ Component, pageProps, router }) {
         <ProgramState pageProps={pageProps}>
           <MenuState>
             <FieldsTooltipState>
-              <Header />
-              <main>
-                <Component {...pageProps} />
-              </main>
-              <StickyBottom />
-              <Footer />
+              <div
+                style={{
+                  opacity: 1
+                }}>
+                <Header />
+                <main>
+                  <Component {...pageProps} />
+                </main>
+                <StickyBottom />
+                <Footer />
+              </div>
             </FieldsTooltipState>
           </MenuState>
         </ProgramState>
@@ -138,6 +125,27 @@ function MyApp({ Component, pageProps, router }) {
                   'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
               f.parentNode.insertBefore(j, f);
           })(window, document, 'script', 'dataLayer', 'GTM-WCX7NFX');`
+            }}
+          />
+        </>
+      )}
+      {!dev && (
+        <>
+          <Script
+            id='qoopler-integration'
+            dangerouslySetInnerHTML={{
+              __html: `(function (d, w) {
+                var n = d.getElementsByTagName('script')[0],
+                  s = d.createElement('script')
+                s.type = 'text/javascript'
+                s.async = true
+                s.src =
+                  'https://qoopler.ru/index.php?ref=' +
+                  d.referrer +
+                  '&page=' +
+                  encodeURIComponent(w.location.href)
+                n.parentNode.insertBefore(s, n)
+              })(document, window)`
             }}
           />
         </>

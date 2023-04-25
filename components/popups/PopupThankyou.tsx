@@ -2,14 +2,19 @@ import stls from '@/styles/components/popups/PopupThankyou.module.sass'
 import { useEffect, useContext, useState } from 'react'
 import ProgramContext from '@/context/program/programContext'
 import TagManager from 'react-gtm-module'
+import axios from 'axios'
 import { BtnClose } from '@/components/btns'
+import { UTM_KEYS_OBJ } from '@/config/index'
 import { v4 as uuidv4 } from 'uuid'
+import { getCookie, getCookies } from 'cookies-next'
+import { checkIsLeadFromAffise } from '@/utils/index'
 
-const PopupThankyou = ({ close, id = null }) => {
+const PopupThankyou = ({ close, id = null, clickid = null }) => {
   const { program } = useContext(ProgramContext)
 
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [isLeadFromLeadgid, setIsLeadFromLeadgid] = useState(false)
+  // const [isLeadFromAffise, setIsLeadFromAffise] = useState(false)
   const [userUuid, setUserUuid] = useState(null)
 
   const idThankyou = uuidv4()
@@ -22,8 +27,11 @@ const PopupThankyou = ({ close, id = null }) => {
   console.log('popup thankyou id: ', id)
 
   useEffect(() => {
-    const utms = JSON.parse(sessionStorage.getItem('utms'))
-    setIsLeadFromLeadgid(isLeadFromLeadgid || utms?.utm_source === 'LG')
+    const cookies = getCookies()
+    const utm_source = cookies[UTM_KEYS_OBJ.utm_source]
+
+    setIsLeadFromLeadgid(isLeadFromLeadgid || utm_source === 'LG')
+    // setIsLeadFromAffise(checkIsLeadFromAffise(getCookies()))
     setUserUuid(JSON.parse(sessionStorage.getItem('user_uuid')))
 
     const tagManagerArgs = {
@@ -49,8 +57,18 @@ const PopupThankyou = ({ close, id = null }) => {
     }
     TagManager.dataLayer(tagManagerArgs)
 
+    // * Не нужно так как этот функционал происходит в amoCRM
+    // if (isLeadFromAffise) {
+    //   const res = axios.get(
+    //     `https://offers-edpartners.affise.com/postback?clickid=${clickid}&secure={секретный_ключ}&goal=${encodeURIComponent(
+    //       'заявка'
+    //     )}&comment=${encodeURIComponent('заявка')}&custom_field1=${id}${
+    //       program?.title ? `&custom_field3=${program.title}` : ''
+    //     }`
+    //   )
+    // }
+
     sessionStorage.removeItem('referer')
-    sessionStorage.removeItem('utms')
     sessionStorage.removeItem('user_uuid')
     sessionStorage.setItem('user_uuid', JSON.stringify(uuidv4()))
     setIsSubmitted(true)
@@ -59,7 +77,9 @@ const PopupThankyou = ({ close, id = null }) => {
     altStyles,
     atProfession,
     isLeadFromLeadgid,
+    // isLeadFromAffise,
     id
+    // clickid
     // id,
     // idThankyou,
     // userUuid
