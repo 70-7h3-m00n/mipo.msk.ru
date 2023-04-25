@@ -59,7 +59,7 @@ const PopupThankyou = ({ close, id = null, clickid = null }) => {
 
     const sendLeadToAffise = async () => {
       const res = await axios.get(
-        `https://offers-edpartners.affise.com/postback?clickid=${clickid}&secure={секретный_ключ}&goal=3&custom_field1=${id}${
+        `https://offers-edpartners.affise.com/postback?clickid=${clickid}&secure=8ca762d411798e56d2585fcf7fbcd994&goal=3&custom_field1=${id}${
           program?.title ? `&custom_field3=${program.title}` : ''
         }`
       )
