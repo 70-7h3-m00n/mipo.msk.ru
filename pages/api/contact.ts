@@ -23,6 +23,7 @@ const contact = async (req, res) => {
     programTitle,
     leadPage,
     utms,
+    clickid,
     referer,
     ymUid,
     promocode,
@@ -136,6 +137,8 @@ const contact = async (req, res) => {
     utmCampaign: (utms && utms.utm_campaign) || null,
     utmContent: (utms && utms.utm_content) || null,
     utmTerm: (utms && utms.utm_term) || null,
+    clUid: utms.cl_uid || null,
+    clickid: clickid || null,
     formName: formName || null
   }
 
@@ -307,6 +310,14 @@ const contact = async (req, res) => {
       {
         tdKey: 'Ключевое слово',
         tdVal: data.utmTerm
+      },
+      {
+        tdKey: 'Affise clUid',
+        tdVal: data.clUid
+      },
+      {
+        tdKey: 'Affise clickid',
+        tdVal: data.clickid
       },
       {
         tdKey: 'Дубль',

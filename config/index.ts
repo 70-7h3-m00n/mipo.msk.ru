@@ -12,6 +12,7 @@ import routesBack from '@/config/routesBack'
 import routesFront from '@/config/routesFront'
 import selectors from '@/config/selectors'
 import routesExternal from '@/config/routesExternal'
+import UTM_KEYS, { UTM_KEYS_OBJ } from './utm_keys'
 
 export {
   companyName,
@@ -27,5 +28,7 @@ export {
   themeColor,
   revalidate,
   selectors,
-  routesExternal
+  routesExternal,
+  UTM_KEYS,
+  UTM_KEYS_OBJ
 }
