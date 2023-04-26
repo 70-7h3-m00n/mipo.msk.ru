@@ -14,7 +14,7 @@ const PopupThankyou = ({ close, id = null, clickid = null }) => {
 
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [isLeadFromLeadgid, setIsLeadFromLeadgid] = useState(false)
-  // const [isLeadFromAffise, setIsLeadFromAffise] = useState(false)
+  const [isLeadFromAffise, setIsLeadFromAffise] = useState(false)
   const [userUuid, setUserUuid] = useState(null)
 
   const idThankyou = uuidv4()
@@ -31,7 +31,7 @@ const PopupThankyou = ({ close, id = null, clickid = null }) => {
     const utm_source = cookies[UTM_KEYS_OBJ.utm_source]
 
     setIsLeadFromLeadgid(isLeadFromLeadgid || utm_source === 'LG')
-    // setIsLeadFromAffise(checkIsLeadFromAffise(getCookies()))
+    setIsLeadFromAffise(checkIsLeadFromAffise(getCookies()))
     setUserUuid(JSON.parse(sessionStorage.getItem('user_uuid')))
 
     const tagManagerArgs = {
@@ -57,16 +57,16 @@ const PopupThankyou = ({ close, id = null, clickid = null }) => {
     }
     TagManager.dataLayer(tagManagerArgs)
 
-    // * Не нужно так как этот функционал происходит в amoCRM
-    // if (isLeadFromAffise) {
-    //   const res = axios.get(
-    //     `https://offers-edpartners.affise.com/postback?clickid=${clickid}&secure={секретный_ключ}&goal=${encodeURIComponent(
-    //       'заявка'
-    //     )}&comment=${encodeURIComponent('заявка')}&custom_field1=${id}${
-    //       program?.title ? `&custom_field3=${program.title}` : ''
-    //     }`
-    //   )
-    // }
+    const sendLeadToAffise = async () => {
+      const res = await axios.get(
+        `https://offers-edpartners.affise.com/postback?clickid=${clickid}&secure=8ca762d411798e56d2585fcf7fbcd994&goal=3&custom_field1=${id}${
+          program?.title ? `&custom_field3=${program.title}` : ''
+        }`
+      )
+      return res.data
+    }
+
+    if (isLeadFromAffise) sendLeadToAffise()
 
     sessionStorage.removeItem('referer')
     sessionStorage.removeItem('user_uuid')
@@ -77,9 +77,9 @@ const PopupThankyou = ({ close, id = null, clickid = null }) => {
     altStyles,
     atProfession,
     isLeadFromLeadgid,
-    // isLeadFromAffise,
-    id
-    // clickid
+    isLeadFromAffise,
+    id,
+    clickid
     // id,
     // idThankyou,
     // userUuid
