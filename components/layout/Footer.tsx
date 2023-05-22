@@ -24,8 +24,10 @@ import { BtnVk, BtnWhatsapp, BtnTelegram } from '@/components/btns'
 import PopupTrigger from '@/components/general/PopupTrigger'
 import FooterBottom from '@/components/general/FooterBottom'
 import { FormAlpha } from '@/components/forms'
+import { useRouter } from 'next/router'
 
 const Footer = () => {
+  const router = useRouter()
   const { studyFields } = useContext(ProgramsContext)
   const { program } = useContext(ProgramContext)
   const altStyles =
@@ -133,14 +135,19 @@ const Footer = () => {
               ))}
             </ul> */}
             <div className={stls.contact}>
-              <div className={stls.numbers}>
-                <a href={number.href} className={stls.number}>
-                  {number.val}
-                </a>
-                <a href={numberAlt.href} className={stls.number}>
-                  {numberAlt.val}
-                </a>
-              </div>
+
+              {
+                router.asPath.includes('edpartners')? <></>:
+                  <div className={stls.numbers}>
+                    <a href={number.href} className={stls.number}>
+                      {number.val}
+                    </a>
+                    <a href={numberAlt.href} className={stls.number}>
+                      {numberAlt.val}
+                    </a>
+                  </div>
+              }
+
               <div className={stls.address}>
                 {city}, {street}
               </div>
