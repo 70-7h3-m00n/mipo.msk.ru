@@ -7,8 +7,13 @@ import http from 'http'
 import { v4 as uuidv4 } from 'uuid'
 import moment from 'moment'
 import { WebServiceClient } from '@maxmind/geoip2-node'
+import axios from 'axios'
+import { any } from 'prop-types'
+import * as console from 'console'
+import { NextApiRequest } from 'next'
+import { getCookie } from 'cookies-next'
 
-const contact = async (req, res) => {
+const contact = async (req: NextApiRequest, res) => {
   process.env.TZ = 'Europe/Moscow'
   // data from the client
   let {
@@ -34,6 +39,19 @@ const contact = async (req, res) => {
     email = name
     name = ''
   }
+
+  const roistatVisit = getCookie('roistat_visit', { req, res })
+
+  const configRoistat = {
+    method: 'get',
+    maxBodyLength: Infinity,
+    url: `https://cloud.roistat.com/api/proxy/1.0/leads/add?roistat=${roistatVisit}&key=${process.env.KEY_ROISTAT}&title=Новая заявка с сайта&name=${name}&email=${email}&phone=${phone}`,
+    headers: {}
+  }
+
+  // @ts-ignore
+  axios.request(configRoistat)
+
 
   // geoip2 init
   const geoip2 = new WebServiceClient('550199', process.env.GEO2_APIKEY, {
