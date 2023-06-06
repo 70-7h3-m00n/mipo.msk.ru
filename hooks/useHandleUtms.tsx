@@ -14,7 +14,7 @@ const useHandleUtms = () => {
   const router = useRouter()
   const params = parseUrlParams({ router })
   const utmSource =
-    params[UTM_KEYS_OBJ['utm_source']] ||
+    params?.[UTM_KEYS_OBJ['utm_source']] ||
     getCookie(UTM_KEYS_OBJ['utm_source'])?.toString() ||
     ''
   const isEdpartners = checkIsEdpartners(utmSource)
@@ -27,7 +27,8 @@ const useHandleUtms = () => {
           : undefined
       })
 
-    if (!isEdpartners) deleteCookie(params[UTM_KEYS_OBJ['cl_uid']])
+    if (!isEdpartners && params && getCookie(params[UTM_KEYS_OBJ['cl_uid']]))
+      deleteCookie(params[UTM_KEYS_OBJ['cl_uid']])
   }, [params])
 }
 export default useHandleUtms
