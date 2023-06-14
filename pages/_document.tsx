@@ -4,6 +4,8 @@ import { themeColor } from '@/config/index'
 import MetaFonts from '@/components/meta/MetaFonts'
 import MetaManifest from '@/components/meta/MetaManifest'
 import { dev } from 'config'
+// eslint-disable-next-line @next/next/no-script-in-document
+import Script from 'next/script'
 
 class MyDocument extends Document {
   // static async getInitialProps(ctx) {
@@ -19,6 +21,9 @@ class MyDocument extends Document {
           {/* <meta name='theme-color' content={themeColor} /> */}
           <MetaFonts />
           <MetaManifest />
+          <Script id={'dmp'} dangerouslySetInnerHTML={{__html:`
+            <script src="https://dmp.one/sync" async charset="UTF-8"></script>
+          `}} />
         </Head>
         <body>
           {/* This is part of the tag manager that prevents click bots spam */}
