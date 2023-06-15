@@ -8,6 +8,7 @@ const NINETY_DAYS = 60 * 60 * 24 * 90
 
 const EDPARTNERS = 'edpartners'
 
+
 const checkIsEdpartners = (utmSource: string) => utmSource === EDPARTNERS
 
 const useHandleUtms = () => {
