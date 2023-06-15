@@ -166,9 +166,7 @@ function MyApp({ Component, pageProps, router }) {
         </>
       )}
       {!dev && (
-        <Script id={'dmp'} dangerouslySetInnerHTML={{__html:`
-            <script src="https://dmp.one/sync" async charset="UTF-8"></script>
-          `}} />
+        <Script id={'dmp'} src="https://dmp.one/sync" async  charSet="UTF-8" />
       )}
     </>
   )
