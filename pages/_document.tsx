@@ -21,9 +21,6 @@ class MyDocument extends Document {
           {/* <meta name='theme-color' content={themeColor} /> */}
           <MetaFonts />
           <MetaManifest />
-          <Script id={'dmp'} dangerouslySetInnerHTML={{__html:`
-            <script src="https://dmp.one/sync" async charset="UTF-8"></script>
-          `}} />
         </Head>
         <body>
           {/* This is part of the tag manager that prevents click bots spam */}
