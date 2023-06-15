@@ -8,6 +8,7 @@ const NINETY_DAYS = 60 * 60 * 24 * 90
 
 const EDPARTNERS = 'edpartners'
 
+
 const checkIsEdpartners = (utmSource: string) => utmSource === EDPARTNERS
 
 const useHandleUtms = () => {
@@ -26,9 +27,8 @@ const useHandleUtms = () => {
           ? setCookie(utmKey, params[utmKey], { maxAge: NINETY_DAYS })
           : undefined
       })
-
-    if (!isEdpartners && params && getCookie(params[UTM_KEYS_OBJ['cl_uid']]))
-      deleteCookie(params[UTM_KEYS_OBJ['cl_uid']])
-  }, [params])
+    if (!isEdpartners && params && getCookie(UTM_KEYS_OBJ['cl_uid']))
+      deleteCookie(UTM_KEYS_OBJ['cl_uid'])
+  }, [params, isEdpartners])
 }
 export default useHandleUtms

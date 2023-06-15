@@ -14,7 +14,8 @@ type TypeRoutesBack = {
 }
 
 const routesBack: TypeRoutesBack = {
-  root: dev ? 'http://localhost:1337' : 'https://api.mipo.msk.ru',
+  // root: dev ? 'http://localhost:1337' : 'https://api.mipo.msk.ru',
+  root: 'https://api.mipo.msk.ru',
   home: '/',
   programs: '/programs', // /programs || /programs/:id
   teachers: '/teachers',
