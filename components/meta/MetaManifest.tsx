@@ -23,6 +23,8 @@ const MetaManifest = () => {
       <meta name='msapplication-tap-highlight' content='no' />
       <meta name='theme-color' content={themeColor} />
 
+      <meta name={'yandex-verification'} content={'9ff11531d063e792'}/>
+
       {/* <link
         rel='apple-touch-icon'
         href='/assets/imgs/icons/apple-icon-180.png'
