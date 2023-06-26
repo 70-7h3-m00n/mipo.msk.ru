@@ -434,12 +434,8 @@ const contact = async (req, res) => {
 
   try {
     const emailRes = await transporter.sendMail({
-      from: 'lead@mipo.msk.ru',
-      to: `${
-        dev
-          ? 'nova@ipo.msk.ru, novailoveyou3@gmail.com'
-          : 'npomipo@yandex.ru, info@mipo.msk.ru'
-      }`,
+      from: process.env.SMTP_FROM,
+      to: `${dev ? process.env.SMTP_TO_DEV : process.env.SMTP_TO_PROD}`,
       subject, // Subject line
       text: `
       ${name}, \n
