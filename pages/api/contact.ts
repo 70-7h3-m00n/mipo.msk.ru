@@ -424,7 +424,7 @@ const contact = async (req, res) => {
 
   const transporter = nodemailer.createTransport({
     host: process.env.SMTP_HOST,
-    port: 587,
+    port: Number(process.env.SMTP_PORT),
     secure: false, // true for 465, false for other ports
     logger: true,
     debug: true,
