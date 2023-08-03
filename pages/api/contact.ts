@@ -40,12 +40,19 @@ const contact = async (req, res) => {
 
   const roistatVisit = getCookie('roistat_visit', { req, res })
 
-  axios.request({
-    method: 'get',
-    maxBodyLength: Infinity,
-    url: `https://cloud.roistat.com/api/proxy/1.0/leads/add?roistat=${roistatVisit}&key=OTU1ZDc0NjZlN2M3NDkyYzg4ZDdhMWU5MDQ5Y2ZhYzM6MjMyMTk1&title=Новая заявка с сайта&name=${name}&email=${email}&phone=${phone}&is_skip_sending=1`,
-    headers: {}
-  })
+  axios
+    .request({
+      method: 'get',
+      maxBodyLength: Infinity,
+      url: `https://cloud.roistat.com/api/proxy/1.0/leads/add?roistat=${roistatVisit}&key=OTU1ZDc0NjZlN2M3NDkyYzg4ZDdhMWU5MDQ5Y2ZhYzM6MjMyMTk1&title=Новая заявка с сайта&name=${name}&email=${email}&phone=${phone}`,
+      headers: {}
+    })
+    .then(response => {
+      console.log(JSON.stringify(response.data))
+    })
+    .catch(error => {
+      console.log(error)
+    })
 
   // geoip2 init
   const geoip2 = new WebServiceClient('550199', process.env.GEO2_APIKEY, {
@@ -419,7 +426,7 @@ const contact = async (req, res) => {
 
   const transporter = nodemailer.createTransport({
     host: process.env.SMTP_HOST,
-    port: 587,
+    port: Number(process.env.SMTP_PORT),
     secure: false, // true for 465, false for other ports
     logger: true,
     debug: true,
@@ -431,15 +438,11 @@ const contact = async (req, res) => {
       pass: process.env.SMTP_PASS
     }
   })
-
+  //
   try {
     const emailRes = await transporter.sendMail({
-      from: 'lead@mipo.msk.ru',
-      to: `${
-        dev
-          ? 'nova@ipo.msk.ru, novailoveyou3@gmail.com'
-          : 'npomipo@yandex.ru, info@mipo.msk.ru'
-      }`,
+      from: process.env.SMTP_FROM,
+      to: `${dev ? process.env.SMTP_TO_DEV : process.env.SMTP_TO_PROD}`,
       subject, // Subject line
       text: `
       ${name}, \n

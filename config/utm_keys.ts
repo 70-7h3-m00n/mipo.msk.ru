@@ -8,7 +8,7 @@ const UTM_KEYS = [
 ] as const
 
 export const UTM_KEYS_OBJ = UTM_KEYS.reduce(
-  (acc, cur) => ({ ...acc, cur }),
+  (acc, cur) => ({ ...acc, [cur]: cur }),
   {} as { [key in (typeof UTM_KEYS)[number]]: key }
 )
 

@@ -5,7 +5,7 @@ const parseUrlParams = ({
 }: {
   router: ReturnType<typeof useRouter>
 }): Record<string, string> | undefined => {
-  const params = router.asPath.split('?')[1]
+  const params: string | undefined = router.asPath.split('?')[1]
 
   if (params)
     return params
