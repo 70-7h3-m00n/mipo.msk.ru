@@ -34,6 +34,7 @@ import { useHandleUtms } from '@/hooks/index'
 
 function MyApp({ Component, pageProps, router }) {
   const [loading, setLoading] = useState(false)
+  useHandleUtms()
 
   const userUuid = uuidv4()
 
@@ -70,8 +71,6 @@ function MyApp({ Component, pageProps, router }) {
       Router.events.off('routeChangeError', end)
     }
   }, [])
-
-  useHandleUtms()
 
   if (prod) {
     console.log = function () {}
