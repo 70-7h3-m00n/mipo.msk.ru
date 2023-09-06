@@ -26,6 +26,8 @@ import FooterBottom from '@/components/general/FooterBottom'
 import { FormAlpha } from '@/components/forms'
 import { useRouter } from 'next/router'
 import { getCookie } from 'cookies-next'
+import edduData from '@/data/eddu'
+import Image from 'next/image'
 
 const staticLinks = [
   {
@@ -166,6 +168,26 @@ const Footer = () => {
                 <BtnVk dark mlzero />
                 <BtnWhatsapp dark />
                 <BtnTelegram dark />
+              </div>
+              <div className={stls.edduBlock}>
+                {
+                  edduData.map((item, index) => (
+                    <a key={index}
+                       href={'https://eddu.pro/reviews/mipo-review/'}
+                       target={'_blank'}
+                       rel="noreferrer"
+                    >
+                      <Image src={item.svg}
+                             alt={'svg'}
+                             priority
+                             style={{
+                               objectFit: 'cover',
+                               width: '100%',
+                               height: 'auto'
+                             }}
+                      />
+                    </a>))
+                }
               </div>
               <div className={stls.btn}>
                 <PopupTrigger btn='beta' cta='askQuestion' />

@@ -103,6 +103,11 @@ function MyApp({ Component, pageProps, router }) {
         </ProgramState>
       </ProgramsState>
       <Script src='/assets/js/vendors/swiped-events.min.js' />
+
+
+      <div id="getRatingFromEddu" data-id="72382"></div>
+      <Script src='https://eddu.pro/getRating.js' />
+
       {!dev && (
         <>
           <Script
