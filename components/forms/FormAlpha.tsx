@@ -66,6 +66,7 @@ const FormAlpha = ({
       (acc, cur) => ({ ...acc, [cur]: getCookie(cur) }),
       {} as { [key in (typeof UTM_KEYS)[number]]: string | undefined }
     )
+
     data.utms = utms
     const referer = JSON.parse(sessionStorage.getItem('referer'))
     data.referer = referer

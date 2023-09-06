@@ -34,6 +34,7 @@ import { useHandleUtms } from '@/hooks/index'
 
 function MyApp({ Component, pageProps, router }) {
   const [loading, setLoading] = useState(false)
+  useHandleUtms()
 
   const userUuid = uuidv4()
 
@@ -71,8 +72,6 @@ function MyApp({ Component, pageProps, router }) {
     }
   }, [])
 
-  useHandleUtms()
-
   if (prod) {
     console.log = function () {}
   }
@@ -104,6 +103,11 @@ function MyApp({ Component, pageProps, router }) {
         </ProgramState>
       </ProgramsState>
       <Script src='/assets/js/vendors/swiped-events.min.js' />
+
+
+      <div id="getRatingFromEddu" data-id="72382"></div>
+      <Script src='https://eddu.pro/getRating.js' />
+
       {!dev && (
         <>
           <Script
