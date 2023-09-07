@@ -1,6 +1,6 @@
 import stls from '@/styles/components/layout/Footer.module.sass'
 import classNames from 'classnames'
-import { useContext } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import cn from 'classnames'
 import ProgramContext from '@/context/program/programContext'
 import ProgramsContext from '@/context/programs/programsContext'
@@ -25,8 +25,55 @@ import PopupTrigger from '@/components/general/PopupTrigger'
 import FooterBottom from '@/components/general/FooterBottom'
 import { FormAlpha } from '@/components/forms'
 import { useRouter } from 'next/router'
+import { getCookie } from 'cookies-next'
+import edduData from '@/data/eddu'
+import Image from 'next/image'
+
+const staticLinks = [
+  {
+    val: 'Повышение квалификации',
+    href: routeCourses
+  },
+  {
+    val: 'Профессиональная переподготовка',
+    href: routeProfessions
+  },
+  // {
+  //   val: 'Вебинары',
+  //   href: routeWebinars
+  // },
+  // {
+  //   val: 'Преподаватели',
+  //   href: routeTeachers
+  // },
+  // {
+  //   val: 'Отзывы',
+  //   href: routeReviews
+  // },
+  {
+    val: 'Главная',
+    href: routeHome
+  },
+  // {
+  //   val: 'Об институте',
+  //   href: routeAbout
+  // },
+  // {
+  //   val: 'Сведения об образовательной организации',
+  //   href: routeLegal
+  // },
+  {
+    val: 'Контакты',
+    href: routeContact
+  },
+  {
+    val: 'Оплата',
+    href: routePayment
+  }
+]
 
 const Footer = () => {
+  const [validComponent, setValidComponent] = useState(null)
   const router = useRouter()
   const { studyFields } = useContext(ProgramsContext)
   const { program } = useContext(ProgramContext)
@@ -34,48 +81,13 @@ const Footer = () => {
     program?.category?.type === 'mba' ||
     program?.category?.type === 'profession'
 
-  const staticLinks = [
-    {
-      val: 'Повышение квалификации',
-      href: routeCourses
-    },
-    {
-      val: 'Профессиональная переподготовка',
-      href: routeProfessions
-    },
-    // {
-    //   val: 'Вебинары',
-    //   href: routeWebinars
-    // },
-    // {
-    //   val: 'Преподаватели',
-    //   href: routeTeachers
-    // },
-    // {
-    //   val: 'Отзывы',
-    //   href: routeReviews
-    // },
-    {
-      val: 'Главная',
-      href: routeHome
-    },
-    // {
-    //   val: 'Об институте',
-    //   href: routeAbout
-    // },
-    // {
-    //   val: 'Сведения об образовательной организации',
-    //   href: routeLegal
-    // },
-    {
-      val: 'Контакты',
-      href: routeContact
-    },
-    {
-      val: 'Оплата',
-      href: routePayment
+  useEffect(() => {
+    if(getCookie('utm_source') !== undefined) {
+      setValidComponent(true)
+    } else {
+      setValidComponent(false)
     }
-  ]
+  })
 
   // const fieldsLinks = studyFields.map(field =>
   //   ({ val: field.label, href: `/programs/${field.slug}` })
@@ -136,8 +148,9 @@ const Footer = () => {
             </ul> */}
             <div className={stls.contact}>
 
+              {/*TODO: 'reklama'*/}
               {
-                router.asPath.includes('edpartners')? <></>:
+                validComponent || validComponent === null? <></>:
                   <div className={stls.numbers}>
                     <a href={number.href} className={stls.number}>
                       {number.val}
@@ -155,6 +168,26 @@ const Footer = () => {
                 <BtnVk dark mlzero />
                 <BtnWhatsapp dark />
                 <BtnTelegram dark />
+              </div>
+              <div className={stls.edduBlock}>
+                {
+                  edduData.map((item, index) => (
+                    <a key={index}
+                       href={'https://eddu.pro/reviews/mipo-review/'}
+                       target={'_blank'}
+                       rel="noreferrer"
+                    >
+                      <Image src={item.svg}
+                             alt={'svg'}
+                             priority
+                             style={{
+                               objectFit: 'cover',
+                               width: '100%',
+                               height: 'auto'
+                             }}
+                      />
+                    </a>))
+                }
               </div>
               <div className={stls.btn}>
                 <PopupTrigger btn='beta' cta='askQuestion' />
