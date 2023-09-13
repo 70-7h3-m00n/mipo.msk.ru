@@ -13,13 +13,22 @@ type WebinarsAltType = {
 }
 
 const WebinarsAlt = ({ webinars = null }: WebinarsAltType) => {
+
+const webinarsASC = webinars.sort((a, b) => {
+  const dateA = new Date(a.date)
+  const dateB = new Date(b.date)
+  if (dateA > dateB) return -1
+  if (dateA < dateB) return 1
+  return 0
+})
+
   return (
     <section className={stls.container}>
       <Wrapper>
         <h1 className={stls.title}>Вебинары</h1>
         <ul className={stls.webinars}>
           {webinars &&
-            webinars.map((webinar, idx) => (
+            webinarsASC.map((webinar, idx) => (
               <li key={`CardWebinarAlt-${idx}`} className={stls.webinar}>
                 <Popup
                   trigger={
