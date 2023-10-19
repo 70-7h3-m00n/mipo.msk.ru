@@ -46,7 +46,7 @@ const SectionOurGraduates = ({ classNames }: TSectionOurGraduates) => {
           <h2 className={stls.title}>Наши выпускники</h2>
           <p className={stls.p}>
             По опросам наших студентов в{' '}
-            <span className={stls.highlight}>2021 году:</span>
+            <span className={stls.highlight}>2022 году:</span>
           </p>
           <ul className={stls.list}>
             {list.map((item, idx) => (

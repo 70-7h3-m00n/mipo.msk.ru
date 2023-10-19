@@ -1,7 +1,7 @@
 import stls from '@/styles/components/imgs/diplomas/ImgSupplement.module.sass'
 import { TypeImg } from '@/types/index'
 import { ImgTemplate } from '@/components/imgs'
-import pic from '@/public/assets/imgs/diplomas/supplement.jpg'
+import pic from '@/public/assets/imgs/diplomas/supplement_mba.png'
 
 const ImgSupplement = ({ classNames = [], width, height }: TypeImg) => {
   return (

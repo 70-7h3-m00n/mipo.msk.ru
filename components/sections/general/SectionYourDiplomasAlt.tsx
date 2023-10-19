@@ -11,6 +11,7 @@ import { PopupImage } from '@/components/popups'
 import {
   ImgCertificate,
   ImgDiplomaInternational,
+  ImgDiplomaInternationalMba,
   ImgDiplomaTemplate,
   ImgSupplement
 } from '@/components/imgs'
@@ -27,7 +28,7 @@ const SectionYourDiplomasAlt = ({ classNames }: TSectionYourDiplomasAlt) => {
 
   const atMba = program?.category?.type === 'mba'
 
-  const imgDiploma = atMba ? <ImgDiplomaInternational /> : <ImgCertificate />
+  const imgDiploma = atMba ? <ImgDiplomaInternationalMba /> : <ImgCertificate />
   const imgSupplement = atMba ? <ImgSupplement /> : <ImgDiplomaInternational />
 
   return (

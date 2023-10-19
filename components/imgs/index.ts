@@ -4,6 +4,7 @@ export { default as ImgApplication } from '@/components/imgs/diplomas/ImgApplica
 export { default as ImgDiploma } from '@/components/imgs/diplomas/ImgDiploma'
 export { default as ImgDiploma1 } from '@/components/imgs/diplomas/ImgDiploma1'
 export { default as ImgDiplomaInternational } from '@/components/imgs/diplomas/ImgDiplomaInternational'
+export { default as ImgDiplomaInternationalMba } from '@/components/imgs/diplomas/ImgDiplomaInternationalMba'
 export { default as ImgDiplomaTemplate } from '@/components/imgs/diplomas/ImgDiplomaTemplate'
 export { default as ImgSupplement } from '@/components/imgs/diplomas/ImgSupplement'
 export { default as ImgSupplementBack } from '@/components/imgs/diplomas/ImgSupplementBack'
