@@ -7,9 +7,12 @@ import { calculateClosestAdmission } from '@/helpers/index'
 import programContext from '@/context/program/programContext'
 import { ImgTemplate } from '@/components/imgs'
 import defaultSrc from '@/public/assets/imgs/diplomas/diploma.jpg'
+import defaultSrcMba from '@/public/assets/imgs/diplomas/certificate_mba.png'
 
 const ImgDiplomaTemplate = ({ classNames = [], width, height }: TypeImg) => {
   const { program } = useContext(programContext)
+
+  const atMba = program?.category?.type === 'mba'
 
   const now = new Date()
 
@@ -99,7 +102,7 @@ const ImgDiplomaTemplate = ({ classNames = [], width, height }: TypeImg) => {
   return (
     <ImgTemplate
       classNames={classNames}
-      src={src || defaultSrc}
+      src={atMba && defaultSrcMba || src || defaultSrc}
       alt='Диплом МИПО'
       width={width || 1131}
       height={height || 800}

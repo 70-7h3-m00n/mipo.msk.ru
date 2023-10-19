@@ -155,9 +155,9 @@ const Footer = () => {
                     <a href={number.href} className={stls.number}>
                       {number.val}
                     </a>
-                    <a href={numberAlt.href} className={stls.number}>
+                    {/* <a href={numberAlt.href} className={stls.number}>
                       {numberAlt.val}
-                    </a>
+                    </a> */}
                   </div>
               }
 
@@ -165,9 +165,9 @@ const Footer = () => {
                 {city}, {street}
               </div>
               <div className={stls.sm}>
-                <BtnVk dark mlzero />
+                {/* <BtnVk dark mlzero /> */}
                 <BtnWhatsapp dark />
-                <BtnTelegram dark />
+                {/* <BtnTelegram dark /> */}
               </div>
               <div className={stls.edduBlock}>
                 {
