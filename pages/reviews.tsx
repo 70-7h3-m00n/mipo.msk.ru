@@ -5,7 +5,7 @@ import { routesFront } from '@/config/index'
 import { usePageHandleContext } from '@/hooks/index'
 import { routeReviews } from '@/data/routes'
 import companyName from '@/data/companyName'
-import Reviews from '@/components/sections/Reviews'
+import Reviews from '@/components/sections/all/Reviews'
 
 const ReviewsPage = ({ programs, reviews }) => {
   usePageHandleContext({ programs })

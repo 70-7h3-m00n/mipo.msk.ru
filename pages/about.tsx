@@ -1,4 +1,4 @@
-import About from '@/components/sections/About'
+import About from '@/components/sections/all/About'
 import { NextSeo } from 'next-seo'
 import truncate from 'truncate'
 import { handleGetStaticProps } from '@/helpers/index'
