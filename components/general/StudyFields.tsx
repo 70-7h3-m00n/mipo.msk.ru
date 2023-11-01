@@ -38,7 +38,6 @@ const StudyFields = ({
       : ofType === 'mba'
       ? studyFieldsMbas
       : studyFields
-
   return (
     <ul
       className={classNames({

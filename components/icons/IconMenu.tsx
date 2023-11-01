@@ -1,7 +1,11 @@
 import stls from '@/styles/components/icons/IconMenu.module.sass'
 import classNames from 'classnames'
+import { useRouter } from 'next/router'
 
 const IconMenu = ({ calpha = false }) => {
+  const router = useRouter()
+  const redirectHeader = router.asPath.includes('new-courses')
+
   return (
     <div
       className={classNames({ [stls.container]: true, [stls.calpha]: calpha })}>
@@ -10,7 +14,7 @@ const IconMenu = ({ calpha = false }) => {
           y1='1'
           x2='20'
           y2='1'
-          stroke='white'
+          stroke={redirectHeader? 'black': 'white'}
           strokeWidth='2'
           strokeLinejoin='round'
         />
@@ -18,7 +22,7 @@ const IconMenu = ({ calpha = false }) => {
           y1='8'
           x2='10'
           y2='8'
-          stroke='white'
+          stroke={redirectHeader? 'black': 'white'}
           strokeWidth='2'
           strokeLinejoin='round'
         />
