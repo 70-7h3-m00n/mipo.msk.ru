@@ -93,6 +93,10 @@ const LegalDocs = () => {
     {
       href: '/documents/polozhieniie-o-promiezhutochnoi-i-itoghovoi-attiestatsii.pdf',
       val: 'Положение о промежуточной и итоговой аттестации'
+    },
+    {
+      href: '/documents/Положение_о_порядке_перевода_НАНО_МИПО.pdf',
+      val: 'Положение о порядке перевода'
     }
   ]
   return (
