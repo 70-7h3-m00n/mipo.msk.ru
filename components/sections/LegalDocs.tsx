@@ -43,6 +43,10 @@ const LegalDocs = () => {
     {
       href: '/documents/pravila-priiema-na-obuchieniie.pdf',
       val: 'Правила приема на обучение'
+    },
+    {
+      href: '/documents/УСТАВ.pdf',
+      val: 'Устав образовательной организации'
     }
   ]
   const listRight = [
