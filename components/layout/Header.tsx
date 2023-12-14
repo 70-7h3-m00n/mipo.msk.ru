@@ -150,9 +150,7 @@ const Header = () => {
               </Wrapper>
             </div>
 
-            <div style={{
-              background: 'linear-gradient(101deg, rgba(170, 224, 255, 0.4) 15.37%, rgba(225, 243, 255, 0.4) 82.47%)'
-            }}>
+            <div className={stls.mobileCourse}>
               <Wrapper>
                 <div className={stls.row} style={{
                   padding: '8px 0'

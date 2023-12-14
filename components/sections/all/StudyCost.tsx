@@ -1,4 +1,4 @@
-import stls from '@/styles/components/sections/StudyCost.module.sass'
+import stls from '@/styles/components/sections/all/StudyCost.module.sass'
 import { useContext } from 'react'
 import cn from 'classnames'
 import { colors } from '@/config/index'
