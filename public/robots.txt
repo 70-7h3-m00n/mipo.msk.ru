@@ -1,3 +1,10 @@
+# *
 User-agent: *
 Disallow: /*?
 Clean-param: ?
+
+# Host
+Host: https://mipo.msk.ru
+
+# Sitemaps
+Sitemap: https://mipo.msk.ru/sitemap.xml
