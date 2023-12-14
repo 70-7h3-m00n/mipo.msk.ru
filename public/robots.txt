@@ -1,3 +1,3 @@
-User-agent: Yandex
-Disallow: /*?from=
-Clean-param: from
+User-agent: *
+Disallow: /*?
+Clean-param: ?
