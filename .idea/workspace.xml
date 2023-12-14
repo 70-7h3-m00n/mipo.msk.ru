@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="046e7617-48fc-41ef-ae8d-62159170c5b1" name="Changes" comment="fix: Get params test-2">
+      <change beforePath="$PROJECT_DIR$/next-sitemap.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next-sitemap.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/robots.txt" beforeDir="false" afterPath="$PROJECT_DIR$/public/robots.txt" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript JSX File" />
+        <option value="Sass File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="QODANA_PROBLEMS_VIEW_TAB" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2Xx719ykTeUjGtiU5UUSlQ0f0Vo" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/Работа/Instetut/project/mipo/mipo.msk.ru/public/assets/imgs/new-course",
+    "list.type.of.created.stylesheet": "Sass",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "yarn",
+    "npm.dev.executor": "Run",
+    "npm.postbuild.executor": "Run",
+    "settings.editor.selected.configurable": "configurable.group.appearance",
+    "ts.external.directory.path": "D:\\Работа\\Instetut\\project\\mipo\\mipo.msk.ru\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Работа\Instetut\project\mipo\mipo.msk.ru\public\assets\imgs\new-course" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.postbuild">
+    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="postbuild" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="postbuild" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.postbuild" />
+        <item itemvalue="npm.dev" />
+        <item itemvalue="npm.build" />
+        <item itemvalue="npm.dev" />
+        <item itemvalue="npm.build" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="046e7617-48fc-41ef-ae8d-62159170c5b1" name="Changes" comment="" />
+      <created>1699558660422</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1699558660422</updated>
+      <workItem from="1699558663302" duration="8546000" />
+      <workItem from="1700219814542" duration="752000" />
+      <workItem from="1700224477582" duration="47000" />
+      <workItem from="1700224539877" duration="693000" />
+      <workItem from="1700241048400" duration="3754000" />
+      <workItem from="1700334140528" duration="16533000" />
+      <workItem from="1700672873058" duration="7817000" />
+      <workItem from="1700777261185" duration="1529000" />
+      <workItem from="1700909216113" duration="1358000" />
+      <workItem from="1700946150741" duration="13000" />
+      <workItem from="1700946617241" duration="599000" />
+      <workItem from="1700950504873" duration="599000" />
+      <workItem from="1700993466061" duration="13338000" />
+      <workItem from="1701165348136" duration="11000" />
+      <workItem from="1701177033608" duration="1280000" />
+      <workItem from="1701288331006" duration="15284000" />
+      <workItem from="1701500785017" duration="13036000" />
+      <workItem from="1701680238669" duration="12000" />
+      <workItem from="1701680341380" duration="629000" />
+      <workItem from="1701681215898" duration="445000" />
+      <workItem from="1701681678312" duration="872000" />
+      <workItem from="1701682564640" duration="19747000" />
+      <workItem from="1701846688088" duration="4900000" />
+      <workItem from="1701939294992" duration="36000" />
+      <workItem from="1701939365861" duration="123000" />
+      <workItem from="1701939494945" duration="690000" />
+      <workItem from="1702073813010" duration="1321000" />
+      <workItem from="1702120471884" duration="28000" />
+      <workItem from="1702196074634" duration="1000" />
+      <workItem from="1702485772776" duration="16896000" />
+      <workItem from="1702553818791" duration="2496000" />
+    </task>
+    <task id="LOCAL-00001" summary="feature(new course page): test5">
+      <option name="closed" value="true" />
+      <created>1700333838981</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1700333838981</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feature(new course page): test6">
+      <option name="closed" value="true" />
+      <created>1700335350650</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1700335350650</updated>
+    </task>
+    <task id="LOCAL-00003" summary="feature(new course page): test7">
+      <option name="closed" value="true" />
+      <created>1700344041033</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1700344041033</updated>
+    </task>
+    <task id="LOCAL-00004" summary="feature(new course page): test8">
+      <option name="closed" value="true" />
+      <created>1700777448228</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1700777448228</updated>
+    </task>
+    <task id="LOCAL-00005" summary="feature(new course page): test9">
+      <option name="closed" value="true" />
+      <created>1701209040624</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1701209040624</updated>
+    </task>
+    <task id="LOCAL-00006" summary="feature(new course page): test10">
+      <option name="closed" value="true" />
+      <created>1701681549574</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1701681549574</updated>
+    </task>
+    <task id="LOCAL-00007" summary="feature(new course page): test11">
+      <option name="closed" value="true" />
+      <created>1701804403403</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1701804403403</updated>
+    </task>
+    <task id="LOCAL-00008" summary="feature(new course page): test12">
+      <option name="closed" value="true" />
+      <created>1701808435653</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1701808435653</updated>
+    </task>
+    <task id="LOCAL-00009" summary="fix: Get params">
+      <option name="closed" value="true" />
+      <created>1702554193935</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1702554193935</updated>
+    </task>
+    <task id="LOCAL-00010" summary="fix: Get params">
+      <option name="closed" value="true" />
+      <created>1702554663679</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1702554663679</updated>
+    </task>
+    <task id="LOCAL-00011" summary="fix: Get params test-2">
+      <option name="closed" value="true" />
+      <created>1702563217597</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1702563217597</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="test" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feature(new course page): test5" />
+    <MESSAGE value="feature(new course page): test6" />
+    <MESSAGE value="feature(new course page): test7" />
+    <MESSAGE value="feature(new course page): test8" />
+    <MESSAGE value="feature(new course page): test9" />
+    <MESSAGE value="feature(new course page): test10" />
+    <MESSAGE value="feature(new course page): test11" />
+    <MESSAGE value="feature(new course page): test12" />
+    <MESSAGE value="fix: Get params" />
+    <MESSAGE value="fix: Get params test-2" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: Get params test-2" />
+  </component>
+</project>
