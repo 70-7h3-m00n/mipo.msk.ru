@@ -24,8 +24,8 @@ module.exports = {
     policies: [
       {
         userAgent: '*',
-        allow: '/'
-        // disallow: '/'
+        disallow: '/*?',
+        cleanParam: 'some_param_to_clean',
       }
     ]
   }
