@@ -26,10 +26,8 @@ type TProgramInfoAltProps = TPropClassNames
 
 const ProgramInfoAlt: FC<TProgramInfoAltProps> = ({ classNames }) => {
   const { program } = useContext(ProgramContext)
-  const altStyles =
-    program?.category?.type === 'mba' ||
-    program?.category?.type === 'profession'
-
+  const altStyles = program?.category?.type === 'profession'
+  const atMba = program?.category?.type === 'mba'
   const atCourse = program?.category?.type === 'course'
 
   const vals = [
@@ -81,7 +79,7 @@ const ProgramInfoAlt: FC<TProgramInfoAltProps> = ({ classNames }) => {
     },
     {
       key: 'Документ об окончании:',
-      val: atCourse ? 'Удостоверение' : 'Диплом о переподготовке',
+      val: atCourse ? 'Удостоверение' : atMba ? 'Диплом MBA' : 'Диплом о переподготовке',
       icon: IconGeneralDocument,
       info: {
         label: (
@@ -97,10 +95,12 @@ const ProgramInfoAlt: FC<TProgramInfoAltProps> = ({ classNames }) => {
                 ? 'Удостоверение о повышении квалификации, это официальный документ свидетельствующий, об актуализации теоретических и практических знаний'
                 : altStyles
                 ? 'Диплом о переподготовке — это официальный документ, который подтверждает прохождение программы.'
+                : atMba
+                ? 'После окончания обучения и защиты дипломного проекта каждый выпускник получает: Диплом «Мастер делового администрирования — Master of Business Administration (MBA)». Диплом о профессиональной переподготовке, установленного образца Министерством образования и науки. Общеевропейское приложение к диплому (Diploma Supplement), не требующее дополнительного перевода или заверения для предъявления в зарубежных организациях.'
                 : 'Диплом о переподготовке — это официальный документ, который даёт право вести профессиональную деятельность по полученной специальности.'}
             </p>
             <p className={stls.infoContentP}>
-              Все выданные дипломы вносятся в{' '}
+                Выданный диплом вносится в{' '}
               <span
                 className={cn(stls.highlight, { [stls.altStyles]: altStyles })}>
                 ФРДО — Федеральный реестр сведений о документах об образовании

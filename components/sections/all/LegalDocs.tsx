@@ -43,6 +43,10 @@ const LegalDocs = () => {
     {
       href: '/documents/pravila-priiema-na-obuchieniie.pdf',
       val: 'Правила приема на обучение'
+    },
+    {
+      href: '/documents/УСТАВ.pdf',
+      val: 'Устав образовательной организации'
     }
   ]
   const listRight = [
@@ -93,6 +97,10 @@ const LegalDocs = () => {
     {
       href: '/documents/polozhieniie-o-promiezhutochnoi-i-itoghovoi-attiestatsii.pdf',
       val: 'Положение о промежуточной и итоговой аттестации'
+    },
+    {
+      href: '/documents/Положение_о_порядке_перевода_НАНО_МИПО.pdf',
+      val: 'Положение о порядке перевода НАНО МИПО'
     }
   ]
   return (

@@ -1,6 +1,7 @@
 # *
 User-agent: *
-Allow: /
+Disallow: /*?
+Clean-param: ?
 
 # Host
 Host: https://mipo.msk.ru
