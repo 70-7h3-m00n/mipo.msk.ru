@@ -16,8 +16,7 @@ const useHandleContext = ({
   curProgramsType = null,
   curProgramsStudyFieldSlug = null
 }: TypeUseHandleContextProps) => {
-  const { setPrograms, setCurProgramsType, setCurProgramsStudyFieldSlug } =
-    useContext(ProgramsContext)
+  const { setPrograms, setCurProgramsType, setCurProgramsStudyFieldSlug } = useContext(ProgramsContext)
   const { setProgram } = useContext(ProgramContext)
 
   useEffect(() => {

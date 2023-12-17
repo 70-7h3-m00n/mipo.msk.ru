@@ -7,11 +7,9 @@ import {
 } from '@/components/programs'
 import ProgramsFilters from '@/components/layout/ProgramsFilters'
 import ProgramsContext from '@/context/programs/programsContext'
-import { useContext, useEffect } from 'react'
-import { useRouter } from 'next/router'
+import { useContext } from 'react'
 import classNames from 'classnames'
 import { filterProgramsByStudyField } from '@/helpers/index'
-import { routeCourses, routeMBA, routeProfessions } from '@/data/routes'
 import { TypeCategory } from '@/types/index'
 
 type ProgramsType = {
@@ -37,13 +35,11 @@ const Programs = ({
     courses,
     professions,
     mbas,
+    newCourse,
     curProgramsStudyFieldSlug,
     filteredPrograms,
     searchTerm
   } = useContext(ProgramsContext)
-
-  const router = useRouter()
-
   const coursesFiltered =
     curProgramsStudyFieldSlug &&
     filterProgramsByStudyField({
@@ -76,16 +72,6 @@ const Programs = ({
     data.professions = data.professions.filter((item, idx) => idx < 8)
     data.mbas = data.mbas.filter((item, idx) => idx < 8)
   }
-
-  // useEffect(() => {
-  //   ofType === 'course' &&
-  //     data.courses.length === 0 &&
-  //     router.replace(routeCourses)
-  //   ofType === 'profession' &&
-  //     data.professions.length === 0 &&
-  //     router.replace(routeProfessions)
-  //   ofType === 'mba' && data.mbas.length === 0 && router.replace(routeMBA)
-  // }, [])
 
   const filteredProgramsIds = filteredPrograms.map(item => item.id)
 
