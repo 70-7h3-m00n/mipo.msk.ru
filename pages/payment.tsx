@@ -19,6 +19,7 @@ const PaymentPage = ({ programs }) => {
 
   return (
     <>
+      {/*//@ts-ignore */}
       <NextSeo
         title={`Оплата | ${companyName}`}
         description={truncate(

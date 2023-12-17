@@ -12,6 +12,7 @@ const WebinarsPage = ({ programs, webinars }) => {
 
   return (
     <>
+      {/*//@ts-ignore */}
       <NextSeo
         title={`Вебинары | ${companyName}`}
         description={truncate(

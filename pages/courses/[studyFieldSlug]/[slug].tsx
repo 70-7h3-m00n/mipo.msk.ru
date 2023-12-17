@@ -20,6 +20,7 @@ const CoursePage = ({ programs, program, studyFieldSlug, reviews }) => {
 
   return (
     <>
+      {/*//@ts-ignore */}
       <NextSeo
         title={`${program.title} | Повышение квалификации | ${companyName}`}
         description={truncate(program.description, 120)}

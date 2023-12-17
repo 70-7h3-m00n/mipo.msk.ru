@@ -30,6 +30,11 @@ const ProgramsState = props => {
     type: 'mba'
   })
 
+  const newCourse = filterProgramsByType({
+    programs: initialProgramsState,
+    type: 'mba'
+  })
+
   const studyFields = getStudyFields(initialProgramsState)
 
   const studyFieldsProfessions = getStudyFields(professions)
@@ -38,11 +43,14 @@ const ProgramsState = props => {
 
   const studyFieldsMbas = getStudyFields(mbas)
 
+  const studyFieldsNewCourse = getStudyFields(newCourse)
+
   const initialState = {
     programs: initialProgramsState,
     courses: courses && courses?.length ? courses : [],
     professions: professions && professions?.length ? professions : [],
     mbas: mbas && mbas?.length ? mbas : [],
+    newCourse: newCourse && newCourse.length ? newCourse : [],
     studyFields: studyFields && studyFields?.length ? studyFields : [],
     studyFieldsCourses:
       studyFieldsCourses && studyFieldsCourses?.length
@@ -54,6 +62,7 @@ const ProgramsState = props => {
         : [],
     studyFieldsMbas:
       studyFieldsMbas && studyFieldsMbas?.length ? studyFieldsMbas : [],
+    studyFieldsNewCourse: studyFieldsNewCourse && studyFieldsNewCourse?.length ? studyFieldsNewCourse : [],
     curProgramsType: props?.pageProps?.program?.category?.type || null,
     curProgramsStudyFieldSlug:
       props?.pageProps?.program?.study_field?.slug || null,
@@ -92,6 +101,7 @@ const ProgramsState = props => {
         courses: state.courses,
         professions: state.professions,
         mbas: state.mbas,
+        newCourse: state.newCourse,
         studyFields: state.studyFields,
         studyFieldsProfessions: state.studyFieldsProfessions,
         studyFieldsCourses: state.studyFieldsCourses,

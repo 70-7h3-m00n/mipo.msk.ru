@@ -27,6 +27,7 @@ const MBAStudyFieldPage = ({ programs, studyFieldSlug }) => {
 
   return (
     <>
+      {/*//@ts-ignore */}
       <NextSeo
         title={`${studyFieldLabel} | MBA | ${companyName}`}
         description={truncate(`${companyName} MBA`, 120)}

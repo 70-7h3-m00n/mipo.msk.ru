@@ -13,7 +13,7 @@ module.exports =
     // },
     poweredByHeader: false,
     i18n: {
-      locales: ['ru', 'kz', 'uz'],
+      locales: ['ru'],
       defaultLocale: 'ru',
       localeDetection: false
     },

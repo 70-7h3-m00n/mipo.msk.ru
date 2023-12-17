@@ -12,6 +12,7 @@ const ProfessionsPage = ({ programs }) => {
 
   return (
     <>
+      {/*//@ts-ignore */}
       <NextSeo
         title={`Профессиональная переподготовка | ${companyName}`}
         description={truncate(

@@ -1,0 +1,123 @@
+.blockHeader
+  background: #e8f2f8
+  width: 50%
+  border-radius: 20px 20px 0 0
+  padding: 40px 60px 0
+
+  &:before
+    content: ""
+    position: absolute
+    top: 80px
+    right: 573px
+    width: 68px
+    height: 95px
+    background: #e8f2f8
+    border-radius: 100%
+
+  h2
+    margin: 0
+    font-size: 48px
+    font-weight: 700
+    line-height: 57px
+
+  @media(max-width: 979px)
+    width: 100%
+    border-radius: 0
+    h2
+      font-size: 38px
+    &:before
+      display: none
+
+  @media (max-width: 567px)
+    padding: 20px 20px 0 20px
+
+.blockContent
+  background: #e8f2f8
+  border-radius: 0 20px 20px 20px
+  padding: 50px
+
+  @media(max-width: 979px)
+    border-radius: 0
+
+  @media (max-width: 567px)
+    padding: 20px
+
+  .profession
+    display: flex
+    justify-content: space-between
+    align-items: baseline
+    border-bottom: 1px solid black
+
+    div
+      width: 50%
+      padding-left: 10px
+
+      h2
+        color: #6165D7
+        font-size: 22px
+        font-weight: 400
+        line-height: 30px
+
+      h3
+        font-size: 28px
+        font-weight: 700
+        line-height: 36px
+  @media (max-width: 567px)
+    .profession
+      div
+        h2
+          font-size: 18px
+        h3
+          font-size: 20px
+  .skills
+    display: flex
+    position: relative
+    padding-top: 30px
+    padding-left: 10px
+
+    .contentList, .contentDiploma
+      width: 60%
+      h2
+        font-size: 24px
+        font-weight: 700
+        line-height: 33px
+      p
+        font-size: 22px
+        font-weight: 400
+        line-height: 30px
+      ul
+        padding: 0
+        li
+          list-style-type: none
+          display: flex
+          align-items: baseline
+          gap: 20px
+          p
+            max-width: calc(100% - 43px)
+    @media (max-width: 567px)
+      flex-direction: column
+      .contentList, .contentDiploma
+        width: 100%
+        h2
+          font-size: 18px
+        p
+          font-size: 16px
+
+    .contentDiploma
+      width: 40%
+      @media (max-width: 567px)
+        width: 100%
+
+  .wrapperImage
+    position: absolute
+    right: 0
+    bottom: 0
+    width: 412px
+    height: 350px
+
+    @media(max-width: 979px)
+      width: 312px
+      height: 250px
+
+    @media (max-width: 767px)
+      position: relative

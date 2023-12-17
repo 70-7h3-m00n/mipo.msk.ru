@@ -17,6 +17,7 @@ const LegalPage = ({ programs }) => {
 
   return (
     <>
+      {/*//@ts-ignore */}
       <NextSeo
         title={`Контакты | ${companyName}`}
         description={truncate(

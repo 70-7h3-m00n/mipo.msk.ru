@@ -1,0 +1,149 @@
+.header
+  text-align: center
+  font-size: 48px
+  font-weight: 700
+  line-height: 57px
+
+  @media (max-width: 979px)
+    font-size: 44px
+
+  @media (max-width: 767px)
+    font-size: 38px
+
+.blockImage
+  position: relative
+  width: 366px
+  height: 366px
+
+  @media (max-width: 767px)
+    width: 266px
+    height: 266px
+
+.blockContent
+  display: flex
+  justify-content: space-between
+
+  @media (max-width: 767px)
+    flex-direction: column
+    align-items: center
+
+  .rightContent, .leftContent
+    width: calc((100% - 400px) /2)
+    padding: 20px 0
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+
+    @media (max-width: 979px)
+      width: calc(96%  /2)
+
+    @media (max-width: 767px)
+      width: 100%
+    p
+      text-align: right
+      font-size: 22px
+      font-weight: 400
+      line-height: 30px
+
+      @media (max-width: 979px)
+        text-align: center
+
+  .rightContent
+    p
+      text-align: left
+
+      @media (max-width: 979px)
+        text-align: center
+
+.blockFormContent
+  margin: 60px 0
+  padding: 55px
+  display: flex
+  justify-content: space-between
+  border-radius: 20px
+  background: linear-gradient(97deg, #E6F5F9 11.18%, #EBE8F5 93.64%)
+
+  @media (max-width: 767px)
+    flex-direction: column
+    padding: 20px
+
+  .content
+    @media (max-width: 979px)
+      width: 48%
+
+    @media (max-width: 767px)
+      width: 100%
+
+    .wrapperImagePresent
+      position: relative
+      width: 138px
+      height: 138px
+    h2
+      font-size: 40px
+      font-weight: 700
+      line-height: 56px
+      margin: 0
+
+      @media (max-width: 979px)
+        font-size: 38px
+        line-height: 48px
+
+      @media (max-width: 767px)
+        font-size: 34px
+        line-height: 44px
+    h3
+      width: 496px
+      font-size: 28px
+      font-weight: 700
+      line-height: 36px
+      margin: 0
+
+      @media (max-width: 979px)
+        width: 100%
+
+      span
+        color: #6165D7
+
+  .form
+    width: calc(100% / 3)
+
+    @media (max-width: 979px)
+      width: 48%
+
+    @media (max-width: 767px)
+      width: 100%
+
+    input
+      width: 100%
+      margin-top: 30px
+      border-radius: 90px
+      background: #FFF
+      height: 70px
+      padding: 5px 20px
+      font-size: 22px
+      font-weight: 400
+      line-height: 30px
+
+      @media (max-width: 767px)
+        font-size: 18px
+        padding: 5px 10px
+
+    .btn, .disabledBtn
+      margin-top: 30px
+      width: 100%
+
+    .disabledBtn
+      opacity: 0.7
+
+.decstop
+  display: block
+
+  @media (max-width: 979px)
+    display: none
+
+.mobile
+  display: none
+
+  @media (max-width: 979px)
+    margin: 20px auto
+    display: block
