@@ -1,20 +1,23 @@
 import styles from '@/styles/components/sections/new-course/TrainEmployees.module.sass'
 import classNames from 'classnames'
-import date from '@/data/mock/new-course/data.json'
 import { ImgTemplate } from '@/components/imgs'
 import BtnNewCourse from '@/components/btns/BtnNewCourse'
 import urlImg from "@/public/assets/imgs/new-course/group-img.png"
 import urlImgMobile from "@/public/assets/imgs/new-course/mobileImage.png"
+import fetchCourse from '../../../api/fetchCourse'
 
+interface Props {
+  data: Awaited<ReturnType<typeof fetchCourse>>
+}
 
-const TrainEmployees = () => {
+const TrainEmployees = ({data}:Props) => {
   return (
     <section className={styles.trainEmployees}>
       <h2 className={classNames('container', styles.header)}>Обучают своих сотрудников у нас</h2>
 
       <ul className={classNames('container', styles.listCompany)}>
         {
-          date.listCompany.map((item, i) => (
+          data.listCompany.map((item, i) => (
             <li className={styles.item} key={i}>
               <div>
                 <ImgTemplate src={item.image.url} alt={'img'} layout={'fill'} />

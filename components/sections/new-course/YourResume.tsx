@@ -1,9 +1,14 @@
-import data from '@/data/mock/new-course/data.json'
 import styles from '@/styles/components/sections/new-course/YourResume.module.sass'
 import urlChecked from '@/public/assets/imgs/new-course/checked-summary.png'
 import urlIllustration from '@/public/assets/imgs/new-course/Illustration.png'
 import { ImgTemplate } from '@/components/imgs'
-const YourResume = () => {
+import fetchCourse from '../../../api/fetchCourse'
+
+interface Props {
+  data: Awaited<ReturnType<typeof fetchCourse>>
+}
+
+const YourResume = ({data}:Props) => {
   return (
     <section className={'container'}>
       <div className={styles.blockHeader}>

@@ -1,11 +1,11 @@
 import styles from '@/styles/components/sections/new-course/SignUpProgram.module.sass'
 import urlPointer from '@/public/assets/imgs/new-course/pointer.png'
 import { ImgTemplate } from '@/components/imgs'
-import data from '@/data/mock/new-course/data.json'
 import CardListProgram from '@/components/cards/CardListProgram'
 import CardPriceNew from '@/components/cards/CardPriceNew'
 import CardSmartCourse from '@/components/cards/CardSmartCourse'
 import CardProCourse from '@/components/cards/CardProCourse'
+import fetchCourse from '../../../api/fetchCourse'
 
 const list = [
   {
@@ -22,9 +22,13 @@ const list = [
   }
 ]
 
-const SignUpProgram = () => {
+interface Props {
+  data: Awaited<ReturnType<typeof fetchCourse>>
+}
+
+const SignUpProgram = ({data}:Props) => {
   const variant = data.trainingProgram.map((item) =>item.pro).includes(true)
-  console.log(variant)
+
   return (
     <section className={styles.signUpProgram}>
       <div className={'container'}>
@@ -38,13 +42,13 @@ const SignUpProgram = () => {
           {
             variant ?
               <>
-                <CardSmartCourse />
-                <CardProCourse />
+                <CardSmartCourse data={data} />
+                <CardProCourse data={data} />
               </>
               :
               <>
-                <CardPriceNew />
-                <CardListProgram />
+                <CardPriceNew data={data} />
+                <CardListProgram data={data} />
               </>
           }
         </div>

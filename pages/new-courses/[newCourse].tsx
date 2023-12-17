@@ -1,34 +1,32 @@
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import PagesNewProgram from '@/components/pages/PagesNewProgram'
+import fetchCourse from '../../api/fetchCourse'
+import fetchPathsCourses from '../../api/fetchPathsCourses'
 
-const NewCoursePage: NextPage = ({}) => {
-
-  return (
-    <>
-      <PagesNewProgram />
-    </>
-  )
+interface PageCourseProps {
+  course: Awaited<ReturnType<typeof fetchCourse>>
 }
 
-export const getStaticProps: GetStaticProps = async ({ params: { slug, studyFieldSlug } }) => {
+const NewCoursePage: NextPage<PageCourseProps> = ({course}) => {
+  return (<PagesNewProgram course={course} />)
+}
+
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+  const course = await fetchCourse(String(params!.newCourse))
   return {
     props: {
-      test: []
+      course
     }
   }
 }
 
 
 export const getStaticPaths: GetStaticPaths = async () => {
+  const newCourse = await fetchPathsCourses()
+
   return {
-    paths: [
-      {
-        params: {
-          newCourse: 'test',
-        },
-      }
-    ],
-    fallback: true
+    paths: newCourse,
+    fallback: 'blocking'
   }
 }
 

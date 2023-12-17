@@ -1,11 +1,15 @@
-import data from '@/data/mock/new-course/data.json'
 import styles from '@/styles/components/sections/new-course/Study.module.sass'
 import image2 from '@/public/assets/imgs/new-course/check-one.png'
 import { ImgTemplate } from '@/components/imgs'
 import CardMotion from '@/components/cards/CardMotion'
 import IconPro from '@/components/icons/IconPro'
+import fetchCourse from '../../../api/fetchCourse'
 
-const Study = () => {
+interface Props {
+  data: Awaited<ReturnType<typeof fetchCourse>>
+}
+
+const Study = ({data}: Props) => {
   return (
     <section className={'container'}
              style={{

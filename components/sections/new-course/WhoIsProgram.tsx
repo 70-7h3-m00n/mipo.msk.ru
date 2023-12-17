@@ -1,9 +1,13 @@
 import styles from '@/styles/components/sections/new-course/WhoIsProgram.module.sass'
-import data from '@/data/mock/new-course/data.json'
 import { ImgTemplate } from '@/components/imgs'
 import classNames from 'classnames'
+import fetchCourse from '../../../api/fetchCourse'
 
-const WhoIsProgram = () => {
+interface Props {
+  data: Awaited<ReturnType<typeof fetchCourse>>
+}
+
+const WhoIsProgram = ({data}:Props) => {
   return (
     <section className={'container'}>
       <div className={styles.blockHeader}>

@@ -1,12 +1,16 @@
 import styles from '@/styles/components/sections/new-course/TrainingProgram.module.sass'
 import checkUrlIcon from '@/public/assets/imgs/new-course/check-fill.png'
 import { ImgTemplate } from '@/components/imgs'
-import data from '@/data/mock/new-course/data.json'
 import BtnNewCourse from '@/components/btns/BtnNewCourse'
 import IconPro from '@/components/icons/IconPro'
 import { useState } from 'react'
+import fetchCourse from '../../../api/fetchCourse'
 
-const TrainingProgram = () => {
+interface Props {
+  data: Awaited<ReturnType<typeof fetchCourse>>
+}
+
+const TrainingProgram = ({data}: Props) => {
   const training = data.trainingProgram.filter((item) => !item.pro)
   const proTraining = data.trainingProgram .filter((item) => item.pro)
   const [counter, setCounter] = useState(proTraining.length - 1 > 2 ? 2: proTraining.length)
@@ -71,7 +75,7 @@ const TrainingProgram = () => {
 
                       <ol>
                         {
-                          card.list.map((item, index) => (
+                          card.list?.map((item, index) => (
                             <li key={index}>{item.item}</li>
                           ))
                         }
@@ -81,10 +85,14 @@ const TrainingProgram = () => {
                 }
               </ul>
             </div>
-
-            <div className={styles.wrapperBtn} >
-              <BtnNewCourse onClick={getFullTraining} text={'Открыть полную программу'} />
-            </div>
+            {
+              data.trainingProgram.length > 7 ?
+                <div className={styles.wrapperBtn}>
+                  <BtnNewCourse onClick={getFullTraining} text={'Открыть полную программу'} />
+                </div>
+                :
+                <></>
+            }
           </div>
         </div>
       </div>

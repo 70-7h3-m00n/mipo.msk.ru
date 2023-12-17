@@ -1,15 +1,20 @@
 import React from 'react'
 import styles from '@/styles/components/sections/new-course/HeroNewProgram.module.sass'
-import data from '@/data/mock/new-course/data.json'
 import Image from 'next/image'
 import urlImage from '@/public/assets/imgs/sections/SectionHeroProgram/check-course.png'
 import dataListTrainingInfo from '@/data/lists/listTrainengInfo'
 import ImgTemplate from '../../imgs/ImgTemplate'
 import classNames from 'classnames'
 import BtnNewCourse from '@/components/btns/BtnNewCourse'
+import fetchCourse from '../../../api/fetchCourse'
+import routesBack from '@/config/routesBack'
 
 
-const HeroNewProgram = () => {
+interface Props {
+  data: Awaited<ReturnType<typeof fetchCourse>>
+}
+
+const HeroNewProgram = ({data}:Props) => {
   const listTrainingInfo = Object.keys(data.listTrainingInfo)
 
   return (

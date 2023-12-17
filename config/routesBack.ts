@@ -2,6 +2,7 @@ import { dev } from '@/config/index'
 
 type TypeRoutesBack = {
   root: 'http://localhost:1337' | 'https://api.mipo.msk.ru'
+  newRoot: 'https://api.instprof.online',
   home: '/'
   programs: '/programs' // /programs || /programs/:id
   teachers: '/teachers'
@@ -16,6 +17,7 @@ type TypeRoutesBack = {
 const routesBack: TypeRoutesBack = {
   // root: dev ? 'http://localhost:1337' : 'https://api.mipo.msk.ru',
   root: 'https://api.mipo.msk.ru',
+  newRoot: 'https://api.instprof.online',
   home: '/',
   programs: '/programs', // /programs || /programs/:id
   teachers: '/teachers',

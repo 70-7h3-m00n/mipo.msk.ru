@@ -1,8 +1,12 @@
-import data from '@/data/mock/new-course/data.json'
 import BtnNewCourse from '@/components/btns/BtnNewCourse'
 import styles from '@/styles/components/cards/CardPriceNew.module.sass'
+import fetchCourse from '../../api/fetchCourse'
 
-const CardPriceNew = () => {
+interface Props {
+  data: Awaited<ReturnType<typeof fetchCourse>>
+}
+
+const CardPriceNew = ({data}:Props) => {
   const fullInstallmentPlan = data.installmentPlan + ((data.installmentPlan / 100) * 40)
   const fullOneTimePayment = data.oneTimePayment + ((data.oneTimePayment / 100) * 40)
 

@@ -3,7 +3,7 @@ import urlPresent from '@/public/assets/imgs/new-course/present.png'
 import { ImgTemplate } from '@/components/imgs'
 import styles from '@/styles/components/sections/new-course/CurrentContent.module.sass'
 import BtnNewCourse from '@/components/btns/BtnNewCourse'
-import { useForm, SubmitHandler, Form } from 'react-hook-form'
+import { useForm, SubmitHandler } from 'react-hook-form'
 import classNames from 'classnames'
 
 interface FormSending {

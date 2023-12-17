@@ -4,17 +4,22 @@ import classNames from 'classnames'
 import footerImage from '@/public/assets/imgs/new-course/discount-new-course.png'
 import footerDecorator from '@/public/assets/imgs/new-course/footer-decorator.png'
 import { ImgTemplate } from '@/components/imgs'
-import data from '@/data/mock/new-course/data.json'
 import CardNewTeacher from '@/components/cards/CardNewTeacher'
 import leftUrl from '@/public/assets/imgs/new-course/left.png'
 import rightUrl from '@/public/assets/imgs/new-course/right.png'
 import { motion } from 'framer-motion'
 import { useEffect, useRef, useState } from 'react'
+import fetchCourse from '../../../api/fetchCourse'
 
 type ScrollPosition = 'left' | 'right'
 
 const widthItem = 400
-const ProgramTeachers = () => {
+
+interface Props {
+  data: Awaited<ReturnType<typeof fetchCourse>>
+}
+
+const ProgramTeachers = ({data}: Props) => {
   const [widthItems, setWidthItems] = useState(widthItem)
   const elemList = useRef<HTMLUListElement | null>(null)
   const [scroll, setScroll] = useState(0)
@@ -27,7 +32,6 @@ const ProgramTeachers = () => {
 
     if (scrollPosition === 'left') {
       setScroll((scroll) => {
-        console.log(scroll - widthItem)
         if (scroll - widthItem < -((widthItem * counterItem) - widthList)) {
           return -((widthItem * counterItem) - widthList)
         } else {

@@ -1,11 +1,14 @@
 import styles from '@/styles/components/cards/CardProCourse.module.sass'
-import data from '@/data/mock/new-course/data.json'
-import BtnNewCourse from '@/components/btns/BtnNewCourse'
 import { ImgTemplate } from '@/components/imgs'
 import urlStar from '@/public/assets/imgs/new-course/star.png'
 import WrapperPrice from '@/components/cards/WrapperPrice'
+import fetchCourse from '../../api/fetchCourse'
 
-const CardProCourse = () => {
+interface Props {
+  data: Awaited<ReturnType<typeof fetchCourse>>
+}
+
+const CardProCourse = ({data}:Props) => {
   return (
     <div className={styles.card}>
       <div className={styles.wrapperHeader}>

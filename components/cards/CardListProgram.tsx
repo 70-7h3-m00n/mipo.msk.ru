@@ -1,9 +1,13 @@
-import data from '@/data/mock/new-course/data.json'
 import styles from '@/styles/components/cards/CardListProgram.module.sass'
 import { ImgTemplate } from '@/components/imgs'
 import urlImage from '@/public/assets/imgs/new-course/mingcute_check-fill.png'
+import fetchCourse from '../../api/fetchCourse'
 
-const CardListProgram = () => {
+interface Props {
+  data: Awaited<ReturnType<typeof fetchCourse>>
+}
+
+const CardListProgram = ({data}: Props) => {
   return (
     <ul className={styles.cardListProgram}>
       {

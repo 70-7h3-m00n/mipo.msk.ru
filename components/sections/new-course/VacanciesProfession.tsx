@@ -2,9 +2,12 @@ import styles from '@/styles/components/sections/new-course/VacanciesProfession.
 import img from '@/public/assets/imgs/new-course/vacancies.png'
 import { ImgTemplate } from '@/components/imgs'
 import classNames from 'classnames'
-import data from '@/data/mock/new-course/data.json'
+import fetchCourse from '../../../api/fetchCourse'
 
-const VacanciesProfession = () => {
+interface Props {
+  data: Awaited<ReturnType<typeof fetchCourse>>
+}
+const VacanciesProfession = ({data}: Props) => {
   return (
     <section className={styles.vacanciesProfession}>
       <div className={classNames('container', styles.contentBlock)}>

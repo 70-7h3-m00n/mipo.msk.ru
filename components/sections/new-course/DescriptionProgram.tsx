@@ -1,10 +1,14 @@
 import React from 'react'
-import data from '@/data/mock/new-course/data.json'
 import styles from '@/styles/components/sections/new-course/DescriptionProgram.module.sass'
 import { ImgTemplate } from '@/components/imgs'
 import classNames from 'classnames'
+import fetchCourse from '../../../api/fetchCourse'
 
-const DescriptionProgram = () => {
+interface Props {
+  data: Awaited<ReturnType<typeof fetchCourse>>
+}
+
+const DescriptionProgram = ({data}:Props) => {
   return (
     <section className={classNames('container', styles.descriptionProgram)}>
       <div className={styles.descriptionProgram_wrapperDescr}>
