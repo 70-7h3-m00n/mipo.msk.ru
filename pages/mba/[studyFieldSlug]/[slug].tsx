@@ -20,6 +20,7 @@ const MBAPage = ({ programs, program, studyFieldSlug, reviews }) => {
 
   return (
     <>
+      {/*//@ts-ignore */}
       <NextSeo
         title={`${program.title} | MBA | ${companyName}`}
         description={truncate(program.description, 120)}

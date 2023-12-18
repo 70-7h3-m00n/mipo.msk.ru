@@ -12,6 +12,7 @@ const TeachersPage = ({ programs, teachers }) => {
 
   return (
     <>
+      {/*//@ts-ignore */}
       <NextSeo
         title={`Преподаватели | ${companyName}`}
         description={truncate(

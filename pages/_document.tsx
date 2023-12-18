@@ -16,6 +16,7 @@ class MyDocument extends Document {
   render() {
     return (
       <Html>
+        {/*//@ts-ignore */}
         <Head>
           <meta charSet='UTF-8' />
           {/* <meta name='theme-color' content={themeColor} /> */}
@@ -34,6 +35,7 @@ class MyDocument extends Document {
             </noscript>
           )}
           <Main />
+          {/*//@ts-ignore */}
           <NextScript />
         </body>
       </Html>

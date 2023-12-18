@@ -89,6 +89,12 @@ $esbp: 850px
 .row
   @include m.flex($jc: space-between, $ai: center)
 
+
+.mobileCourse
+  background: linear-gradient(101deg, rgba(170, 224, 255, 0.4) 15.37%, rgba(225, 243, 255, 0.4) 82.47%)
+  @media (max-width: 767px)
+    background: #c5c5c5
+
 .btns
   @include m.media(phone, tablet)
     min-width: f.px(84, em)

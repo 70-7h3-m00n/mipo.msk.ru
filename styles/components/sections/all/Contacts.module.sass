@@ -1,0 +1,18 @@
+@use '@/styles/utils/mixin' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/config/Colors.module.sass' as c
+
+.cards
+  @include m.media(phone, tablet)
+    @include m.flex($fd: column)
+    @include m.gap($pt: f.px(50))
+  @include m.media(laptop, desktop)
+    @include m.flex($fw: wrap)
+    @include m.gap($pt: f.px(100))
+
+.card
+  @include m.media(phone, tablet)
+    @include m.gap($mb: f.px(40))
+  @include m.media(laptop, desktop)
+    &:nth-child(odd)
+      @include m.gap($mr: 15%)

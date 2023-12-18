@@ -26,6 +26,7 @@ const ProgramsStudyFieldPage = ({ programs, studyFieldSlug }) => {
 
   return (
     <>
+      {/*//@ts-ignore */}
       <NextSeo
         title={`${studyFieldLabel} | Все направления | ${companyName}`}
         description={truncate(

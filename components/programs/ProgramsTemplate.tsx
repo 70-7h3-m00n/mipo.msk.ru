@@ -45,10 +45,10 @@ const ProgramsTemplate = ({
               {ofType === 'course'
                 ? 'Повышение квалификации'
                 : ofType === 'profession'
-                ? 'Профессиональная переподготовка'
-                : ofType === 'mba'
-                ? 'MBA'
-                : 'Программы'}
+                  ? 'Профессиональная переподготовка'
+                  : ofType === 'mba'
+                    ? 'MBA'
+                    : 'Программы'}
             </h2>
             {withQty && (
               <div className={stls.phonetablet}>
@@ -62,10 +62,10 @@ const ProgramsTemplate = ({
               {ofType === 'course'
                 ? 'Повышение квалификации'
                 : ofType === 'profession'
-                ? 'Профессиональная переподготовка'
-                : ofType === 'mba'
-                ? 'MBA'
-                : 'Программы'}
+                  ? 'Профессиональная переподготовка'
+                  : ofType === 'mba'
+                    ? 'MBA'
+                    : 'Программы'}
             </h3>
             {withQty && (
               <div className={stls.phonetablet}>
@@ -82,10 +82,10 @@ const ProgramsTemplate = ({
                 {ofType === 'course'
                   ? 'Короткие программы, чтобы изучить один конкретный навык'
                   : ofType === 'profession'
-                  ? 'Длинные программы для полного погружения в направление'
-                  : ofType === 'mba'
-                  ? 'MBA'
-                  : ''}
+                    ? 'Длинные программы для полного погружения в направление'
+                    : ofType === 'mba'
+                      ? 'MBA'
+                      : ''}
               </p>
             )}
             {withQty && (
@@ -122,19 +122,19 @@ const ProgramsTemplate = ({
               ofType === 'course'
                 ? 'курсы'
                 : ofType === 'profession'
-                ? 'профессии'
-                : ofType === 'mba'
-                ? 'MBA'
-                : 'программы'
+                  ? 'профессии'
+                  : ofType === 'mba'
+                    ? 'MBA'
+                    : 'программы'
             }`}
             href={
               ofType === 'course'
                 ? routeCourses
                 : ofType === 'profession'
-                ? routeProfessions
-                : ofType === 'mba'
-                ? routeMBA
-                : routePrograms
+                  ? routeProfessions
+                  : ofType === 'mba'
+                    ? routeMBA
+                    : routePrograms
             }
           />
         </div>

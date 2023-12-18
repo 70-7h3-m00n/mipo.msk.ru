@@ -1,5 +1,4 @@
 import Router from 'next/router'
-
 import { useEffect, useState, useContext } from 'react'
 import Script from 'next/script'
 import MenuState from '@/context/menu/MenuState'
@@ -23,6 +22,8 @@ import 'swiper/css/grid'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import '@/styles/app.sass'
+import '@/public/assets/fonts/alegreya-sans/stylesheet.css'
+import '@/public/assets/fonts/neue-machina/stylesheet.css'
 
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
@@ -78,6 +79,7 @@ function MyApp({ Component, pageProps, router }) {
 
   return (
     <>
+      {/*//@ts-ignore */}
       <DefaultSeo {...SEO} />
       <LogoJsonLd
         logo={`${routesFront.root}/assets/imgs/icons/manifest-icon-512.png`}

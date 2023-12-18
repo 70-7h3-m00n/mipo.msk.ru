@@ -23,6 +23,7 @@ const HomePage = ({ programs, reviews }) => {
 
   return (
     <>
+      {/*//@ts-ignore */}
       <NextSeo
         title={`${companyName} | Получи новую профессию или повысь квалификацию по своему нынешнему направлению дистанционно
         `}

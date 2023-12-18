@@ -1,6 +1,5 @@
 import axios from 'axios'
 import { routesBack, revalidate } from '@/config/index'
-import { convertMdToHtml } from '@/helpers/index'
 import { TypeCategory } from '@/types/index'
 
 type TypeHandleGetStaticProps = {

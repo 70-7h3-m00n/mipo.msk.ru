@@ -1,2 +1,30 @@
 @use '@/styles/vendors'
 @use '@/styles/base'
+
+.container
+  width: 1180px
+  margin: 0 auto
+  padding: 0
+  position: relative
+
+  @media (max-width: 1200px)
+    width: 960px
+
+  @media (min-width: 768px) and (max-width: 979px)
+    width: 768px
+
+  @media (max-width: 767px)
+    width: 100%
+    padding: 0 20px
+
+.hidden
+  display: none
+
+
+.MuiTooltip-tooltip
+  padding: 10px 8px
+  font-size: 14px
+
+svg
+  width: auto
+  height: auto
