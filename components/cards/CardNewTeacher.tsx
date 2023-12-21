@@ -12,7 +12,7 @@ const CardNewTeacher = ({url, title, subTitle, description}: Props) => {
   return (
     <li className={styles.cardNewTeacher}>
       <div className={styles.wrapperImage}>
-        <ImgTemplate src={url} alt={'image'} layout={'fill'} />
+        <ImgTemplate src={url} alt={'image'} layout={'fill'} classNames={[styles.image]} />
       </div>
 
       <div className={styles.wrapperHeaders}>

@@ -5,22 +5,26 @@ import BtnNewCourse from '@/components/btns/BtnNewCourse'
 import urlImg from "@/public/assets/imgs/new-course/group-img.png"
 import urlImgMobile from "@/public/assets/imgs/new-course/mobileImage.png"
 import fetchCourse from '../../../api/fetchCourse'
+import routesBack from '@/config/routesBack'
 
 interface Props {
   data: Awaited<ReturnType<typeof fetchCourse>>
 }
 
 const TrainEmployees = ({data}:Props) => {
+  const isCompany = Boolean(data.listCompany.length)
+
   return (
     <section className={styles.trainEmployees}>
       <h2 className={classNames('container', styles.header)}>Обучают своих сотрудников у нас</h2>
 
       <ul className={classNames('container', styles.listCompany)}>
         {
+          isCompany &&
           data.listCompany.map((item, i) => (
             <li className={styles.item} key={i}>
               <div>
-                <ImgTemplate src={item.image.url} alt={'img'} layout={'fill'} />
+                <ImgTemplate src={routesBack.newRoot + item.image.data.attributes.url || ''} alt={'img'} layout={'fill'} />
               </div>
             </li>
           ))

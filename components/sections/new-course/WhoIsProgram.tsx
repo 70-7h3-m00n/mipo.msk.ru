@@ -2,6 +2,7 @@ import styles from '@/styles/components/sections/new-course/WhoIsProgram.module.
 import { ImgTemplate } from '@/components/imgs'
 import classNames from 'classnames'
 import fetchCourse from '../../../api/fetchCourse'
+import routesBack from '@/config/routesBack'
 
 interface Props {
   data: Awaited<ReturnType<typeof fetchCourse>>
@@ -25,7 +26,10 @@ const WhoIsProgram = ({data}:Props) => {
           data.whoIsProgram.map((item, i) => (
             <div className={styles.card} key={i}>
               <div className={styles.wrapperImage}>
-                <ImgTemplate src={item.icon} alt={'img'} layout={'fill'} />
+                <ImgTemplate src={routesBack.newRoot + item.icon.data.attributes.url || ''}
+                             alt={'img'}
+                             layout={'fill'}
+                />
               </div>
 
               <h3 className={styles.headerCard}>{item.title}</h3>

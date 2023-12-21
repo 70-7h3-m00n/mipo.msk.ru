@@ -64,29 +64,33 @@ const TrainingProgram = ({data}: Props) => {
               }
             </ul>
 
-            <div className={styles.blockPro}>
-              <IconPro />
-
-              <ul>
-                {
-                  proTraining.slice(0, counter).map((card, i) => (
-                    <li className={styles.item} key={i}>
-                      <h3>{training.length + i + 1} {card.title}</h3>
-
-                      <ol>
-                        {
-                          card.list?.map((item, index) => (
-                            <li key={index}>{item.item}</li>
-                          ))
-                        }
-                      </ol>
-                    </li>
-                  ))
-                }
-              </ul>
-            </div>
             {
-              data.trainingProgram.length > 7 ?
+              Boolean(proTraining.length) &&
+              <div className={styles.blockPro}>
+                <IconPro />
+
+                <ul>
+                  {
+                    proTraining.slice(0, counter).map((card, i) => (
+                      <li className={styles.item} key={i}>
+                        <h3>{training.length + i + 1} {card.title}</h3>
+
+                        <ol>
+                          {
+                            card.list?.map((item, index) => (
+                              <li key={index}>{item.item}</li>
+                            ))
+                          }
+                        </ol>
+                      </li>
+                    ))
+                  }
+                </ul>
+              </div>
+            }
+
+            {
+              Boolean(proTraining.length) && data.trainingProgram.length > 7 ?
                 <div className={styles.wrapperBtn}>
                   <BtnNewCourse onClick={getFullTraining} text={'Открыть полную программу'} />
                 </div>

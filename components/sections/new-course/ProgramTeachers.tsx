@@ -10,6 +10,7 @@ import rightUrl from '@/public/assets/imgs/new-course/right.png'
 import { motion } from 'framer-motion'
 import { useEffect, useRef, useState } from 'react'
 import fetchCourse from '../../../api/fetchCourse'
+import routesBack from '@/config/routesBack'
 
 type ScrollPosition = 'left' | 'right'
 
@@ -20,11 +21,13 @@ interface Props {
 }
 
 const ProgramTeachers = ({data}: Props) => {
-  const [widthItems, setWidthItems] = useState(widthItem)
   const elemList = useRef<HTMLUListElement | null>(null)
   const [scroll, setScroll] = useState(0)
   const [widthList, setWidthList] = useState(0)
   const counterItem = data.listTeachers.length
+
+  const showArrow = widthList >= widthItem * counterItem
+
   const onScroll = (scrollPosition: ScrollPosition): void => {
     if (widthList >= widthItem * counterItem) {
       return
@@ -77,13 +80,18 @@ const ProgramTeachers = ({data}: Props) => {
         </div>
 
         <div className={styles.btns}>
-          <button onClick={() => onScroll('left')}>
-            <ImgTemplate src={leftUrl} alt={'img'} layout={'fill'} />
-          </button>
+          {
+            !showArrow &&
+            <>
+              <button onClick={() => onScroll('left')}>
+                <ImgTemplate src={leftUrl} alt={'img'} layout={'fill'} />
+              </button>
 
-          <button onClick={() => onScroll('right')}>
-            <ImgTemplate src={rightUrl} alt={'img'} layout={'fill'} />
-          </button>
+              <button onClick={() => onScroll('right')}>
+                <ImgTemplate src={rightUrl} alt={'img'} layout={'fill'} />
+              </button>
+            </>
+          }
         </div>
 
       </header>
@@ -107,7 +115,7 @@ const ProgramTeachers = ({data}: Props) => {
           {
             data.listTeachers.map((item, index) => (
               <CardNewTeacher key={index}
-                              url={item.image.url}
+                              url={routesBack.newRoot + item.image?.data?.attributes?.url || ''}
                               title={item.title}
                               subTitle={item.subTitle}
                               description={item.description}
