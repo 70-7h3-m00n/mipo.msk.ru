@@ -2,9 +2,6 @@
 
 import nodemailer from 'nodemailer'
 import { dev } from '@/config/index'
-import url from 'url'
-import http from 'http'
-import { v4 as uuidv4 } from 'uuid'
 import moment from 'moment'
 import { WebServiceClient } from '@maxmind/geoip2-node'
 import axios from 'axios'
