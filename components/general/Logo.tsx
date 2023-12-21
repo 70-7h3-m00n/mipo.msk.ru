@@ -18,7 +18,9 @@ const Logo = ({ atHeader = false, withTitle = true }) => {
             [stls.logo]: true,
             [stls.atHeader]: atHeader
           })}>
+
           <IconGeneralLogo classNames={[stls.icon]} color={colors.nu} />
+
           {withTitle && (
             <p className={stls.title} style={{
               color: redirectHeader? 'black': ''

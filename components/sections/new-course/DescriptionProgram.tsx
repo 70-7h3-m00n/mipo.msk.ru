@@ -3,12 +3,15 @@ import styles from '@/styles/components/sections/new-course/DescriptionProgram.m
 import { ImgTemplate } from '@/components/imgs'
 import classNames from 'classnames'
 import fetchCourse from '../../../api/fetchCourse'
+import routesBack from '@/config/routesBack'
 
 interface Props {
   data: Awaited<ReturnType<typeof fetchCourse>>
 }
 
 const DescriptionProgram = ({data}:Props) => {
+  const image = routesBack.newRoot + data?.descriptionProgram.image.data.attributes.url || ''
+
   return (
     <section className={classNames('container', styles.descriptionProgram)}>
       <div className={styles.descriptionProgram_wrapperDescr}>
@@ -22,7 +25,7 @@ const DescriptionProgram = ({data}:Props) => {
       </div>
 
       <div className={styles.descriptionProgram_wrapperImage}>
-        <ImgTemplate src={data.descriptionProgram.image} alt={'img'} layout={'fill'} />
+        <ImgTemplate src={image} alt={'img'} layout={'fill'} />
       </div>
     </section>
   )

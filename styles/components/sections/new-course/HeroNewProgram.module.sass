@@ -75,7 +75,9 @@
   @media (max-width: 500px)
     .imageCourse
       width: 337px
-      height: 337px
+
+      .discount
+        left: 0
 
 .generalHeader
   max-width: 590px
@@ -164,6 +166,7 @@
 
     &_blockInfo
       margin-top: 30px
+      margin-left: 0
 
 
 
@@ -178,8 +181,16 @@
   box-shadow: 15px 15px 20px 0 rgba(0, 0, 0, 0.04)
   padding: 48px 68px
 
+  @media (max-width: 900px)
+    padding: 30px
+
+
   @media (max-width: 567px)
     padding: 20px
+    div
+      width: calc(50% - 20px)
+      &:last-child
+        width: 100%
 
   .header
     margin-top: 20px

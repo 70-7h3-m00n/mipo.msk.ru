@@ -23,6 +23,7 @@ import PopupTrigger from '@/components/general/PopupTrigger'
 import BtnPhone from '@/components/btns/BtnPhone'
 import BtnHumburger from '@/components/btns/BtnHumburger'
 import { useRouter } from 'next/router'
+import colors from '@/config/colors'
 
 const Header = () => {
   const router = useRouter()
@@ -64,6 +65,7 @@ const Header = () => {
 
             <Wrapper>
               <div className={cn(stls.top, { [stls.altStyles]: altStyles })}>
+                <Logo atHeader />
                 <div className={stls.topleft}>
                   <Link href={routeLegal}>
                     <a className={stls.linkInfo}>

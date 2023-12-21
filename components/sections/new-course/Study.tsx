@@ -4,14 +4,17 @@ import { ImgTemplate } from '@/components/imgs'
 import CardMotion from '@/components/cards/CardMotion'
 import IconPro from '@/components/icons/IconPro'
 import fetchCourse from '../../../api/fetchCourse'
+import classnames from 'classnames'
 
 interface Props {
   data: Awaited<ReturnType<typeof fetchCourse>>
 }
 
 const Study = ({data}: Props) => {
+  const isPro = Boolean(data.listStudyPro.length)
+
   return (
-    <section className={'container'}
+    <section className={classnames(['container', styles.block])}
              style={{
                overflow: 'initial'
              }}
@@ -29,19 +32,22 @@ const Study = ({data}: Props) => {
         }
       </div>
 
-      <div className={styles.listStudyPro}>
-        <IconPro />
+      {
+        isPro &&
+        <div className={styles.listStudyPro}>
+          <IconPro />
 
-        {
-          data.listStudyPro.map((item, i) => (
-            <div className={styles.card} key={i}>
-              <ImgTemplate src={image2} alt={'image'} width={35} height={35} />
+          {
+            data.listStudyPro.map((item, i) => (
+              <div className={styles.card} key={i}>
+                <ImgTemplate src={image2} alt={'image'} width={35} height={35} />
 
-              <p className={styles.text}>{item.title}</p>
-            </div>
-          ))
-        }
-      </div>
+                <p className={styles.text}>{item.title}</p>
+              </div>
+            ))
+          }
+        </div>
+      }
     </section>
   )
 }

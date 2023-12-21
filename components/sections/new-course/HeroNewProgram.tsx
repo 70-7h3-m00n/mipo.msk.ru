@@ -15,7 +15,9 @@ interface Props {
 }
 
 const HeroNewProgram = ({data}:Props) => {
-  const listTrainingInfo = Object.keys(data.listTrainingInfo)
+  const valid = data !== null
+
+  const listTrainingInfo = valid? Object.keys(data.listTrainingInfo) : []
 
   return (
     <section className={styles.wrapperBlock}>
@@ -24,22 +26,22 @@ const HeroNewProgram = ({data}:Props) => {
           <div className={styles.imageCourse}>
             <div className={styles.discount}>-40%</div>
 
-            <ImgTemplate src={data.imageCourse} priority alt={'imageCourse'} layout={'fill'} />
+            <ImgTemplate src={routesBack.newRoot + data?.imageCourse?.data[0]?.attributes?.url || ''} priority alt={'imageCourse'} layout={'fill'} />
           </div>
         </div>
 
         <div className={styles.category}>
-          {data.category}
+          {valid && data.category}
         </div>
 
-        <h1 className={styles.generalHeader}>{data.nameCourse}</h1>
+        <h1 className={styles.generalHeader}>{valid && data.nameCourse}</h1>
 
         <p className={classNames(styles.textGeneral, styles.subHeader)}>
-          {data.description}
+          {valid && data.description}
         </p>
 
         <div className={styles.wrapperCard}>
-          {data.listHeader.map((item, i) => (
+          {valid && data.listHeader.map((item, i) => (
             <div className={styles.cardInfoCourse} key={i}>
               <p>
                 {item.item}

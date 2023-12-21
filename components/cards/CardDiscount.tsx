@@ -12,7 +12,7 @@ const CardDiscount = () => {
         <div className={styles.wrapperImg}>
           <p className={styles.text}>Скидки до 40% на новые знания</p>
 
-          <BtnNewCourse text={'Записаться на курс'} />
+          <BtnNewCourse text={'Записаться на курс'} className={styles.btn} />
         </div>
       </div>
     </div>

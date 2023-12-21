@@ -3,6 +3,7 @@
 
   @media (max-width: 1200px)
     padding: 10px 0
+
   @media (min-width: 768px) and (max-width: 979px)
 
   @media (max-width: 767px)
@@ -17,8 +18,12 @@
 
   @media (max-width: 767px)
 
+  @media (max-width: 520px)
+    flex-direction: column
+
 .wrapperImg
   gap: 20px
+
   @media (max-width: 1200px)
     flex-direction: column
     align-items: flex-start
@@ -27,6 +32,9 @@
     align-items: center
     text-align: center
     width: calc(100% - 140px)
+
+  @media (max-width: 520px)
+    width: 100%
 
 .text
   color: #FFF
@@ -49,3 +57,10 @@
 .discountSvg
   width: 124px
   height: 150px
+
+
+.btn
+  @media (max-width: 520px)
+    width: 100%
+    padding: 20px
+    font-size: 20px

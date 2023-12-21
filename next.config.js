@@ -1,6 +1,4 @@
-const withPWA = require('next-pwa')
 const { createSecureHeaders } = require('next-secure-headers')
-const dev = process.env.NODE_ENV === 'development'
 
 module.exports =
   /* withPWA( */
@@ -18,7 +16,7 @@ module.exports =
       localeDetection: false
     },
     images: {
-      domains: ['res.cloudinary.com']
+      domains: ['res.cloudinary.com','api.instprof.online'],
     },
     async headers() {
       return [

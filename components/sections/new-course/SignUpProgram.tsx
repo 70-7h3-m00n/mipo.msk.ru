@@ -18,7 +18,7 @@ const list = [
   },
   {
     title: 'Остались вопросы?',
-    subTitle: 'Позвоните или напишите нам: +7 (495) 150-99-24'
+    subTitle: 'Позвоните или напишите нам: +7&nbsp;(495)&nbsp;150&nbsp;-&nbsp;99&nbsp;-&nbsp;24'
   }
 ]
 
@@ -61,7 +61,7 @@ const SignUpProgram = ({data}:Props) => {
 
                 <h2>{item.title}</h2>
 
-                <p>{item.subTitle}</p>
+                <p dangerouslySetInnerHTML={{__html: item.subTitle}}/>
               </li>
             ))
           }

@@ -42,7 +42,8 @@ const ProgramsFilters = ({ ofType = null, close }: ProgramsFiltersType) => {
               <div key={item}
                    onClick={() => route.push(`new-courses/${item.slug}`)}
                    style={{
-                     cursor: 'pointer'
+                     cursor: 'pointer',
+                     margin: '15px 0'
                    }}
               >
                 {item.nameCourse}
