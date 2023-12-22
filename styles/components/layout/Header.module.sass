@@ -16,6 +16,11 @@ $esbp: 850px
   &.altStyles
     @include m.dye(bg, c.$mu-2)
 
+.contentNewCourse
+  @include m.media(phone, tablet)
+  @include m.media(laptop, desktop)
+  &.altStyles
+
 .top
   @include m.media(phone, tablet)
     display: none
