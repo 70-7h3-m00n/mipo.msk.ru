@@ -23,17 +23,20 @@
 
 .wrapperImg
   gap: 20px
+  width: 90%
 
   @media (max-width: 1200px)
     flex-direction: column
     align-items: flex-start
+    width: 80%
+    padding-left: 20px
 
   @media (max-width: 767px)
-    align-items: center
-    text-align: center
+    align-items: flex-start
     width: calc(100% - 140px)
 
   @media (max-width: 520px)
+    text-align: center
     width: 100%
 
 .text

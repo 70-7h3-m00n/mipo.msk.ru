@@ -5,12 +5,10 @@ import Wrapper from '@/components/layout/Wrapper'
 import Logo from '@/components/general/Logo'
 import MenuMobile from '@/components/layout/MenuMobile'
 import { city, street } from '@/data/location'
-import { IconLocation } from '@/components/icons'
+import { IconGeneralLogo, IconLocation } from '@/components/icons'
 import { BtnFields } from '@/components/btns'
 import {
   routeContact,
-  routeReviews,
-  routeAbout,
   routeLegal,
   routeWebinars,
   routeTeachers
@@ -65,7 +63,6 @@ const Header = () => {
 
             <Wrapper>
               <div className={cn(stls.top, { [stls.altStyles]: altStyles })}>
-                <Logo atHeader />
                 <div className={stls.topleft}>
                   <Link href={routeLegal}>
                     <a className={stls.linkInfo}>

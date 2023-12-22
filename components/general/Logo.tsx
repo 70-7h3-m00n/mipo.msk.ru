@@ -5,6 +5,8 @@ import { routeHome } from '@/data/routes'
 import { IconGeneralLogo } from '@/components/icons'
 import colors from '@/config/colors'
 import { useRouter } from 'next/router'
+import newLogoUrl from '@/public/assets/imgs/new-course/newLogo.svg'
+import Image from 'next/image'
 
 const Logo = ({ atHeader = false, withTitle = true }) => {
   const router = useRouter()
@@ -18,8 +20,14 @@ const Logo = ({ atHeader = false, withTitle = true }) => {
             [stls.logo]: true,
             [stls.atHeader]: atHeader
           })}>
-
-          <IconGeneralLogo classNames={[stls.icon]} color={colors.nu} />
+          {
+            !redirectHeader?
+            <IconGeneralLogo classNames={[stls.icon]} color={colors.nu} />
+              :
+            <div className={stls.newIcon}>
+              <Image src={newLogoUrl} width={50} height={75} />
+            </div>
+          }
 
           {withTitle && (
             <p className={stls.title} style={{
