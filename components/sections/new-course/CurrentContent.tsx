@@ -5,6 +5,8 @@ import styles from '@/styles/components/sections/new-course/CurrentContent.modul
 import BtnNewCourse from '@/components/btns/BtnNewCourse'
 import { useForm, SubmitHandler } from 'react-hook-form'
 import classNames from 'classnames'
+import axios from 'axios'
+import { routesFront } from '@/config/index'
 
 interface FormSending {
   name: string
@@ -26,7 +28,17 @@ const CurrentContent = () => {
   })
 
   const submit: SubmitHandler<FormSending> = async data => {
-    console.log(data)
+    try {
+      const reason = await axios.post(`${routesFront.root}/api/course`, {
+        ...data,
+      })
+      if (reason.status >= 400) {
+
+      }
+
+    } catch (e) {
+      console.log(e)
+    }
     reset()
   }
 
