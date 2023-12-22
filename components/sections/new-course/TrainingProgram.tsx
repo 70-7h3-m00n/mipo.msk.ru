@@ -34,14 +34,6 @@ const TrainingProgram = ({data}: Props) => {
 
                 <p className={styles.textHeader}>{data.watchProgram} часа</p>
               </div>
-
-              <div className={styles.contentItem}>
-                <div className={styles.wrapperImage}>
-                  <ImgTemplate src={checkUrlIcon} alt={'amg'} layout={'fill'} />
-                </div>
-
-                <p className={styles.textHeader}>{data.businessCase} бизнес кейсов</p>
-              </div>
             </div>
           </div>
 
