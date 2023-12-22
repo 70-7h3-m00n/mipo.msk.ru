@@ -19,6 +19,8 @@ const HeroNewProgram = ({data}:Props) => {
 
   const listTrainingInfo = valid? Object.keys(data.listTrainingInfo) : []
 
+  const generalImageUrl = routesBack.newRoot + data?.imageCourse?.data[0]?.attributes?.url || ''
+
   return (
     <section className={styles.wrapperBlock}>
       <div className={'container'}>
@@ -26,13 +28,13 @@ const HeroNewProgram = ({data}:Props) => {
           <div className={styles.imageCourse}>
             <div className={styles.discount}>-40%</div>
 
-            <ImgTemplate src={routesBack.newRoot + data?.imageCourse?.data[0]?.attributes?.url || ''} priority alt={'imageCourse'} layout={'fill'} />
+            <ImgTemplate src={generalImageUrl} priority alt={'imageCourse'} layout={'fill'} classNames={[styles.image]} />
           </div>
         </div>
 
-        <div className={styles.category}>
+        <p className={styles.category}>
           {valid && data.category}
-        </div>
+        </p>
 
         <h1 className={styles.generalHeader}>{valid && data.nameCourse}</h1>
 
