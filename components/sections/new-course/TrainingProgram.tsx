@@ -13,10 +13,15 @@ interface Props {
 const TrainingProgram = ({data}: Props) => {
   const training = data.trainingProgram.filter((item) => !item.pro)
   const proTraining = data.trainingProgram .filter((item) => item.pro)
-  const [counter, setCounter] = useState(proTraining.length - 1 > 2 ? 2: proTraining.length)
+  const [counterPro, setCounterPro] = useState(proTraining.length - 1 > 2 ? 2: proTraining.length)
+  const [counter, setCounter] = useState(training.length - 1 > 2 ? 2: training.length)
+
+  const getFullTrainingPro = () => {
+    setCounterPro(proTraining.length)
+  }
 
   const getFullTraining = () => {
-    setCounter(proTraining.length)
+    setCounter(training.length)
   }
 
   return (
@@ -40,9 +45,9 @@ const TrainingProgram = ({data}: Props) => {
           <div>
             <ul className={styles.list}>
               {
-                training.map((card, i) => (
+                training.slice(0, counter).map((card, i) => (
                   <li className={styles.item} key={i}>
-                    <h3>{i + 1} {card.title}</h3>
+                    <h3>{i + 1}. {card.title}</h3>
 
                     <ul>
                       {
@@ -57,13 +62,22 @@ const TrainingProgram = ({data}: Props) => {
             </ul>
 
             {
+              Boolean(training.length) && training.length > 7 && (counter !== training.length) ?
+                <div className={styles.wrapperBtn}>
+                  <BtnNewCourse onClick={getFullTraining} text={'Открыть полную программу'} />
+                </div>
+                :
+                <></>
+            }
+
+            {
               Boolean(proTraining.length) &&
               <div className={styles.blockPro}>
                 <IconPro />
 
                 <ul>
                   {
-                    proTraining.slice(0, counter).map((card, i) => (
+                    proTraining.slice(0, counterPro).map((card, i) => (
                       <li className={styles.item} key={i}>
                         <h3>{training.length + i + 1} {card.title}</h3>
 
@@ -84,7 +98,7 @@ const TrainingProgram = ({data}: Props) => {
             {
               Boolean(proTraining.length) && data.trainingProgram.length > 7 ?
                 <div className={styles.wrapperBtn}>
-                  <BtnNewCourse onClick={getFullTraining} text={'Открыть полную программу'} />
+                  <BtnNewCourse onClick={getFullTrainingPro} text={'Открыть полную программу'} />
                 </div>
                 :
                 <></>

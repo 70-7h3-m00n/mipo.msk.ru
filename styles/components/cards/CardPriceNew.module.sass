@@ -48,6 +48,7 @@
     font-weight: 700
     line-height: 90px
     margin: 0
+
     span
       font-size: 72px
       font-weight: 400
@@ -58,6 +59,21 @@
     font-weight: 400
     line-height: 60px
     margin: 0
+    position: relative
+    display: inline-block
+
+    &:after
+      content: ''
+      position: absolute
+      top: 25px
+      left: 0
+      width: calc(100% + 50px)
+      height: 1px
+      background: #9C9DA9
+      transform: rotate(-8deg)
+
+      @media (max-width: 767px)
+        width: calc(100% + 30px)
 
 .wrapperBtn
   margin-top: 20px

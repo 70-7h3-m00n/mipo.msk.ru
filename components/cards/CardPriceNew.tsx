@@ -36,14 +36,14 @@ const CardPriceNew = ({data}:Props) => {
       <div>
         <div className={styles.paymentBlock}>
           <h3 className={styles.text}>Беспроцентная рассрочка на 12 месяцев</h3>
-          <p className={styles.payment}>{data.installmentPlan}<span> ₽/мес</span></p>
-          <p className={styles.fullPayment}>{fullInstallmentPlan}<span> ₽/мес</span></p>
+          <p className={styles.payment}>{data.installmentPlan.toLocaleString('ru-RU')}<span> ₽/мес</span></p>
+          <p className={styles.fullPayment}>{fullInstallmentPlan.toLocaleString('ru-RU')}<span> ₽/мес</span></p>
         </div>
 
         <div className={styles.paymentBlock}>
           <h3 className={styles.text}>Единоразовый платёж</h3>
-          <p className={styles.payment}>{data.oneTimePayment}<span> ₽/мес</span></p>
-          <p className={styles.fullPayment}>{fullOneTimePayment}<span> ₽/мес</span></p>
+          <p className={styles.payment}>{data.oneTimePayment.toLocaleString('ru-RU')}<span> ₽/мес</span></p>
+          <p className={styles.fullPayment}>{fullOneTimePayment.toLocaleString('ru-RU')}<span> ₽/мес</span></p>
         </div>
       </div>
 
