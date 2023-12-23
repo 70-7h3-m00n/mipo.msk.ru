@@ -53,7 +53,7 @@ const HeroNewProgram = ({data}:Props) => {
         </div>
 
         <div className={styles.wrapperBtn}>
-          <BtnNewCourse text={'Записаться на курс'} />
+          {/*<BtnNewCourse text={'Записаться на курс'} />*/}
 
           <div className={styles.wrapperBtn_blockInfo}>
             <Image src={urlImage} alt={'check-course'} width={59} height={58} />
