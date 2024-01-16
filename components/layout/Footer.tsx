@@ -167,7 +167,7 @@ const Footer = () => {
               <div className={stls.sm}>
                 {/* <BtnVk dark mlzero /> */}
                 <BtnWhatsapp dark />
-                {/* <BtnTelegram dark /> */}
+                <BtnTelegram dark />
               </div>
               <div className={stls.edduBlock}>
                 {
