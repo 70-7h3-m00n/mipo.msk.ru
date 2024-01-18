@@ -29,6 +29,7 @@ const PopupThankyou = ({ close, id = null, clickid = null }) => {
   useEffect(() => {
     const cookies = getCookies()
     const utm_source = cookies[UTM_KEYS_OBJ.utm_source]
+    const clUid = cookies[UTM_KEYS_OBJ.cl_uid]
 
     setIsLeadFromLeadgid(isLeadFromLeadgid || utm_source === 'LG')
     setIsLeadFromAffise(checkIsLeadFromAffise(getCookies()))
@@ -59,14 +60,12 @@ const PopupThankyou = ({ close, id = null, clickid = null }) => {
 
     const sendLeadToAffise = async () => {
       const res = await axios.get(
-        `https://offers-edpartners.affise.com/postback?clickid=${clickid}&secure=8ca762d411798e56d2585fcf7fbcd994&goal=3&custom_field1=${id}${
-          program?.title ? `&custom_field3=${program.title}` : ''
-        }`
+        `https://edpartners.scaletrk.com/track/conv?click_id=${clUid}&token=${'bbba3c91'}&adv_order_id=2&conv_status=pending&goal_alias=2`
       )
       return res.data
     }
 
-    // if (isLeadFromAffise) sendLeadToAffise()
+    if (isLeadFromAffise) sendLeadToAffise()
 
     sessionStorage.removeItem('referer')
     sessionStorage.removeItem('user_uuid')
