@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="046e7617-48fc-41ef-ae8d-62159170c5b1" name="Changes" comment="fix: Get params test-2" />
+    <list default="true" id="046e7617-48fc-41ef-ae8d-62159170c5b1" name="Changes" comment="feat(footer): Добавление ссылки на телеграм канал">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/popups/PopupThankyou.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/popups/PopupThankyou.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hooks/useHandleUtms.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/hooks/useHandleUtms.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.tsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -108,8 +113,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.postbuild" />
         <item itemvalue="npm.dev" />
+        <item itemvalue="npm.postbuild" />
         <item itemvalue="npm.build" />
         <item itemvalue="npm.postbuild" />
         <item itemvalue="npm.dev" />
@@ -155,6 +160,7 @@
       <workItem from="1702196074634" duration="1000" />
       <workItem from="1702485772776" duration="16896000" />
       <workItem from="1702553818791" duration="2496000" />
+      <workItem from="1705466824994" duration="5145000" />
     </task>
     <task id="LOCAL-00001" summary="feature(new course page): test5">
       <option name="closed" value="true" />
@@ -244,11 +250,30 @@
       <option name="project" value="LOCAL" />
       <updated>1702563217597</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="feat(footer): Добавление ссылки на телеграм канал">
+      <option name="closed" value="true" />
+      <created>1705390720969</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1705390720969</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -261,7 +286,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="test" />
+                        <option value="main" />
                       </list>
                     </value>
                   </entry>
@@ -284,6 +309,8 @@
     <MESSAGE value="feature(new course page): test12" />
     <MESSAGE value="fix: Get params" />
     <MESSAGE value="fix: Get params test-2" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: Get params test-2" />
+    <MESSAGE value="feat(Добавление ссылки в подвал сайта на телеграм канал):" />
+    <MESSAGE value="feat(footer): Добавление ссылки на телеграм канал" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(footer): Добавление ссылки на телеграм канал" />
   </component>
 </project>

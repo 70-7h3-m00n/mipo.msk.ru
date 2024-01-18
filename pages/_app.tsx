@@ -180,35 +180,36 @@ function MyApp({ Component, pageProps, router }) {
             id='ed-partners'
             dangerouslySetInnerHTML={{
               __html: `function sclClickPixelFn() {
-                const url = new URL(document.location.href).searchParams;
-                if (url.get('a')) {
-                    const availableParams = ['aff_click_id', 'sub_id1', 'sub_id2', 'sub_id3', 'sub_id4', 'sub_id5', 'aff_param1', 'aff_param2', 'aff_param3', 'aff_param4', 'aff_param5', 'idfa', 'gaid'];
-                    const t = new URL('https://edpartners.scaletrk.com/click');
-                    const r = t.searchParams;
-                    console.log(url);
-                    r.append('a', url.get('a'));
-                    r.append('o', url.get('o'));
-                    r.append('return', 'click_id');
-                    if (availableParams?.length > 0) {
-                        availableParams.forEach((key) => {
-                            const value = url.get(key);
-                            if (value) {
-                                r.append(key, value);
-                            }
-                        });
-                    }
-                    fetch(t.href).then((e) => e.json()).then((e) => {
-                        const c = e.click_id;
-                        if (c) {
-                            const expiration = 864e5 * 90;
-                            const o = new Date(Date.now() + expiration);
-                            document.cookie = 'cl_uid=' + c + ';expires=' + o;
-                            document.cookie = 'utm_source=' + url.get('utm_source') + ';expires=' + o;
-                        }
-                    });
-                }
-            }
-            sclClickPixelFn();`
+                  const url = new URL(document.location.href).searchParams;
+                  if (url.get('a')) {
+                      const availableParams = ['aff_click_id', 'sub_id1', 'sub_id2', 'sub_id3', 'sub_id4', 'sub_id5', 'aff_param1', 'aff_param2', 'aff_param3', 'aff_param4', 'aff_param5', 'idfa', 'gaid'];
+                      const t = new URL('https://edpartners.scaletrk.com/click');
+                      const r = t.searchParams;
+                      console.log(url);
+                      r.append('a', url.get('a'));
+                      r.append('o', url.get('o'));
+                      r.append('return', 'click_id');
+                      if (availableParams?.length > 0) {
+                          availableParams.forEach((key) => {
+                              const value = url.get(key);
+                              if (value) {
+                                  r.append(key, value);
+                              }
+                          });
+                      }
+                      fetch(t.href).then((e) => e.json()).then((e) => {
+                          const c = e.click_id;
+                          if (c) {
+                              const expiration = 864e5 * 90;
+                              const o = new Date(Date.now() + expiration);
+                              document.cookie = 'cl_uid=' + c + ';expires=' + o;
+                              document.cookie = 'utm_source=' + url.get('utm_source') + ';expires=' + o;
+                          }
+                      });
+                  }
+              }
+
+              sclClickPixelFn();`
             }}
           />
         </>

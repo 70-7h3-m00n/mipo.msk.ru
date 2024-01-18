@@ -10,19 +10,21 @@ const useHandleUtms = () => {
   const router = useRouter()
   const params = parseUrlParams({ router })
 
-  if (params && router.asPath.includes('utm_source')){
-    UTM_KEYS.forEach(utmKey =>
-      params[utmKey]
-        ? setCookie(utmKey, params[utmKey], { maxAge: NINETY_DAYS })
-        : undefined
-    )
-  }
   useEffect(() => {
-    if(!router.asPath.includes('utm_source')) {
-      UTM_KEYS.forEach(utmKey => {
-        deleteCookie(utmKey)
-      })
-    }
-  },[])
+    if (params)
+      UTM_KEYS.forEach(utmKey =>
+        params[utmKey]
+          ? setCookie(utmKey, params[utmKey], { maxAge: NINETY_DAYS })
+          : undefined
+      )
+  }, [params])
+
+  // useEffect(() => {
+  //   if(!router.asPath.includes('utm_source')) {
+  //     UTM_KEYS.forEach(utmKey => {
+  //       deleteCookie(utmKey)
+  //     })
+  //   }
+  // },[])
 }
 export default useHandleUtms
