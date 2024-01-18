@@ -65,7 +65,7 @@ const PopupThankyou = ({ close, id = null, clickid = null }) => {
       return res.data
     }
 
-    if (isLeadFromAffise) sendLeadToAffise()
+    if (isLeadFromAffise && utm_source === 'edpartners') sendLeadToAffise()
 
     sessionStorage.removeItem('referer')
     sessionStorage.removeItem('user_uuid')
