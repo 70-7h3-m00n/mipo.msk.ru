@@ -24,8 +24,6 @@ const PopupThankyou = ({ close, id = null, clickid = null }) => {
     program?.category?.type === 'profession'
   const atProfession = program?.category?.type === 'profession'
 
-  console.log('popup thankyou id: ', id)
-
   useEffect(() => {
     const cookies = getCookies()
     const utm_source = cookies[UTM_KEYS_OBJ.utm_source]
@@ -58,14 +56,20 @@ const PopupThankyou = ({ close, id = null, clickid = null }) => {
     }
     TagManager.dataLayer(tagManagerArgs)
 
-    const sendLeadToAffise = async () => {
-      const res = await axios.get(
-        `https://edpartners.scaletrk.com/track/conv?click_id=${clUid}&token=${'bbba3c91'}&adv_order_id=2&conv_status=pending&goal_alias=2`
-      )
-      return res.data
-    }
 
-    if (isLeadFromAffise && utm_source === 'edpartners') sendLeadToAffise()
+
+    if (isLeadFromAffise) {
+      const sendLeadToAffise = async () => {
+        const res = await axios.get(
+          `https://edpartners.scaletrk.com/track/conv?click_id=${clUid}&token=${'bbba3c91'}&adv_order_id=2&conv_status=pending&goal_alias=2`
+        )
+        return res.data
+      }
+
+      if (utm_source === 'edpartners') {
+        sendLeadToAffise()
+      }
+    }
 
     sessionStorage.removeItem('referer')
     sessionStorage.removeItem('user_uuid')
