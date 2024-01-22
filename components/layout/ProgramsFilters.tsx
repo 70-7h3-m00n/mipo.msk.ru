@@ -34,10 +34,14 @@ const ProgramsFilters = ({ ofType = null, close }: ProgramsFiltersType) => {
       <div style={{
         marginTop: '20px'
       }}>
-        <h2>Список новых курсов</h2>
+        {
+          course.length ?
+            <h2>Список новых курсов</h2>:
+            <></>
+        }
 
         <div>
-          {
+        {
             course.map((item, index) => (
               <div key={item}
                    onClick={() => route.push(`new-courses/${item.slug}`)}
