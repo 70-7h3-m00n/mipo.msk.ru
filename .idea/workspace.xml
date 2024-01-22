@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="046e7617-48fc-41ef-ae8d-62159170c5b1" name="Changes" comment="fix(edpartners): Отправлять только по ссылке edpartners">
+    <list default="true" id="046e7617-48fc-41ef-ae8d-62159170c5b1" name="Changes" comment="fix(image): Исправление картинки в шапке курса">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/popups/PopupThankyou.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/popups/PopupThankyou.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/layout/ProgramsFilters.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/layout/ProgramsFilters.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,7 +158,8 @@
       <workItem from="1702196074634" duration="1000" />
       <workItem from="1702485772776" duration="16896000" />
       <workItem from="1702553818791" duration="2496000" />
-      <workItem from="1705466824994" duration="9422000" />
+      <workItem from="1705466824994" duration="11455000" />
+      <workItem from="1705893193284" duration="5808000" />
     </task>
     <task id="LOCAL-00001" summary="feature(new course page): test5">
       <option name="closed" value="true" />
@@ -272,7 +273,23 @@
       <option name="project" value="LOCAL" />
       <updated>1705578077650</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="fix(edpartners): Исправление">
+      <option name="closed" value="true" />
+      <created>1705666681627</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1705666681627</updated>
+    </task>
+    <task id="LOCAL-00016" summary="fix(image): Исправление картинки в шапке курса">
+      <option name="closed" value="true" />
+      <created>1705929405848</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1705929405848</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -327,6 +344,8 @@
     <MESSAGE value="feat(footer): Добавление ссылки на телеграм канал" />
     <MESSAGE value="fix(edpartners): Исправление отправки запроса" />
     <MESSAGE value="fix(edpartners): Отправлять только по ссылке edpartners" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix(edpartners): Отправлять только по ссылке edpartners" />
+    <MESSAGE value="fix(edpartners): Исправление" />
+    <MESSAGE value="fix(image): Исправление картинки в шапке курса" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix(image): Исправление картинки в шапке курса" />
   </component>
 </project>
