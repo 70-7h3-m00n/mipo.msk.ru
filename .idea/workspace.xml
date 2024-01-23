@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="046e7617-48fc-41ef-ae8d-62159170c5b1" name="Changes" comment="fix(image): Исправление картинки в шапке курса">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/layout/ProgramsFilters.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/layout/ProgramsFilters.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,6 +159,9 @@
       <workItem from="1702553818791" duration="2496000" />
       <workItem from="1705466824994" duration="11455000" />
       <workItem from="1705893193284" duration="5808000" />
+      <workItem from="1705982437314" duration="753000" />
+      <workItem from="1705983924736" duration="607000" />
+      <workItem from="1706006137608" duration="924000" />
     </task>
     <task id="LOCAL-00001" summary="feature(new course page): test5">
       <option name="closed" value="true" />
