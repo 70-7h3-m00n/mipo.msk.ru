@@ -1,12 +1,12 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 
 import nodemailer from 'nodemailer'
-import { dev } from '@/config/index'
+import { dev, UTM_KEYS_OBJ } from '@/config/index'
 import moment from 'moment'
 import { WebServiceClient } from '@maxmind/geoip2-node'
 import axios from 'axios'
 import * as console from 'console'
-import { getCookie } from 'cookies-next'
+import { getCookie, getCookies } from 'cookies-next'
 
 const contact = async (req, res) => {
   process.env.TZ = 'Europe/Moscow'
@@ -50,6 +50,23 @@ const contact = async (req, res) => {
     .catch(error => {
       console.log(error)
     })
+
+  const cookies = getCookies()
+  const utm_source = cookies[UTM_KEYS_OBJ.utm_source]
+  const clUid = cookies[UTM_KEYS_OBJ.cl_uid]
+
+  if (utm_source === 'edpartners') {
+    const sendLeadToAffise = async () => {
+      const res = await axios.get(
+        `https://edpartners.scaletrk.com/track/conv?click_id=${clUid}&token=${'bbba3c91'}&adv_order_id=${id}&conv_status=pending&goal_alias=2`
+      )
+      return res.data
+    }
+
+    sendLeadToAffise()
+  }
+
+
 
   // geoip2 init
   const geoip2 = new WebServiceClient('550199', process.env.GEO2_APIKEY, {
