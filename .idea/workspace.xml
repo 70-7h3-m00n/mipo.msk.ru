@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="046e7617-48fc-41ef-ae8d-62159170c5b1" name="Changes" comment="fix(image): Исправление картинки в шапке курса">
+    <list default="true" id="046e7617-48fc-41ef-ae8d-62159170c5b1" name="Changes" comment="fix: Исправление года в блоке">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hooks/useHandleUtms.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/hooks/useHandleUtms.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,7 +162,7 @@
       <workItem from="1705893193284" duration="5808000" />
       <workItem from="1705982437314" duration="753000" />
       <workItem from="1705983924736" duration="607000" />
-      <workItem from="1706006137608" duration="924000" />
+      <workItem from="1706006137608" duration="3251000" />
     </task>
     <task id="LOCAL-00001" summary="feature(new course page): test5">
       <option name="closed" value="true" />
@@ -291,7 +292,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705929405848</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="fix: Исправление года в блоке">
+      <option name="closed" value="true" />
+      <created>1706007644339</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1706007644339</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -348,6 +357,7 @@
     <MESSAGE value="fix(edpartners): Отправлять только по ссылке edpartners" />
     <MESSAGE value="fix(edpartners): Исправление" />
     <MESSAGE value="fix(image): Исправление картинки в шапке курса" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix(image): Исправление картинки в шапке курса" />
+    <MESSAGE value="fix: Исправление года в блоке" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: Исправление года в блоке" />
   </component>
 </project>

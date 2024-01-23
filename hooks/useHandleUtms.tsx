@@ -19,12 +19,12 @@ const useHandleUtms = () => {
       )
   }, [params])
 
-  // useEffect(() => {
-  //   if(!router.asPath.includes('utm_source')) {
-  //     UTM_KEYS.forEach(utmKey => {
-  //       deleteCookie(utmKey)
-  //     })
-  //   }
-  // },[])
+  useEffect(() => {
+    if(!router.asPath.includes('utm_source=edpartners')) {
+      UTM_KEYS.forEach(utmKey => {
+        deleteCookie(utmKey)
+      })
+    }
+  },[params, router])
 }
 export default useHandleUtms
