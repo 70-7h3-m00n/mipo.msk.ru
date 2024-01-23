@@ -58,7 +58,7 @@ const contact = async (req, res) => {
   if (utm_source === 'edpartners') {
     const sendLeadToAffise = async () => {
       const res = await axios.get(
-        `https://edpartners.scaletrk.com/track/conv?click_id=${clUid}&token=${'bbba3c91'}&adv_order_id=2&conv_status=pending&goal_alias=2`
+        `https://edpartners.scaletrk.com/track/conv?click_id=${clUid}&token=${'bbba3c91'}&adv_order_id=${id}&conv_status=pending&goal_alias=2`
       )
       return res.data
     }
