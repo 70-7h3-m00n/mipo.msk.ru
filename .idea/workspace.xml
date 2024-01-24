@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="046e7617-48fc-41ef-ae8d-62159170c5b1" name="Changes" comment="fix(edpartners): добавление id.">
+    <list default="true" id="046e7617-48fc-41ef-ae8d-62159170c5b1" name="Changes" comment="fix(edpartners): исправление получение кук.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/popups/PopupThankyou.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/popups/PopupThankyou.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/api/contact.ts" beforeDir="false" afterPath="$PROJECT_DIR$/pages/api/contact.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -32,12 +33,12 @@
   <component name="GitRewordedCommitMessages">
     <option name="commitMessagesMapping">
       <RewordedCommitMessageMapping>
-        <option name="originalMessage" value="feature(new course page):  test-1" />
-        <option name="rewordedMessage" value="feature: Основная верстка и функционал новых курсов." />
+        <option name="originalMessage" value="fix(edpartners): исправление получение кук." />
+        <option name="rewordedMessage" value="fix(edpartners): исправление получение кук." />
       </RewordedCommitMessageMapping>
     </option>
     <option name="currentCommit" value="1" />
-    <option name="onto" value="83d63de8ac4482de00f3e021c945c4a29e58bca9" />
+    <option name="onto" value="460f035e1ab1d8e87045df50fceec6004b781723" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -162,7 +163,7 @@
       <workItem from="1705893193284" duration="5808000" />
       <workItem from="1705982437314" duration="753000" />
       <workItem from="1705983924736" duration="607000" />
-      <workItem from="1706006137608" duration="5510000" />
+      <workItem from="1706006137608" duration="7294000" />
     </task>
     <task id="LOCAL-00001" summary="feature(new course page): test5">
       <option name="closed" value="true" />
@@ -316,7 +317,23 @@
       <option name="project" value="LOCAL" />
       <updated>1706016737723</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="fix(edpartners): исправление получение кук.">
+      <option name="closed" value="true" />
+      <created>1706078849111</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1706078849111</updated>
+    </task>
+    <task id="LOCAL-00021" summary="fix(edpartners): исправление получение кук.">
+      <option name="closed" value="true" />
+      <created>1706078878589</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1706078878589</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -376,6 +393,7 @@
     <MESSAGE value="fix: Исправление года в блоке" />
     <MESSAGE value="fix(edpartners): Коректировка отправки." />
     <MESSAGE value="fix(edpartners): добавление id." />
-    <option name="LAST_COMMIT_MESSAGE" value="fix(edpartners): добавление id." />
+    <MESSAGE value="fix(edpartners): исправление получение кук." />
+    <option name="LAST_COMMIT_MESSAGE" value="fix(edpartners): исправление получение кук." />
   </component>
 </project>

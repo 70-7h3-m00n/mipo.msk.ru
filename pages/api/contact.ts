@@ -51,19 +51,20 @@ const contact = async (req, res) => {
       console.log(error)
     })
 
-  const utm_source = getCookie('utm_source', { req, res })
-  const clUid = getCookie('cl_uid', { req, res })
-
-  if (utm_source === 'edpartners') {
-    const sendLeadToAffise = async () => {
-      const res = await axios.get(
-        `https://edpartners.scaletrk.com/track/conv?click_id=${clUid}&token=${'bbba3c91'}&adv_order_id=${id}&conv_status=pending&goal_alias=2`
-      )
-      return res.data
-    }
-
-    sendLeadToAffise()
-  }
+  // const utm_source = getCookie('utm_source', { req, res })
+  // const clUid = getCookie('cl_uid', { req, res })
+  //
+  // if (utm_source === 'edpartners') {
+  //   const sendLeadToAffise = async () => {
+  //     console.log('test ok')
+  //     const res = await axios.get(
+  //       `https://edpartners.scaletrk.com/track/conv?click_id=${clUid}&token=${'bbba3c91'}&adv_order_id=${id}&conv_status=pending&goal_alias=2`
+  //     )
+  //     return res.data
+  //   }
+  //
+  //   sendLeadToAffise()
+  // }
 
 
 
