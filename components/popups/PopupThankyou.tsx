@@ -59,7 +59,15 @@ const PopupThankyou = ({ close, id = null, clickid = null }) => {
 
 
     if (isLeadFromAffise) {
-
+      const sendLeadToAffise = async () => {
+        const res = await axios.get(
+          `https://edpartners.scaletrk.com/track/conv?click_id=${clUid}&token=${'bbba3c91'}&adv_order_id=${id}&conv_status=pending&goal_alias=2`
+        )
+        return res.data
+      }
+      if (utm_source === 'edpartners') {
+        sendLeadToAffise()
+      }
     }
 
     sessionStorage.removeItem('referer')
