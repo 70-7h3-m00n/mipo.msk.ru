@@ -51,9 +51,8 @@ const contact = async (req, res) => {
       console.log(error)
     })
 
-  const cookies = getCookies()
-  const utm_source = cookies[UTM_KEYS_OBJ.utm_source]
-  const clUid = cookies[UTM_KEYS_OBJ.cl_uid]
+  const utm_source = getCookie('utm_source', { req, res })
+  const clUid = getCookie('cl_uid', { req, res })
 
   if (utm_source === 'edpartners') {
     const sendLeadToAffise = async () => {
