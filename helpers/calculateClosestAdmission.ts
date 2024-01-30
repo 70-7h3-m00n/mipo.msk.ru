@@ -1,6 +1,7 @@
 const setLastDayOfMonth = (currentDate: Date) => {
   currentDate.setMonth(currentDate.getMonth() + 1)
-  currentDate.setDate(0)
+  currentDate.setDate(10)
+  currentDate.setMonth(currentDate.getMonth() - 1)
 }
 
 const setNextDay = (currentDate: Date, currentDay: number) =>
