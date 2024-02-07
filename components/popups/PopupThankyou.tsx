@@ -2,7 +2,6 @@ import stls from '@/styles/components/popups/PopupThankyou.module.sass'
 import { useEffect, useContext, useState } from 'react'
 import ProgramContext from '@/context/program/programContext'
 import TagManager from 'react-gtm-module'
-import axios from 'axios'
 import { BtnClose } from '@/components/btns'
 import { UTM_KEYS_OBJ } from '@/config/index'
 import { v4 as uuidv4 } from 'uuid'
@@ -16,8 +15,6 @@ const PopupThankyou = ({ close, id = null, clickid = null }) => {
   const [isLeadFromLeadgid, setIsLeadFromLeadgid] = useState(false)
   const [isLeadFromAffise, setIsLeadFromAffise] = useState(false)
   const [userUuid, setUserUuid] = useState(null)
-
-  const idThankyou = uuidv4()
 
   const altStyles =
     program?.category?.type === 'mba' ||
@@ -55,20 +52,6 @@ const PopupThankyou = ({ close, id = null, clickid = null }) => {
       dataLayerName: 'dataLayer'
     }
     TagManager.dataLayer(tagManagerArgs)
-
-
-
-    if (isLeadFromAffise) {
-      const sendLeadToAffise = async () => {
-        const res = await axios.get(
-          `https://edpartners.scaletrk.com/track/conv?click_id=${clUid}&token=${'bbba3c91'}&adv_order_id=${id}&conv_status=pending&goal_alias=2`
-        )
-        return res.data
-      }
-      if (utm_source === 'edpartners') {
-        sendLeadToAffise()
-      }
-    }
 
     sessionStorage.removeItem('referer')
     sessionStorage.removeItem('user_uuid')
