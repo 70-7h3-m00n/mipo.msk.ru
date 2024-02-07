@@ -31,7 +31,6 @@ const webhook = async (
       const programTypeIndex = entries?.findIndex(item => item === 'Тип программы')
       const programType = programTypeIndex > 0 && entries?.[programTypeIndex + 1]
       const isEdpartnersFromAmocrm = entries.some(el => el === 'edpartners')
-      const isAffiliateFromAmocrm = entries.some(el => el === 'affiliate')
 
       if (isEdpartnersFromAmocrm && price > 0) {
         const responseApproved = await axios.get(
@@ -46,6 +45,8 @@ const webhook = async (
       const utmSource = req?.body?.utm_source
       const utmCampaign = req?.body?.utm_campaign
       const clUid = req?.body?.cl_uid
+
+      console.log(utmSource === 'edpartners', utmSource, 'utmSource')
 
       if (utmSource === 'edpartners') {
         const response = await axios.get(
