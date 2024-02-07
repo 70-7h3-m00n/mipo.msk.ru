@@ -20,7 +20,10 @@ const useHandleUtms = () => {
   }, [params])
 
   useEffect(() => {
-    if(!router.asPath.includes('utm_source=edpartners')) {
+    const query = router.asPath.includes('?')
+    const edpartners = !router.asPath.includes('utm_source=edpartners&')
+
+    if(query && edpartners) {
       UTM_KEYS.forEach(utmKey => {
         deleteCookie(utmKey)
       })
