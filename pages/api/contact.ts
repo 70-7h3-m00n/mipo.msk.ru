@@ -153,7 +153,7 @@ const contact = async (req, res) => {
     utmCampaign: (utms && utms.utm_campaign) || null,
     utmContent: (utms && utms.utm_content) || null,
     utmTerm: (utms && utms.utm_term) || null,
-    clUid: utms.cl_uid || null,
+    clUid: utms?.cl_uid || null,
     clickid: clickid || null,
     formName: formName || null
   }

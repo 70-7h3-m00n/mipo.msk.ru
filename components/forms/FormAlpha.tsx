@@ -10,7 +10,8 @@ import { BtnAlpha, BtnBeta } from '@/components/btns'
 import classNames from 'classnames'
 import { PopupThankyou } from '@/components/popups'
 import { getCookie } from 'cookies-next'
-import { UTM_KEYS, UTM_KEYS_OBJ } from '@/config/index'
+import { routesFront, UTM_KEYS, UTM_KEYS_OBJ } from '@/config/index'
+import axios from 'axios'
 
 type FormValues = {
   name: string
@@ -73,11 +74,16 @@ const FormAlpha = ({
     const ymUid = JSON.parse(localStorage.getItem('_ym_uid'))
     const userUuid = JSON.parse(sessionStorage.getItem('user_uuid'))
 
-    // console.log('formalpha id: ', id)
-
     if (leadIsSentTimeout) return
 
     const req = await hitContactRoute({ ...data, id, ymUid, clickid, formName })
+
+    try {
+      await axios.post(`${routesFront.root}/api/webhook`, utms)
+    }catch (e) {
+      console.log(e, 'submit-webhook')
+    }
+
     if (req === 200) {
       console.log('Success')
       setLeadIsSentTimeout(true)
