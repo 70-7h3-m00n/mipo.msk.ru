@@ -47,8 +47,6 @@ const webhook = async (
       const utmCampaign = req?.body?.utm_campaign
       const clUid = req?.body?.cl_uid
 
-      console.log(utmSource, 'utmSource')
-
       if (utmSource === 'edpartners') {
         const response = await axios.get(
           `https://edpartners.scaletrk.com/track/conv?click_id=${clUid}&token=${token}&adv_order_id=2&conv_status=pending&goal_alias=2`
