@@ -17,8 +17,6 @@ const webhook = async (
 
   // console.log('%cwebhook.ts line:17 req.body', 'color: #007acc;', req.body)
 
-  console.log(req?.body, 'webhook-api')
-
   if (req.body) {
     const price = req?.body?.['leads[status][0][price]']
     const leadId = req?.body?.['leads[status][0][id]']
@@ -45,13 +43,13 @@ const webhook = async (
         )
       }
 
-      const utmSource = req?.body?.utms?.utm_source
-      const utmCampaign = req?.body?.utms?.utm_campaign
-      const clUid = req?.body?.utms?.cl_uid
+      const utmSource = req?.body?.utm_source
+      const utmCampaign = req?.body?.utm_campaign
+      const clUid = req?.body?.cl_uid
 
+      console.log(utmSource, 'utmSource')
 
-
-      if (utmSource === 'edpartners' && !price) {
+      if (utmSource === 'edpartners') {
         const response = await axios.get(
           `https://edpartners.scaletrk.com/track/conv?click_id=${clUid}&token=${token}&adv_order_id=2&conv_status=pending&goal_alias=2`
         )
