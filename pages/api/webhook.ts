@@ -1,7 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import axios from 'axios'
 
-const AFFISE_SECURE = '011b594659b3d712d7da31ff85cca3e4'
 const token = 'bbba3c91'
 
 type TypeNextApiResponseLeadData = {
@@ -45,8 +44,6 @@ const webhook = async (
       const utmSource = req?.body?.utm_source
       const utmCampaign = req?.body?.utm_campaign
       const clUid = req?.body?.cl_uid
-
-      console.log(utmSource === 'edpartners', utmSource, 'utmSource')
 
       if (utmSource === 'edpartners') {
         const response = await axios.get(

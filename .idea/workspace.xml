@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="046e7617-48fc-41ef-ae8d-62159170c5b1" name="Changes" comment="fix: исправление даты зачесления на курс.">
-      <change afterPath="$PROJECT_DIR$/pages/api/webhook.ts" afterDir="false" />
+    <list default="true" id="046e7617-48fc-41ef-ae8d-62159170c5b1" name="Changes" comment="fix(edpartners): Исправление ошибки">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/popups/PopupThankyou.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/popups/PopupThankyou.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/api/contact.ts" beforeDir="false" afterPath="$PROJECT_DIR$/pages/api/contact.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/api/webhook.ts" beforeDir="false" afterPath="$PROJECT_DIR$/pages/api/webhook.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,7 +168,12 @@
       <workItem from="1707134436127" duration="2191000" />
       <workItem from="1707189443131" duration="599000" />
       <workItem from="1707205992188" duration="615000" />
-      <workItem from="1707207271806" duration="2426000" />
+      <workItem from="1707207271806" duration="3920000" />
+      <workItem from="1707296370564" duration="56000" />
+      <workItem from="1707297342004" duration="22713000" />
+      <workItem from="1707380691456" duration="4773000" />
+      <workItem from="1707489976463" duration="1714000" />
+      <workItem from="1707740258771" duration="1202000" />
     </task>
     <task id="LOCAL-00001" summary="feature(new course page): test5">
       <option name="closed" value="true" />
@@ -356,7 +359,63 @@
       <option name="project" value="LOCAL" />
       <updated>1706603306829</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="fix: edpartners webhook">
+      <option name="closed" value="true" />
+      <created>1707293690923</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1707293690923</updated>
+    </task>
+    <task id="LOCAL-00025" summary="feat: код квиза">
+      <option name="closed" value="true" />
+      <created>1707298350789</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1707298350789</updated>
+    </task>
+    <task id="LOCAL-00026" summary="fix: код квиза">
+      <option name="closed" value="true" />
+      <created>1707306531955</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1707306531955</updated>
+    </task>
+    <task id="LOCAL-00027" summary="fix(edpartners): Исправление кода">
+      <option name="closed" value="true" />
+      <created>1707312636813</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1707312636813</updated>
+    </task>
+    <task id="LOCAL-00028" summary="fix(edpartners): Исправление кода в webhook">
+      <option name="closed" value="true" />
+      <created>1707314478039</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1707314478039</updated>
+    </task>
+    <task id="LOCAL-00029" summary="fix(edpartners): Исправление кук при не правильных ссылках">
+      <option name="closed" value="true" />
+      <created>1707319502309</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1707319502309</updated>
+    </task>
+    <task id="LOCAL-00030" summary="fix(edpartners): Исправление ошибки">
+      <option name="closed" value="true" />
+      <created>1707326719935</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1707326719935</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -397,10 +456,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="feature(new course page): test5" />
-    <MESSAGE value="feature(new course page): test6" />
-    <MESSAGE value="feature(new course page): test7" />
-    <MESSAGE value="feature(new course page): test8" />
     <MESSAGE value="feature(new course page): test9" />
     <MESSAGE value="feature(new course page): test10" />
     <MESSAGE value="feature(new course page): test11" />
@@ -419,6 +474,13 @@
     <MESSAGE value="fix(edpartners): исправление получение кук." />
     <MESSAGE value="fix(edpartners): исправление." />
     <MESSAGE value="fix: исправление даты зачесления на курс." />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: исправление даты зачесления на курс." />
+    <MESSAGE value="fix: edpartners webhook" />
+    <MESSAGE value="feat: код квиза" />
+    <MESSAGE value="fix: код квиза" />
+    <MESSAGE value="fix(edpartners): Исправление кода" />
+    <MESSAGE value="fix(edpartners): Исправление кода в webhook" />
+    <MESSAGE value="fix(edpartners): Исправление кук при не правильных ссылках" />
+    <MESSAGE value="fix(edpartners): Исправление ошибки" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix(edpartners): Исправление ошибки" />
   </component>
 </project>
