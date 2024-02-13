@@ -24,7 +24,7 @@ const ImgCourse = ({
   return (
     <ImgTemplate
       classNames={classNames}
-      src={isImage && src ? src : altStyles ? defaultSrcAlt : defaultSrc}
+      src={src !== undefined ? src : altStyles ? defaultSrcAlt : defaultSrc}
       alt={alt || 'Человек в работе'}
       width={width}
       height={height}
