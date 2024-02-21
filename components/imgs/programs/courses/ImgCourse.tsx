@@ -8,12 +8,12 @@ import defaultSrc from '@/public/assets/imgs/programs/courses/course-2.jpg'
 import defaultSrcAlt from '@/public/assets/imgs/programs/courses/course-3.jpg'
 
 const ImgCourse = ({
-  classNames = [],
-  src,
-  alt,
-  width,
-  height
-}: TGeneralImg) => {
+                     classNames = [],
+                     src,
+                     alt,
+                     width,
+                     height
+                   }: TGeneralImg) => {
   const { program } = useContext(ProgramContext)
   const altStyles =
     program?.category?.type === 'mba' ||
@@ -24,7 +24,7 @@ const ImgCourse = ({
   return (
     <ImgTemplate
       classNames={classNames}
-      src={src !== undefined ? src : altStyles ? defaultSrcAlt : defaultSrc}
+      src={isImage && src ? src : altStyles ? defaultSrcAlt : defaultSrc}
       alt={alt || 'Человек в работе'}
       width={width}
       height={height}
