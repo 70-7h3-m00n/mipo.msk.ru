@@ -4,8 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="046e7617-48fc-41ef-ae8d-62159170c5b1" name="Changes" comment="fix: Откат обратно изменениея">
+    <list default="true" id="046e7617-48fc-41ef-ae8d-62159170c5b1" name="Changes" comment="fix: Добавление даты 30 и 29 часла зачислений">
+      <change afterPath="$PROJECT_DIR$/components/cards/CardMSHPP.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/svg/MshppSvg.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/components/cards/CardMshpp.module.sass" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/pages/PagesProgram.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/pages/PagesProgram.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/sections/all/ForWhom.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/sections/all/ForWhom.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,9 +20,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript JSX File" />
-        <option value="Sass File" />
         <option value="TypeScript File" />
+        <option value="Sass File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -180,6 +185,8 @@
       <workItem from="1708498366777" duration="1118000" />
       <workItem from="1708501849569" duration="326000" />
       <workItem from="1708502374858" duration="1096000" />
+      <workItem from="1708519498901" duration="2136000" />
+      <workItem from="1708941315939" duration="8051000" />
     </task>
     <task id="LOCAL-00001" summary="feature(new course page): test5">
       <option name="closed" value="true" />
@@ -453,7 +460,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708502086645</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="fix: Добавление даты 30 и 29 часла зачислений">
+      <option name="closed" value="true" />
+      <created>1708521026252</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1708521026252</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -494,8 +509,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix: Get params test-2" />
-    <MESSAGE value="feat(Добавление ссылки в подвал сайта на телеграм канал):" />
     <MESSAGE value="feat(footer): Добавление ссылки на телеграм канал" />
     <MESSAGE value="fix(edpartners): Исправление отправки запроса" />
     <MESSAGE value="fix(edpartners): Отправлять только по ссылке edpartners" />
@@ -519,6 +532,8 @@
     <MESSAGE value="fix(header image course): Убрал моргание картинки на сранице курса" />
     <MESSAGE value="fix: Исправление даты курса" />
     <MESSAGE value="fix: Откат обратно изменениея" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: Откат обратно изменениея" />
+    <MESSAGE value="fix: Добавление даты 30 и 29 часла зачислений" />
+    <MESSAGE value="fix:" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix:" />
   </component>
 </project>
