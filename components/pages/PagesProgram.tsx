@@ -33,6 +33,8 @@ import ProgramContext from '@/context/program/programContext'
 import { discount } from '@/data/price'
 import { TypeCategory } from '@/types/index'
 import { IconGeneralTextDecorativeUnderline } from '@/components/icons'
+import CardMshpp from '@/components/cards/CardMSHPP'
+import { useRouter } from 'next/router'
 
 type PagesProgramType = {
   ofType: TypeCategory
@@ -40,15 +42,19 @@ type PagesProgramType = {
 }
 
 const PagesProgram = ({ ofType = null, reviews }: PagesProgramType) => {
+  const route = useRouter()
   const { program } = useContext(ProgramContext)
   const altStyles =
     program?.category?.type === 'mba' ||
     program?.category?.type === 'profession'
 
+  const isMshppBlock = route.asPath.includes('prakticheskaya-psihologiya-m-sh-pp')
+
   return (
     <>
       <HeroProgram />
       {/* <Desc /> */}
+      {isMshppBlock && <CardMshpp />}
       <ForWhom />
       {altStyles && <SectionMoreRelevant />}
       <WhatYouWillLearn />

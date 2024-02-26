@@ -7,15 +7,20 @@ import { getImageHeight } from '@/helpers/index'
 import ProgramContext from '@/context/program/programContext'
 import Wrapper from '@/components/layout/Wrapper'
 import { ImgForWhom, ImgForWhomPhoneTablet } from '@/components/imgs'
+import { useRouter } from 'next/router'
 
 const ForWhom = () => {
+  const route = useRouter()
   const { program } = useContext(ProgramContext)
   const altStyles =
     program?.category?.type === 'mba' ||
     program?.category?.type === 'profession'
+  const isMshppBlock = route.asPath.includes('prakticheskaya-psihologiya-m-sh-pp')
 
   return (
-    <section className={cn(stls.container, { [stls.altStyles]: altStyles })}>
+    <section className={cn(stls.container, { [stls.altStyles]: altStyles })}
+             style={{paddingTop: isMshppBlock? 0: null}}
+    >
       <Wrapper classNames={[cn(stls.wrapper)]}>
         <div className={cn(stls.left, { [stls.altStyles]: altStyles })}>
           <div className={cn(stls.text, { [stls.altStyles]: altStyles })}>
