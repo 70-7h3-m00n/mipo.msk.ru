@@ -206,7 +206,7 @@ function MyApp({ Component, pageProps, router }) {
 
       {!dev && (
         <Script
-          id='marquiz'
+          id='btn-open'
           dangerouslySetInnerHTML={{
             __html: `(function(a,m,o,c,r,m){a[m]={id:"405512",hash:"ef9faaf747dd2aea1f17c8ca21789bcdb42be19ad6d8ba66f2a817bd380c1433",locale:"ru",inline:false,
               setMeta:function(p){this.params=(this.params||[]).concat([p])}};a[o]=a[o]||function(){(a[o].q=a[o].q||[]).push(arguments)};var d=a.document,
@@ -218,7 +218,7 @@ function MyApp({ Component, pageProps, router }) {
 
       {!dev && (
         <Script
-          id='marquiz'
+          id='btn-close'
           dangerouslySetInnerHTML={{
             __html: `(function(a,m,o,c,r,m){a[m]={id:"405512",hash:"ef9faaf747dd2aea1f17c8ca21789bcdb42be19ad6d8ba66f2a817bd380c1433",
             locale:"ru",inline:true,setMeta:function(p){this.params=(this.params||[]).concat([p])}};a[o]=a[o]||function(){(a[o].q=a[o].q||[]).push(arguments)};
