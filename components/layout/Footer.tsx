@@ -173,22 +173,18 @@ const Footer = () => {
                 {
                   edduData.map((item, index) => (
                     <a key={index}
-                       href={'https://eddu.pro/reviews/mipo-review/'}
+                       href={item.link}
                        target={'_blank'}
                        rel="noreferrer"
                     >
                       <Image src={item.svg}
                              alt={'svg'}
                              priority
-                             style={{
-                               objectFit: 'cover',
-                               width: '100%',
-                               height: 'auto'
-                             }}
                       />
                     </a>))
                 }
               </div>
+
               <div className={stls.btn}>
                 <PopupTrigger btn='beta' cta='askQuestion' />
               </div>
