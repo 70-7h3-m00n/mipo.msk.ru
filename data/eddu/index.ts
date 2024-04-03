@@ -15,7 +15,7 @@ const edduData : EdduData[] = [
   },
   {
     svg : imageEdkurs,
-    link: '#'
+    link: 'https://edkurs.ru/obzor-vseh-kursov-ot-moskovskij-institut-professionalnogo-obrazovaniya-czeny-i-otzyvy-mipo/?utm_source=mipo'
   },
   // {
   //   svg : svg2
