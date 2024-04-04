@@ -156,6 +156,16 @@ function MyApp({ Component, pageProps, router }) {
           />
         </>
       )}
+
+      {!dev && (
+        <>
+          <Script
+            id='af-ckick'
+            src={"https://af.click.ru/af.js?id=16601"}
+          />
+        </>
+      )}
+
       {!dev && (
         <>
           <Script
