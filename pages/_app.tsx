@@ -97,7 +97,7 @@ function MyApp({ Component, pageProps, router }) {
                 <main>
                   <Component {...pageProps} />
                 </main>
-                <StickyBottom />
+                {/*<StickyBottom />*/}
                 <Footer />
               </div>
             </FieldsTooltipState>
