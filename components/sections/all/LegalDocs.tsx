@@ -51,10 +51,6 @@ const LegalDocs = () => {
   ]
   const listRight = [
     {
-      href: '/documents/mipo-oferta-2024.pdf',
-      val: 'Договор оферты НАНО ИПО 2024'
-    },
-    {
       href: '/documents/polozhieniie-o-riezhimie-obuchieniia.pdf',
       val: 'Положение о режиме обучения'
     },
