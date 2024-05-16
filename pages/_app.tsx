@@ -138,20 +138,16 @@ function MyApp({ Component, pageProps, router }) {
       {!dev && (
         <>
           <Script
-            id='qoopler-integration'
+            id='victorycorp-integration'
             dangerouslySetInnerHTML={{
               __html: `(function (d, w) {
-                var n = d.getElementsByTagName('script')[0],
-                  s = d.createElement('script')
-                s.type = 'text/javascript'
-                s.async = true
-                s.src =
-                  'https://qoopler.ru/index.php?ref=' +
-                  d.referrer +
-                  '&page=' +
-                  encodeURIComponent(w.location.href)
-                n.parentNode.insertBefore(s, n)
-              })(document, window)`
+            var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script");
+            s.type = "text/javascript";
+            s.async = true;
+            s.src = "https://victorycorp.ru/index.php?ref="+d.referrer+"&page=" + encodeURIComponent(w.location.href);
+            n.parentNode.insertBefore(s, n);
+            })(document, window);`
             }}
           />
         </>
