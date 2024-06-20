@@ -3,6 +3,7 @@ import img from '@/public/assets/imgs/new-course/Коллаж.png'
 import { ImgTemplate } from '@/components/imgs'
 import { listWeTookCare } from '@/data/lists'
 import PlusSvg from '@/components/svg/PlusSvg'
+// @ts-ignore
 import { Fade } from '@mui/material'
 import BootstrapTooltip from '@/components/Tooltip/BootstrapTooltip'
 

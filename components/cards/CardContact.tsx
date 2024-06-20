@@ -13,7 +13,7 @@ type CardContactType = {
 }
 
 const CardContact = ({ city, street, numbers, email }: CardContactType) => {
-  const [validComponent, setValidComponent] = useState(null)
+  const [validComponent, setValidComponent] = useState<boolean | null>(null)
   const router = useRouter()
 
   useEffect(() => {

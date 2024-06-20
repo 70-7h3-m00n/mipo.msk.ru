@@ -258,8 +258,6 @@ const PopupTrigger = ({ btn, cta, formName }: PopupTriggerType) => {
             <BtnBeta text={strs.trigger} />
           ) : btn === 'gamma' ? (
             <BtnGamma text={strs.trigger} />
-          ) : btn === 'delta' ? (
-            <BtnDelta text={strs.trigger} />
           ) : btn === 'epsilon' ? (
             <BtnEpsilon text={strs.trigger} />
           ) : btn === 'zeta' ? (
@@ -277,16 +275,6 @@ const PopupTrigger = ({ btn, cta, formName }: PopupTriggerType) => {
       }
       modal
       nested>
-      {close => (
-        <PopupCta
-          title={strs.title}
-          desc={strs.desc}
-          cta={strs.cta}
-          question={question}
-          close={close}
-          formName={formName}
-        />
-      )}
     </Popup>
   )
 }

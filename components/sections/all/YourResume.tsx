@@ -6,7 +6,7 @@ import { useContext } from 'react'
 import { toNumberWithSpaces } from '@/helpers/index'
 
 const YourResume = () => {
-  const { program } = useContext(ProgramContext)
+  const { program } = useContext<any>(ProgramContext)
 
   return (
     <section className={stls.container}>
@@ -32,7 +32,7 @@ const YourResume = () => {
           </div>
           <ul className={stls.resumeSkills}>
             {program?.resumeSkills &&
-              program?.resumeSkills.map(({ skill }, idx) => (
+              program?.resumeSkills.map(({ skill }: any, idx: any) => (
                 <li key={skill + idx} className={stls.skill}>
                   <p className={stls.skillText}>{skill}</p>
                 </li>

@@ -1,8 +1,7 @@
-// https://<your-site>/api/preview?secret=<token>&slug=<path>
-import axios from 'axios'
 import { routesFront, routesBack } from '@/config/index'
+import type { NextApiRequest, NextApiResponse } from 'next'
 
-const preview = async (req, res) => {
+const preview = async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.query.secret !== process.env.PREVIEW_SECRET) {
     return res.status(401).json({ message: 'Invalid token' })
   }

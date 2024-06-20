@@ -2,7 +2,7 @@ import stls from '@/styles/components/imgs/webinars/ImgAllWebinars.module.sass'
 import Image from 'next/image'
 import pic from '@/public/assets/imgs/webinars/all-webinars.jpg'
 
-const ImgAllWebinars = ({ width = 0, height = 0 }) => {
+const ImgAllWebinars = ({ width = 0, height = 0 }: any) => {
   return (
     <div className={stls.container}>
       <Image

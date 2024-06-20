@@ -1,0 +1,52 @@
+@import "src/styles/extends";
+
+.header {
+  text-align: center;
+}
+
+.description {
+  text-align: center;
+  width: 46%;
+  margin: 40px auto 0 auto;
+  color: #000;
+  @extend %text;
+
+  @media (max-width: 1290px) {
+    width: 60%;
+  }
+
+  @media (max-width: 979px) {
+    width: 80%;
+  }
+
+  @media (max-width: 769px) {
+    width: 100%;
+  }
+}
+
+.listModule {
+  @extend %marginBlock;
+}
+
+.wrapperBtn {
+  width: 100%;
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: 979px) {
+    margin-top: 0;
+  }
+
+  .btn {
+    @media (max-width: 979px) {
+      margin-top: 50px;
+    }
+
+    @media (max-width: 769px) {
+      width: 100%;
+      margin-top: 40px;
+    }
+  }
+}

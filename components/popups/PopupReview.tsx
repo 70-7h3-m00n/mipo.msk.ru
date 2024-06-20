@@ -1,7 +1,7 @@
 import stls from '@/styles/components/popups/PopupReview.module.sass'
 import { BtnClose } from '@/components/btns'
 
-const PopupReview = ({ title, photo, name, occupation, story, close }) => {
+const PopupReview = ({ title, photo, name, occupation, story, close }: any) => {
   return (
     <div className={stls.container}>
       <div className={stls.close}>

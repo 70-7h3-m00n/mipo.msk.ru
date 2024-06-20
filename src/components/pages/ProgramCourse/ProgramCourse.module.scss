@@ -1,0 +1,78 @@
+@import "src/styles/extends";
+
+.listCourseFor {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+  @extend %marginBlock;
+
+  @media (max-width: 979px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (max-width: 769px) {
+    grid-template-columns: 1fr;
+  }
+
+  .cardCourseFor {
+    border-radius: 20px;
+    background: #FFF;
+    padding: 40px 40px 40px 30px;
+
+    @media (max-width: 769px) {
+      padding: 30px 10px;
+    }
+
+    .headerCourseFor {
+      color: #000;
+      margin: 0;
+      @extend %titleText;
+
+      @media (max-width: 979px) {
+        width: 100%;
+      }
+    }
+
+    .descriptionCourseFor {
+      color: #000;
+      margin: 30px 0 0 0;
+      @extend %text;
+    }
+  }
+}
+
+.wrapperHeaderTraining {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 20px;
+  @extend %marginSection;
+  @extend %marginSection;
+
+  @media (max-width: 1290px) {
+    grid-template-columns: 1fr;
+  }
+
+  .headerTraining {
+    margin: 0;
+
+  }
+
+  .descrTraining {
+    color: #000;
+    @extend %text;
+  }
+}
+
+.listItemCounter {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+  @extend %marginBlock;
+
+  @media (max-width: 1290px) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media (max-width: 549px) {
+    grid-template-columns: 1fr;
+  }
+}

@@ -14,29 +14,7 @@ type TSectionGeneralTeachersAlt = TPropClassNames
 const SectionGeneralTeachersAlt: FC<TSectionGeneralTeachersAlt> = ({
   classNames
 }) => {
-  const { program } = useContext(ProgramContext)
-  const altStyles =
-    program?.category?.type === 'mba' ||
-    program?.category?.type === 'profession'
 
-  const teachers = program?.teachers
-    ?.filter((_, idx) => idx < 6)
-    .map(teacher => ({
-      ...teacher,
-      img: (
-        <ImgTeacher
-          src={teacher?.portrait?.url}
-          alt={teacher?.name}
-          width={teacher?.portrait?.width && 147}
-          height={getImageHeight({
-            width: 147,
-            widthInitial: teacher?.portrait?.width,
-            heightInitial: teacher?.portrait?.height
-          })}
-          classNames={[stls.img]}
-        />
-      )
-    }))
 
   return (
     <section
@@ -49,29 +27,7 @@ const SectionGeneralTeachersAlt: FC<TSectionGeneralTeachersAlt> = ({
           Преподают ведущие российские и зарубежные эксперты{' '}
           <span className={stls.highlight}>с опытом от 7 до 25 лет</span>
         </p>
-        <ul className={stls.teachers}>
-          {teachers?.map((teacher, idx) => (
-            <li className={stls.teacherItem} key={`${teacher?.name}-${idx}`}>
-              <div className={stls.teacherItemBody}>
-                <div className={stls.laptopDesktop}>{teacher.img}</div>
-                <div className={stls.right}>
-                  <div className={stls.top}>
-                    <div className={stls.phoneTablet}>{teacher.img}</div>
-                    <div className={stls.nameSpecializationContainer}>
-                      <h3 className={stls.name}>{teacher?.name}</h3>
-                      <p className={stls.specialization}>
-                        {teacher?.specialization || program?.title}
-                      </p>
-                    </div>
-                  </div>
-                  {teacher?.achievements && (
-                    <p className={stls.achievements}>{teacher?.achievements}</p>
-                  )}
-                </div>
-              </div>
-            </li>
-          ))}
-        </ul>
+
         <div className={stls.btnContainer}>
           <PopupTrigger btn='delta' cta='learnAboutTeachers' />
         </div>

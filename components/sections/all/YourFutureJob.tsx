@@ -7,15 +7,8 @@ import {
   ImgDecoration3
 } from '@/components/imgs'
 import { IconAtom } from '@/components/icons'
-import ProgramContext from '@/context/program/programContext'
-import { useContext } from 'react'
 
 const YourFutureJob = () => {
-  const { program } = useContext(ProgramContext)
-
-  if (!program?.jobTitles || program?.jobTitles.length === 0) {
-    return null
-  }
 
   return (
     <section className={stls.container}>
@@ -25,12 +18,7 @@ const YourFutureJob = () => {
           <div>
             <p className={stls.subtitle}>В результате обучения вы:</p>
             <ul className={stls.jobTitles}>
-              {program?.jobTitles &&
-                program?.jobTitles.map(({ title }, idx) => (
-                  <li key={title + idx} className={stls.item}>
-                    <p className={stls.p}>{title}</p>
-                  </li>
-                ))}
+
             </ul>
           </div>
           <div className={stls.bottom}>

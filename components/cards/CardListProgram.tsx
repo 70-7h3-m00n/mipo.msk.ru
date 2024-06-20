@@ -4,14 +4,14 @@ import urlImage from '@/public/assets/imgs/new-course/mingcute_check-fill.png'
 import fetchCourse from '../../api/fetchCourse'
 
 interface Props {
-  data: Awaited<ReturnType<typeof fetchCourse>>
+  data: Awaited<ReturnType<typeof fetchCourse>> | any
 }
 
 const CardListProgram = ({data}: Props) => {
   return (
     <ul className={styles.cardListProgram}>
       {
-        data.listProgram.map((item, index) => (
+        data?.listProgram.map((item: any, index: number) => (
           <li key={index}>
             <ImgTemplate src={urlImage} alt={'img'} width={24} height={24} />
             <p>{item.title}</p>

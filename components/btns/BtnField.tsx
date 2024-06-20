@@ -2,16 +2,22 @@ import stls from '@/styles/components/btns/BtnField.module.sass'
 import Link from 'next/link'
 import FieldsTooltipContext from '@/context/fieldsTooltip/fieldsTooltipContext'
 import ProgramContext from '@/context/programs/programsContext'
-import { useContext } from 'react'
+import React, { useContext } from 'react'
 import classNames from 'classnames'
 
-const BtnField = ({ href, aside = false, slug = null, children }) => {
+type BtnFieldProps = {
+  href: string
+  aside?: boolean,
+  slug?: string | null,
+  children?: React.ReactNode,
+}
+
+const BtnField = ({ href, aside = false, slug = null, children }: BtnFieldProps) => {
   const { closeFieldsTooltip } = useContext(FieldsTooltipContext)
   const { curProgramsStudyFieldSlug } = useContext(ProgramContext)
 
   return (
-    <Link href={href}>
-      <a
+    <Link href={href}
         className={classNames({
           [stls.container]: true,
           [stls.tooltip]: !aside,
@@ -21,9 +27,8 @@ const BtnField = ({ href, aside = false, slug = null, children }) => {
             (slug === curProgramsStudyFieldSlug ||
               (!slug && !curProgramsStudyFieldSlug))
         })}
-        onClick={!aside && closeFieldsTooltip}>
+        onClick={() => !aside && closeFieldsTooltip}>
         {children}
-      </a>
     </Link>
   )
 }

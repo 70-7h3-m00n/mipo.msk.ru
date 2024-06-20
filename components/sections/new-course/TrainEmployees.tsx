@@ -8,7 +8,7 @@ import fetchCourse from '../../../api/fetchCourse'
 import routesBack from '@/config/routesBack'
 
 interface Props {
-  data: Awaited<ReturnType<typeof fetchCourse>>
+  data: Awaited<ReturnType<typeof fetchCourse>> | any
 }
 
 const TrainEmployees = ({data}:Props) => {
@@ -21,7 +21,7 @@ const TrainEmployees = ({data}:Props) => {
       <ul className={classNames('container', styles.listCompany)}>
         {
           isCompany &&
-          data.listCompany.map((item, i) => (
+          data.listCompany.map((item: any, i: number) => (
             <li className={styles.item} key={i}>
               <div>
                 <ImgTemplate src={routesBack.newRoot + item.image.data.attributes.url || ''} alt={'img'} layout={'fill'} />

@@ -7,7 +7,7 @@ import { routeTeachers } from '@/data/routes'
 import companyName from '@/data/companyName'
 import { MeetYourTeachers } from '@/components/sections'
 
-const TeachersPage = ({ programs, teachers }) => {
+const TeachersPage = ({ programs, teachers }: any) => {
   usePageHandleContext({ programs })
 
   return (

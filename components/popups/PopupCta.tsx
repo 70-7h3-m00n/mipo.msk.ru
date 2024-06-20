@@ -20,10 +20,10 @@ const PopupCta: FC<TPopupCta> = ({
   question = false,
   formName
 }) => {
+
   return (
     <div className={stls.container}>
       <div className={stls.close}>
-        <BtnClose onClick={close} iconCloseCircle />
       </div>
       <h3 className={stls.title}>{title}</h3>
       <p className={stls.desc}>{desc}</p>
@@ -32,7 +32,6 @@ const PopupCta: FC<TPopupCta> = ({
           cta={cta}
           question={question}
           popup={true}
-          formName={formName}
         />
       </div>
     </div>

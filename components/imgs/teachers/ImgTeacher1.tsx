@@ -2,7 +2,7 @@ import stls from '@/styles/components/imgs/teachers/ImgTeacher1.module.sass'
 import Image from 'next/image'
 import pic from '@/public/assets/imgs/teachers/teacher-1.jpg'
 
-const ImgTeacher1 = ({ name, width = 0, height = 0 }) => {
+const ImgTeacher1 = ({ name, width = 0, height = 0 }: any) => {
   return (
     <div className={stls.container}>
       <Image
@@ -12,6 +12,7 @@ const ImgTeacher1 = ({ name, width = 0, height = 0 }) => {
         width={width !== 0 && width}
         height={height !== 0 && height}
         placeholder='blur'
+        sizes={''}
       />
     </div>
   )

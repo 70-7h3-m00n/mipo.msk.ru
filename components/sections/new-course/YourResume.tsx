@@ -5,7 +5,7 @@ import { ImgTemplate } from '@/components/imgs'
 import fetchCourse from '../../../api/fetchCourse'
 
 interface Props {
-  data: Awaited<ReturnType<typeof fetchCourse>>
+  data: Awaited<ReturnType<typeof fetchCourse>>| any
 }
 
 const YourResume = ({data}:Props) => {
@@ -36,7 +36,7 @@ const YourResume = ({data}:Props) => {
 
             <ul>
               {
-                data.listProfessionalSkills.map((item, i) => (
+                data.listProfessionalSkills.map((item: any, i: number) => (
                   <li key={i}>
                     <ImgTemplate width={23} height={19} src={urlChecked} alt={'img'} />
 

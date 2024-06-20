@@ -24,6 +24,7 @@ const ProgramTeachers = ({data}: Props) => {
   const elemList = useRef<HTMLUListElement | null>(null)
   const [scroll, setScroll] = useState(0)
   const [widthList, setWidthList] = useState(0)
+  // @ts-ignore
   const counterItem = data.listTeachers.length
 
   const showArrow = widthList >= widthItem * counterItem
@@ -56,6 +57,7 @@ const ProgramTeachers = ({data}: Props) => {
 
   useEffect(() => {
     const resize = () => {
+      // @ts-ignore
       setWidthList(elemList.current.offsetWidth)
     }
 
@@ -65,6 +67,7 @@ const ProgramTeachers = ({data}: Props) => {
   }, [])
 
   useEffect(() => {
+    // @ts-ignore
     setWidthList(elemList.current.offsetWidth)
   }, [])
 
@@ -112,16 +115,16 @@ const ProgramTeachers = ({data}: Props) => {
                      }
                    }}
         >
-          {
-            data.listTeachers.map((item, index) => (
-              <CardNewTeacher key={index}
-                              url={routesBack.newRoot + item.image?.data?.attributes?.url || ''}
-                              title={item.title}
-                              subTitle={item.subTitle}
-                              description={item.description}
-              />
-            ))
-          }
+          {/*{*/}
+          {/*  data.listTeachers.map((item, index) => (*/}
+          {/*    <CardNewTeacher key={index}*/}
+          {/*                    url={routesBack.newRoot + item.image?.data?.attributes?.url || ''}*/}
+          {/*                    title={item.title}*/}
+          {/*                    subTitle={item.subTitle}*/}
+          {/*                    description={item.description}*/}
+          {/*    />*/}
+          {/*  ))*/}
+          {/*}*/}
         </motion.ul>
       </div>
 

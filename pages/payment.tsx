@@ -1,4 +1,3 @@
-import stls from '@/styles/pages/Payment.module.sass'
 import { NextSeo } from 'next-seo'
 import truncate from 'truncate'
 import { routesFront } from '@/config/index'
@@ -11,10 +10,9 @@ import {
   PaymentBtns,
   PaymentDebitCard,
   PaymentInfo,
-  SectionPaymentTinkoff
 } from '@/components/sections'
 
-const PaymentPage = ({ programs }) => {
+const PaymentPage = ({ programs }: any) => {
   usePageHandleContext({ programs })
 
   return (

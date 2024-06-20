@@ -21,23 +21,17 @@ const ProgramInfo = () => {
     },
     {
       key: 'Количество часов:',
-      val: `${program?.timenprice && program?.timenprice?.[0]?.studyHours} ч`,
+
       icon: <IconClock />
     },
     {
       key: 'Форма обучения:',
-      val: program?.study_form && program?.study_form?.label,
+
       icon: <IconGraduateHat />
     },
     {
       key: 'Срок обучения:',
-      val: (
-        <ProgramStudyDuration
-          studyMonthsDuration={
-            program?.timenprice && program?.timenprice?.[0]?.studyMonthsDuration
-          }
-        />
-      ),
+
       icon: <IconCalendar />
     }
   ]

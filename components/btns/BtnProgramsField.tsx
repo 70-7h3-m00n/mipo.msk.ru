@@ -7,7 +7,7 @@ import { IconMoreThan } from '@/components/icons'
 import PopupFields from '@/components/popups/PopupFields'
 
 const BtnProgramsField = ({ ofType = null }) => {
-  const { studyFields, curProgramsStudyFieldSlug } = useContext(ProgramsContext)
+  const { studyFields, curProgramsStudyFieldSlug } = useContext<any>(ProgramsContext)
 
   const [isOpen, setIsOpen] = useState(false)
 
@@ -21,7 +21,7 @@ const BtnProgramsField = ({ ofType = null }) => {
         <span>
           {!curProgramsStudyFieldSlug
             ? 'Все направления'
-            : studyFields.map(studyField =>
+            : studyFields.map((studyField: any) =>
                 studyField.slug === curProgramsStudyFieldSlug
                   ? studyField.label
                   : ''

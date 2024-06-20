@@ -1,0 +1,43 @@
+@import "src/styles/extends";
+
+.wrapperList {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+  @extend %marginBlock;
+
+  @media (max-width: 1290px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  @media (max-width: 979px) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media (max-width: 769px) {
+    gap: 10px;
+  }
+}
+
+.wrapperCard {
+  border-radius: 15px;
+  background: #FFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px;
+
+  @media (max-width: 769px) {
+    padding: 40px;
+  }
+  @media (max-width: 549px) {
+    padding: 30px;
+  }
+}
+
+.wrapperIcon {
+  width: 100%;
+  height: auto;
+
+  img {
+    object-fit: contain;
+  }
+}

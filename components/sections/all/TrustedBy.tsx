@@ -24,65 +24,61 @@ type TypeTrustedBy = {
 }
 
 const TrustedBy = ({ classNames = [] }: TypeTrustedBy) => {
-  const { program } = useContext(ProgramContext)
-  const altStyles =
-    program?.category?.type === 'mba' ||
-    program?.category?.type === 'profession'
 
   const slides = [
     {
       img: (
         <ImgLogoLenovo
-          classNames={[cn(stls.img, { [stls.altStyles]: altStyles })]}
+          classNames={[cn(stls.img)]}
         />
       )
     },
     {
       img: (
         <ImgLogoVtb
-          classNames={[cn(stls.img, { [stls.altStyles]: altStyles })]}
+          classNames={[cn(stls.img)]}
         />
       )
     },
     {
       img: (
         <ImgLogoRzhd
-          classNames={[cn(stls.img, { [stls.altStyles]: altStyles })]}
+          classNames={[cn(stls.img)]}
         />
       )
     },
     {
       img: (
         <ImgLogoRosneft
-          classNames={[cn(stls.img, { [stls.altStyles]: altStyles })]}
+          classNames={[cn(stls.img)]}
         />
       )
     },
     {
       img: (
         <ImgLogoGasprom
-          classNames={[cn(stls.img, { [stls.altStyles]: altStyles })]}
+          classNames={[cn(stls.img)]}
         />
       )
     },
     {
       img: (
         <ImgLogoSberbank
-          classNames={[cn(stls.img, { [stls.altStyles]: altStyles })]}
+          classNames={[cn(stls.img)]}
         />
       )
     },
     {
       img: (
         <ImgLogoSovkombank
-          classNames={[cn(stls.img, { [stls.altStyles]: altStyles })]}
+          classNames={[cn(stls.img)]}
         />
       )
     },
     {
       img: (
         <ImgLogoTatneft
-          classNames={[cn(stls.img, { [stls.altStyles]: altStyles })]}
+          classNames={[cn(stls.img)]}
         />
       )
     }
@@ -91,15 +87,9 @@ const TrustedBy = ({ classNames = [] }: TypeTrustedBy) => {
     <section
       className={
         cn(stls.container, getClassNames({ classNames }), {
-          [stls.altStyles]: altStyles
         }) || undefined
       }>
       <Wrapper>
-        <h2 className={cn(stls.title, { [stls.altStyles]: altStyles })}>
-          {altStyles
-            ? 'Обучают своих сотрудников у нас'
-            : 'Нам доверяют обучение'}
-        </h2>
         <Swiper
           modules={[Grid]}
           grid={{ rows: 2, fill: 'row' }}

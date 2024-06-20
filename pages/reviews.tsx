@@ -7,7 +7,7 @@ import { routeReviews } from '@/data/routes'
 import companyName from '@/data/companyName'
 import Reviews from '@/components/sections/all/Reviews'
 
-const ReviewsPage = ({ programs, reviews }) => {
+const ReviewsPage = ({ programs, reviews }: any) => {
   usePageHandleContext({ programs })
 
   return (

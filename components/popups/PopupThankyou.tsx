@@ -6,20 +6,15 @@ import { BtnClose } from '@/components/btns'
 import { UTM_KEYS_OBJ } from '@/config/index'
 import { v4 as uuidv4 } from 'uuid'
 import { getCookie, getCookies } from 'cookies-next'
-import { checkIsLeadFromAffise } from '@/utils/index'
+import { checkIsLeadFromAffise } from '../../src/utils/index'
 
-const PopupThankyou = ({ close, id = null, clickid = null }) => {
+const PopupThankyou = ({ close, id = null, clickid = null }: any) => {
   const { program } = useContext(ProgramContext)
 
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [isLeadFromLeadgid, setIsLeadFromLeadgid] = useState(false)
   const [isLeadFromAffise, setIsLeadFromAffise] = useState(false)
   const [userUuid, setUserUuid] = useState(null)
-
-  const altStyles =
-    program?.category?.type === 'mba' ||
-    program?.category?.type === 'profession'
-  const atProfession = program?.category?.type === 'profession'
 
   useEffect(() => {
     const cookies = getCookies()
@@ -28,7 +23,6 @@ const PopupThankyou = ({ close, id = null, clickid = null }) => {
 
     setIsLeadFromLeadgid(isLeadFromLeadgid || utm_source === 'LG')
     setIsLeadFromAffise(checkIsLeadFromAffise(getCookies()))
-    setUserUuid(JSON.parse(sessionStorage.getItem('user_uuid')))
 
     const tagManagerArgs = {
       dataLayer: {
@@ -39,12 +33,6 @@ const PopupThankyou = ({ close, id = null, clickid = null }) => {
               id
             },
             products: [
-              {
-                id: (program && program._id) || (program && program.id) || null,
-                name: (program && program.title) || null,
-                price: (program && program.timenprice?.[0]?.ref?.price) || null,
-                type: (program && program.category?.label) || null
-              }
             ]
           }
         }
@@ -59,15 +47,10 @@ const PopupThankyou = ({ close, id = null, clickid = null }) => {
     setIsSubmitted(true)
   }, [
     program,
-    altStyles,
-    atProfession,
     isLeadFromLeadgid,
     isLeadFromAffise,
     id,
     clickid
-    // id,
-    // idThankyou,
-    // userUuid
   ])
 
   return (
@@ -80,22 +63,6 @@ const PopupThankyou = ({ close, id = null, clickid = null }) => {
         Мы свяжемся с Вами в рабочие часы в ближайшее время
       </p>
       <p className={stls.thanks}>Спасибо!</p>
-      {isSubmitted &&
-        (altStyles && isLeadFromLeadgid ? (
-          // eslint-disable-next-line
-          <img
-            src={`https://go.leadgid.ru/aff_goal?a=l&goal_id=5405&adv_sub=${id}`}
-            width='1'
-            height='1'
-          />
-        ) : atProfession && isLeadFromLeadgid ? (
-          // eslint-disable-next-line
-          <img
-            src={`https://go.leadgid.ru/aff_l?offer_id=5740&adv_sub=${id}`}
-            width='1'
-            height='1'
-          />
-        ) : null)}
     </div>
   )
 }

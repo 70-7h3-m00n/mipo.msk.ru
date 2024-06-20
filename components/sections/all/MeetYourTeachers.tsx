@@ -5,7 +5,7 @@ import Wrapper from '@/components/layout/Wrapper'
 import PopupTrigger from '@/components/general/PopupTrigger'
 import { ImgTeacher } from '@/components/imgs'
 
-const MeetYourTeachers = ({ teachers }) => {
+const MeetYourTeachers = ({ teachers }: any) => {
   return (
     <section className={stls.container}>
       <Wrapper>
@@ -14,11 +14,11 @@ const MeetYourTeachers = ({ teachers }) => {
           {teachers &&
             teachers
               .sort(
-                (a, b) =>
+                (a: any, b: any) =>
                   Number(a?.numeric_order?.idx || Infinity) -
                   Number(b?.numeric_order?.idx || Infinity)
               )
-              .map(teacher => (
+              .map((teacher: any) => (
                 <li key={teacher?.name} className={stls.teacher}>
                   <div className={stls.img}>
                     <ImgTeacher

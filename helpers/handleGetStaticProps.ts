@@ -18,11 +18,8 @@ type TypeHandleGetStaticProps = {
   type?: TypeCategory
 }
 
-const handleGetStaticProps = async ({
-  page,
-  studyFieldSlug = null,
-  slug = null,
-  type = null
+// @ts-ignore
+const handleGetStaticProps = async ({ page, studyFieldSlug = null, slug = null, type = null
 }: TypeHandleGetStaticProps) => {
   const res = await axios.get(
     `${routesBack.root}${routesBack.getStaticProps}${page}`
@@ -31,7 +28,7 @@ const handleGetStaticProps = async ({
   let program = null
   if (slug) {
     const programFiltered = res.data.programs.filter(
-      program =>
+      (program: any) =>
         program.slug === slug &&
         program.study_field?.slug === studyFieldSlug &&
         program.category?.type.toLowerCase() === type
@@ -42,17 +39,6 @@ const handleGetStaticProps = async ({
         programFiltered ? programFiltered.id : 'program'
       }`
     )
-
-    // program = convertMdToHtml({
-    //   arr: [programRes.data],
-    //   params: [
-    //     'description',
-    //     'ForWhom.desc',
-    //     'resumeSkills',
-    //     'jobTitles',
-    //     'questions'
-    //   ]
-    // })[0]
 
     program = programRes ? programRes.data : {}
   }

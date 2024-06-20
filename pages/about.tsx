@@ -7,7 +7,7 @@ import { usePageHandleContext } from '@/hooks/index'
 import { routeAbout } from '@/data/routes'
 import companyName from '@/data/companyName'
 
-const AboutPage = ({ programs }) => {
+const AboutPage = ({ programs }: any) => {
   usePageHandleContext({ programs })
 
   return (

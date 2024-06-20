@@ -117,26 +117,6 @@ const ProgramsTemplate = ({
       </div>
       {withBtn && (
         <div className={stls.btn}>
-          <BtnDelta
-            text={`Смотреть все ${
-              ofType === 'course'
-                ? 'курсы'
-                : ofType === 'profession'
-                  ? 'профессии'
-                  : ofType === 'mba'
-                    ? 'MBA'
-                    : 'программы'
-            }`}
-            href={
-              ofType === 'course'
-                ? routeCourses
-                : ofType === 'profession'
-                  ? routeProfessions
-                  : ofType === 'mba'
-                    ? routeMBA
-                    : routePrograms
-            }
-          />
         </div>
       )}
     </div>

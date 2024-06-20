@@ -1,0 +1,136 @@
+.header {
+  position: fixed;
+  z-index: 100;
+  display: none;
+  padding: 20px;
+  border-radius: 20px;
+  background: #FFF;
+  width: 100%;
+
+  @media (max-width: 1290px) {
+    display: block;
+  }
+
+  @media (max-width: 769px) {
+    width: calc(100% - 20px);
+  }
+
+ .topContent {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   height: 60px;
+
+   @media (max-width: 549px) {
+     height: 40px;
+   }
+
+   .wrapperLogo {
+    display: block;
+
+     @media (max-width: 549px) {
+       display: none;
+     }
+   }
+
+   .wrapperLogoMobile {
+    display: none;
+
+     @media (max-width: 549px) {
+       display: block;
+     }
+   }
+
+   .burgerWrapper {
+     svg {
+       width: 60px;
+       height: 60px;
+
+       @media (max-width: 549px) {
+         width: 40px;
+         height: 40px;
+       }
+     }
+
+     .wrapperSvg {
+       display: flex;
+       gap: 20px;
+
+       svg {
+         width: 20px;
+         height: 20px;
+       }
+     }
+   }
+ }
+
+  .searchWrapper {
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    right: 0;
+  }
+
+  .bottomContent {
+    margin-top: 50px;
+
+    @media (max-width: 769px) {
+      margin-top: 40px;
+    }
+
+    .navList {
+      padding-bottom: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      .listProgram {
+        .wrapperHeader {
+          display: flex;
+          justify-content: space-between;
+
+          svg {
+            width: 25px;
+            height: 25px;
+          }
+        }
+
+        .list {
+          margin-top: 20px;
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+        }
+      }
+
+      .link, .linkHeader {
+        color: #000;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        text-transform: uppercase;
+      }
+
+      .linkHeader {
+        font-size: 18px;
+      }
+    }
+
+    .contacts {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      border-top: 1px solid rgba(0, 0, 0, 0.50);
+      padding: 30px 0 0 0;
+
+      .text {
+        color: rgba(0, 0, 0, 0.50);
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        text-transform: uppercase;
+      }
+    }
+  }
+}

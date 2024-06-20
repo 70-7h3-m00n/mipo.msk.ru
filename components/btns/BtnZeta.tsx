@@ -1,9 +1,8 @@
 import stls from '@/styles/components/btns/BtnZeta.module.sass'
 import { TPropClassNames, TGeneralChildren } from '@/types/index'
-import { FC, useContext } from 'react'
+import { FC } from 'react'
 import cn from 'classnames'
 import { getClassNames } from '@/helpers/index'
-import ProgramContext from '@/context/program/programContext'
 
 type TBtnZeta = TPropClassNames & {
   children?: TGeneralChildren
@@ -19,19 +18,13 @@ const BtnZeta: FC<TBtnZeta> = ({
   href,
   target
 }) => {
-  const { program } = useContext(ProgramContext)
-  const altStyles =
-    program?.category?.type === 'mba' ||
-    program?.category?.type === 'profession'
 
   const Tag = href ? 'a' : 'button'
 
   return (
     <Tag
       className={
-        cn(stls.container, getClassNames({ classNames }), {
-          [stls.altStyles]: altStyles
-        }) || undefined
+        cn(stls.container, getClassNames({ classNames })) || undefined
       }
       {...(href ? { href } : undefined)}
       {...(target ? { target } : undefined)}

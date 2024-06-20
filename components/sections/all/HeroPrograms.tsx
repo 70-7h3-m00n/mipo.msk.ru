@@ -19,8 +19,7 @@ const HeroPrograms = ({ ofType = null }) => {
           <h1 className={stls.title}>Программы</h1>
         </div>
         <div className={stls.typeLinks}>
-          <Link href={`${routeProfessions}/${slug}`}>
-            <a
+          <Link href={`${routeProfessions}/${slug}`}
               className={cn([stls.link], {
                 [stls.active]: curProgramsType === 'profession'
               })}>
@@ -28,10 +27,8 @@ const HeroPrograms = ({ ofType = null }) => {
                 Профессиональная&nbsp;переподготовка
               </span>
               <span className={stls.phonetablet}>ПП</span>
-            </a>
           </Link>
-          <Link href={`${routeCourses}/${slug}`}>
-            <a
+          <Link href={`${routeCourses}/${slug}`}
               className={cn([stls.link], {
                 [stls.active]: curProgramsType === 'course'
               })}>
@@ -39,16 +36,13 @@ const HeroPrograms = ({ ofType = null }) => {
                 Повышение&nbsp;квалификации
               </span>
               <span className={stls.phonetablet}>ПК</span>
-            </a>
           </Link>
-          <Link href={`${routeMBA}/${slug}`}>
-            <a
+          <Link href={`${routeMBA}/${slug}`}
               className={cn([stls.link], {
                 [stls.active]: curProgramsType === 'mba'
               })}>
               <span className={stls.laptopdesktop}>MBA</span>
               <span className={stls.phonetablet}>MBA</span>
-            </a>
           </Link>
         </div>
       </Wrapper>

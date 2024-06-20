@@ -3,7 +3,7 @@ import styles from '@/styles/components/cards/CardPriceNew.module.sass'
 import fetchCourse from '../../api/fetchCourse'
 
 interface Props {
-  data: Awaited<ReturnType<typeof fetchCourse>>
+  data: Awaited<ReturnType<typeof fetchCourse>> | any
 }
 
 const CardPriceNew = ({data}:Props) => {

@@ -1,0 +1,199 @@
+@import "src/styles/extends";
+
+.signUpProgram {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 60px 20px;
+  @extend %marginBlock;
+
+  @media (max-width: 1290px) {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  @media (max-width: 979px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.wrapperPrice,
+.wrapperForm,
+.wrapperList,
+.wrapperInfo {
+  border-radius: 20px;
+  background: #3F3BFF;
+  padding: 40px 30px;
+
+  @media (max-width: 1810px) {
+    padding: 30px;
+  }
+  @media (max-width: 1290px) {
+    padding: 40px 30px;
+  }
+  @media (max-width: 769px) {
+    padding: 30px;
+  }
+  @media (max-width: 549px) {
+    padding: 30px 10px;
+  }
+}
+
+.wrapperPrice {
+  .wrapperData {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    .data {
+      border-radius: 60px;
+      background:  #FFF;
+      padding: 7px 15px;
+      color: #000;
+      font-size: 16px;
+      font-weight: 500;
+
+      @media (max-width: 979px) {
+        font-size: 16px;
+      }
+      @media (max-width: 769px) {
+        font-size: 12px;
+      }
+    }
+  }
+
+  .header {
+    color: #FFF;
+    font-family: Unbounded;
+    font-size: 28px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-top: 30px;
+
+    @media (max-width: 979px) {
+      font-size: 21px;
+    }
+
+    @media (max-width: 769px) {
+      font-size: 18px;
+    }
+  }
+
+  .text {
+    color: #FFF;
+    @extend %text;
+  }
+
+  .discountWrapper {
+    margin-top: 50px;
+    margin-bottom: 40px;
+
+    @media (max-width: 979px) {
+      margin-bottom: 30px;
+    }
+
+    @media (max-width: 769px) {
+      margin-top: 40px;
+    }
+  }
+
+  .wrapperCost {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+
+    @media (max-width: 769px) {
+      margin-top: 15px;
+    }
+
+    .cost {
+      color: #FFF;
+      font-size: 36px;
+      font-weight: 600;
+      text-transform: uppercase;
+
+      @media (max-width: 979px) {
+        font-size: 21px;
+      }
+      @media (max-width: 769px) {
+        font-size: 16px;
+      }
+    }
+
+    .discount {
+      color: #FFF;
+      @extend %titleText;
+    }
+  }
+}
+
+.wrapperForm {
+  .header {
+    color: #FFF;
+    @extend %titleText;
+  }
+
+  .form {
+    margin-top: 40px;
+  }
+
+  .political {
+    color: #F4F4F4;
+    margin-top: 20px;
+    font-size: 12px;
+    font-weight: 500;
+
+  }
+}
+
+.wrapperList,
+.wrapperInfo {
+  border-radius: 20px;
+  background: #FFF;
+}
+
+.wrapperList {
+  .header {
+    color: #000;
+    @extend %titleText;
+  }
+
+  .list {
+    margin: 30px 0 0 0;
+    padding-left: 25px;
+
+    @media (max-width: 769px) {
+      margin: 20px 0 0 0;
+    }
+
+    .item{
+      color: #000;
+      margin-bottom: 12px;
+      @extend %text;
+    }
+  }
+}
+
+.wrapperInfo {
+  .header {
+    color: #000;
+    margin: 0;
+    @extend %titleText;
+  }
+
+  .description {
+    color: #000;
+    margin: 30px 0 0 0;
+    @extend %text;
+
+    @media (max-width: 769px) {
+      margin: 20px 0 0 0;
+    }
+
+    .phone {
+      color: #3F3BFF;
+      font-family: Unbounded;
+      margin-top: 3px;
+    }
+  }
+}

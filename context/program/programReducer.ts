@@ -1,6 +1,6 @@
 import { SET_PROGRAM } from '@/context/types'
 
-const programReducer = (state, action) => {
+const programReducer = (state: any, action: any) => {
   switch (action.type) {
     case SET_PROGRAM:
       return {

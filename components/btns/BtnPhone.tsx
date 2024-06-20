@@ -6,7 +6,7 @@ import { getCookie } from 'cookies-next'
 import { useEffect, useState } from 'react'
 
 const BtnPhone = ({ withNumber = false }) => {
-  const [validComponent, setValidComponent] = useState(null)
+  const [validComponent, setValidComponent] = useState<boolean | null>(null)
 
   useEffect(() => {
     if(getCookie('utm_source') !== undefined) {

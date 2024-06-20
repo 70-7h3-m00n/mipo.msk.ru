@@ -7,7 +7,7 @@ import {
 import { TypeCategory } from '@/types/index'
 
 type PagesProgramsType = {
-  ofType?: TypeCategory
+  ofType?: TypeCategory | any
 }
 
 const PagesPrograms = ({ ofType }: PagesProgramsType) => {

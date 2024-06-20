@@ -7,7 +7,7 @@ import fetchCourse from '../../../api/fetchCourse'
 import classnames from 'classnames'
 
 interface Props {
-  data: Awaited<ReturnType<typeof fetchCourse>>
+  data: Awaited<ReturnType<typeof fetchCourse>> | any
 }
 
 const Study = ({data}: Props) => {
@@ -23,7 +23,7 @@ const Study = ({data}: Props) => {
 
       <div className={styles.listStudy}>
         {
-          data.listStudy.map((item, i) => (
+          data.listStudy.map((item: any, i: number) => (
             <CardMotion title={item.title}
                         description={item.description}
                         key={i}
@@ -38,7 +38,7 @@ const Study = ({data}: Props) => {
           <IconPro />
 
           {
-            data.listStudyPro.map((item, i) => (
+            data.listStudyPro.map((item: any, i: number) => (
               <div className={styles.card} key={i}>
                 <ImgTemplate src={image2} alt={'image'} width={35} height={35} />
 

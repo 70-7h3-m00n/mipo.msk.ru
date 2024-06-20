@@ -2,9 +2,8 @@ import stls from '@/styles/components/cards/CardReview.module.sass'
 import truncate from 'truncate'
 import Popup from 'reactjs-popup'
 import { BtnText } from '@/components/btns'
-import { PopupReview } from '../popups'
 
-const CardReview = ({ title, photo, name, occupation, story }) => {
+const CardReview = ({ title, photo, name, occupation, story }: any) => {
   return (
     <article className={stls.container}>
       <div className={stls.img}>{photo}</div>
@@ -24,16 +23,6 @@ const CardReview = ({ title, photo, name, occupation, story }) => {
           }
           modal
           nested>
-          {close => (
-            <PopupReview
-              title={title}
-              photo={photo}
-              name={name}
-              occupation={occupation}
-              story={story}
-              close={close}
-            />
-          )}
         </Popup>
       </div>
     </article>

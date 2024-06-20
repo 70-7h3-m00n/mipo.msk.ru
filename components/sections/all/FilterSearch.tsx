@@ -1,9 +1,8 @@
 import stls from '@/styles/components/sections/all/FilterSearch.module.sass'
 import Wrapper from '@/components/layout/Wrapper'
-import { BtnSearch, BtnFilter } from '@/components/btns'
 import { BtnProgramsField } from '@/components/btns'
 
-const FilterSearch = ({ ofType }) => {
+const FilterSearch = ({ ofType }: any) => {
   return (
     <section className={stls.container}>
       <Wrapper>

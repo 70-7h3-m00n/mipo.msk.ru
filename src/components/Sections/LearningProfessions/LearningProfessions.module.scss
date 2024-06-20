@@ -1,0 +1,97 @@
+@import "src/styles/extends";
+
+.header {
+  width: 50%;
+
+  @media (max-width: 1600px) {
+    width: 100%;
+  }
+}
+
+.listLearningProfessions {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: minmax(363px, auto);
+  gap: 20px;
+  flex-wrap: wrap;
+  @extend %marginBlock;
+
+  @media (max-width: 1290px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (max-width: 769px) {
+    grid-template-columns: 1fr;
+  }
+
+  @media (max-width: 769px) {
+    grid-template-rows: auto;
+  }
+
+  .cardLearningProfessions,
+  .cardLearningProfessionsImage{
+    border-radius: 20px;
+    background: #FFF;
+    padding: 40px 40px 40px 30px;
+    overflow: hidden;
+
+    .wrapperImageEven,
+    .wrapperImageNotEven{
+      position: relative;
+      width: 90px;
+      height: 90px;
+
+      @media (max-width: 979px) {
+        width: 70px;
+        height: 70px;
+      }
+
+      @media (max-width: 769px) {
+        width: 50px;
+        height: 50px;
+      }
+    }
+
+    .wrapperImageNotEven {
+      transform: rotate(45deg);
+    }
+
+    .title {
+      color: #000;
+      margin: 30px 0 0 0;
+      @extend %titleText;
+
+      @media (max-width: 769px) {
+        margin: 20px 0 0 0;
+      }
+    }
+
+    .description {
+      color: #000;
+      margin: 30px 0 0 0;
+      @extend %text;
+
+      @media (max-width: 769px) {
+        margin: 20px 0 0 0;
+      }
+    }
+  }
+
+  .cardLearningProfessionsImage {
+    position: relative;
+    padding: 0;
+
+    @media (max-width: 769px){
+      height: 300px;
+    }
+
+    @media (max-width: 569px){
+      height: 200px;
+    }
+
+    img {
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+}

@@ -1,9 +1,7 @@
 import stls from '@/styles/components/sections/all/Webinars.module.sass'
-import { useMediaQuery } from 'react-responsive'
 import Wrapper from '@/components/layout/Wrapper'
 import SwiperContainer from '@/components/general/SwiperContainer'
 import CardWebinar from '@/components/cards/CardWebinar'
-import CardSchedule from '@/components/cards/CardSchedule'
 import ImgPortrait1 from '@/components/imgs/webinars/ImgPortrait1'
 import ImgPortrait2 from '@/components/imgs/webinars/ImgPortrait2'
 import ImgPortrait3 from '@/components/imgs/webinars/ImgPortrait3'
@@ -58,10 +56,6 @@ const Webinars = ({ standalone = false }: WebinarsType) => {
     <CardWebinar key={data.topic + idx} webinarData={data} />
   ))
 
-  const isMobileLayout = useMediaQuery({ query: '(max-width: 768px)' })
-
-  if (!isMobileLayout) webinarsSlides.push(<CardSchedule />)
-
   const mobileSwiperOptions = {
     slidesNum: 1.2,
     spaceBetween: 10
@@ -96,14 +90,12 @@ const Webinars = ({ standalone = false }: WebinarsType) => {
         </p>
         <div className={stls.cards}>
           <SwiperContainer
-            slides={webinarsSlides}
             mobileOptions={mobileSwiperOptions}
             tabletOptions={tabletSwiperOptions}
             laptopOptions={laptopSwiperOptions}
             desktopOptions={desktopSwiperOptions}
           />
         </div>
-        {isMobileLayout && <CardSchedule mobileLayout />}
       </Wrapper>
     </section>
   )

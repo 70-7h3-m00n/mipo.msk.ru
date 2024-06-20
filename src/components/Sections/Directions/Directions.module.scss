@@ -1,0 +1,84 @@
+@import "src/styles/extends";
+
+.content {
+  @media (max-width: 979px) {
+    margin-top: 30px;
+  }
+
+  .category {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    @extend %marginBlock;
+  }
+
+  .profession {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    @media (max-width: 1600px) {
+      margin-top: 30px;
+    }
+  }
+
+  @media (max-width: 769px) {
+    .category {
+      margin-top: 40px;
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: scroll;
+    }
+    .profession{
+      margin-top: 20px;
+    }
+  }
+}
+
+.wrapperBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @extend %marginBlock;
+
+  @media (max-width: 1290px) {
+    display: none;
+  }
+
+  @media (max-width: 769px) {
+    display: flex;
+    margin-top: 20px;
+
+    button {
+      width: 100%;
+      padding: 15px 10px;
+    }
+  }
+
+  .btn {
+    &:hover {
+      background-color: black;
+      color: white;
+    }
+  }
+}
+
+.wrapperBtnItem {
+  display: none;
+  width: 100%;
+
+  @media (max-width: 1290px) {
+    display: block;
+
+    button {
+      padding: 20px;
+      width: calc((100% / 2) - 20px);
+    }
+  }
+  @media (max-width: 769px) {
+    display: none;
+  }
+}
+
+

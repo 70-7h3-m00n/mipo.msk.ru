@@ -3,7 +3,7 @@ import MenuContext from '@/context/menu/menuContext'
 import menuReducer from '@/context/menu/menuReducer'
 import { OPEN_MENU, CLOSE_MENU, TOGGLE_MENU } from '@/context/types'
 
-const MenuState = props => {
+const MenuState = (props: any) => {
   const initialState = {
     menuIsOpen: false
   }

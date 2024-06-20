@@ -2,7 +2,7 @@ import stls from '@/styles/components/imgs/yourfuturejob/ImgDecoration1.module.s
 import Image from 'next/image'
 import pic from '@/public/assets/imgs/yourfuturejob/decoration1.jpg'
 
-const ImgDecoration1 = ({ width = 0, height = 0 }) => {
+const ImgDecoration1 = ({ width = 0, height = 0 }: any) => {
   return (
     <div className={stls.container}>
       <Image

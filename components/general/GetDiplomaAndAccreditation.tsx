@@ -14,7 +14,7 @@ import {
 
 const GetDiplomaAndAccreditation = () => {
   const [isSupplement, setIsSupplement] = useState(false)
-  const { program } = useContext(ProgramContext)
+  const { program } = useContext<any>(ProgramContext)
 
   const atProfession = program?.category?.type === 'profession'
   const atCourse = program?.category?.type === 'course'

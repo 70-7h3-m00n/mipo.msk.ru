@@ -6,7 +6,7 @@ import fetchCourse from '../../../api/fetchCourse'
 import routesBack from '@/config/routesBack'
 
 interface Props {
-  data: Awaited<ReturnType<typeof fetchCourse>>
+  data: Awaited<ReturnType<typeof fetchCourse>> | any
 }
 
 const DescriptionProgram = ({data}:Props) => {

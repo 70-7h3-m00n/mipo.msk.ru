@@ -2,7 +2,6 @@ import stls from '@/styles/components/sections/general/SectionReviewsAlt.module.
 import { TPropClassNames } from '@/types/index'
 import { FC, useState } from 'react'
 import cn from 'classnames'
-import { colors } from '@/config/index'
 import { getClassNames, getImageHeight } from '@/helpers/index'
 import Wrapper from '@/components/layout/Wrapper'
 import { ImgReview } from '@/components/imgs'
@@ -87,7 +86,7 @@ const SectionReviewsAlt: FC<TSectionReviewsAlt> = ({
         <ul
           className={stls.list}
           style={{ transform: `translateX(${-curTranslateX}px)` }}>
-          {list?.map((item, idx) => (
+          {list?.map((item: any, idx: any) => (
             <li
               key={`${item?.title || 'SectionReviewsAlt__item'}-${idx}`}
               className={stls.listItem}>

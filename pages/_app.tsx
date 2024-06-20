@@ -1,22 +1,13 @@
 import Router from 'next/router'
-import { useEffect, useState, useContext } from 'react'
-import Script from 'next/script'
-import MenuState from '@/context/menu/MenuState'
-import ProgramsState from '@/context/programs/ProgramsState'
-import ProgramState from '@/context/program/ProgramState'
-import FieldsTooltipState from '@/context/fieldsTooltip/FieldsTooltipState'
-
+import { AppProps } from 'next/app'
+import { FC, useEffect, useState } from 'react'
 import TagManager from 'react-gtm-module'
-
 import { DefaultSeo, LogoJsonLd } from 'next-seo'
 import SEO from '../seo.config'
-
 import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
 import { v4 as uuidv4 } from 'uuid'
-
 import { prod, gtmId, routesFront } from '@/config/index'
-
 import 'swiper/css'
 import 'swiper/css/grid'
 import 'swiper/css/navigation'
@@ -24,20 +15,19 @@ import 'swiper/css/pagination'
 import '@/styles/app.sass'
 import '@/public/assets/fonts/alegreya-sans/stylesheet.css'
 import '@/public/assets/fonts/neue-machina/stylesheet.css'
-
-import Header from '@/components/layout/Header'
-import Footer from '@/components/layout/Footer'
-import StickyBottom from '@/components/layout/StickyBottom'
-
-import { dev } from 'config'
-
 import { useHandleUtms } from '@/hooks/index'
+import Scripts from '../src/components/Scripts'
+import { wrapper } from '@/state/store'
+import { Provider } from 'react-redux'
+import { LayoutApp } from '../src/components/LayoutApp/LayoutApp'
 
-function MyApp({ Component, pageProps, router }) {
+const App: FC<AppProps> = ({Component, ...rest}) => {
+  const { store, props } = wrapper.useWrappedStore(rest);
   const [loading, setLoading] = useState(false)
-  useHandleUtms()
 
   const userUuid = uuidv4()
+
+  useHandleUtms()
 
   useEffect(() => {
     TagManager.initialize({ gtmId, dataLayerName: 'dataLayer' })
@@ -79,232 +69,37 @@ function MyApp({ Component, pageProps, router }) {
 
   return (
     <>
-      {/*//@ts-ignore */}
-      <DefaultSeo {...SEO} />
-      <LogoJsonLd
-        logo={`${routesFront.root}/assets/imgs/icons/manifest-icon-512.png`}
-        url={routesFront.root}
-      />
-      <ProgramsState pageProps={pageProps}>
-        <ProgramState pageProps={pageProps}>
-          <MenuState>
-            <FieldsTooltipState>
-              <div
-                style={{
-                  opacity: 1
-                }}>
-                <Header />
-                <main>
-                  <Component {...pageProps} />
-                </main>
-                {/*<StickyBottom />*/}
-                <Footer />
-              </div>
-            </FieldsTooltipState>
-          </MenuState>
-        </ProgramState>
-      </ProgramsState>
-      <Script src='/assets/js/vendors/swiped-events.min.js' />
+      <Provider store={store}>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap"
+              rel="stylesheet"
+        />
 
-      {
-        !dev && (<>
-          <div id="informer">
-            <a href="https://kursfinder.ru/school/moskovskij-institut-professionalnogo-obrazovaniya/"
-               className="informer informer-230 informer_v1" target="_blank" title="Отзывы о МИПО на Kursfinder"
-               rel="noreferrer">
-              <img src="https://kursfinder.ru/static/img/informer/logo_v1.svg" className="informer__logo"
-                   alt="Отзывы о МИПО на Kursfinder" />
-            </a>
-          </div>
-          <Script
-            id={'informer-script'}
-            dangerouslySetInnerHTML={{
-              __html: `
-          document.addEventListener('DOMContentLoaded', function () {
-          var xHttp = new XMLHttpRequest();
-          xHttp.open('GET', 'https://kursfinder.ru/informer/7/', true);
-          xHttp.responseType = 'json';
-          xHttp.getResponseHeader('Content-Type', 'aplication/json', 'charset=utf-8');
-          xHttp.send(null);
-          xHttp.addEventListener('readystatechange', function () {
-          if (xHttp.readyState === 4 && xHttp.status === 200) {
-          document.getElementById('informer').innerHTML = xHttp.response.data;
-          }});});
-        `
-            }}
-          />
-        </>)
-      }
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Unbounded:wght@200..900&display=swap"
+          rel="stylesheet"
+        />
+
+        <DefaultSeo {...SEO} />
+
+        <LogoJsonLd
+          logo={`${routesFront.root}/assets/imgs/icons/manifest-icon-512.png`}
+          url={routesFront.root}
+        />
+        <LayoutApp>
+          <main>
+            <Component {...props.pageProps} />
+          </main>
+        </LayoutApp>
+
+      </Provider>
+
+      <Scripts />
 
       <div id="getRatingFromEddu" data-id="72382"></div>
-      <Script src="https://eddu.pro/getRating.js" />
-
-      {!dev && (
-        <>
-          <Script
-            id={'gooogle-tag-manager-prevent-click-bot-spam'}
-            dangerouslySetInnerHTML={{
-              __html: `
-            (function(w, d, s, l, i) {
-              w[l] = w[l] || [];
-              w[l].push({
-                  'gtm.start':
-                      new Date().getTime(),
-                  event: 'gtm.js'
-              });
-              var f = d.getElementsByTagName(s)[0],
-                  j = d.createElement(s),
-                  dl = l != 'dataLayer' ? '&l=' + l : '';
-              j.async = true;
-              j.src =
-                  'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-              f.parentNode.insertBefore(j, f);
-          })(window, document, 'script', 'dataLayer', 'GTM-WCX7NFX');`
-            }}
-          />
-        </>
-      )}
-      {!dev && (
-        <>
-          <Script
-            id="victorycorp-integration"
-            dangerouslySetInnerHTML={{
-              __html: `(function (d, w) {
-            var n = d.getElementsByTagName("script")[0],
-            s = d.createElement("script");
-            s.type = "text/javascript";
-            s.async = true;
-            s.src = "https://victorycorp.ru/index.php?ref="+d.referrer+"&page=" + encodeURIComponent(w.location.href);
-            n.parentNode.insertBefore(s, n);
-            })(document, window);`
-            }}
-          />
-        </>
-      )}
-
-      {!dev && (
-        <>
-          <Script
-            id='af-ckick'
-            src={"https://af.click.ru/af.js?id=16601"}
-          />
-        </>
-      )}
-
-      {!dev && (
-        <>
-          <Script
-            id='roistat-counter'
-            dangerouslySetInnerHTML={{
-              __html: `(function(w, d, s, h, id) {
-                w.roistatProjectId = id; w.roistatHost = h;
-                var p = d.location.protocol == "https:" ? "https://" : "http://";
-                var u = /^.*roistat_visit=[^;]+(.*)?$/.test(d.cookie) ? "/dist/module.js" : "/api/site/1.0/"+id+"/init?referrer="+encodeURIComponent(d.location.href);
-                var js = d.createElement(s); js.charset="UTF-8"; js.async = 1; js.src = p+h+u; var js2 = d.getElementsByTagName(s)[0]; js2.parentNode.insertBefore(js, js2);
-                })(window, document, 'script', 'cloud.roistat.com', '5cfe377c158202483a51ae27717c4045');`
-            }}
-          />
-        </>
-      )}
-
-      {!dev && (
-        <Script id={'dmp'} src="https://dmp.one/sync" async  charSet="UTF-8" />
-      )}
-
-      {!dev && (
-        <Script
-          id='marquiz-script-start'
-          dangerouslySetInnerHTML={{
-            __html: `(function(w, d, s, o){ var j = d.createElement(s); j.async = true; j.src = '//script.marquiz.ru/v2.js';
-            j.onload = function() { if (document.readyState !== 'loading') Marquiz.init(o); 
-            else document.addEventListener("DOMContentLoaded", function() { Marquiz.init(o); }); }; 
-            d.head.insertBefore(j, d.head.firstElementChild); })
-            (window, document, 'script', { host: '//quiz.marquiz.ru', region: 'eu', id: '65c3391e3e254300269228bc', 
-            autoOpen: false, autoOpenFreq: 'once', openOnExit: false, disableOnMobile: false } );`
-          }}
-        />
-      )}
-
-      {!dev && (
-        <Script
-          id='marquiz'
-          dangerouslySetInnerHTML={{
-            __html: `(function(t, p) {window.Marquiz ? Marquiz.add([t, p]) : document.addEventListener('marquizLoaded', 
-            function() {Marquiz.add([t, p])})})('Pop', {id: '65c3391e3e254300269228bc', 
-            title: 'ПОЛУЧИТЬ ИНДИВИДУАЛЬНОЕ ПРЕДЛОЖЕНИЕ', text: 'ДЛЯ ВАС ПОДАРОК ОТ ИНСТИТУТА', 
-            delay: 2, textColor: '#ffffff', bgColor: '#3846c8', svgColor: '#ffffff', closeColor: '#ffffff', bonusCount: 2, 
-            bonusText: 'Вам доступны бонусы и скидка', type: 'full', position: 'position_bottom', shadow: 'rgba(56, 70, 200, 0)', 
-            blicked: true, pulse: 'rgba(56, 70, 200, 0.4)'})`
-          }}
-        />
-      )}
-
-      {!dev && (
-        <Script
-          id='btn-open'
-          dangerouslySetInnerHTML={{
-            __html: `(function(a,m,o,c,r,m){a[m]={id:"405512",hash:"ef9faaf747dd2aea1f17c8ca21789bcdb42be19ad6d8ba66f2a817bd380c1433",locale:"ru",inline:false,
-              setMeta:function(p){this.params=(this.params||[]).concat([p])}};a[o]=a[o]||function(){(a[o].q=a[o].q||[]).push(arguments)};var d=a.document,
-              s=d.createElement('script');s.async=true;s.id=m+'_script';s.src='https://gso.amocrm.ru/js/button.js';d.head&&d.head.appendChild(s)}(window,0,
-              'amoSocialButton',0,0,'amo_social_button'))`
-          }}
-        />
-      )}
-
-      {!dev && (
-        <Script
-          id='btn-close'
-          dangerouslySetInnerHTML={{
-            __html: `(function(a,m,o,c,r,m){a[m]={id:"405512",hash:"ef9faaf747dd2aea1f17c8ca21789bcdb42be19ad6d8ba66f2a817bd380c1433",
-            locale:"ru",inline:true,setMeta:function(p){this.params=(this.params||[]).concat([p])}};a[o]=a[o]||function(){(a[o].q=a[o].q||[]).push(arguments)};
-            var d=a.document,s=d.createElement('script');s.async=true;s.id=m+'_script';s.src='https://gso.amocrm.ru/js/button.js';
-            d.head&&d.head.appendChild(s)}(window,0,'amoSocialButton',0,0,'amo_social_button'))`
-          }}
-        />
-      )}
-
-      {!dev && (
-        <>
-          <Script
-            id='ed-partners'
-            dangerouslySetInnerHTML={{
-              __html: `function sclClickPixelFn() {
-                  const url = new URL(document.location.href).searchParams;
-                  if (url.get('a')) {
-                      const availableParams = ['aff_click_id', 'sub_id1', 'sub_id2', 'sub_id3', 'sub_id4', 'sub_id5', 'aff_param1', 'aff_param2', 'aff_param3', 'aff_param4', 'aff_param5', 'idfa', 'gaid'];
-                      const t = new URL('https://edpartners.scaletrk.com/click');
-                      const r = t.searchParams;
-                      console.log(url);
-                      r.append('a', url.get('a'));
-                      r.append('o', url.get('o'));
-                      r.append('return', 'click_id');
-                      if (availableParams?.length > 0) {
-                          availableParams.forEach((key) => {
-                              const value = url.get(key);
-                              if (value) {
-                                  r.append(key, value);
-                              }
-                          });
-                      }
-                      fetch(t.href).then((e) => e.json()).then((e) => {
-                          const c = e.click_id;
-                          if (c) {
-                              const expiration = 864e5 * 90;
-                              const o = new Date(Date.now() + expiration);
-                              document.cookie = 'cl_uid=' + c + ';expires=' + o;
-                              document.cookie = 'utm_source=' + url.get('utm_source') + ';expires=' + o;
-                          }
-                      });
-                  }
-              }
-
-              sclClickPixelFn();`
-            }}
-          />
-        </>
-      )}
     </>
   )
 }
 
-export default MyApp
+export default App

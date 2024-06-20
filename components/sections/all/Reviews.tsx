@@ -14,7 +14,7 @@ type ReviewsType = {
 const Reviews = ({ standalone = false, reviews }: ReviewsType) => {
   if (!reviews || reviews?.length === 0) return null
   const slides =
-    reviews?.map((review, idx) => (
+    reviews?.map((review: any, idx: number) => (
       <CardReview
         key={review?.title + idx}
         title={review?.title}
@@ -44,9 +44,6 @@ const Reviews = ({ standalone = false, reviews }: ReviewsType) => {
       })}>
       <Wrapper>
         <h2 className={stls.title}>Отзывы и статьи наших студентов</h2>
-        <div className={stls.content}>
-          <SwiperContainer slides={slides} />
-        </div>
       </Wrapper>
     </section>
   )

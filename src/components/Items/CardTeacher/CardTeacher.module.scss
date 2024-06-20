@@ -1,0 +1,66 @@
+@import "src/styles/extends";
+
+.card {
+  position: relative;
+  min-width: 587px;
+  height: 655px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-radius: 20px;
+  overflow: hidden;
+
+  @media (max-width: 1810px) {
+    min-width: 480px;
+    height: 535px;
+  }
+  @media (max-width: 1600px) {
+    min-width: 380px;
+    height: 434px;
+  }
+  @media (max-width: 1290px) {
+    min-width: 334px;
+    height: 404px;
+  }
+  @media (max-width: 549px) {
+    min-width: 328px;
+    height: 379px;
+  }
+  @media (max-width: 389px) {
+    min-width: 275px;
+    height: 379px;
+  }
+
+  img {
+    width: auto;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+.wrapperContent {
+  border-radius: 15px;
+  background: #FFF;
+  padding: 30px;
+  position: relative;
+  z-index: 2;
+
+  @media (max-width: 979px) {
+    padding: 20px;
+  }
+
+  @media (max-width: 769px) {
+    padding: 20px 10px;
+  }
+
+  .header {
+    color: #000;
+    @extend %titleText;
+  }
+
+  .description {
+    color: #000;
+    @extend %text;
+  }
+}

@@ -4,7 +4,7 @@ import {
   TOGGLE_FIELDS_TOOLTIP
 } from '@/context/types'
 
-const fieldsTooltipReducer = (state, action) => {
+const fieldsTooltipReducer = (state: any, action: any) => {
   switch (action.type) {
     case OPEN_FIELDS_TOOLTIP:
       return {

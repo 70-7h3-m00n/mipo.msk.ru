@@ -1,6 +1,4 @@
 {
-  "trailingComma": "none",
-  "tabWidth": 2,
   "semi": false,
   "singleQuote": true,
   "arrowParens": "avoid",
@@ -9,5 +7,12 @@
   "useTabs": false,
   "jsxSingleQuote": true,
   "useEditorConfig": false,
-  "enableDebugLogs": true
+  "enableDebugLogs": true,
+  "filepath": "./",
+  "trailingComma": "all",
+  "printWidth": 120,
+  "tabWidth": 2,
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
+  }
 }

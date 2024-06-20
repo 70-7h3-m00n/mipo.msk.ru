@@ -5,13 +5,12 @@ import urlImage from '@/public/assets/imgs/sections/SectionHeroProgram/check-cou
 import dataListTrainingInfo from '@/data/lists/listTrainengInfo'
 import ImgTemplate from '../../imgs/ImgTemplate'
 import classNames from 'classnames'
-import BtnNewCourse from '@/components/btns/BtnNewCourse'
 import fetchCourse from '../../../api/fetchCourse'
 import routesBack from '@/config/routesBack'
 
 
 interface Props {
-  data: Awaited<ReturnType<typeof fetchCourse>>
+  data: Awaited<ReturnType<typeof fetchCourse>> | any
 }
 
 const HeroNewProgram = ({data}:Props) => {
@@ -43,7 +42,7 @@ const HeroNewProgram = ({data}:Props) => {
         </p>
 
         <div className={styles.wrapperCard}>
-          {valid && data.listHeader.map((item, i) => (
+          {valid && data.listHeader.map((item: any, i: number) => (
             <div className={styles.cardInfoCourse} key={i}>
               <p>
                 {item.item}
@@ -53,10 +52,9 @@ const HeroNewProgram = ({data}:Props) => {
         </div>
 
         <div className={styles.wrapperBtn}>
-          {/*<BtnNewCourse text={'Записаться на курс'} />*/}
 
           <div className={styles.wrapperBtn_blockInfo}>
-            <Image src={urlImage} alt={'check-course'} width={59} height={58} />
+            <Image src={urlImage} alt={'check-course'} width={59} height={58} sizes={''} />
 
             <p>Курс обновлен весной 2023</p>
           </div>
@@ -66,7 +64,7 @@ const HeroNewProgram = ({data}:Props) => {
           {listTrainingInfo.map((item, i) => {
             if (item in dataListTrainingInfo) {
               return <div key={i}>
-                  <Image priority src={dataListTrainingInfo[item]?.image} width={30} height={30} alt={'imageIcon'} />
+                  <Image sizes={''} priority src={dataListTrainingInfo[item]?.image} width={30} height={30} alt={'imageIcon'} />
 
                   <h3 className={styles.header}>{dataListTrainingInfo[item]?.title}</h3>
 

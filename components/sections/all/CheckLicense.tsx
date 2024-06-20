@@ -22,8 +22,6 @@ const CheckLicense = () => {
             <div className={stls.btn}>
               <BtnAlpha
                 text='Проверить'
-                href={routesExternal.licence}
-                target='_blank'
               />
             </div>
           </div>

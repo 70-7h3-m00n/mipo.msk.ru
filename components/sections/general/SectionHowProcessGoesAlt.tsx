@@ -14,42 +14,7 @@ type TSectionHowProcessGoesAlt = TPropClassNames
 const SectionHowProcessGoesAlt = ({
   classNames
 }: TSectionHowProcessGoesAlt) => {
-  const { program } = useContext(ProgramContext)
 
-  const atMba = program?.category?.type === 'mba'
-
-  const listDynamic =
-    program?.SectionHowStudyingGoesItems &&
-    program?.SectionHowStudyingGoesItems?.length > 0
-      ? program.SectionHowStudyingGoesItems
-      : null
-
-  const list = listDynamic || [
-    {
-      item: 'Онлайн-вебинары с возможностью просмотра записей в течение всего курса обучения'
-    },
-    {
-      item: 'Разборы реальных кейсов'
-    },
-    {
-      item: 'Лекционные и полезные дополнительные материалы к дисциплинам'
-    },
-    {
-      item: 'Общение с одногруппниками и единомышленниками в чатах на вебинарах'
-    },
-    {
-      item: 'Тестирование и работа над ошибками после каждой дисциплины'
-    },
-    {
-      item: atMba && 'Сопровождение персонального куратора, от начала и до получения документа на руки, с обратной связью от преподавателей' || 'Ведение и помощь в обучении куратором, от начала и до получения документа на руки, с обратной связью от преподавателей через куратора'
-    },
-    {
-      item: atMba && 'Видеоматериал с практическими заданиями от преподавателей-практиков и экспертов' || 'Видео-материал с практическими упражнения от преподавателей'
-    },
-    {
-      item: atMba && 'Диплом «Мастер делового администрирования — Master of Business Administration (MBA)». Официальным диплом РФ установленного образца с внесением данных в — Федеральный реестр сведений о документах об образовании (ФИС-ФРДО). Общеевропейское приложение к диплому (Diploma Supplement), не требующее дополнительного перевода или заверения для предъявления в зарубежных организациях.' ||  'Официальным диплом РФ установленного образца с внесением данных в — Федеральный реестр сведений о документах об образовании (ФИС-ФРДО)'
-    }
-  ].filter(el => el.item)
 
   // if (!program?.whatYouWillLearn) return null
 
@@ -92,12 +57,7 @@ const SectionHowProcessGoesAlt = ({
                 В программу дистанционного обучения входит:
               </h3>
               <ol className={stls.list}>
-                {list.map((item, idx) => (
-                  <li key={`${item?.item}-${idx}`} className={stls.listItem}>
-                    <div className={stls.idx}>{idx + 1}</div>
-                    <p className={stls.listItemP}>{item?.item}</p>
-                  </li>
-                ))}
+
               </ol>
             </div>
             <ImgSectionHowProcessGoesAltPersonStudying

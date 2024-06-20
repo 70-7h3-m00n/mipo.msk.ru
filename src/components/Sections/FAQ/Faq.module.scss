@@ -1,0 +1,8 @@
+@import "src/styles/extends";
+
+.wrapperList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  @extend %marginBlock;
+}

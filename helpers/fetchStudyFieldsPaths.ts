@@ -6,8 +6,8 @@ type ProgramsType = {
   ofType: TypeCategory
 }
 
-const fetchProgramsPaths = async (
-  { ofType }: ProgramsType = { ofType: null }
+// @ts-ignore
+const fetchProgramsPaths = async ({ ofType }: ProgramsType = { ofType: null }
 ) => {
   const res = await fetch(`${routesBack.root}${routesBack.programs}`)
   const data = await res.json()
@@ -20,7 +20,7 @@ const fetchProgramsPaths = async (
     programs = data
   }
 
-  const paths = programs.map(program => ({
+  const paths = programs.map((program: any) => ({
     params: { studyFieldSlug: program.study_field?.slug || 'studyfield' }
   }))
 

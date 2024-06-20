@@ -5,7 +5,7 @@ import fetchCourse from '../../../api/fetchCourse'
 import routesBack from '@/config/routesBack'
 
 interface Props {
-  data: Awaited<ReturnType<typeof fetchCourse>>
+  data: Awaited<ReturnType<typeof fetchCourse>> | any
 }
 
 const WhoIsProgram = ({data}:Props) => {
@@ -23,7 +23,7 @@ const WhoIsProgram = ({data}:Props) => {
 
       <div className={styles.blockList}>
         {
-          data.whoIsProgram.map((item, i) => (
+          data.whoIsProgram.map((item: any, i: number) => (
             <div className={styles.card} key={i}>
               <div className={styles.wrapperImage}>
                 <ImgTemplate src={routesBack.newRoot + item.icon.data.attributes.url || ''}

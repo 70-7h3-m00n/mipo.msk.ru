@@ -12,7 +12,7 @@ import { city, street } from '@/data/location'
 import { number, numberAlt } from '@/data/contact'
 import { email, emailAlmaty } from '@/data/email'
 
-const LegalPage = ({ programs }) => {
+const LegalPage = ({ programs }: any) => {
   usePageHandleContext({ programs })
 
   return (

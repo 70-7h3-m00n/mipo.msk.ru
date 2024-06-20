@@ -1,0 +1,79 @@
+@import "src/styles/extends";
+
+.bgYouWillLearn {
+  border-radius: 40px;
+  background: #3F3BFF;
+  padding: 100px 0;
+  @extend %marginSection;
+
+  @media (max-width: 979px) {
+    padding: 80px 0;
+  }
+
+  @media (max-width: 769px) {
+    padding: 50px 0;
+  }
+
+  .headerYouWillLearn {
+    color: #FFF;
+    margin: 0;
+  }
+
+  .listYouWillLearn {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+    @extend %marginBlock;
+
+    @media (max-width: 1290px) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    @media (max-width: 979px) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media (max-width: 769px) {
+      grid-template-columns: 1fr;
+    }
+
+    .cardYouWillLearn {
+      border-radius: 15px;
+      background: #FFF;
+      padding: 30px;
+
+      .bgCircle {
+        width: 20px;
+        height: 20px;
+        background-color: #3F3BFF;
+        border-radius: 100%;
+      }
+
+      .headerYouWillLearn {
+        color: #000;
+        margin: 40px 0 0 0;
+        @extend %titleText;
+
+        @media (max-width: 1810px) {
+          margin-top: 20px;
+        }
+        @media (max-width: 1290px) {
+          margin-top: 40px;
+        }
+        @media (max-width: 549px) {
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+
+  .btnMobile {
+    display: none;
+    width: 100%;
+    margin-top: 40px;
+
+    @media (max-width: 769px) {
+      display: block;
+    }
+  }
+}

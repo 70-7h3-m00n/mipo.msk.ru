@@ -20,48 +20,44 @@ const ProgramType = ({ close = null }) => {
     <div className={stls.container}>
       <p className={stls.p}>Тип обучения:</p>
 
-      <Link href={`${routePrograms}/${slug}`}>
-        <a className={stls.item} onClick={close && close}>
+      <Link href={`${routePrograms}/${slug}`}
+        className={stls.item} onClick={() => close && close}>
           <div
             className={classNames({
               [stls.circle]: true,
               [stls.active]: curProgramsType === null
             })}></div>{' '}
           <span className={stls.text}>Любой</span>
-        </a>
       </Link>
 
-      <Link href={`${routeProfessions}/${slug}`}>
-        <a className={stls.item} onClick={close && close}>
+      <Link href={`${routeProfessions}/${slug}`}
+        className={stls.item} onClick={() => close && close}>
           <div
             className={classNames({
               [stls.circle]: true,
               [stls.active]: curProgramsType === 'profession'
             })}></div>
           <span className={stls.text}>Профессиональная переподготовка</span>
-        </a>
       </Link>
 
-      <Link href={`${routeCourses}/${slug}`}>
-        <a className={stls.item} onClick={close && close}>
+      <Link href={`${routeCourses}/${slug}`}
+            className={stls.item} onClick={() => close && close}>
           <div
             className={classNames({
               [stls.circle]: true,
               [stls.active]: curProgramsType === 'course'
             })}></div>
           <span className={stls.text}>Повышение квалификации</span>
-        </a>
       </Link>
 
-      <Link href={`${routeMBA}/${slug}`}>
-        <a className={stls.item} onClick={close && close}>
+      <Link href={`${routeMBA}/${slug}`}
+        className={stls.item} onClick={() => close && close}>
           <div
             className={classNames({
               [stls.circle]: true,
               [stls.active]: curProgramsType === 'mba'
             })}></div>
           <span className={stls.text}>MBA</span>
-        </a>
       </Link>
     </div>
   )

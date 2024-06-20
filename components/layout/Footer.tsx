@@ -73,13 +73,9 @@ const staticLinks = [
 ]
 
 const Footer = () => {
-  const [validComponent, setValidComponent] = useState(null)
+  const [validComponent, setValidComponent] = useState<boolean | null>(null)
   const router = useRouter()
   const { studyFields } = useContext(ProgramsContext)
-  const { program } = useContext(ProgramContext)
-  const altStyles =
-    program?.category?.type === 'mba' ||
-    program?.category?.type === 'profession'
 
   useEffect(() => {
     if(getCookie('utm_source') !== undefined) {
@@ -94,7 +90,7 @@ const Footer = () => {
   // )
 
   return (
-    <footer className={cn(stls.container, { [stls.altStyles]: altStyles })}>
+    <footer className={cn(stls.container)}>
       <Wrapper>
         <div className={stls.left}>
           <div className={stls.top}>
@@ -110,14 +106,12 @@ const Footer = () => {
                     [stls.linkItem]: true,
                     [stls.staticLinkItem]: true
                   })}>
-                  <Link href={link.href}>
-                    <a
+                  <Link href={link.href}
                       className={classNames({
                         [stls.link]: true,
                         [stls.staticLink]: true
                       })}>
                       {link.val}
-                    </a>
                   </Link>
                 </li>
               ))}
@@ -180,6 +174,7 @@ const Footer = () => {
                       <Image src={item.svg}
                              alt={'svg'}
                              priority
+                             sizes={''}
                       />
                     </a>))
                 }
@@ -194,7 +189,7 @@ const Footer = () => {
             <FooterBottom />
           </div>
         </div>
-        <div className={cn(stls.right, { [stls.altStyles]: altStyles })}>
+        <div className={cn(stls.right)}>
           <div className={stls.formTitles}>
             <p className={stls.formTitle}>Остались вопросы?</p>
             <p className={stls.formTitle}>Свяжитесь с нами!</p>
@@ -206,7 +201,7 @@ const Footer = () => {
       <div className={stls.footerBottom}>
         <FooterBottom />
       </div>
-      <div className={cn(stls.bgRight, { [stls.altStyles]: altStyles })}></div>
+      <div className={cn(stls.bgRight)}></div>
     </footer>
   )
 }

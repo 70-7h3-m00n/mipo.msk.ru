@@ -7,12 +7,12 @@ import { useState } from 'react'
 import fetchCourse from '../../../api/fetchCourse'
 
 interface Props {
-  data: Awaited<ReturnType<typeof fetchCourse>>
+  data: Awaited<ReturnType<typeof fetchCourse>> | any
 }
 
 const TrainingProgram = ({data}: Props) => {
-  const training = data.trainingProgram.filter((item) => !item.pro)
-  const proTraining = data.trainingProgram .filter((item) => item.pro)
+  const training = data.trainingProgram.filter((item: any) => !item.pro)
+  const proTraining = data.trainingProgram .filter((item: any) => item.pro)
   const [counterPro, setCounterPro] = useState(proTraining.length - 1 > 2 ? 2: proTraining.length)
   const [counter, setCounter] = useState(training.length - 1 > 2 ? 2: training.length)
 
@@ -45,13 +45,13 @@ const TrainingProgram = ({data}: Props) => {
           <div>
             <ul className={styles.list}>
               {
-                training.slice(0, counter).map((card, i) => (
+                training.slice(0, counter).map((card: any, i: number) => (
                   <li className={styles.item} key={i}>
                     <h3>{i + 1}. {card.title}</h3>
 
                     <ul>
                       {
-                        card.list.map((item, index) => (
+                        card.list.map((item: any, index: number) => (
                           <li key={index}>{item.item}</li>
                         ))
                       }
@@ -77,13 +77,13 @@ const TrainingProgram = ({data}: Props) => {
 
                 <ul>
                   {
-                    proTraining.slice(0, counterPro).map((card, i) => (
+                    proTraining.slice(0, counterPro).map((card: any, i: number) => (
                       <li className={styles.item} key={i}>
                         <h3>{training.length + i + 1} {card.title}</h3>
 
                         <ol>
                           {
-                            card.list?.map((item, index) => (
+                            card.list?.map((item: any, index: number) => (
                               <li key={index}>{item.item}</li>
                             ))
                           }

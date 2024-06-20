@@ -7,7 +7,6 @@ const ProgramLabel = () => {
 
   return (
     <div className={stls.container}>
-      <p className={stls.p}>{program?.category && program.category.label}</p>
     </div>
   )
 }

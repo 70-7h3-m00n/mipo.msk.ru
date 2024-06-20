@@ -8,11 +8,18 @@ interface PageCourseProps {
 }
 
 const NewCoursePage: NextPage<PageCourseProps> = ({course}) => {
-  return (<PagesNewProgram course={course} />)
+  return (<PagesNewProgram courses={course} />)
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const course = await fetchCourse(String(params!.newCourse))
+  if (!params || typeof params.newCourse !== 'string') {
+    return {
+      notFound: true,
+    };
+  }
+
+  const course = await fetchCourse(params.newCourse)
+
   return {
     props: {
       course

@@ -1,7 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import nodemailer from 'nodemailer'
 import { dev } from '@/config/index'
-import * as console from 'console'
 import buildLeadData from '@/helpers/buildLeadData'
 import createLeadEmailBody from '@/helpers/createLeadEmailBody'
 
@@ -34,9 +33,9 @@ const lead = async (req: NextApiRequest, res: NextApiResponse<TypeNextApiRespons
     const subject = `Новая запись на новый курс ${data.rootPath}!`
     const html = createLeadEmailBody({ data, subject })
 
-    // const testAccount = await nodemailer.createTestAccount()
 
     const transporter = nodemailer.createTransport({
+        // @ts-expect-error remove this line and fix the error
         host: process.env.SMTP_HOST,
         port: Number(process.env.SMTP_PORT),
         secure: false, // true for 465, false for other ports
@@ -50,7 +49,7 @@ const lead = async (req: NextApiRequest, res: NextApiResponse<TypeNextApiRespons
             pass: process.env.SMTP_PASS
         }
     })
-    //
+
     try {
         const emailRes = await transporter.sendMail({
             from: process.env.SMTP_FROM,

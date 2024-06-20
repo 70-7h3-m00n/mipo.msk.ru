@@ -14,11 +14,6 @@ import ProgramDiscountUntil from '@/components/program/ProgramDiscountUntil'
 const StickyBottom = () => {
   const router = useRouter()
 
-  const { program } = useContext(ProgramContext)
-  const altStyles =
-    program?.category?.type === 'mba' ||
-    program?.category?.type === 'profession'
-
   const [isShown, setIsShown] = useState(false)
   const [isClosed, setIsClosed] = useState(false)
 
@@ -42,10 +37,9 @@ const StickyBottom = () => {
         [stls.container]: true,
         [stls.isShown]: isShown,
         [stls.isClosed]: isClosed,
-        [stls.altStyles]: altStyles
       })}>
       <Wrapper>
-        <div className={cn(stls.shape, { [stls.altStyles]: altStyles })}>
+        <div className={cn(stls.shape)}>
           <IconWavyShape />
         </div>
         <p className={stls.discount}>

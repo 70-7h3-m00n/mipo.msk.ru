@@ -1,0 +1,43 @@
+.select {
+  position: relative;
+
+  .wrapperHeader {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 8px;
+    background: #3F3BFF;
+
+    .subHeader {
+      position: absolute;
+      top: -15px;
+      left: 5px;
+      font-size: 8px;
+      font-style: normal;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+
+    .headerSelect {
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 500;
+      text-transform: uppercase;
+      color: #FFF;
+    }
+  }
+
+  .listOption {
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    border-radius: 8px;
+    background: #FFF;
+    overflow: hidden;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+  }
+}

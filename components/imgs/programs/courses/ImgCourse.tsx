@@ -14,17 +14,13 @@ const ImgCourse = ({
                      width,
                      height
                    }: TGeneralImg) => {
-  const { program } = useContext(ProgramContext)
-  const altStyles =
-    program?.category?.type === 'mba' ||
-    program?.category?.type === 'profession'
 
-  const isImage = useCheckIfResourseExists({ src })
+  const isImage = ''
 
   return (
     <ImgTemplate
       classNames={classNames}
-      src={isImage && src ? src : altStyles ? defaultSrcAlt : defaultSrc}
+      src={isImage}
       alt={alt || 'Человек в работе'}
       width={width}
       height={height}

@@ -1,0 +1,128 @@
+@import "src/styles/extends";
+
+.wrapperSlider {
+  position: relative;
+  @extend %marginBlock;
+
+  .btnSlider {
+    position: absolute;
+    right: 0;
+    top: -108px;
+
+    @media (max-width: 1810px) {
+      top: -105px;
+    }
+
+    @media (max-width: 1600px) {
+      top: -100px;
+    }
+
+    @media (max-width: 769px) {
+      display: none;
+    }
+  }
+}
+
+.bg {
+  border-radius: 40px;
+  background: #3F3BFF;
+  @extend %marginSection;
+}
+
+.wrapperAboutInstitute {
+  padding: 100px 0;
+
+  @media (max-width: 979px) {
+    padding: 80px 0;
+  }
+  @media (max-width: 769px) {
+    padding: 50px 0;
+  }
+
+  .headerIAboutInstitute {
+    color: #FFF;
+    text-align: center;
+    margin: 0;
+    @extend %header;
+  }
+
+  .titleIAboutInstitute {
+    width: 1202px;
+    margin: 40px auto 0 auto;
+    color: #FFF;
+    text-align: center;
+    @extend %text;
+
+    @media (max-width: 1310px){
+      width: 100%;
+    }
+    @media (max-width: 979px) {
+      margin: 30px auto 0 auto;
+    }
+    @media (max-width: 769px) {
+      margin: 20px auto 0 auto;
+    }
+  }
+
+  .wrapperIAboutInstitute {
+    margin: 60px 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+
+    @media (max-width: 979px) {
+      margin: 50px 0 0 0;
+    }
+    @media (max-width: 769px) {
+      margin: 40px 0 0 0;
+    }
+
+    .cardIAboutInstitute {
+      width: calc((100% / 4) - 20px);
+      height: auto;
+      border-radius: 15px;
+      padding: 30px;
+
+      @media (max-width: 1290px) {
+        width: calc(50% - 10px);
+      }
+      @media (max-width: 979px){
+        margin: 0;
+      }
+      @media (max-width: 769px){
+        width: 100%;
+        padding: 20px;
+      }
+
+      .headerCard {
+        text-align: center;
+        font-family: Unbounded;
+        font-size: 42px;
+        font-style: normal;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin: 0;
+
+        @media (max-width: 1810px) {
+          font-size: 36px;
+        }
+
+        @media (max-width: 1600px) {
+          font-size: 26px;
+        }
+      }
+
+      .descriptionCard {
+        width: 80%;
+        text-align: center;
+        margin: 20px auto 0 auto;
+        @extend %text;
+
+        @media (max-width: 769px) {
+          margin: 10px auto 0 auto;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,139 @@
+@import "src/styles/extends";
+
+.wrapperBlock {
+  border-radius: 25px;
+  background: #FFF;
+  margin-top: 20px;
+  padding: 130px 60px;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+
+  @media (max-width: 1600px) {
+    padding: 80px 40px 54px 40px;
+  }
+
+  @media (max-width: 1290px) {
+    padding: 0;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 15px;
+  }
+}
+
+.blockText {
+  width: 50%;
+  position: relative;
+  z-index: 2;
+
+  @media (max-width: 1600px) {
+    width: 55%;
+  }
+
+  @media (max-width: 1290px) {
+    width: 100%;
+    padding: 80px 40px 0;
+  }
+
+  @media (max-width: 979px) {
+    padding: 80px 30px 0;
+  }
+
+  @media (max-width: 769px) {
+    padding: 60px 30px 0;
+  }
+
+  @media (max-width: 549px) {
+    padding: 50px 10px 0;
+  }
+}
+
+.imageDesktop {
+  position: absolute;
+  width: 1068px;
+  height: 679px;
+  right: 0;
+  bottom: 0;
+
+  @media (max-width: 1810px) {
+    width: 865px;
+    height: 550px;
+  }
+  @media (max-width: 1600px) {
+    width: 716px;
+    height: 455px;
+  }
+  @media (max-width: 1290px) {
+    display: none;
+  }
+}
+
+.imageMobile {
+  display: none;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+
+  @media (max-width: 1290px) {
+    display: block;
+  }
+}
+
+.header {
+  @extend %generalHeader;
+  margin: 0;
+
+  span {
+    color: #3F3BFF;
+  }
+}
+
+.description {
+  @extend %text;
+  margin: 40px 0 0 0;
+
+  @media (max-width: 1810px) {
+    max-width: 480px;
+    margin: 30px 0 0 0;
+  }
+
+  @media (max-width: 769px) {
+    margin: 20px 0 0 0;
+  }
+}
+
+.wrapperBtn {
+  display: flex;
+  gap: 20px;
+  @extend %marginBlock;
+
+  @media (max-width: 549px) {
+    flex-direction: column;
+  }
+}
+
+.btnDirections, .btnQuestion  {
+  text-align: center;
+  padding: 15px 45px;
+  border-radius: 8px;
+  background: #3F3BFF;
+  color: #FFF;
+  @extend %btn;
+
+  &:hover {
+    color: #FFF;
+    background: black;
+  }
+}
+
+.btnQuestion {
+  background-color: white;
+  border: 1px solid #3F3BFF;
+  color: #3F3BFF;
+
+  &:hover {
+    color: #FFF;
+    background: #3F3BFF;
+  }
+}

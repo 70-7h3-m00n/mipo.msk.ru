@@ -3,7 +3,7 @@ import classNames from 'classnames'
 import { IconMoreThan } from '@/components/icons'
 
 const CtaText = ({
-  text,
+  text = '',
   cbeta = false,
   cnu = false,
   ctheta = false,

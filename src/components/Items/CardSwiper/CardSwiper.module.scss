@@ -1,0 +1,114 @@
+@import "src/styles/extends";
+
+.itemEvaluation {
+  width: 630px;
+  border-radius: 20px;
+  background: #FFF;
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+
+  @media (max-width: 1810px) {
+    width: 550px;
+  }
+
+  @media (max-width: 1600px) {
+    width: 480px;
+  }
+
+  @media (max-width: 1290px) {
+    width: 100%;
+    height: auto;
+  }
+  @media (max-width: 600px) {
+    padding: 30px;
+  }
+}
+
+.wrapperTop {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+
+  @media (max-width: 979px) {
+    justify-content: center;
+  }
+
+  @media (max-width: 500px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.counter {
+  color: #3F3BFF;
+  text-align: center;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: Unbounded;
+
+  @media (max-width: 979px) {
+    font-size: 56px;
+  }
+  @media (max-width: 769px) {
+    font-size: 42px;
+  }
+}
+
+.description {
+  width: 230px;
+  color: #000;
+  @extend %text;
+}
+
+.wrapperBottom {
+  min-width: 230px;
+  border-radius: 20px;
+  background: #3F3BFF;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .wrapperCounter {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .estimation {
+      display: flex;
+      gap: 6px;
+
+      .text {
+        color: #FFF;
+        text-align: center;
+        font-size: 38px;
+        font-style: normal;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-family: Unbounded;
+      }
+
+      svg {
+        width: 38px;
+        height: 38px;
+      }
+    }
+
+    .reviewsCounter {
+      color: #FFF;
+      text-align: center;
+      margin-top: 5px;
+      @extend %text;
+    }
+  }
+}

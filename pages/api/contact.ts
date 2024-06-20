@@ -1,14 +1,13 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-
+import type { NextApiRequest, NextApiResponse } from 'next'
 import nodemailer from 'nodemailer'
 import { dev, UTM_KEYS_OBJ } from '@/config/index'
 import moment from 'moment'
-import { WebServiceClient } from '@maxmind/geoip2-node'
 import axios from 'axios'
 import * as console from 'console'
 import { getCookie, getCookies } from 'cookies-next'
 
-const contact = async (req, res) => {
+const contact = async (req: NextApiRequest, res: NextApiResponse) => {
   process.env.TZ = 'Europe/Moscow'
   // data from the client
   let {
@@ -51,11 +50,6 @@ const contact = async (req, res) => {
       console.log(error)
     })
 
-  // geoip2 init
-  const geoip2 = new WebServiceClient('550199', process.env.GEO2_APIKEY, {
-    host: 'geolite.info'
-  })
-
   // moment init
   const now = moment()
 
@@ -75,46 +69,6 @@ const contact = async (req, res) => {
     req.connection.remoteAddress ||
     null
 
-  const getUserLocation = async () => {
-    try {
-      const res = await geoip2.city(ip.toString())
-      const output = {
-        continent: {
-          code: res.continent.code,
-          names: {
-            ru: res.continent.names.ru,
-            en: res.continent.names.en
-          }
-        },
-        country: {
-          code: res.country.isoCode,
-          names: {
-            ru: res.country.names.ru,
-            en: res.country.names.en
-          }
-        },
-        city: {
-          names: {
-            en: res.city.names.en,
-            ru: res.city.names.ru
-          }
-        },
-        coordinates: {
-          accuracyRadius: res.location.accuracyRadius,
-          latitude: res.location.latitude,
-          longitude: res.location.longitude
-        },
-        timeZone: res.location.timeZone,
-        postalCode: res.postal.code
-      }
-      return output
-    } catch (err) {
-      console.log(err)
-      return null
-    }
-  }
-
-  const locationData = await getUserLocation()
 
   const data = {
     id: id || null,
@@ -133,20 +87,6 @@ const contact = async (req, res) => {
     leadPage: root + leadPage || null,
     ip: ip || null,
     ymUid: ymUid || null,
-    cityEn: (locationData && locationData.city.names.en) || null,
-    cityRu: (locationData && locationData.city.names.ru) || null,
-    countryCode: (locationData && locationData.country.code) || null,
-    countryEn: (locationData && locationData.country.names.en) || null,
-    countryRu: (locationData && locationData.country.names.ru) || null,
-    continentCode: (locationData && locationData.continent.code) || null,
-    continentEn: (locationData && locationData.continent.names.en) || null,
-    continentRu: (locationData && locationData.continent.names.ru) || null,
-    accuracyRadius:
-      (locationData && locationData.coordinates.accuracyRadius) || null,
-    latitude: (locationData && locationData.coordinates.latitude) || null,
-    longitude: (locationData && locationData.coordinates.longitude) || null,
-    timeZone: (locationData && locationData.timeZone) || null,
-    postalCode: (locationData && locationData.postalCode) || null,
     programTitle: programTitle || null,
     utmSource: (utms && utms.utm_source) || referer || null,
     utmMedium: (utms && utms.utm_medium) || null,
@@ -161,7 +101,7 @@ const contact = async (req, res) => {
   const subject = 'Новая заявка с mipo.msk.ru'
 
   const createEmailBody = () => {
-    const createTr = (item, idx) => {
+    const createTr = (item : any, idx: number) => {
       const output = /* html */ `
         <tr id='tr-item-${idx}' class="${idx % 2 === 0 && 'bgOnEven'} ${
         item.tdKey === 'Телефон' && 'active-row'
@@ -234,58 +174,6 @@ const contact = async (req, res) => {
       {
         tdKey: 'IP',
         tdVal: data.ip
-      },
-      {
-        tdKey: 'Город (en)',
-        tdVal: data.cityEn
-      },
-      {
-        tdKey: 'Город (ru)',
-        tdVal: data.cityRu
-      },
-      {
-        tdKey: 'Код страны',
-        tdVal: data.countryCode
-      },
-      {
-        tdKey: 'Страна (en)',
-        tdVal: data.countryEn
-      },
-      {
-        tdKey: 'Страна (ru)',
-        tdVal: data.countryRu
-      },
-      {
-        tdKey: 'Континент код',
-        tdVal: data.continentCode
-      },
-      {
-        tdKey: 'Континент (en)',
-        tdVal: data.continentEn
-      },
-      {
-        tdKey: 'Континент (ru)',
-        tdVal: data.continentRu
-      },
-      {
-        tdKey: 'Погрешность (м)',
-        tdVal: data.accuracyRadius
-      },
-      {
-        tdKey: 'Широта',
-        tdVal: data.latitude
-      },
-      {
-        tdKey: 'Долгота',
-        tdVal: data.longitude
-      },
-      {
-        tdKey: 'Часовой пояс',
-        tdVal: data.timeZone
-      },
-      {
-        tdKey: 'Зип код',
-        tdVal: data.postalCode
       },
       {
         tdKey: 'Направление',
@@ -422,6 +310,7 @@ const contact = async (req, res) => {
   // const testAccount = await nodemailer.createTestAccount()
 
   const transporter = nodemailer.createTransport({
+    // @ts-expect-error remove this line and fix the error
     host: process.env.SMTP_HOST,
     port: Number(process.env.SMTP_PORT),
     secure: false, // true for 465, false for other ports

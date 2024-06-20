@@ -3,14 +3,13 @@ import { TypeImg } from '@/types/index'
 import { useContext } from 'react'
 import { format } from 'date-fns'
 import { ru } from 'date-fns/locale'
-import { calculateClosestAdmission } from '@/helpers/index'
 import programContext from '@/context/program/programContext'
 import { ImgTemplate } from '@/components/imgs'
 import defaultSrc from '@/public/assets/imgs/diplomas/diploma.jpg'
 import defaultSrcMba from '@/public/assets/imgs/diplomas/certificate_mba.png'
 
 const ImgDiplomaTemplate = ({ classNames = [], width, height }: TypeImg) => {
-  const { program } = useContext(programContext)
+  const { program } = useContext<any>(programContext)
 
   const atMba = program?.category?.type === 'mba'
 

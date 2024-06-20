@@ -1,0 +1,71 @@
+{
+  "usesTypeScript": true,
+  "usesCssModule": true,
+  "cssPreprocessor": "scss",
+  "testLibrary": "Testing Library",
+  "component": {
+    "default": {
+      "customTemplates": {
+        "component": "templates/component/TemplateName.tsx",
+        "style": "templates/component/TemplateName.module.scss",
+        "index": "templates/component/index.tsx"
+      },
+      "path": "src/components",
+      "withLazy": false,
+      "withStory": false,
+      "withStyle": true,
+      "withTest": false,
+      "withIndex": true
+    },
+    "sections": {
+      "customTemplates": {
+        "component": "templates/section/TemplateName.tsx",
+        "style": "templates/section/TemplateName.module.scss",
+        "index": "templates/section/index.tsx"
+      },
+      "path": "src/components/Sections",
+      "withLazy": false,
+      "withStory": false,
+      "withStyle": true,
+      "withTest": false,
+      "withIndex": true
+    },
+    "items": {
+      "customTemplates": {
+        "component": "templates/item/TemplateName.tsx",
+        "style": "templates/item/TemplateName.module.scss",
+        "index": "templates/item/index.tsx"
+      },
+      "path": "src/components/Items",
+      "withLazy": false,
+      "withStory": false,
+      "withStyle": true,
+      "withTest": false,
+      "withIndex": true
+    },
+    "page": {
+      "customTemplates": {
+        "component": "templates/page/TemplateName.tsx",
+        "style": "templates/page/TemplateName.module.scss",
+        "index": "templates/page/index.tsx"
+      },
+      "path": "src/components/pages",
+      "withLazy": false,
+      "withStory": false,
+      "withStyle": true,
+      "withTest": false,
+      "withIndex": true
+    },
+    "reducer": {
+      "customTemplates": {
+        "component": "templates/reducer/TemplateName.ts"
+      },
+      "path": "src/state/reducers",
+      "withLazy": false,
+      "withStory": false,
+      "withStyle": false,
+      "withTest": false
+    }
+  },
+  "usesStyledComponents": true
+}

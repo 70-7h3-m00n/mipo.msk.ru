@@ -8,8 +8,8 @@ import { routeWebinars } from '@/data/routes'
 
 const CardSchedule = ({ mobileLayout = false }) => {
   return (
-    <Link href={routeWebinars}>
-      <a className={stls.linkContainer}>
+    <Link href={routeWebinars}
+          className={stls.linkContainer}>
         <article
           className={classNames({
             [stls.container]: true,
@@ -30,7 +30,6 @@ const CardSchedule = ({ mobileLayout = false }) => {
             </div>
           </div>
         </article>
-      </a>
     </Link>
   )
 }

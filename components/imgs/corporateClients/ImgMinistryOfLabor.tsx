@@ -2,7 +2,7 @@ import stls from '@/styles/components/imgs/corporateClients/ImgMinistryOfLabor.m
 import Image from 'next/image'
 import pic from '@/public/assets/imgs/corporateClients/ministryOfLabor.jpg'
 
-const ImgMinistryOfLabor = ({ name, width = 0, height = 0 }) => {
+const ImgMinistryOfLabor = ({ name, width = 0, height = 0 }: any) => {
   return (
     <div className={stls.container}>
       <Image
@@ -12,6 +12,7 @@ const ImgMinistryOfLabor = ({ name, width = 0, height = 0 }) => {
         width={width !== 0 && width}
         height={height !== 0 && height}
         placeholder='blur'
+        sizes={''}
       />
     </div>
   )

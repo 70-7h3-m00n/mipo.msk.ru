@@ -13,7 +13,7 @@ import { TypeCategory } from '@/types/index'
 
 type StudyFieldsType = {
   aside?: boolean
-  ofType?: TypeCategory
+  ofType?: TypeCategory | any
   close?: any
 }
 

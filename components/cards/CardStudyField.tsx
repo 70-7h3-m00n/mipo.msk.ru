@@ -27,13 +27,12 @@ const CardStudyField = ({ studyField = null, type }: TypeCardStudyField) => {
           : type === 'mba'
           ? routeMBA
           : routePrograms
-      }/${studyField.slug}`}>
-      <a className={stls.container}>
+      }/${studyField.slug}`}
+        className={stls.container}>
         <h4 className={stls.title}>{studyField.label}</h4>
         <div className={stls.arrowRight}>
           <IconArrowRight />{' '}
         </div>
-      </a>
     </Link>
   )
 }

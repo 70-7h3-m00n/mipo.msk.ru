@@ -1,6 +1,5 @@
 import stls from '@/styles/components/sections/all/WebinarsAlt.module.sass'
 import Wrapper from '@/components/layout/Wrapper'
-import classNames from 'classnames'
 import Popup from 'reactjs-popup'
 import { getImageHeight } from '@/helpers/index'
 import PopupTrigger from '@/components/general/PopupTrigger'
@@ -14,7 +13,7 @@ type WebinarsAltType = {
 
 const WebinarsAlt = ({ webinars = null }: WebinarsAltType) => {
 
-const webinarsASC = webinars.sort((a, b) => {
+const webinarsASC = webinars.sort((a: any, b: any) => {
   const dateA = new Date(a.date)
   const dateB = new Date(b.date)
   if (dateA > dateB) return -1
@@ -28,7 +27,7 @@ const webinarsASC = webinars.sort((a, b) => {
         <h1 className={stls.title}>Вебинары</h1>
         <ul className={stls.webinars}>
           {webinars &&
-            webinarsASC.map((webinar, idx) => (
+            webinarsASC.map((webinar: any, idx: any) => (
               <li key={`CardWebinarAlt-${idx}`} className={stls.webinar}>
                 <Popup
                   trigger={
@@ -54,19 +53,6 @@ const webinarsASC = webinars.sort((a, b) => {
                   }
                   modal
                   nested>
-                  {close => (
-                    <PopupCta
-                      title={'Смотреть все вебинары'}
-                      desc={
-                        <>
-                          Оставьте заявку, мы свяжемся с Вами в рабочие часы и
-                          предоставим полный список вебинаров
-                        </>
-                      }
-                      cta={'Оставить заявку'}
-                      close={close}
-                    />
-                  )}
                 </Popup>
               </li>
             ))}

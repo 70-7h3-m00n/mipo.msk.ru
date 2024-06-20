@@ -5,7 +5,7 @@ import Popup from 'reactjs-popup'
 import { IconDoc, IconMinus, IconPlus } from '@/components/icons'
 import { PopupImage } from '@/components/popups'
 
-const DiplomaExpandableItem = ({ title, diplomas, idx }) => {
+const DiplomaExpandableItem = ({ title, diplomas, idx }: any) => {
   const [isOpen, setOpen] = useState(idx === 0 ? true : false)
 
   return (
@@ -20,7 +20,7 @@ const DiplomaExpandableItem = ({ title, diplomas, idx }) => {
       <div className={stls.diplomas}>
         <ul className={stls.list}>
           {diplomas &&
-            diplomas.map((diploma, idx) => (
+            diplomas.map((diploma: any, idx: number) => (
               <li key={diploma.title + idx} className={stls.item}>
                 <Popup
                   trigger={
@@ -38,7 +38,6 @@ const DiplomaExpandableItem = ({ title, diplomas, idx }) => {
                   }
                   modal
                   nested>
-                  {close => <PopupImage image={diploma.image} close={close} />}
                 </Popup>
               </li>
             ))}

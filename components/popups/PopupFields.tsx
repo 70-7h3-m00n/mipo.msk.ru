@@ -2,7 +2,7 @@ import stls from '@/styles/components/popups/PopupFields.module.sass'
 import { BtnClose } from '@/components/btns'
 import ProgramsFilters from '@/components/layout/ProgramsFilters'
 
-const PopupFields = ({ ofType, close }) => {
+const PopupFields = ({ ofType, close }: any) => {
   return (
     <div className={stls.container}>
       <div className={stls.close}>

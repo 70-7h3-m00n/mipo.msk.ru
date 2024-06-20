@@ -10,69 +10,22 @@ import CardTeacher from '@/components/cards/CardTeacher'
 import { ImgTeacher } from '@/components/imgs'
 
 const Teachers = () => {
-  const { program } = useContext(ProgramContext)
-  const altStyles =
-    program?.category?.type === 'mba' ||
-    program?.category?.type === 'profession'
-
-  const list =
-    program?.teachers &&
-    program?.teachers?.map(teacher => {
-      teacher.image = (
-        <ImgTeacher
-          src={teacher?.portrait?.url}
-          alt={teacher?.name}
-          width={teacher?.portrait?.width && 160}
-          height={getImageHeight({
-            width: 160,
-            widthInitial: teacher?.portrait?.width,
-            heightInitial: teacher?.portrait?.height
-          })}
-        />
-      )
-      return teacher
-    })
-
-  const teachersSlides =
-    list &&
-    list.map((teacher, idx) => (
-      <CardTeacher
-        key={teacher?.name + idx}
-        portrait={teacher?.image}
-        name={teacher?.name}
-        specialization={teacher?.specialization}
-        achievements={teacher?.achievements}
-      />
-    ))
-
-  const mobileSwiperOptions = {
-    slidesNum: altStyles ? 1 : 1.75,
-    spaceBetween: 40
-  }
-
-  const tabletSwiperOptions = {
-    slidesNum: 2,
-    spaceBetween: altStyles ? 20 : 40
-  }
 
   return (
-    <section className={cn(stls.container, { [stls.altStyles]: altStyles })}>
+    <section className={cn(stls.container)}>
       <Wrapper>
-        <h2 className={cn(stls.title, { [stls.altStyles]: altStyles })}>
+        <h2 className={cn(stls.title)}>
           Преподаватели программы
         </h2>
-        <p className={cn(stls.desc, { [stls.altStyles]: altStyles })}>
+        <p className={cn(stls.desc)}>
           Преподают ведущие практикующие специалисты{' '}
-          <span className={cn(stls.highlight, { [stls.altStyles]: altStyles })}>
+          <span className={cn(stls.highlight)}>
             с опытом от 7 до 25 лет
           </span>
         </p>
-        <div className={cn(stls.teachers, { [stls.altStyles]: altStyles })}>
+        <div className={cn(stls.teachers)}>
           <SwiperContainer
             teachers
-            slides={teachersSlides}
-            mobileOptions={mobileSwiperOptions}
-            tabletOptions={tabletSwiperOptions}
             alwaysDisabledOnDesktop
             isMultiRow
           />

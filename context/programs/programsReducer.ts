@@ -6,7 +6,7 @@ import {
 } from '@/context/types'
 import { filterProgramsByType, getStudyFields } from '@/helpers/index'
 
-const programsReducer = (state, action) => {
+const programsReducer = (state: any, action: any) => {
   switch (action.type) {
     case SET_PROGRAMS:
       const programs = action.payload
@@ -52,7 +52,7 @@ const programsReducer = (state, action) => {
     case SET_SEARCH_TERM:
       const searchTerm = action.payload.term === '' ? null : action.payload.term
       const filteredPrograms = searchTerm
-        ? action.payload.programs.filter(item =>
+        ? action.payload.programs.filter((item: any) =>
             item.title.toLowerCase().includes(searchTerm.toLowerCase())
           )
         : []

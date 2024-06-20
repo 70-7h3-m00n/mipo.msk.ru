@@ -43,6 +43,7 @@ const ImgTemplate = ({
           blurDataURL={base64pixel}
           unoptimized={unoptimized}
           layout={layout}
+          sizes={''}
           {...(priority ? { priority } : undefined)}
         />
       )}

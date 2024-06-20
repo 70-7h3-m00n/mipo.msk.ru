@@ -2,7 +2,6 @@ import stls from '@/styles/components/sections/all/HeroProgram.module.sass'
 import { useContext } from 'react'
 import cn from 'classnames'
 import parse from 'html-react-parser'
-import marked from 'marked'
 import { selectors, colors } from '@/config/index'
 import { getImageHeight } from '@/helpers/index'
 import ProgramContext from '@/context/program/programContext'
@@ -21,33 +20,27 @@ import {
 import { ImgCourse } from '@/components/imgs'
 
 const HeroProgram = () => {
-  const { program } = useContext(ProgramContext)
-  const altStyles =
-    program?.category?.type === 'mba' ||
-    program?.category?.type === 'profession'
 
   const { curProgramsType } = useContext(ProgramsContext)
   return (
     <section
       className={cn(
         stls.container,
-        { [stls.altStyles]: altStyles },
         selectors.sectionHero
       )}>
       <Wrapper>
-        <div className={cn(stls.top, { [stls.altStyles]: altStyles })}>
-          <div className={cn(stls.heading, { [stls.altStyles]: altStyles })}>
+        <div className={cn(stls.top)}>
+          <div className={cn(stls.heading)}>
             <div className={stls.label}>
               <ProgramLabel />
             </div>
-            <h1 className={stls.title}>{program?.title}</h1>
             <div
               className={cn(stls.descriptionDesktop, {
-                [stls.altStyles]: altStyles
+
               })}>
-              {program?.description && parse(marked(program.description))}
+
             </div>
-            <div className={cn(stls.btnsDesktop, { [stls.altStyles]: altStyles })}>
+            <div className={cn(stls.btnsDesktop)}>
               <PopupTrigger
                 btn='alpha'
                 cta={
@@ -63,36 +56,17 @@ const HeroProgram = () => {
               <PopupTrigger btn='beta' cta='askQuestion' />
             </div>
           </div>
-          <div className={cn(stls.pic, { [stls.altStyles]: altStyles })}>
-            <div className={cn(stls.discount, { [stls.altStyles]: altStyles })}>
+          <div className={cn(stls.pic)}>
+            <div className={cn(stls.discount)}>
               <ProgramDiscount />
             </div>
-            {altStyles && (
-              <>
-                <IconGeneral3dSpiral classNames={[stls.IconGeneral3dSpiral]} />
-                <IconGeneralCircle classNames={[stls.IconGeneralCircle]} />
-                <IconGeneralWaterDrop
-                  classNames={[stls.IconGeneralWaterDrop]}
-                />
-              </>
-            )}
-            <div className={cn(stls.img, { [stls.altStyles]: altStyles })}>
-              <ImgCourse
-                src={program?.heroPicture?.url}
-                width={program?.heroPicture?.width && (altStyles ? 700 : 676)}
-                height={getImageHeight({
-                  width: altStyles ? 700 : 676,
-                  widthInitial: program?.heroPicture?.width,
-                  heightInitial: program?.heroPicture?.height
-                })}
-              />
+
+            <div className={cn(stls.img)}>
+
             </div>
           </div>
           <div
-            className={cn(stls.descriptionMobile, {
-              [stls.altStyles]: altStyles
-            })}>
-            {program?.description && parse(program.description)}
+            className={cn(stls.descriptionMobile)}>
           </div>
         </div>
         <div className={stls.btnsMobile}>

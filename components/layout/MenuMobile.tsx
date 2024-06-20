@@ -20,10 +20,6 @@ import ProgramContext from '@/context/program/programContext'
 const MenuMobile = () => {
   const { menuIsOpen, openMenu, closeMenu, toggleMenu } =
     useContext(MenuContext)
-  const { program } = useContext(ProgramContext)
-  const altStyles =
-    program?.category?.type === 'mba' ||
-    program?.category?.type === 'profession'
 
   const links = [
     { text: 'Направления обучения', href: routePrograms, withIcon: true },
@@ -42,7 +38,6 @@ const MenuMobile = () => {
       className={classNames({
         [stls.container]: true,
         [stls.menuIsOpen]: menuIsOpen,
-        [stls.altStyles]: altStyles
       })}>
       <Wrapper>
         <div className={stls.row}>

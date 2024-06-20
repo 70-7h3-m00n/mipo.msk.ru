@@ -19,28 +19,28 @@ import SignUpProgram from '@/components/sections/new-course/SignUpProgram'
 import fetchCourse from '../../api/fetchCourse'
 
 interface Props {
-    course: Awaited<ReturnType<typeof fetchCourse>>
+    courses: Awaited<ReturnType<typeof fetchCourse>>
 }
 
-const PagesNewProgram = ({course}: Props) => {
+const PagesNewProgram = ({courses}: Props) => {
   return (
     <div className={styles.wrapper}>
-      <HeroNewProgram data={course} />
+      <HeroNewProgram data={courses} />
       <CardDiscount />
-      <DescriptionProgram data={course} />
-      <VacanciesProfession data={course} />
-      <WhoIsProgram data={course} />
+      <DescriptionProgram data={courses} />
+      <VacanciesProfession data={courses} />
+      <WhoIsProgram data={courses} />
       <WeTookCare />
-      <Study data={course} />
+      <Study data={courses} />
       <ScrollProfession />
       <SectionYourDiplomasAlt />
       <TrainingWorks />
-      <TrainingProgram data={course} />
-      <ProgramTeachers data={course} />
-      <YourResume data={course} />
-      <TrainEmployees data={course} />
+      <TrainingProgram data={courses} />
+      <ProgramTeachers data={courses} />
+      <YourResume data={courses} />
+      <TrainEmployees data={courses} />
       <CurrentContent />
-      <SignUpProgram data={course} />
+      <SignUpProgram data={courses} />
       <FaqNew />
     </div>
   )

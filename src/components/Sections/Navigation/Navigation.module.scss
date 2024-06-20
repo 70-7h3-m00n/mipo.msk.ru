@@ -1,0 +1,196 @@
+@import "src/styles/extends";
+
+.text {
+  color: #000;
+  text-transform: uppercase;
+  @extend %smallText;
+}
+
+.mobileBlock {
+  display: none;
+
+  @media (max-width: 769px) {
+    display: block;
+  }
+}
+
+.inputSearchWrapper {
+  position: absolute;
+  top: -10px;
+}
+
+.section {
+  margin-top: 100px;
+
+  @media (max-width: 979px) {
+    margin-top: 80px;
+  }
+  @media (max-width: 769px) {
+    margin-top: 60px;
+  }
+
+  .headerWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    @media (max-width: 979px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .header {
+      margin: 0;
+      color: #000;
+      @extend %generalHeader;
+
+      @media (max-width: 1600px) {
+        font-size: 42px;
+      }
+
+      @media (max-width: 769px) {
+        font-size: 30px;
+      }
+
+      @media (max-width: 549px) {
+        font-size: 26px;
+      }
+    }
+
+    .searchWrapper {
+      width: 515px;
+      display: flex;
+      gap: 10px;
+      border-radius: 12px;
+      background: #FFF;
+      padding: 15px;
+      margin-top: 40px;
+
+      @media (max-width: 979px) {
+        width: 100%;
+      }
+      @media (max-width: 769px) {
+        display: none;
+      }
+
+      .search {
+        color: #000;
+        opacity: 0.5;
+        padding: 0;
+        margin: 0;
+        border: 0;
+        text-transform: uppercase;
+        @extend %text;
+      }
+    }
+  }
+
+  .wrapperBtnPrograms {
+    @extend %marginBlock;
+
+    .listBtnProgram {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+
+      @media (max-width: 769px) {
+        display: none;
+      }
+    }
+
+    .listBtnTypeProgram {
+      position: relative;
+      margin-top: 40px;
+
+      @media (max-width: 769px) {
+        margin-top: 20px;
+      }
+      .wrapperBtn {
+        display: flex;
+        justify-content: space-between;
+
+        .programBtn {
+          .desktopWrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 5px;
+            border-radius: 8px;
+            background: #FFF;
+            padding: 10px;
+
+            @media (max-width: 769px) {
+              display: none;
+            }
+          }
+        }
+      }
+
+
+      .filterTypeProgram {
+        position: absolute;
+        z-index: 100;
+        width: 333px;
+        border-radius: 8px;
+        background: #FFF;
+        padding: 10px;
+        margin-top: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        .typeProgram {
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          gap: 5px;
+
+          .checkbox {
+            width: 20px;
+            height: 20px;
+            border-radius: 8px;
+
+            &:checked {
+
+            }
+          }
+        }
+
+        @media (max-width: 769px) {
+          width: 100%;
+        }
+      }
+    }
+
+    @media (max-width: 769px) {
+      margin-top: 30px;
+    }
+  }
+
+  .wrapperProgram {
+    .wrapperProgramCourse {
+      .headerProgram {
+        margin-top: 100px;
+
+        @media (max-width: 1810px) {
+          margin-top: 80px;
+        }
+      }
+
+      .listCourseItem {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 20px;
+        @extend %marginBlock;
+
+        @media (max-width: 1290px) {
+          grid-template-columns: 1fr 1fr;
+        }
+        @media (max-width: 769px) {
+          grid-template-columns: 1fr;
+        }
+      }
+    }
+  }
+}

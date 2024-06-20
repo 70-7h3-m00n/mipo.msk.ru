@@ -14,7 +14,7 @@ const draw = {
   hidden: {
     pathLength: 1,
   },
-  visible: (time) => {
+  visible: (time: any) => {
     return {
       pathLength: 0,
       transition: {

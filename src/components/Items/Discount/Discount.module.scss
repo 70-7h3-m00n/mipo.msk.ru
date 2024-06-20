@@ -1,0 +1,100 @@
+@import "src/styles/extends";
+
+.wrapperDiscount {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 12px;
+  background: #F4F4F4;
+  padding: 15px 30px;
+  @extend %marginBlock;
+
+  @media (max-width: 1600px) {
+    padding: 15px;
+  }
+
+  @media (max-width: 1290px) {
+    padding: 15px;
+  }
+
+  .wrapperPrice {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    .text {
+      color: #000;
+      font-size: 14px;
+      font-style: normal;
+
+      @media (max-width: 1290px) {
+        font-size: 12px;
+      }
+    }
+
+    .textPrice {
+      color: #3F3BFF;
+      font-family: Unbounded;
+      font-size: 48px;
+      font-style: normal;
+      font-weight: 600;
+
+      @media (max-width: 1600px) {
+        font-size: 34px;
+      }
+
+      sup {
+        color: #000;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 300;
+        top: -1.5em;
+        text-transform: lowercase;
+
+        @media (max-width: 1290px) {
+          font-size: 12px;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+
+  .wrapperIconDiscount {
+    position: relative;
+    z-index: 1;
+    width: 52px;
+    height: 53px;
+
+    @media (max-width: 1290px) {
+      width: 42px;
+      height: 43px;
+    }
+
+    .textIconDiscount {
+      position: absolute;
+      top: 20px;
+      right: 10px;
+      z-index: 10;
+      color: #FFF;
+      font-family: Manrope;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+
+      @media (max-width: 1290px) {
+        font-size: 12px;
+        top: 15px;
+        right: 7px;
+      }
+    }
+
+    svg {
+      width: 52px;
+      height: 53px;
+
+      @media (max-width: 1290px) {
+        width: 42px;
+        height: 43px;
+      }
+    }
+  }
+}

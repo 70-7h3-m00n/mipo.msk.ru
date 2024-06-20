@@ -5,7 +5,7 @@ import classNames from 'classnames'
 import fetchCourse from '../../../api/fetchCourse'
 
 interface Props {
-  data: Awaited<ReturnType<typeof fetchCourse>>
+  data: Awaited<ReturnType<typeof fetchCourse>> | any
 }
 const VacanciesProfession = ({data}: Props) => {
   return (
@@ -15,7 +15,7 @@ const VacanciesProfession = ({data}: Props) => {
           <div className={styles.topContent}>
             <div className={styles.wrapperCardVacancies}>
               {
-                data.vacanciesProfession.listVacancies.map((item, i) => (
+                data.vacanciesProfession.listVacancies.map((item: any, i: any) => (
                   <div className={styles.cardVacancies} key={i}>
                     <h3>{item.header}</h3>
 
@@ -39,7 +39,7 @@ const VacanciesProfession = ({data}: Props) => {
 
         <div className={styles.wrapperCardSalary}>
           {
-            data.vacanciesProfession.listSalary.map((item, i) => (
+            data.vacanciesProfession.listSalary.map((item: any, i: number) => (
               <div className={styles.cardSalary} key={i}>
                 <h3>{item.header}</h3>
 

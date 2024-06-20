@@ -12,7 +12,7 @@ type TrainingInfo = {
 
 type AvailableData = 'trainingPeriod' | 'formOfStudy' | 'nextEnrollment' | 'numberHours' | 'certificateCompletion';
 
-type DataListTraining = Record<AvailableData, TrainingInfo>;
+type DataListTraining = Record<AvailableData, TrainingInfo> | any
 
 const dataListTrainingInfo: DataListTraining = {
   trainingPeriod: {

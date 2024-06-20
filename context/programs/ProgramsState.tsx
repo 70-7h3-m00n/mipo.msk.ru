@@ -9,7 +9,7 @@ import {
 } from '@/context/types'
 import { filterProgramsByType, getStudyFields } from '@/helpers/index'
 
-const ProgramsState = props => {
+const ProgramsState = (props: any) => {
   const initialProgramsState =
     props?.pageProps?.programs && props?.pageProps?.programs?.length
       ? props?.pageProps?.programs

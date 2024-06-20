@@ -1,7 +1,7 @@
 import stls from '@/styles/components/layout/PageTitle.module.sass'
 import Wrapper from '@/components/layout/Wrapper'
 
-const PageTitle = ({ children }) => {
+const PageTitle = ({ children }: any) => {
   return (
     <div className={stls.container}>
       <Wrapper>

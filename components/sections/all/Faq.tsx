@@ -7,10 +7,6 @@ import FaqAnswer from '@/components/general/FaqAnswer'
 import PopupTrigger from '@/components/general/PopupTrigger'
 
 const Faq = () => {
-  const { program } = useContext(ProgramContext)
-  const altStyles =
-    program?.category?.type === 'mba' ||
-    program?.category?.type === 'profession'
 
   // const topics = getListItemsInnerHtml(questions)
   // const titles = getParagraphInnerHtml(questions)
@@ -24,16 +20,16 @@ const Faq = () => {
   //   }))
 
   return (
-    <section className={cn(stls.container, { [stls.altStyles]: altStyles })}>
+    <section className={cn(stls.container)}>
       <Wrapper>
         <div className={stls.heading}>
           {' '}
-          <h2 className={cn(stls.title, { [stls.altStyles]: altStyles })}>
+          <h2 className={cn(stls.title)}>
             Часто задаваемые вопросы
           </h2>
           <div
-            className={cn(stls.laptopdesktop, { [stls.altStyles]: altStyles })}>
-            <p className={cn(stls.p, { [stls.altStyles]: altStyles })}>
+            className={cn(stls.laptopdesktop)}>
+            <p className={cn(stls.p)}>
               У Вас есть вопросы? Оставьте заявку! <br />И мы перезвоним Вам!
             </p>
             <PopupTrigger btn='zeta' cta='askQuestion' />
@@ -42,23 +38,16 @@ const Faq = () => {
 
         <div className={stls.content}>
           <ul className={stls.list}>
-            {program?.questions &&
-              program.questions.map(({ question, answer }, idx) => (
-                <FaqAnswer
-                  key={question + idx}
-                  question={question}
-                  answer={answer}
-                />
-              ))}
+
           </ul>
           <div
-            className={cn(stls.phonetablet, { [stls.altStyles]: altStyles })}>
+            className={cn(stls.phonetablet)}>
             <p className={stls.p}>
               У Вас есть вопросы? Оставьте заявку! И мы перезвоним Вам!
             </p>
           </div>
         </div>
-        <div className={cn(stls.phonetablet, { [stls.altStyles]: altStyles })}>
+        <div className={cn(stls.phonetablet)}>
           <PopupTrigger btn='zeta' cta='askQuestion' />
         </div>
       </Wrapper>

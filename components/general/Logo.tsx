@@ -14,8 +14,7 @@ const Logo = ({ atHeader = false, withTitle = true }) => {
 
   return (
     <div className={stls.container}>
-      <Link href={routeHome}>
-        <a
+      <Link href={routeHome}
           className={classNames({
             [stls.logo]: true,
             [stls.atHeader]: atHeader
@@ -25,7 +24,7 @@ const Logo = ({ atHeader = false, withTitle = true }) => {
             <IconGeneralLogo classNames={[stls.icon]} color={colors.nu} />
               :
             <div className={stls.newIcon}>
-              <Image src={newLogoUrl} width={50} height={75} />
+              {/*<Image src={newLogoUrl} width={50} height={75} />*/}
             </div>
           }
 
@@ -38,7 +37,6 @@ const Logo = ({ atHeader = false, withTitle = true }) => {
               Образования
             </p>
           )}
-        </a>
       </Link>
     </div>
   )

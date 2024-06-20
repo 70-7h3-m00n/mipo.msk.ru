@@ -9,8 +9,8 @@ import {
 import ProgramContext from '@/context/program/programContext'
 
 const ProgramAdmission = () => {
-  const { program } = useContext(ProgramContext)
-  const closestAdmission = program?.timenprice?.[0]?.closestAdmission
+  const { program } = useContext<any>(ProgramContext)
+  const closestAdmission: any = program?.timenprice?.[0]?.closestAdmission
   const closestAdmissionDate = turnStringToDate(closestAdmission)
 
   const ruMonths = getRuMonths()

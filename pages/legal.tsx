@@ -14,7 +14,7 @@ import {
   LegalInfo
 } from '@/components/sections'
 
-const LegalPage = ({ programs }) => {
+const LegalPage = ({ programs }: any) => {
   usePageHandleContext({ programs })
 
   return (

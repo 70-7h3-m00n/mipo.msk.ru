@@ -7,19 +7,19 @@ import fetchPathsCourses from '../../api/fetchCourses'
 import { useRouter } from 'next/router'
 
 type ProgramsFiltersType = {
-  ofType?: TypeCategory
+  ofType?: TypeCategory | any
   close?: any
 }
 
 const ProgramsFilters = ({ ofType = null, close }: ProgramsFiltersType) => {
-  const [course, setCourse] = useState([])
+  const [course, setCourse] = useState<any>([])
 
   const route = useRouter()
 
   useEffect(() => {
     const data= async () => {
       const courseResponse = await fetchPathsCourses()
-      const result = courseResponse.map(item => item.attributes)
+      const result = courseResponse.map((item: any) => item.attributes)
       setCourse([...result])
     }
 
@@ -42,7 +42,7 @@ const ProgramsFilters = ({ ofType = null, close }: ProgramsFiltersType) => {
 
         <div>
         {
-            course.map((item, index) => (
+            course.map((item: any, index: number) => (
               <div key={item}
                    onClick={() => route.push(`new-courses/${item.slug}`)}
                    style={{

@@ -3,7 +3,7 @@ import ProgramContext from '@/context/program/programContext'
 import programReducer from '@/context/program/programReducer'
 import { SET_PROGRAM } from '@/context/types'
 
-const ProgramState = props => {
+const ProgramState = (props: any) => {
   const initialState = {
     program: props?.pageProps?.program || {}
   }

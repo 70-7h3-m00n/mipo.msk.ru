@@ -8,16 +8,7 @@ const ProgramModules = () => {
 
   return (
     <ul className={stls.container}>
-      {program?.shortContents &&
-        program?.shortContents
-          .filter((item, idx) => idx < 5)
-          .map((shortContent, idx) => (
-            <ProgramModule
-              key={shortContent?.title + idx}
-              title={shortContent?.title}
-              ShortContentsDescs={shortContent?.ShortContentsDescs}
-            />
-          ))}
+
     </ul>
   )
 }

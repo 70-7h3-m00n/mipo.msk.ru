@@ -1,16 +1,10 @@
 import stls from '@/styles/components/sections/all/SectionStudyFields.module.sass'
 import { TypeCategory } from '@/types/index'
 import Wrapper from '@/components/layout/Wrapper'
-import {
-  ProgramsProfessions,
-  ProgramsCourses,
-  ProgramsMbas
-} from '@/components/programs'
 import ProgramsContext from '@/context/programs/programsContext'
 import { useContext, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import classNames from 'classnames'
-import { filterProgramsByStudyField } from '@/helpers/index'
 import {
   routeCourses,
   routeMBA,
@@ -93,13 +87,11 @@ const SectionStudyFields = ({
                     <ProgramsQty qty={item.studyFields.length} studyFields />
                   </div>
                   <ul className={stls.studyFields}>
-                    {item.studyFields
+                    {
+                      item.studyFields
                       .filter((field, idx) => idx < 8)
                       .map((studyField, idx) => (
-                        <li
-                          key={`${
-                            studyField.label || 'studyFieldsItem'
-                          }-${idx}`}
+                        <li key={idx}
                           className={stls.studyField}>
                           <CardStudyField
                             type={item.type}
@@ -108,22 +100,6 @@ const SectionStudyFields = ({
                         </li>
                       ))}
                   </ul>
-                  {withBtn && (
-                    <div className={stls.btn}>
-                      <BtnDelta
-                        text={`Смотреть все направления`}
-                        href={
-                          item.type === 'course'
-                            ? routeCourses
-                            : item.type === 'profession'
-                            ? routeProfessions
-                            : item.type === 'mba'
-                            ? routeMBA
-                            : routePrograms
-                        }
-                      />
-                    </div>
-                  )}
                 </li>
               ))}
           </ul>

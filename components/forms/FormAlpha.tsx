@@ -46,22 +46,18 @@ const FormAlpha = ({
   const [clickid, setClickid] = useState(() => uuidv4())
   const [leadIsSentTimeout, setLeadIsSentTimeout] = useState(false)
 
-  const { program } = useContext(ProgramContext)
-  const altStyles =
-    program?.category?.type === 'mba' ||
-    program?.category?.type === 'profession'
 
   useEffect(() => {
     popup && setFocus('name')
-    setUserUuid(JSON.parse(sessionStorage.getItem('user_uuid')))
+    setUserUuid(JSON.parse(sessionStorage.getItem('user_uuid')!))
   }, [setFocus, popup])
 
   const router = useRouter()
 
-  const onSubmit = async data => {
+  const onSubmit = async (data: any) => {
     setIsDisabled(true)
     setThanksIsOpen(true)
-    // handle loader
+
     data.leadPage = router.asPath
     const utms = UTM_KEYS.reduce(
       (acc, cur) => ({ ...acc, [cur]: getCookie(cur) }),
@@ -69,10 +65,10 @@ const FormAlpha = ({
     )
 
     data.utms = utms
-    const referer = JSON.parse(sessionStorage.getItem('referer'))
+    const referer = JSON.parse(sessionStorage.getItem('referer')!)
     data.referer = referer
-    const ymUid = JSON.parse(localStorage.getItem('_ym_uid'))
-    const userUuid = JSON.parse(sessionStorage.getItem('user_uuid'))
+    const ymUid = JSON.parse(localStorage.getItem('_ym_uid')!)
+    const userUuid = JSON.parse(sessionStorage.getItem('user_uuid')!)
 
     if (leadIsSentTimeout) return
 
@@ -103,15 +99,12 @@ const FormAlpha = ({
         onClose={() => setThanksIsOpen(false)}>
         <PopupThankyou
           close={() => setThanksIsOpen(false)}
-          id={id}
-          clickid={clickid}
         />
       </Popup>
       <form
         method='post'
         className={classNames(stls.container, {
           [stls.atFooter]: atFooter,
-          [stls.altStyles]: altStyles
         })}
         onSubmit={handleSubmit(data => onSubmit(data))}>
         <div className={stls.group}>

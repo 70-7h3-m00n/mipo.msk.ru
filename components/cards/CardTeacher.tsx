@@ -3,30 +3,24 @@ import { useContext } from 'react'
 import cn from 'classnames'
 import ProgramContext from '@/context/program/programContext'
 
-const CardTeacher = ({ portrait, name, specialization, achievements }) => {
-  const { program } = useContext(ProgramContext)
-  const altStyles =
-    program?.category?.type === 'mba' ||
-    program?.category?.type === 'profession'
+const CardTeacher = ({ portrait, name, specialization, achievements }: any) => {
 
   return (
-    <article className={cn(stls.container, { [stls.altStyles]: altStyles })}>
-      <div className={cn(stls.cardBody, { [stls.altStyles]: altStyles })}>
-        <div className={cn(stls.portrait, { [stls.altStyles]: altStyles })}>
+    <article className={cn(stls.container)}>
+      <div className={cn(stls.cardBody)}>
+        <div className={cn(stls.portrait)}>
           {portrait}
         </div>
         <div className={stls.content}>
-          <h3 className={cn(stls.name, { [stls.altStyles]: altStyles })}>
+          <h3 className={cn(stls.name)}>
             {name}
           </h3>
           <p
-            className={cn(stls.specialization, {
-              [stls.altStyles]: altStyles
-            })}>
+            className={cn(stls.specialization)}>
             {specialization}
             {/* Семейная психолохия и частная практика */}
           </p>
-          <p className={cn(stls.achievements, { [stls.altStyles]: altStyles })}>
+          <p className={cn(stls.achievements)}>
             {achievements}
           </p>
         </div>

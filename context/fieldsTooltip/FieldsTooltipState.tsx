@@ -7,7 +7,7 @@ import {
   TOGGLE_FIELDS_TOOLTIP
 } from '@/context/types'
 
-const FieldsTooltipState = props => {
+const FieldsTooltipState = (props: any) => {
   const initialState = {
     fieldsTooltipIsOpen: false
   }

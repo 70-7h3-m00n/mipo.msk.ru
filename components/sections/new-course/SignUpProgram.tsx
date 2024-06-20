@@ -23,11 +23,11 @@ const list = [
 ]
 
 interface Props {
-  data: Awaited<ReturnType<typeof fetchCourse>>
+  data: Awaited<ReturnType<typeof fetchCourse>> | any
 }
 
 const SignUpProgram = ({data}:Props) => {
-  const variant = data.trainingProgram.map((item) =>item.pro).includes(true)
+  const variant = data.trainingProgram.map((item: any) =>item.pro).includes(true)
 
   return (
     <section className={styles.signUpProgram}>

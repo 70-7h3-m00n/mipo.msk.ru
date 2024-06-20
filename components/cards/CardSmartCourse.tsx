@@ -3,7 +3,7 @@ import WrapperPrice from '@/components/cards/WrapperPrice'
 import fetchCourse from '../../api/fetchCourse'
 
 interface Props {
-  data: Awaited<ReturnType<typeof fetchCourse>>
+  data: Awaited<ReturnType<typeof fetchCourse>> | any
 }
 
 const CardSmartCourse = ({data}:Props) => {

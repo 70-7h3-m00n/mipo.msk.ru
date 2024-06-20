@@ -1,0 +1,47 @@
+@import "src/styles/extends";
+
+.block {
+  width: 586px;
+  border-radius: 12px;
+  background-color: white;
+  color: black;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  @extend %titleText;
+
+  svg {
+    fill: black;
+  }
+
+  &:hover {
+    background-color: #3F3BFF;
+    color: #FFF;
+
+    svg {
+      fill: white;
+    }
+  }
+
+  @media (max-width: 1810px) {
+    width: calc((100% / 3) - 20px);
+  }
+
+  @media (max-width: 1290px) {
+    width: calc((100% / 2) - 20px);
+  }
+
+  @media (max-width: 769px) {
+    width: 100%;
+    padding: 15px 10px;
+  }
+}
+
+.wrapperSvg {
+  svg {
+    width: 11.588px;
+    height: 20px;
+  }
+}

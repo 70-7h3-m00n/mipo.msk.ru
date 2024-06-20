@@ -9,7 +9,7 @@ import PopupTrigger from '@/components/general/PopupTrigger'
 
 const Hero = () => {
   let hiddenGemCount = 0
-  const hiddenGem = e => {
+  const hiddenGem = (e: any) => {
     if (hiddenGemCount < 7) {
       hiddenGemCount++
     } else {

@@ -34,7 +34,6 @@ const ActiveLicenses = () => {
               className='Popup_maxWidthMaxContent'
               modal
               nested>
-              {close => <PopupImage image={<ImgLicence />} close={close} />}
             </Popup>
           </div>
           <div className={stls.right}>

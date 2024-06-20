@@ -21,16 +21,6 @@ import { BtnZeta } from '@/components/btns'
 type TSectionYourDiplomasAlt = TPropClassNames
 
 const SectionYourDiplomasAlt = ({ classNames }: TSectionYourDiplomasAlt) => {
-  const { program } = useContext(ProgramContext)
-  const altStyles =
-    program?.category?.type === 'mba' ||
-    program?.category?.type === 'profession'
-
-  const atMba = program?.category?.type === 'mba'
-
-  const imgDiploma = atMba ? <ImgDiplomaInternationalMba /> : <ImgCertificate />
-  const imgSupplement = atMba ? <ImgSupplement /> : <ImgDiplomaInternational />
-
   return (
     <section
       className={
@@ -52,7 +42,7 @@ const SectionYourDiplomasAlt = ({ classNames }: TSectionYourDiplomasAlt) => {
                 href={routesExternal.licence}
                 target='_blank'
                 classNames={[
-                  cn(stls.licenceLink, { [stls.altStyles]: altStyles })
+
                 ]}>
                 <span>
                   Уведомление о предоставлении лицензии{' '}
@@ -68,16 +58,10 @@ const SectionYourDiplomasAlt = ({ classNames }: TSectionYourDiplomasAlt) => {
         <div className={stls.diplomas}>
           <div className={stls.left}>
             <Popup
-              trigger={
-                <a href='#!' className={stls.diploma}>
-                  {imgDiploma}
-                </a>
-              }
               modal
               lockScroll
               nested
               closeOnDocumentClick>
-              {close => <PopupImage image={imgDiploma} close={close} />}
             </Popup>
             <Popup
               trigger={
@@ -89,23 +73,14 @@ const SectionYourDiplomasAlt = ({ classNames }: TSectionYourDiplomasAlt) => {
               lockScroll
               nested
               closeOnDocumentClick>
-              {close => (
-                <PopupImage image={<ImgDiplomaTemplate />} close={close} />
-              )}
             </Popup>
           </div>
           <div className={stls.right}>
             <Popup
-              trigger={
-                <a href='#!' className={cn(stls.diploma, stls.mb0)}>
-                  {imgSupplement}
-                </a>
-              }
               modal
               lockScroll
               nested
               closeOnDocumentClick>
-              {close => <PopupImage image={imgSupplement} close={close} />}
             </Popup>
           </div>
         </div>

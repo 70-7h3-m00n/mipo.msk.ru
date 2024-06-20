@@ -11,41 +11,13 @@ type TypeProgramDiscount = {
 }
 
 const ProgramDiscount = ({
-  small = null,
-  textOnly = null
-}: TypeProgramDiscount) => {
-  const { program } = useContext(ProgramContext)
-  const altStyles =
-    program?.category?.type === 'mba' ||
-    program?.category?.type === 'profession'
 
-  const elDiscount = program?.timenprice && (
-    <>
-      {program?.timenprice?.[0]?.discount
-        ? `-${program.timenprice[0].discount}%`
-        : discountNum}
-    </>
-  )
+}: TypeProgramDiscount) => {
+
 
   return (
     <>
-      {textOnly ? (
-        elDiscount
-      ) : (
-        <div
-          className={cn({
-            [stls.container]: true,
-            [stls.small]: small,
-            [stls.altStyles]: altStyles
-          })}>
-          <p className={cn(stls.discount, { [stls.altStyles]: altStyles })}>
-            {elDiscount}
-          </p>
-          <p className={cn(stls.until, { [stls.altStyles]: altStyles })}>
-            <ProgramDiscountUntil />
-          </p>
-        </div>
-      )}
+
     </>
   )
 }

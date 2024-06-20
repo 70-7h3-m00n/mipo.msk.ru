@@ -2,7 +2,7 @@ import { createContext } from 'react'
 
 const programContext = createContext({
   program: null,
-  setProgram: program => {}
+  setProgram: (program: any) => {}
 })
 
 export default programContext

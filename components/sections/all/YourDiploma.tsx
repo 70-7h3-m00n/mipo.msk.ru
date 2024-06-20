@@ -6,7 +6,7 @@ import PopupTrigger from '@/components/general/PopupTrigger'
 import { TypeCategory } from '@/types/index'
 
 type YourDiplomaType = {
-  ofType: TypeCategory
+  ofType: TypeCategory | any
 }
 
 const YourDiploma = ({ ofType = null }: YourDiplomaType) => {
@@ -48,7 +48,6 @@ const YourDiploma = ({ ofType = null }: YourDiplomaType) => {
           <div className={stls.swiper}>
             <SwiperContainer
               diplomas
-              slides={slides}
               mobileOptions={mobileSwiperOptions}
               tabletOptions={tabletSwiperOptions}
               laptopOptions={laptopSwiperOptions}

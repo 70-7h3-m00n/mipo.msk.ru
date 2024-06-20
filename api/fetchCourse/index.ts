@@ -1,7 +1,7 @@
 import qs from 'qs'
 import fetcherGet from '@/helpers/fetcherGet'
-import { ICourseData } from './types'
 import routesBack from '@/config/routesBack'
+import { ICourseData } from './types'
 
 export const fetchCourse = async (slug: string) => {
   const query = qs.stringify({
@@ -118,9 +118,10 @@ export const fetchCourse = async (slug: string) => {
       }
     }
   })
-  const res = await fetcherGet<any>(`${routesBack.newRoot}${'/api/courses'}?${query}`)
 
-  return res?.data[0]?.attributes || null
+  const res = await fetcherGet<ICourseData>(`${routesBack.newRoot}${'/api/courses'}?${query}`)
+
+  return res?.data[0] || null
 }
 
 export default fetchCourse

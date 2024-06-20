@@ -14,10 +14,10 @@ const programsContext = createContext({
   curProgramsStudyFieldSlug: null,
   searchTerm: null,
   filteredPrograms: [],
-  setSearchTerm: (programs, term) => {},
-  setPrograms: programs => {},
-  setCurProgramsType: programType => {},
-  setCurProgramsStudyFieldSlug: slug => {}
+  setSearchTerm: (programs: any, term: any) => {},
+  setPrograms: (programs: any) => {},
+  setCurProgramsType: (programType: any) => {},
+  setCurProgramsStudyFieldSlug: (slug: any) => {}
 })
 
 export default programsContext

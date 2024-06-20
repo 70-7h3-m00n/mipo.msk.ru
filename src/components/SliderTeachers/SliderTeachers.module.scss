@@ -1,0 +1,37 @@
+@import "src/styles/extends";
+
+.header {
+  @media (max-width: 979px) {
+    width: 80%;
+  }
+  @media (max-width: 769px) {
+    width: 100%;
+  }
+}
+
+.wrapperSlider {
+  position: relative;
+  @extend %marginBlock;
+
+  .sliderBtn {
+    position: absolute;
+    top: -108px;
+    right: 0;
+
+    @media (max-width: 1810px) {
+      top: -103px;
+    }
+
+    @media (max-width: 1600px) {
+      top: -100px;
+    }
+
+    @media (max-width: 979px) {
+      top: -125px;
+    }
+
+    @media (max-width: 769px) {
+      display: none;
+    }
+  }
+}

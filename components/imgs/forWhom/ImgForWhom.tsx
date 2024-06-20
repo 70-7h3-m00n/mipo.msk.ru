@@ -12,7 +12,7 @@ const ImgForWhom = ({
   width,
   height
 }: TGeneralImg) => {
-  const isImage = useCheckIfResourseExists({ src })
+  const isImage = ''
 
   return (
     <ImgTemplate

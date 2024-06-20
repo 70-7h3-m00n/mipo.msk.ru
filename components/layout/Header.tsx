@@ -28,11 +28,6 @@ const Header = () => {
   const { menuIsOpen, openMenu, closeMenu, toggleMenu } =
     useContext(MenuContext)
 
-  const { program } = useContext(ProgramContext)
-  const altStyles =
-    program?.category?.type === 'mba' ||
-    program?.category?.type === 'profession'
-
   useEffect(() => {
     handleSwipedEvt({ menuIsOpen, closeMenu })
   }, [menuIsOpen, closeMenu])
@@ -55,13 +50,13 @@ const Header = () => {
   const redirectHeader = router.asPath.includes('new-courses')
 
   return (
-      <header className={cn( !redirectHeader? stls.container: stls.contentNewCourse, { [stls.altStyles]: altStyles })}>
+      <header className={cn( !redirectHeader? stls.container: stls.contentNewCourse)}>
         <MenuMobile />
 
         {
           !redirectHeader ?
             <Wrapper>
-              <div className={cn(stls.top, { [stls.altStyles]: altStyles })}>
+              <div className={cn(stls.top)}>
                 <div className={stls.topleft}>
                   <Link href={routeLegal}>
                     <a className={stls.linkInfo}>

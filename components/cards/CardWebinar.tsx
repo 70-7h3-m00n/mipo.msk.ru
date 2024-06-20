@@ -3,7 +3,7 @@ import truncate from 'truncate'
 import classNames from 'classnames'
 import { BtnText } from '@/components/btns'
 
-const CardWebinar = ({ webinarData }) => {
+const CardWebinar = ({ webinarData }: any) => {
   const {
     date: { day, month, time, weekday },
     name,

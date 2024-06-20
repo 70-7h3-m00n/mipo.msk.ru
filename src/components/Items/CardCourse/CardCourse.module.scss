@@ -1,0 +1,137 @@
+@import "src/styles/extends";
+
+.card {
+  border-radius: 12px;
+  overflow: hidden;
+
+  .headerWrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+
+    .header {
+      position: relative;
+      width: calc((100% - 75px) - 10px);
+      background: #FFF;
+      border-radius: 12px 12px 0 0;
+      padding: 30px 30px 0 30px;
+      margin: 0;
+      color: #000;
+      @extend %titleText;
+
+      &:before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        bottom: -11px;
+        right: -11px;
+        width: 20px;
+        height: 20px;
+        border-radius: 0 100% 0 0 ;
+        background: white;
+      }
+
+      @media (max-width: 733px) {
+        width: calc((100% - 55px) - 10px);
+      }
+      @media (max-width: 549px) {
+        padding: 30px 10px 0 10px;
+      }
+    }
+
+    .iconHeader {
+      border-radius: 12px;
+      overflow: hidden;
+      width: 75px;
+      height: 75px;
+      object-fit: contain;
+      object-position: top;
+      margin-bottom: 10px;
+
+      @media (max-width: 733px) {
+        width: 55px;
+        height: 55px;
+      }
+    }
+  }
+
+  .wrapperContent {
+    background-color: white;
+    border-radius: 0 12px 12px 12px;
+    padding: 30px;
+    height: 100%;
+
+    @media (max-width: 549px) {
+      padding: 10px 10px 30px 10px;
+    }
+
+    .wrapperSpecifications {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px 0;
+
+      .specifications {
+        width: 42%;
+        display: flex;
+        gap: 7px;
+
+        @media (max-width: 1290px) {
+          width: 50%;
+        }
+
+        .specificationsText {
+          color: #000;
+          opacity: 0.5;
+          font-weight: 500;
+          @extend %smallText;
+        }
+
+        svg {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+
+    .wrapperBtn {
+      margin-top: 40px;
+      display: flex;
+      gap: 20px;
+
+      @media (max-width: 1600px) {
+        flex-direction: column;
+        margin-top: 30px;
+
+        .btnSignUp {
+          width: 100%;
+        }
+      }
+
+      .btnSignUp {
+        display: flex;
+        flex: 2;
+        padding: 15px 45px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        border-radius: 8px;
+        background: #3F3BFF;
+        color: #FFF;
+        @extend %btn;
+      }
+
+      .btnDetailed {
+        flex: 1;
+        color: #3F3BFF;
+        display: inline-flex;
+        padding: 15px 45px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        border-radius: 8px;
+        border: 1px solid #3F3BFF;
+        @extend %btn;
+      }
+    }
+  }
+}

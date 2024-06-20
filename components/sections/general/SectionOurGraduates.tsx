@@ -15,27 +15,6 @@ import { ImgSectionOurGraduatesPeopleStudying } from '@/components/imgs'
 type TSectionOurGraduates = TPropClassNames
 
 const SectionOurGraduates = ({ classNames }: TSectionOurGraduates) => {
-  const { program } = useContext(ProgramContext)
-
-  const listDynamic =
-    program?.sectionOurGraduates && program?.sectionOurGraduates?.length > 0
-      ? program.sectionOurGraduates
-      : null
-
-  const list = listDynamic || [
-    {
-      title: '72%',
-      desc: 'перешли в более престижную компанию'
-    },
-    {
-      title: '94%',
-      desc: 'увеличили свои финансовые показатели в бизнесе'
-    },
-    {
-      title: '96%',
-      desc: 'остались довольны обучением'
-    }
-  ]
   return (
     <section
       className={
@@ -49,16 +28,6 @@ const SectionOurGraduates = ({ classNames }: TSectionOurGraduates) => {
             <span className={stls.highlight}>2023 году:</span>
           </p>
           <ul className={stls.list}>
-            {list.map((item, idx) => (
-              <li
-                key={`${item.title}-${idx}`}
-                className={cn(stls.listItem, stls.listItemTestimonial)}>
-                <div className={stls.listItemTestimonialBody}>
-                  <p className={stls.listItemTitle}>{item.title}</p>
-                  <p className={stls.listItemText}>{item.desc}</p>
-                </div>
-              </li>
-            ))}
             <li className={stls.listItem}>
               <Popup
                 trigger={() => (
@@ -75,7 +44,6 @@ const SectionOurGraduates = ({ classNames }: TSectionOurGraduates) => {
                 lockScroll
                 nested
                 closeOnDocumentClick>
-                {(close: MouseEventHandler) => <PopupCta close={close} />}
               </Popup>
             </li>
           </ul>
