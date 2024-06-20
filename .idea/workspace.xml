@@ -4,9 +4,143 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="046e7617-48fc-41ef-ae8d-62159170c5b1" name="Changes" comment="feat: Содание блока МШПП">
-      <change afterPath="$PROJECT_DIR$/public/documents/ПОЛОЖЕНИЕ_О_ПОРЯДКЕ_ВОССТАНОВЛЕНИЯ.pdf" afterDir="false" />
+    <list default="true" id="046e7617-48fc-41ef-ae8d-62159170c5b1" name="Changes" comment="feat: Интеграция с victorycorp.">
+      <change afterPath="$PROJECT_DIR$/pages/[slugFilterPrograms]/[slugProgram]/[id]/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/[slugFilterPrograms]/[slugProgram]/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/[slugFilterPrograms]/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/image/Mock/Gazprom-Logo-rus.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/image/Mock/Group.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/image/Mock/Rectangle 4330 (1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/image/Mock/Rectangle 4330 (2).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/image/Mock/Rectangle 4330 (3).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/image/Mock/Rectangle 4330 (4).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/image/Mock/Rectangle 4330 (5).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/image/Mock/Rectangle 4330.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/image/Mock/Rectangle 4336.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/image/Mock/Sberbank_Logo_2020.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/image/Mock/lenovo-1-logo-svgrepo-com.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/image/Mock/mock.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/image/Mock/program.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/image/Mock/teacher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/image/diploma.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/image/directory.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/image/dumbbells.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/image/formApplication.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/image/header_home_page.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/image/mobile_home.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/image/puzzles.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/image/student-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/image/student.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/image/t.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Accordion/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Accordion/styles.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ApplicationsContent/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ApplicationsContent/styles.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/BlockHelp/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/BlockHelp/styles.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Button/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Button/styles.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Footer/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Footer/styles.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/FormApplication/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/FormApplication/styles.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Header/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Header/styles.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/HeaderMobile/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/HeaderMobile/styles.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Items/CardSwiper/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Items/CardSwiper/styles.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Items/CardTeacher/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Items/CardTeacher/styles.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Items/PopularCourse/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Items/PopularCourse/styles.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/LinkProfession/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/LinkProfession/styles.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Modal/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Modal/styles.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/PopUpContentProgram/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/PopUpContentProgram/styles.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/SearchInput/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/SearchInput/styles.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Sections/Directions/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Sections/Directions/styles.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Sections/FAQ/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Sections/FAQ/styles.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Sections/HomePageHeader/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Sections/HomePageHeader/styles.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Sections/PassingTraining/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Sections/PassingTraining/styles.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Sections/Payment/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Sections/Payment/styles.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Sections/PopularCourses/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Sections/PopularCourses/styles.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Sections/StudentReviews/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Sections/StudentReviews/styles.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Sections/TeachersMentors/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Sections/TeachersMentors/styles.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Sections/TrustTraining/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Sections/TrustTraining/styles.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Slider/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Slider/styles.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/pages/AreasStudy/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/pages/AreasStudy/styles.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/Mock/test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/aboutInstitute.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/evaluationСompany.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/menu.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/passingTraining.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/paymentTab.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/variables/Color.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/btns/BtnDelta.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/btns/BtnDelta.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/btns/BtnField.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/btns/BtnField.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/cards/CardProgramTemplate.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/cards/CardProgramTemplate.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/cards/CardSchedule.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/cards/CardSchedule.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/cards/CardStudyField.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/cards/CardStudyField.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/general/Logo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/general/Logo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/general/ProgramType.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/general/ProgramType.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/layout/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/layout/Footer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/popups/PopupThankyou.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/popups/PopupThankyou.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/sections/all/HeroPrograms.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/sections/all/HeroPrograms.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/sections/payment/SectionPaymentTinkoff.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/sections/payment/SectionPaymentTinkoff.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hooks/useHandleUtms.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/hooks/useHandleUtms.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/apolloClient.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/_document.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_document.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/courses/[studyFieldSlug]/[slug].tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/courses/[studyFieldSlug]/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/courses/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/mba/[studyFieldSlug]/[slug].tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/mba/[studyFieldSlug]/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/mba/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/professions/[studyFieldSlug]/[slug].tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/professions/[studyFieldSlug]/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/professions/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/programs/[studyFieldSlug].tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/programs/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/sitemap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/public/sitemap.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/app.sass" beforeDir="false" afterPath="$PROJECT_DIR$/styles/app.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/base/_globals.sass" beforeDir="false" afterPath="$PROJECT_DIR$/styles/base/_globals.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/components/btns/BtnNewCourse.module.sass" beforeDir="false" afterPath="$PROJECT_DIR$/styles/components/btns/BtnNewCourse.module.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/components/cards/Accordion.module.sass" beforeDir="false" afterPath="$PROJECT_DIR$/styles/components/cards/Accordion.module.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/components/cards/CardDiscount.module.sass" beforeDir="false" afterPath="$PROJECT_DIR$/styles/components/cards/CardDiscount.module.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/components/cards/CardListProgram.module.sass" beforeDir="false" afterPath="$PROJECT_DIR$/styles/components/cards/CardListProgram.module.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/components/cards/CardMotion.module.sass" beforeDir="false" afterPath="$PROJECT_DIR$/styles/components/cards/CardMotion.module.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/components/cards/CardPriceNew.module.sass" beforeDir="false" afterPath="$PROJECT_DIR$/styles/components/cards/CardPriceNew.module.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/components/cards/CardProCourse.module.sass" beforeDir="false" afterPath="$PROJECT_DIR$/styles/components/cards/CardProCourse.module.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/components/cards/CardSmartCourse.module.sass" beforeDir="false" afterPath="$PROJECT_DIR$/styles/components/cards/CardSmartCourse.module.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/vendors/_normalize.sass" beforeDir="false" afterPath="$PROJECT_DIR$/styles/vendors/_normalize.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/checkIsAffiseUtmCampaign.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/checkIsAffiseUtmCampaign.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/checkIsAffiseUtmSource.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/checkIsAffiseUtmSource.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/checkIsLeadFromAffise.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/checkIsLeadFromAffise.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/parseUrlParams.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/parseUrlParams.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,17 +153,24 @@
         <option value="TypeScript File" />
         <option value="Sass File" />
         <option value="TypeScript JSX File" />
+        <option value="SCSS File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="test-2" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;AsgurDjons&quot;
+  }
+}</component>
   <component name="GitRewordedCommitMessages">
     <option name="commitMessagesMapping">
       <RewordedCommitMessageMapping>
@@ -39,6 +180,14 @@
     </option>
     <option name="currentCommit" value="1" />
     <option name="onto" value="460f035e1ab1d8e87045df50fceec6004b781723" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="19739134-d723-4d24-8abc-6b548b13fe28" />
+        <option name="url" value="git@github.com:70-7h3-m00n/mipo.msk.ru.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -60,13 +209,14 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/Работа/Instetut/project/mipo/mipo.msk.ru/public/documents",
-    "list.type.of.created.stylesheet": "Sass",
+    "last_opened_file_path": "D:/Работа/Instetut/project/mipo/api.instprof.online",
+    "list.type.of.created.stylesheet": "SCSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "yarn",
+    "npm.build.executor": "Run",
     "npm.dev.executor": "Run",
     "npm.postbuild.executor": "Run",
     "settings.editor.selected.configurable": "configurable.group.appearance",
@@ -76,7 +226,9 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Работа\Instetut\project\mipo\mipo.msk.ru\public\policies" />
       <recent name="D:\Работа\Instetut\project\mipo\mipo.msk.ru\public\documents" />
+      <recent name="D:\Работа\Instetut\project\mipo\mipo.msk.ru\public\assets\imgs" />
       <recent name="D:\Работа\Instetut\project\mipo\mipo.msk.ru\public\assets\imgs\new-course" />
     </key>
   </component>
@@ -114,12 +266,19 @@
     <recent_temporary>
       <list>
         <item itemvalue="npm.dev" />
-        <item itemvalue="npm.postbuild" />
         <item itemvalue="npm.build" />
         <item itemvalue="npm.postbuild" />
         <item itemvalue="npm.dev" />
+        <item itemvalue="npm.postbuild" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-WS-241.15989.105" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -189,6 +348,32 @@
       <workItem from="1710175314385" duration="600000" />
       <workItem from="1710228491060" duration="3000" />
       <workItem from="1710516787867" duration="305000" />
+      <workItem from="1711546107014" duration="1509000" />
+      <workItem from="1711554697947" duration="1065000" />
+      <workItem from="1711702676060" duration="895000" />
+      <workItem from="1711802644753" duration="5000" />
+      <workItem from="1711900460104" duration="5000" />
+      <workItem from="1711990827607" duration="2567000" />
+      <workItem from="1712160127133" duration="599000" />
+      <workItem from="1712209016628" duration="9000" />
+      <workItem from="1712209034461" duration="11000" />
+      <workItem from="1712238885660" duration="978000" />
+      <workItem from="1712666927278" duration="308000" />
+      <workItem from="1712668667740" duration="2003000" />
+      <workItem from="1712896383309" duration="8000" />
+      <workItem from="1713174993623" duration="18000" />
+      <workItem from="1714228373614" duration="424000" />
+      <workItem from="1714231287338" duration="1144000" />
+      <workItem from="1714562233931" duration="24753000" />
+      <workItem from="1714589065452" duration="25000" />
+      <workItem from="1714589133582" duration="29000" />
+      <workItem from="1714589174219" duration="181000" />
+      <workItem from="1715846980142" duration="721000" />
+      <workItem from="1716538700166" duration="7227000" />
+      <workItem from="1716787314564" duration="17802000" />
+      <workItem from="1717384790085" duration="2000" />
+      <workItem from="1717460990418" duration="13000" />
+      <workItem from="1718782621125" duration="462000" />
     </task>
     <task id="LOCAL-00001" summary="feature(new course page): test5">
       <option name="closed" value="true" />
@@ -478,7 +663,79 @@
       <option name="project" value="LOCAL" />
       <updated>1708957910908</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="feat: Добавление кода от amocrm.">
+      <option name="closed" value="true" />
+      <created>1711546372879</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1711546372879</updated>
+    </task>
+    <task id="LOCAL-00038" summary="fix: Добавление кода от amocrm.">
+      <option name="closed" value="true" />
+      <created>1711555151893</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1711555151893</updated>
+    </task>
+    <task id="LOCAL-00039" summary="fix: Замена файла.">
+      <option name="closed" value="true" />
+      <created>1711705131592</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1711705131592</updated>
+    </task>
+    <task id="LOCAL-00040" summary="chore: Добавление партнеров в подвал сайта.">
+      <option name="closed" value="true" />
+      <created>1712026381458</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1712026381458</updated>
+    </task>
+    <task id="LOCAL-00041" summary="chore: Добавление скрипта af.click.">
+      <option name="closed" value="true" />
+      <created>1712239100290</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1712239100290</updated>
+    </task>
+    <task id="LOCAL-00042" summary="fix: Убран рекламный бенер с скидкой.">
+      <option name="closed" value="true" />
+      <created>1712667130814</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1712667130814</updated>
+    </task>
+    <task id="LOCAL-00043" summary="fix: Добавлен договор оферты.">
+      <option name="closed" value="true" />
+      <created>1714228707306</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1714228707306</updated>
+    </task>
+    <task id="LOCAL-00044" summary="fix: Добавлен договор оферты.">
+      <option name="closed" value="true" />
+      <created>1714231812316</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1714231812316</updated>
+    </task>
+    <task id="LOCAL-00045" summary="feat: Интеграция с victorycorp.">
+      <option name="closed" value="true" />
+      <created>1715847467213</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1715847467213</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -519,15 +776,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix(edpartners): Исправление отправки запроса" />
-    <MESSAGE value="fix(edpartners): Отправлять только по ссылке edpartners" />
-    <MESSAGE value="fix(edpartners): Исправление" />
-    <MESSAGE value="fix(image): Исправление картинки в шапке курса" />
-    <MESSAGE value="fix: Исправление года в блоке" />
-    <MESSAGE value="fix(edpartners): Коректировка отправки." />
-    <MESSAGE value="fix(edpartners): добавление id." />
-    <MESSAGE value="fix(edpartners): исправление получение кук." />
-    <MESSAGE value="fix(edpartners): исправление." />
     <MESSAGE value="fix: исправление даты зачесления на курс." />
     <MESSAGE value="fix: edpartners webhook" />
     <MESSAGE value="feat: код квиза" />
@@ -544,6 +792,15 @@
     <MESSAGE value="fix: Добавление даты 30 и 29 часла зачислений" />
     <MESSAGE value="fix:" />
     <MESSAGE value="feat: Содание блока МШПП" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Содание блока МШПП" />
+    <MESSAGE value="feat: Добавление кода от amocrm." />
+    <MESSAGE value="fix: Добавление кода от amocrm." />
+    <MESSAGE value="fix: Замена файла." />
+    <MESSAGE value="refactor: Добавление партнеров в подвал сайта." />
+    <MESSAGE value="chore: Добавление партнеров в подвал сайта." />
+    <MESSAGE value="chore: Добавление скрипта af.click." />
+    <MESSAGE value="fix: Убран рекламный бенер с скидкой." />
+    <MESSAGE value="fix: Добавлен договор оферты." />
+    <MESSAGE value="feat: Интеграция с victorycorp." />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Интеграция с victorycorp." />
   </component>
 </project>

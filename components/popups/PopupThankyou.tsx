@@ -6,7 +6,7 @@ import { BtnClose } from '@/components/btns'
 import { UTM_KEYS_OBJ } from '@/config/index'
 import { v4 as uuidv4 } from 'uuid'
 import { getCookie, getCookies } from 'cookies-next'
-import { checkIsLeadFromAffise } from '@/utils/index'
+import { checkIsLeadFromAffise } from '../../src/utils/index'
 
 const PopupThankyou = ({ close, id = null, clickid = null }) => {
   const { program } = useContext(ProgramContext)

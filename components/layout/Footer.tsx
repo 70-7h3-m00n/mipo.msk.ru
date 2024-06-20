@@ -110,14 +110,12 @@ const Footer = () => {
                     [stls.linkItem]: true,
                     [stls.staticLinkItem]: true
                   })}>
-                  <Link href={link.href}>
-                    <a
+                  <Link href={link.href}
                       className={classNames({
                         [stls.link]: true,
                         [stls.staticLink]: true
                       })}>
                       {link.val}
-                    </a>
                   </Link>
                 </li>
               ))}

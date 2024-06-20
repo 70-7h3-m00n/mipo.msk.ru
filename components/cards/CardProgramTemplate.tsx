@@ -32,8 +32,7 @@ const CardProgramTemplate = ({
           : type === 'mba'
           ? routeMBA
           : program.category?.slug || routePrograms
-      }/${program.study_field?.slug || 'studyfield'}/${program.slug}`}>
-      <a
+      }/${program.study_field?.slug || 'studyfield'}/${program.slug}`}
         className={classNames({
           [stls.container]: true,
           [stls.threerow]: threerow,
@@ -54,7 +53,6 @@ const CardProgramTemplate = ({
         <div className={stls.arrowRight}>
           <IconArrowRight />{' '}
         </div>
-      </a>
     </Link>
   )
 }

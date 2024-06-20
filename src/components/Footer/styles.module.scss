@@ -1,0 +1,230 @@
+.footer {
+  border-radius: 40px;
+  background: #020055;
+  padding: 100px 0 0;
+  font-family: Manrope;
+  margin-bottom: 30px;
+  margin-top: 160px;
+
+  @media (max-width: 979px) {
+    padding: 60px 0;
+    margin-top: 120px;
+  }
+  @media (max-width: 769px) {
+    padding: 40px 0;
+    margin-top: 80px;
+  }
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 40px;
+
+  .logo {
+    font-size: 46px;
+    color: #FFF;
+  }
+
+  .wrapperMessenger {
+    width: 330px;
+    display: flex;
+    gap: 20px;
+
+    .telegramLink, .vkLink {
+      width: 35px;
+      height: 35px;
+      border-radius: 8px;
+      border: 1px solid #FFF;
+      padding: 7px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      svg {
+        width: 22px;
+        height: 21.083px;
+      }
+    }
+
+    .vkLink {
+      svg {
+        width: 25px;
+        height: 14.815px;
+      }
+    }
+
+    @media (max-width: 1710px) {
+      width: 300px;
+    }
+    @media (max-width: 1510px) {
+      width: 280px;
+    }
+    @media (max-width: 1410px) {
+      width: auto;
+    }
+  }
+}
+
+.mid {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  border-top: 1px solid #FFF;
+  border-bottom: 1px solid #FFF;
+  padding: 40px 0 64px 0;
+
+  .text {
+    color: #FFF;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+  }
+
+  .directionBlock {
+    width: 470px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-transform: uppercase;
+
+    @media (max-width: 1710px) {
+      width: 400px;
+    }
+    @media (max-width: 1510px) {
+      width: 350px;
+    }
+    @media (max-width: 1410px) {
+      width: calc(50% - 20px);
+    }
+    @media (max-width: 979px) {
+      width: 100%;
+    }
+  }
+
+  .aboutInstituteBlock {
+    width: 330px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-transform: uppercase;
+
+    @media (max-width: 1710px) {
+      width: 300px;
+    }
+    @media (max-width: 1510px) {
+      width: 280px;
+    }
+    @media (max-width: 1410px) {
+      width: calc(50% - 20px);
+    }
+  }
+
+  .contactBlock {
+    width: 330px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-transform: uppercase;
+
+    .estimation {
+      width: 55px;
+      height: 55px;
+      border-radius: 15px;
+      background: #FFF;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      svg {
+        width: 50px;
+        height: 50px;
+      }
+    }
+
+    @media (max-width: 1710px) {
+      width: 300px;
+    }
+    @media (max-width: 1510px) {
+      width: 280px;
+    }
+    @media (max-width: 1410px) {
+      width: calc(50% - 20px);
+    }
+  }
+
+  .contentBlock {
+    width: 330px;
+    color: #FFF;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    padding: 0 31px 0 0;
+
+    .header {
+      text-transform: uppercase;
+    }
+
+    .description {
+      margin-top: 20px;
+    }
+
+    .btnPopup {
+      color: #000;
+      text-transform: uppercase;
+      border-radius: 8px;
+      background:  #FFF;
+      text-align: center;
+      padding: 15px 45px;
+      cursor: pointer;
+      margin-top: 30px;
+
+      @media (max-width: 769px) {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 1710px) {
+      width: 300px;
+    }
+    @media (max-width: 1510px) {
+      width: 280px;
+      padding: 0;
+    }
+    @media (max-width: 1410px) {
+      width: calc(50% - 20px);
+    }
+    @media (max-width: 979px) {
+      width: 100%;
+    }
+  }
+  @media (max-width: 1410px) {
+    justify-content: inherit;
+    gap: 40px 20px;
+  }
+  @media (max-width: 769px) {
+    padding: 20px 0;
+  }
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 0;
+
+  .text {
+    color: #FFF;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    opacity: 0.5;
+  }
+
+  @media (max-width: 769px) {
+   flex-direction: column;
+    gap: 15px;
+    padding: 20px 0;
+  }
+}

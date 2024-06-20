@@ -4,7 +4,6 @@ import Script from 'next/script'
 import cn from 'classnames'
 import axios from 'axios'
 import { useForm } from 'react-hook-form'
-import { toast, ToastContainer } from 'react-nextjs-toast'
 import Wrapper from '@/components/layout/Wrapper'
 import { BtnAlpha, BtnBeta, BtnDelta, BtnGamma } from '@/components/btns'
 import PopupTrigger from '@/components/general/PopupTrigger'
@@ -87,12 +86,6 @@ const SectionPaymentTinkoff = () => {
       router.push(paymentUrl)
     } catch (err) {
       console.error(err)
-      toast.notify(
-        `Ошибка при оплате, пожалуйста свяжитесь с нами ${number.val}`,
-        {
-          title: 'Непредвиденная ошибка'
-        }
-      )
     }
   }
 
@@ -100,7 +93,6 @@ const SectionPaymentTinkoff = () => {
     <>
       <Script src='https://securepay.tinkoff.ru/html/payForm/js/tinkoff_v2.js' />
       <section className={stls.container}>
-        <ToastContainer align='right' position='bottom' />
         <Wrapper>
           <h2 className={stls.title}>Оплата Тинькофф</h2>
           <form

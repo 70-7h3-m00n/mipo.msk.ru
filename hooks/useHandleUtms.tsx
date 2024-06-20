@@ -1,7 +1,7 @@
 import { useEffect, useLayoutEffect } from 'react'
 import { useRouter } from 'next/router'
 import { deleteCookie, setCookie } from 'cookies-next'
-import { parseUrlParams } from '@/utils/index'
+import { parseUrlParams } from '../src/utils/index'
 import { UTM_KEYS } from '@/config/index'
 
 const NINETY_DAYS = 60 * 60 * 24 * 90

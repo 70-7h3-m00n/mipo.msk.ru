@@ -10,8 +10,7 @@ const BtnField = ({ href, aside = false, slug = null, children }) => {
   const { curProgramsStudyFieldSlug } = useContext(ProgramContext)
 
   return (
-    <Link href={href}>
-      <a
+    <Link href={href}
         className={classNames({
           [stls.container]: true,
           [stls.tooltip]: !aside,
@@ -23,7 +22,6 @@ const BtnField = ({ href, aside = false, slug = null, children }) => {
         })}
         onClick={!aside && closeFieldsTooltip}>
         {children}
-      </a>
     </Link>
   )
 }

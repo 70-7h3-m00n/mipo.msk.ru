@@ -12,24 +12,12 @@
 *:after
   box-sizing: inherit
 
-html, body
-  overflow-x: hidden
-  @include m.media(phone)
-    font-size: 1rem
-  // font-size: 3vmin
-  // font-size: 30px
-  // font-size: 1.5rem
-  // font-size: 2vw
-  @include m.media(tablet)
-    font-size: 1.2rem
-  @include m.media(laptop)
-    font-size: 0.9rem
-  @include m.media(desktop)
-    font-size: 1rem
 
 html
   box-sizing: border-box
-  font-family: Stem, sans-serif
+  background: #F1F1F9
+  font-family: Manrope
+
   // scroll-behavior: smooth
 
 main
@@ -56,12 +44,6 @@ a, button
 input
   border: f.px(2) solid transparent
   &:focus-visible
-    border: f.px(2) solid 
+    border: f.px(2) solid
     @include m.dye(border, c.$beta)
 
-section
-  @include m.media(phone, tablet)
-    @include m.gap($pb: f.px(50))
-  @include m.media(laptop, desktop)
-    @include m.gap($pb: f.px(115))
-    overflow: hidden

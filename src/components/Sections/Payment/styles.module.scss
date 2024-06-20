@@ -1,0 +1,247 @@
+.wrapperItems {
+  margin-top: 60px;
+  display: flex;
+  gap: 20px;
+
+  @media (max-width: 1200px) {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.cardItem, .active {
+  width: 435px;
+  height: 195px;
+  border-radius: 20px;
+  background: #FFF;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (max-width: 1410px) {
+    height: auto;
+  }
+  @media (max-width: 1200px) {
+    min-width: 0;
+    width: calc(50% - 10px);
+  }
+  @media (max-width: 979px) {
+    padding: 30px 10px;
+  }
+  @media (max-width: 769px) {
+    width: 100%;
+  }
+
+  .counter {
+    width: 38px;
+    height: 37px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 10px;
+    background: #3F3BFF;
+    padding: 10px 12px;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-family: Unbounded;
+
+    @media (max-width: 979px) {
+      font-size: 28px;
+    }
+    @media (max-width: 769px) {
+
+    }
+  }
+
+  .text {
+    margin-top: 20px;
+    color: #000;
+    text-align: center;
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    @media (max-width: 979px) {
+      font-size: 18px;
+    }
+    @media (max-width: 769px) {
+      font-size: 16px;
+    }
+  }
+}
+
+.active {
+  background: #3F3BFF;
+
+  .counter {
+    background: #FFF;
+    color: #3F3BFF;
+  }
+
+  .text {
+    color: #FFF;
+  }
+}
+
+.blockFormApplication {
+  margin-top: 160px;
+  position: relative;
+  border-radius: 25px;
+  background: var(--blue, #3F3BFF);
+  display: flex;
+  justify-content: space-between;
+  padding: 100px 30px;
+
+  @media (max-width: 1200px) {
+    flex-direction: column;
+    gap: 50px;
+    padding: 80px 30px;
+    overflow: hidden;
+  }
+
+  @media (max-width: 979px) {
+    margin-top: 120px;
+  }
+
+  @media (max-width: 769px) {
+    margin-top: 80px;
+    gap: 40px;
+    padding: 50px 10px;
+  }
+
+  .imageT {
+    position: absolute;
+    object-fit: contain;
+    width: 244px;
+    height: 244px;
+    top: 16px;
+    right: 30%;
+
+    @media (max-width: 1510px) {
+      right: 25%;
+    }
+    @media (max-width: 1200px) {
+      top: 160px;
+      right: -5%;
+    }
+    @media (max-width: 979px) {
+      top: 139px;
+      right: -7%;
+    }
+    @media (max-width: 769px) {
+      width: 200px;
+      height: 200px;
+      top: 105px;
+    }
+    @media (max-width: 560px) {
+      top: 140px;
+    }
+    @media (max-width: 430px) {
+      top: 195px;
+    }
+  }
+
+  .imageDumbbells {
+    position: absolute;
+    width: 266px;
+    height: 196px;
+    object-fit: contain;
+    bottom: 0;
+    left: 20%;
+
+    @media (max-width: 1510px) {
+      left: 17%;
+    }
+    @media (max-width: 1200px) {
+      width: 158px;
+      height: 117px;
+      left: -5%;
+    }
+    @media (max-width: 979px) {
+      height: 116px;
+    }
+    @media (max-width: 769px) {
+      height: 60px;
+      left: -60px;
+      bottom: -10px;
+    }
+  }
+
+  .wrapperText {
+    position: relative;
+    z-index: 2;
+    width: 600px;
+
+    @media (max-width: 1510px) {
+      width: 40%;
+    }
+    @media (max-width: 1200px) {
+      width: 100%;
+    }
+
+    .header {
+      color: #FFF;
+      font-family: Unbounded;
+      font-size: 38px;
+      font-style: normal;
+      font-weight: 500;
+      text-transform: uppercase;
+      margin: 0;
+
+      @media (max-width: 979px) {
+        font-size: 28px;
+      }
+      @media (max-width: 769px) {
+        font-size: 24px;
+      }
+    }
+
+    .description {
+      color: #FFF;
+      font-size: 18px;
+      font-style: normal;
+      line-height: normal;
+      margin: 40px 0 0 0;
+
+      @media (max-width: 979px) {
+        font-size: 16px;
+        margin: 30px 0 0 0;
+      }
+      @media (max-width: 769px) {
+        font-size: 14px;
+        margin: 20px 0 0 0;
+      }
+    }
+  }
+
+  .wrapperImage {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    right: calc(50% - (754px / 2));
+    width: 754px;
+    height: 754px;
+
+    @media (max-width: 1200px) {
+      display: none;
+    }
+  }
+
+  .wrapperForm {
+    position: relative;
+    z-index: 2;
+    width: 600px;
+
+    @media (max-width: 1510px) {
+      width: 30%;
+    }
+    @media (max-width: 1200px) {
+      width: 100%;
+    }
+  }
+}

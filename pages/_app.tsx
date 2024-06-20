@@ -1,10 +1,6 @@
 import Router from 'next/router'
-import { useEffect, useState, useContext } from 'react'
+import { useEffect, useState } from 'react'
 import Script from 'next/script'
-import MenuState from '@/context/menu/MenuState'
-import ProgramsState from '@/context/programs/ProgramsState'
-import ProgramState from '@/context/program/ProgramState'
-import FieldsTooltipState from '@/context/fieldsTooltip/FieldsTooltipState'
 
 import TagManager from 'react-gtm-module'
 
@@ -25,18 +21,16 @@ import '@/styles/app.sass'
 import '@/public/assets/fonts/alegreya-sans/stylesheet.css'
 import '@/public/assets/fonts/neue-machina/stylesheet.css'
 
-import Header from '@/components/layout/Header'
-import Footer from '@/components/layout/Footer'
-import StickyBottom from '@/components/layout/StickyBottom'
-
 import { dev } from 'config'
 
 import { useHandleUtms } from '@/hooks/index'
+import Header from '../src/components/Header'
+import Footer from '../src/components/Footer'
 
 function MyApp({ Component, pageProps, router }) {
   const [loading, setLoading] = useState(false)
   useHandleUtms()
-
+  console.log(pageProps)
   const userUuid = uuidv4()
 
   useEffect(() => {
@@ -79,35 +73,33 @@ function MyApp({ Component, pageProps, router }) {
 
   return (
     <>
-      {/*//@ts-ignore */}
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap"
+            rel="stylesheet"
+      />
+
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Unbounded:wght@200..900&display=swap"
+        rel="stylesheet"
+      />
+
       <DefaultSeo {...SEO} />
       <LogoJsonLd
         logo={`${routesFront.root}/assets/imgs/icons/manifest-icon-512.png`}
         url={routesFront.root}
       />
-      <ProgramsState pageProps={pageProps}>
-        <ProgramState pageProps={pageProps}>
-          <MenuState>
-            <FieldsTooltipState>
-              <div
-                style={{
-                  opacity: 1
-                }}>
-                <Header />
-                <main>
-                  <Component {...pageProps} />
-                </main>
-                {/*<StickyBottom />*/}
-                <Footer />
-              </div>
-            </FieldsTooltipState>
-          </MenuState>
-        </ProgramState>
-      </ProgramsState>
-      <Script src='/assets/js/vendors/swiped-events.min.js' />
 
+      <Header />
+
+      <main>
+        <Component {...pageProps} />
+      </main>
+
+      <Footer />
 
       <div id="getRatingFromEddu" data-id="72382"></div>
+      <Script src='/assets/js/vendors/swiped-events.min.js' />
       <Script src='https://eddu.pro/getRating.js' />
 
       {!dev && (
@@ -179,7 +171,7 @@ function MyApp({ Component, pageProps, router }) {
       )}
 
       {!dev && (
-        <Script id={'dmp'} src="https://dmp.one/sync" async  charSet="UTF-8" />
+        <Script id={'dmp'} src="https://dmp.one/sync" async charSet="UTF-8" />
       )}
 
       {!dev && (

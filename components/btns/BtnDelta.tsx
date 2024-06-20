@@ -18,10 +18,8 @@ const BtnDelta = ({ text = '', href = null }) => {
     )
   if (href)
     return (
-      <Link href={href}>
-        <a className={cn(stls.container, { [stls.altStyles]: altStyles })}>
+      <Link href={href} className={cn(stls.container, { [stls.altStyles]: altStyles })}>
           {text}
-        </a>
       </Link>
     )
 }

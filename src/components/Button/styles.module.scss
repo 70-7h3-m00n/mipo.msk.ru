@@ -1,0 +1,36 @@
+.btn, .btnActive {
+  background: white;
+  color:  black;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.btnActive {
+  background: #3F3BFF;
+  color: #FFF;
+}
+
+.round {
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 21px;
+
+  @media (max-width: 979px) {
+    font-size: 18px;
+  }
+  @media (max-width: 769px) {
+    font-size: 12px;
+  }
+}
+
+.square {
+  padding: 15px 45px;
+  border-radius: 8px;
+  font-size: 16px;
+
+  @media (max-width: 769px) {
+    font-size: 14px;
+  }
+}

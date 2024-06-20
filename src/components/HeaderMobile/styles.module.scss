@@ -1,0 +1,119 @@
+.header {
+  position: fixed;
+  z-index: 100;
+  display: none;
+  padding: 20px;
+  border-radius: 20px;
+  background: #FFF;
+
+  @media (max-width: 979px) {
+    display: block;
+    width: 768px
+  }
+  @media (max-width: 769px) {
+    width: calc(100% - 20px);
+  }
+
+ .topContent {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+
+   .logoWrapper {
+     svg {
+       width: 166px;
+       height: 35px;
+
+       @media (max-width: 769px) {
+         width: 94px;
+         height: 21px;
+       }
+     }
+   }
+
+   .burgerWrapper {
+     svg {
+       width: 60px;
+       height: 60px;
+
+       @media (max-width: 769px) {
+         width: 40px;
+         height: 40px;
+       }
+     }
+     .wrapperSvg {
+       display: flex;
+       gap: 20px;
+
+       svg {
+         width: 20px;
+         height: 20px;
+       }
+     }
+   }
+ }
+
+  .searchWrapper {
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    right: 0;
+  }
+
+  .bottomContent {
+    margin-top: 50px;
+
+    .navList {
+      padding-bottom: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      .listProgram {
+        margin-bottom: 20px;
+
+        .wrapperHeader {
+          display: flex;
+          justify-content: space-between;
+
+          svg {
+            width: 25px;
+            height: 25px;
+          }
+        }
+
+        .list {
+          margin-top: 20px;
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+        }
+      }
+
+      .link {
+        color: #000;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        text-transform: uppercase;
+      }
+    }
+
+    .contacts {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      border-top: 1px solid rgba(0, 0, 0, 0.50);
+      padding: 30px 0 0 0;
+
+      .text {
+        color: rgba(0, 0, 0, 0.50);
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        text-transform: uppercase;
+      }
+    }
+  }
+}

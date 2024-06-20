@@ -2,29 +2,56 @@
 @use '@/styles/base'
 
 .container
-  width: 1180px
+  width: 1800px
   margin: 0 auto
-  padding: 0
   position: relative
+  padding: 0
+
+  @media (max-width: 1810px)
+    width: 1700px
+
+  @media (max-width: 1710px)
+    width: 1600px
+
+  @media (max-width: 1610px)
+    width: 1500px
+
+  @media (max-width: 1510px)
+    width: 1400px
+
+  @media (max-width: 1410px)
+    width: 1300px
+
+  @media (max-width: 1310px)
+    width: 1200px
 
   @media (max-width: 1200px)
     width: 960px
 
-  @media (min-width: 768px) and (max-width: 979px)
+  @media (max-width: 979px)
     width: 768px
 
-  @media (max-width: 767px)
+  @media (max-width: 769px)
     width: 100%
-    padding: 0 20px
+    padding: 0 10px
+
 
 .hidden
   display: none
 
+.header
+  color: #000
+  font-family: Unbounded
+  font-size: 48px
+  font-style: normal
+  font-weight: 500
+  text-transform: uppercase
+  margin: 160px 0 0 0
 
-.MuiTooltip-tooltip
-  padding: 10px 8px
-  font-size: 14px
+  @media (max-width: 979px)
+    font-size: 36px
+    margin: 120px 0 0 0
 
-svg
-  width: auto
-  height: auto
+  @media (max-width: 769px)
+    font-size: 24px
+    margin: 80px 0 0 0

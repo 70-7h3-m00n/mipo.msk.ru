@@ -1,0 +1,68 @@
+.card {
+  min-width: 630px;
+  height: 537px;
+  border-radius: 20px;
+  background: #FFF;
+  padding: 40px 30px 30px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  user-select: none;
+  cursor: grabbing;
+
+  @media (max-width: 979px) {
+    min-width: 530px;
+    height: 426px;
+  }
+  @media (max-width: 769px) {
+    min-width: 275px;
+    height: 268px;
+    padding: 30px 10px;
+  }
+}
+
+.wrapperHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+
+  .header {
+    color: #000;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    @media (max-width: 979px) {
+      font-size: 21px;
+    }
+    @media (max-width: 769px) {
+      font-size: 16px;
+    }
+  }
+
+  .linkCourse {
+    svg {
+      width: 50px;
+      height: 50px;
+
+      @media (max-width: 769px) {
+        width: 35px;
+        height: 35px;
+      }
+    }
+  }
+}
+
+.wrapperImage {
+  width: 570px;
+  height: auto;
+  object-fit: contain;
+
+  @media (max-width: 979px) {
+    width: 470px;
+  }
+  @media (max-width: 769px) {
+    width: 255px;
+  }
+}
