@@ -106,9 +106,38 @@ function MyApp({ Component, pageProps, router }) {
       </ProgramsState>
       <Script src='/assets/js/vendors/swiped-events.min.js' />
 
+      {
+        !dev && (<>
+          <div id="informer">
+            <a href="https://kursfinder.ru/school/moskovskij-institut-professionalnogo-obrazovaniya/"
+               className="informer informer-230 informer_v1" target="_blank" title="Отзывы о МИПО на Kursfinder"
+               rel="noreferrer">
+              <img src="https://kursfinder.ru/static/img/informer/logo_v1.svg" className="informer__logo"
+                   alt="Отзывы о МИПО на Kursfinder" />
+            </a>
+          </div>
+          <Script
+            id={'informer-script'}
+            dangerouslySetInnerHTML={{
+              __html: `
+          document.addEventListener('DOMContentLoaded', function () {
+          var xHttp = new XMLHttpRequest();
+          xHttp.open('GET', 'https://kursfinder.ru/informer/7/', true);
+          xHttp.responseType = 'json';
+          xHttp.getResponseHeader('Content-Type', 'aplication/json', 'charset=utf-8');
+          xHttp.send(null);
+          xHttp.addEventListener('readystatechange', function () {
+          if (xHttp.readyState === 4 && xHttp.status === 200) {
+          document.getElementById('informer').innerHTML = xHttp.response.data;
+          }});});
+        `
+            }}
+          />
+        </>)
+      }
 
       <div id="getRatingFromEddu" data-id="72382"></div>
-      <Script src='https://eddu.pro/getRating.js' />
+      <Script src="https://eddu.pro/getRating.js" />
 
       {!dev && (
         <>
@@ -138,7 +167,7 @@ function MyApp({ Component, pageProps, router }) {
       {!dev && (
         <>
           <Script
-            id='victorycorp-integration'
+            id="victorycorp-integration"
             dangerouslySetInnerHTML={{
               __html: `(function (d, w) {
             var n = d.getElementsByTagName("script")[0],
