@@ -165,9 +165,16 @@ const Footer = () => {
                 {city}, {street}
               </div>
               <div className={stls.sm}>
-                {/* <BtnVk dark mlzero /> */}
                 <BtnWhatsapp dark />
                 <BtnTelegram dark />
+                <div id="informer">
+                  <a href="https://kursfinder.ru/school/moskovskij-institut-professionalnogo-obrazovaniya/"
+                     className="informer informer-230 informer_v1" target="_blank" title="Отзывы о МИПО на Kursfinder"
+                     rel="noreferrer">
+                    <img src="https://kursfinder.ru/static/img/informer/logo_v1.svg" className="informer__logo"
+                         alt="Отзывы о МИПО на Kursfinder" />
+                  </a>
+                </div>
               </div>
               <div className={stls.edduBlock}>
                 {
@@ -207,14 +214,6 @@ const Footer = () => {
         <FooterBottom />
       </div>
       <div className={cn(stls.bgRight, { [stls.altStyles]: altStyles })}></div>
-      <div id="informer">
-        <a href="https://kursfinder.ru/school/moskovskij-institut-professionalnogo-obrazovaniya/"
-           className="informer informer-230 informer_v1" target="_blank" title="Отзывы о МИПО на Kursfinder"
-           rel="noreferrer">
-          <img src="https://kursfinder.ru/static/img/informer/logo_v1.svg" className="informer__logo"
-               alt="Отзывы о МИПО на Kursfinder" />
-        </a>
-      </div>
     </footer>
   )
 }
