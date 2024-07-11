@@ -150,7 +150,7 @@ const Footer = () => {
 
               {/*TODO: 'reklama'*/}
               {
-                validComponent || validComponent === null? <></>:
+                validComponent || validComponent === null ? <></> :
                   <div className={stls.numbers}>
                     <a href={number.href} className={stls.number}>
                       {number.val}
@@ -207,6 +207,14 @@ const Footer = () => {
         <FooterBottom />
       </div>
       <div className={cn(stls.bgRight, { [stls.altStyles]: altStyles })}></div>
+      <div id="informer">
+        <a href="https://kursfinder.ru/school/moskovskij-institut-professionalnogo-obrazovaniya/"
+           className="informer informer-230 informer_v1" target="_blank" title="Отзывы о МИПО на Kursfinder"
+           rel="noreferrer">
+          <img src="https://kursfinder.ru/static/img/informer/logo_v1.svg" className="informer__logo"
+               alt="Отзывы о МИПО на Kursfinder" />
+        </a>
+      </div>
     </footer>
   )
 }
