@@ -108,14 +108,6 @@ function MyApp({ Component, pageProps, router }) {
 
       {
         !dev && (<>
-          <div id="informer">
-            <a href="https://kursfinder.ru/school/moskovskij-institut-professionalnogo-obrazovaniya/"
-               className="informer informer-230 informer_v1" target="_blank" title="Отзывы о МИПО на Kursfinder"
-               rel="noreferrer">
-              <img src="https://kursfinder.ru/static/img/informer/logo_v1.svg" className="informer__logo"
-                   alt="Отзывы о МИПО на Kursfinder" />
-            </a>
-          </div>
           <Script
             id={'informer-script'}
             dangerouslySetInnerHTML={{
