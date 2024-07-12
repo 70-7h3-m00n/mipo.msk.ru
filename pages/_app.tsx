@@ -104,6 +104,7 @@ function MyApp({ Component, pageProps, router }) {
           </MenuState>
         </ProgramState>
       </ProgramsState>
+
       <Script src='/assets/js/vendors/swiped-events.min.js' />
 
       {
@@ -200,7 +201,7 @@ function MyApp({ Component, pageProps, router }) {
       )}
 
       {!dev && (
-        <Script id={'dmp'} src="https://dmp.one/sync" async  charSet="UTF-8" />
+        <Script id={'dmp'} src="https://dmp.one/sync" async charSet="UTF-8" />
       )}
 
       {!dev && (
