@@ -101,7 +101,7 @@ const PopupThankyou = ({ close, id = null, clickid = null }) => {
       <div className="i-flocktory"
            data-fl-action="exchange"
            data-fl-spot="some_spot"
-           data-fl-user-name=""
+           // data-fl-user-name=""
            data-fl-user-email="xname@flocktory.com"
       />
     </div>
