@@ -59,6 +59,7 @@ const FormAlpha = ({
   const router = useRouter()
 
   const onSubmit = async data => {
+    let price = Boolean(+program?.timenprice[0]?.price) ? +program?.timenprice[0]?.price : null
     setIsDisabled(true)
     setThanksIsOpen(true)
     // handle loader
@@ -93,6 +94,25 @@ const FormAlpha = ({
     } else {
       console.log('err')
     }
+
+    if (!question && price !== null) {
+      try {
+        const res = await axios.post(`${routesFront.root}/api/yookassa`, {
+          price,
+          returnURL: router.asPath,
+          name: data.name,
+          phone: data.phone,
+          programTitle: program.title,
+          email: data.email
+        })
+
+        if (res.status === 200) {
+          window.open(res.data.url, '_blank');
+        }
+      } catch (e) {
+        console.log(e, 'yookassa-error')
+      }
+    }
   }
 
   return (
@@ -122,6 +142,7 @@ const FormAlpha = ({
               placeholder='Ваше имя'
               disabled={isDisabled}
               {...register('name', {
+                required: `*Укажите свое имя`,
                 maxLength: {
                   value: 32,
                   message: `*Не больше 32 символов`

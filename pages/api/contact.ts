@@ -1,16 +1,13 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-
 import nodemailer from 'nodemailer'
 import { dev, UTM_KEYS_OBJ } from '@/config/index'
 import moment from 'moment'
 import { WebServiceClient } from '@maxmind/geoip2-node'
 import axios from 'axios'
-import * as console from 'console'
 import { getCookie, getCookies } from 'cookies-next'
+import { NextApiRequest, NextApiResponse } from 'next'
 
-const contact = async (req, res) => {
+const contact = async (req: NextApiRequest, res: NextApiResponse) => {
   process.env.TZ = 'Europe/Moscow'
-  // data from the client
   let {
     id,
     name,
@@ -122,8 +119,8 @@ const contact = async (req, res) => {
     time: now.format('HH:mm:ss') || null,
     utc: now.format('Z') || null,
     name: name || null,
-    phone: phone || '',
-    email: email || '',
+    phone: phone || null,
+    email: email || null,
     vk: vk || null,
     promocode: promocode || null,
     contactWay: contactWay || null,
@@ -156,6 +153,20 @@ const contact = async (req, res) => {
     clUid: utms?.cl_uid || null,
     clickid: clickid || null,
     formName: formName || null
+  }
+
+  try {
+    const queryParams  = Object.entries(data).map(([key, value]) => `${key}=${value}`).join('&')
+
+    await axios.request({
+      method: 'GET',
+      url: `https://tglk.ru/in/MX4bxnhq9LCnZWR5?${queryParams}`,
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+  }catch (e) {
+    console.error(e)
   }
 
   const subject = 'Новая заявка с mipo.msk.ru'
