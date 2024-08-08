@@ -1,12 +1,11 @@
-import AreasStudy from '../../src/components/pages/AreasStudy'
+import CatalogCourses from '../../src/components/pages/CatalogCourses'
 import getData, { PagesData } from '../../src/services/getData'
-
 
 const CatalogPage = () => {
 
   return (
     <>
-      <AreasStudy />
+      <CatalogCourses />
     </>
   )
 }

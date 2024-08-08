@@ -21,6 +21,7 @@ export enum PagesData {
   catalog = 'catalog',
   home = 'home',
   course = 'course',
+  webinars = 'webinars'
 }
 
 const getData  = (page?: PagesData) => wrapper.getStaticProps(

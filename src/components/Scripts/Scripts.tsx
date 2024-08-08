@@ -1,6 +1,6 @@
 import React from 'react'
 import Script from 'next/script'
-import { dev } from '@/config/index'
+import { dev } from '../../config'
 
 export const Scripts = () => {
   return (

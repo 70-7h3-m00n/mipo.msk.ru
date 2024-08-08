@@ -3,10 +3,10 @@ import nodemailer from 'nodemailer'
 import axios from 'axios'
 import SMTP from '../../src/config/SMTP'
 import { getCookie } from 'cookies-next'
-import parseGeneralSlug from '@/helpers/parseGeneralSlug'
-import buildLeadData from '@/helpers/buildLeadData'
-import createLeadEmailBody from '@/helpers/createLeadEmailBody'
 import console from 'console'
+import parseGeneralSlug from '../../src/helpers/parseGeneralSlug'
+import buildLeadData from '../../src/helpers/buildLeadData'
+import createLeadEmailBody from '../../src/helpers/createLeadEmailBody'
 
 type TypeNextApiResponseLeadData = {
     readonly err?: unknown

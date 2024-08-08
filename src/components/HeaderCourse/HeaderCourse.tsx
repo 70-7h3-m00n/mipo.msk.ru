@@ -1,5 +1,4 @@
 import styles from '../HeaderDefault/HeaderDefault.module.scss'
-import classNames from 'classnames'
 import HeaderMobile from '@/new-components/HeaderMobile'
 import Link from 'next/link'
 import LogoSvg from '../../SvgComponents/LogoSvg'
@@ -30,8 +29,8 @@ const arrayScrollBlock = [
 
 export const HeaderCourse = () => {
   return (
-    <header className={styles.headerCourse}>
-      <div className={ classNames('container', styles.wrapperHeader)}>
+    <header className={styles.wrapperRelative}>
+      <div className={ 'container'}>
         <div className={styles.header}>
           <nav className={styles.menuCourse}>
             <div className={styles.blockLeft}>

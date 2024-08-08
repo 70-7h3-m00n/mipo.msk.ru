@@ -1,15 +1,16 @@
 @import "src/styles/extends";
 
 .wrapperRelative {
-  position: relative;
-}
-
-.wrapperHeader {
   position: fixed;
   z-index: 1000;
   top: 0;
   left: 50%;
   transform: translate(-50%, 0%);
+
+  @media (max-width: 769px) {
+    left: inherit;
+    transform: inherit;
+  }
 }
 
 .header {
@@ -17,7 +18,6 @@
   padding: 30px;
   border-radius: 20px;
   background: #FFF;
-  font-family: Manrope;
   margin: 10px auto 0 auto;
 
   @media (max-width: 1290px) {

@@ -1,6 +1,6 @@
 import qs from 'qs'
-import fetcherGet from '@/helpers/fetcherGet'
-import routesBack from '@/config/routesBack'
+import fetcherGet from '../../helpers/fetcherGet'
+import routesBack from '../../config/routesBack'
 import { IFetchTeacher } from './types'
 
 export const fetchTeacher = async () => {

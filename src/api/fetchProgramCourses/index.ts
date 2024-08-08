@@ -1,6 +1,6 @@
 import qs from 'qs'
-import fetcherGet from '@/helpers/fetcherGet'
-import routesBack from '@/config/routesBack'
+import fetcherGet from '../../helpers/fetcherGet'
+import routesBack from '../../config/routesBack'
 import { IFetchProgramCourses } from './types'
 
 export const fetchProgramCourses = async () => {
@@ -16,7 +16,7 @@ export const fetchProgramCourses = async () => {
           'description',
           'price',
           'discount',
-        'slug'
+          'slug'
       ],
       populate: {
           faculty: {

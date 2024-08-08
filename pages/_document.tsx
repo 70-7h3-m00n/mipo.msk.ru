@@ -1,7 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
-import MetaFonts from '@/components/meta/MetaFonts'
-import MetaManifest from '@/components/meta/MetaManifest'
-import { dev } from 'config'
+import { dev } from '../src/config'
 import { ScriptHead } from '../src/components/ScriptHead/ScriptHead'
 
 class MyDocument extends Document {
@@ -12,8 +10,6 @@ class MyDocument extends Document {
         <Head>
           <meta charSet='UTF-8' />
           <ScriptHead />
-          <MetaFonts />
-          <MetaManifest />
         </Head>
         <body>
           {!dev && (

@@ -1,11 +1,9 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next'
 import nodemailer from 'nodemailer'
-import { dev, UTM_KEYS_OBJ } from '@/config/index'
+import { dev, UTM_KEYS_OBJ } from '../../src/config'
 import moment from 'moment'
 import axios from 'axios'
-import * as console from 'console'
-import { getCookie, getCookies } from 'cookies-next'
+import { getCookie } from 'cookies-next'
 
 const contact = async (req: NextApiRequest, res: NextApiResponse) => {
   process.env.TZ = 'Europe/Moscow'

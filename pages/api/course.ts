@@ -1,8 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import nodemailer from 'nodemailer'
-import { dev } from '@/config/index'
-import buildLeadData from '@/helpers/buildLeadData'
-import createLeadEmailBody from '@/helpers/createLeadEmailBody'
+import { dev } from '../../src/config'
+import buildLeadData from '../../src/helpers/buildLeadData'
+import createLeadEmailBody from '../../src/helpers/createLeadEmailBody'
 
 type TypeNextApiResponseLeadData = {
     readonly err?: unknown

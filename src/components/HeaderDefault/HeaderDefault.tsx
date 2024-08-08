@@ -53,7 +53,7 @@ export const HeaderDefault = () => {
     <header className={styles.wrapperRelative}
             onMouseLeave={onClose}
     >
-      <div className={ classNames('container', styles.wrapperHeader)}>
+      <div className={'container'}>
         <div className={styles.header}>
           <div className={styles.menu}>
             <div className={styles.blockLeft}>

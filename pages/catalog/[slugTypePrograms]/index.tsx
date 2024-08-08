@@ -1,16 +1,14 @@
 import { GetStaticPaths } from 'next'
-import AreasStudy from '../../../src/components/pages/AreasStudy'
+import CatalogCourses from '../../../src/components/pages/CatalogCourses'
 import fetchFaculty from '../../../src/api/fetchFaculty'
 import fetchTypeProgram from '../../../src/api/fetchTypeProgram'
 import fetchProgramCourses from '../../../src/api/fetchProgramCourses'
 import getData, { PagesData } from '../../../src/services/getData'
 
-
-
 const FilterPrograms = () => {
   return (
     <>
-      <AreasStudy />
+      <CatalogCourses />
     </>
   )
 }

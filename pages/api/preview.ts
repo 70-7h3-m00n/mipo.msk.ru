@@ -1,4 +1,4 @@
-import { routesFront, routesBack } from '@/config/index'
+import { routesFront, routesBack } from '../../src/config'
 import type { NextApiRequest, NextApiResponse } from 'next'
 
 const preview = async (req: NextApiRequest, res: NextApiResponse) => {

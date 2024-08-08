@@ -2,8 +2,6 @@ import React, { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 import HeaderCourse from '@/new-components/HeaderCourse'
 import HeaderDefault from '@/new-components/HeaderDefault'
-import { el } from 'date-fns/locale'
-import { retry } from '@reduxjs/toolkit/query'
 
 const headerMapping: {[key: string]: React.ReactElement} = {
   '/catalog/[slugTypePrograms]/[slugFaculty]/[id]': <HeaderCourse />
