@@ -1,3 +1,3 @@
-import { Discount } from './Discount'
+import { Discount } from './Discount';
 
-export default Discount
+export default Discount;

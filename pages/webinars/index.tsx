@@ -1,13 +1,9 @@
-import getData, { PagesData } from '@/services/getData'
+import getData, { PagesData } from '@/services/getData';
 
 const Webinars = () => {
-  return (
-    <>
-      webinars
-    </>
-  )
-}
+  return <>webinars</>;
+};
 
-export const getStaticProps = getData(PagesData.webinars)
+export const getStaticProps = getData(PagesData.webinars);
 
-export default Webinars
+export default Webinars;

@@ -1,11 +1,12 @@
-import styles from './CardTeacher.module.scss'
-import Image from 'next/image'
+import Image from 'next/image';
 
-interface CardTeacher {
-  imageUrl: string
-  name: string
-  description: string
-}
+import styles from './CardTeacher.module.scss';
+
+type CardTeacher = {
+  imageUrl: string;
+  name: string;
+  description: string;
+};
 
 export const CardTeacher = ({ imageUrl, name, description }: CardTeacher) => {
   return (
@@ -18,5 +19,5 @@ export const CardTeacher = ({ imageUrl, name, description }: CardTeacher) => {
         <p className={styles.description}>{description}</p>
       </div>
     </div>
-  )
-}
+  );
+};

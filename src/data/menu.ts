@@ -1,23 +1,23 @@
 interface Menu {
-  text: string
-  link: string
+  text: string;
+  link: string;
 }
 
-export const MenuAboutInstitute: Array<Menu> =  [
+export const MenuAboutInstitute: Array<Menu> = [
   {
     text: 'об институте',
-    link: '/legal'
+    link: '/legal',
   },
   {
     text: 'преподаватели',
-    link: '/teachers'
+    link: '/teachers',
   },
   {
     text: 'отзывы',
-    link: '/'
+    link: '/',
   },
   {
     text: 'оплата обучения',
-    link: '/'
-  }
-]
+    link: '/',
+  },
+];

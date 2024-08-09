@@ -1,5 +1,4 @@
-import * as React from "react"
-import { SVGProps } from "react"
+import type { SVGProps } from 'react';
 
 const DoubleSwitchSvg = (props: SVGProps<SVGSVGElement>) => (
   <svg
@@ -15,5 +14,5 @@ const DoubleSwitchSvg = (props: SVGProps<SVGSVGElement>) => (
       <circle cx={13} cy={13.5} r={2.5} fill="#000" />
     </g>
   </svg>
-)
-export default DoubleSwitchSvg
+);
+export default DoubleSwitchSvg;

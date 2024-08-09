@@ -1,3 +1,3 @@
-import { HeaderDefault } from './HeaderDefault'
+import { HeaderDefault } from './HeaderDefault';
 
-export default HeaderDefault
+export default HeaderDefault;

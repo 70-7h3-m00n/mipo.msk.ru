@@ -1,3 +1,3 @@
-const companyName = 'Московский Институт Профессионального Образования'
+const companyName = 'Московский Институт Профессионального Образования';
 
-export default companyName
+export default companyName;

@@ -1,3 +1,3 @@
-import { GeneralCourse } from './GeneralCourse'
+import { GeneralCourse } from './GeneralCourse';
 
-export default GeneralCourse
+export default GeneralCourse;

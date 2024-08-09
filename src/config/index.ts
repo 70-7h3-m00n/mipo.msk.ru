@@ -1,13 +1,13 @@
-import companyName from './companyName'
-import gtmId from './gtmId'
-import dev from './dev'
-import prod from './prod'
-import fallback from './fallback'
-import themeColor from './themeColor'
-import routesBack from './routesBack'
-import routesFront from './routesFront'
-import routesExternal from './routesExternal'
-import UTM_KEYS, { UTM_KEYS_OBJ } from './utm_keys'
+import companyName from './companyName';
+import dev from './dev';
+import fallback from './fallback';
+import gtmId from './gtmId';
+import prod from './prod';
+import routesBack from './routesBack';
+import routesExternal from './routesExternal';
+import routesFront from './routesFront';
+import themeColor from './themeColor';
+import UTM_KEYS, { UTM_KEYS_OBJ } from './utm_keys';
 
 export {
   companyName,
@@ -20,5 +20,5 @@ export {
   themeColor,
   routesExternal,
   UTM_KEYS,
-  UTM_KEYS_OBJ
-}
+  UTM_KEYS_OBJ,
+};

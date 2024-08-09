@@ -1,5 +1,4 @@
-import * as React from "react"
-import { SVGProps } from "react"
+import type { SVGProps } from 'react';
 
 const MagnifierSvg = (props: SVGProps<SVGSVGElement>) => (
   <svg
@@ -17,5 +16,5 @@ const MagnifierSvg = (props: SVGProps<SVGSVGElement>) => (
       opacity={0.5}
     />
   </svg>
-)
-export default MagnifierSvg
+);
+export default MagnifierSvg;

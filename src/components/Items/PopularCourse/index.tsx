@@ -1,3 +1,3 @@
-import { PopularCourse } from './PopularCourse'
+import { PopularCourse } from './PopularCourse';
 
-export default PopularCourse
+export default PopularCourse;

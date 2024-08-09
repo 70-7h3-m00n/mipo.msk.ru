@@ -1,8 +1,8 @@
-@import "src/styles/extends";
+@import 'src/styles/extends';
 
 .block {
   border-radius: 20px;
-  background: #FFF;
+  background: #fff;
   padding: 30px;
 
   @media (max-width: 769px) {

@@ -1,17 +1,18 @@
-import styles from './CardModuleCourse.module.scss'
-import { useState } from 'react'
+import styles from './CardModuleCourse.module.scss';
 
-interface CardModuleCourseProps {
-  lessons: string
-  title: string
-  list: {
-    item: string
-  }[]
-}
+type CardModuleCourseProps = {
+  lessons: string;
+  title: string;
+  list: Array<{
+    item: string;
+  }>;
+};
 
-export const CardModuleCourse = ({ lessons, title, list }:CardModuleCourseProps) => {
-
-
+export const CardModuleCourse = ({
+  lessons,
+  title,
+  list,
+}: CardModuleCourseProps) => {
   return (
     <div className={styles.cardModuleCourse}>
       <div className={styles.wrapperHeader}>
@@ -24,13 +25,13 @@ export const CardModuleCourse = ({ lessons, title, list }:CardModuleCourseProps)
         <div className={styles.titleInfo}>ТЕМЫ МОДУЛЯ</div>
 
         <ul className={styles.listLessons}>
-          {
-            list.map((item, i) => (
-              <li className={styles.itemLessons} key={i}>{item.item}</li>
-            ))
-          }
+          {list.map((item, i) => (
+            <li className={styles.itemLessons} key={i}>
+              {item.item}
+            </li>
+          ))}
         </ul>
       </div>
     </div>
-  )
-}
+  );
+};

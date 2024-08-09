@@ -1,3 +1,3 @@
-import { HeaderCourse } from './HeaderCourse'
+import { HeaderCourse } from './HeaderCourse';
 
-export default HeaderCourse
+export default HeaderCourse;

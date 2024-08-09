@@ -1,4 +1,4 @@
-@import "src/styles/extends";
+@import 'src/styles/extends';
 
 .text {
   color: #000;
@@ -62,7 +62,7 @@
       display: flex;
       gap: 10px;
       border-radius: 12px;
-      background: #FFF;
+      background: #fff;
       padding: 15px;
       margin-top: 40px;
 
@@ -117,7 +117,7 @@
             align-items: center;
             gap: 5px;
             border-radius: 8px;
-            background: #FFF;
+            background: #fff;
             padding: 10px;
 
             @media (max-width: 769px) {
@@ -127,13 +127,12 @@
         }
       }
 
-
       .filterTypeProgram {
         position: absolute;
         z-index: 100;
         width: 333px;
         border-radius: 8px;
-        background: #FFF;
+        background: #fff;
         padding: 10px;
         margin-top: 16px;
         display: flex;
@@ -152,7 +151,6 @@
             border-radius: 8px;
 
             &:checked {
-
             }
           }
         }

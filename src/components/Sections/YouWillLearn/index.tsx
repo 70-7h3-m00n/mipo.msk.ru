@@ -1,3 +1,3 @@
-import { YouWillLearn } from './YouWillLearn'
+import { YouWillLearn } from './YouWillLearn';
 
-export default YouWillLearn
+export default YouWillLearn;

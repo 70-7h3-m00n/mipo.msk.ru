@@ -1,10 +1,12 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import { hydrate } from '../store'
-import { HYDRATE } from 'next-redux-wrapper'
-import { ITeacher } from '@/api/fetchFaq/types'
+import type { PayloadAction } from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit';
+import { HYDRATE } from 'next-redux-wrapper';
+
+import type { ITeacher } from '@/api/fetchFaq/types';
+import type { hydrate } from '@/state/store';
 
 interface FaqDataState {
-  faqData: Array<ITeacher> | []
+  faqData: Array<ITeacher> | [];
 }
 
 const initialState: FaqDataState = {
@@ -15,22 +17,22 @@ export const faq = createSlice({
   name: 'faqData',
   initialState,
   reducers: {
-    setDataFaq(state, action: PayloadAction<ITeacher[]>) {
-      state.faqData = action.payload
+    setDataFaq(state, action: PayloadAction<Array<ITeacher>>) {
+      state.faqData = action.payload;
     },
   },
-  extraReducers: (builder) => {
+  extraReducers: builder => {
     builder.addCase(HYDRATE, (state, action) => {
-      const hydrateAction = action as ReturnType<typeof hydrate>
+      const hydrateAction = action as ReturnType<typeof hydrate>;
 
       return {
         ...state,
         ...hydrateAction.payload.faqReducer,
-      }
-    })
+      };
+    });
   },
-})
+});
 
 export const { setDataFaq } = faq.actions;
 
-export default faq.reducer
+export default faq.reducer;

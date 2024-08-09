@@ -1,3 +1,3 @@
-import { TrustTraining } from './TrustTraining'
+import { TrustTraining } from './TrustTraining';
 
-export default TrustTraining
+export default TrustTraining;

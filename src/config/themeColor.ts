@@ -1,3 +1,3 @@
-const themeColor = '#002C9F'
+const themeColor = '#002C9F';
 
-export default themeColor
+export default themeColor;

@@ -1,3 +1,3 @@
-import { HeaderMobile } from './HeaderMobile'
+import { HeaderMobile } from './HeaderMobile';
 
-export default HeaderMobile
+export default HeaderMobile;

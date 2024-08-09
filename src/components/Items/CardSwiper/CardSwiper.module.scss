@@ -1,9 +1,9 @@
-@import "src/styles/extends";
+@import 'src/styles/extends';
 
 .itemEvaluation {
   width: 630px;
   border-radius: 20px;
-  background: #FFF;
+  background: #fff;
   padding: 40px 30px;
   display: flex;
   flex-direction: column;
@@ -46,7 +46,7 @@
 }
 
 .counter {
-  color: #3F3BFF;
+  color: #3f3bff;
   text-align: center;
   font-size: 64px;
   font-style: normal;
@@ -71,7 +71,7 @@
 .wrapperBottom {
   min-width: 230px;
   border-radius: 20px;
-  background: #3F3BFF;
+  background: #3f3bff;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -89,7 +89,7 @@
       gap: 6px;
 
       .text {
-        color: #FFF;
+        color: #fff;
         text-align: center;
         font-size: 38px;
         font-style: normal;
@@ -105,7 +105,7 @@
     }
 
     .reviewsCounter {
-      color: #FFF;
+      color: #fff;
       text-align: center;
       margin-top: 5px;
       @extend %text;

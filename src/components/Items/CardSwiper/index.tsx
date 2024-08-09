@@ -1,3 +1,3 @@
-import { CardSwiper } from './CardSwiper'
+import { CardSwiper } from './CardSwiper';
 
-export default CardSwiper
+export default CardSwiper;

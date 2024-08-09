@@ -1,3 +1,3 @@
-import { TeachersMentors } from './TeachersMentors'
+import { TeachersMentors } from './TeachersMentors';
 
-export default TeachersMentors
+export default TeachersMentors;

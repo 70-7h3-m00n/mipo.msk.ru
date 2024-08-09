@@ -1,3 +1,3 @@
-import { CardCounter } from './CardCounter'
+import { CardCounter } from './CardCounter';
 
-export default CardCounter
+export default CardCounter;

@@ -1,10 +1,12 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import { hydrate } from '@/state/store'
-import { HYDRATE } from 'next-redux-wrapper'
-import { IProgramCourse } from '@/api/fetchProgramCourse/types'
+import type { PayloadAction } from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit';
+import { HYDRATE } from 'next-redux-wrapper';
+
+import type { IProgramCourse } from '@/api/fetchProgramCourse/types';
+import type { hydrate } from '@/state/store';
 
 interface CourseDataState {
-  courseData: IProgramCourse | null
+  courseData: IProgramCourse | null;
 }
 
 const initialState: CourseDataState = {
@@ -16,21 +18,21 @@ export const courseSlice = createSlice({
   initialState,
   reducers: {
     setDataCourse(state, action: PayloadAction<IProgramCourse>) {
-      state.courseData = action.payload
+      state.courseData = action.payload;
     },
   },
-  extraReducers: (builder) => {
+  extraReducers: builder => {
     builder.addCase(HYDRATE, (state, action) => {
-      const hydrateAction = action as ReturnType<typeof hydrate>
+      const hydrateAction = action as ReturnType<typeof hydrate>;
 
       return {
         ...state,
         ...hydrateAction.payload.courseReducer,
-      }
-    })
+      };
+    });
   },
-})
+});
 
 export const { setDataCourse } = courseSlice.actions;
 
-export default courseSlice.reducer
+export default courseSlice.reducer;

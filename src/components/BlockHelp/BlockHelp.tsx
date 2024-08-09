@@ -1,8 +1,10 @@
-import styles from './BlockHelp.module.scss'
-import ButtonLink from '../ButtonLink'
-import Image from 'next/image'
-import url from '../../assets/image/puzzles.png'
-import Link from 'next/link'
+import Image from 'next/image';
+import Link from 'next/link';
+
+import url from '@/assets/image/puzzles.png';
+import ButtonLink from '@/components/ButtonLink';
+
+import styles from './BlockHelp.module.scss';
 
 export const BlockHelp = () => {
   return (
@@ -18,19 +20,24 @@ export const BlockHelp = () => {
 
         <input placeholder={'Промокод'} />
 
-        <ButtonLink text={'подобрать программу'}
-                    className={styles.btnSubmit}
-                    styleOption={'square'}
-                    style={{
-                      backgroundColor: 'black',
-                      color: 'white'
-                    }}
+        <ButtonLink
+          text={'подобрать программу'}
+          className={styles.btnSubmit}
+          styleOption={'square'}
+          style={{
+            backgroundColor: 'black',
+            color: 'white',
+          }}
         />
       </form>
 
       <div className={styles.textPolitic}>
         Оформляя заявку, я согласен &nbsp;
-        <Link className={styles.linkPolitic} href={'/policies/privacy.pdf'} target={'_blank'} >
+        <Link
+          className={styles.linkPolitic}
+          href={'/policies/privacy.pdf'}
+          target={'_blank'}
+        >
           с политикой конфиденциальности и офертой
         </Link>
       </div>
@@ -39,5 +46,5 @@ export const BlockHelp = () => {
         <Image sizes={''} src={url} alt={'image'} fill />
       </div>
     </div>
-  )
-}
+  );
+};

@@ -13,7 +13,7 @@ module.exports = {
       priority: config.priority,
       lastmod: config.autoLastmod ? new Date().toISOString() : undefined,
       alternateRefs: config.alternateRefs ?? [],
-    }
+    };
   },
   robotsTxtOptions: {
     policies: [
@@ -21,7 +21,7 @@ module.exports = {
         userAgent: '*',
         disallow: '/*?',
         sitemaps: ['http://localhost:3000/sitemap.xml'],
-      }
-    ]
-  }
-}
+      },
+    ],
+  },
+};

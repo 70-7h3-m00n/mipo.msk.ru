@@ -1,3 +1,3 @@
-import { CardTeacher } from './CardTeacher'
+import { CardTeacher } from './CardTeacher';
 
-export default CardTeacher
+export default CardTeacher;

@@ -3,7 +3,7 @@ module.exports = {
   i18n: {
     locales: ['ru'],
     defaultLocale: 'ru',
-    localeDetection: false
+    localeDetection: false,
   },
   images: {
     domains: ['res.cloudinary.com', 'api.instprof.online'],
@@ -21,4 +21,4 @@ module.exports = {
       ],
     },
   },
-}
+};

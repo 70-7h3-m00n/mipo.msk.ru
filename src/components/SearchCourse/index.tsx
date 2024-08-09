@@ -1,3 +1,3 @@
-import { SearchCourse } from "./SearchCourse";
+import { SearchCourse } from './SearchCourse';
 
 export default SearchCourse;

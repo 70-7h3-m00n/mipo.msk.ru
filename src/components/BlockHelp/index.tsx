@@ -1,3 +1,3 @@
-import { BlockHelp } from './BlockHelp'
+import { BlockHelp } from './BlockHelp';
 
-export default BlockHelp
+export default BlockHelp;

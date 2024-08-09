@@ -1,6 +1,6 @@
-const AFFISE_UTM_CAMPAIGN = 'affiliate'
+const AFFISE_UTM_CAMPAIGN = 'affiliate';
 
 const checkIsAffiseUtmCampaign = (str: string | undefined) =>
-  str === AFFISE_UTM_CAMPAIGN
+  str === AFFISE_UTM_CAMPAIGN;
 
-export default checkIsAffiseUtmCampaign
+export default checkIsAffiseUtmCampaign;

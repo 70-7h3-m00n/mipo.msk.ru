@@ -1,3 +1,3 @@
-import { SignUpProgram } from './SignUpProgram'
+import { SignUpProgram } from './SignUpProgram';
 
-export default SignUpProgram
+export default SignUpProgram;

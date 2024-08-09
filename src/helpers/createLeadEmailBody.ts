@@ -1,18 +1,21 @@
-import { buildLeadEmailTbodyTrs } from './buildLeadEmailTbodyTrs'
-import { buildLeadData } from './buildLeadData'
-import { createLeadEmailTr } from './createLeadEmailTr'
+import type { buildLeadData } from './buildLeadData';
+import { buildLeadEmailTbodyTrs } from './buildLeadEmailTbodyTrs';
+import { createLeadEmailTr } from './createLeadEmailTr';
 
 type TypeCreateLeadEmailBodyProps = {
-    data: Awaited<ReturnType<typeof buildLeadData>>
-    subject: string
-}
+  data: Awaited<ReturnType<typeof buildLeadData>>;
+  subject: string;
+};
 
-export const createLeadEmailBody = ({ data, subject }: TypeCreateLeadEmailBodyProps) => {
-    const tbodyTrs = buildLeadEmailTbodyTrs({ data })
+export const createLeadEmailBody = ({
+  data,
+  subject,
+}: TypeCreateLeadEmailBodyProps) => {
+  const tbodyTrs = buildLeadEmailTbodyTrs({ data });
 
-    const themeColor = '#000000'
+  const themeColor = '#000000';
 
-    const output = /* html */ `
+  const output = /* html */ `
     <!DOCTYPE html>
     <html lang="ru">
       <head>
@@ -80,8 +83,6 @@ export const createLeadEmailBody = ({ data, subject }: TypeCreateLeadEmailBodyPr
         </table>
       </body>
     </html>
-  `
-    return output
-}
-
-export default createLeadEmailBody
+  `;
+  return output;
+};

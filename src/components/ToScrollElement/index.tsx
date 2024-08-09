@@ -1,3 +1,3 @@
-import { ToScrollElement } from './ToScrollElement'
+import { ToScrollElement } from './ToScrollElement';
 
-export default ToScrollElement
+export default ToScrollElement;

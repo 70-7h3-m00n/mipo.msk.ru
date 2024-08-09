@@ -1,29 +1,28 @@
-
 export interface IFetchFaculty {
-  data: IFaculty[]
-  meta: IMeta
+  data: Array<IFaculty>;
+  meta: IMeta;
 }
 
 export interface IFaculty {
-  id: number
-  title: string
-  slug: string
-  image : IImage[]
-  icon: IImage[]
+  id: number;
+  title: string;
+  slug: string;
+  image: Array<IImage>;
+  icon: Array<IImage>;
 }
 
 export interface IImage {
-  id: number
-  url: string
+  id: number;
+  url: string;
 }
 
 export interface IMeta {
-  pagination: IPagination
+  pagination: IPagination;
 }
 
 export interface IPagination {
-  page: number
-  pageSize: number
-  pageCount: number
-  total: number
+  page: number;
+  pageSize: number;
+  pageCount: number;
+  total: number;
 }

@@ -1,36 +1,37 @@
-import styles from '../HeaderDefault/HeaderDefault.module.scss'
-import HeaderMobile from '@/new-components/HeaderMobile'
-import Link from 'next/link'
-import LogoSvg from '../../SvgComponents/LogoSvg'
-import ToScrollElement from '@/new-components/ToScrollElement'
+import Link from 'next/link';
+
+import styles from '@/components/HeaderDefault/HeaderDefault.module.scss';
+import HeaderMobile from '@/components/HeaderMobile';
+import ToScrollElement from '@/components/ToScrollElement';
+import LogoSvg from '@/SvgComponents/LogoSvg';
 
 const arrayScrollBlock = [
   {
     id: 'learningProcess',
-    text: 'ПРОЦЕСС ОБУЧЕНИЯ'
+    text: 'ПРОЦЕСС ОБУЧЕНИЯ',
   },
   {
     id: 'curriculum',
-    text: 'учебный план'
+    text: 'учебный план',
   },
   {
     id: 'teachers',
-    text: 'Преподаватели'
+    text: 'Преподаватели',
   },
   {
     id: 'cost',
-    text: 'Стоимость'
+    text: 'Стоимость',
   },
   {
     id: 'reviews',
-    text: 'Отзывы'
-  }
-]
+    text: 'Отзывы',
+  },
+];
 
 export const HeaderCourse = () => {
   return (
     <header className={styles.wrapperRelative}>
-      <div className={ 'container'}>
+      <div className={'container'}>
         <div className={styles.header}>
           <nav className={styles.menuCourse}>
             <div className={styles.blockLeft}>
@@ -40,13 +41,11 @@ export const HeaderCourse = () => {
             </div>
 
             <div className={styles.blockMid}>
-              {
-                arrayScrollBlock.map((item) => (
-                  <ToScrollElement idElement={item.id} key={item.id}>
-                    <div className={styles.text}>{item.text}</div>
-                  </ToScrollElement>
-                ))
-              }
+              {arrayScrollBlock.map(item => (
+                <ToScrollElement idElement={item.id} key={item.id}>
+                  <div className={styles.text}>{item.text}</div>
+                </ToScrollElement>
+              ))}
             </div>
 
             <div className={styles.blockRight}>
@@ -60,5 +59,5 @@ export const HeaderCourse = () => {
         <HeaderMobile />
       </div>
     </header>
-  )
-}
+  );
+};

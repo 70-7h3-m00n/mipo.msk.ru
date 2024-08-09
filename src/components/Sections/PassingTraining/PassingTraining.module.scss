@@ -1,4 +1,4 @@
-@import "src/styles/extends";
+@import 'src/styles/extends';
 
 .wrapperContent {
   display: flex;
@@ -22,7 +22,7 @@
   }
 
   @media (max-width: 1810px) {
-    min-width:855px;
+    min-width: 855px;
   }
   @media (max-width: 1600px) {
     min-width: 681px;
@@ -54,7 +54,7 @@
 }
 
 .activeItem {
-  background: #FFF;
+  background: #fff;
   cursor: default;
   opacity: 1;
 }

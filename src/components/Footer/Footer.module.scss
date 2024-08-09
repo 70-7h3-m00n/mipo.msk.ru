@@ -1,7 +1,7 @@
-@import "src/styles/extends";
+@import 'src/styles/extends';
 
 .footer {
-  color: #FFF;
+  color: #fff;
   border-radius: 40px;
   background: #020055;
   padding: 100px 0 0;
@@ -21,7 +21,7 @@
 }
 
 .text {
-  color: #FFF;
+  color: #fff;
   @extend %footer;
 }
 
@@ -33,7 +33,7 @@
 
   .logo {
     font-size: 46px;
-    color: #FFF;
+    color: #fff;
   }
 
   .wrapperMessenger {
@@ -51,11 +51,12 @@
       width: auto;
     }
 
-    .telegramLink, .vkLink {
+    .telegramLink,
+    .vkLink {
       width: 35px;
       height: 35px;
       border-radius: 8px;
-      border: 1px solid #FFF;
+      border: 1px solid #fff;
       padding: 7px;
       display: flex;
       justify-content: center;
@@ -77,16 +78,14 @@
 }
 
 .mid {
-  border-top: 1px solid #FFF;
-  border-bottom: 1px solid #FFF;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
   padding: 40px 0 64px 0;
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1fr;
   align-items: start;
   grid-gap: 50px;
-  grid-template-areas:
-  "block_1 block_2 block_3 block_4"
-;
+  grid-template-areas: 'block_1 block_2 block_3 block_4';
 
   @media (max-width: 1600px) {
     grid-gap: 20px;
@@ -97,10 +96,9 @@
     grid-gap: 50px;
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
-    "block_1 block_1"
-    "block_2 block_3 "
-    "block_4 block_4"
-  ;
+      'block_1 block_1'
+      'block_2 block_3 '
+      'block_4 block_4';
   }
 
   @media (max-width: 769px) {
@@ -147,7 +145,7 @@
       width: 55px;
       height: 55px;
       border-radius: 15px;
-      background: #FFF;
+      background: #fff;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -161,7 +159,7 @@
 
   .block_4 {
     grid-area: block_4;
-    color: #FFF;
+    color: #fff;
 
     @media (max-width: 979px) {
       width: 100%;
@@ -181,7 +179,7 @@
       color: #000;
       text-transform: uppercase;
       border-radius: 8px;
-      background:  #FFF;
+      background: #fff;
       text-align: center;
       padding: 15px 45px;
       cursor: pointer;
@@ -201,13 +199,13 @@
   padding: 40px 0;
 
   .text {
-    color: #FFF;
+    color: #fff;
     opacity: 0.5;
     @extend %footer;
   }
 
   @media (max-width: 769px) {
-   flex-direction: column;
+    flex-direction: column;
     gap: 15px;
     padding: 20px 0;
   }

@@ -1,31 +1,35 @@
-import styles from './Portfolio.module.scss'
-import Image from 'next/image'
-import { IImage } from '@/api/fetchProgramCourse/types'
-import classNames from 'classnames'
-import { BannerDiscount } from '../../BannerDiscount/BannerDiscount'
-import React, { useState } from 'react'
-import Modal from '@/new-components/Modal'
-import ApplicationsContent from '@/new-components/ApplicationsContent'
+import classNames from 'classnames';
+import Image from 'next/image';
+import { useState } from 'react';
 
-interface PortfolioProps {
+import type { IImage } from '@/api/fetchProgramCourse/types';
+import ApplicationsContent from '@/components/ApplicationsContent';
+import { BannerDiscount } from '@/components/BannerDiscount/BannerDiscount';
+import Modal from '@/components/Modal';
+
+import styles from './Portfolio.module.scss';
+
+type PortfolioProps = {
   portfolio: {
-    profession: string
-    cost: string
-    description: string
-    skills: {
-      item: string
-    }[]
-    image: IImage
-  }
-  courseName: string
-}
+    profession: string;
+    cost: string;
+    description: string;
+    skills: Array<{
+      item: string;
+    }>;
+    image: IImage;
+  };
+  courseName: string;
+};
 
-export const Portfolio = ({ portfolio, courseName }:PortfolioProps) => {
-  const [openPopUp, setOpenPopUp] = useState(false)
+export const Portfolio = ({ portfolio, courseName }: PortfolioProps) => {
+  const [openPopUp, setOpenPopUp] = useState(false);
 
   return (
     <section className={'container'}>
-      <h2 className={'header'}>ваше портфолио <br/> после обучения</h2>
+      <h2 className={'header'}>
+        ваше портфолио <br /> после обучения
+      </h2>
 
       <div className={styles.portfolio}>
         <div className={styles.wrapperHeader}>
@@ -62,11 +66,11 @@ export const Portfolio = ({ portfolio, courseName }:PortfolioProps) => {
           <h3 className={styles.header}>навыки</h3>
 
           <ul className={styles.list}>
-            {
-              portfolio.skills.slice(0, 5).map((item, i) => (
-                <li className={styles.textSmall} key={i}>{item.item}</li>
-              ))
-            }
+            {portfolio.skills.slice(0, 5).map((item, i) => (
+              <li className={styles.textSmall} key={i}>
+                {item.item}
+              </li>
+            ))}
           </ul>
         </div>
       </div>
@@ -77,5 +81,5 @@ export const Portfolio = ({ portfolio, courseName }:PortfolioProps) => {
         <ApplicationsContent title={'связаться с менджером'} />
       </Modal>
     </section>
-  )
-}
+  );
+};

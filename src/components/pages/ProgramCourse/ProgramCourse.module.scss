@@ -1,4 +1,4 @@
-@import "src/styles/extends";
+@import 'src/styles/extends';
 
 .listCourseFor {
   display: grid;
@@ -16,7 +16,7 @@
 
   .cardCourseFor {
     border-radius: 20px;
-    background: #FFF;
+    background: #fff;
     padding: 40px 40px 40px 30px;
 
     @media (max-width: 769px) {
@@ -54,7 +54,6 @@
 
   .headerTraining {
     margin: 0;
-
   }
 
   .descrTraining {

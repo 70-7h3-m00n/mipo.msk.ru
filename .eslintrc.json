@@ -1,14 +1,9 @@
 {
   "extends": "prettier",
-  "ignorePatterns": ["storybook-static/**"],
   "overrides": [
     {
       "files": ["public/**/*.js"],
       "env": { "browser": true }
-    },
-    {
-      "files": ["components/**/*.stories.tsx"],
-      "extends": "plugin:storybook/recommended"
     },
     {
       "files": ["**/{__tests__,__mocks__}/*.mjs"],
@@ -39,6 +34,14 @@
             }
           }
         ]
+      },
+      "settings": {
+        "import/resolver": {
+          "alias": {
+            "map": [["@", "./src"]],
+            "extensions": [".js", ".jsx", ".ts", ".tsx"]
+          }
+        }
       }
     },
     {

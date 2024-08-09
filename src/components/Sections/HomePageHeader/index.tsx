@@ -1,3 +1,3 @@
-import { HomePageHeader } from './HomePageHeader'
+import { HomePageHeader } from './HomePageHeader';
 
-export default HomePageHeader
+export default HomePageHeader;

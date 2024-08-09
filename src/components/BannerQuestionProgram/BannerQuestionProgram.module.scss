@@ -1,8 +1,8 @@
-@import "src/styles/extends";
+@import 'src/styles/extends';
 
 .bannerQuestionProgram {
   border-radius: 25px;
-  background: #3F3BFF;
+  background: #3f3bff;
   padding: 100px 30px;
   overflow: hidden;
   position: relative;
@@ -38,7 +38,7 @@
       z-index: 10;
 
       .header {
-        color: #FFF;
+        color: #fff;
         font-family: Unbounded;
         font-size: 38px;
         font-weight: 500;
@@ -59,7 +59,7 @@
       }
 
       .subHeader {
-        color:  #FFF;
+        color: #fff;
         font-size: 18px;
         font-weight: 500;
       }
@@ -74,7 +74,7 @@
 
       .btn {
         background: #000;
-        color: #FFF;
+        color: #fff;
 
         @media (max-width: 1290px) {
           width: 100%;
@@ -114,7 +114,6 @@
     }
 
     @media (max-width: 1290px) {
-
       .image1 {
         top: -340px;
         right: -80px;

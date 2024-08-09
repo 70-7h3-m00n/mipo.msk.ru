@@ -1,3 +1,3 @@
-import { ApplicationsContent } from './ApplicationsContent'
+import { ApplicationsContent } from './ApplicationsContent';
 
-export default ApplicationsContent
+export default ApplicationsContent;

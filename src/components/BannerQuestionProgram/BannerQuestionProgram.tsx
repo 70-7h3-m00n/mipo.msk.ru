@@ -1,16 +1,20 @@
-import styles from './BannerQuestionProgram.module.scss'
-import ButtonLink from '@/new-components/ButtonLink'
-import Image from 'next/image'
-import url1 from '@/assets/image/t.png'
-import url2 from '@/assets/image/dumbbellsFull.png'
-import url3 from '@/assets/image/mouthpiece.png'
-import React from 'react'
+import Image from 'next/image';
+import type { Dispatch, SetStateAction } from 'react';
 
-interface BannerQuestionProgramProps {
-  setOpenPopUp: React.Dispatch<React.SetStateAction<boolean>>
-}
+import url2 from '@/assets/image/dumbbellsFull.png';
+import url3 from '@/assets/image/mouthpiece.png';
+import url1 from '@/assets/image/t.png';
+import ButtonLink from '@/components/ButtonLink';
 
-export const BannerQuestionProgram = ({ setOpenPopUp } : BannerQuestionProgramProps) => {
+import styles from './BannerQuestionProgram.module.scss';
+
+type BannerQuestionProgramProps = {
+  setOpenPopUp: Dispatch<SetStateAction<boolean>>;
+};
+
+export const BannerQuestionProgram = ({
+  setOpenPopUp,
+}: BannerQuestionProgramProps) => {
   return (
     <div className={styles.bannerQuestionProgram}>
       <div className={styles.grid}>
@@ -18,16 +22,17 @@ export const BannerQuestionProgram = ({ setOpenPopUp } : BannerQuestionProgramPr
           <h3 className={styles.header}>ВОПРОС ПО ПРОГРАММЕ</h3>
 
           <h4 className={styles.subHeader}>
-            Остались вопросы по программе или конкретному модулю?
-            Напишите нам в форме обратной связи.
+            Остались вопросы по программе или конкретному модулю? Напишите нам в
+            форме обратной связи.
           </h4>
         </div>
 
         <div className={styles.wrapperBtn}>
-          <ButtonLink className={styles.btn}
-                      text={'вопрос по программе'}
-                      onClick={() => setOpenPopUp(true)}
-                      styleOption={'square'}
+          <ButtonLink
+            className={styles.btn}
+            text={'вопрос по программе'}
+            onClick={() => setOpenPopUp(true)}
+            styleOption={'square'}
           />
         </div>
       </div>
@@ -40,5 +45,5 @@ export const BannerQuestionProgram = ({ setOpenPopUp } : BannerQuestionProgramPr
         <Image className={styles.image3} src={url3} alt={'image'} />
       </div>
     </div>
-  )
-}
+  );
+};

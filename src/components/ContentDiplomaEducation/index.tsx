@@ -1,3 +1,3 @@
-import { ContentDiplomaEducation } from './ContentDiplomaEducation'
+import { ContentDiplomaEducation } from './ContentDiplomaEducation';
 
-export default ContentDiplomaEducation
+export default ContentDiplomaEducation;

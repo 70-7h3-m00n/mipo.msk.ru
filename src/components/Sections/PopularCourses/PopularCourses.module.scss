@@ -1,4 +1,4 @@
-@import "src/styles/extends";
+@import 'src/styles/extends';
 
 .wrapperSlider {
   position: relative;
@@ -25,7 +25,7 @@
 
 .bg {
   border-radius: 40px;
-  background: #3F3BFF;
+  background: #3f3bff;
   @extend %marginSection;
 }
 
@@ -40,7 +40,7 @@
   }
 
   .headerIAboutInstitute {
-    color: #FFF;
+    color: #fff;
     text-align: center;
     margin: 0;
     @extend %header;
@@ -49,11 +49,11 @@
   .titleIAboutInstitute {
     width: 1202px;
     margin: 40px auto 0 auto;
-    color: #FFF;
+    color: #fff;
     text-align: center;
     @extend %text;
 
-    @media (max-width: 1310px){
+    @media (max-width: 1310px) {
       width: 100%;
     }
     @media (max-width: 979px) {
@@ -87,10 +87,10 @@
       @media (max-width: 1290px) {
         width: calc(50% - 10px);
       }
-      @media (max-width: 979px){
+      @media (max-width: 979px) {
         margin: 0;
       }
-      @media (max-width: 769px){
+      @media (max-width: 769px) {
         width: 100%;
         padding: 20px;
       }

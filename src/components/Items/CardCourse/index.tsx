@@ -1,3 +1,3 @@
-import { CardCourse } from './CardCourse'
+import { CardCourse } from './CardCourse';
 
-export default CardCourse
+export default CardCourse;

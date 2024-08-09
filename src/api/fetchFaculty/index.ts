@@ -1,26 +1,25 @@
-import qs from 'qs'
-import fetcherGet from '../../helpers/fetcherGet'
-import routesBack from '../../config/routesBack'
-import { IFetchFaculty } from './type'
+import qs from 'qs';
+
+import routesBack from '@/config/routesBack';
+import { fetcherGet } from '@/helpers/fetcherGet';
+
+import type { IFetchFaculty } from './type';
 
 export const fetchFaculty = async () => {
   const query = qs.stringify({
-    fields: [
-      'title',
-      'slug'
-    ],
+    fields: ['title', 'slug'],
     populate: {
-      image:{
+      image: {
         fields: ['url'],
       },
-      icon:{
+      icon: {
         fields: ['url'],
       },
-    }
-  })
-  const res = await fetcherGet<IFetchFaculty>(`${routesBack.newRoot}${'/api/faculties'}?${query}`)
+    },
+  });
+  const res = await fetcherGet<IFetchFaculty>(
+    `${routesBack.newRoot}${'/api/faculties'}?${query}`
+  );
 
-  return res?.data || []
-}
-
-export default fetchFaculty
+  return res?.data || [];
+};

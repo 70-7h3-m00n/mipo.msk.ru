@@ -1,13 +1,14 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
-import { createWrapper, HYDRATE } from 'next-redux-wrapper'
+import { createWrapper, HYDRATE } from 'next-redux-wrapper';
+
+import courseReducer from './reducers/Course';
+import coursesReducer from './reducers/Courses';
+import facultyReducer from './reducers/Faculty';
 import faqReducer from './reducers/Faq';
-import facultyReducer from './reducers/Faculty'
-import typeProgramReducer from './reducers/TypeProgram'
-import coursesReducer from './reducers/Courses'
-import teacherReducer from './reducers/Teacher'
-import studentCommentReducer from './reducers/StudentComment'
-import trustTrainingReducer from './reducers/TrustTraining'
-import courseReducer from './reducers/Course'
+import studentCommentReducer from './reducers/StudentComment';
+import teacherReducer from './reducers/Teacher';
+import trustTrainingReducer from './reducers/TrustTraining';
+import typeProgramReducer from './reducers/TypeProgram';
 
 const rootReducer = combineReducers({
   faqReducer,
@@ -17,24 +18,25 @@ const rootReducer = combineReducers({
   teacherReducer,
   studentCommentReducer,
   trustTrainingReducer,
-  courseReducer
+  courseReducer,
 });
 
 // Создание и экспорт store
-export const makeStore = () => configureStore({
-  reducer: rootReducer,
-});
+export const makeStore = () =>
+  configureStore({
+    reducer: rootReducer,
+  });
 
 // Типизация
 export type RootState = ReturnType<typeof rootReducer>;
 export type AppStore = ReturnType<typeof makeStore>;
-export type AppDispatch = AppStore['dispatch']
+export type AppDispatch = AppStore['dispatch'];
 
 // Определение действия HYDRATE
 export const hydrate = (payload: RootState) => ({
   type: HYDRATE,
   payload,
-})
+});
 
 // Создание и экспорт обертки
 export const wrapper = createWrapper<AppStore>(makeStore);

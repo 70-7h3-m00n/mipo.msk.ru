@@ -1,4 +1,4 @@
-@import "src/styles/extends";
+@import 'src/styles/extends';
 
 .header {
   width: 50%;
@@ -29,14 +29,14 @@
   }
 
   .cardLearningProfessions,
-  .cardLearningProfessionsImage{
+  .cardLearningProfessionsImage {
     border-radius: 20px;
-    background: #FFF;
+    background: #fff;
     padding: 40px 40px 40px 30px;
     overflow: hidden;
 
     .wrapperImageEven,
-    .wrapperImageNotEven{
+    .wrapperImageNotEven {
       position: relative;
       width: 90px;
       height: 90px;
@@ -81,11 +81,11 @@
     position: relative;
     padding: 0;
 
-    @media (max-width: 769px){
+    @media (max-width: 769px) {
       height: 300px;
     }
 
-    @media (max-width: 569px){
+    @media (max-width: 569px) {
       height: 200px;
     }
 

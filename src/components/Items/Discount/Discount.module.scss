@@ -1,10 +1,10 @@
-@import "src/styles/extends";
+@import 'src/styles/extends';
 
 .wrapperDiscount {
   display: flex;
   justify-content: space-between;
   border-radius: 12px;
-  background: #F4F4F4;
+  background: #f4f4f4;
   padding: 15px 30px;
   @extend %marginBlock;
 
@@ -32,7 +32,7 @@
     }
 
     .textPrice {
-      color: #3F3BFF;
+      color: #3f3bff;
       font-family: Unbounded;
       font-size: 48px;
       font-style: normal;
@@ -74,7 +74,7 @@
       top: 20px;
       right: 10px;
       z-index: 10;
-      color: #FFF;
+      color: #fff;
       font-family: Manrope;
       font-size: 14px;
       font-style: normal;

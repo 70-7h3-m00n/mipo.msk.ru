@@ -1,25 +1,22 @@
-import styles from './LayoutApp.module.scss'
-import Footer from '@/new-components/Footer'
-import React from 'react'
-import { HeaderApp } from '../HeaderApp/HeaderApp'
+import type { ReactNode } from 'react';
 
-interface LayoutAppProps {
-  children: React.ReactNode
-}
+import Footer from '@/components/Footer';
+import { HeaderApp } from '@/components/HeaderApp/HeaderApp';
 
-export const LayoutApp = ({ children }:LayoutAppProps) => {
+import styles from './LayoutApp.module.scss';
 
+type LayoutAppProps = {
+  children: ReactNode;
+};
+
+export const LayoutApp = ({ children }: LayoutAppProps) => {
   return (
     <>
       <HeaderApp />
 
-      <div className={styles.layoutApp}>
-        {
-          children
-        }
-      </div>
+      <div className={styles.layoutApp}>{children}</div>
 
       <Footer />
     </>
-  )
-}
+  );
+};

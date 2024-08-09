@@ -1,3 +1,3 @@
-import { BannerDiscount } from './BannerDiscount'
+import { BannerDiscount } from './BannerDiscount';
 
-export default BannerDiscount
+export default BannerDiscount;

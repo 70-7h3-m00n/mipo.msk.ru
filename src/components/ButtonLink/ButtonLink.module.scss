@@ -1,31 +1,31 @@
-@import "src/styles/extends";
+@import 'src/styles/extends';
 
-.btn, .btnActive {
+.btn,
+.btnActive {
   background: white;
-  color:  black;
+  color: black;
   white-space: nowrap;
 
   &:hover {
-    background: #3F3BFF;
-    color: #FFF;
+    background: #3f3bff;
+    color: #fff;
   }
 
   &:disabled {
     color: #828282;
-    background: #CCC;
+    background: #ccc;
   }
 }
 
 .btnActive {
-  background: #3F3BFF;
-  color: #FFF;
+  background: #3f3bff;
+  color: #fff;
 }
 
 .round {
   padding: 10px 20px;
   border-radius: 30px;
   @extend %titleText;
-
 }
 
 .square {

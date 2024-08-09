@@ -1,3 +1,3 @@
-import { StudentReviews } from './StudentReviews'
+import { StudentReviews } from './StudentReviews';
 
-export default StudentReviews
+export default StudentReviews;

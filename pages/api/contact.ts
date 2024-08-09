@@ -1,18 +1,16 @@
-import type { NextApiRequest, NextApiResponse } from 'next'
-import nodemailer from 'nodemailer'
-import { dev, UTM_KEYS_OBJ } from '../../src/config'
-import moment from 'moment'
-import axios from 'axios'
-import { getCookie } from 'cookies-next'
+import axios from 'axios';
+import { getCookie } from 'cookies-next';
+import moment from 'moment';
+import type { NextApiRequest, NextApiResponse } from 'next';
+import nodemailer from 'nodemailer';
+
+import { dev } from '@/config/index';
 
 const contact = async (req: NextApiRequest, res: NextApiResponse) => {
-  process.env.TZ = 'Europe/Moscow'
-  // data from the client
-  let {
+  process.env.TZ = 'Europe/Moscow';
+  const {
     id,
-    name,
     phone,
-    email,
     vk,
     contactWay,
     contactMethod,
@@ -24,49 +22,50 @@ const contact = async (req: NextApiRequest, res: NextApiResponse) => {
     referer,
     ymUid,
     promocode,
-    formName
-  } = req.body
+    formName,
+  } = req.body;
+
+  let { email, name } = req.body;
 
   if (name?.includes('@')) {
-    email = name
-    name = ''
+    email = name;
+    name = '';
   }
 
-  const roistatVisit = getCookie('roistat_visit', { req, res })
+  const roistatVisit = getCookie('roistat_visit', { req, res });
 
   axios
     .request({
       method: 'get',
       maxBodyLength: Infinity,
       url: `https://cloud.roistat.com/api/proxy/1.0/leads/add?roistat=${roistatVisit}&key=OTU1ZDc0NjZlN2M3NDkyYzg4ZDdhMWU5MDQ5Y2ZhYzM6MjMyMTk1&title=Новая заявка с сайта&name=${name}&email=${email}&phone=${phone}`,
-      headers: {}
+      headers: {},
     })
     .then(response => {
-      console.log(JSON.stringify(response.data))
+      console.log(JSON.stringify(response.data));
     })
     .catch(error => {
-      console.log(error)
-    })
+      console.log(error);
+    });
 
   // moment init
-  const now = moment()
+  const now = moment();
 
   // get protocol
-  const protocol = req.headers['x-forwarded-proto']
+  const protocol = req.headers['x-forwarded-proto'];
 
   // get referer
   // const referer = req.headers['referer']
 
   // get root path
-  const root = protocol + '://' + req.headers.host
+  const root = protocol + '://' + req.headers.host;
 
   // get ip
   const ip =
     req.headers['x-forwarded-for'] ||
     // req.socket.remoteAddress ||
     req.connection.remoteAddress ||
-    null
-
+    null;
 
   const data = {
     id: id || null,
@@ -93,145 +92,144 @@ const contact = async (req: NextApiRequest, res: NextApiResponse) => {
     utmTerm: (utms && utms.utm_term) || null,
     clUid: utms?.cl_uid || null,
     clickid: clickid || null,
-    formName: formName || null
-  }
+    formName: formName || null,
+  };
 
-  const subject = 'Новая заявка с mipo.msk.ru'
+  const subject = 'Новая заявка с mipo.msk.ru';
 
   const createEmailBody = () => {
-    const createTr = (item : any, idx: number) => {
-      const output = /* html */ `
+    const createTr = (item: { tdKey: string; tdVal: string }, idx: number) => {
+      return `
         <tr id='tr-item-${idx}' class="${idx % 2 === 0 && 'bgOnEven'} ${
-        item.tdKey === 'Телефон' && 'active-row'
-      } ${!(idx + 1) && 'bgBorderHighlight'}">
+          item.tdKey === 'Телефон' && 'active-row'
+        } ${!(idx + 1) && 'bgBorderHighlight'}">
           <td class="counterCell">${idx + 1}</td>
           <td>${item.tdKey}</td>
           <td>${item.tdVal}</td>
         </tr>
-      `
-      return output
-    }
+      `;
+    };
 
     const tbodyTrs = [
       {
         tdKey: 'ID',
-        tdVal: data.id
+        tdVal: data.id,
       },
       {
         tdKey: 'Дата',
-        tdVal: data.date
+        tdVal: data.date,
       },
       {
         tdKey: 'Время',
-        tdVal: data.time
+        tdVal: data.time,
       },
       {
         tdKey: 'UTC',
-        tdVal: data.utc
+        tdVal: data.utc,
       },
       {
         tdKey: 'Имя',
-        tdVal: data.name
+        tdVal: data.name,
       },
       {
         tdKey: 'Телефон',
-        tdVal: data.phone
+        tdVal: data.phone,
       },
       {
         tdKey: 'Почта',
-        tdVal: data.email
+        tdVal: data.email,
       },
       {
         tdKey: 'ВКонтакте',
-        tdVal: data.vk
+        tdVal: data.vk,
       },
       {
         tdKey: 'Промокод',
-        tdVal: data.promocode
+        tdVal: data.promocode,
       },
       {
         tdKey: 'Способ связи',
-        tdVal: data.contactWay
+        tdVal: data.contactWay,
       },
       {
         tdKey: 'Как связаться',
-        tdVal: data.contactMethod
+        tdVal: data.contactMethod,
       },
       {
         tdKey: 'Вопрос',
-        tdVal: data.question
+        tdVal: data.question,
       },
       {
         tdKey: 'Лид сайт',
-        tdVal: data.root
+        tdVal: data.root,
       },
       {
         tdKey: 'Лид страница',
-        tdVal: data.leadPage
+        tdVal: data.leadPage,
       },
       {
         tdKey: 'IP',
-        tdVal: data.ip
+        tdVal: data.ip,
       },
       {
         tdKey: 'Направление',
-        tdVal: data.programTitle
+        tdVal: data.programTitle,
       },
       {
         tdKey: 'Университет',
-        tdVal: null
+        tdVal: null,
       },
       {
         tdKey: 'Google Client ID',
-        tdVal: null
+        tdVal: null,
       },
       {
         tdKey: 'Yandex Metrics ID',
-        tdVal: ymUid
+        tdVal: ymUid,
       },
       {
         tdKey: 'Устройство пользователя',
-        tdVal: null
+        tdVal: null,
       },
       {
         tdKey: 'Источник рекламы',
-        tdVal: data.utmSource
+        tdVal: data.utmSource,
       },
       {
         tdKey: 'Тип трафика',
-        tdVal: data.utmMedium
+        tdVal: data.utmMedium,
       },
       {
         tdKey: 'Название РК',
-        tdVal: data.utmCampaign
+        tdVal: data.utmCampaign,
       },
       {
         tdKey: 'Объявление',
-        tdVal: data.utmContent
+        tdVal: data.utmContent,
       },
       {
         tdKey: 'Ключевое слово',
-        tdVal: data.utmTerm
+        tdVal: data.utmTerm,
       },
       {
         tdKey: 'Affise clUid',
-        tdVal: data.clUid
+        tdVal: data.clUid,
       },
       {
         tdKey: 'Affise clickid',
-        tdVal: data.clickid
+        tdVal: data.clickid,
       },
       {
         tdKey: 'Дубль',
-        tdVal: null
+        tdVal: null,
       },
       {
         tdKey: 'Информация для менеджера по продажам',
-        tdVal: data.formName
-      }
-    ]
+        tdVal: data.formName,
+      },
+    ];
 
-    const output = /* html */ `
+    return `
       <!DOCTYPE html>
       <html lang="ru">
         <head>
@@ -299,11 +297,10 @@ const contact = async (req: NextApiRequest, res: NextApiResponse) => {
           </table>
         </body>
       </html>
-    `
-    return output
-  }
+    `;
+  };
 
-  const html = createEmailBody()
+  const html = createEmailBody();
 
   // const testAccount = await nodemailer.createTestAccount()
 
@@ -315,13 +312,13 @@ const contact = async (req: NextApiRequest, res: NextApiResponse) => {
     logger: true,
     debug: true,
     tls: {
-      rejectUnAuthorized: true
+      rejectUnAuthorized: true,
     },
     auth: {
       user: process.env.SMTP_LOGIN,
-      pass: process.env.SMTP_PASS
-    }
-  })
+      pass: process.env.SMTP_PASS,
+    },
+  });
   //
   try {
     const emailRes = await transporter.sendMail({
@@ -333,16 +330,16 @@ const contact = async (req: NextApiRequest, res: NextApiResponse) => {
       ${phone},
       ${email}
       `, // plain text body
-      html
-    })
+      html,
+    });
 
-    console.log('Message sent: %s', emailRes.messageId)
-    console.log(data.id)
-    res.status(200).json({ status: 200, msg: 'Email is sent' })
+    console.log('Message sent: %s', emailRes.messageId);
+    console.log(data.id);
+    res.status(200).json({ status: 200, msg: 'Email is sent' });
   } catch (err) {
-    res.status(500).json({ status: 500, err, msg: 'Unexpected server error' })
-    console.error(err)
+    res.status(500).json({ status: 500, err, msg: 'Unexpected server error' });
+    console.error(err);
   }
-}
+};
 
-export default contact
+export default contact;

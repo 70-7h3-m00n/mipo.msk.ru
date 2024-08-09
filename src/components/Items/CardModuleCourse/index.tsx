@@ -1,3 +1,3 @@
-import { CardModuleCourse } from './CardModuleCourse'
+import { CardModuleCourse } from './CardModuleCourse';
 
-export default CardModuleCourse
+export default CardModuleCourse;

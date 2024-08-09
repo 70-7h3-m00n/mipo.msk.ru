@@ -1,20 +1,22 @@
-import HomePageHeader from '../src/components/Sections/HomePageHeader'
-import Directions from '../src/components/Sections/Directions'
-import PopularCourses from '../src/components/Sections/PopularCourses'
-import PassingTraining from '../src/components/Sections/PassingTraining'
-import TrustTraining from '../src/components/Sections/TrustTraining'
-import TeachersMentors from '../src/components/Sections/TeachersMentors'
-import StudentReviews from '../src/components/Sections/StudentReviews'
-import Faq from '../src/components/Sections/FAQ'
-import Payment from '../src/components/Sections/Payment'
-import getData, { PagesData } from '../src/services/getData'
-import { useAppSelector } from '@/state/hooks'
+import Directions from '@/components/Sections/Directions';
+import Faq from '@/components/Sections/FAQ';
+import HomePageHeader from '@/components/Sections/HomePageHeader';
+import PassingTraining from '@/components/Sections/PassingTraining';
+import Payment from '@/components/Sections/Payment';
+import PopularCourses from '@/components/Sections/PopularCourses';
+import StudentReviews from '@/components/Sections/StudentReviews';
+import TeachersMentors from '@/components/Sections/TeachersMentors';
+import TrustTraining from '@/components/Sections/TrustTraining';
+import getData, { PagesData } from '@/services/getData';
+import { useAppSelector } from '@/state/hooks';
 
-export const getStaticProps = getData(PagesData.home)
+export const getStaticProps = getData(PagesData.home);
 
 const HomePage = () => {
-  const { studentCommentData} = useAppSelector(state => state.studentCommentReducer)
-  const { faqData} = useAppSelector(state => state.faqReducer)
+  const { studentCommentData } = useAppSelector(
+    state => state.studentCommentReducer
+  );
+  const { faqData } = useAppSelector(state => state.faqReducer);
 
   return (
     <>
@@ -28,7 +30,7 @@ const HomePage = () => {
       <Payment />
       <Faq faqData={faqData} />
     </>
-  )
-}
+  );
+};
 
-export default HomePage
+export default HomePage;

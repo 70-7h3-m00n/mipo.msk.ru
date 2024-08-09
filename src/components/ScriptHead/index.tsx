@@ -1,3 +1,3 @@
-import { ScriptHead } from './ScriptHead'
+import { ScriptHead } from './ScriptHead';
 
-export default ScriptHead
+export default ScriptHead;

@@ -1,11 +1,11 @@
-import { useRouter } from 'next/router'
+import type { useRouter } from 'next/router';
 
 const parseUrlParams = ({
-  router
+  router,
 }: {
-  router: ReturnType<typeof useRouter>
+  router: ReturnType<typeof useRouter>;
 }): Record<string, string> | undefined => {
-  const params: string | undefined = router.asPath.split('?')[1]
+  const params: string | undefined = router.asPath.split('?')[1];
 
   if (params)
     return params
@@ -13,9 +13,9 @@ const parseUrlParams = ({
       .reduce(
         (acc, cur) => ({ ...acc, [cur.split('=')[0]]: cur.split('=')[1] }),
         {}
-      )
+      );
 
-  return undefined
-}
+  return undefined;
+};
 
-export default parseUrlParams
+export default parseUrlParams;

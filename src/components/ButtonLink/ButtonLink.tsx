@@ -1,28 +1,38 @@
-import styles from './ButtonLink.module.scss'
-import { ButtonHTMLAttributes } from 'react'
-import classNames from 'classnames'
-import { useRouter } from 'next/router'
+import classNames from 'classnames';
+import { useRouter } from 'next/router';
+import type { ButtonHTMLAttributes } from 'react';
 
-interface MyButtonProps  extends ButtonHTMLAttributes<HTMLButtonElement> {
-  text: string,
-  active?: boolean,
-  hrefLink?: string
-  styleOption: 'round' | 'square',
-  className?: string
-}
+import styles from './ButtonLink.module.scss';
 
-export const ButtonLink = ({ text, active, hrefLink, styleOption = 'round', className, ...props }: MyButtonProps ) => {
-  const router = useRouter()
+type MyButtonProps = {
+  text: string;
+  active?: boolean;
+  hrefLink?: string;
+  styleOption: 'round' | 'square';
+  className?: string;
+} & ButtonHTMLAttributes<HTMLButtonElement>;
+
+export const ButtonLink = ({
+  text,
+  active,
+  hrefLink,
+  styleOption = 'round',
+  className,
+  ...props
+}: MyButtonProps) => {
+  const router = useRouter();
 
   return (
-    <button className={classNames(
+    <button
+      className={classNames(
         active ? styles.btnActive : styles.btn,
-              styles[styleOption], className
-            )}
-            onClick={() => hrefLink && router.push(hrefLink, '', {scroll: false})}
-            {...props}
+        styles[styleOption],
+        className
+      )}
+      onClick={() => hrefLink && router.push(hrefLink, '', { scroll: false })}
+      {...props}
     >
       {text}
     </button>
-  )
-}
+  );
+};

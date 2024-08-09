@@ -1,15 +1,14 @@
-import CatalogCourses from '../../src/components/pages/CatalogCourses'
-import getData, { PagesData } from '../../src/services/getData'
+import CatalogCourses from '@/components/pages/CatalogCourses';
+import getData, { PagesData } from '@/services/getData';
 
 const CatalogPage = () => {
-
   return (
     <>
       <CatalogCourses />
     </>
-  )
-}
+  );
+};
 
-export const getStaticProps = getData(PagesData.catalog)
+export const getStaticProps = getData(PagesData.catalog);
 
-export default CatalogPage
+export default CatalogPage;

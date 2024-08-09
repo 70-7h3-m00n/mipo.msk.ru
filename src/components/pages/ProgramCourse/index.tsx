@@ -1,3 +1,3 @@
-import { ProgramCourse } from './ProgramCourse'
+import { ProgramCourse } from './ProgramCourse';
 
-export default ProgramCourse
+export default ProgramCourse;

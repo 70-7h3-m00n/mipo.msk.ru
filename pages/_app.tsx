@@ -1,80 +1,70 @@
-import Router from 'next/router'
-import { AppProps } from 'next/app'
-import { FC, useEffect, useState } from 'react'
-import TagManager from 'react-gtm-module'
-import { DefaultSeo, LogoJsonLd } from 'next-seo'
-import SEO from '../seo.config'
-import NProgress from 'nprogress'
-import { v4 as uuidv4 } from 'uuid'
-import { prod, gtmId, routesFront } from '../src/config'
-import useHandleUtms from 'src/hook/useHandleUtms'
-import Scripts from '../src/components/Scripts'
-import { wrapper } from '@/state/store'
-import { Provider } from 'react-redux'
-import { LayoutApp } from '../src/components/LayoutApp/LayoutApp'
+import type { AppProps } from 'next/app';
+import Router from 'next/router';
+import { DefaultSeo, LogoJsonLd } from 'next-seo';
+import NProgress from 'nprogress';
+import type { FC } from 'react';
+import { useEffect } from 'react';
+import TagManager from 'react-gtm-module';
+import { Provider } from 'react-redux';
+import { v4 as uuidv4 } from 'uuid';
 
-import '@/styles/app.scss'
+import { LayoutApp } from '@/components/LayoutApp/LayoutApp';
+import Scripts from '@/components/Scripts';
+import { prod, gtmId, routesFront, dev } from '@/config/index';
+import SEO from '@/config/seo.config';
+import useHandleUtms from '@/hooks/useHandleUtms';
+import { wrapper } from '@/state/store';
 
-const App: FC<AppProps> = ({Component, ...rest}) => {
+import '@/styles/global/app.scss';
+import '@/public/assets/fonts/manrope/stylesheet.css';
+import '@/public/assets/fonts/unbounded/stylesheet.css';
+
+const App: FC<AppProps> = ({ Component, ...rest }) => {
   const { store, props } = wrapper.useWrappedStore(rest);
-  const [loading, setLoading] = useState(false)
 
-  const userUuid = uuidv4()
+  const userUuid = uuidv4();
 
-  useHandleUtms()
+  useHandleUtms();
 
   useEffect(() => {
-    TagManager.initialize({ gtmId, dataLayerName: 'dataLayer' })
+    TagManager.initialize({ gtmId, dataLayerName: 'dataLayer' });
 
-    const referer = sessionStorage.getItem('referrer')
+    const referer = sessionStorage.getItem('referrer');
     if (!referer) {
-      sessionStorage.setItem('referer', JSON.stringify(document.referrer))
+      sessionStorage.setItem('referer', JSON.stringify(document.referrer));
     }
 
     if (!sessionStorage.getItem('user_uuid')) {
-      sessionStorage.setItem('user_uuid', JSON.stringify(userUuid))
+      sessionStorage.setItem('user_uuid', JSON.stringify(userUuid));
     }
 
     NProgress.configure({
-      showSpinner: false
-    })
+      showSpinner: false,
+    });
 
     const start = () => {
-      NProgress.start()
-      setLoading(true)
-    }
+      NProgress.start();
+    };
     const end = () => {
-      NProgress.done()
-      setLoading(false)
-    }
-    Router.events.on('routeChangeStart', start)
-    Router.events.on('routeChangeComplete', end)
-    Router.events.on('routeChangeError', end)
+      NProgress.done();
+    };
+    Router.events.on('routeChangeStart', start);
+    Router.events.on('routeChangeComplete', end);
+    Router.events.on('routeChangeError', end);
     return () => {
-      Router.events.off('routeChangeStart', start)
-      Router.events.off('routeChangeComplete', end)
-      Router.events.off('routeChangeError', end)
-    }
-  }, [])
+      Router.events.off('routeChangeStart', start);
+      Router.events.off('routeChangeComplete', end);
+      Router.events.off('routeChangeError', end);
+    };
+  }, [userUuid]);
 
   if (prod) {
-    console.log = function () {}
+    console.log = function () {};
   }
 
   return (
     <>
       <Provider store={store}>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap"
-              rel="stylesheet"
-        />
-
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Unbounded:wght@200..900&display=swap"
-          rel="stylesheet"
-        />
-
         <DefaultSeo {...SEO} />
 
         <LogoJsonLd
@@ -86,14 +76,17 @@ const App: FC<AppProps> = ({Component, ...rest}) => {
             <Component {...props.pageProps} />
           </main>
         </LayoutApp>
-
       </Provider>
 
       <Scripts />
 
-      <div id="getRatingFromEddu" data-id="72382"></div>
+      {!dev && (
+        <>
+          <div id="getRatingFromEddu" data-id="72382"></div>
+        </>
+      )}
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;

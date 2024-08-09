@@ -1,3 +1,3 @@
 import { Scripts } from './Scripts';
 
-export default Scripts
+export default Scripts;

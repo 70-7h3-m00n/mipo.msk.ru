@@ -1,8 +1,8 @@
-@import "src/styles/extends";
+@import 'src/styles/extends';
 
 .wrapperBlock {
   border-radius: 25px;
-  background: #FFF;
+  background: #fff;
   margin-top: 20px;
   padding: 130px 60px;
   display: flex;
@@ -85,7 +85,8 @@
   margin: 0;
 
   span {
-    color: #3F3BFF;
+    color: #3f3bff;
+    font-family: Unbounded;
   }
 }
 
@@ -113,27 +114,28 @@
   }
 }
 
-.btnDirections, .btnQuestion  {
+.btnDirections,
+.btnQuestion {
   text-align: center;
   padding: 15px 45px;
   border-radius: 8px;
-  background: #3F3BFF;
-  color: #FFF;
+  background: #3f3bff;
+  color: #fff;
   @extend %btn;
 
   &:hover {
-    color: #FFF;
+    color: #fff;
     background: black;
   }
 }
 
 .btnQuestion {
   background-color: white;
-  border: 1px solid #3F3BFF;
-  color: #3F3BFF;
+  border: 1px solid #3f3bff;
+  color: #3f3bff;
 
   &:hover {
-    color: #FFF;
-    background: #3F3BFF;
+    color: #fff;
+    background: #3f3bff;
   }
 }

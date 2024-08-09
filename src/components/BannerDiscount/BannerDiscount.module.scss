@@ -1,15 +1,14 @@
-@import "src/styles/extends";
+@import 'src/styles/extends';
 
 .bannerDiscount {
   position: relative;
   overflow: hidden;
   border-radius: 25px;
-  background: #3F3BFF;
+  background: #3f3bff;
   padding: 100px 30px;
   display: grid;
   grid-template-columns: 2fr 1fr;
   @extend %marginSection;
-
 
   @media (max-width: 1810px) {
     padding: 80px 30px;
@@ -49,14 +48,14 @@
     }
 
     .header {
-      color: #FFF;
+      color: #fff;
       font-family: Unbounded;
       font-size: 38px;
       font-weight: 500;
       text-transform: uppercase;
       margin: 0;
 
-      @media (max-width: 1290px){
+      @media (max-width: 1290px) {
         font-size: 28px;
       }
 
@@ -66,7 +65,7 @@
     }
 
     .subHeader {
-      color:  #FFF;
+      color: #fff;
       font-size: 18px;
       font-weight: 500;
       margin: 0;
@@ -89,7 +88,7 @@
     align-items: center;
 
     .btn {
-      color: #FFF;
+      color: #fff;
       background-color: black;
 
       @media (max-width: 1290px) {

@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
+    "baseUrl": "./src/",
     "paths": {
       "@/components/*": ["components/*"],
       "@/config/*": ["config/*"],
@@ -9,17 +9,16 @@
       "@/helpers/*": ["helpers/*"],
       "@/hooks/*": ["hooks/*"],
       "@/lib/*": ["lib/*"],
-      "@/public/*": ["public/*"],
+      "@/public/*": ["../public/*"],
       "@/styles/*": ["styles/*"],
       "@/types/*": ["types/*"],
       "@/utils/*": ["utils/*"],
-      "@/assets/*": ["src/assets/*"],
-      "@/state/*": ["src/state/*"],
-      "@/api/*": ["src/api/*"],
-      "@/services/*": ["src/services/*"],
-      "@/new-components/*": ["src/components/*"],
-      "@/svg/*": ["src/SvgComponents"],
-      "@/shared/*": ["src/shared"]
+      "@/assets/*": ["assets/*"],
+      "@/state/*": ["state/*"],
+      "@/api/*": ["api/*"],
+      "@/services/*": ["services/*"],
+      "@/SvgComponents/*": ["SvgComponents/*"],
+      "@/shared/*": ["shared/*"]
     },
     "allowJs": true,
     "skipLibCheck": true,
@@ -40,7 +39,6 @@
     "noImplicitThis": true,
     "strictNullChecks": true
   },
-
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
 }

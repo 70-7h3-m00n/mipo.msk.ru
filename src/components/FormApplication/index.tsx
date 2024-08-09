@@ -1,3 +1,3 @@
-import { FormApplication } from './FormApplication'
+import { FormApplication } from './FormApplication';
 
-export default FormApplication
+export default FormApplication;

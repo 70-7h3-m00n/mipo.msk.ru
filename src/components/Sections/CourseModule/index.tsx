@@ -1,3 +1,3 @@
-import { CourseModule } from './CourseModule'
+import { CourseModule } from './CourseModule';
 
-export default CourseModule
+export default CourseModule;

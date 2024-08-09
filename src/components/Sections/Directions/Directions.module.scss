@@ -1,4 +1,4 @@
-@import "src/styles/extends";
+@import 'src/styles/extends';
 
 .content {
   @media (max-width: 979px) {
@@ -30,7 +30,7 @@
       flex-wrap: nowrap;
       overflow-x: scroll;
     }
-    .profession{
+    .profession {
       margin-top: 20px;
     }
   }
@@ -80,5 +80,3 @@
     display: none;
   }
 }
-
-

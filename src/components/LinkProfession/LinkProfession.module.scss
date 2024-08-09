@@ -1,4 +1,4 @@
-@import "src/styles/extends";
+@import 'src/styles/extends';
 
 .block {
   width: 586px;
@@ -17,8 +17,8 @@
   }
 
   &:hover {
-    background-color: #3F3BFF;
-    color: #FFF;
+    background-color: #3f3bff;
+    color: #fff;
 
     svg {
       fill: white;

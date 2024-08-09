@@ -1,16 +1,17 @@
-import styles from './SelectOption.module.scss'
-import Link from 'next/link'
-import { HTMLAttributes } from 'react'
+import Link from 'next/link';
+import type { HTMLAttributes } from 'react';
 
-interface SelectOptionProps extends HTMLAttributes<HTMLAnchorElement> {
-  title: string
-  href: string
-}
+import styles from './SelectOption.module.scss';
 
-export const SelectOption = ({title, href, ...props}: SelectOptionProps) => {
+type SelectOptionProps = {
+  title: string;
+  href: string;
+} & HTMLAttributes<HTMLAnchorElement>;
+
+export const SelectOption = ({ title, href, ...props }: SelectOptionProps) => {
   return (
     <Link className={styles.option} href={href} {...props}>
       {title}
     </Link>
-  )
-}
+  );
+};

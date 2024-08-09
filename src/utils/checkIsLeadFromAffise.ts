@@ -1,11 +1,11 @@
-import checkIsAffiseUtmSource from './checkIsAffiseUtmSource'
-import checkIsAffiseUtmCampaign from './checkIsAffiseUtmCampaign'
+import checkIsAffiseUtmCampaign from './checkIsAffiseUtmCampaign';
+import checkIsAffiseUtmSource from './checkIsAffiseUtmSource';
 
 const checkIsLeadFromAffise = (params: Record<string, string | undefined>) => {
-  const isAffiseUtmSource = checkIsAffiseUtmSource(params.utm_source)
-  const isAffiseUtmCampaign = checkIsAffiseUtmCampaign(params.utm_campaign)
+  const isAffiseUtmSource = checkIsAffiseUtmSource(params.utm_source);
+  const isAffiseUtmCampaign = checkIsAffiseUtmCampaign(params.utm_campaign);
 
-  return isAffiseUtmSource && isAffiseUtmCampaign
-}
+  return isAffiseUtmSource && isAffiseUtmCampaign;
+};
 
-export default checkIsLeadFromAffise
+export default checkIsLeadFromAffise;

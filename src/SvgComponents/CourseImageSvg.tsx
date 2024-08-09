@@ -1,12 +1,11 @@
-import * as React from "react"
-import { SVGProps } from "react"
-import Image from 'next/image'
+import Image from 'next/image';
+import type { SVGProps } from 'react';
 
-interface CourseImageSvgProps extends SVGProps<SVGSVGElement>{
-  href: string
-}
+type CourseImageSvgProps = {
+  href: string;
+} & SVGProps<SVGSVGElement>;
 
-const CourseImageSvg = ( { href, ...props }: CourseImageSvgProps) => (
+const CourseImageSvg = ({ href, ...props }: CourseImageSvgProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -27,7 +26,7 @@ const CourseImageSvg = ( { href, ...props }: CourseImageSvgProps) => (
       x={0}
       y={6}
       maskUnits="userSpaceOnUse"
-      style={{ maskType: "alpha" }}
+      style={{ maskType: 'alpha' }}
     >
       <path
         fill="#3F3BFF"
@@ -36,9 +35,17 @@ const CourseImageSvg = ( { href, ...props }: CourseImageSvgProps) => (
     </mask>
     <g mask="url(#a)">
       <foreignObject x="0" y="6" width="686" height="664">
-        <Image sizes={'100%'} src={href} priority width={723} height={672} alt="course" style={{objectFit: 'cover'}} />
+        <Image
+          sizes={'100%'}
+          src={href}
+          priority
+          width={723}
+          height={672}
+          alt="course"
+          style={{ objectFit: 'cover' }}
+        />
       </foreignObject>
     </g>
   </svg>
-)
-export default CourseImageSvg
+);
+export default CourseImageSvg;

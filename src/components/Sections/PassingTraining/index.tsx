@@ -1,3 +1,3 @@
-import { PassingTraining } from './PassingTraining'
+import { PassingTraining } from './PassingTraining';
 
-export default PassingTraining
+export default PassingTraining;

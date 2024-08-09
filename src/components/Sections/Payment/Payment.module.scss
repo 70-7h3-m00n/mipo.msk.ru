@@ -1,4 +1,4 @@
-@import "src/styles/extends";
+@import 'src/styles/extends';
 
 .wrapperItems {
   display: grid;
@@ -17,7 +17,7 @@
 .blockFormApplication {
   position: relative;
   border-radius: 25px;
-  background: #3F3BFF;
+  background: #3f3bff;
   display: flex;
   justify-content: space-between;
   padding: 100px 30px;
@@ -118,13 +118,13 @@
     }
 
     .header {
-      color: #FFF;
+      color: #fff;
       margin: 0;
       @extend %header;
     }
 
     .description {
-      color: #FFF;
+      color: #fff;
       margin: 40px 0 0 0;
       @extend %text;
 
@@ -176,9 +176,10 @@
       width: 100%;
     }
 
-    .textPolitika, a {
+    .textPolitika,
+    a {
       margin-top: 20px;
-      color: #F4F4F4;
+      color: #f4f4f4;
       font-size: 12px;
       font-weight: 500;
     }

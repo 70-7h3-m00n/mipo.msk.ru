@@ -1,13 +1,13 @@
-import Script from 'next/script'
+import Script from 'next/script';
 
-interface ScriptHeadProps {
-
-}
-
-export const ScriptHead = ({ }:ScriptHeadProps) => {
+export const ScriptHead = () => {
   return (
     <>
-      <Script type="text/javascript" src="https://api.flocktory.com/v2/loader.js?site_id=5594" async />
+      <Script
+        type="text/javascript"
+        src="https://api.flocktory.com/v2/loader.js?site_id=5594"
+        async
+      />
     </>
-  )
-}
+  );
+};

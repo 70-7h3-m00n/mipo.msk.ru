@@ -14,5 +14,5 @@ export const IAboutInstitute = [
   {
     title: 'Более 100',
     description: 'преподавателей - практиков по направлениям',
-  }
-]
+  },
+];

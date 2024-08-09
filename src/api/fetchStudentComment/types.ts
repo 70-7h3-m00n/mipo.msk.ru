@@ -1,27 +1,27 @@
 export interface IFetchStudentComment {
-  data: IStudentComment[]
-  meta: IMeta
+  data: Array<IStudentComment>;
+  meta: IMeta;
 }
 
 export interface IStudentComment {
-  name: string
-  description: string
-  data: string
-  image: IImage
+  name: string;
+  description: string;
+  data: string;
+  image: IImage;
 }
 
 export interface IImage {
-  id: number
-  url: string
+  id: number;
+  url: string;
 }
 
 export interface IMeta {
-  pagination: IPagination
+  pagination: IPagination;
 }
 
 export interface IPagination {
-  page: number
-  pageSize: number
-  pageCount: number
-  total: number
+  page: number;
+  pageSize: number;
+  pageCount: number;
+  total: number;
 }

@@ -1,12 +1,14 @@
-import { ReactNode } from 'react'
+import type { ReactNode } from 'react';
 
+type ToScrollElementProps = {
+  children: ReactNode;
+  idElement: string | number;
+};
 
-interface ToScrollElementProps {
-  children: ReactNode
-  idElement: string | number
-}
-
-export const ToScrollElement = ({ children, idElement }:ToScrollElementProps) => {
+export const ToScrollElement = ({
+  children,
+  idElement,
+}: ToScrollElementProps) => {
   const scrollToBlock = () => {
     const $elem = window.document.querySelector(`#${idElement}`)!;
     const offset = 140;
@@ -19,5 +21,5 @@ export const ToScrollElement = ({ children, idElement }:ToScrollElementProps) =>
     });
   };
 
-  return <div onClick={scrollToBlock}>{children}</div>
-}
+  return <div onClick={scrollToBlock}>{children}</div>;
+};

@@ -1,9 +1,13 @@
-import { routesFront, routesBack } from '../../src/config'
-import type { NextApiRequest, NextApiResponse } from 'next'
+import type { NextApiRequest, NextApiResponse } from 'next';
 
-const clearPreviewModeCookies = async (req: NextApiRequest, res: NextApiResponse) => {
-  res.clearPreviewData()
-  res.redirect(routesFront.root)
-}
+import { routesFront } from '@/config/index';
 
-export default clearPreviewModeCookies
+const clearPreviewModeCookies = async (
+  req: NextApiRequest,
+  res: NextApiResponse
+) => {
+  res.clearPreviewData();
+  res.redirect(routesFront.root);
+};
+
+export default clearPreviewModeCookies;

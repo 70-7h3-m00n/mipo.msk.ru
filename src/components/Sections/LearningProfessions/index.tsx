@@ -1,3 +1,3 @@
-import { LearningProfessions } from './LearningProfessions'
+import { LearningProfessions } from './LearningProfessions';
 
-export default LearningProfessions
+export default LearningProfessions;

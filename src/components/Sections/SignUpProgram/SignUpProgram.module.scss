@@ -1,4 +1,4 @@
-@import "src/styles/extends";
+@import 'src/styles/extends';
 
 .signUpProgram {
   display: grid;
@@ -21,7 +21,7 @@
 .wrapperList,
 .wrapperInfo {
   border-radius: 20px;
-  background: #3F3BFF;
+  background: #3f3bff;
   padding: 40px 30px;
 
   @media (max-width: 1810px) {
@@ -46,7 +46,7 @@
 
     .data {
       border-radius: 60px;
-      background:  #FFF;
+      background: #fff;
       padding: 7px 15px;
       color: #000;
       font-size: 16px;
@@ -62,7 +62,7 @@
   }
 
   .header {
-    color: #FFF;
+    color: #fff;
     font-family: Unbounded;
     font-size: 28px;
     font-weight: 500;
@@ -79,7 +79,7 @@
   }
 
   .text {
-    color: #FFF;
+    color: #fff;
     @extend %text;
   }
 
@@ -107,7 +107,7 @@
     }
 
     .cost {
-      color: #FFF;
+      color: #fff;
       font-size: 36px;
       font-weight: 600;
       text-transform: uppercase;
@@ -121,7 +121,7 @@
     }
 
     .discount {
-      color: #FFF;
+      color: #fff;
       @extend %titleText;
     }
   }
@@ -129,7 +129,7 @@
 
 .wrapperForm {
   .header {
-    color: #FFF;
+    color: #fff;
     @extend %titleText;
   }
 
@@ -138,18 +138,17 @@
   }
 
   .political {
-    color: #F4F4F4;
+    color: #f4f4f4;
     margin-top: 20px;
     font-size: 12px;
     font-weight: 500;
-
   }
 }
 
 .wrapperList,
 .wrapperInfo {
   border-radius: 20px;
-  background: #FFF;
+  background: #fff;
 }
 
 .wrapperList {
@@ -166,7 +165,7 @@
       margin: 20px 0 0 0;
     }
 
-    .item{
+    .item {
       color: #000;
       margin-bottom: 12px;
       @extend %text;
@@ -191,7 +190,7 @@
     }
 
     .phone {
-      color: #3F3BFF;
+      color: #3f3bff;
       font-family: Unbounded;
       margin-top: 3px;
     }

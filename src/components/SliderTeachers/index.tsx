@@ -1,3 +1,3 @@
-import { SliderTeachers } from './SliderTeachers'
+import { SliderTeachers } from './SliderTeachers';
 
-export default SliderTeachers
+export default SliderTeachers;

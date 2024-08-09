@@ -1,20 +1,20 @@
 export interface IFetchTypeProgram {
-  data: ITypeProgram[]
-  meta: IMeta
+  data: Array<ITypeProgram>;
+  meta: IMeta;
 }
 
 export interface ITypeProgram {
-  title: string
-  slug: string
+  title: string;
+  slug: string;
 }
 
 export interface IMeta {
-  pagination: IPagination
+  pagination: IPagination;
 }
 
 export interface IPagination {
-  page: number
-  pageSize: number
-  pageCount: number
-  total: number
+  page: number;
+  pageSize: number;
+  pageCount: number;
+  total: number;
 }

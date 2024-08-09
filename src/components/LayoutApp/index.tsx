@@ -1,3 +1,3 @@
-import { LayoutApp } from './LayoutApp'
+import { LayoutApp } from './LayoutApp';
 
-export default LayoutApp
+export default LayoutApp;

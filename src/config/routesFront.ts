@@ -1,9 +1,9 @@
-import { dev } from './index'
+import { dev } from './index';
 
 const routesFront = {
   root: dev ? 'http://localhost:3000' : 'https://mipo.msk.ru',
   home: '/',
-  programs: '/programs'
-}
+  programs: '/programs',
+};
 
-export default routesFront
+export default routesFront;

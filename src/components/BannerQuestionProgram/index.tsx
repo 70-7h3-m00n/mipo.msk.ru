@@ -1,3 +1,3 @@
-import { BannerQuestionProgram } from './BannerQuestionProgram'
+import { BannerQuestionProgram } from './BannerQuestionProgram';
 
-export default BannerQuestionProgram
+export default BannerQuestionProgram;
