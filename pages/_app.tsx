@@ -31,13 +31,13 @@ import Footer from '@/components/layout/Footer'
 import { dev } from 'config'
 
 import { useHandleUtms } from '@/hooks/index'
-import { getCookie } from 'cookies-next'
 
 function MyApp({ Component, pageProps, router }) {
+  const route = useRouter()
   const [loading, setLoading] = useState(false)
   useHandleUtms()
 
-  const isEdpartners = getCookie('utm_source') !== 'edpartners'
+  const isEdpartners = route.asPath.includes('edpartners')
 
   const userUuid = uuidv4()
 
@@ -231,7 +231,8 @@ function MyApp({ Component, pageProps, router }) {
       )}
 
       {!dev && (
-        isEdpartners ?
+        !isEdpartners ?
+
         <Script
           id='marquiz-script-start'
           dangerouslySetInnerHTML={{
@@ -248,7 +249,8 @@ function MyApp({ Component, pageProps, router }) {
       )}
 
       {!dev && (
-        isEdpartners ?
+        !isEdpartners ?
+
         <Script
           id='marquiz'
           dangerouslySetInnerHTML={{
