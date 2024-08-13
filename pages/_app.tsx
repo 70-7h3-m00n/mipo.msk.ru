@@ -1,4 +1,4 @@
-import Router  from 'next/router'
+import Router, { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 import Script from 'next/script'
 import MenuState from '@/context/menu/MenuState'
@@ -34,10 +34,11 @@ import { useHandleUtms } from '@/hooks/index'
 import { getCookie } from 'cookies-next'
 
 function MyApp({ Component, pageProps }) {
+  const route = useRouter()
   const [loading, setLoading] = useState(false)
   useHandleUtms()
 
-  const isEdpartners = getCookie('utm_source') === undefined
+  const isEdpartners = getCookie('utm_source') === undefined || !route.asPath.includes('edpartners')
 
   const userUuid = uuidv4()
 
