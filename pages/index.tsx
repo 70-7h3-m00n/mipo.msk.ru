@@ -17,6 +17,7 @@ import {
   Reviews,
   Webinars
 } from '@/components/sections'
+import Script from 'next/script'
 
 const HomePage = ({ programs, reviews }) => {
   usePageHandleContext({ programs })
@@ -33,6 +34,17 @@ const HomePage = ({ programs, reviews }) => {
         )}
         canonical={`${routesFront.root}${routeHome}`}
       />
+      <Script id="xcntmyAsync" type="text/javascript" dangerouslySetInnerHTML={{__html: `
+          (function(d){
+          var xscr = d.createElement( 'script' ); 
+          xscr.async = 1; 
+          xscr.src = '//x.cnt.my/async/track/?r=' + Math.random(); 
+          var x= d.getElementById( 'xcntmyAsync' ); 
+          x.parentNode.insertBefore( xscr, x );
+          })(document);
+        `}}
+      />
+
       <Hero />
       {/* <Programs withTitle withBtn atIndex /> */}
       <SectionStudyFields withTitle withBtn atIndex />
