@@ -1,4 +1,4 @@
-import Router from 'next/router'
+import Router, { useRouter } from 'next/router'
 import { useEffect, useState, useContext } from 'react'
 import Script from 'next/script'
 import MenuState from '@/context/menu/MenuState'
@@ -33,8 +33,11 @@ import { dev } from 'config'
 import { useHandleUtms } from '@/hooks/index'
 
 function MyApp({ Component, pageProps, router }) {
+  const route = useRouter()
   const [loading, setLoading] = useState(false)
   useHandleUtms()
+
+  const isEdpartners = route.asPath.includes('edpartners')
 
   const userUuid = uuidv4()
 
@@ -228,6 +231,7 @@ function MyApp({ Component, pageProps, router }) {
       )}
 
       {!dev && (
+        !isEdpartners ?
         <Script
           id='marquiz-script-start'
           dangerouslySetInnerHTML={{
@@ -239,9 +243,12 @@ function MyApp({ Component, pageProps, router }) {
             autoOpen: false, autoOpenFreq: 'once', openOnExit: false, disableOnMobile: false } );`
           }}
         />
+          :
+          null
       )}
 
       {!dev && (
+        !isEdpartners ?
         <Script
           id='marquiz'
           dangerouslySetInnerHTML={{
@@ -253,6 +260,8 @@ function MyApp({ Component, pageProps, router }) {
             blicked: true, pulse: 'rgba(56, 70, 200, 0.4)'})`
           }}
         />
+          :
+          null
       )}
 
       {!dev && (
