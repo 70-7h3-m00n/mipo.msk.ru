@@ -1,5 +1,5 @@
-import Router, { useRouter } from 'next/router'
-import { useEffect, useState, useContext } from 'react'
+import Router  from 'next/router'
+import { useEffect, useState } from 'react'
 import Script from 'next/script'
 import MenuState from '@/context/menu/MenuState'
 import ProgramsState from '@/context/programs/ProgramsState'
@@ -31,13 +31,13 @@ import Footer from '@/components/layout/Footer'
 import { dev } from 'config'
 
 import { useHandleUtms } from '@/hooks/index'
+import { getCookie } from 'cookies-next'
 
-function MyApp({ Component, pageProps, router }) {
-  const route = useRouter()
+function MyApp({ Component, pageProps }) {
   const [loading, setLoading] = useState(false)
   useHandleUtms()
 
-  const isEdpartners = route.asPath.includes('edpartners')
+  const isEdpartners = getCookie('utm_source') !== 'edpartners'
 
   const userUuid = uuidv4()
 
@@ -231,7 +231,7 @@ function MyApp({ Component, pageProps, router }) {
       )}
 
       {!dev && (
-        !isEdpartners ?
+        isEdpartners ?
 
         <Script
           id='marquiz-script-start'
@@ -249,7 +249,7 @@ function MyApp({ Component, pageProps, router }) {
       )}
 
       {!dev && (
-        !isEdpartners ?
+        isEdpartners ?
 
         <Script
           id='marquiz'
