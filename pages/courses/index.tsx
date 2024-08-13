@@ -21,6 +21,7 @@ const CoursesPage = ({ programs }) => {
         )}
         canonical={`${routesFront.root}${routeCourses}`}
       />
+
       <PagesPrograms ofType='course' />
     </>
   )
