@@ -37,7 +37,7 @@ function MyApp({ Component, pageProps }) {
   const [loading, setLoading] = useState(false)
   useHandleUtms()
 
-  const isEdpartners = getCookie('utm_source') !== 'edpartners'
+  const isEdpartners = getCookie('utm_source') === undefined
 
   const userUuid = uuidv4()
 
@@ -231,9 +231,7 @@ function MyApp({ Component, pageProps }) {
       )}
 
       {!dev && (
-        isEdpartners ?
-
-        <Script
+        isEdpartners && <Script
           id='marquiz-script-start'
           dangerouslySetInnerHTML={{
             __html: `(function(w, d, s, o){ var j = d.createElement(s); j.async = true; j.src = '//script.marquiz.ru/v2.js';
@@ -244,14 +242,10 @@ function MyApp({ Component, pageProps }) {
             autoOpen: false, autoOpenFreq: 'once', openOnExit: false, disableOnMobile: false } );`
           }}
         />
-          :
-          null
       )}
 
       {!dev && (
-        isEdpartners ?
-
-        <Script
+        isEdpartners && <Script
           id='marquiz'
           dangerouslySetInnerHTML={{
             __html: `(function(t, p) {window.Marquiz ? Marquiz.add([t, p]) : document.addEventListener('marquizLoaded', 
@@ -262,8 +256,6 @@ function MyApp({ Component, pageProps }) {
             blicked: true, pulse: 'rgba(56, 70, 200, 0.4)'})`
           }}
         />
-          :
-          null
       )}
 
       {!dev && (
