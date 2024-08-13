@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect } from 'react'
+import { useEffect } from 'react'
 import { useRouter } from 'next/router'
 import { deleteCookie, setCookie } from 'cookies-next'
 import { parseUrlParams } from '@/utils/index'
