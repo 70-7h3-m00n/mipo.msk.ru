@@ -231,7 +231,8 @@ function MyApp({ Component, pageProps, router }) {
       )}
 
       {!dev && (
-        isEdpartners ?
+        !isEdpartners ?
+
         <Script
           id='marquiz-script-start'
           dangerouslySetInnerHTML={{
@@ -248,7 +249,8 @@ function MyApp({ Component, pageProps, router }) {
       )}
 
       {!dev && (
-        isEdpartners ?
+        !isEdpartners ?
+
         <Script
           id='marquiz'
           dangerouslySetInnerHTML={{
