@@ -53,20 +53,20 @@ const PagesProgram = ({ ofType = null, reviews }: PagesProgramType) => {
 
   return (
     <>
-      <Script id="xcntmyAsync"
-              type="text/javascript"
-              strategy="afterInteractive"
-              dangerouslySetInnerHTML={{__html: `
-                var xcnt_product_id = '${program.id}';
-                  (function(d){
-                  var xscr = d.createElement( 'script' ); 
-                  xscr.async = 1;
-                   xscr.src = '//x.cnt.my/async/track/?r=' + Math.random(); 
-                  var x = d.getElementById( 'xcntmyAsync' ); 
-                  x.parentNode.insertBefore( xscr, x );
-                  })(document);
-              `}}
-      />
+      {/*<Script id="xcntmyAsync"*/}
+      {/*        type="text/javascript"*/}
+      {/*        strategy="afterInteractive"*/}
+      {/*        dangerouslySetInnerHTML={{__html: `*/}
+      {/*          var xcnt_product_id = '${program.id}';*/}
+      {/*            (function(d){*/}
+      {/*            var xscr = d.createElement( 'script' ); */}
+      {/*            xscr.async = 1;*/}
+      {/*             xscr.src = '//x.cnt.my/async/track/?r=' + Math.random(); */}
+      {/*            var x = d.getElementById( 'xcntmyAsync' ); */}
+      {/*            x.parentNode.insertBefore( xscr, x );*/}
+      {/*            })(document);*/}
+      {/*        `}}*/}
+      {/*/>*/}
       <HeroProgram />
       {/* <Desc /> */}
       {isMshppBlock && <CardMshpp />}
