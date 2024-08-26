@@ -6,6 +6,7 @@ node_modules
 .turbo
 .swc
 build
+templates
 
 # We don't want to lint/prettify the Coverage Results
 coverage
