@@ -65,6 +65,7 @@ const SectionYourDiplomasAlt = ({ classNames }: TSectionYourDiplomasAlt) => {
             </div>
           </div>
         </div>
+
         <div className={stls.diplomas}>
           <div className={stls.left}>
             <Popup
@@ -79,6 +80,7 @@ const SectionYourDiplomasAlt = ({ classNames }: TSectionYourDiplomasAlt) => {
               closeOnDocumentClick>
               {close => <PopupImage image={imgDiploma} close={close} />}
             </Popup>
+
             <Popup
               trigger={
                 <a href='#!' className={stls.diploma}>
@@ -94,6 +96,7 @@ const SectionYourDiplomasAlt = ({ classNames }: TSectionYourDiplomasAlt) => {
               )}
             </Popup>
           </div>
+
           <div className={stls.right}>
             <Popup
               trigger={

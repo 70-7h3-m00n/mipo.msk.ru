@@ -54,7 +54,7 @@ const PagesProgram = ({ ofType = null, reviews }: PagesProgramType) => {
   return (
     <>
       <HeroProgram />
-      {/* <Desc /> */}
+
       {isMshppBlock && <CardMshpp />}
       <ForWhom />
       {altStyles && <SectionMoreRelevant />}
@@ -64,13 +64,10 @@ const PagesProgram = ({ ofType = null, reviews }: PagesProgramType) => {
       {altStyles && <SectionYourDiplomasAlt />}
       {altStyles && <SectionOurGraduates />}
       {altStyles && <SectionRelevantContentOnly />}
-      {/* <YourDiploma ofType={ofType} /> */}
+
       <BriefProgramContents />
       <FullProgram />
-      {/* {ofType !== 'course' &&
-        program?.resumeTitle &&
-        program?.entrySalary &&
-        program?.resumeSkills && <YourResume />} */}
+
       {ofType !== 'course' && !altStyles && <YourFutureJob />}
       {altStyles && <SectionInternationalExperts />}
 
@@ -99,23 +96,24 @@ const PagesProgram = ({ ofType = null, reviews }: PagesProgramType) => {
       />
       {!altStyles && <TrustedBy />}
       {altStyles && <SectionTrustedByAlt />}
-      {/* {altStyles && <Reviews reviews={reviews} />} */}
+
       {altStyles && (
         <SectionReviewsAlt
           programReviews={program?.reviews}
           reviews={reviews}
         />
       )}
-      {/* <HelpWithEmployment /> */}
+
       <StudyCost />
       <Faq />
       {altStyles && <SectionCorporateCourse />}
+
       <Script id="xcntmyAsync"
               type="text/javascript"
               strategy="afterInteractive"
-              async
+              defer
               dangerouslySetInnerHTML={{__html: `
-                var xcnt_product_id = '${program.id}';
+                var xcnt_product_id = '${program?.id ? program.id : ''}';
                   (function(d){
                   var xscr = d.createElement( 'script' ); 
                   xscr.async = 1;
