@@ -49,6 +49,7 @@
     "@types/qs": "^6.9.7",
     "@types/react": "^17.0.34",
     "@types/swiper": "^5.4.3",
+    "@types/uuid": "^10.0.0",
     "eslint": "^7.28.0",
     "eslint-config-next": "^11.1.2",
     "next-sitemap": "^1.6.203",

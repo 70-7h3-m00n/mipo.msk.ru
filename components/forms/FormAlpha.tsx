@@ -59,7 +59,9 @@ const FormAlpha = ({
   const router = useRouter()
 
   const onSubmit = async data => {
-    let price = Boolean(+program?.timenprice[0]?.price) ? +program?.timenprice[0]?.price : null
+    let price = Boolean(+program?.timenprice[0]?.price)
+      ? +program?.timenprice[0]?.price
+      : null
     setIsDisabled(true)
     setThanksIsOpen(true)
     // handle loader
@@ -81,7 +83,7 @@ const FormAlpha = ({
 
     try {
       await axios.post(`${routesFront.root}/api/webhook`, utms)
-    }catch (e) {
+    } catch (e) {
       console.log(e, 'submit-webhook')
     }
 
@@ -107,7 +109,7 @@ const FormAlpha = ({
         })
 
         if (res.status === 200) {
-          window.open(res.data.url, '_blank');
+          window.open(res.data.url, '_blank')
         }
       } catch (e) {
         console.log(e, 'yookassa-error')
@@ -174,6 +176,7 @@ const FormAlpha = ({
               placeholder='Ваша электронная почта'
               disabled={isDisabled}
               {...register('email', {
+                required: `*Электронная почта обязательна`,
                 pattern: {
                   value:
                     /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/,

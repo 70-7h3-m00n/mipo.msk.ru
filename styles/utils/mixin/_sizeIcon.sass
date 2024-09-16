@@ -1,10 +1,11 @@
 @use "sass:math"
 @use '@/styles/utils/funcs' as f
 
-@mixin sizeIcon($size: null, $w, $h)
+@mixin sizeIcon($size: null, $w, $h, $withHeight: null)
   @if $size == null
     $size: 1
   $calcedWidth: $size * $w
   $calcedHeight: math.div($w, math.div($w, $h))
   width: f.px($calcedWidth, em)
-  // height: f.px($calcedHeight, em)
+  @if $withHeight == true
+    height: f.px($calcedHeight, em)

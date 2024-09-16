@@ -18,7 +18,7 @@ const BtnClose = ({ onClick = null, iconCloseCircle = false }) => {
       className={cn(stls.container, { [stls.altStyles]: altStyles })}
       onClick={onClick ? onClick : closeMenu}
       aria-label='Закрыть'>
-      {iconCloseCircle ? <IconCloseCircle /> : <IconClose />}
+      {iconCloseCircle ? <IconCloseCircle /> : <IconClose withHeight />}
     </button>
   )
 }
