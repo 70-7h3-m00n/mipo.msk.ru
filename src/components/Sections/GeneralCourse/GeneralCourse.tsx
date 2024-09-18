@@ -44,7 +44,11 @@ export const GeneralCourse = () => {
         <div className={styles.wrapperImage}>
           <CourseImageSvg
             className={styles.image}
-            href={courseData!.image.url!}
+            href={
+              courseData && courseData.image && courseData.image.url
+                ? courseData.image.url
+                : ''
+            }
           />
         </div>
       </div>

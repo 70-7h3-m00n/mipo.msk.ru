@@ -27,12 +27,13 @@ export const SignUpProgram = () => {
           <h4 className={styles.text}>
             Обучение можно оплатить сразу или воспользоваться рассрочкой
           </h4>
-
-          <Discount
-            className={styles.discountWrapper}
-            discount={courseData!.discount}
-            price={courseData!.price}
-          />
+          {courseData && (
+            <Discount
+              className={styles.discountWrapper}
+              discount={courseData.discount}
+              price={courseData.price}
+            />
+          )}
 
           <h4 className={styles.text}>Стоимость за весь курс:</h4>
 

@@ -8,6 +8,7 @@ import { fetchStudentComment } from '@/api/fetchStudentComment';
 import { fetchTeacher } from '@/api/fetchTeacher';
 import { fetchTrustTraining } from '@/api/fetchTrustTraining';
 import { fetchTypeProgram } from '@/api/fetchTypeProgram';
+import { fetchWebinars } from '@/api/fetchWebinars';
 import { setDataCourse } from '@/state/reducers/Course';
 import { setDataCourses } from '@/state/reducers/Courses';
 import { setDataFaculty } from '@/state/reducers/Faculty';
@@ -16,6 +17,7 @@ import { setDataStudentComment } from '@/state/reducers/StudentComment';
 import { setDataTeacher } from '@/state/reducers/Teacher';
 import { setDataTrustTraining } from '@/state/reducers/TrustTraining';
 import { setDataTypeProgram } from '@/state/reducers/TypeProgram';
+import { setDataWebinars } from '@/state/reducers/Webinars';
 import { wrapper } from '@/state/store';
 
 export enum PagesData {
@@ -23,6 +25,10 @@ export enum PagesData {
   home = 'home',
   course = 'course',
   webinars = 'webinars',
+  aboutUniversity = 'aboutUniversity',
+  teachers = 'teachers',
+  reviews = 'reviews',
+  contact = 'contact',
 }
 
 const getData = (page?: PagesData) =>
@@ -67,6 +73,30 @@ const getData = (page?: PagesData) =>
       store.dispatch(setDataCourse(course!));
       store.dispatch(setDataTeacher([...teacher]));
       store.dispatch(setDataStudentComment([...studentComment]));
+    }
+
+    if (page === PagesData.aboutUniversity || page === PagesData.teachers) {
+      const faq = await fetchFaq();
+      const teacher = await fetchTeacher();
+
+      store.dispatch(setDataFaq([...faq]));
+      store.dispatch(setDataTeacher([...teacher]));
+    }
+
+    if (page === PagesData.reviews) {
+      const faq = await fetchFaq();
+      const studentComment = await fetchStudentComment();
+
+      store.dispatch(setDataStudentComment([...studentComment]));
+      store.dispatch(setDataFaq([...faq]));
+    }
+
+    if (page === PagesData.contact || page === PagesData.webinars) {
+      const faq = await fetchFaq();
+      const webinars = await fetchWebinars();
+
+      store.dispatch(setDataFaq([...faq]));
+      store.dispatch(setDataWebinars([...webinars]));
     }
 
     return {

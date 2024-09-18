@@ -6,7 +6,7 @@ interface Menu {
 export const MenuAboutInstitute: Array<Menu> = [
   {
     text: 'об институте',
-    link: '/legal',
+    link: '/about-university',
   },
   {
     text: 'преподаватели',
@@ -14,10 +14,10 @@ export const MenuAboutInstitute: Array<Menu> = [
   },
   {
     text: 'отзывы',
-    link: '/',
+    link: '/reviews',
   },
   {
     text: 'оплата обучения',
-    link: '/',
+    link: '/tuition-fees',
   },
 ];

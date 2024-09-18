@@ -1,9 +1,10 @@
+import Webinars from '@/components/pages/Webinars';
 import getData, { PagesData } from '@/services/getData';
 
-const Webinars = () => {
-  return <>webinars</>;
+const WebinarsPage = () => {
+  return <Webinars />;
 };
 
 export const getStaticProps = getData(PagesData.webinars);
 
-export default Webinars;
+export default WebinarsPage;

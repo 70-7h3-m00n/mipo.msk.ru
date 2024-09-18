@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import type { Dispatch, SetStateAction } from 'react';
 
 import ButtonLink from '@/components/ButtonLink';
 import { Discount } from '@/components/Items/Discount/Discount';
@@ -14,7 +15,7 @@ type Props = {
   discount: number;
   price: number;
   href: string;
-  setOpenPopUp: React.Dispatch<React.SetStateAction<boolean>>;
+  setOpenPopUp: Dispatch<SetStateAction<boolean>>;
 };
 
 export const CardCourse = ({

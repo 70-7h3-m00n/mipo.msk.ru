@@ -1,0 +1,25 @@
+@import 'src/styles/extends';
+
+.header {
+  @extend %generalHeader;
+  margin-top: 80px;
+
+  @media (max-width: 549px) {
+    margin-top: 60px;
+  }
+}
+
+.wrapperCardTeacher {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  @extend %marginBlock;
+
+  @media (max-width: 1290px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (max-width: 769px) {
+    grid-template-columns: 1fr;
+  }
+}

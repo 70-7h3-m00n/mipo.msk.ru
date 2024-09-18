@@ -135,6 +135,7 @@
 
   .block_3 {
     grid-area: block_3;
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -149,6 +150,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      flex-wrap: wrap;
 
       svg {
         width: 65px;

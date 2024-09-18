@@ -1,0 +1,78 @@
+@import 'src/styles/extends';
+
+.itemComment,
+.modalComment {
+  min-width: 565px;
+  border-radius: 20px;
+  background: #fff;
+  padding: 40px 30px;
+  user-select: none;
+  cursor: grabbing;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @media (max-width: 1810px) {
+    min-width: 445px;
+  }
+
+  @media (max-width: 1600px) {
+    min-width: 330px;
+  }
+
+  @media (max-width: 1290px) {
+    min-width: 100%;
+    height: auto;
+  }
+  @media (max-width: 769px) {
+    padding: 30px 10px;
+  }
+
+  .wrapperHeader {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    .wrapperImage {
+      @media (max-width: 769px) {
+        width: 60px;
+        height: 60px;
+      }
+    }
+
+    .wrapperAuthor {
+      .name {
+        color: #000;
+        @extend %titleText;
+      }
+
+      .data {
+        color: #000;
+        margin-top: 3px;
+        opacity: 0.5;
+        @extend %smallText;
+      }
+    }
+  }
+
+  .description {
+    margin-top: 30px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5; /* Количество строк до обрезания */
+    overflow: hidden;
+    color: #000;
+    opacity: 0.5;
+    @extend %text;
+
+    @media (max-width: 769px) {
+      margin-top: 20px;
+    }
+  }
+
+  .modalDescription {
+    margin-top: 30px;
+    color: #000;
+    @extend %text;
+  }
+}

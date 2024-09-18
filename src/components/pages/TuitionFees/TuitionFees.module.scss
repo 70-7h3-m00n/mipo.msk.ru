@@ -1,0 +1,137 @@
+@import 'src/styles/extends';
+
+.wrapperGeneral {
+  width: 50%;
+  @extend %marginGeneralBlock;
+
+  @media (max-width: 1290px) {
+    width: 80%;
+  }
+
+  @media (max-width: 979px) {
+    width: 100%;
+  }
+
+  .headerGeneral {
+    @extend %generalHeader;
+  }
+
+  .descriptionGeneral {
+    @extend %text;
+
+    span {
+      color: #3f3bff;
+      font-family: Unbounded;
+    }
+  }
+}
+
+.wrapperCard {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+  @extend %marginBlock;
+
+  @media (max-width: 1290px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (max-width: 549px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.wrapperTitle {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: 'one two three';
+  gap: 20px;
+  @extend %marginBlock;
+
+  @media (max-width: 1290px) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      'one two'
+      'three three';
+  }
+
+  @media (max-width: 549px) {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'one'
+      'two'
+      'three';
+  }
+
+  .one {
+    grid-area: one;
+  }
+
+  .two {
+    grid-area: two;
+  }
+
+  .three {
+    grid-area: three;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @media (max-width: 1290px) {
+      flex-direction: row;
+
+      p {
+        width: 50%;
+      }
+    }
+
+    @media (max-width: 549px) {
+      flex-direction: column;
+
+      p {
+        width: 100%;
+      }
+    }
+  }
+
+  .title {
+    border-radius: 20px;
+    background: #fff;
+    padding: 30px;
+    @extend %btn;
+    text-transform: none;
+    margin: 0;
+
+    span {
+      color: #3f3bff;
+      font-family: Unbounded;
+    }
+
+    .nowrap {
+      white-space: nowrap;
+    }
+
+    @media (max-width: 549px) {
+      padding: 30px 10px;
+    }
+  }
+}
+
+.wrapperBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  @extend %marginBlock;
+
+  .btn {
+    @extend %btn;
+    border-radius: 8px;
+    color: #3f3bff;
+    border: 1px solid #3f3bff;
+    padding: 15px 45px;
+  }
+}

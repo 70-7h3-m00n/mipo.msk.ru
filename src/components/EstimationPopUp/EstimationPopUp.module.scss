@@ -1,0 +1,27 @@
+@import 'src/styles/extends';
+
+.estimationPopUp {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: absolute;
+  left: 65px;
+  bottom: 0;
+  border-radius: 12px;
+  background: #fff;
+  padding: 15px;
+  @extend %smallText;
+
+  @media (max-width: 549px) {
+    left: 0;
+    bottom: 65px;
+  }
+
+  .item {
+    border-radius: 8px;
+    background: #3f3bff;
+    padding: 8px 12px;
+    color: white;
+    text-transform: none;
+  }
+}

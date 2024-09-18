@@ -6,6 +6,7 @@ npm-debug.log
 # Next.js Build Output
 .next
 build
+templates
 
 # Next.js Generated Files
 public/static/documents

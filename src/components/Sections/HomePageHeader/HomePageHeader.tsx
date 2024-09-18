@@ -27,7 +27,7 @@ export const HomePageHeader = () => {
               Направления
             </Link>
 
-            <Link href={'/legal'} className={styles.btnQuestion}>
+            <Link href={'/about-university'} className={styles.btnQuestion}>
               Об университете
             </Link>
           </div>

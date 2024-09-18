@@ -9,6 +9,7 @@ import studentCommentReducer from './reducers/StudentComment';
 import teacherReducer from './reducers/Teacher';
 import trustTrainingReducer from './reducers/TrustTraining';
 import typeProgramReducer from './reducers/TypeProgram';
+import webinarsData from './reducers/Webinars';
 
 const rootReducer = combineReducers({
   faqReducer,
@@ -19,6 +20,7 @@ const rootReducer = combineReducers({
   studentCommentReducer,
   trustTrainingReducer,
   courseReducer,
+  webinarsData,
 });
 
 // Создание и экспорт store

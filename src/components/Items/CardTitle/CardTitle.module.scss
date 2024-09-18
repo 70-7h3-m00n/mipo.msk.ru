@@ -1,0 +1,18 @@
+@import 'src/styles/extends';
+
+.cardTitle {
+  border-radius: 15px;
+  background: #fff;
+
+  .header {
+    font-family: Unbounded;
+    color: #3f3bff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 30px 35px;
+    @extend %text;
+    font-weight: 500;
+  }
+}

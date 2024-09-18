@@ -1,0 +1,68 @@
+@import 'src/styles/extends';
+
+.header {
+  @extend %generalHeader;
+  @extend %marginGeneralBlock;
+}
+
+.wrapperContact {
+  @extend %marginBlock;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .itemContact {
+    display: grid;
+    grid-template-columns: 1fr 2.7fr;
+    gap: 20px;
+
+    @media (max-width: 1290px) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media (max-width: 769px) {
+      grid-template-columns: 1fr;
+    }
+
+    .title {
+      padding: 40px 30px;
+      border-radius: 20px;
+      background: #3f3bff;
+      color: white;
+      display: flex;
+      align-items: center;
+      @extend %header;
+
+      @media (max-width: 1290px) {
+        align-items: flex-end;
+      }
+    }
+
+    .descrBlock {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 20px;
+      border-radius: 20px;
+      background: #fff;
+      padding: 40px 30px;
+
+      @media (max-width: 1290px) {
+        grid-template-columns: 1fr;
+      }
+
+      .infoCard {
+        .header {
+          opacity: 0.5;
+          margin: 0;
+          text-transform: none;
+          @extend %smallText;
+        }
+
+        .description {
+          margin-top: 10px;
+          @extend %text;
+        }
+      }
+    }
+  }
+}

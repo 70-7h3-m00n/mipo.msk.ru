@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
 import ApplicationsContent from '@/components/ApplicationsContent';
+import EstimationPopUp from '@/components/EstimationPopUp';
 import Modal from '@/components/Modal';
 import { MenuAboutInstitute } from '@/data/menu';
 import { useAppSelector } from '@/state/hooks';
@@ -13,8 +14,26 @@ import styles from './Footer.module.scss';
 
 export const Footer = () => {
   const { facultyData } = useAppSelector(state => state.facultyReducer);
+  const { coursesData } = useAppSelector(state => state.coursesReducer);
   const [openPopUp, setOpenPopUp] = useState(false);
   const [toggleLogo, setToggleLogo] = useState(false);
+  const [estimationPopUp, setEstimationPopUp] = useState(false);
+  const [validFilter] = useState(onDataMap());
+
+  function onDataMap() {
+    return [
+      ...new Set(
+        coursesData?.map(item => ({
+          faculty: {
+            title: item.faculty.title,
+          },
+          typeProgram: {
+            title: item.typeProgram.title,
+          },
+        }))
+      ),
+    ];
+  }
 
   useEffect(() => {
     const toggleLogo = () => {
@@ -71,15 +90,19 @@ export const Footer = () => {
             <Link href={'/catalog'} className={styles.text}>
               все направления
             </Link>
-            {facultyData?.map((item, index) => (
-              <Link
-                href={'/catalog/' + item.slug}
-                className={styles.text}
-                key={index}
-              >
-                {item.title}
-              </Link>
-            ))}
+            {facultyData
+              ?.filter(item =>
+                validFilter?.some(elem => item.title === elem.faculty.title)
+              )
+              ?.map((item, index) => (
+                <Link
+                  key={index}
+                  className={styles.text}
+                  href={'/catalog/' + item.slug}
+                >
+                  {item.title}
+                </Link>
+              ))}
           </div>
 
           <div className={styles.block_2}>
@@ -102,7 +125,12 @@ export const Footer = () => {
               Москва, Дербеневская набережная 11
             </div>
             <div className={styles.estimation}>
-              <EstimationSvg />
+              <EstimationSvg
+                onClick={() => setEstimationPopUp(!estimationPopUp)}
+              />
+              <div className={estimationPopUp ? '' : 'hidden'}>
+                <EstimationPopUp />
+              </div>
             </div>
           </div>
 

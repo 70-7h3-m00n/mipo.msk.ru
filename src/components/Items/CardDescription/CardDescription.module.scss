@@ -1,0 +1,42 @@
+@import 'src/styles/extends';
+
+.card {
+  width: 100%;
+  border-radius: 15px;
+  background: #fff;
+  padding: 30px;
+
+  .cardHeader {
+    margin: 0 0 0 0;
+    text-align: center;
+    color: #3f3bff;
+    font-family: Unbounded;
+    font-size: 42px;
+
+    @media (max-width: 1810px) {
+      font-size: 36px;
+    }
+
+    @media (max-width: 1600px) {
+      font-size: 26px;
+    }
+
+    @media (max-width: 979px) {
+      font-size: 42px;
+    }
+
+    @media (max-width: 769px) {
+      font-size: 32px;
+    }
+
+    @media (max-width: 549px) {
+      font-size: 28px;
+    }
+  }
+
+  .cardDescription {
+    margin: 20px 0 0 0;
+    text-align: center;
+    @extend %text;
+  }
+}
