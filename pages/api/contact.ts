@@ -156,16 +156,22 @@ const contact = async (req: NextApiRequest, res: NextApiResponse) => {
   }
 
   try {
-    const queryParams  = Object.entries(data).map(([key, value]) => `${key}=${value}`).join('&')
+    const queryParams = Object.entries(data)
+      .map(([key, value]) => `${key}=${value}`)
+      .join('&')
 
     await axios.request({
       method: 'GET',
-      url: `https://tglk.ru/in/MX4bxnhq9LCnZWR5?${queryParams}`,
+      url: `https://tglk.ru/in/MX4bxnhq9LCnZWR5?${encodeURIComponent(
+        queryParams
+      )}`,
       headers: {
         'Content-Type': 'application/json'
       }
     })
-  }catch (e) {
+    console.log('Успешная отправка')
+  } catch (e) {
+    console.log('При отправке произошла ошибка')
     console.error(e)
   }
 
