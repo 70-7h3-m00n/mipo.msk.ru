@@ -26,6 +26,7 @@ class MyDocument extends Document {
           {/* <meta name='theme-color' content={themeColor} /> */}
           <MetaFonts />
           <MetaManifest />
+          <meta name="yandex-verification" content="b001b41939d583ff" />
         </Head>
         <body>
         {/* This is part of the tag manager that prevents click bots spam */}

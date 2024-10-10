@@ -155,19 +155,44 @@ const contact = async (req: NextApiRequest, res: NextApiResponse) => {
     formName: formName || null
   }
 
-  try {
-    const queryParams  = Object.entries(data).map(([key, value]) => `${key}=${value}`).join('&')
+  // try {
+  //   const queryParams = Object.entries(data)
+  //     .map(([key, value]) => `${key}=${value}`)
+  //     .join('&')
 
+  //   await axios.request({
+  //     method: 'GET',
+  //     url: `https://tglk.ru/in/MX4bxnhq9LCnZWR5?${encodeURIComponent(
+  //       queryParams
+  //     )}`,
+  //     headers: {
+  //       'Content-Type': 'application/json'
+  //     }
+  //   })
+  //   console.log('Успешная отправка')
+  // } catch (e) {
+  //   console.log('При отправке произошла ошибка')
+  //   console.error(e)
+  // }
+
+  // F5 BEGIN
+  // https://tglk.ru/in/MX4bxnhq9LCnZWR5
+  try {
     await axios.request({
-      method: 'GET',
-      url: `https://tglk.ru/in/MX4bxnhq9LCnZWR5?${queryParams}`,
+      method: 'POST',
+      maxBodyLength: Infinity,
+      url: `https://tglk.ru/in/MX4bxnhq9LCnZWR5`,
       headers: {
         'Content-Type': 'application/json'
-      }
+      },
+      data
     })
-  }catch (e) {
+    console.log('f5 sucssess')
+  } catch (e) {
+    console.log('error in f5 request')
     console.error(e)
   }
+  //  F5 END
 
   const subject = 'Новая заявка с mipo.msk.ru'
 

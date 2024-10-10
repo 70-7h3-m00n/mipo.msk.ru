@@ -4,8 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "npm run createYandexFeed && next build",
     "start": "next start",
+    "createYandexFeed": "node scripts/generateYandexFeed.js",
     "postbuild": "next-sitemap --config next-sitemap.config.js",
     "generateicons": "npx pwa-asset-generator ./data/logos/logo-light.png ./public/assets/imgs/icons -p \"0\" -b \"#002C9F\""
   },
@@ -49,6 +50,7 @@
     "@types/qs": "^6.9.7",
     "@types/react": "^17.0.34",
     "@types/swiper": "^5.4.3",
+    "@types/uuid": "^10.0.0",
     "eslint": "^7.28.0",
     "eslint-config-next": "^11.1.2",
     "next-sitemap": "^1.6.203",

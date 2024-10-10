@@ -1,8 +1,9 @@
 import stls from '@/styles/components/icons/IconClose.module.sass'
+import cn from 'classnames'
 
-const IconClose = () => {
+const IconClose = ({ withHeight }: { withHeight?: boolean }) => {
   return (
-    <div className={stls.container}>
+    <div className={cn(stls.container, withHeight && stls.withHeight)}>
       <svg viewBox='0 0 35 27' fill='none' xmlns='http://www.w3.org/2000/svg'>
         <title>Закрыть</title>
         <line
