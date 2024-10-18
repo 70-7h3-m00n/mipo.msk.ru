@@ -187,7 +187,9 @@ const contact = async (req: NextApiRequest, res: NextApiResponse) => {
       },
       data
     })
-    console.log('f5 sucssess')
+
+    console.log('f5 sucssess');
+
   } catch (e) {
     console.log('error in f5 request')
     console.error(e)
