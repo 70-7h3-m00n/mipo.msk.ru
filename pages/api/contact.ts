@@ -189,7 +189,6 @@ const contact = async (req: NextApiRequest, res: NextApiResponse) => {
     })
 
     console.log('f5 sucssess');
-    console.log(data);
     console.log(response.data);
 
   } catch (e) {
