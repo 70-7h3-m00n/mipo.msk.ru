@@ -38,7 +38,7 @@ function MyApp({ Component, pageProps }) {
   const [loading, setLoading] = useState(false)
   useHandleUtms()
 
-  const isEdpartners = getCookie('utm_source') === undefined || !route.asPath.includes('edpartners')
+  const isEdpartners = getCookie('utm_source') !== 'edpartners' && !getCookie('cl_uid') && !route.asPath.includes('edpartners')
 
   const userUuid = uuidv4()
 
@@ -244,6 +244,7 @@ function MyApp({ Component, pageProps }) {
           }}
         />
       )}
+
 
       {!dev && (
         isEdpartners && <Script

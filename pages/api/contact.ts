@@ -178,7 +178,7 @@ const contact = async (req: NextApiRequest, res: NextApiResponse) => {
   // F5 BEGIN
   // https://tglk.ru/in/MX4bxnhq9LCnZWR5
   try {
-    await axios.request({
+    const response = await axios.request({
       method: 'POST',
       maxBodyLength: Infinity,
       url: `https://tglk.ru/in/MX4bxnhq9LCnZWR5`,
@@ -187,7 +187,11 @@ const contact = async (req: NextApiRequest, res: NextApiResponse) => {
       },
       data
     })
-    console.log('f5 sucssess')
+
+    console.log('f5 sucssess');
+    console.log(data);
+    console.log(response.data);
+
   } catch (e) {
     console.log('error in f5 request')
     console.error(e)
