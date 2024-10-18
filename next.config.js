@@ -10,6 +10,7 @@ module.exports =
     //   scope: '/'
     // },
     poweredByHeader: false,
+    staticPageGenerationTimeout: 160,
     i18n: {
       locales: ['ru'],
       defaultLocale: 'ru',
