@@ -133,7 +133,7 @@ function MyApp({ Component, pageProps }) {
       }
 
       <div id="getRatingFromEddu" data-id="72382"></div>
-      isEdpartners &&  <Script src="https://eddu.pro/getRating.js" />
+      {isEdpartners && <Script src="https://eddu.pro/getRating.js" />}
 
       {!dev && (
         <>
@@ -231,7 +231,7 @@ function MyApp({ Component, pageProps }) {
         <Script id={'dmp'} src="https://dmp.one/sync" async charSet="UTF-8" />
       )}
 
-      {!dev && (
+      {dev && (
         isEdpartners && <Script
           id='marquiz-script-start'
           dangerouslySetInnerHTML={{
@@ -246,7 +246,7 @@ function MyApp({ Component, pageProps }) {
       )}
 
 
-      {!dev && (
+      {dev && (
         isEdpartners && <Script
           id='marquiz'
           dangerouslySetInnerHTML={{
