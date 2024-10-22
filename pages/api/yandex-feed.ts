@@ -50,9 +50,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
     <shop>
       <name>${escapeXml('Институт профессионального образования')}</name>
       <company>${escapeXml('НАНО "ИПО"')}</company>
-      <url>${escapeXml('https://ipo.msk.ru/')}</url>
-      <email>${escapeXml('info@ipo.msk.ru')}</email>
-      <picture>${escapeXml('https://ipo.msk.ru/image/catalog/main-logo.png')}</picture>
+      <url>${escapeXml('https://mipo.msk.ru/')}</url>
+      <email>${escapeXml('info@mipo.msk.ru')}</email>
+      <picture>${escapeXml('https://mipo.msk.ru/image/catalog/main-logo.png')}</picture>
       <description>${escapeXml('Российский институт дополнительного профессионального образования «ИПО» – это удобное и быстрое получение дополнительного профобразования и повышения квалификации в сети интернет по востребованным на рынке гуманитарным, техническим и бизнес направлениям.')}</description>
       <currencies>
         <currency id="RUR" rate="1"/>
@@ -68,7 +68,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
             <price>${escapeXml(elem.timenprice[0].ref.price)}</price>
             <currencyId>RUR</currencyId>
             <param unit="месяц" name="Продолжительность">${escapeXml(elem.timenprice[0].ref.studyMonthsDuration)}</param>
-            ${elem.YandexStepsFeed.length ? elem.YandexStepsFeed.map((steps) => `<param unit="План">${escapeXml(steps.step)}</param>`).join('') : ''}
+            ${elem.YandexStepsFeed.length ? elem.YandexStepsFeed.map((steps, index) => `<param name="План" order="${index + 1}" unit="${escapeXml(steps.step)}">${escapeXml(steps.step)}</param>`).join('') : ''}
             ${elem.categoryFeed.length ? elem.categoryFeed.map((element) => `<categoryId>${element.idCategory}</categoryId>`).join('') : ''}
           </offer>`;
         }).join('')}
