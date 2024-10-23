@@ -23,10 +23,9 @@ const SalesBlockToHeader = () => {
     <div className={cn(stls.row, stls.saleBlock)} ref={saleBlock}>
       <Wrapper>
         <span>
-          <b>50% СКИДКА</b> на все курсы до 25 октября от указанной цены на
-          сайте
+          <b>50% СКИДКА</b> на все курсы до 25 октября
         </span>
-        <PopupTrigger btn='epsilon' cta='signUpForCourse' />
+        <span id="header-button"><PopupTrigger btn='epsilon' cta='signUpForCourse' /></span>
       </Wrapper>
     </div>
   )
