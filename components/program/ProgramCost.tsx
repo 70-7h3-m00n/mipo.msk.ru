@@ -36,7 +36,8 @@ const ProgramCost = ({ withPerMonth = false }) => {
           </p>
           <span className={cn(stls.discount, { [stls.altStyles]: altStyles })}>
             <span className={stls.bold}>
-              {toNumberWithSpaces(perMonthPrice) || ''}
+              {/* {toNumberWithSpaces(perMonthPrice) || ''} */}
+              {toNumberWithSpaces(perMonthRPrice / 2) || ''}
             </span>{' '}
             <span className={cn(stls.light, stls.perMonth)}>&#8381;/мес</span>
           </span>
@@ -54,7 +55,8 @@ const ProgramCost = ({ withPerMonth = false }) => {
             Единоразовый платёж
           </p>
           <span className={cn(stls.discount, { [stls.altStyles]: altStyles })}>
-            <span className={stls.bold}>{toNumberWithSpaces(price)}</span>
+            {/* <span className={stls.bold}>{toNumberWithSpaces(price)}</span> */}
+            <span className={stls.bold}>{toNumberWithSpaces(rprice / 2)}</span>
             {'\u00A0'}
             <span className={stls.light}>&#8381;</span>
           </span>
