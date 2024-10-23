@@ -48,12 +48,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
     const xml = `<?xml version="1.0" encoding="UTF-8"?>
   <yml_catalog date="${format(new Date(), 'yyyy-MM-dd HH:mm')}">
     <shop>
-      <name>${escapeXml('Институт профессионального образования')}</name>
-      <company>${escapeXml('НАНО "ИПО"')}</company>
+      <name>${escapeXml('Московский институт профессионального образования')}</name>
+      <company>${escapeXml('НАНО "МИПО"')}</company>
       <url>${escapeXml('https://mipo.msk.ru/')}</url>
       <email>${escapeXml('info@mipo.msk.ru')}</email>
       <picture>${escapeXml('https://mipo.msk.ru/image/catalog/main-logo.png')}</picture>
-      <description>${escapeXml('Российский институт дополнительного профессионального образования «ИПО» – это удобное и быстрое получение дополнительного профобразования и повышения квалификации в сети интернет по востребованным на рынке гуманитарным, техническим и бизнес направлениям.')}</description>
+      <description>${escapeXml('Московский институт дополнительного профессионального образования «МИПО» – это удобное и быстрое получение дополнительного профобразования и повышения квалификации в сети интернет по востребованным на рынке гуманитарным, техническим и бизнес направлениям.')}</description>
       <currencies>
         <currency id="RUR" rate="1"/>
       </currencies>
