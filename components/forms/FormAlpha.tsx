@@ -17,7 +17,7 @@ type FormValues = {
   name: string
   phone: string
   email: string
-  promocode: string
+  post_promocode: string
   question: string
   leadPage: string
   formName?: string | null
@@ -45,8 +45,10 @@ const FormAlpha = ({
   const [id, setId] = useState(() => uuidv4())
   const [clickid, setClickid] = useState(() => uuidv4())
   const [leadIsSentTimeout, setLeadIsSentTimeout] = useState(false)
-
+  const [textButton, setTextButton] = useState<null | string>(cta)
   const { program } = useContext(ProgramContext)
+  const [hasItBeenSentBefore, setHasItBeenSentBefore] = useState<boolean>(false)
+
   const altStyles =
     program?.category?.type === 'mba' ||
     program?.category?.type === 'profession'
@@ -58,7 +60,27 @@ const FormAlpha = ({
 
   const router = useRouter()
 
+  useEffect(() => {
+    if (!localStorage.getItem('timeAfterSend')) return
+    const diff =
+      (new Date().getTime() -
+        new Date(localStorage.getItem('timeAfterSend')).getTime()) /
+      1000 /
+      60
+    if (diff < 5) {
+      const remainsTime = Math.round(5 - diff)
+      const timestr = (remainsTime < 1) ? `несколько секунд` : `${remainsTime} мин`
+      const str = `Ваша заявка отправлена, повтор через ${timestr}`
+      setHasItBeenSentBefore(true)
+      setIsDisabled(true)
+      setTextButton(str)
+    }
+  }, [cta])
+
   const onSubmit = async data => {
+    if (hasItBeenSentBefore) return
+    localStorage.setItem('timeAfterSend', new Date().toISOString())
+
     let price = Boolean(+program?.timenprice[0]?.price)
       ? +program?.timenprice[0]?.price
       : null
@@ -197,7 +219,7 @@ const FormAlpha = ({
               aria-label='Промокод'
               placeholder='Промокод'
               disabled={isDisabled}
-              {...register('promocode', {
+              {...register('post_promocode', {
                 maxLength: {
                   value: 50,
                   message: `*Максимальная длинна промокода 50 символов`
@@ -205,7 +227,7 @@ const FormAlpha = ({
               })}
             />
             <p className={stls.err}>
-              {errors.promocode && errors.promocode.message}
+              {errors.post_promocode && errors.post_promocode.message}
             </p>
           </div>
           {question && (
@@ -228,9 +250,9 @@ const FormAlpha = ({
 
           <div className={stls.btn}>
             {atFooter ? (
-              <BtnBeta text={cta} isDisabled={isDisabled} />
+              <BtnBeta text={textButton} isDisabled={isDisabled} />
             ) : (
-              <BtnAlpha text={cta} isDisabled={isDisabled} />
+              <BtnAlpha text={textButton} isDisabled={isDisabled} />
             )}
           </div>
 
