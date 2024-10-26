@@ -3,6 +3,7 @@ import PopupTrigger from '../general/PopupTrigger'
 import Wrapper from './Wrapper'
 import stls from '@/styles/components/layout/Header.module.sass'
 import { useEffect, useRef } from 'react'
+import ProgramAdmission from '../program/ProgramAdmission'
 
 const SalesBlockToHeader = () => {
   const saleBlock = useRef<HTMLDivElement>(null)
@@ -23,7 +24,7 @@ const SalesBlockToHeader = () => {
     <div className={cn(stls.row, stls.saleBlock)} ref={saleBlock}>
       <Wrapper>
         <span>
-          <b>50% СКИДКА</b> на все курсы до 25 октября
+          <b>50% СКИДКА</b> на все курсы до <ProgramAdmission />
         </span>
         <span id="header-button"><PopupTrigger btn='epsilon' cta='signUpForCourse' /></span>
       </Wrapper>
