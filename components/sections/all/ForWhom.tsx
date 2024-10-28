@@ -15,12 +15,10 @@ const ForWhom = () => {
   const altStyles =
     program?.category?.type === 'mba' ||
     program?.category?.type === 'profession'
-  const isMshppBlock = route.asPath.includes('prakticheskaya-psihologiya-m-sh-pp')
 
+  // const isMshppBlock = route.asPath.includes('prakticheskaya-psihologiya-m-sh-pp')
   return (
-    <section className={cn(stls.container, { [stls.altStyles]: altStyles })}
-             style={{paddingTop: isMshppBlock? 0: null}}
-    >
+    <section className={cn(stls.container, { [stls.altStyles]: altStyles })}>
       <Wrapper classNames={[cn(stls.wrapper)]}>
         <div className={cn(stls.left, { [stls.altStyles]: altStyles })}>
           <div className={cn(stls.text, { [stls.altStyles]: altStyles })}>

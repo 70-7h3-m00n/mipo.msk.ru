@@ -75,29 +75,30 @@ module.exports =
           // })
         }
       ]
+    },
+    async redirects() {
+      return [
+        {
+          source: '/professions/prakticheskaya-psihologiya-m-sh-pp/voennyj-psiholog',
+          destination: '/professions/prakticheskaya-psihologiya-m-sh-pp',
+          permanent: true,
+          statusCode: 301
+        },
+        // {
+        //   source: '/programs/mini',
+        //   destination: '/programs/mini/online',
+        //   permanent: true
+        // },
+        // {
+        //   source: '/programs/professional',
+        //   destination: '/programs/professional/online',
+        //   permanent: true
+        // },
+        // {
+        //   source: '/programs/industry',
+        //   destination: '/programs/industry/online',
+        //   permanent: true
+        // }
+      ]
     }
-    // async redirects() {
-    //   return [
-    //     {
-    //       source: '/programs',
-    //       destination: '/programs/mini/online',
-    //       permanent: true
-    //     },
-    //     {
-    //       source: '/programs/mini',
-    //       destination: '/programs/mini/online',
-    //       permanent: true
-    //     },
-    //     {
-    //       source: '/programs/professional',
-    //       destination: '/programs/professional/online',
-    //       permanent: true
-    //     },
-    //     {
-    //       source: '/programs/industry',
-    //       destination: '/programs/industry/online',
-    //       permanent: true
-    //     }
-    //   ]
-    // }
   }

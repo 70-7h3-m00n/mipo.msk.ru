@@ -49,13 +49,14 @@ const PagesProgram = ({ ofType = null, reviews }: PagesProgramType) => {
     program?.category?.type === 'mba' ||
     program?.category?.type === 'profession'
 
-  const isMshppBlock = route.asPath.includes('prakticheskaya-psihologiya-m-sh-pp')
+  // const isMshppBlock = route.asPath.includes('prakticheskaya-psihologiya-m-sh-pp')
+  // const isMshppBlock = false;
 
   return (
     <>
       <HeroProgram />
 
-      {isMshppBlock && <CardMshpp />}
+      {/* {isMshppBlock && <CardMshpp />} */}
       <ForWhom />
       {altStyles && <SectionMoreRelevant />}
       <WhatYouWillLearn />
