@@ -79,26 +79,29 @@ module.exports =
     async redirects() {
       return [
         {
+          source: '/professions/prakticheskaya-psihologiya-m-sh-pp/geshtalt-terapiya',
+          destination: '/professions/prakticheskaya-psihologiya-m-sh-pp/geshtalt-terapevt-mba',
+          permanent: true,
+          statusCode: 301
+        },
+        {
           source: '/professions/prakticheskaya-psihologiya-m-sh-pp/voennyj-psiholog',
           destination: '/professions/prakticheskaya-psihologiya-m-sh-pp',
           permanent: true,
           statusCode: 301
         },
-        // {
-        //   source: '/programs/mini',
-        //   destination: '/programs/mini/online',
-        //   permanent: true
-        // },
-        // {
-        //   source: '/programs/professional',
-        //   destination: '/programs/professional/online',
-        //   permanent: true
-        // },
-        // {
-        //   source: '/programs/industry',
-        //   destination: '/programs/industry/online',
-        //   permanent: true
-        // }
+        {
+          source: '/professions/prakticheskaya-psihologiya-m-sh-pp/prakticheskij-psiholog',
+          destination: '/professions/prakticheskaya-psihologiya-m-sh-pp/psiholog-seksolog-mba',
+          permanent: true,
+          statusCode: 301
+        },
+        {
+          source: '/professions/prakticheskaya-psihologiya-m-sh-pp/detskij-psiholog',
+          destination: '/professions/prakticheskaya-psihologiya-m-sh-pp/detskij-psiholog-mba',
+          permanent: true,
+          statusCode: 301
+        }
       ]
     }
   }
