@@ -1,5 +1,5 @@
 const { createSecureHeaders } = require('next-secure-headers')
-const listRedirects = require('./hooks/redirects.ts')
+const listRedirects = require('./hooks/listRedirects.js')
 
 module.exports =
   /* withPWA( */
