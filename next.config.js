@@ -1,4 +1,5 @@
 const { createSecureHeaders } = require('next-secure-headers')
+const listRedirects = require('./hooks/redirects.ts')
 
 module.exports =
   /* withPWA( */
@@ -17,7 +18,7 @@ module.exports =
       localeDetection: false
     },
     images: {
-      domains: ['res.cloudinary.com','api.instprof.online'],
+      domains: ['res.cloudinary.com', 'api.instprof.online']
     },
     async headers() {
       return [
@@ -77,31 +78,6 @@ module.exports =
       ]
     },
     async redirects() {
-      return [
-        {
-          source: '/professions/prakticheskaya-psihologiya-m-sh-pp/geshtalt-terapiya',
-          destination: '/professions/prakticheskaya-psihologiya-m-sh-pp/geshtalt-terapevt-mba',
-          permanent: true,
-          statusCode: 301
-        },
-        {
-          source: '/professions/prakticheskaya-psihologiya-m-sh-pp/voennyj-psiholog',
-          destination: '/professions/prakticheskaya-psihologiya-m-sh-pp',
-          permanent: true,
-          statusCode: 301
-        },
-        {
-          source: '/professions/prakticheskaya-psihologiya-m-sh-pp/prakticheskij-psiholog',
-          destination: '/professions/prakticheskaya-psihologiya-m-sh-pp/psiholog-seksolog-mba',
-          permanent: true,
-          statusCode: 301
-        },
-        {
-          source: '/professions/prakticheskaya-psihologiya-m-sh-pp/detskij-psiholog',
-          destination: '/professions/prakticheskaya-psihologiya-m-sh-pp/detskij-psiholog-mba',
-          permanent: true,
-          statusCode: 301
-        }
-      ]
+      return listRedirects
     }
   }
