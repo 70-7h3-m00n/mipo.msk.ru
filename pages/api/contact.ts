@@ -23,7 +23,7 @@ const contact = async (req: NextApiRequest, res: NextApiResponse) => {
     clickid,
     referer,
     ymUid,
-    promocode,
+    post_promocode,
     formName
   } = req.body
 
@@ -122,7 +122,7 @@ const contact = async (req: NextApiRequest, res: NextApiResponse) => {
     phone: phone || null,
     email: email || null,
     vk: vk || null,
-    promocode: promocode || null,
+    post_promocode: post_promocode || null,
     contactWay: contactWay || null,
     contactMethod: contactMethod || null,
     question: question || null,
@@ -247,7 +247,7 @@ const contact = async (req: NextApiRequest, res: NextApiResponse) => {
       },
       {
         tdKey: 'Промокод',
-        tdVal: data.promocode
+        tdVal: data.post_promocode
       },
       {
         tdKey: 'Способ связи',
