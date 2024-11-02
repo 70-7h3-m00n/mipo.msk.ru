@@ -13,6 +13,7 @@ const SalesBlockToHeader = () => {
 
     const keepMenuToTop = () => {
       saleBlock.current.style.opacity = window.scrollY > 0 ? '1' : '0'
+      saleBlock.current.style.visibility = window.scrollY > 0 ? 'visible' : 'hidden'
     }
 
     document.addEventListener('scroll', keepMenuToTop)
@@ -24,7 +25,7 @@ const SalesBlockToHeader = () => {
     <div className={cn(stls.row, stls.saleBlock)} ref={saleBlock}>
       <Wrapper>
         <span>
-          <b>50% СКИДКА</b> на все курсы до <ProgramAdmission />
+          <b>40% СКИДКА</b> на все курсы до <ProgramAdmission />
         </span>
         <span id="header-button"><PopupTrigger btn='epsilon' cta='signUpForCourse' /></span>
       </Wrapper>

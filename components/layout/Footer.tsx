@@ -87,7 +87,7 @@ const Footer = () => {
     } else {
       setValidComponent(false)
     }
-  })
+  }, [])
 
   // const fieldsLinks = studyFields.map(field =>
   //   ({ val: field.label, href: `/programs/${field.slug}` })

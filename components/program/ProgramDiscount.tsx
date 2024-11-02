@@ -19,15 +19,15 @@ const ProgramDiscount = ({
     program?.category?.type === 'mba' ||
     program?.category?.type === 'profession'
 
-  // const elDiscount = program?.timenprice && (
-  //   <>
-  //     {program?.timenprice?.[0]?.discount
-  //       ? `-${program.timenprice[0].discount}%`
-  //       : discountNum}
-  //   </>
-  // )
+  const elDiscount = program?.timenprice && (
+    <>
+      {program?.timenprice?.[0]?.discount
+        ? `-${program.timenprice[0].discount}%`
+        : discountNum}
+    </>
+  )
 
-  const elDiscount = <> -50% </>
+  // const elDiscount = <> -50% </>
 
   return (
     <>
