@@ -23,6 +23,10 @@ async function generateYandexFeed() {
   )
   const programs = data.programs
 
+  const {data: categoriesYandex} =  await axios.get(
+    'https://api.mipo.msk.ru/Yandex-Feed-Categories'
+  )
+
   const fullProgramsData = await Promise.all(
     programs.map(async elem => {
       const { description, yandex_feed_categories: categoryFeed, YandexStepsFeed } = await getDataProgram(elem.id)
@@ -43,6 +47,9 @@ async function generateYandexFeed() {
       <currencies>
         <currency id="RUR" rate="1"/>
       </currencies>
+      <categories>
+        ${categoriesYandex.map((category) => `<category id="${category.idCategory}">${category.name}</category>`).join('')}
+      </categories>
     </shop>
     <offers>
       ${fullProgramsData

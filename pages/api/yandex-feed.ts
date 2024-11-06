@@ -33,6 +33,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
     )
     const programs = data.programs
 
+    const {data: categoriesYandex} =  await axios.get(
+      'https://api.mipo.msk.ru/Yandex-Feed-Categories'
+    )
+
     const fullProgramsData = await Promise.all(
       programs.map(async elem => {
         const {
@@ -57,6 +61,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
       <currencies>
         <currency id="RUR" rate="1"/>
       </currencies>
+      <categories>
+        ${categoriesYandex.map((category) => `<category id="${category.idCategory}">${category.name}</category>`).join('')}
+      </categories>
     </shop>
     <offers>
       ${fullProgramsData
