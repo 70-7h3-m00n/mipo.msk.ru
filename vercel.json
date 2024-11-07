@@ -11,5 +11,10 @@
         }
       ]
     }
-  ]
+  ],
+  "functions": {
+    "api/yandex-feed": {
+      "maxDuration": 60
+    }
+  }
 }
