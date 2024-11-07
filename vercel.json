@@ -13,7 +13,7 @@
     }
   ],
   "functions": {
-    "api/yandex-feed": {
+    "api/yandex-feed.ts": {
       "maxDuration": 60
     }
   }
