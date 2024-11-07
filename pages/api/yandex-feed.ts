@@ -3,6 +3,11 @@ import { format } from 'date-fns'
 
 import { NextApiRequest, NextApiResponse } from 'next'
 
+// Нужно для ограничения лимита запросов к серверу
+import pLimit from 'p-limit';
+
+const limit = pLimit(3);
+
 async function getDataProgram(id) {
   const { data } = await axios.get(`https://api.mipo.msk.ru/programs/${id}`)
   return data
@@ -38,15 +43,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
     )
 
     const fullProgramsData = await Promise.all(
-      programs.map(async elem => {
-        const {
-          description,
-          yandex_feed_categories: categoryFeed,
-          YandexStepsFeed
-        } = await getDataProgram(elem.id)
-
+      programs.map(elem => limit(async () => {
+        const { description, yandex_feed_categories: categoryFeed, YandexStepsFeed } = await getDataProgram(elem.id)
         return { ...elem, description, categoryFeed, YandexStepsFeed }
-      })
+      }))
     )
 
     const xml = `<?xml version="1.0" encoding="UTF-8"?>
