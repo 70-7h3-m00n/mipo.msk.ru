@@ -26,7 +26,7 @@ const HeroNewProgram = ({data}:Props) => {
       <div className={'container'}>
         <div className={styles.imageWrapper}>
           <div className={styles.imageCourse}>
-            <div className={styles.discount}>-40%</div>
+            <div className={styles.discount}>-60%</div>
 
             <ImgTemplate src={generalImageUrl} priority alt={'imageCourse'} layout={'fill'} classNames={[styles.image]} />
           </div>
