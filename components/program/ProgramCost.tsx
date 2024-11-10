@@ -24,7 +24,8 @@ const ProgramCost = ({ withPerMonth = false }) => {
     Math.round(Math.ceil((price / (100 - discount)) * 100) / 1000) * 1000
 
   const perMonthPrice = Math.round(Math.round(price && +price / 12) / 100) * 100
-  const perMonthRPrice = Math.round(Math.round(rprice && +rprice / 12) / 100) * 100
+  const perMonthRPrice =
+    Math.round(Math.round(rprice && +rprice / 12) / 100) * 100
 
   return (
     <div className={stls.container}>
@@ -35,7 +36,8 @@ const ProgramCost = ({ withPerMonth = false }) => {
           </p>
           <span className={cn(stls.discount, { [stls.altStyles]: altStyles })}>
             <span className={stls.bold}>
-              {toNumberWithSpaces(perMonthPrice) || ''}
+               {toNumberWithSpaces(perMonthRPrice * 0.4) || ''}
+              {/* {toNumberWithSpaces(perMonthPrice) || ''} */}
               {/* {toNumberWithSpaces(perMonthRPrice / 2) || ''} */}
             </span>{' '}
             <span className={cn(stls.light, stls.perMonth)}>&#8381;/мес</span>
@@ -54,7 +56,10 @@ const ProgramCost = ({ withPerMonth = false }) => {
             Единоразовый платёж
           </p>
           <span className={cn(stls.discount, { [stls.altStyles]: altStyles })}>
-            <span className={stls.bold}>{toNumberWithSpaces(price)}</span>
+            <span className={stls.bold}>
+              {toNumberWithSpaces(rprice * 0.4)}
+            </span>
+            {/* <span className={stls.bold}>{toNumberWithSpaces(price)}</span> */}
             {/* <span className={stls.bold}>{toNumberWithSpaces(rprice / 2)}</span> */}
             {'\u00A0'}
             <span className={stls.light}>&#8381;</span>
