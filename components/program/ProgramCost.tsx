@@ -27,6 +27,9 @@ const ProgramCost = ({ withPerMonth = false }) => {
   const perMonthRPrice =
     Math.round(Math.round(rprice && +rprice / 12) / 100) * 100
 
+  const priceWithoutCeil =  Math.round(Math.ceil((price / (100 - discount)) * 100))
+  const priceToMounth = Math.round(Math.ceil(priceWithoutCeil / 12))
+
   return (
     <div className={stls.container}>
       {withPerMonth && (
@@ -36,7 +39,7 @@ const ProgramCost = ({ withPerMonth = false }) => {
           </p>
           <span className={cn(stls.discount, { [stls.altStyles]: altStyles })}>
             <span className={stls.bold}>
-               {toNumberWithSpaces(perMonthRPrice * 0.4) || ''}
+               {toNumberWithSpaces(Math.ceil(priceToMounth * 0.4)) || ''}
               {/* {toNumberWithSpaces(perMonthPrice) || ''} */}
               {/* {toNumberWithSpaces(perMonthRPrice / 2) || ''} */}
             </span>{' '}
@@ -44,7 +47,7 @@ const ProgramCost = ({ withPerMonth = false }) => {
           </span>
           <span className={cn(stls.regular, { [stls.altStyles]: altStyles })}>
             <span className={stls.bold}>
-              {toNumberWithSpaces(perMonthRPrice) || ''}
+              {toNumberWithSpaces(priceToMounth) || ''}
             </span>{' '}
             <span className={cn(stls.light, stls.perMonth)}>&#8381;/мес</span>
           </span>
@@ -57,7 +60,7 @@ const ProgramCost = ({ withPerMonth = false }) => {
           </p>
           <span className={cn(stls.discount, { [stls.altStyles]: altStyles })}>
             <span className={stls.bold}>
-              {toNumberWithSpaces(rprice * 0.4)}
+              {toNumberWithSpaces(Math.ceil(priceWithoutCeil * 0.4))}
             </span>
             {/* <span className={stls.bold}>{toNumberWithSpaces(price)}</span> */}
             {/* <span className={stls.bold}>{toNumberWithSpaces(rprice / 2)}</span> */}
@@ -65,7 +68,7 @@ const ProgramCost = ({ withPerMonth = false }) => {
             <span className={stls.light}>&#8381;</span>
           </span>
           <span className={cn(stls.regular, { [stls.altStyles]: altStyles })}>
-            <span className={stls.bold}>{toNumberWithSpaces(rprice)}</span>
+            <span className={stls.bold}>{toNumberWithSpaces(priceWithoutCeil)}</span>
             {'\u00A0'}
             <span className={stls.light}>&#8381;</span>
           </span>
