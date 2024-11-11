@@ -22,7 +22,7 @@ const CardContact = ({ city, street, numbers, email }: CardContactType) => {
     } else {
       setValidComponent(false)
     }
-  })
+  }, [])
 
   return (
     <div className={stls.container}>

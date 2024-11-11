@@ -5,7 +5,7 @@ import classNames from 'classnames'
 import { getCookie } from 'cookies-next'
 import { useEffect, useState } from 'react'
 
-const BtnPhone = ({ withNumber = false }) => {
+const BtnPhone = ({ withNumber = false, isSecondNumber = false }) => {
   const [validComponent, setValidComponent] = useState(null)
 
   useEffect(() => {
@@ -14,20 +14,23 @@ const BtnPhone = ({ withNumber = false }) => {
     } else {
       setValidComponent(false)
     }
-  })
+  }, [])
 
   if (validComponent || validComponent === null) return <></>
 
+  const numberString = isSecondNumber ? number.newVal : number.val;
+  const hrefString = isSecondNumber ? number.newHref : number.href;
+
   return (
     <a
-      href={number.href}
+      href={hrefString}
       suppressHydrationWarning
       className={classNames({
         [stls.container]: true,
         [stls.withNumber]: withNumber
       })}
       aria-label='Позвонить'>
-      <IconPhone small={withNumber} /> {withNumber && number.val}
+      <IconPhone small={withNumber} /> {withNumber && numberString}
     </a>
   )
 }
