@@ -74,7 +74,7 @@ function MyApp({ Component, pageProps }) {
       Router.events.off('routeChangeComplete', end)
       Router.events.off('routeChangeError', end)
     }
-  }, [])
+  }, [userUuid])
 
   if (prod) {
     console.log = function () {}
@@ -179,8 +179,10 @@ function MyApp({ Component, pageProps }) {
             }}
           />
           <noscript>
-            <div><img src="https://top-fwz1.mail.ru/counter?id=3538298;js=na" style={{position:'absolute', left:'-9999px;'}}
-                      alt="Top.Mail.Ru" /></div>
+            <div>
+              <img src="https://top-fwz1.mail.ru/counter?id=3538298;js=na" style={{position:'absolute', left:'-9999px;'}}
+                      alt="Top.Mail.Ru" />
+            </div>
           </noscript>
         </>
       )}
