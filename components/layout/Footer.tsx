@@ -155,9 +155,9 @@ const Footer = () => {
                     <a href={number.href} className={stls.number}>
                       {number.val}
                     </a>
-                    {/* <a href={numberAlt.href} className={stls.number}>
-                      {numberAlt.val}
-                    </a> */}
+                    <a href={numberAlt.newHref} className={stls.number}>
+                      {numberAlt.newVal}
+                    </a>
                   </div>
               }
 

@@ -70,7 +70,10 @@ $esbp: 850px
   @include m.dye(c, c.$nu)
 
 .topright
-  @include m.flex
+  @include m.flex($ai: center)
+
+.wrapperPhones 
+  @include m.flex($fd: column, $ai: center)
 
 .phone,
 .phoneNoNum

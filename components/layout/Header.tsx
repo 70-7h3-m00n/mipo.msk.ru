@@ -83,8 +83,13 @@ const Header = () => {
               </div>
             </div>
             <div className={stls.topright}>
-              <div className={stls.phone}>
-                <BtnPhone withNumber />
+              <div className={stls.wrapperPhones}>
+                <div className={stls.phone}>
+                  <BtnPhone withNumber />
+                </div>
+                <div className={stls.phone}>
+                  <BtnPhone withNumber isSecondNumber/>
+                </div>
               </div>
               <div className={stls.phoneNoNum}>
                 <BtnPhone />
@@ -99,6 +104,7 @@ const Header = () => {
               <BtnPhone />
               <BtnHumburger />
             </div>
+           
             <div className={stls.btnFields}>
               <BtnFields />
             </div>
