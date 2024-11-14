@@ -55,7 +55,7 @@ const LegalDocs = () => {
       val: 'Положение о режиме обучения'
     },
     {
-      href: '/documents/polozhieniie-o-skidkakh-2024.docx',
+      href: '/documents/polozhenie-o-porjadke-predostavlenija-skidok2024_2.pdf',
       val: 'Положение о скидках'
     },
     {
