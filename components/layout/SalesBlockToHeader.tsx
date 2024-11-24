@@ -26,7 +26,7 @@ const SalesBlockToHeader = () => {
       <Wrapper>
         <span>
           {/* <b>60% СКИДКА</b> на все курсы до <ProgramAdmission /> */}
-          <b>60% СКИДКА</b> на все курсы до 24 ноября
+          <b>60% СКИДКА</b> на все курсы и второй курс в подарок до 30 ноября
         </span>
         <span id="header-button"><PopupTrigger btn='epsilon' cta='signUpForCourse' /></span>
       </Wrapper>
