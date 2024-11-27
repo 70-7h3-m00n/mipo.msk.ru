@@ -67,42 +67,41 @@ const SectionYourDiplomasAlt = ({ classNames }: TSectionYourDiplomasAlt) => {
         </div>
 
         <div className={stls.diplomas}>
-          {program?.imgDiplomas?.length > 0 ? (
-            program?.imgDiplomas.map((elem, index) => (
-              <Popup
-                key={index}
-                trigger={
-                  <a href='#!' className={stls.diploma}>
-                    {React.createElement('img', { src: elem.url })}
-                  </a>
-                }
-                modal
-                lockScroll
-                nested
-                closeOnDocumentClick>
-                {close => (
-                  <PopupImage
-                    image={React.createElement('img', { src: elem.url })}
-                    close={close}
-                  />
-                )}
-              </Popup>
-            ))
-          ) : (
-            <>
-              <Popup
-                trigger={
-                  <a href='#!' className={stls.diploma}>
-                    {imgDiploma}
-                  </a>
-                }
-                modal
-                lockScroll
-                nested
-                closeOnDocumentClick>
-                {close => <PopupImage image={imgDiploma} close={close} />}
-              </Popup>
-
+          <>
+            <Popup
+              trigger={
+                <a href='#!' className={stls.diploma}>
+                  {imgDiploma}
+                </a>
+              }
+              modal
+              lockScroll
+              nested
+              closeOnDocumentClick>
+              {close => <PopupImage image={imgDiploma} close={close} />}
+            </Popup>
+            {program?.imgDiplomas?.length > 0 ? (
+              program?.imgDiplomas.map((elem, index: number) => (
+                <Popup
+                  key={index}
+                  trigger={
+                    <a href='#!' className={stls.diploma}>
+                      {React.createElement('img', { src: elem.url })}
+                    </a>
+                  }
+                  modal
+                  lockScroll
+                  nested
+                  closeOnDocumentClick>
+                  {close => (
+                    <PopupImage
+                      image={React.createElement('img', { src: elem.url })}
+                      close={close}
+                    />
+                  )}
+                </Popup>
+              ))
+            ) : (
               <Popup
                 trigger={
                   <a href='#!' className={stls.diploma}>
@@ -117,21 +116,20 @@ const SectionYourDiplomasAlt = ({ classNames }: TSectionYourDiplomasAlt) => {
                   <PopupImage image={<ImgDiplomaTemplate />} close={close} />
                 )}
               </Popup>
-
-              <Popup
-                trigger={
-                  <a href='#!' className={cn(stls.diploma, stls.mb0)}>
-                    {imgSupplement}
-                  </a>
-                }
-                modal
-                lockScroll
-                nested
-                closeOnDocumentClick>
-                {close => <PopupImage image={imgSupplement} close={close} />}
-              </Popup>
-            </>
-          )}
+            )}
+            <Popup
+              trigger={
+                <a href='#!' className={cn(stls.diploma, stls.mb0)}>
+                  {imgSupplement}
+                </a>
+              }
+              modal
+              lockScroll
+              nested
+              closeOnDocumentClick>
+              {close => <PopupImage image={imgSupplement} close={close} />}
+            </Popup>
+          </>
         </div>
       </Wrapper>
     </section>
