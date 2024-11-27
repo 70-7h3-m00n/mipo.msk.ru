@@ -33,7 +33,9 @@
   @include m.media(phone, tablet)
     margin-top: f.px(50)
   @include m.media(laptop, desktop)
-    display: flex
+    display: grid
+    grid-template-columns: 1fr 1fr
+    gap: 10px
     margin-top: f.px(90)
 
 $right_lp_ml: 2.6%
@@ -85,13 +87,17 @@ $leftright_ld_difference: 1%
 
 .diploma
   display: block
+  max-height: 455px
+  
   @include m.media(phone, tablet)
     margin-bottom: f.px(30)
-  @include m.media(laptop, desktop)
-    & + .diploma
-      margin-top: f.px(30)
   overflow: hidden
   border-radius: f.px(25)
+  img 
+    width: 100%
+    height: 100%
+    object-fit: cover
+
 
 .highlight
   @include m.dye(c, c.$nu)

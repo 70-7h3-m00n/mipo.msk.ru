@@ -110,11 +110,13 @@ const PagesProgram = ({ ofType = null, reviews }: PagesProgramType) => {
       <Faq />
       {altStyles && <SectionCorporateCourse />}
 
-      <Script id="xcntmyAsync"
-              type="text/javascript"
-              strategy="afterInteractive"
-              defer
-              dangerouslySetInnerHTML={{__html: `
+      <Script
+        id='xcntmyAsync'
+        type='text/javascript'
+        strategy='afterInteractive'
+        defer
+        dangerouslySetInnerHTML={{
+          __html: `
                 var xcnt_product_id = '${program?.id ? program.id : ''}';
                   (function(d){
                   var xscr = d.createElement( 'script' ); 
@@ -123,7 +125,8 @@ const PagesProgram = ({ ofType = null, reviews }: PagesProgramType) => {
                   var x = d.getElementById( 'xcntmyAsync' ); 
                   x.parentNode.insertBefore( xscr, x );
                   })(document);
-              `}}
+              `
+        }}
       />
     </>
   )
