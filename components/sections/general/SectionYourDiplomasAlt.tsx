@@ -1,6 +1,6 @@
 import stls from '@/styles/components/sections/general/SectionYourDiplomasAlt.module.sass'
 import { TPropClassNames } from '@/types/index'
-import { useContext } from 'react'
+import React, { useContext } from 'react'
 import cn from 'classnames'
 import Popup from 'reactjs-popup'
 import { routesExternal } from '@/config/index'
@@ -67,50 +67,71 @@ const SectionYourDiplomasAlt = ({ classNames }: TSectionYourDiplomasAlt) => {
         </div>
 
         <div className={stls.diplomas}>
-          <div className={stls.left}>
-            <Popup
-              trigger={
-                <a href='#!' className={stls.diploma}>
-                  {imgDiploma}
-                </a>
-              }
-              modal
-              lockScroll
-              nested
-              closeOnDocumentClick>
-              {close => <PopupImage image={imgDiploma} close={close} />}
-            </Popup>
+          {program?.imgDiplomas?.length > 0 ? (
+            program?.imgDiplomas.map((elem, index) => (
+              <Popup
+                key={index}
+                trigger={
+                  <a href='#!' className={stls.diploma}>
+                    {React.createElement('img', { src: elem.url })}
+                  </a>
+                }
+                modal
+                lockScroll
+                nested
+                closeOnDocumentClick>
+                {close => (
+                  <PopupImage
+                    image={React.createElement('img', { src: elem.url })}
+                    close={close}
+                  />
+                )}
+              </Popup>
+            ))
+          ) : (
+            <>
+              <Popup
+                trigger={
+                  <a href='#!' className={stls.diploma}>
+                    {imgDiploma}
+                  </a>
+                }
+                modal
+                lockScroll
+                nested
+                closeOnDocumentClick>
+                {close => <PopupImage image={imgDiploma} close={close} />}
+              </Popup>
 
-            <Popup
-              trigger={
-                <a href='#!' className={stls.diploma}>
-                  <ImgDiplomaTemplate />
-                </a>
-              }
-              modal
-              lockScroll
-              nested
-              closeOnDocumentClick>
-              {close => (
-                <PopupImage image={<ImgDiplomaTemplate />} close={close} />
-              )}
-            </Popup>
-          </div>
+              <Popup
+                trigger={
+                  <a href='#!' className={stls.diploma}>
+                    <ImgDiplomaTemplate />
+                  </a>
+                }
+                modal
+                lockScroll
+                nested
+                closeOnDocumentClick>
+                {close => (
+                  <PopupImage image={<ImgDiplomaTemplate />} close={close} />
+                )}
+              </Popup>
 
-          <div className={stls.right}>
-            <Popup
-              trigger={
-                <a href='#!' className={cn(stls.diploma, stls.mb0)}>
-                  {imgSupplement}
-                </a>
-              }
-              modal
-              lockScroll
-              nested
-              closeOnDocumentClick>
-              {close => <PopupImage image={imgSupplement} close={close} />}
-            </Popup>
-          </div>
+              <Popup
+                trigger={
+                  <a href='#!' className={cn(stls.diploma, stls.mb0)}>
+                    {imgSupplement}
+                  </a>
+                }
+                modal
+                lockScroll
+                nested
+                closeOnDocumentClick>
+                {close => <PopupImage image={imgSupplement} close={close} />}
+              </Popup>
+            </>
+          )}
         </div>
       </Wrapper>
     </section>
