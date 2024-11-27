@@ -47,7 +47,8 @@ const HeroProgram = () => {
               })}>
               {program?.description && parse(marked(program.description))}
             </div>
-            <div className={cn(stls.btnsDesktop, { [stls.altStyles]: altStyles })}>
+            <div
+              className={cn(stls.btnsDesktop, { [stls.altStyles]: altStyles })}>
               <PopupTrigger
                 btn='alpha'
                 cta={
