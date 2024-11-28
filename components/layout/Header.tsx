@@ -15,7 +15,7 @@ import {
 } from '@/data/routes'
 import MenuContext from '@/context/menu/menuContext'
 import ProgramContext from '@/context/program/programContext'
-import { useEffect, useContext } from 'react'
+import { useEffect, useContext, useState } from 'react'
 import { handleSwipedEvt } from '@/helpers/index'
 import PopupTrigger from '@/components/general/PopupTrigger'
 import BtnPhone from '@/components/btns/BtnPhone'
@@ -60,8 +60,9 @@ const Header = () => {
       className={cn(!redirectHeader ? stls.container : stls.contentNewCourse, {
         [stls.altStyles]: altStyles
       })}>
-      
-      <SalesBlockToHeader />
+      {(program?.category?.type !== 'mba' && !router.asPath.includes('mba')) && (
+        <SalesBlockToHeader />
+      )}
       <MenuMobile />
 
       {!redirectHeader ? (
@@ -88,7 +89,7 @@ const Header = () => {
                   <BtnPhone withNumber />
                 </div>
                 <div className={stls.phone}>
-                  <BtnPhone withNumber isSecondNumber/>
+                  <BtnPhone withNumber isSecondNumber />
                 </div>
               </div>
               <div className={stls.phoneNoNum}>
@@ -104,7 +105,7 @@ const Header = () => {
               <BtnPhone />
               <BtnHumburger />
             </div>
-           
+
             <div className={stls.btnFields}>
               <BtnFields />
             </div>

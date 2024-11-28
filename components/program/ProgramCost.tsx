@@ -27,7 +27,7 @@ const ProgramCost = ({ withPerMonth = false }) => {
   const perMonthRPrice =
     Math.round(Math.round(rprice && +rprice / 12) / 100) * 100
 
-  let priceWithoutCeil =  Math.round(Math.ceil((price / (100 - discount)) * 100))
+  let priceWithoutCeil = Math.round(Math.ceil((price / (100 - discount)) * 100))
   priceWithoutCeil = Math.round(priceWithoutCeil + priceWithoutCeil * 0.1)
   const priceToMounth = Math.round(Math.ceil(priceWithoutCeil / 12))
 
@@ -40,41 +40,50 @@ const ProgramCost = ({ withPerMonth = false }) => {
           </p>
           <span className={cn(stls.discount, { [stls.altStyles]: altStyles })}>
             <span className={stls.bold}>
-               {toNumberWithSpaces(Math.ceil(priceToMounth * 0.4)) || ''}
+              {!atProfession && !atCourse
+                ? toNumberWithSpaces(Math.round(Math.ceil(price / 12)))
+                : toNumberWithSpaces(Math.ceil(priceToMounth * 0.4)) || ''}
               {/* {toNumberWithSpaces(perMonthPrice) || ''} */}
               {/* {toNumberWithSpaces(perMonthRPrice / 2) || ''} */}
             </span>{' '}
             <span className={cn(stls.light, stls.perMonth)}>&#8381;/мес</span>
           </span>
-          <span className={cn(stls.regular, { [stls.altStyles]: altStyles })}>
-            <span className={stls.bold}>
-              {toNumberWithSpaces(priceToMounth) || ''}
-            </span>{' '}
-            <span className={cn(stls.light, stls.perMonth)}>&#8381;/мес</span>
-          </span>
-        </div>
-      )}
-      {(atProfession || atCourse) && (
-        <div className={stls.content}>
-          <p className={cn(stls.label, { [stls.altStyles]: altStyles })}>
-            Единоразовый платёж
-          </p>
-          <span className={cn(stls.discount, { [stls.altStyles]: altStyles })}>
-            <span className={stls.bold}>
-              {toNumberWithSpaces(Math.ceil(priceWithoutCeil * 0.4))}
+          {(atProfession || atCourse) && (
+            <span className={cn(stls.regular, { [stls.altStyles]: altStyles })}>
+              <span className={stls.bold}>
+                {toNumberWithSpaces(priceToMounth) || ''}
+              </span>
+              <span className={cn(stls.light, stls.perMonth)}>&#8381;/мес</span>
             </span>
-            {/* <span className={stls.bold}>{toNumberWithSpaces(price)}</span> */}
-            {/* <span className={stls.bold}>{toNumberWithSpaces(rprice / 2)}</span> */}
-            {'\u00A0'}
-            <span className={stls.light}>&#8381;</span>
-          </span>
-          <span className={cn(stls.regular, { [stls.altStyles]: altStyles })}>
-            <span className={stls.bold}>{toNumberWithSpaces(priceWithoutCeil)}</span>
-            {'\u00A0'}
-            <span className={stls.light}>&#8381;</span>
-          </span>
+          )}
         </div>
       )}
+
+      <div className={stls.content}>
+        <p className={cn(stls.label, { [stls.altStyles]: altStyles })}>
+          Единоразовый платёж
+        </p>
+        <span className={cn(stls.discount, { [stls.altStyles]: altStyles })}>
+          <span className={stls.bold}>
+            {!atProfession && !atCourse
+              ? toNumberWithSpaces(price)
+              : toNumberWithSpaces(Math.ceil(priceWithoutCeil * 0.4))}
+          </span>
+          {/* <span className={stls.bold}>{toNumberWithSpaces(price)}</span> */}
+          {/* <span className={stls.bold}>{toNumberWithSpaces(rprice / 2)}</span> */}
+          {'\u00A0'}
+          <span className={stls.light}>&#8381;</span>
+        </span>
+        {(atProfession || atCourse) && (
+          <span className={cn(stls.regular, { [stls.altStyles]: altStyles })}>
+            <span className={stls.bold}>
+              {toNumberWithSpaces(priceWithoutCeil)}
+            </span>
+            {'\u00A0'}
+            <span className={stls.light}>&#8381;</span>
+          </span>
+        )}
+      </div>
     </div>
   )
 }

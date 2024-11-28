@@ -77,7 +77,8 @@ const StudyCost = () => {
       title: 'Готовые знания + Официальный документ',
       content: (
         <>
-          Смотрите лекции, выполняйте практические задания, получайте официальные документы по завершению курса.
+          Смотрите лекции, выполняйте практические задания, получайте
+          официальные документы по завершению курса.
         </>
       )
     },
@@ -139,7 +140,9 @@ const StudyCost = () => {
               </div>
               <div
                 className={cn(stls.discount, { [stls.altStyles]: altStyles })}>
-                <ProgramDiscount small={!altStyles} />
+                {program?.category?.type !== 'mba' && (
+                  <ProgramDiscount small={!altStyles} />
+                )}
               </div>
             </div>
             <div className={cn(stls.cost, { [stls.altStyles]: altStyles })}>
