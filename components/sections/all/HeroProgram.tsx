@@ -26,6 +26,7 @@ const HeroProgram = () => {
     program?.category?.type === 'mba' ||
     program?.category?.type === 'profession'
 
+    console.log(program?.category?.type)
   const { curProgramsType } = useContext(ProgramsContext)
   return (
     <section
@@ -66,7 +67,7 @@ const HeroProgram = () => {
           </div>
           <div className={cn(stls.pic, { [stls.altStyles]: altStyles })}>
             <div className={cn(stls.discount, { [stls.altStyles]: altStyles })}>
-              <ProgramDiscount />
+              {program?.category?.type !== 'mba' && <ProgramDiscount />}
             </div>
             {altStyles && (
               <>
