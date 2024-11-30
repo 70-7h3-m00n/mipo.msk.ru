@@ -42,7 +42,7 @@ const ProgramCost = ({ withPerMonth = false }) => {
             <span className={stls.bold}>
               {!atProfession && !atCourse
                 ? toNumberWithSpaces(Math.round(Math.ceil(price / 12)))
-                : toNumberWithSpaces(Math.ceil(priceToMounth * 0.4)) || ''}
+                : toNumberWithSpaces(Math.ceil(priceToMounth * 0.5)) || ''}
               {/* {toNumberWithSpaces(perMonthPrice) || ''} */}
               {/* {toNumberWithSpaces(perMonthRPrice / 2) || ''} */}
             </span>{' '}
@@ -67,7 +67,7 @@ const ProgramCost = ({ withPerMonth = false }) => {
           <span className={stls.bold}>
             {!atProfession && !atCourse
               ? toNumberWithSpaces(price)
-              : toNumberWithSpaces(Math.ceil(priceWithoutCeil * 0.4))}
+              : toNumberWithSpaces(Math.ceil(priceWithoutCeil * 0.5))}
           </span>
           {/* <span className={stls.bold}>{toNumberWithSpaces(price)}</span> */}
           {/* <span className={stls.bold}>{toNumberWithSpaces(rprice / 2)}</span> */}
