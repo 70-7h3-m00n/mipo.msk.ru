@@ -22,12 +22,19 @@ const SalesBlockToHeader = () => {
   }, [])
 
   return (
-    <div className={cn(stls.row, stls.saleBlock)} ref={saleBlock}>
+    <div className={cn(stls.row, stls.saleBlock, stls.wrapper)} ref={saleBlock}>
       <Wrapper>
         <span>
           {/* <b>60% СКИДКА</b> на все курсы до <ProgramAdmission /> */}
-          <b>60% СКИДКА</b> на все курсы и второй курс в подарок до 30 ноября
+          Новогодняя распродажа в МИПО
         </span>
+        <div className={stls.infoSales}>
+          <div>-50</div>
+          <div>
+            <div>%</div>
+            <div>Скидка<br />На все курсы</div>
+          </div>
+        </div>
         <span id="header-button"><PopupTrigger btn='epsilon' cta='signUpForCourse' /></span>
       </Wrapper>
     </div>
