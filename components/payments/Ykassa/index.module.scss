@@ -1,0 +1,23 @@
+@use '@/styles/utils/mixin' as m;
+@use '@/styles/utils/funcs' as f;
+@use '@/styles/config/Colors.module' as c;
+
+.container {
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+.title {
+  @include m.media(phone, tablet) {
+    @include m.gap($mb: f.px(10));
+    font-size: f.px(26);
+  }
+
+  @include m.media(laptop, desktop) {
+    @include m.gap($mb: f.px(60));
+    font-size: f.px(44);
+  }
+
+  font-weight: 500;
+  @include m.dye(c, c.$theta);
+}
