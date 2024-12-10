@@ -82,7 +82,7 @@ const PagesProgram = ({ ofType = null, reviews }: PagesProgramType) => {
               <span className={stls.highlightFw}>
                 со скидкой{' '}
                 {/* <span className={stls.highlightC}>{discount.substring(1)}</span> */}
-                <span className={stls.highlightC}>50%</span>
+                <span className={stls.highlightC}>55%</span>
                 <IconGeneralTextDecorativeUnderline
                   classNames={[stls.IconGeneralTextDecorativeUnderline]}
                 />
