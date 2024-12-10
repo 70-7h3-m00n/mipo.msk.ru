@@ -39,7 +39,10 @@ function MyApp({ Component, pageProps }) {
   const [loading, setLoading] = useState(false)
   useHandleUtms()
 
-  const isEdpartners = getCookie('utm_source') !== 'edpartners' && !getCookie('cl_uid') && !route.asPath.includes('edpartners')
+  const isEdpartners =
+    getCookie('utm_source') !== 'edpartners' &&
+    !getCookie('cl_uid') &&
+    !route.asPath.includes('edpartners')
 
   const userUuid = uuidv4()
 
@@ -111,8 +114,8 @@ function MyApp({ Component, pageProps }) {
 
       <Script src='/assets/js/vendors/swiped-events.min.js' />
 
-      {
-        !dev && (<>
+      {!dev && (
+        <>
           <Script
             id={'informer-script'}
             dangerouslySetInnerHTML={{
@@ -130,11 +133,11 @@ function MyApp({ Component, pageProps }) {
         `
             }}
           />
-        </>)
-      }
+        </>
+      )}
 
-      <div id="getRatingFromEddu" data-id="72382"></div>
-      {isEdpartners && <Script src="https://eddu.pro/getRating.js" />}
+      <div id='getRatingFromEddu' data-id='72382'></div>
+      {isEdpartners && <Script src='https://eddu.pro/getRating.js' />}
 
       {!dev && (
         <>
@@ -161,38 +164,41 @@ function MyApp({ Component, pageProps }) {
           />
         </>
       )}
-      {!dev && (
+      {!dev && isEdpartners && (
         <>
-          isEdpartners && <Script
+          <Script
             id={'top-mail-Ru-counter'}
             dangerouslySetInnerHTML={{
               __html: `
-              var _tmr = window._tmr || (window._tmr = []);
-              _tmr.push({id: "3538298", type: "pageView", start: (new Date()).getTime()});
-              (function (d, w, id) {
-                if (d.getElementById(id)) return;
-                var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
-                ts.src = "https://top-fwz1.mail.ru/js/code.js";
-                var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
-                if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
-              })(document, window, "tmr-code");
-              `,
+          var _tmr = window._tmr || (window._tmr = []);
+          _tmr.push({id: "3538298", type: "pageView", start: (new Date()).getTime()});
+          (function (d, w, id) {
+            if (d.getElementById(id)) return;
+            var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
+            ts.src = "https://top-fwz1.mail.ru/js/code.js";
+            var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
+            if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
+          })(document, window, "tmr-code");
+        `
             }}
           />
           <noscript>
             <div>
-              <img src="https://top-fwz1.mail.ru/counter?id=3538298;js=na" style={{position:'absolute', left:'-9999px;'}}
-                      alt="Top.Mail.Ru" />
+              <img
+                src='https://top-fwz1.mail.ru/counter?id=3538298;js=na'
+                style={{ position: 'absolute', left: '-9999px;' }}
+                alt='Top.Mail.Ru'
+              />
             </div>
           </noscript>
         </>
       )}
-      {!dev && (
-        <>
-          isEdpartners && <Script
-            id="victorycorp-integration"
-            dangerouslySetInnerHTML={{
-              __html: `(function (d, w) {
+
+      {!dev && isEdpartners && (
+        <Script
+          id='victorycorp-integration'
+          dangerouslySetInnerHTML={{
+            __html: `(function (d, w) {
             var n = d.getElementsByTagName("script")[0],
             s = d.createElement("script");
             s.type = "text/javascript";
@@ -200,42 +206,34 @@ function MyApp({ Component, pageProps }) {
             s.src = "https://victorycorp.ru/index.php?ref="+d.referrer+"&page=" + encodeURIComponent(w.location.href);
             n.parentNode.insertBefore(s, n);
             })(document, window);`
-            }}
-          />
-        </>
+          }}
+        />
+      )}
+
+      {!dev && isEdpartners && (
+        <Script id='af-ckick' src={'https://af.click.ru/af.js?id=16601'} />
       )}
 
       {!dev && (
-        <>
-          isEdpartners &&  <Script
-            id='af-ckick'
-            src={"https://af.click.ru/af.js?id=16601"}
-          />
-        </>
-      )}
-
-      {!dev && (
-        <>
-          <Script
-            id='roistat-counter'
-            dangerouslySetInnerHTML={{
-              __html: `(function(w, d, s, h, id) {
+        <Script
+          id='roistat-counter'
+          dangerouslySetInnerHTML={{
+            __html: `(function(w, d, s, h, id) {
                 w.roistatProjectId = id; w.roistatHost = h;
                 var p = d.location.protocol == "https:" ? "https://" : "http://";
                 var u = /^.*roistat_visit=[^;]+(.*)?$/.test(d.cookie) ? "/dist/module.js" : "/api/site/1.0/"+id+"/init?referrer="+encodeURIComponent(d.location.href);
                 var js = d.createElement(s); js.charset="UTF-8"; js.async = 1; js.src = p+h+u; var js2 = d.getElementsByTagName(s)[0]; js2.parentNode.insertBefore(js, js2);
                 })(window, document, 'script', 'cloud.roistat.com', '5cfe377c158202483a51ae27717c4045');`
-            }}
-          />
-        </>
+          }}
+        />
       )}
 
       {!dev && (
-        <Script id={'dmp'} src="https://dmp.one/sync" async charSet="UTF-8" />
+        <Script id={'dmp'} src='https://dmp.one/sync' async charSet='UTF-8' />
       )}
 
-      {dev && (
-        isEdpartners && <Script
+      {dev && isEdpartners && (
+        <Script
           id='marquiz-script-start'
           dangerouslySetInnerHTML={{
             __html: `(function(w, d, s, o){ var j = d.createElement(s); j.async = true; j.src = '//script.marquiz.ru/v2.js';
@@ -248,9 +246,8 @@ function MyApp({ Component, pageProps }) {
         />
       )}
 
-
-      {dev && (
-        isEdpartners && <Script
+      {dev && isEdpartners && (
+        <Script
           id='marquiz'
           dangerouslySetInnerHTML={{
             __html: `(function(t, p) {window.Marquiz ? Marquiz.add([t, p]) : document.addEventListener('marquizLoaded', 
@@ -288,11 +285,10 @@ function MyApp({ Component, pageProps }) {
       )}
 
       {!dev && (
-        <>
-          <Script
-            id='ed-partners'
-            dangerouslySetInnerHTML={{
-              __html: `function sclClickPixelFn() {
+        <Script
+          id='ed-partners'
+          dangerouslySetInnerHTML={{
+            __html: `function sclClickPixelFn() {
                   const url = new URL(document.location.href).searchParams;
                   if (url.get('a')) {
                       const availableParams = ['aff_click_id', 'sub_id1', 'sub_id2', 'sub_id3', 'sub_id4', 'sub_id5', 'aff_param1', 'aff_param2', 'aff_param3', 'aff_param4', 'aff_param5', 'idfa', 'gaid'];
@@ -323,9 +319,8 @@ function MyApp({ Component, pageProps }) {
               }
 
               sclClickPixelFn();`
-            }}
-          />
-        </>
+          }}
+        />
       )}
     </>
   )
