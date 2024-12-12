@@ -12,7 +12,12 @@ const IconArrowRight: FC<TIconArrowRight> = ({ classNames }) => {
       className={
         cn(stls.container, getClassNames({ classNames })) || undefined
       }>
-      <svg viewBox='0 0 10 17' fill='none' xmlns='http://www.w3.org/2000/svg'>
+      <svg
+        viewBox='0 0 10 17'
+        fill='none'
+        xmlns='http://www.w3.org/2000/svg'
+        role='img'
+        aria-label='Стрелка вправо'>
         <title>Стрелка вправо</title>
         <path
           d='M1 1L8.5 8.5L1 16'
