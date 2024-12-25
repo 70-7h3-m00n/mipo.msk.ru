@@ -44,9 +44,10 @@ type PopupTriggerType = {
     | 'getProgram'
     | 'choosePlan'
   formName?: string
+  tarifPhycho?: string
 }
 
-const PopupTrigger = ({ btn, cta, formName }: PopupTriggerType) => {
+const PopupTrigger = ({ btn, cta, formName, tarifPhycho }: PopupTriggerType) => {
   const question = cta === 'askQuestion'
 
   const strs = {
@@ -297,6 +298,7 @@ const PopupTrigger = ({ btn, cta, formName }: PopupTriggerType) => {
           question={question}
           close={close}
           formName={formName}
+          tarifPhycho={tarifPhycho}
         />
       )}
     </Popup>

@@ -19,6 +19,9 @@
   display: grid
   grid-template-columns: 1fr 1fr 1fr
   gap: 30px
+  @include m.media(phone, tablet)
+    grid-template-columns: 1fr
+    gap: 15px
   .item 
     display: inline-flex
     justify-content: center

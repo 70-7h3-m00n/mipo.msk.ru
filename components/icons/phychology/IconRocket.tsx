@@ -5,8 +5,6 @@ const IconRocket = () => {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
-      width='50'
-      height='50'
       viewBox='0 0 50 50'
       fill='none'>
       <g clipPath='url(#clip0_4368_1962)'>

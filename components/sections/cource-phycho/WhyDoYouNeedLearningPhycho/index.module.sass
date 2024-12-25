@@ -4,9 +4,9 @@
 
 .container
   @include m.media(phone, tablet)
-    padding-top: f.px(490)
+    padding-top: f.px(50)
   @include m.media(laptop, desktop)
-    padding-top: f.px(180)
+    padding-top: f.px(50)
     padding-bottom: f.px(137)
 
   .lineElements
@@ -17,12 +17,15 @@
     line-height: normal
     color: c.$color-white
     margin-top: 50px
+    @include m.media(phone, tablet)
+      flex-direction: column
 
     .elemOfLine
       display: flex
       flex-shrink: 0
       flex-grow: 0
       max-width: 270px
+      
       padding: 25px
       gap: 10px
       flex-direction: column
@@ -48,6 +51,10 @@
         border-radius: 35px 5px 5px 5px
       &:nth-child(3)
         border-radius: 5px 35px 5px 5px
+      @include m.media(phone, tablet)
+        max-width: none
+        border-radius: 10px
+      
       
 
       

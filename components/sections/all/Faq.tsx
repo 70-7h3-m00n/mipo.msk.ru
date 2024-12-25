@@ -9,7 +9,8 @@ import PopupTrigger from '@/components/general/PopupTrigger'
 interface Props {
   isForPhychology?: boolean
 }
-const Faq = ({isForPhychology = false}) => {
+
+const Faq = ({ isForPhychology = false }) => {
   const { program } = useContext(ProgramContext)
   const altStyles =
     program?.category?.type === 'mba' ||
@@ -27,16 +28,31 @@ const Faq = ({isForPhychology = false}) => {
   //   }))
 
   return (
-    <section className={cn(stls.container, { [stls.altStyles]: altStyles })}>
+    <section
+      className={cn(
+        stls.container,
+        altStyles && stls.altStyles,
+        isForPhychology && stls.forPhychology
+      )}>
       <Wrapper>
         <div className={stls.heading}>
           {' '}
-          <h2 className={cn(stls.title, { [stls.altStyles]: altStyles })}>
+          <h2
+            className={cn(
+              stls.title,
+              altStyles && stls.altStyles,
+              isForPhychology && stls.forPhychology
+            )}>
             Часто задаваемые вопросы
           </h2>
           <div
             className={cn(stls.laptopdesktop, { [stls.altStyles]: altStyles })}>
-            <p className={cn(stls.p, { [stls.altStyles]: altStyles })}>
+            <p
+              className={cn(
+                stls.p,
+                altStyles && stls.altStyles,
+                isForPhychology && stls.forPhychology
+              )}>
               У Вас есть вопросы? Оставьте заявку! <br />И мы перезвоним Вам!
             </p>
             <PopupTrigger btn='zeta' cta='askQuestion' />
@@ -51,7 +67,7 @@ const Faq = ({isForPhychology = false}) => {
                   key={question + idx}
                   question={question}
                   answer={answer}
-                  
+                  isForPhychology
                 />
               ))}
           </ul>

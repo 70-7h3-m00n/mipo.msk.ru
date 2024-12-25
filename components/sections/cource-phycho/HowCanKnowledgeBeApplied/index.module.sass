@@ -5,8 +5,8 @@
 .container
   @include m.media(phone, tablet)
     margin-bottom: f.px(50)
-    padding-top: f.px(50)
-    padding-bottom: f.px(50)
+    padding-top: f.px(30)
+    padding-bottom: f.px(30)
   @include m.media(laptop, desktop)
     padding-top: f.px(20)
     padding-bottom: f.px(50)
@@ -17,6 +17,9 @@
     display: grid
     margin-top: 50px
     grid-template-columns: 1fr 1fr
+    @include m.media(phone, tablet)
+      grid-template-columns: 1fr
+      gap: 30px
     font-size: 20px
     font-weight: 350
     line-height: 1.3

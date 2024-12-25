@@ -12,17 +12,10 @@
       border-radius: f.px(100) f.px(5) 0 0
       box-shadow: 0 f.px(4) f.px(40) rgba(0, 0, 0, .05)
       @include m.dye(bg, c.$epsilon)
-  &.altStyles
-    @include m.media(phone, tablet)
-      padding-right: f.px(16)
-      padding-left: f.px(16)
-      max-width: 100%
-      & > *
-        padding-top: f.px(20)
-        padding-bottom: f.px(20)
-        border-radius: f.px(25) 0 0 0
-    & > *
-      @include m.dye(bg, c.$pi-2)
+  @include m.media(phone, tablet)
+    padding-right: 20px
+    padding-left: 20px
+
 
 .wrapper 
   background-color: c.$color-white
@@ -31,18 +24,13 @@
 .top
   @include m.media(laptop, desktop)
     @include m.flex($jc: space-between)
-  &.altStyles
-    @include m.media(phone, tablet)
-      display: flex
-      flex-direction: column
+  @include m.media(phone, tablet)
+    padding: 30px
 
 .heading
   @include m.media(laptop, desktop)
     @include m.flex($display: false, $fb: 65%)
     @include m.gap($mr: 8%, $mb: f.px(40))
-  &.altStyles
-    @include m.media(phone, tablet)
-      order: 2
 
 .title
   @include m.media(phone, tablet)
@@ -53,10 +41,6 @@
     font-size: f.px(40)
   font-weight: 500
   @include m.dye(c, c.$theta)
-  &.altStyles
-    @include m.media(phone, tablet)
-      margin-bottom: f.px(20)
-    @include m.dye(c, c.$nu)
 
 .p
   @include m.media(phone, tablet)
@@ -67,12 +51,6 @@
     font-size: f.px(20)
   font-weight: 300
   @include m.dye(c, c.$theta)
-  &.altStyles
-    font-weight: 400
-    @include m.media(phone, tablet)
-      margin-bottom: f.px(50)
-      line-height: 130%
-    @include m.dye(c, rgba(c.$nu, .5))
 
 .qty
   @include m.media(phone, tablet)
@@ -80,12 +58,6 @@
   @include m.media(laptop, desktop)
     @include m.flex($display: false, $fb: 25%)
   position: relative
-  &.altStyles
-    @include m.media(phone, tablet)
-      order: 1
-      display: flex
-      justify-content: flex-end
-      margin-bottom: f.px(50)
   & .icon
     width: 26px
     height: 26px

@@ -35,15 +35,14 @@ const HeroProgramPhycho = () => {
 
   const rootClassNames = cn(
     stls.container,
-    altStyles && stls.altStyles,
     selectors.sectionHero
   )
 
   return (
     <section className={rootClassNames}>
       <Wrapper>
-        <div className={cn(stls.top, altStyles && stls.altStyles)}>
-          <div className={cn(stls.heading, altStyles && stls.altStyles)}>
+        <div className={cn(stls.top, stls.gridTemplate)}>
+          <div className={cn(stls.heading)}>
             <div className={stls.label}>
               <ProgramLabel color='black' />
             </div>
@@ -51,15 +50,25 @@ const HeroProgramPhycho = () => {
               <ProgramLabel color='purple' text='Расширенный курc' needIcon />
             </div>
             <h1 className={stls.title}>{program?.title}</h1>
-            <div
-              className={cn(
-                stls.descriptionDesktop,
-                altStyles && stls.altStyles
-              )}>
+            <div className={cn(stls.description)}>
               {program?.description && parse(marked(program.description))}
             </div>
-            <div
-              className={cn(stls.btnsDesktop, { [stls.altStyles]: altStyles })}>
+            <div className={stls.btnsMobile}>
+              <PopupTrigger
+                btn='alpha'
+                cta={
+                  curProgramsType === 'course'
+                    ? 'signUpForCourse'
+                    : curProgramsType === 'profession'
+                    ? 'signUpForProfession'
+                    : curProgramsType === 'mba'
+                    ? 'sighUpForMBA'
+                    : 'signUp'
+                }
+              />
+              <PopupTrigger btn='theta' cta='askQuestion' />
+            </div>
+            <div className={cn(stls.btnsDesktop)}>
               <PopupTrigger
                 btn='alpha'
                 cta={
@@ -76,55 +85,31 @@ const HeroProgramPhycho = () => {
             </div>
           </div>
 
-          <div className={cn(stls.pic, altStyles && stls.altStyles)}>
-            {altStyles && (
-              <>
-                <div className={stls.giftPictureContainer}>
-                  <div className={stls.giftPicture}>
-                    <Image
-                      src='/assets/imgs/new-course/gift.png'
-                      alt='Ветка'
-                      layout='fill'
-                    />
-                  </div>
-                </div>
-                <div className={stls.treePictureContainer}>
-                  <div className={stls.treePicture}>
-                    <Image
-                      src='/assets/imgs/new-course/tree.png'
-                      alt='Ветка'
-                      layout='fill'
-                    />
-                  </div>
-                </div>
-              </>
-            )}
+          <div className={cn(stls.form, altStyles && stls.altStyles)}>
+            <div className={stls.giftPictureContainer}>
+              <div className={stls.giftPicture}>
+                <Image
+                  src='/assets/imgs/new-course/gift.png'
+                  alt='Ветка'
+                  layout='fill'
+                />
+              </div>
+            </div>
+            <div className={stls.treePictureContainer}>
+              <div className={stls.treePicture}>
+                <Image
+                  src='/assets/imgs/new-course/tree.png'
+                  alt='Ветка'
+                  layout='fill'
+                />
+              </div>
+            </div>
+
             <OpenForm />
           </div>
-          <div
-            className={cn(stls.descriptionMobile, {
-              [stls.altStyles]: altStyles
-            })}>
-            {program?.description && parse(program.description)}
+          <div className={stls.info}>
+            <ProgramInfoAlt />
           </div>
-        </div>
-        <div className={stls.btnsMobile}>
-          <PopupTrigger
-            btn='alpha'
-            cta={
-              curProgramsType === 'course'
-                ? 'signUpForCourse'
-                : curProgramsType === 'profession'
-                ? 'signUpForProfession'
-                : curProgramsType === 'mba'
-                ? 'sighUpForMBA'
-                : 'signUp'
-            }
-          />
-          <PopupTrigger btn='beta' cta='askQuestion' />
-        </div>
-        <div className={stls.info}>
-          <ProgramInfoAlt />
         </div>
       </Wrapper>
     </section>

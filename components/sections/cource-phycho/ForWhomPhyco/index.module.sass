@@ -4,7 +4,7 @@
 
 .container
   @include m.media(phone, tablet)
-    padding-top: f.px(490)
+    padding-top: f.px(50)
   @include m.media(laptop, desktop)
     padding-top: f.px(90)
     padding-bottom: f.px(90)
@@ -16,6 +16,9 @@
     font-weight: 500
     line-height: 1.2
     color: c.$color-black
+    @include m.media(phone, tablet)
+      flex-direction: column
+      gap: 10px
 
     .elemOfLine
       display: flex
@@ -27,15 +30,22 @@
       align-items: start
       justify-content: center
       margin-top: 50px
+      @include m.media(phone, tablet)
+        flex-grow: 1
+        max-width: none
+        flex-direction: row
 
       .title
         font-size: 22px
         color: c.$color-purple
         margin-top: 10px
+        @include m.media(phone, tablet)
+          margin-top: 0
 
       .desc
         font-size: 18px
         font-weight: 300
+        margin-top: 20px
       
       .icon 
         width: 100px
@@ -48,6 +58,18 @@
           width: 100%
           height: 100%
           height: 50px
+        @include m.media(phone, tablet)
+          width: 40px
+          height: 40px
+          border-radius: 10px
+          display: flex
+          justify-content: center
+          align-content: center
+          padding: 10px
+          & > svg
+            display: inline-block
+            width: 20px
+            height: 20px
           
 
       

@@ -164,7 +164,7 @@ const PagesProgram = ({ ofType = null, reviews }: PagesProgramType) => {
       )}
       {isForPhychology ? <StudyCoastPhycho /> : <StudyCost />}
 
-      <Faq />
+      <Faq isForPhychology/>
       {altStyles && <SectionCorporateCourse />}
 
       <Script

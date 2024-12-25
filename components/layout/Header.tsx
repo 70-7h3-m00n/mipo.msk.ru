@@ -131,8 +131,8 @@ const Header = () => {
             <Logo atHeader isForPhychology={isForPhychology} />
 
             <div className={stls.btns}>
-              <BtnPhone />
-              <BtnHumburger />
+              <BtnPhone colorText={isForPhychology ? 'black' : 'white'}/>
+              <BtnHumburger isForPhychology={isForPhychology}/>
             </div>
 
             <div className={stls.btnFields}>

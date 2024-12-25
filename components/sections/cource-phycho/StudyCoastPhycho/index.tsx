@@ -11,7 +11,7 @@ import { discountNum } from '@/data/price'
 import PopupTrigger from '@/components/general/PopupTrigger'
 import toNumberWithSpaces from '@/helpers/toNumberWithSpaces'
 import roundingUpPriceOrNumber from '@/helpers/roundingUpPriceOrNumber'
-
+import { number } from '@/data/contact'
 const StudyCoastPhycho = () => {
   const { program } = useContext(ProgramContext)
 
@@ -178,18 +178,34 @@ const StudyCoastPhycho = () => {
                   </div>
                 </div>
                 <div className={stls.btn}>
-                  <PopupTrigger btn='gamma' cta='choosePlan' />
+                  <PopupTrigger btn='gamma' cta='choosePlan' tarifPhycho={elem.title} />
                 </div>
               </div>
             </div>
           ))}
         </div>
-        <div>
+        <div className={stls.blockAfter}>
           <div>
             <h3>Возврат денег</h3>
+            <div>
+              Если вы передумаете учиться, то мы вернем полную сумму в течении
+              первых двух недель
+            </div>
           </div>
-          <div></div>
-          <div></div>
+          <div>
+            <h3>Сэкономьте 13%</h3>
+            <div>
+              Получить налоговый вычет. Все подробности у менеджера при записи
+              на курс
+            </div>
+          </div>
+          <div>
+            <h3>Остались вопросы?</h3>
+            <div>
+              Позвоните или напишите нам <br /><a href={number.href}>{number.val}</a><br />
+              Whatsapp <a href={number.newHref}>{number.newVal}</a>
+            </div>
+          </div>
         </div>
       </Wrapper>
     </section>

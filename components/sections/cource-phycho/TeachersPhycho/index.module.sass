@@ -46,17 +46,16 @@
   padding: 0
   margin-top: f.px(50)
   margin-left: f.px(150)
-  
   @include m.media(phone, tablet)
-  @include m.media(laptop, desktop)
-    display: flex
-    
-    flex-wrap: nowrap
-    overflow-x: scroll
-    gap: 30px
-    align-items: stretch
-    &::-webkit-scrollbar 
-      width: 0
+    margin: 0
+    padding: 0 10px
+  display: flex
+  flex-wrap: nowrap
+  overflow-x: scroll
+  gap: 30px
+  align-items: stretch
+  &::-webkit-scrollbar 
+    width: 2px
 
 $teacherItem: 3%
 .teacherItem
@@ -67,6 +66,8 @@ $teacherItem: 3%
   align-items: center
   padding: 1px
   border-radius: f.px(25)
+  @include m.media(phone, tablet)
+    width: 100%
 
 .teacherItemBody
   display: flex
@@ -83,6 +84,7 @@ $teacherItem: 3%
 .top
   @include m.media(phone, tablet)
     display: flex
+    flex-direction: column
 
 .img
   @include m.media(phone, tablet)
@@ -105,6 +107,7 @@ $teacherItem: 3%
   @include m.media(phone, tablet)
     font-size: f.px(18)
     position: relative
+    margin-top: 10px
   @include m.media(laptop, desktop)
     font-size: f.px(22)
   font-weight: 500
@@ -156,13 +159,12 @@ $teacherItem: 3%
   @include m.dye(c, c.$color-dark-grey)
 
 .btnContainer
+  margin-top: f.px(50)
+  display: flex
+  gap: 10px
+  justify-content: center
   @include m.media(phone, tablet)
-    margin-top: f.px(40)
-  @include m.media(laptop, desktop)
-    margin-top: f.px(50)
-    display: flex
-    gap: 10px
-    justify-content: center
+    margin-top: 0
 
 .leftArrow
   width: 40px
@@ -178,6 +180,10 @@ $teacherItem: 3%
 .phoneTablet
   @include m.media(laptop, desktop)
     display: none
+  @include m.media(phone, tablet)
+    justify-content: center
+    display: flex
+
 
 .laptopDesktop
   @include m.media(phone, tablet)

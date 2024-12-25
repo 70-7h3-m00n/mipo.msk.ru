@@ -48,9 +48,16 @@ const WeWillSupportYou = () => {
       <Wrapper>
         <Title as='h2'>Вас поддержат менторы и эксперты</Title>
         <div className={stls.lineElements}>
+          {/* Тут есть костыль на адаптив его нужно убрать и переделать потом */}
           {data.map((elem, index) => (
-            <div key={index} className={cn(stls.elemOfLine, index > 2 && stls.bigText)}>
-              {elem.icon && <div className={stls.icon}><IconEarth /></div>}
+            <div
+              key={index}
+              className={cn(stls.elemOfLine, index > 2 && stls.bigText)}>
+              {elem.icon && (
+                <div className={stls.icon}>
+                  <IconEarth />
+                </div>
+              )}
 
               <div>{elem.text}</div>
             </div>

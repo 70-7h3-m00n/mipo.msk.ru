@@ -22,17 +22,17 @@ const ForWhomPhyco = () => {
     {
       title: 'Для мечтающих освоить профессию психолога с нуля',
       desc: 'Вы всегда хотели зарабатывать любимым и благородным делом. Люди тянутся к вам за советами, у вас богатый жизненный опыт, но не хватает знаний.',
-      icon : <IconEarth />
+      icon: <IconEarth />
     },
     {
       title: 'Для тех кто хочет освоить профессию психолога для себя',
       desc: 'Вы начнете разбираться в психологических практиках и процессах. Использовать это в личной жизни, в работе и помощи близким.',
-      icon : <IconFire />
+      icon: <IconFire />
     },
     {
       title: 'Для тех кто хочет получить диплом, чтобы работать официально',
       desc: 'Вы уже сейчас работающий психолог, но требуется подтверждения своего статуса официальным дипломом.',
-      icon : <IconRocket />
+      icon: <IconRocket />
     }
   ]
 
@@ -48,8 +48,10 @@ const ForWhomPhyco = () => {
           {data.map(elem => (
             <div key={elem.title} className={stls.elemOfLine}>
               <div className={stls.icon}>{elem.icon}</div>
-              <div className={stls.title}>{elem.title}</div>
-              <div className={stls.desc}>{elem.desc}</div>
+              <div>
+                <div className={stls.title}>{elem.title}</div>
+                <div className={stls.desc}>{elem.desc}</div>
+              </div>
             </div>
           ))}
         </div>

@@ -14,6 +14,8 @@
     display: grid
     margin-top: 50px
     grid-template-columns: 1fr 1fr
+    @include m.media(phone, tablet)
+      grid-template-columns: 1fr
     border-radius: 10px 10px 90px 10px
     border: 1px solid c.$color-purple
     font-size: 20px
