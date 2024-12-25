@@ -23,6 +23,7 @@ import BtnVk from '@/components/btns/BtnVk'
 import BtnWhatsapp from '@/components/btns/BtnWhatsapp'
 import BtnYt from '@/components/btns/BtnYt'
 import BtnZeta from '@/components/btns/BtnZeta'
+import BtnBorderBlack from '@/components/btns/BtnBorderBlack'
 
 export {
   Btn,
@@ -49,5 +50,6 @@ export {
   BtnVk,
   BtnWhatsapp,
   BtnYt,
-  BtnZeta
+  BtnZeta,
+  BtnBorderBlack
 }

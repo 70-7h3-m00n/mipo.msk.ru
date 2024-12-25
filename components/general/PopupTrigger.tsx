@@ -42,6 +42,7 @@ type PopupTriggerType = {
     | 'learnMore'
     | 'consultMe'
     | 'getProgram'
+    | 'choosePlan'
   formName?: string
 }
 
@@ -84,6 +85,8 @@ const PopupTrigger = ({ btn, cta, formName }: PopupTriggerType) => {
         ? 'Хочу консультацию'
         : cta === 'getProgram'
         ? 'Получить программу'
+        : cta === 'choosePlan'
+        ? 'Выбрать тариф'
         : '',
     title:
       cta === 'askQuestion'
@@ -120,6 +123,8 @@ const PopupTrigger = ({ btn, cta, formName }: PopupTriggerType) => {
         ? 'Хочу консультацию'
         : cta === 'getProgram'
         ? 'Получить программу'
+        : cta === 'choosePlan'
+        ? 'Выбрать тариф'
         : '',
     desc:
       cta === 'askQuestion' ? (
@@ -207,6 +212,11 @@ const PopupTrigger = ({ btn, cta, formName }: PopupTriggerType) => {
           У Вас есть вопросы? Оставьте заявку!{' '}
           {/* <br className={stls.phonetablet} /> */}
         </>
+      ) : cta === 'choosePlan' ? (
+        <>
+          У Вас есть вопросы? Оставьте заявку!{' '}
+          {/* <br className={stls.phonetablet} /> */}
+        </>
       ) : (
         ''
       ),
@@ -245,6 +255,8 @@ const PopupTrigger = ({ btn, cta, formName }: PopupTriggerType) => {
         ? 'Получить консультацию'
         : cta === 'getProgram'
         ? 'Получить программу'
+        : cta === 'choosePlan'
+        ? 'Выбрать план'
         : ''
   }
 

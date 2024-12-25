@@ -12,7 +12,7 @@ type TIconGeneralCircleCheckAltProps = TPropClassNames & {
 const IconGeneralCircleCheckAlt = ({
   classNames,
   color1,
-  color2
+  color2,
 }: TIconGeneralCircleCheckAltProps) => {
   return (
     <IconContainer classNames={[cn(stls.container, classNames)]}>

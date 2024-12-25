@@ -16,10 +16,11 @@ const FaqAnswer = ({ question = null, answer = null }) => {
 
   return (
     <li
-      className={cn(stls.container, {
-        [stls.isOpen]: isOpen,
-        [stls.altStyles]: altStyles
-      })}>
+      className={cn(
+        stls.container,
+        isOpen && stls.isOpen,
+        altStyles && stls.altStyles
+      )}>
       <div className={stls.title} onClick={() => setOpen(!isOpen)}>
         <div className={cn(stls.icon, { [stls.altStyles]: altStyles })}>
           {isOpen ? <IconMinus /> : <IconPlus />}

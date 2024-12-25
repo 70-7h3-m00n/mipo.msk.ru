@@ -6,7 +6,10 @@ import Wrapper from '@/components/layout/Wrapper'
 import FaqAnswer from '@/components/general/FaqAnswer'
 import PopupTrigger from '@/components/general/PopupTrigger'
 
-const Faq = () => {
+interface Props {
+  isForPhychology?: boolean
+}
+const Faq = ({isForPhychology = false}) => {
   const { program } = useContext(ProgramContext)
   const altStyles =
     program?.category?.type === 'mba' ||
@@ -48,6 +51,7 @@ const Faq = () => {
                   key={question + idx}
                   question={question}
                   answer={answer}
+                  
                 />
               ))}
           </ul>

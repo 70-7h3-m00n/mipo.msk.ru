@@ -82,7 +82,7 @@ const Footer = () => {
     program?.category?.type === 'profession'
 
   useEffect(() => {
-    if(getCookie('utm_source') !== undefined) {
+    if (getCookie('utm_source') !== undefined) {
       setValidComponent(true)
     } else {
       setValidComponent(false)
@@ -147,19 +147,19 @@ const Footer = () => {
               ))}
             </ul> */}
             <div className={stls.contact}>
-
               {/*TODO: 'reklama'*/}
-              {
-                validComponent || validComponent === null ? <></> :
-                  <div className={stls.numbers}>
-                    <a href={number.href} className={stls.number}>
-                      {number.val}
-                    </a>
-                    <a href={numberAlt.newHref} className={stls.number}>
-                      {numberAlt.newVal}
-                    </a>
-                  </div>
-              }
+              {validComponent || validComponent === null ? (
+                <></>
+              ) : (
+                <div className={stls.numbers}>
+                  <a href={number.href} className={stls.number}>
+                    {number.val}
+                  </a>
+                  <a href={numberAlt.newHref} className={stls.number}>
+                    {numberAlt.newVal}
+                  </a>
+                </div>
+              )}
 
               <div className={stls.address}>
                 {city}, {street}
@@ -169,32 +169,39 @@ const Footer = () => {
                 <BtnTelegram dark />
               </div>
               <div className={stls.edduBlock}>
-                {
-                  edduData.map((item, index) => (
-                    <a key={index}
-                       href={item.link}
-                       target={'_blank'}
-                       rel="noreferrer"
-                    >
-                      <Image src={item.svg}
-                             alt={'svg'}
-                             priority
-                      />
-                    </a>))
-                }
+                {edduData.map((item, index) => (
+                  <a
+                    key={index}
+                    href={item.link}
+                    target={'_blank'}
+                    rel='noreferrer'>
+                    <Image
+                      src={item.svg}
+                      alt={'svg'}
+                      priority
+                      objectFit='fill'
+                    />
+                  </a>
+                ))}
               </div>
 
-              <div className={stls.informer} id="informer">
-                <a href="https://kursfinder.ru/school/moskovskij-institut-professionalnogo-obrazovaniya/"
-                   className="informer informer-230 informer_v1" target="_blank" title="Отзывы о МИПО на Kursfinder"
-                   rel="noreferrer">
-                  <img src="https://kursfinder.ru/static/img/informer/logo_v1.svg" className="informer__logo"
-                       alt="Отзывы о МИПО на Kursfinder" />
+              <div className={stls.informer} id='informer'>
+                <a
+                  href='https://kursfinder.ru/school/moskovskij-institut-professionalnogo-obrazovaniya/'
+                  className='informer informer-230 informer_v1'
+                  target='_blank'
+                  title='Отзывы о МИПО на Kursfinder'
+                  rel='noreferrer'>
+                  <img
+                    src='https://kursfinder.ru/static/img/informer/logo_v1.svg'
+                    className='informer__logo'
+                    alt='Отзывы о МИПО на Kursfinder'
+                  />
                 </a>
               </div>
 
               <div className={stls.btn}>
-                <PopupTrigger btn="beta" cta="askQuestion" />
+                <PopupTrigger btn='beta' cta='askQuestion' />
               </div>
             </div>
           </div>

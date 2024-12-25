@@ -17,6 +17,9 @@
     @include m.media(laptop, desktop)
       padding-bottom: f.px(100)
     @include m.dye(bg, c.$pi-2)
+  &.forPhychology
+    background-color: c.$color-verywhite-purple
+    padding-top: 50px
 
 .wrapper
   &.altStyles
@@ -47,6 +50,9 @@
     padding-right: f.px(100)
     padding-left: f.px(100)
   @include m.dye(bg, c.$beta)
+  &.forPhychology
+    background: none
+    border: 1px solid c.$color-purple
   @include m.dye(c, c.$nu)
   @media screen and (min-width: bp.$tablet) and (max-width: 920px)
     display: flex

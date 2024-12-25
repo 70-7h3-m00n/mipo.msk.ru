@@ -2,7 +2,12 @@ import stls from '@/styles/components/icons/IconMenu.module.sass'
 import classNames from 'classnames'
 import { useRouter } from 'next/router'
 
-const IconMenu = ({ calpha = false }) => {
+interface Props {
+  calpha?: boolean
+  isForPhychology?: boolean
+}
+
+const IconMenu = ({ calpha = false, isForPhychology = false }: Props) => {
   const router = useRouter()
   const redirectHeader = router.asPath.includes('new-courses')
 
@@ -14,7 +19,7 @@ const IconMenu = ({ calpha = false }) => {
           y1='1'
           x2='20'
           y2='1'
-          stroke={redirectHeader? 'black': 'white'}
+          stroke={redirectHeader || isForPhychology ? 'black' : 'white'}
           strokeWidth='2'
           strokeLinejoin='round'
         />
@@ -22,7 +27,7 @@ const IconMenu = ({ calpha = false }) => {
           y1='8'
           x2='10'
           y2='8'
-          stroke={redirectHeader? 'black': 'white'}
+          stroke={redirectHeader || isForPhychology ? 'black' : 'white'}
           strokeWidth='2'
           strokeLinejoin='round'
         />

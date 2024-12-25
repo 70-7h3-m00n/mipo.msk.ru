@@ -32,6 +32,11 @@ const ProgramInfoAlt: FC<TProgramInfoAltProps> = ({ classNames }) => {
 
   const vals = [
     {
+      key: 'Ближайшее зачисление:',
+      val: <ProgramAdmission />,
+      icon: IconGeneralMap
+    },
+    {
       key: 'Срок обучения:',
       val: (
         <ProgramStudyDuration
@@ -62,16 +67,12 @@ const ProgramInfoAlt: FC<TProgramInfoAltProps> = ({ classNames }) => {
         )
       }
     },
-    {
-      key: 'Форма обучения:',
-      val: program?.study_form && program?.study_form?.label,
-      icon: IconGeneralUsers
-    },
-    {
-      key: 'Ближайшее зачисление:',
-      val: <ProgramAdmission />,
-      icon: IconGeneralMap
-    },
+    // {
+    //   key: 'Форма обучения:',
+    //   val: program?.study_form && program?.study_form?.label,
+    //   icon: IconGeneralUsers
+    // },
+   
     {
       key: 'Количество часов:',
       val: `${program?.timenprice && program?.timenprice?.[0]?.studyHours} ч`,
@@ -137,7 +138,7 @@ const ProgramInfoAlt: FC<TProgramInfoAltProps> = ({ classNames }) => {
               position='top right'
               closeOnDocumentClick
               keepTooltipInside={`.${selectors.sectionHero}`}>
-              <div className={stls.infoContent}> {info.content} </div>
+              <div className={stls.infoContent}> {info.content}</div>
             </Popup>
           )}
           <div className={stls.icon}>

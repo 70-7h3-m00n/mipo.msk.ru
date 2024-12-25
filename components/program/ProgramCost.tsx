@@ -20,20 +20,12 @@ const ProgramCost = ({ withPerMonth = false }) => {
     (program?.timenprice && Number(program?.timenprice?.[0]?.discount)) ||
     discountNum
 
-  const rprice =
-    Math.round(Math.ceil((price / (100 - discount)) * 100) / 1000) * 1000
-
-  const perMonthPrice = Math.round(Math.round(price && +price / 12) / 100) * 100
-  const perMonthRPrice =
-    Math.round(Math.round(rprice && +rprice / 12) / 100) * 100
-
   let priceWithoutCeil = Math.round(Math.ceil((price / (100 - discount)) * 100))
-  console.log(priceWithoutCeil)
   priceWithoutCeil = Math.round(priceWithoutCeil + priceWithoutCeil * 0.17)
   const priceToMounth = Math.round(Math.ceil(priceWithoutCeil / 12))
+  const salePrice = toNumberWithSpaces(Math.ceil(priceToMounth * 0.35))
 
- 
-
+  console.log(salePrice)
   return (
     <div className={stls.container}>
       {withPerMonth && (
