@@ -21,7 +21,7 @@ type FormValues = {
   question: string
   leadPage: string
   formName?: string | null
-  tarifPhycho? : string
+  tarifPhycho?: string
 }
 
 interface Props {
@@ -42,7 +42,7 @@ const FormAlpha = ({
     handleSubmit,
     reset,
     setFocus,
-    formState: { errors },
+    formState: { errors }
   } = useForm<FormValues>()
 
   const [isDisabled, setIsDisabled] = useState(false)
@@ -75,7 +75,8 @@ const FormAlpha = ({
       60
     if (diff < 5) {
       const remainsTime = Math.round(5 - diff)
-      const timestr = (remainsTime < 1) ? `несколько секунд` : `${remainsTime} мин`
+      const timestr =
+        remainsTime < 1 ? `несколько секунд` : `${remainsTime} мин`
       const str = `Ваша заявка отправлена, повтор через ${timestr}`
       setHasItBeenSentBefore(true)
       setIsDisabled(true)
@@ -83,7 +84,10 @@ const FormAlpha = ({
     }
   }, [cta])
 
+  const { query } = useRouter()
+
   const onSubmit = async data => {
+
     if (hasItBeenSentBefore) return
     localStorage.setItem('timeAfterSend', new Date().toISOString())
 
@@ -107,7 +111,15 @@ const FormAlpha = ({
 
     if (leadIsSentTimeout) return
 
-    const req = await hitContactRoute({ ...data, id, ymUid, clickid, formName, tarifPhycho })
+    const req = await hitContactRoute({
+      ...data,
+      id,
+      ymUid,
+      clickid,
+      formName,
+      tarifPhycho,
+      click_id: query.click_id || undefined
+    })
 
     try {
       await axios.post(`${routesFront.root}/api/webhook`, utms)

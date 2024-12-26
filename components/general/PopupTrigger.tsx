@@ -49,7 +49,6 @@ type PopupTriggerType = {
 
 const PopupTrigger = ({ btn, cta, formName, tarifPhycho }: PopupTriggerType) => {
   const question = cta === 'askQuestion'
-
   const strs = {
     trigger:
       cta === 'askQuestion'

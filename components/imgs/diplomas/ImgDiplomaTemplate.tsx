@@ -7,7 +7,7 @@ import { ImgTemplate } from '@/components/imgs'
 import defaultSrc from '@/public/assets/imgs/diplomas/diploma.jpg'
 import defaultSrcMba from '@/public/assets/imgs/diplomas/certificate_mba.png'
 
-const ImgDiplomaTemplate = ({ classNames = [], width, height }: TypeImg) => {
+const ImgDiplomaTemplate = ({ classNames = [], width, height, src }: TypeImg) => {
   const { program } = useContext(programContext)
 
   const atMba = program?.category?.type === 'mba'
@@ -16,6 +16,7 @@ const ImgDiplomaTemplate = ({ classNames = [], width, height }: TypeImg) => {
 
   const studyPeriod = Number(program?.timenprice?.[0]?.studyMonthsDuration) || 6
 
+  const image = src ? src : (atMba ? defaultSrcMba : defaultSrc);
   const fromDate = format(
     new Date(
       now.getFullYear(),
@@ -59,7 +60,7 @@ const ImgDiplomaTemplate = ({ classNames = [], width, height }: TypeImg) => {
   return (
     <ImgTemplate
       classNames={classNames}
-      src={atMba && defaultSrcMba || defaultSrc}
+      src={image}
       alt='Диплом МИПО'
       width={width || 1131}
       height={height || 800}

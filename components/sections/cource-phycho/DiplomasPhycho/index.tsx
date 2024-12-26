@@ -43,31 +43,30 @@ const DiplomasPhycho = ({ classNames }: TSectionYourDiplomasAlt) => {
         'Институт имеет лицензию образовательного учреждения. <span>Номер лицензии:</span> Л035-01298-77/00179971.',
         '<span>Диплом регистрируется в Федеральной информационной системе ФРДО</span>, что обеспечивает официальное признание документа на всей территории РФ.'
       ],
-      img: <ImgDiplomaTemplate />
-    },
+      img: <ImgDiplomaTemplate src={program?.imgDiplomas[0]?.url} />
+    }, 
     {
       title: 'Сертификат',
       subtitle: 'Сертификат',
       text: 'Мы проводим обучение на основании <span>государственной образовательной лицензии</span> №Л035-01298-77/00179971  Наши выпускники также получают электронный сертификат об успешном прохождении курса.',
       img: <ImgCertificate />
     },
-    {
-      title: 'MBA',
-      subtitle: 'Международный диплом MBA PSY',
-      text: 'Наши выпускники получают диплом <span>Master of business psychology</span>',
-      list: [
-        '<span>Диплом MBA</span> признается во всех странах мира, что открывает широкие перспективы для международной карьеры.'
-      ],
-      img: <ImgDiplomaInternationalDiplomaSut />
-    }
+    // {
+    //   title: 'MBA',
+    //   subtitle: 'Международный диплом MBA PSY',
+    //   text: 'Наши выпускники получают диплом <span>Master of business psychology</span>',
+    //   list: [
+    //     '<span>Диплом MBA</span> признается во всех странах мира, что открывает широкие перспективы для международной карьеры.'
+    //   ],
+    //   img: <ImgDiplomaInternationalDiplomaSut />
+    // }
   ]
   return (
     <div className={stls.container} id='diplom'>
       <Wrapper>
         <div>
           <Title>
-            Диплом о профессиональной переподготовке подтвердит вашу
-            квалификацию
+            Диплом о профессиональной переподготовке подтвердит вашу квалификацию
           </Title>
           <div className={stls.content}>
             <div className={stls.left}>
