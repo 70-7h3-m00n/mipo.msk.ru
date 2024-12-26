@@ -119,9 +119,9 @@ const contact = async (req: NextApiRequest, res: NextApiResponse) => {
     date: now.format('DD-MM-YYYY') || null,
     time: now.format('HH:mm:ss') || null,
     utc: now.format('Z') || null,
-    name: name || null,
-    phone: phone || null,
-    email: email || null,
+    post_name : name || null, 
+    post_phone : phone || null,
+    post_email : email || null,
     vk: vk || null,
     post_promocode: post_promocode || null,
     contactWay: contactWay || null,
@@ -233,15 +233,15 @@ const contact = async (req: NextApiRequest, res: NextApiResponse) => {
       },
       {
         tdKey: 'Имя',
-        tdVal: data.name
+        tdVal: data.post_name
       },
       {
         tdKey: 'Телефон',
-        tdVal: data.phone
+        tdVal: data.post_phone
       },
       {
         tdKey: 'Почта',
-        tdVal: data.email
+        tdVal: data.post_email
       },
       {
         tdKey: 'ВКонтакте',
