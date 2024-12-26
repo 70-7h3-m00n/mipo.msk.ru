@@ -79,6 +79,8 @@ const OpenForm = ({
     }
   }, [cta])
 
+  const { query } = useRouter()
+
   const onSubmit = async data => {
     if (hasItBeenSentBefore) return
     localStorage.setItem('timeAfterSend', new Date().toISOString())
@@ -103,7 +105,14 @@ const OpenForm = ({
 
     if (leadIsSentTimeout) return
 
-    const req = await hitContactRoute({ ...data, id, ymUid, clickid, formName })
+    const req = await hitContactRoute({
+      ...data,
+      id,
+      ymUid,
+      clickid,
+      formName,
+      click_id: query.click_id || undefined
+    })
 
     try {
       await axios.post(`${routesFront.root}/api/webhook`, utms)

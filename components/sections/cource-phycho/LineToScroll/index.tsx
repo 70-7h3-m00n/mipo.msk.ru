@@ -27,10 +27,10 @@ const LineToScroll = () => {
   const rootClassNames = cn(stls.component, show && stls.show)
 
   const data = [
+    { title: 'Навыки', scrollToId: 'skills' },
     { title: 'Диплом', scrollToId: 'diplom' },
     { title: 'Учебый план', scrollToId: 'program' },
     { title: 'Преподаватели', scrollToId: 'teachers' },
-    { title: 'Навыки', scrollToId: 'skills' },
     { title: 'Стоимость', scrollToId: 'price' },
     { title: 'FAQ', scrollToId: 'faq' }
   ]
