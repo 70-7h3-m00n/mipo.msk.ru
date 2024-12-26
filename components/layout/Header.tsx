@@ -26,10 +26,20 @@ import SalesBlockToHeader from './SalesBlockToHeader'
 
 const Header = () => {
   const router = useRouter()
+
   const { menuIsOpen, openMenu, closeMenu, toggleMenu } =
     useContext(MenuContext)
 
   const { program } = useContext(ProgramContext)
+
+  const isForPhychology =
+    !!program &&
+    [
+      'Psychology',
+      'prakticheskaya-psihologiya-m-sh-pp',
+      'obshhaya-psihologiya'
+    ].includes(program.study_field?.slug)
+
   const altStyles =
     program?.category?.type === 'mba' ||
     program?.category?.type === 'profession'
@@ -58,25 +68,36 @@ const Header = () => {
   return (
     <header
       className={cn(!redirectHeader ? stls.container : stls.contentNewCourse, {
-        [stls.altStyles]: altStyles
+        [stls.altStyles]: altStyles,
+        [stls.phychologyHeader]: isForPhychology
       })}>
-      {(program?.category?.type !== 'mba' && !router.asPath.includes('mba')) && (
+      {program?.category?.type !== 'mba' && !router.asPath.includes('mba') && (
         <SalesBlockToHeader />
       )}
       <MenuMobile />
 
       {!redirectHeader ? (
         <Wrapper>
-          <div className={cn(stls.top, { [stls.altStyles]: altStyles })}>
+          <div className={cn(stls.top, altStyles && stls.altStyles)}>
             <div className={stls.topleft}>
               <Link href={routeLegal}>
-                <a className={stls.linkInfo}>
+                <a
+                  className={cn(
+                    stls.linkInfo,
+                    isForPhychology && stls.forPhycho
+                  )}>
                   Сведения об образовательной организации
                 </a>
               </Link>
-              <div className={stls.location}>
+              <div
+                className={cn(
+                  stls.location,
+                  isForPhychology && stls.forPhycho
+                )}>
                 <div className={stls.icon}>
-                  <IconLocation />
+                  <IconLocation
+                    colorIcon={isForPhychology ? '#1A1A1A' : 'white'}
+                  />
                 </div>
                 <p className={stls.p}>
                   {city}, {street}
@@ -86,10 +107,17 @@ const Header = () => {
             <div className={stls.topright}>
               <div className={stls.wrapperPhones}>
                 <div className={stls.phone}>
-                  <BtnPhone withNumber />
+                  <BtnPhone
+                    withNumber
+                    colorText={isForPhychology && '#1A1A1A'}
+                  />
                 </div>
                 <div className={stls.phone}>
-                  <BtnPhone withNumber isSecondNumber />
+                  <BtnPhone
+                    withNumber
+                    colorText={isForPhychology && '#1A1A1A'}
+                    isSecondNumber
+                  />
                 </div>
               </div>
               <div className={stls.phoneNoNum}>
@@ -100,22 +128,25 @@ const Header = () => {
           </div>
 
           <div className={stls.row}>
-            <Logo atHeader />
+            <Logo atHeader isForPhychology={isForPhychology} />
+
             <div className={stls.btns}>
-              <BtnPhone />
-              <BtnHumburger />
+              <BtnPhone colorText={isForPhychology ? 'black' : 'white'}/>
+              <BtnHumburger isForPhychology={isForPhychology}/>
             </div>
 
             <div className={stls.btnFields}>
-              <BtnFields />
+              <BtnFields isForPhychology={isForPhychology} />
             </div>
             {list.map((item, idx) => (
               <Link key={item.href + item.val} href={item.href}>
                 <a
-                  className={cn([stls.link], {
-                    [stls.linkFirst]: idx === 0,
-                    [stls.linkThird]: idx === 2
-                  })}>
+                  className={cn(
+                    stls.link,
+                    idx === 0 && stls.linkFirst,
+                    idx === 2 && stls.linkThird,
+                    isForPhychology && stls.forPhycho
+                  )}>
                   {item.val}
                 </a>
               </Link>
@@ -179,10 +210,11 @@ const Header = () => {
                 {list.map((item, idx) => (
                   <Link key={item.href + item.val} href={item.href}>
                     <a
-                      className={cn([stls.link], {
-                        [stls.linkFirst]: idx === 0,
-                        [stls.linkThird]: idx === 2
-                      })}
+                      className={cn(
+                        stls.link,
+                        idx === 0 && stls.linkFirst,
+                        idx === 2 && stls.linkThird
+                      )}
                       style={{ color: 'black' }}>
                       {item.val}
                     </a>

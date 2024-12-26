@@ -1,0 +1,40 @@
+@use '@/styles/utils/mixin' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/config/Colors.module.sass' as c
+
+.component
+  position: fixed
+  z-index: 99
+  bottom: 100px
+  left: 50%
+  transform: translateX(-50%)
+  border-radius: 15px
+  background: rgba(190, 190, 190, 0.26)
+  backdrop-filter: blur(5.150000095367432px)
+  display: flex
+  flex-wrap: nowrap
+  gap: 30px
+  padding: 15px
+  min-width: 800px
+  opacity: 0
+  visibility: hidden
+  transition: all 0.3s ease
+  .link
+    font-size: 18px
+    font-weight: 350
+    color: c.$color-black
+    padding: 5px 10px
+    background-color: transparent
+    display: inline-block
+    border-radius: 6px
+    flex-shrink: 0
+    transition: all 0.3s ease
+    &:hover
+      background-color: c.$color-purple
+      color: c.$color-white
+  &.show
+    opacity: 1
+    visibility: visible
+  @include m.media(phone, tablet)
+    display: none
+      

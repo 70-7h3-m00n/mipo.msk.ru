@@ -4,10 +4,22 @@
 
 .container
   max-width: max-content
+  display: flex
+  justify-content: center
+  align-items: center
+  gap: 5px
   @include m.gap($mb: f.px(20), $ptb: f.px(9), $plr: f.px(17))
   border: 1px solid
-  @include m.dye(border, rgba(c.$nu, .3))
   border-radius: f.px(23)
+  &.white 
+    @include m.dye(border, rgba(c.$nu, .3))
+  &.black
+    border: 2px solid
+    border-color: c.$color-white-grey
+  &.purple
+    border: 2px solid
+    border-color: c.$nu-2
+  
 
 .p
   @include m.gap($mb: 0)
@@ -18,4 +30,18 @@
   font-weight: 500
   letter-spacing: f.px(.1, em)
   text-transform: uppercase
-  @include m.dye(c, c.$nu)
+  &.white 
+    @include m.dye(c, c.$nu)
+  &.black
+    @include m.dye(c, c.$theta)
+  &.purple
+    @include m.dye(c, c.$nu-2)
+
+.icon 
+  width: 24px
+  height: 24px
+  display: inline-flex
+  & > svg 
+    width: 100%
+    object-fit: cover
+    

@@ -64,6 +64,8 @@
   &.altStyles
     font-weight: 300
     @include m.dye(c, c.$nu)
+  &.forPhychology
+  color: c.$color-black !important
 
 .bold
   font-weight: 500
@@ -90,6 +92,10 @@
       font-weight: 400
       line-height: 120%
       @include m.dye(c, rgba(c.$nu, .5))
+  &.forPhychology
+    & p
+      color: c.$color-dark-grey
+      font-size: 18px
 
 .list
   margin-bottom: 0

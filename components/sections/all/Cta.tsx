@@ -23,19 +23,38 @@ type CtaType = {
     | 'learnAboutTeachers'
     | 'getProgram'
   question?: boolean
+  isForPhychology?: boolean
 }
 
-const Cta = ({ title = null, desc = null, cta }: CtaType) => {
+const Cta = ({
+  title = null,
+  desc = null,
+  cta,
+  isForPhychology = false
+}: CtaType) => {
   const { program } = useContext(ProgramContext)
   const altStyles =
     program?.category?.type === 'mba' ||
     program?.category?.type === 'profession'
 
   return (
-    <section className={cn(stls.container, { [stls.altStyles]: altStyles })}>
-      <Wrapper classNames={[cn(stls.wrapper, { [stls.altStyles]: altStyles })]}>
+    <section
+      className={cn(
+        stls.container,
+        altStyles && stls.altStyles,
+        isForPhychology && stls.forPhychology
+      )}>
+      <Wrapper
+        classNames={[
+          cn(
+            stls.wrapper,
+            altStyles && stls.altStyles,
+            isForPhychology && stls.forPhychology
+          )
+        ]}>
         {altStyles ? (
           <IconGeneralPercent
+            fillColor='#6F02C6'
             classNames={[
               cn(stls.IconGeneralPercent, { [stls.altStyles]: altStyles })
             ]}

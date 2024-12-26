@@ -141,7 +141,7 @@ const ProgramTeachers = ({data}: Props) => {
         </div>
 
         <div className={styles.imageDecorator}>
-          <ImgTemplate src={footerDecorator} alt={'image'} />
+          <ImgTemplate src={footerDecorator} alt={'image'} layout='fill'/>
         </div>
       </footer>
     </section>

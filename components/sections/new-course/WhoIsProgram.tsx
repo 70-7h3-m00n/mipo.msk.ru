@@ -8,7 +8,7 @@ interface Props {
   data: Awaited<ReturnType<typeof fetchCourse>>
 }
 
-const WhoIsProgram = ({data}:Props) => {
+const WhoIsProgram = ({ data }: Props) => {
   return (
     <section className={'container'}>
       <div className={styles.blockHeader}>
@@ -22,22 +22,21 @@ const WhoIsProgram = ({data}:Props) => {
       </div>
 
       <div className={styles.blockList}>
-        {
-          data.whoIsProgram.map((item, i) => (
-            <div className={styles.card} key={i}>
-              <div className={styles.wrapperImage}>
-                <ImgTemplate src={routesBack.newRoot + item.icon.data.attributes.url || ''}
-                             alt={'img'}
-                             layout={'fill'}
-                />
-              </div>
-
-              <h3 className={styles.headerCard}>{item.title}</h3>
-
-              <p className={styles.text}>{item.description}</p>
+        {data.whoIsProgram.map((item, i) => (
+          <div className={styles.card} key={i}>
+            <div className={styles.wrapperImage}>
+              <ImgTemplate
+                src={routesBack.newRoot + item.icon.data.attributes.url || ''}
+                alt='img'
+                layout='fill'
+              />
             </div>
-          ))
-        }
+
+            <h3 className={styles.headerCard}>{item.title}</h3>
+
+            <p className={styles.text}>{item.description}</p>
+          </div>
+        ))}
       </div>
     </section>
   )

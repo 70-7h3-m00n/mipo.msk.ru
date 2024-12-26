@@ -1,0 +1,89 @@
+@use '@/styles/utils/mixin' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/config/Colors.module.sass' as c
+    
+.component
+  display: flex
+  flex-direction: column
+  align-items: start
+  width: 100%
+  position: relative
+
+  .label
+    margin-bottom: 10px
+    color: c.$color-dark-grey
+    font-size: 18px
+    font-weight: 500
+
+  .range
+    -webkit-appearance: none
+    appearance: none
+    width: 100%
+    height: 2px
+    margin-top: 25px
+    background: c.$color-black
+    outline: none
+    border-radius: 4px
+    transition: background 0.3s ease-in-out
+
+    &:hover
+      background: #d1bfff
+
+    &::-webkit-slider-thumb
+      -webkit-appearance: none
+      appearance: none
+      width: 14px
+      height: 14px
+      background: c.$color-purple
+      border-radius: 50%
+      cursor: pointer
+      transition: background 0.3s ease-in-out
+
+      &:hover
+        background: #8e44ad
+
+    &::-moz-range-thumb
+      width: 14px
+      height: 14px
+      background: c.$color-purple
+      border-radius: 50%
+      cursor: pointer
+      transition: background 0.3s ease-in-out
+
+      &:hover
+        background: c.$color-purple
+
+    &::-ms-thumb
+      width: 14px
+      height: 14px
+      background: c.$color-purple
+      border-radius: 50%
+      cursor: pointer
+      transition: background 0.3s ease-in-out
+
+    &::-ms-track
+      width: 100%
+      height: 8px
+      background: transparent
+      border-color: transparent
+      color: transparent
+
+  .values
+    display: flex
+    justify-content: space-between
+    width: 100%
+    font-size: 18px
+    font-weight: 500
+    color: c.$color-black
+    margin-top: 15px
+    padding: 0 3px
+
+.value
+  position: absolute
+  bottom: 0
+  left: 50%
+  transform: translateX(-50%)
+  background-color: c.$color-white
+  padding: 5px 10px
+  font-size: 12px
+  border-radius: 20px

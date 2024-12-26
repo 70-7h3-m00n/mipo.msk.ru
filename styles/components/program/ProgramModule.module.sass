@@ -27,6 +27,9 @@
 
 .icon
   margin-right: f.px(20)
+  &.forPhychology
+    width: 20px
+    height: 20px
 
 .pTitle
   margin-bottom: 0
@@ -37,6 +40,8 @@
   font-weight: 300
   &.altStyles
     @include m.dye(c, c.$nu)
+  &.forPhychology
+    color: c.$color-black
 
 .p
   display: inline-block
@@ -53,6 +58,12 @@
   @include m.media(laptop, desktop)
     & p
       font-size: f.px(18)
+  &.forPhychology
+    color: c.$color-black
+
+.subtitle
+  color: c.$color-dark-grey
+  font-weight: 500
 
 .bold
   font-weight: 500
@@ -72,10 +83,21 @@
   margin-bottom: 0
   padding-left: f.px(82)
   list-style-type: '•'
+  &.forPhychology 
+    padding-left: f.px(40)
+    & ul
+      list-style-type: disc
+    & li
+      color: c.$color-black
+      margin-top: 5px
+      &::marker
+        color: c.$color-white-purple
+
 
 .item
   &.altStyles
     @include m.dye(c, c.$nu)
+  
   @include m.media(phone, tablet)
     margin-bottom: f.px(8)
   @include m.media(laptop, desktop)
@@ -90,7 +112,11 @@
       font-size: f.px(35)
       line-height: 10%
       margin-right: f.px(14)
+    &.forPhychology::before
+      display: none
+      list-style: none
   & > .p
     @include m.media(phone, tablet)
       padding-left: f.px(12)
+ 
   
