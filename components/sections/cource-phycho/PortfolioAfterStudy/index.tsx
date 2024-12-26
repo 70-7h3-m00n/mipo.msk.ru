@@ -25,7 +25,7 @@ const PortfolioAfterStudy = () => {
         <Title as='h2' color='black'>
           Ваше портфолио после обучения
         </Title>
-        
+
         <div className={stls.columnsMobile}>
           <div className={stls.professionBlock}>
             <div className={stls.image}>
@@ -52,8 +52,8 @@ const PortfolioAfterStudy = () => {
             <span>1</span>Квалификация:
           </h3>
           <p>
-            Профессиональная переподготовка. Диплом Московского Института
-            Профессиональной переподготовке. Программа «Семейный психолог»
+            {program.category.title}. Диплом Московского Института
+            Профессиональной переподготовке. Программа {program.title}
           </p>
           <h3 className={stls.title}>
             <span>2</span>Диплом:
@@ -77,14 +77,9 @@ const PortfolioAfterStudy = () => {
               <span>3</span>Компетенции:
             </h3>
             <ul className={stls.list}>
-              <li>
-                Навык проведения индивидуального и группового консультирования
-              </li>
-              <li>Навык проведения групповых тренингов</li>
-              <li>
-                Умение профессионально использовать современные практические
-                инструменты консультации
-              </li>
+              {program?.resumeSkills?.map((elem, index) => (
+                <li key={index}>{elem.skill}</li>
+              ))}
             </ul>
           </div>
         </div>
@@ -117,14 +112,9 @@ const PortfolioAfterStudy = () => {
                 <span>3</span>Компетенции:
               </h3>
               <ul className={stls.list}>
-                <li>
-                  Навык проведения индивидуального и группового консультирования
-                </li>
-                <li>Навык проведения групповых тренингов</li>
-                <li>
-                  Умение профессионально использовать современные практические
-                  инструменты консультации
-                </li>
+                {program?.resumeSkills?.map((elem, index) => (
+                  <li key={index}>{elem.skill}</li>
+                ))}
               </ul>
             </div>
           </div>
@@ -133,16 +123,18 @@ const PortfolioAfterStudy = () => {
               <span>1</span>Квалификация:
             </h3>
             <p>
-              Профессиональная переподготовка. Диплом Московского Института
-              Профессиональной переподготовке. Программа «Семейный психолог»
+              {program.category.title}. Диплом Московского Института
+              Профессиональной переподготовке. Программа {program.title}
             </p>
             <h3 className={stls.title}>
               <span>2</span>Диплом:
             </h3>
+           
             <Popup
               trigger={
                 <a href='#!' className={stls.diploma}>
                   <ImgDiplomaTemplate />
+                  <Image src={program.imgDiplomas[0].url} alt='Диплом' layout='fill'/>
                 </a>
               }
               modal
@@ -150,7 +142,7 @@ const PortfolioAfterStudy = () => {
               nested
               closeOnDocumentClick>
               {close => (
-                <PopupImage image={<ImgDiplomaTemplate />} close={close} />
+                <PopupImage image={<ImgDiplomaTemplate src={program?.imgDiplomas[0].url} />} close={close} />
               )}
             </Popup>
           </div>

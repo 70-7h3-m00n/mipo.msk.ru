@@ -156,7 +156,18 @@ const StudyCoastPhycho = () => {
                   ₽/мес
                 </div>
                 <div className={stls.bigPrice}>
-                  <div>от {priceToMonthWithSale} ₽/мес</div>
+                  <div>
+                    от{' '}
+                    {elem.sale
+                      ? toNumberWithSpaces(
+                          roundingUpPriceOrNumber(
+                            priceToMonthWithSale +
+                              (priceToMonthWithSale / 100) * elem.sale
+                          )
+                        )
+                      : toNumberWithSpaces(priceToMonthWithSale)}
+                    ₽/мес
+                  </div>
                   <div className={stls.priceDesc}>
                     в рассрочку на {installmentPeriod} месяца
                   </div>
@@ -178,7 +189,11 @@ const StudyCoastPhycho = () => {
                   </div>
                 </div>
                 <div className={stls.btn}>
-                  <PopupTrigger btn='gamma' cta='choosePlan' tarifPhycho={elem.title} />
+                  <PopupTrigger
+                    btn='gamma'
+                    cta='choosePlan'
+                    tarifPhycho={elem.title}
+                  />
                 </div>
               </div>
             </div>
@@ -202,7 +217,9 @@ const StudyCoastPhycho = () => {
           <div>
             <h3>Остались вопросы?</h3>
             <div>
-              Позвоните или напишите нам <br /><a href={number.href}>{number.val}</a><br />
+              Позвоните или напишите нам <br />
+              <a href={number.href}>{number.val}</a>
+              <br />
               Whatsapp <a href={number.newHref}>{number.newVal}</a>
             </div>
           </div>
