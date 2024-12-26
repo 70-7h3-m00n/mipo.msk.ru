@@ -154,7 +154,7 @@ const contact = async (req: NextApiRequest, res: NextApiResponse) => {
     clUid: utms?.cl_uid || null,
     clickid: clickid || null,
     formName: formName || null,
-    ['type_tarif']: tarifPhycho || null
+    type_tarif: tarifPhycho || null
   }
 
   // try {
