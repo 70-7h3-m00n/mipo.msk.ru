@@ -82,7 +82,7 @@ const StudyCoastPhycho = () => {
     }
   ]
   return (
-    <section className={cn(stls.container)}>
+    <section className={cn(stls.container)} id='price'>
       <Wrapper>
         <Title as='h2' color='black'>
           Выберите свой тариф

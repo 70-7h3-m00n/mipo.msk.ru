@@ -75,7 +75,7 @@ const TeachersPhycho: FC<TSectionGeneralTeachersAlt> = ({ classNames }) => {
     <section
       className={
         cn(stls.container, getClassNames({ classNames })) || undefined
-      }>
+      } id='teachers'>
       <Wrapper classNames={[stls.wrapper]}>
         <Title>Преподаватели программы</Title>
 

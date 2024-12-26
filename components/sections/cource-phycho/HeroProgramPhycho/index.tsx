@@ -4,26 +4,15 @@ import cn from 'classnames'
 import parse from 'html-react-parser'
 import marked from 'marked'
 import { selectors, colors } from '@/config/index'
-import { getImageHeight } from '@/helpers/index'
 import ProgramContext from '@/context/program/programContext'
 import ProgramsContext from '@/context/programs/programsContext'
 import Wrapper from '@/components/layout/Wrapper'
 import ProgramLabel from '@/components/program/ProgramLabel'
-import ProgramDiscount from '@/components/program/ProgramDiscount'
-import ProgramInfo from '@/components/program/ProgramInfo'
 import ProgramInfoAlt from '@/components/program/ProgramInfoAlt'
 import PopupTrigger from '@/components/general/PopupTrigger'
-import {
-  IconGeneral3dSpiral,
-  IconGeneralCircle,
-  IconGeneralInfo,
-  IconGeneralWaterDrop
-} from '@/components/icons'
-import { ImgCourse, ImgTemplate } from '@/components/imgs'
 import { BtnBorderBlack } from '@/components/btns'
 import { OpenForm } from '@/components/forms'
 import Image from 'next/image'
-import Popup from 'reactjs-popup'
 
 const HeroProgramPhycho = () => {
   const { program } = useContext(ProgramContext)

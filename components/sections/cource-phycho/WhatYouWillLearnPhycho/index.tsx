@@ -9,7 +9,7 @@ const WhatYouWillLearnPhycho = () => {
   const { program } = useContext(ProgramContext)
 
   return (
-    <section className={cn(stls.container)}>
+    <section className={cn(stls.container)} id='skills'>
       <Wrapper>
         <Title as='h2' color='black'>
           Чему вы научитесь

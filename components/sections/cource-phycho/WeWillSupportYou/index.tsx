@@ -14,6 +14,7 @@ import IconEarth from '@/components/icons/phychology/IconEarth'
 import IconFire from '@/components/icons/phychology/IconFire'
 import IconRocket from '@/components/icons/phychology/IconRocket'
 import styled from '@emotion/styled'
+import { text } from 'stream/consumers'
 
 const WeWillSupportYou = () => {
   const route = useRouter()
@@ -21,24 +22,18 @@ const WeWillSupportYou = () => {
 
   const data = [
     {
-      text: 'Ментор',
-      icon: true
+      title: 'Ментор',
+      icon: true,
+      text: 'Персональный ментор ответит на все вопросы, совместно с однокурсниками, поможет разобраться в тонкостях профессии, узнать все плюсы и минусы, выбрать правильный профессиональный путь.'
     },
     {
-      text: 'Методист',
-      icon: true
-    },
-    {
-      text: 'Служба заботы',
-      icon: true
-    },
-    {
-      text: 'Персональный ментор ответит     на все вопросы, совместно с однокурсниками, поможет разобраться в тонкостях профессии, узнать все плюсы и минусы, выбрать правильный профессиональный путь.'
-    },
-    {
+      title: 'Методист',
+      icon: true,
       text: 'Методист будет проверять ваши работы и помогать сделать их лучше. А также, проводит интервизии и знакомит с профессией в обучающей форме.'
     },
     {
+      title: 'Служба заботы',
+      icon: true,
       text: 'Служба заботы поддержит в решении всех технических вопросов. Например, поможет слушателям разобраться в системе дистанционного обучения и ответит на все вопросы при возникновении трудностей.'
     }
   ]
@@ -48,18 +43,18 @@ const WeWillSupportYou = () => {
       <Wrapper>
         <Title as='h2'>Вас поддержат менторы и эксперты</Title>
         <div className={stls.lineElements}>
-          {/* Тут есть костыль на адаптив его нужно убрать и переделать потом */}
           {data.map((elem, index) => (
-            <div
-              key={index}
-              className={cn(stls.elemOfLine, index > 2 && stls.bigText)}>
-              {elem.icon && (
-                <div className={stls.icon}>
-                  <IconEarth />
-                </div>
-              )}
+            <div key={index} className={stls.elementOfGrid}>
+              <div className={cn(stls.elemOfLine, index > 2 && stls.bigText)}>
+                {elem.icon && (
+                  <div className={stls.icon}>
+                    <IconEarth />
+                  </div>
+                )}
 
-              <div>{elem.text}</div>
+                <div>{elem.title}</div>
+              </div>
+              <div className={stls.elemOfLine}>{elem.text}</div>
             </div>
           ))}
         </div>

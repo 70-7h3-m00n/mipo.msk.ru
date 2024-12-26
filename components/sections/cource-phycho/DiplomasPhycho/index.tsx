@@ -62,7 +62,7 @@ const DiplomasPhycho = ({ classNames }: TSectionYourDiplomasAlt) => {
     }
   ]
   return (
-    <div className={stls.container}>
+    <div className={stls.container} id='diplom'>
       <Wrapper>
         <div>
           <Title>

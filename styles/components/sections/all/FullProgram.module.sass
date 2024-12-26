@@ -18,6 +18,7 @@
       @include m.media(phone, tablet)
         padding: 0
         margin-top: 0
+
 .wrapper
   @include m.media(phone, tablet)
     @include m.gap($ptb: f.px(57), $plr: f.px(33))
@@ -37,6 +38,9 @@
     border-radius: 0 0 100px 10px
     border: 1px solid #6F01C6 !important
     border-top: none !important
+
+.wrapperMobile
+  &.forPhychology
     @include m.media(phone, tablet)
       padding-right: 20px
       padding-left: 20px

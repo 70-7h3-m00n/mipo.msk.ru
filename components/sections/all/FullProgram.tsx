@@ -19,7 +19,7 @@ const FullProgram = ({ isForPhychology = false }) => {
         altStyles && stls.altStyles,
         isForPhychology && stls.forPhychology
       )}>
-      <Wrapper>
+      <Wrapper classNames={[stls.wrapperMobile, isForPhychology && stls.forPhychology]}>
         <div
           className={cn(
             stls.wrapper,

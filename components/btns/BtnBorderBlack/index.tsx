@@ -2,6 +2,7 @@ import stls from './index.module.sass'
 import { useContext } from 'react'
 import cn from 'classnames'
 import ProgramContext from '@/context/program/programContext'
+import scrollToBlock from '@/helpers/scrollToBlock'
 
 interface Props {
   text?: string
@@ -15,13 +16,7 @@ const BtnBorderBlack = ({ text = '', isDisabled = false, scrollToID = '' }) => {
     program?.category?.type === 'mba' ||
     program?.category?.type === 'profession'
 
-  const scrollToButton = () => {
-    if (!scrollToID) return
-    const targetElement = document.getElementById(scrollToID)
-    if (targetElement) {
-      targetElement.scrollIntoView({ behavior: 'smooth' })
-    }
-  }
+  const handleClickToButton = () => scrollToBlock(scrollToID)
 
   return (
     <button
@@ -31,7 +26,7 @@ const BtnBorderBlack = ({ text = '', isDisabled = false, scrollToID = '' }) => {
         [stls.altStyles]: altStyles
       })}
       disabled={isDisabled}
-      onClick={scrollToID && scrollToButton}>
+      onClick={scrollToID && handleClickToButton}>
       {text}
     </button>
   )

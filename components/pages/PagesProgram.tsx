@@ -50,6 +50,7 @@ import PortfolioAfterStudy from '../sections/cource-phycho/PortfolioAfterStudy'
 import CalculatorPhycho from '../sections/cource-phycho/CalculatorPhycho'
 import PopupTrigger from '../general/PopupTrigger'
 import StudyCoastPhycho from '../sections/cource-phycho/StudyCoastPhycho'
+import LineToScroll from '../sections/cource-phycho/LineToScroll'
 
 type PagesProgramType = {
   ofType: TypeCategory
@@ -73,6 +74,7 @@ const PagesProgram = ({ ofType = null, reviews }: PagesProgramType) => {
 
   return (
     <>
+      {isForPhychology && <LineToScroll />}
       {isForPhychology ? <HeroProgramPhycho /> : <HeroProgram />}
       {isForPhychology && <WhyDoYouNeedLearningPhycho />}
       {/* {isMshppBlock && <CardMshpp />} */}

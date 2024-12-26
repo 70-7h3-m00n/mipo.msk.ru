@@ -33,7 +33,8 @@ const Faq = ({ isForPhychology = false }) => {
         stls.container,
         altStyles && stls.altStyles,
         isForPhychology && stls.forPhychology
-      )}>
+      )}
+      id='faq'>
       <Wrapper>
         <div className={stls.heading}>
           {' '}
