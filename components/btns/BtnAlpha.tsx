@@ -7,7 +7,7 @@ const BtnAlpha = ({
   text = '',
   isDisabled = false,
   href = null,
-  target = null
+  target = null,
 }) => {
   const { program } = useContext(ProgramContext)
   const altStyles =
@@ -18,10 +18,7 @@ const BtnAlpha = ({
     <>
       {href ? (
         <a
-          className={cn({
-            [stls.container]: true,
-            [stls.altStyles]: altStyles
-          })}
+          className={cn(stls.container, altStyles && stls.altStyles)}
           href={href}
           target={target}
           rel={target === '_blank' ? 'noopener noreferrer' : undefined}>
@@ -29,11 +26,11 @@ const BtnAlpha = ({
         </a>
       ) : (
         <button
-          className={cn({
-            [stls.container]: true,
-            [stls.isDisabled]: isDisabled,
-            [stls.altStyles]: altStyles
-          })}
+          className={cn(
+            stls.container,
+            isDisabled && stls.isDisabled,
+            altStyles && stls.altStyles
+          )}
           disabled={isDisabled}>
           {text}
         </button>

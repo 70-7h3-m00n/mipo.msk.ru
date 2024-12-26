@@ -19,14 +19,14 @@ type ImgTemplateType = {
 
 const ImgTemplate = ({
   classNames = [],
-  width,
-  height,
+  width = undefined,
+  height = undefined,
   src,
   alt,
   unoptimized = false,
   layout,
   objectFit,
-  priority
+  priority,
 }: ImgTemplateType) => {
   const container = getClassNames({ classNames })
 

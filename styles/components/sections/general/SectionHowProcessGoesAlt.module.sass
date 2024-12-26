@@ -12,6 +12,8 @@
     padding-top: f.px(100)
     padding-bottom: f.px(100)
   @include m.dye(bg, c.$pi-2)
+  &.forPhycholohy
+    @include m.dye(bg, c.$color-verywhite-purple)
 
 .title
   margin: 0
@@ -52,6 +54,8 @@ $leftright_ld_difference: 1%
   font-weight: 500
   line-height: 130%
   @include m.dye(c, rgba(c.$nu, .5))
+  &.forPhycholohy
+    color: c.$color-dark-grey
 
 .img
   @include m.media(laptop, desktop)
@@ -92,6 +96,8 @@ $leftright_ld_difference: 1%
   border: 1px solid
   @include m.dye(border, c.$nu)
   border-radius: f.px(25)
+  &.forPhycholohy
+    border-color: c.$color-black
 
 .IconGeneral3dSpiralRight
   @include m.media(phone, tablet)
@@ -112,6 +118,8 @@ $leftright_ld_difference: 1%
   font-weight: 500
   line-height: 120%
   @include m.dye(c, c.$xi-2)
+  &.forPhycholohy
+    color: c.$color-purple
 
 $idx_wh: f.px(32)
 .list
@@ -134,6 +142,9 @@ $idx_wh: f.px(32)
     min-height: 100%
     max-height: 100%
     @include m.dye(bg, c.$nu)
+  &.forPhycholohy::before
+    @include m.dye(bg, c.$color-purple)
+
 
 .listItem
   position: relative
@@ -152,6 +163,14 @@ $idx_wh: f.px(32)
       min-height: 100%
       max-height: 100%
       @include m.dye(bg, c.$pi-2)
+    &.forPhycholohy::after
+      background-color: c.$color-purple
+      z-index: 1
+      left: $idx_wh / 2
+      min-width: f.px(1)
+      max-width: f.px(1)
+      min-height: 100%
+      max-height: 100%
 
 .idx
   position: relative
@@ -183,6 +202,15 @@ $idx_wh: f.px(32)
     min-height: 140%
     max-height: 140%
     @include m.dye(bg, c.$pi-2)
+  &.forPhycholohy::before
+      background-color: c.$color-purple
+      z-index: 1
+      top: $idx_wh / 2
+      left: $idx_wh / 2
+      min-width: f.px(1)
+      max-width: f.px(1)
+      min-height: 100%
+      max-height: 100%
 
 .listItemP
   margin: 0
@@ -195,6 +223,8 @@ $idx_wh: f.px(32)
   &::first-letter
     text-transform: uppercase
   @include m.dye(c, c.$nu)
+  &.forPhycholohy 
+    color: c.$color-black
     
 .highlight
   @include m.dye(c, c.$nu-2)

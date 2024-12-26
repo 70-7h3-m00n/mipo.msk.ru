@@ -8,7 +8,7 @@ interface Props {
   data: Awaited<ReturnType<typeof fetchCourse>>
 }
 
-const YourResume = ({data}:Props) => {
+const YourResume = ({ data }: Props) => {
   return (
     <section className={'container'}>
       <div className={styles.blockHeader}>
@@ -35,15 +35,18 @@ const YourResume = ({data}:Props) => {
             <h2>Профессиональные навыки:</h2>
 
             <ul>
-              {
-                data.listProfessionalSkills.map((item, i) => (
-                  <li key={i}>
-                    <ImgTemplate width={23} height={19} src={urlChecked} alt={'img'} />
+              {data.listProfessionalSkills.map((item, i) => (
+                <li key={i}>
+                  <ImgTemplate
+                    width={23}
+                    height={19}
+                    src={urlChecked}
+                    alt='img'
+                  />
 
-                    <p>{item.title}</p>
-                  </li>
-                ))
-              }
+                  <p>{item.title}</p>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -55,7 +58,7 @@ const YourResume = ({data}:Props) => {
         </div>
 
         <div className={styles.wrapperImage}>
-          <ImgTemplate src={urlIllustration} alt={'img'} layout={'fill'} />
+          <ImgTemplate src={urlIllustration} alt='img' layout='fill' />
         </div>
       </div>
     </section>

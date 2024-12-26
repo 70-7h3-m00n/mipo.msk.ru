@@ -3,7 +3,11 @@ import ProgramModule from '@/components/program/ProgramModule'
 import ProgramContext from '@/context/program/programContext'
 import { useContext } from 'react'
 
-const ProgramModules = () => {
+interface Props {
+  isForPhychology?: boolean
+}
+
+const ProgramModules = ({ isForPhychology = false }: Props) => {
   const { program } = useContext(ProgramContext)
 
   return (
@@ -16,6 +20,7 @@ const ProgramModules = () => {
               key={shortContent?.title + idx}
               title={shortContent?.title}
               ShortContentsDescs={shortContent?.ShortContentsDescs}
+              isForPhychology={isForPhychology}
             />
           ))}
     </ul>

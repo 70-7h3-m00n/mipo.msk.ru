@@ -21,6 +21,11 @@ type FormValues = {
   question: string
   leadPage: string
   formName?: string | null
+  tarifPhycho? : string
+}
+
+interface Props {
+  cta: string
 }
 
 const FormAlpha = ({
@@ -29,14 +34,15 @@ const FormAlpha = ({
   popup = false,
   atFooter = false,
   agreement = false,
-  formName = null
+  formName = null,
+  tarifPhycho = ''
 }) => {
   const {
     register,
     handleSubmit,
     reset,
     setFocus,
-    formState: { errors }
+    formState: { errors },
   } = useForm<FormValues>()
 
   const [isDisabled, setIsDisabled] = useState(false)
@@ -101,7 +107,7 @@ const FormAlpha = ({
 
     if (leadIsSentTimeout) return
 
-    const req = await hitContactRoute({ ...data, id, ymUid, clickid, formName })
+    const req = await hitContactRoute({ ...data, id, ymUid, clickid, formName, tarifPhycho })
 
     try {
       await axios.post(`${routesFront.root}/api/webhook`, utms)

@@ -26,7 +26,6 @@ const HeroProgram = () => {
     program?.category?.type === 'mba' ||
     program?.category?.type === 'profession'
 
-    console.log(program?.category?.type)
   const { curProgramsType } = useContext(ProgramsContext)
   return (
     <section

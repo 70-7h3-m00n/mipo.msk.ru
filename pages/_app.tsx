@@ -95,12 +95,14 @@ function MyApp({ Component, pageProps }) {
       <ProgramsState pageProps={pageProps}>
         <ProgramState pageProps={pageProps}>
           <MenuState>
+           
             <FieldsTooltipState>
               <div
                 style={{
                   opacity: 1
                 }}>
                 <Header />
+                
                 <main>
                   <Component {...pageProps} />
                 </main>

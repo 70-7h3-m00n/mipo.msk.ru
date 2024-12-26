@@ -1,0 +1,60 @@
+@use '@/styles/utils/mixin' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/config/Colors.module.sass' as c
+
+.container
+  @include m.media(phone, tablet)
+    padding-top: f.px(50)
+  @include m.media(laptop, desktop)
+    padding-top: f.px(50)
+    padding-bottom: f.px(137)
+
+  .lineElements
+    display: flex
+    gap: 30px
+    min-height: 270px
+    font-weight: 500
+    line-height: normal
+    color: c.$color-white
+    margin-top: 50px
+    @include m.media(phone, tablet)
+      flex-direction: column
+
+    .elemOfLine
+      display: flex
+      flex-shrink: 0
+      flex-grow: 0
+      max-width: 270px
+      
+      padding: 25px
+      gap: 10px
+      flex-direction: column
+      align-items: center
+      justify-content: center
+      text-align: center
+      background-color: c.$color-white-purple
+      border-radius: 50%
+      .title
+        font-size: 22px
+
+      .desc
+        font-size: 16px
+        font-weight: 300
+      &:nth-child(odd)
+        background-color: transparent
+        border: 1px solid c.$color-purple
+        .title 
+          color: c.$color-purple
+        .desc
+          color: c.$color-black
+      &:nth-child(1)
+        border-radius: 35px 5px 5px 5px
+      &:nth-child(3)
+        border-radius: 5px 35px 5px 5px
+      @include m.media(phone, tablet)
+        max-width: none
+        border-radius: 10px
+      
+      
+
+      

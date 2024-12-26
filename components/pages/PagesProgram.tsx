@@ -36,6 +36,21 @@ import { IconGeneralTextDecorativeUnderline } from '@/components/icons'
 import CardMshpp from '@/components/cards/CardMSHPP'
 import { useRouter } from 'next/router'
 import Script from 'next/script'
+import HeroProgramPhycho from '@/components/sections/cource-phycho/HeroProgramPhycho'
+import WhyDoYouNeedLearningPhycho from '../sections/cource-phycho/WhyDoYouNeedLearningPhycho'
+import ForWhomPhyco from '../sections/cource-phycho/ForWhomPhyco'
+import WhatYouWillLearnPhycho from '../sections/cource-phycho/WhatYouWillLearnPhycho'
+import WeWillSupportYou from '../sections/cource-phycho/WeWillSupportYou'
+import DiplomasPhycho from '../sections/cource-phycho/DiplomasPhycho'
+import FullProgramPsycho from '../sections/cource-phycho/BriefProgramContentsPhycho'
+import BriefProgramContentsPhycho from '../sections/cource-phycho/BriefProgramContentsPhycho'
+import HowCanKnowledgeBeApplied from '../sections/cource-phycho/HowCanKnowledgeBeApplied'
+import TeachersPhycho from '../sections/cource-phycho/TeachersPhycho'
+import PortfolioAfterStudy from '../sections/cource-phycho/PortfolioAfterStudy'
+import CalculatorPhycho from '../sections/cource-phycho/CalculatorPhycho'
+import PopupTrigger from '../general/PopupTrigger'
+import StudyCoastPhycho from '../sections/cource-phycho/StudyCoastPhycho'
+import LineToScroll from '../sections/cource-phycho/LineToScroll'
 
 type PagesProgramType = {
   ofType: TypeCategory
@@ -49,65 +64,109 @@ const PagesProgram = ({ ofType = null, reviews }: PagesProgramType) => {
     program?.category?.type === 'mba' ||
     program?.category?.type === 'profession'
 
-  // const isMshppBlock = route.asPath.includes('prakticheskaya-psihologiya-m-sh-pp')
-  // const isMshppBlock = false;
+  const isForPhychology =
+    !!program &&
+    [
+      'Psychology',
+      'prakticheskaya-psihologiya-m-sh-pp',
+      'obshhaya-psihologiya'
+    ].includes(program.study_field?.slug)
 
   return (
     <>
-      <HeroProgram />
-
+      {isForPhychology && <LineToScroll />}
+      {isForPhychology ? <HeroProgramPhycho /> : <HeroProgram />}
+      {isForPhychology && <WhyDoYouNeedLearningPhycho />}
       {/* {isMshppBlock && <CardMshpp />} */}
-      <ForWhom />
-      {altStyles && <SectionMoreRelevant />}
-      <WhatYouWillLearn />
-      {altStyles && <SectionHowProcessGoesAlt />}
+
+      {isForPhychology ? <ForWhomPhyco /> : <ForWhom />}
+      {isForPhychology && <WhatYouWillLearnPhycho />}
+      {altStyles && !isForPhychology && <SectionMoreRelevant />}
+      {!isForPhychology && <WhatYouWillLearn />}
+      {altStyles && (
+        <SectionHowProcessGoesAlt isForPhychology={isForPhychology} />
+      )}
+      {isForPhychology && <WeWillSupportYou />}
+      {isForPhychology && <DiplomasPhycho />}
       {!altStyles && <HowProcessGoes />}
-      {altStyles && <SectionYourDiplomasAlt />}
-      {altStyles && <SectionOurGraduates />}
-      {altStyles && <SectionRelevantContentOnly />}
+      {altStyles && !isForPhychology && <SectionYourDiplomasAlt />}
 
-      <BriefProgramContents />
-      <FullProgram />
+      {isForPhychology && <BriefProgramContentsPhycho />}
 
-      {ofType !== 'course' && !altStyles && <YourFutureJob />}
-      {altStyles && <SectionInternationalExperts />}
+      {altStyles && !isForPhychology && <SectionOurGraduates />}
+      {altStyles && !isForPhychology && <SectionRelevantContentOnly />}
 
-      {altStyles ? <SectionGeneralTeachersAlt /> : <Teachers />}
-      <Cta
-        title={'Начните обучаться со скидкой'}
-        desc={
-          altStyles ? (
+      {!isForPhychology && <BriefProgramContents />}
+      <FullProgram isForPhychology={isForPhychology} />
+      {isForPhychology && <HowCanKnowledgeBeApplied />}
+      {isForPhychology && <TeachersPhycho />}
+      {isForPhychology && <PortfolioAfterStudy />}
+      {isForPhychology && <CalculatorPhycho />}
+      {isForPhychology && (
+        <Cta
+          title='Начните обучаться со скидкой'
+          desc={
             <>
               Забронируйте программу по спеццене —{' '}
               <span className={stls.highlightFw}>
-                со скидкой{' '}
-                {/* <span className={stls.highlightC}>{discount.substring(1)}</span> */}
-                <span className={stls.highlightC}>65%</span>
+                со скидкой <span className={stls.highlightC}>65%</span>
                 <IconGeneralTextDecorativeUnderline
                   classNames={[stls.IconGeneralTextDecorativeUnderline]}
                 />
               </span>
             </>
-          ) : (
-            `Забронируйте программу по спеццене — со скидкой ${discount.substring(
-              1
-            )}`
-          )
-        }
-        cta={altStyles ? 'getProgram' : 'reserve'}
-      />
-      {!altStyles && <TrustedBy />}
-      {altStyles && <SectionTrustedByAlt />}
+          }
+          isForPhychology
+          cta='signUpForCourse'
+        />
+      )}
+      {ofType !== 'course' && !isForPhychology && <YourFutureJob />}
+      {altStyles && !isForPhychology && <SectionInternationalExperts />}
 
-      {altStyles && (
+      {altStyles && !isForPhychology ? (
+        <SectionGeneralTeachersAlt />
+      ) : (
+        !isForPhychology && <Teachers />
+      )}
+
+      {!isForPhychology && (
+        <Cta
+          title={'Начните обучаться со скидкой'}
+          desc={
+            altStyles ? (
+              <>
+                Забронируйте программу по спеццене —{' '}
+                <span className={stls.highlightFw}>
+                  со скидкой{' '}
+                  {/* <span className={stls.highlightC}>{discount.substring(1)}</span> */}
+                  <span className={stls.highlightC}>65%</span>
+                  <IconGeneralTextDecorativeUnderline
+                    classNames={[stls.IconGeneralTextDecorativeUnderline]}
+                  />
+                </span>
+              </>
+            ) : (
+              `Забронируйте программу по спеццене — со скидкой ${discount.substring(
+                1
+              )}`
+            )
+          }
+          cta={altStyles ? 'getProgram' : 'reserve'}
+        />
+      )}
+
+      {!altStyles && !isForPhychology && <TrustedBy />}
+      {altStyles && !isForPhychology && <SectionTrustedByAlt />}
+
+      {altStyles && !isForPhychology && (
         <SectionReviewsAlt
           programReviews={program?.reviews}
           reviews={reviews}
         />
       )}
+      {isForPhychology ? <StudyCoastPhycho /> : <StudyCost />}
 
-      <StudyCost />
-      <Faq />
+      <Faq isForPhychology/>
       {altStyles && <SectionCorporateCourse />}
 
       <Script

@@ -6,7 +6,11 @@ import marked from 'marked'
 import ProgramContext from '@/context/program/programContext'
 import { IconMinus, IconPlus } from '@/components/icons'
 
-const FaqAnswer = ({ question = null, answer = null }) => {
+const FaqAnswer = ({
+  question = null,
+  answer = null,
+  isForPhychology = false
+}) => {
   const [isOpen, setOpen] = useState(false)
 
   const { program } = useContext(ProgramContext)
@@ -16,11 +20,14 @@ const FaqAnswer = ({ question = null, answer = null }) => {
 
   return (
     <li
-      className={cn(stls.container, {
-        [stls.isOpen]: isOpen,
-        [stls.altStyles]: altStyles
-      })}>
-      <div className={stls.title} onClick={() => setOpen(!isOpen)}>
+      className={cn(
+        stls.container,
+        isOpen && stls.isOpen,
+        altStyles && stls.altStyles
+      )}>
+      <div
+        className={cn(stls.title, isForPhychology && stls.forPhychology)}
+        onClick={() => setOpen(!isOpen)}>
         <div className={cn(stls.icon, { [stls.altStyles]: altStyles })}>
           {isOpen ? <IconMinus /> : <IconPlus />}
         </div>
@@ -32,7 +39,12 @@ const FaqAnswer = ({ question = null, answer = null }) => {
           {question}
         </p>
       </div>
-      <div className={cn(stls.answer, { [stls.altStyles]: altStyles })}>
+      <div
+        className={cn(
+          stls.answer,
+          altStyles && stls.altStyles,
+          isForPhychology && stls.forPhychology
+        )}>
         {parse(marked(answer))}
       </div>
     </li>

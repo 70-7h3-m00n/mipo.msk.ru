@@ -15,6 +15,8 @@ $esbp: 850px
   @include m.dye(bg, c.$alpha)
   &.altStyles
     @include m.dye(bg, c.$mu-2)
+  &.phychologyHeader 
+    @include m.dye(bg, #FFF)
 
 .contentNewCourse
   @include m.media(phone, tablet)
@@ -50,6 +52,8 @@ $esbp: 850px
     @include m.gap($mr: f.px(20, em))
 
 .linkInfo
+  &.forPhycho
+    @include m.dye(c, #8B8B8B)
   @include m.media(laptop, desktop)
     max-width: 27ch
     @include m.gap($mr: f.px(10, em))
@@ -57,6 +61,8 @@ $esbp: 850px
     @include m.dye(c, rgba(c.$nu, .5))
 
 .location
+  &.forPhycho p
+      @include m.dye(c, c.$theta)
   @include m.media(laptop, desktop)
     @include m.flex($jc: center, $ai: center)
 
@@ -113,6 +119,7 @@ $esbp: 850px
     display: none
 
 .btnFields
+  color: red !important
   @include m.media(phone, tablet)
     display: none
 
@@ -127,6 +134,8 @@ $esbp: 850px
     @include m.dye(c, c.$nu) 
     outline: none
     @include onHover.highlightWithBottomLine($bottom: f.px(-10))
+  &.forPhycho 
+    color: black
 
 .linkFirst
   @media screen and (max-width: $ebp)

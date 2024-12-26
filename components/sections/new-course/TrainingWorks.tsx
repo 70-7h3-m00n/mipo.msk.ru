@@ -91,7 +91,7 @@ const TrainingWorks = () => {
 
       <div className={classNames('container', styles.footer)}>
         <div className={styles.wrapperImageFooter}>
-          <ImgTemplate src={image} alt={'img'} layout={'fill'} />
+          <ImgTemplate src={image} alt='img' layout='fill' />
         </div>
 
         <p className={styles.textFooter}>

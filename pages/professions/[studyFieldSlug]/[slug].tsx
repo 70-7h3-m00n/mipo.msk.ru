@@ -26,7 +26,7 @@ const ProfessionPage = ({ programs, program, studyFieldSlug, reviews }) => {
         description={truncate(program.description, 120)}
         canonical={`${routesFront.root}${routeProfessions}/${studyFieldSlug}/${program.slug}`}
       />
-      <PagesProgram ofType={'profession'} reviews={reviews} />
+      <PagesProgram ofType='profession' reviews={reviews} />
     </>
   )
 }
@@ -59,5 +59,7 @@ export const getStaticProps = async ({ params: { slug, studyFieldSlug } }) =>
 
 export const getStaticPaths = async () =>
   await handleGetStaticPathsPrograms({ type: '/profession' })
+
+ProfessionPage.headerForPsychology = true
 
 export default ProfessionPage

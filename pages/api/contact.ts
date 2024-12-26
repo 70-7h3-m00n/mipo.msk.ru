@@ -24,7 +24,8 @@ const contact = async (req: NextApiRequest, res: NextApiResponse) => {
     referer,
     ymUid,
     post_promocode,
-    formName
+    formName,
+    tarifPhycho
   } = req.body
 
   if (name?.includes('@')) {
@@ -152,7 +153,8 @@ const contact = async (req: NextApiRequest, res: NextApiResponse) => {
     utmTerm: (utms && utms.utm_term) || null,
     clUid: utms?.cl_uid || null,
     clickid: clickid || null,
-    formName: formName || null
+    formName: formName || null,
+    type_tarif: tarifPhycho || null
   }
 
   // try {
@@ -380,7 +382,11 @@ const contact = async (req: NextApiRequest, res: NextApiResponse) => {
       {
         tdKey: 'Информация для менеджера по продажам',
         tdVal: data.formName
-      }
+      },
+      {
+        tdKey: 'Тариф для психологии',
+        tdVal: data['type_tariff']
+        }
     ]
 
     const output = /* html */ `

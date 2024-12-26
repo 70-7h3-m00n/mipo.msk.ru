@@ -9,16 +9,10 @@ import ProgramContext from '@/context/program/programContext'
 import ProgramAdmission from '@/components/program/ProgramAdmission'
 import ProgramStudyDuration from '@/components/program/ProgramStudyDuration'
 import {
-  IconCalendar,
   IconGeneralCalendarAlt,
-  IconGeneralUsers,
   IconGeneralMap,
   IconGeneralDocument,
   IconGeneralClockAlt,
-  IconGraduateHat,
-  IconPaperScroll,
-  IconClock,
-  IconDoc,
   IconGeneralInfo
 } from '@/components/icons'
 
@@ -31,6 +25,11 @@ const ProgramInfoAlt: FC<TProgramInfoAltProps> = ({ classNames }) => {
   const atCourse = program?.category?.type === 'course'
 
   const vals = [
+    {
+      key: 'Ближайшее зачисление:',
+      val: <ProgramAdmission />,
+      icon: IconGeneralMap
+    },
     {
       key: 'Срок обучения:',
       val: (
@@ -62,16 +61,12 @@ const ProgramInfoAlt: FC<TProgramInfoAltProps> = ({ classNames }) => {
         )
       }
     },
-    {
-      key: 'Форма обучения:',
-      val: program?.study_form && program?.study_form?.label,
-      icon: IconGeneralUsers
-    },
-    {
-      key: 'Ближайшее зачисление:',
-      val: <ProgramAdmission />,
-      icon: IconGeneralMap
-    },
+    // {
+    //   key: 'Форма обучения:',
+    //   val: program?.study_form && program?.study_form?.label,
+    //   icon: IconGeneralUsers
+    // },
+   
     {
       key: 'Количество часов:',
       val: `${program?.timenprice && program?.timenprice?.[0]?.studyHours} ч`,
@@ -137,7 +132,7 @@ const ProgramInfoAlt: FC<TProgramInfoAltProps> = ({ classNames }) => {
               position='top right'
               closeOnDocumentClick
               keepTooltipInside={`.${selectors.sectionHero}`}>
-              <div className={stls.infoContent}> {info.content} </div>
+              <div className={stls.infoContent}> {info.content}</div>
             </Popup>
           )}
           <div className={stls.icon}>

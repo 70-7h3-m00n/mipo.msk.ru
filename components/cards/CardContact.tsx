@@ -29,7 +29,7 @@ const CardContact = ({ city, street, numbers, email }: CardContactType) => {
       <div className={stls.row}>
 
         <div className={stls.icon}>
-          <IconLocation cbeta responsive />
+          <IconLocation cbeta={true} responsive={true} />
         </div>
 
         <p className={stls.city}>{city}</p>
