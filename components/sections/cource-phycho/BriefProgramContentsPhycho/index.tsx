@@ -13,7 +13,7 @@ const BriefProgramContentsPhycho = () => {
   const { program } = useContext(ProgramContext)
 
   return (
-    <section className={cn(stls.container)}>
+    <section className={cn(stls.container)} id='program'>
       <Wrapper classNames={[stls.wrapper]}>
         <div className={cn(stls.top)}>
           <div className={cn(stls.heading)}>

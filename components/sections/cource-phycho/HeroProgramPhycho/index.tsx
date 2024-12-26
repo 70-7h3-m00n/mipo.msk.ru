@@ -81,7 +81,8 @@ const HeroProgramPhycho = () => {
                     : 'signUp'
                 }
               />
-              <BtnBorderBlack text='Посмотреть программу' />
+              
+              <BtnBorderBlack text='Посмотреть программу' scrollToID='program'/>
             </div>
           </div>
 

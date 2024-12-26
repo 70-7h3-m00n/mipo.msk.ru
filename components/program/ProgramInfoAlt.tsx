@@ -9,16 +9,10 @@ import ProgramContext from '@/context/program/programContext'
 import ProgramAdmission from '@/components/program/ProgramAdmission'
 import ProgramStudyDuration from '@/components/program/ProgramStudyDuration'
 import {
-  IconCalendar,
   IconGeneralCalendarAlt,
-  IconGeneralUsers,
   IconGeneralMap,
   IconGeneralDocument,
   IconGeneralClockAlt,
-  IconGraduateHat,
-  IconPaperScroll,
-  IconClock,
-  IconDoc,
   IconGeneralInfo
 } from '@/components/icons'
 
