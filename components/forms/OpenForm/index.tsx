@@ -30,7 +30,8 @@ const OpenForm = ({
   popup = false,
   atFooter = false,
   agreement = false,
-  formName = null
+  formName = null,
+  tarifPhycho
 }) => {
   const {
     register,
@@ -111,6 +112,7 @@ const OpenForm = ({
       ymUid,
       clickid,
       formName,
+      tarifPhycho,
       click_id: query.click_id || undefined
     })
 

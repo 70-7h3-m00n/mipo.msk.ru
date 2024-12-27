@@ -24,10 +24,6 @@ type FormValues = {
   tarifPhycho?: string
 }
 
-interface Props {
-  cta: string
-}
-
 const FormAlpha = ({
   cta = 'Подобрать программу',
   question = false,
@@ -35,7 +31,7 @@ const FormAlpha = ({
   atFooter = false,
   agreement = false,
   formName = null,
-  tarifPhycho = ''
+  tarifPhycho
 }) => {
   const {
     register,

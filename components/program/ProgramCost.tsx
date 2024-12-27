@@ -25,7 +25,6 @@ const ProgramCost = ({ withPerMonth = false }) => {
   const priceToMounth = Math.round(Math.ceil(priceWithoutCeil / 12))
   const salePrice = toNumberWithSpaces(Math.ceil(priceToMounth * 0.35))
 
-  console.log(salePrice)
   return (
     <div className={stls.container}>
       {withPerMonth && (

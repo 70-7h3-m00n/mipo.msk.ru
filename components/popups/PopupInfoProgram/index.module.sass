@@ -1,0 +1,55 @@
+@use '@/styles/utils/mixin' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/config/Colors.module.sass' as c
+
+.container
+  position: relative
+  @include m.dye(bg, c.$nu)
+  @include m.media(phone, tablet)
+    @include m.gap($ptb: f.px(45), $plr: f.px(19))
+    border-radius: f.px(25) f.px(3) f.px(3) f.px(3)
+  @include m.media(laptop, desktop)
+    max-width: f.px(708)
+    @include m.gap($mlr: auto, $ptb: f.px(50), $plr: f.px(65))
+    border-radius: f.px(50) f.px(3) f.px(3) f.px(3)
+  background-color: c.$color-verywhite-purple !important
+  & ul, & li
+    margin: 0
+    padding: 0
+    list-style: none 
+  & h3
+    margin-top: 20px
+
+
+.close
+  position: absolute
+  top: f.px(10)
+  right: f.px(10)
+
+.title
+  @include m.gap($mb: f.px(5))
+  font-size: f.px(28)
+  font-weight: 500
+  @include m.dye(c, c.$theta)
+
+.info
+  font-size: 16px
+  font-weight: 400
+  margin-top: 20px !important
+  & li
+    display: flex
+    gap: 10px
+    margin-top: 10px
+    & > span
+      width: 20px
+      height: 20px
+
+.listProgram
+  margin-top: 20px !important
+  & li
+    margin-top: 10px
+    display: flex
+    gap: 10px
+    & .time
+      margin-left: auto
+      flex-shrink: 0
