@@ -77,7 +77,9 @@ const PopupThankyou = ({ close, id = null, clickid = null }) => {
       </div>
       <h3 className={stls.title}>Заявка отправлена</h3>
       <p className={stls.desc}>
-        Мы свяжемся с Вами в рабочие часы в ближайшее время. Ожидайте звонка с номера <b>+7 499 938 69 86</b>. Подробнее ознакомиться с программой курса и забрать бонусы от института вы можете на нашем сайте.
+        Мы свяжемся с Вами в рабочие часы в ближайшее время. Ожидайте звонка с
+        номера <b>+7 499 938 69 86</b>. Подробнее ознакомиться с программой
+        курса и забрать бонусы от института вы можете на нашем сайте.
       </p>
       <p className={stls.thanks}>Спасибо!</p>
       {isSubmitted &&
@@ -98,11 +100,12 @@ const PopupThankyou = ({ close, id = null, clickid = null }) => {
         ) : null)}
 
       {/*Интеграция с Flocktory*/}
-      <div className="i-flocktory"
-           data-fl-action="exchange"
-           data-fl-spot="some_spot"
-           // data-fl-user-name=""
-           data-fl-user-email="xname@flocktory.com"
+      <div
+        className='i-flocktory'
+        data-fl-action='exchange'
+        data-fl-spot='some_spot'
+        // data-fl-user-name=""
+        data-fl-user-email='xname@flocktory.com'
       />
     </div>
   )

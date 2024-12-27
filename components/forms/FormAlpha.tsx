@@ -21,11 +21,6 @@ type FormValues = {
   question: string
   leadPage: string
   formName?: string | null
-  tarifPhycho?: string
-}
-
-interface Props {
-  cta: string
 }
 
 const FormAlpha = ({
@@ -117,7 +112,7 @@ const FormAlpha = ({
       ymUid,
       clickid,
       formName,
-      tarifPhycho,
+      tarifPhycho : tarifPhycho || undefined,
       click_id: query.click_id || undefined
     })
 
