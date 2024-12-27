@@ -17,8 +17,6 @@ const Logo = ({
   const router = useRouter()
   const redirectHeader = router.asPath.includes('new-courses')
   
-  console.log('C ryjgrb')
-  console.log(isForPhychology)
   return (
     <div className={stls.container}>
       {isForPhychology ? (
