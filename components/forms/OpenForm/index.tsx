@@ -31,7 +31,7 @@ const OpenForm = ({
   atFooter = false,
   agreement = false,
   formName = null,
-  tarifPhycho
+  tarifPhycho = ''
 }) => {
   const {
     register,

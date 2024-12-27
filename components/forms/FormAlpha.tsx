@@ -21,7 +21,6 @@ type FormValues = {
   question: string
   leadPage: string
   formName?: string | null
-  tarifPhycho?: string
 }
 
 const FormAlpha = ({
@@ -31,7 +30,7 @@ const FormAlpha = ({
   atFooter = false,
   agreement = false,
   formName = null,
-  tarifPhycho
+  tarifPhycho = ''
 }) => {
   const {
     register,
@@ -113,7 +112,7 @@ const FormAlpha = ({
       ymUid,
       clickid,
       formName,
-      tarifPhycho,
+      tarifPhycho : tarifPhycho || undefined,
       click_id: query.click_id || undefined
     })
 
