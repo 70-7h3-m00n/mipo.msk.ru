@@ -21,7 +21,7 @@ const ProgramInfo = () => {
     },
     {
       key: 'Количество часов:',
-      val: `${program?.timenprice && program?.timenprice?.[0]?.studyHours} ч`,
+       val: `${program?.timenprice?.[0]?.studyHoursString || program?.timenprice?.[0]?.studyHours} ч`,
       icon: <IconClock />
     },
     {

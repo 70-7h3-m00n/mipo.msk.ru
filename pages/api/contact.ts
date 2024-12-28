@@ -154,7 +154,7 @@ const contact = async (req: NextApiRequest, res: NextApiResponse) => {
     clUid: utms?.cl_uid || null,
     clickid: clickid || null,
     formName: formName || null,
-    type_tarif: tarifPhycho || null
+    type_tariff: tarifPhycho || null
   }
 
   // try {
@@ -179,6 +179,7 @@ const contact = async (req: NextApiRequest, res: NextApiResponse) => {
 
   // F5 BEGIN
   // https://tglk.ru/in/MX4bxnhq9LCnZWR5
+
   try {
     await axios.request({
       method: 'POST',
@@ -385,7 +386,7 @@ const contact = async (req: NextApiRequest, res: NextApiResponse) => {
       },
       {
         tdKey: 'Тариф для психологии',
-        tdVal: data['type_tariff']
+        tdVal: data.type_tariff
         }
     ]
 

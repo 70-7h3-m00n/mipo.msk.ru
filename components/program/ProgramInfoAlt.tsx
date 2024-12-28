@@ -23,7 +23,7 @@ const ProgramInfoAlt: FC<TProgramInfoAltProps> = ({ classNames }) => {
   const altStyles = program?.category?.type === 'profession'
   const atMba = program?.category?.type === 'mba'
   const atCourse = program?.category?.type === 'course'
-
+  
   const vals = [
     {
       key: 'Ближайшее зачисление:',
@@ -69,7 +69,7 @@ const ProgramInfoAlt: FC<TProgramInfoAltProps> = ({ classNames }) => {
    
     {
       key: 'Количество часов:',
-      val: `${program?.timenprice && program?.timenprice?.[0]?.studyHours} ч`,
+      val: `${program?.timenprice?.[0]?.studyHoursString || program?.timenprice?.[0]?.studyHours} ч`,
       icon: IconGeneralClockAlt
     },
     {
