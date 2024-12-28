@@ -132,24 +132,25 @@ const OpenForm = ({
       console.log('err')
     }
 
-    if (!question && price !== null) {
-      try {
-        const res = await axios.post(`${routesFront.root}/api/yookassa`, {
-          price,
-          returnURL: router.asPath,
-          name: data.name,
-          phone: data.phone,
-          programTitle: program.title,
-          email: data.email
-        })
+    // Отключена ЮКасса с переходом
+    // if (!question && price !== null) {
+    //   try {
+    //     const res = await axios.post(`${routesFront.root}/api/yookassa`, {
+    //       price,
+    //       returnURL: router.asPath,
+    //       name: data.name,
+    //       phone: data.phone,
+    //       programTitle: program.title,
+    //       email: data.email
+    //     })
 
-        if (res.status === 200) {
-          window.open(res.data.url, '_blank')
-        }
-      } catch (e) {
-        console.log(e, 'yookassa-error')
-      }
-    }
+    //     if (res.status === 200) {
+    //       window.open(res.data.url, '_blank')
+    //     }
+    //   } catch (e) {
+    //     console.log(e, 'yookassa-error')
+    //   }
+    // }
   }
 
   return (
