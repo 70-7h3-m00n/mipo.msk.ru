@@ -12,6 +12,8 @@ import { PopupThankyou } from '@/components/popups'
 import { getCookie } from 'cookies-next'
 import { routesFront, UTM_KEYS, UTM_KEYS_OBJ } from '@/config/index'
 import axios from 'axios'
+import { discountNum } from '@/data/price'
+import roundingUpPriceOrNumber from '@/helpers/roundingUpPriceOrNumber'
 
 type FormValues = {
   name: string
@@ -50,6 +52,15 @@ const FormAlpha = ({
   const { program } = useContext(ProgramContext)
   const [hasItBeenSentBefore, setHasItBeenSentBefore] = useState<boolean>(false)
 
+  const price =
+    (program?.timenprice && Number(program?.timenprice?.[0]?.price)) || 0
+  const discount =
+    (program?.timenprice && Number(program?.timenprice?.[0]?.discount)) ||
+    discountNum
+
+  let priceWithoutCeil = Math.round(Math.ceil((price / (100 - discount)) * 100))
+  priceWithoutCeil = Math.round(priceWithoutCeil + priceWithoutCeil * 0.17)
+
   const altStyles =
     program?.category?.type === 'mba' ||
     program?.category?.type === 'profession'
@@ -82,7 +93,6 @@ const FormAlpha = ({
   const { query } = useRouter()
 
   const onSubmit = async data => {
-
     if (hasItBeenSentBefore) return
     localStorage.setItem('timeAfterSend', new Date().toISOString())
 
@@ -106,14 +116,22 @@ const FormAlpha = ({
 
     if (leadIsSentTimeout) return
 
+    const title = program?.title ?? null
+    const category = program?.study_field?.title ?? null
+    const priceProduct = roundingUpPriceOrNumber(priceWithoutCeil * 0.35) ?? null
+
     const req = await hitContactRoute({
       ...data,
       id,
       ymUid,
       clickid,
       formName,
-      tarifPhycho : tarifPhycho || undefined,
-      click_id: query.click_id || undefined
+      tarifPhycho: tarifPhycho || undefined,
+      click_id: query.click_id || undefined,
+      name_programm: title,
+      category_programm: category,
+      price_programm: priceProduct,
+      full_link: window.location.href
     })
 
     try {
