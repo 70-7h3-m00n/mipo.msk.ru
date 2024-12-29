@@ -13,6 +13,8 @@ import { getCookie } from 'cookies-next'
 import { routesFront, UTM_KEYS, UTM_KEYS_OBJ } from '@/config/index'
 import axios from 'axios'
 import ProgramDiscount from '@/components/program/ProgramDiscount'
+import { discountNum } from '@/data/price'
+import roundingUpPriceOrNumber from '@/helpers/roundingUpPriceOrNumber'
 
 type FormValues = {
   name: string
@@ -50,6 +52,15 @@ const OpenForm = ({
   const [textButton, setTextButton] = useState<null | string>(cta)
   const { program } = useContext(ProgramContext)
   const [hasItBeenSentBefore, setHasItBeenSentBefore] = useState<boolean>(false)
+
+  const price =
+    (program?.timenprice && Number(program?.timenprice?.[0]?.price)) || 0
+  const discount =
+    (program?.timenprice && Number(program?.timenprice?.[0]?.discount)) ||
+    discountNum
+
+  let priceWithoutCeil = Math.round(Math.ceil((price / (100 - discount)) * 100))
+  priceWithoutCeil = Math.round(priceWithoutCeil + priceWithoutCeil * 0.17)
 
   const altStyles =
     program?.category?.type === 'mba' ||
@@ -106,6 +117,11 @@ const OpenForm = ({
 
     if (leadIsSentTimeout) return
 
+    const title = program?.title ?? null
+    const category = program?.study_field?.title ?? null
+    const priceProduct =
+      roundingUpPriceOrNumber(priceWithoutCeil * 0.35) ?? null
+
     const req = await hitContactRoute({
       ...data,
       id,
@@ -113,7 +129,11 @@ const OpenForm = ({
       clickid,
       formName,
       tarifPhycho,
-      click_id: query.click_id || undefined
+      click_id: query.click_id || undefined,
+      name_programm: title,
+      category_programm: category,
+      price_programm: priceProduct,
+      full_link: window.location.href
     })
 
     try {

@@ -25,7 +25,11 @@ const contact = async (req: NextApiRequest, res: NextApiResponse) => {
     ymUid,
     post_promocode,
     formName,
-    tarifPhycho
+    tarifPhycho,
+    name_programm,
+    category_programm,
+    price_programm,
+    full_link
   } = req.body
 
   if (name?.includes('@')) {
@@ -119,9 +123,9 @@ const contact = async (req: NextApiRequest, res: NextApiResponse) => {
     date: now.format('DD-MM-YYYY') || null,
     time: now.format('HH:mm:ss') || null,
     utc: now.format('Z') || null,
-    post_name : name || null, 
-    post_phone : phone || null,
-    post_email : email || null,
+    post_name: name || null,
+    post_phone: phone || null,
+    post_email: email || null,
     vk: vk || null,
     post_promocode: post_promocode || null,
     contactWay: contactWay || null,
@@ -154,7 +158,11 @@ const contact = async (req: NextApiRequest, res: NextApiResponse) => {
     clUid: utms?.cl_uid || null,
     clickid: clickid || null,
     formName: formName || null,
-    type_tariff: tarifPhycho || null
+    type_tariff: tarifPhycho || null,
+    name_programm,
+    category_programm,
+    price_programm,
+    full_link
   }
 
   // try {
@@ -191,8 +199,7 @@ const contact = async (req: NextApiRequest, res: NextApiResponse) => {
       data
     })
 
-    console.log('f5 sucssess');
-
+    console.log('f5 sucssess')
   } catch (e) {
     console.log('error in f5 request')
     console.error(e)
@@ -255,6 +262,26 @@ const contact = async (req: NextApiRequest, res: NextApiResponse) => {
       {
         tdKey: 'Способ связи',
         tdVal: data.contactWay
+      },
+      {
+        tdKey: 'Название программы',
+        tdVal: data.name_programm
+      },
+      {
+        tdKey: 'Тариф для психологии',
+        tdVal: data.type_tariff
+      },
+      {
+        tdKey: 'Категория программы',
+        tdVal: data.category_programm
+      },
+      {
+        tdKey: 'Полная стоимость программы',
+        tdVal: data.price_programm
+      },
+      {
+        tdKey: 'Ссылка на страницу',
+        tdVal: data.full_link
       },
       {
         tdKey: 'Как связаться',
@@ -383,11 +410,7 @@ const contact = async (req: NextApiRequest, res: NextApiResponse) => {
       {
         tdKey: 'Информация для менеджера по продажам',
         tdVal: data.formName
-      },
-      {
-        tdKey: 'Тариф для психологии',
-        tdVal: data.type_tariff
-        }
+      }
     ]
 
     const output = /* html */ `
