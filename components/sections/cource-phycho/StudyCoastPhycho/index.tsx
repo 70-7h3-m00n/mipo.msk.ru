@@ -5,7 +5,6 @@ import ProgramContext from '@/context/program/programContext'
 import { useContext, useMemo, useState } from 'react'
 import Title from '@/components/parts/Title'
 import Image from 'next/image'
-import InputRange from '@/components/parts/InputRange'
 import { IconGeneralCircleCheckAlt } from '@/components/icons'
 import { discountNum } from '@/data/price'
 import PopupTrigger from '@/components/general/PopupTrigger'
@@ -13,8 +12,6 @@ import toNumberWithSpaces from '@/helpers/toNumberWithSpaces'
 import roundingUpPriceOrNumber from '@/helpers/roundingUpPriceOrNumber'
 import { number } from '@/data/contact'
 import Popup from 'reactjs-popup'
-import { PopupCta } from '@/components/popups'
-import PopupInfo from '@/components/popups/PopupInfoProgram'
 import PopupInfoProgram from '@/components/popups/PopupInfoProgram'
 const StudyCoastPhycho = () => {
   const { program } = useContext(ProgramContext)
@@ -83,7 +80,7 @@ const StudyCoastPhycho = () => {
       ]
     },
     {
-      title: 'Экспектный',
+      title: 'Экспертный',
       duration: '(по учебному плану)',
       addTariff: 'Практический',
       program: ['Бессрочный доступ к материалам'],
@@ -246,7 +243,7 @@ const StudyCoastPhycho = () => {
         'Кол-во мест ограничено',
         '6 документов об образовании: 2 диплома, 2 удостоверения и 2 сертификата'
       ],
-      sale: 50
+      sale: 120
     }
   ]
   return (
