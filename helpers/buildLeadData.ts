@@ -65,7 +65,7 @@ export const buildLeadData = async ({
         contactMethod: null,
         question: null,
         rootPath: rootPath || null,
-        leadPage: leadPage || null,
+        leadpage: leadPage || null,
         ip: ip || null,
         // cityEn: location?.city.names.en || null,
         cityEn: null,
