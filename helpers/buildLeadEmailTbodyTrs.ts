@@ -59,7 +59,7 @@ export const buildLeadEmailTbodyTrs = ({ data }: TypebuildLeadEmailTbodyTrsProps
     },
     {
         tdKey: 'Лид страница',
-        tdVal: data.leadPage || '',
+        tdVal: data.leadpage || '',
     },
     {
         tdKey: 'IP',
