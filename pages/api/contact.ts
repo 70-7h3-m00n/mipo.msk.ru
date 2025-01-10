@@ -132,7 +132,7 @@ const contact = async (req: NextApiRequest, res: NextApiResponse) => {
     contactMethod: contactMethod || null,
     question: question || null,
     root: root || null,
-    leadPage: root + leadPage || null,
+    leadpage: root + leadPage || null,
     ip: ip || null,
     ymUid: ymUid || null,
     cityEn: (locationData && locationData.city.names.en) || null,
@@ -297,7 +297,7 @@ const contact = async (req: NextApiRequest, res: NextApiResponse) => {
       },
       {
         tdKey: 'Лид страница',
-        tdVal: data.leadPage
+        tdVal: data.leadpage
       },
       {
         tdKey: 'IP',

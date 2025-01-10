@@ -102,7 +102,7 @@ const FormAlpha = ({
     setIsDisabled(true)
     setThanksIsOpen(true)
     // handle loader
-    data.leadPage = router.asPath
+    data.leadpage = router.asPath
     const utms = UTM_KEYS.reduce(
       (acc, cur) => ({ ...acc, [cur]: getCookie(cur) }),
       {} as { [key in (typeof UTM_KEYS)[number]]: string | undefined }
