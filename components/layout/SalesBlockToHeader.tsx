@@ -29,7 +29,7 @@ const SalesBlockToHeader = () => {
           Новогодняя распродажа в МИПО
         </span>
         <div className={stls.infoSales}>
-          <div>-65</div>
+          <div>-50</div>
           <div>
             <div>%</div>
             <div>Скидка<br />На все курсы</div>
