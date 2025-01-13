@@ -34,8 +34,8 @@ const StudyCoastPhycho = () => {
     priceWithoutCeil / installmentPeriod
   )
 
-  const fullPriceWithSale = roundingUpPriceOrNumber(priceWithoutCeil * 0.5)
-  const priceToMonthWithSale = roundingUpPriceOrNumber(priceToMounth * 0.5)
+  const fullPriceWithSale = roundingUpPriceOrNumber(priceWithoutCeil * 0.35)
+  const priceToMonthWithSale = roundingUpPriceOrNumber(priceToMounth * 0.35)
   const data = [
     {
       title: 'Базовый',
