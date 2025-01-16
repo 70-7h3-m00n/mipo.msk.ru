@@ -88,7 +88,7 @@ const PagesProgram = ({ ofType = null, reviews }: PagesProgramType) => {
 
     setIsForPhychology(() => !!program && !!foundPhychologyTariff)
 
-    const foundOtherTariff = ['Marketing', 'jekonomika', 'Management'].find(field => {
+    const foundOtherTariff = ['Marketing', 'jekonomika', 'Management', 'Jurisprudence'].find(field => {
       if (field === program.study_field?.slug) {
         setNameSlugForTariff(field)
         return true

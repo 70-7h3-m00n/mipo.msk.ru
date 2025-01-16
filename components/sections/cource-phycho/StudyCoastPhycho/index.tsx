@@ -959,7 +959,7 @@ const StudyCoastPhycho = ({
         text: '<b>4 документа об обучении:</b> 1 диплом, 2 удостоверения и 1 сертификат'
       }
     ],
-    jurisprudencija: [
+    ['Jurisprudence']: [
       {
         title: 'Базовый',
         duration: '6 месяцев',
