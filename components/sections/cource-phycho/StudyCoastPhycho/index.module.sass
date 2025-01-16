@@ -3,6 +3,8 @@
 @use '@/styles/config/Colors.module.sass' as c
 
 .container
+  &.blackbg 
+    background-color: c.$color-black
   @include m.media(phone, tablet)
     margin-bottom: f.px(50)
     padding-top: f.px(50)
@@ -132,6 +134,12 @@
     & > div:nth-child(3)
       background-color: c.$color-verywhite-purple
       border: 1px solid c.$color-verywhite-purple
+    &.blackbg > div:nth-child(1), &.blackbg > div:nth-child(3)
+      border-color: c.$color-white
+    &.blackbg > div:nth-child(3)
+      background-color: transparent
+    &.blackbg
+      color: c.$color-white
     
 .priceDesc
   font-size: 14px

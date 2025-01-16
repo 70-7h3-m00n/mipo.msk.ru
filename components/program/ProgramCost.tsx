@@ -4,6 +4,7 @@ import { useContext } from 'react'
 import ProgramContext from '@/context/program/programContext'
 import toNumberWithSpaces from '@/helpers/toNumberWithSpaces'
 import { discountNum } from '@/data/price'
+import roundingUpPriceOrNumber from '@/helpers/roundingUpPriceOrNumber'
 
 const ProgramCost = ({ withPerMonth = false }) => {
   const { program } = useContext(ProgramContext)
@@ -20,11 +21,17 @@ const ProgramCost = ({ withPerMonth = false }) => {
     (program?.timenprice && Number(program?.timenprice?.[0]?.discount)) ||
     discountNum
 
-  let priceWithoutCeil = Math.round(Math.ceil((price / (100 - discount)) * 100))
-  priceWithoutCeil = Math.round(priceWithoutCeil + priceWithoutCeil * 0.17)
-  const priceToMounth = Math.round(Math.ceil(priceWithoutCeil / 12))
-  const salePrice = toNumberWithSpaces(Math.ceil(priceToMounth * 0.35))
+  let priceWithoutCeil = roundingUpPriceOrNumber((price / (100 - discount)) * 100)
+  priceWithoutCeil = roundingUpPriceOrNumber(priceWithoutCeil + priceWithoutCeil * 0.17)
+  const priceToMounth = roundingUpPriceOrNumber(priceWithoutCeil / 12)
+  const salePrice = toNumberWithSpaces(roundingUpPriceOrNumber(priceToMounth * 0.35))
 
+  let fullPriceWithSale = priceWithoutCeil * 0.35;
+  fullPriceWithSale = roundingUpPriceOrNumber(fullPriceWithSale + fullPriceWithSale * 0.69)
+
+  let priceToMounthWithSale = priceToMounth * 0.35;
+  priceToMounthWithSale = roundingUpPriceOrNumber(priceToMounthWithSale + priceToMounthWithSale * 0.69)
+  
   return (
     <div className={stls.container}>
       {withPerMonth && (
@@ -35,10 +42,8 @@ const ProgramCost = ({ withPerMonth = false }) => {
           <span className={cn(stls.discount, { [stls.altStyles]: altStyles })}>
             <span className={stls.bold}>
               {!atProfession && !atCourse
-                ? toNumberWithSpaces(Math.round(Math.ceil(price / 12)))
-                : toNumberWithSpaces(Math.ceil(priceToMounth * 0.35)) || ''}
-              {/* {toNumberWithSpaces(perMonthPrice) || ''} */}
-              {/* {toNumberWithSpaces(perMonthRPrice / 2) || ''} */}
+                ? toNumberWithSpaces(roundingUpPriceOrNumber(price / 12))
+                : toNumberWithSpaces(roundingUpPriceOrNumber(priceToMounthWithSale)) || ''}
             </span>{' '}
             <span className={cn(stls.light, stls.perMonth)}>&#8381;/мес</span>
           </span>
@@ -61,7 +66,7 @@ const ProgramCost = ({ withPerMonth = false }) => {
           <span className={stls.bold}>
             {!atProfession && !atCourse
               ? toNumberWithSpaces(price)
-              : toNumberWithSpaces(Math.ceil(priceWithoutCeil * 0.35))}
+              : toNumberWithSpaces(fullPriceWithSale)}
           </span>
           {/* <span className={stls.bold}>{toNumberWithSpaces(price)}</span> */}
           {/* <span className={stls.bold}>{toNumberWithSpaces(rprice / 2)}</span> */}

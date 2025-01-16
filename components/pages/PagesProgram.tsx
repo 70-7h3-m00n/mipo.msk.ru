@@ -28,7 +28,7 @@ import {
   Faq,
   SectionCorporateCourse
 } from '@/components/sections'
-import { useContext } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import ProgramContext from '@/context/program/programContext'
 import { discount } from '@/data/price'
 import { TypeCategory } from '@/types/index'
@@ -64,13 +64,40 @@ const PagesProgram = ({ ofType = null, reviews }: PagesProgramType) => {
     program?.category?.type === 'mba' ||
     program?.category?.type === 'profession'
 
-  const isForPhychology =
-    !!program &&
-    [
+  const [nameSlugForTariff, setNameSlugForTariff] = useState<
+    string | undefined
+  >()
+
+  const [isForPhychology, setIsForPhychology] = useState(false)
+  const [isForOtherTariff, setIsForOtherTariff] = useState(false)
+
+  useEffect(() => {
+    if (!program && !program?.study_field?.slug) return
+
+    const foundPhychologyTariff = [
       'Psychology',
       'prakticheskaya-psihologiya-m-sh-pp',
       'obshhaya-psihologiya'
-    ].includes(program.study_field?.slug)
+    ].find(field => {
+      if (field === program.study_field?.slug) {
+        setNameSlugForTariff('phycho')
+        return true
+      }
+      return false
+    })
+
+    setIsForPhychology(() => !!program && !!foundPhychologyTariff)
+
+    const foundOtherTariff = ['Marketing', 'jekonomika', 'Management'].find(field => {
+      if (field === program.study_field?.slug) {
+        setNameSlugForTariff(field)
+        return true
+      }
+      return false
+    })
+
+    setIsForOtherTariff(!!program && !!foundOtherTariff)
+  }, [program])
 
   return (
     <>
@@ -164,9 +191,16 @@ const PagesProgram = ({ ofType = null, reviews }: PagesProgramType) => {
           reviews={reviews}
         />
       )}
-      {isForPhychology ? <StudyCoastPhycho /> : <StudyCost />}
+      {isForPhychology || isForOtherTariff ? (
+        <StudyCoastPhycho
+          isForOtherTariff={isForOtherTariff}
+          nameSlugForTariff={nameSlugForTariff}
+        />
+      ) : (
+        <StudyCost />
+      )}
 
-      <Faq isForPhychology/>
+      <Faq isForPhychology />
       {altStyles && <SectionCorporateCourse />}
 
       <Script
