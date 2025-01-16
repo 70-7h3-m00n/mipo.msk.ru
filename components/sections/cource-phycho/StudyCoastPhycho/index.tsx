@@ -36,17 +36,15 @@ const StudyCoastPhycho = ({
   )
 
   priceWithoutCeil = roundingUpPriceOrNumber(
-    priceWithoutCeil + priceWithoutCeil * 0.17
+    priceWithoutCeil + priceWithoutCeil * 0.17 + priceWithoutCeil * 0.69
   )
   const installmentPeriod = priceWithoutCeil >= 30000 ? 24 : 12
   const priceToMounth = roundingUpPriceOrNumber(
     priceWithoutCeil / installmentPeriod
   )
 
-  let fullPriceWithSale = priceWithoutCeil * 0.35
-  fullPriceWithSale = roundingUpPriceOrNumber(fullPriceWithSale + fullPriceWithSale * 0.69)
-  let priceToMonthWithSale = priceToMounth * 0.35
-  priceToMonthWithSale = roundingUpPriceOrNumber(priceToMonthWithSale + priceToMonthWithSale * 0.69)
+  let fullPriceWithSale = roundingUpPriceOrNumber(priceWithoutCeil * 0.35)
+  let priceToMonthWithSale = roundingUpPriceOrNumber(priceToMounth * 0.35)
 
   const data = {
     phycho: [

@@ -22,15 +22,13 @@ const ProgramCost = ({ withPerMonth = false }) => {
     discountNum
 
   let priceWithoutCeil = roundingUpPriceOrNumber((price / (100 - discount)) * 100)
-  priceWithoutCeil = roundingUpPriceOrNumber(priceWithoutCeil + priceWithoutCeil * 0.17)
+  priceWithoutCeil = roundingUpPriceOrNumber(priceWithoutCeil + priceWithoutCeil * 0.17 + priceWithoutCeil * 0.69)
   const priceToMounth = roundingUpPriceOrNumber(priceWithoutCeil / 12)
   const salePrice = toNumberWithSpaces(roundingUpPriceOrNumber(priceToMounth * 0.35))
 
-  let fullPriceWithSale = priceWithoutCeil * 0.35;
-  fullPriceWithSale = roundingUpPriceOrNumber(fullPriceWithSale + fullPriceWithSale * 0.69)
+  let fullPriceWithSale = roundingUpPriceOrNumber(priceWithoutCeil * 0.35);
 
-  let priceToMounthWithSale = priceToMounth * 0.35;
-  priceToMounthWithSale = roundingUpPriceOrNumber(priceToMounthWithSale + priceToMounthWithSale * 0.69)
+  let priceToMounthWithSale = roundingUpPriceOrNumber(priceToMounth * 0.35);
   
   return (
     <div className={stls.container}>
