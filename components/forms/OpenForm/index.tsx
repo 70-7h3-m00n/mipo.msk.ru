@@ -60,7 +60,7 @@ const OpenForm = ({
     discountNum
 
   let priceWithoutCeil = Math.round(Math.ceil((price / (100 - discount)) * 100))
-  priceWithoutCeil = Math.round(priceWithoutCeil + priceWithoutCeil * 0.17)
+  priceWithoutCeil = Math.round(priceWithoutCeil + priceWithoutCeil * 0.17 + priceWithoutCeil * 0.69)
 
   const altStyles =
     program?.category?.type === 'mba' ||

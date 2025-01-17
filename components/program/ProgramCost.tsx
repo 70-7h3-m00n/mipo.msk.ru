@@ -71,7 +71,7 @@ const ProgramCost = ({ withPerMonth = false }) => {
           {'\u00A0'}
           <span className={stls.light}>&#8381;</span>
         </span>
-        {(atProfession || atCourse) && (
+        {/*(atProfession || atCourse) && (
           <span className={cn(stls.regular, { [stls.altStyles]: altStyles })}>
             <span className={stls.bold}>
               {toNumberWithSpaces(priceWithoutCeil)}
@@ -79,7 +79,7 @@ const ProgramCost = ({ withPerMonth = false }) => {
             {'\u00A0'}
             <span className={stls.light}>&#8381;</span>
           </span>
-        )}
+        ) */}
       </div>
     </div>
   )
