@@ -57,6 +57,97 @@ const listRedirects = [
       '/professions/prakticheskaya-psihologiya-m-sh-pp/semejnyj-psiholog-mba',
     permanent: true,
     statusCode: 301
+  },
+  {
+    source: '/professions/sport-i-fitnes/professiya-nutricziolog',
+    destination: '/professions/nutriciologiya/prakticheskiy-nutriciolog',
+    permanent: true,
+    statusCode: 301
+  },
+  {
+    source: '/professions/sport-i-fitnes/fizkultura-i-sport',
+    destination: '/programs/nutriciologiya',
+    permanent: true,
+    statusCode: 301
+  },
+  {
+    source: '/professions/sport-i-fitnes/fizkultura-i-sport',
+    destination: '/programs/nutriciologiya',
+    permanent: true,
+    statusCode: 301
+  },
+  {
+    source:
+      '/professions/sport-i-fitnes/upravlenie-v-sportivno-ozdorovitelnoj-i-fitnes-industrii',
+    destination: '/programs/nutriciologiya',
+    permanent: true,
+    statusCode: 301
+  },
+  {
+    source: '/professions/sport-i-fitnes/trener-po-plavaniyu',
+    destination: '/programs/nutriciologiya',
+    permanent: true,
+    statusCode: 301
+  },
+  {
+    source: '/professions/sport-i-fitnes/teoriya-i-praktika-prepodavaniya-fizicheskoj-kultury',
+    destination: '/programs/nutriciologiya',
+    permanent: true,
+    statusCode: 301
+  },
+  {
+    source: '/professions/sport-i-fitnes/sportivnyj-trener',
+    destination: '/programs/nutriciologiya',
+    permanent: true,
+    statusCode: 301
+  },
+  {
+    source: '/professions/sport-i-fitnes/sportivnoe-pravo',
+    destination: '/programs/nutriciologiya/ekspert-nutriciolog',
+    permanent: true,
+    statusCode: 301
+  },
+  {
+    source: '/professions/sport-i-fitnes/sportivnaya-dietologiya',
+    destination: '/programs/nutriciologiya/klinicheskiy-nutriciolog',
+    permanent: true,
+    statusCode: 301
+  },
+  {
+    source: '/professions/sport-i-fitnes/metodika-okazaniya-fitnes-uslug',
+    destination: '/programs/nutriciologiya/fitnes-nutriciolog-ekspert',
+    permanent: true,
+    statusCode: 301
+  },
+  {
+    source: '/professions/sport-i-fitnes/instruktor-fizkultury-v-dou',
+    destination: '/programs/nutriciologiya/klinicheskiy-fitnes-nutriciolog',
+    permanent: true,
+    statusCode: 301
+  },
+  {
+    source: '/professions/sport-i-fitnes/instruktor-trenazhernogo-zala',
+    destination: '/programs/nutriciologiya/psiholog-nutriciolog',
+    permanent: true,
+    statusCode: 301
+  },
+  {
+    source: '/professions/sport-i-fitnes/instruktor-gruppovyh-programm',
+    destination: '/programs/nutriciologiya/klinicheskiy-psiholog-nutriciolog',
+    permanent: true,
+    statusCode: 301
+  },
+  {
+    source: '/programs/sport-i-fitnes',
+    destination: '/programs/nutriciologiya',
+    permanent: true,
+    statusCode: 301
+  },
+  {
+    source: '/professions/prakticheskaya-psihologiya-m-sh-pp/detskij-psiholog-sistemnyj-podhod-dlya-raboty-s-detmi-i-roditelyami',
+    destination: '/professions/Psychology/detskaya-psihologiya-prakticheskaya-psihologicheskaya-pomoshh-detyam-i-podrostkam',
+    permanent: true,
+    statusCode: 301
   }
 ]
 
