@@ -45,7 +45,7 @@ const ProgramDiscount = ({
           </p>
           <p className={cn(stls.until, { [stls.altStyles]: altStyles })}>
             {/* <ProgramDiscountUntil /> */}
-            До 19 января
+            До 26 января
           </p>
         </div>
       )}
