@@ -4,7 +4,7 @@ import { format } from 'date-fns'
 import { NextApiRequest, NextApiResponse } from 'next'
 
 // Нужно для ограничения лимита запросов к серверу
-import pLimit from 'p-limit';
+import pLimit from "@esm2cjs/p-limit";
 
 const limit = pLimit(3);
 

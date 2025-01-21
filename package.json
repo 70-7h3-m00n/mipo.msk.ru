@@ -14,6 +14,7 @@
     "@apollo/client": "^3.5.10",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
+    "@esm2cjs/p-limit": "^4.0.0",
     "@maxmind/geoip2-node": "^3.2.0",
     "@mui/material": "^5.14.16",
     "@types/react-helmet": "^6.1.9",
@@ -32,7 +33,6 @@
     "next-seo": "^4.29.0",
     "nodemailer": "^6.7.0",
     "nprogress": "^0.2.0",
-    "p-limit": "^6.1.0",
     "qs": "^6.11.2",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
@@ -44,7 +44,8 @@
     "reactjs-popup": "^2.0.4",
     "swiper": "^7.2.0",
     "truncate": "^2.1.0",
-    "uuid": "^8.3.2"
+    "uuid": "^8.3.2",
+    "xlsx": "^0.18.5"
   },
   "devDependencies": {
     "@types/node": "20.9.1",
