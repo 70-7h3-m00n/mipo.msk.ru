@@ -35,9 +35,7 @@ const StudyCoastPhycho = ({
     (price / (100 - discount)) * 100
   )
 
-  priceWithoutCeil = roundingUpPriceOrNumber(
-    priceWithoutCeil + priceWithoutCeil * 0.17 + priceWithoutCeil * 0.69
-  )
+  priceWithoutCeil = roundingUpPriceOrNumber(priceWithoutCeil * 1.17 * 1.69)
   const installmentPeriod = priceWithoutCeil >= 30000 ? 24 : 12
   const priceToMounth = roundingUpPriceOrNumber(
     priceWithoutCeil / installmentPeriod
