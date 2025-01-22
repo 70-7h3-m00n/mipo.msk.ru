@@ -103,37 +103,37 @@ const listRedirects = [
   },
   {
     source: '/professions/sport-i-fitnes/sportivnoe-pravo',
-    destination: '/programs/nutriciologiya/ekspert-nutriciolog',
+    destination: '/professions/nutriciologiya/ekspert-nutriciolog',
     permanent: true,
     statusCode: 301
   },
   {
     source: '/professions/sport-i-fitnes/sportivnaya-dietologiya',
-    destination: '/programs/nutriciologiya/klinicheskiy-nutriciolog',
+    destination: '/professions/nutriciologiya/klinicheskiy-nutriciolog',
     permanent: true,
     statusCode: 301
   },
   {
     source: '/professions/sport-i-fitnes/metodika-okazaniya-fitnes-uslug',
-    destination: '/programs/nutriciologiya/fitnes-nutriciolog-ekspert',
+    destination: '/professions/nutriciologiya/fitnes-nutriciolog-ekspert',
     permanent: true,
     statusCode: 301
   },
   {
     source: '/professions/sport-i-fitnes/instruktor-fizkultury-v-dou',
-    destination: '/programs/nutriciologiya/klinicheskiy-fitnes-nutriciolog',
+    destination: '/professions/nutriciologiya/klinicheskiy-fitnes-nutriciolog',
     permanent: true,
     statusCode: 301
   },
   {
     source: '/professions/sport-i-fitnes/instruktor-trenazhernogo-zala',
-    destination: '/programs/nutriciologiya/psiholog-nutriciolog',
+    destination: '/professions/nutriciologiya/psiholog-nutriciolog',
     permanent: true,
     statusCode: 301
   },
   {
     source: '/professions/sport-i-fitnes/instruktor-gruppovyh-programm',
-    destination: '/programs/nutriciologiya/klinicheskiy-psiholog-nutriciolog',
+    destination: '/professions/nutriciologiya/klinicheskiy-psiholog-nutriciolog',
     permanent: true,
     statusCode: 301
   },
