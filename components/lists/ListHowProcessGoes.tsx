@@ -4,12 +4,16 @@ import cn from 'classnames'
 import { TypeClassNames } from '@/types/index'
 import { getClassNames } from '@/helpers/index'
 import { ListItemHowProcessGoes } from '@/components/listItems'
+import { useRouter } from 'next/router'
 
 type TypeListHowProcessGoes = {
   classNames?: TypeClassNames
 }
 
 const ListHowProcessGoes = ({ classNames = [] }: TypeListHowProcessGoes) => {
+  const router = useRouter()
+  const isCourses = router.pathname.includes('/courses/')
+
   const list = [
     { title: 'Изучайте темы', desc: 'В курсе — практические видеоуроки' },
     {
@@ -25,7 +29,7 @@ const ListHowProcessGoes = ({ classNames = [] }: TypeListHowProcessGoes) => {
       desc: 'Вы получаете личного куратора, который поддерживает Вас по телефону и в мессенджерах и готов всегда ответить на ваши вопросы'
     },
     {
-      title: 'Получаете диплом с аккредитацией',
+      title: !isCourses ? 'Получаете диплом с аккредитацией' : 'Получаете удостоверение',
       desc: 'Все наши программы сертифицированы, имеют аккредитации, а дипломы  котируются по всему миру!'
     }
   ]
