@@ -15,6 +15,7 @@ import { number } from '@/data/contact'
 import { useRouter } from 'next/router'
 
 const StudyCost = () => {
+  
   const router = useRouter()
   const isCourses = router.pathname.includes('/courses/')
 
