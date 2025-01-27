@@ -99,11 +99,11 @@ export default async function handler(
       )
 
       const firstTariff = pathPhychoTariff.includes(elem.study_field.slug)
-        ? fullPrice - fullPrice * 0.10
+        ? fullPrice - fullPrice * 0.11
         : pathAnotherTariff.includes(elem.study_field.slug) ? fullPrice - fullPrice * 0.11 : null 
 
       const thirdTariff = pathPhychoTariff.includes(elem.study_field.slug)
-        ? fullPrice + fullPrice * 1.20
+        ? fullPrice + fullPrice * 0.44
         : pathAnotherTariff.includes(elem.study_field.slug) ? fullPrice + fullPrice * 0.44 : null
 
       const studyHours =
