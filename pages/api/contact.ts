@@ -297,7 +297,7 @@ const contact = async (req: NextApiRequest, res: NextApiResponse) => {
       },
       {
         tdKey: 'Лид страница',
-        tdVal: data.leadpage
+        tdVal: data.full_link
       },
       {
         tdKey: 'IP',
