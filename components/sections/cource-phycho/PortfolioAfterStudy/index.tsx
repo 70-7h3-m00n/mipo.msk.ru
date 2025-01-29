@@ -134,7 +134,7 @@ const PortfolioAfterStudy = () => {
               trigger={
                 <a href='#!' className={stls.diploma}>
                   <ImgDiplomaTemplate />
-                  <Image src={program.imgDiplomas[0].url} alt='Диплом' layout='fill'/>
+                  {program.imgDiplomas[0].url && <Image src={program.imgDiplomas[0].url} alt='Диплом' layout='fill'/>}
                 </a>
               }
               modal
