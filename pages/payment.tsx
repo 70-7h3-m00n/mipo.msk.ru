@@ -14,6 +14,7 @@ import {
   SectionPaymentTinkoff
 } from '@/components/sections'
 import YKassaForm from '@/components/payments/Ykassa'
+import CloudPayments from '@/components/payments/CloudPayments'
 
 const PaymentPage = ({ programs }) => {
   usePageHandleContext({ programs })
@@ -30,6 +31,7 @@ const PaymentPage = ({ programs }) => {
         canonical={`${routesFront.root}${routePayment}`}
       />
       <PageTitle>Оплата</PageTitle>
+      <CloudPayments />
       <YKassaForm />
       <PaymentDebitCard />
       <PaymentInfo />
