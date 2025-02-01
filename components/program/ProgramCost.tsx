@@ -40,7 +40,7 @@ const ProgramCost = ({ withPerMonth = false }) => {
           <span className={cn(stls.discount, { [stls.altStyles]: altStyles })}>
             <span className={stls.bold}>
               {!atProfession && !atCourse
-                ? toNumberWithSpaces(roundingUpPriceOrNumber(price / 12))
+                ? toNumberWithSpaces(roundingUpPriceOrNumber(fullPriceWithSale / 12))
                 : toNumberWithSpaces(roundingUpPriceOrNumber(priceToMounthWithSale)) || ''}
             </span>{' '}
             <span className={cn(stls.light, stls.perMonth)}>&#8381;/мес</span>
@@ -48,7 +48,7 @@ const ProgramCost = ({ withPerMonth = false }) => {
           {(atProfession || atCourse) && (
             <span className={cn(stls.regular, { [stls.altStyles]: altStyles })}>
               <span className={stls.bold}>
-                {toNumberWithSpaces(priceToMounth) || ''}
+                {toNumberWithSpaces(Math.round(fullPriceWithSale / 60 * 100 / 12)) || ''}
               </span>
               <span className={cn(stls.light, stls.perMonth)}>&#8381;/мес</span>
             </span>
@@ -58,7 +58,7 @@ const ProgramCost = ({ withPerMonth = false }) => {
 
       <div className={stls.content}>
         <p className={cn(stls.label, { [stls.altStyles]: altStyles })}>
-          Единоразовый платёж
+          Единоразовый платёж (со скидкой)
         </p>
         <span className={cn(stls.discount, { [stls.altStyles]: altStyles })}>
           <span className={stls.bold}>
