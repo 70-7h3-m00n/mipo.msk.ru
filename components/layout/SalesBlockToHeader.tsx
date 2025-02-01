@@ -25,10 +25,10 @@ const SalesBlockToHeader = () => {
       <Wrapper>
         <span>
           {/* <b>60% СКИДКА</b> на все курсы до <ProgramAdmission /> */}
-          Новогодняя распродажа в МИПО
+          Распродажа в МИПО
         </span>
         <div className={stls.infoSales}>
-          <div><span>до &nbsp;</span>65</div>
+          <div>-40</div>
           <div>
             <div>%</div>
             <div>Скидка<br />На все курсы</div>
