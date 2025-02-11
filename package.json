@@ -7,7 +7,7 @@
     "build": "npm run createYandexFeedv2 && next build",
     "start": "next start",
     "createYandexFeed": "node scripts/generateYandexFeed.js",
-    "createYandexFeedv2": "node scripts/generateYandexFeedv2.js",
+    "createYandexFeedv2": "node scripts/generateYandexFeedv2xml.js",
     "postbuild": "next-sitemap --config next-sitemap.config.js",
     "generateicons": "npx pwa-asset-generator ./data/logos/logo-light.png ./public/assets/imgs/icons -p \"0\" -b \"#002C9F\""
   },
