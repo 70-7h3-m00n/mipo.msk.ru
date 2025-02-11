@@ -40,6 +40,8 @@ async function generateYandexFeed() {
     })
   )
 
+  const filtredPrograms = fullProgramsData.filter((element) => element?.study_field?.slug && element?.slug && element?.heroPicture?.url)
+
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
       <yml_catalog date="${format(new Date(), 'yyyy-MM-dd HH:mm')}">
         <shop>
@@ -57,7 +59,7 @@ async function generateYandexFeed() {
                <category id="766199767651">All</category>
             </categories>
             <offers>
-                ${fullProgramsData
+                ${filtredPrograms
                     .map(elem => {
                     return `<offer id="${escapeXml(elem.id)}">
                                 <name>${escapeXml(elem.title)}</name>
@@ -93,12 +95,12 @@ async function generateYandexFeed() {
 
   const filePath = path.join(
     __dirname,
-    '../public/yandex-feed/yandexfeedManualFilev2.xml'
+    '../public/yandex-feed/yandexfeedManualFilev2.yml'
   )
 
   fs.writeFileSync(filePath, xml, 'utf8')
 
-  console.log('yandexfeedManualFilev2.xml создан успешно!')
+  console.log('yandexfeedManualFilev2.yml создан успешно!')
 }
 
 generateYandexFeed()
