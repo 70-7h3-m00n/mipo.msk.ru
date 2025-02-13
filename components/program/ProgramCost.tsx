@@ -48,7 +48,7 @@ const ProgramCost = ({ withPerMonth = false }) => {
           {(atProfession || atCourse) && (
             <span className={cn(stls.regular, { [stls.altStyles]: altStyles })}>
               <span className={stls.bold}>
-                {toNumberWithSpaces(Math.round(fullPriceWithSale / 60 * 100 / 12)) || ''}
+                {toNumberWithSpaces(Math.round(fullPriceWithSale / 50 * 100 / 12)) || ''}
               </span>
               <span className={cn(stls.light, stls.perMonth)}>&#8381;/мес</span>
             </span>
@@ -71,15 +71,15 @@ const ProgramCost = ({ withPerMonth = false }) => {
           {'\u00A0'}
           <span className={stls.light}>&#8381;</span>
         </span>
-        {/*(atProfession || atCourse) && (
+        {(atProfession || atCourse) && (
           <span className={cn(stls.regular, { [stls.altStyles]: altStyles })}>
             <span className={stls.bold}>
-              {toNumberWithSpaces(priceWithoutCeil)}
+              {toNumberWithSpaces(Math.round(fullPriceWithSale / 50 * 100))}
             </span>
             {'\u00A0'}
             <span className={stls.light}>&#8381;</span>
           </span>
-        ) */}
+        )}
       </div>
     </div>
   )
