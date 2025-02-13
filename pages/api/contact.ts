@@ -159,10 +159,10 @@ const contact = async (req: NextApiRequest, res: NextApiResponse) => {
     clickid: clickid || null,
     formName: formName || null,
     type_tariff: tarifPhycho || null,
-    name_programm,
-    category_programm,
-    price_programm,
-    full_link
+    name_programm: name_programm || null,
+    category_programm: category_programm || null,
+    price_programm: price_programm || null,
+    full_link: full_link || null
   }
 
   // try {
