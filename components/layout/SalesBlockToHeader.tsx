@@ -28,7 +28,7 @@ const SalesBlockToHeader = () => {
           Распродажа в МИПО
         </span>
         <div className={stls.infoSales}>
-          <div>-55</div>
+          <div>-40</div>
           <div>
             <div>%</div>
             <div>Скидка<br />На все курсы</div>
