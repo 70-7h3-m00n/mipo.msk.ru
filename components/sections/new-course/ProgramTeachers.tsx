@@ -134,7 +134,7 @@ const ProgramTeachers = ({data}: Props) => {
           <h2 className={styles.header}>Начните обучаться со скидкой</h2>
 
           <h3 className={styles.subHeader}>
-            Забронируйте программу по спеццене — со скидкой 55%
+            Забронируйте программу по спеццене — со скидкой 40%
           </h3>
 
           <BtnNewCourse text={'Получить скидку'} className={styles.btn} />
