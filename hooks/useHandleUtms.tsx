@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 import { deleteCookie, setCookie } from 'cookies-next'
 import { parseUrlParams } from '@/utils/index'
@@ -10,21 +10,31 @@ const useHandleUtms = () => {
   const router = useRouter()
   const params = parseUrlParams({ router })
 
-  useEffect(() => {
-    if (params)
-      UTM_KEYS.forEach(utmKey =>
-        params[utmKey]
-          ? setCookie(utmKey, params[utmKey], { maxAge: NINETY_DAYS })
-          : undefined
-      )
-  }, [params])
+  const [isMounted, setIsMounted] = useState(false)
 
   useEffect(() => {
-    if(router.asPath.includes('?') && !router.asPath.includes('utm_source=edpartners&')) {
+    // Запускаем точно, когда смонтировалось все
+    setIsMounted(true)
+  }, [])
+
+  useEffect(() => {
+    if (isMounted && params) {
       UTM_KEYS.forEach(utmKey => {
-        deleteCookie(utmKey)
+        const paramValue = params[utmKey]
+        if (paramValue) {
+          setCookie(utmKey, paramValue, { maxAge: NINETY_DAYS })
+        }
       })
     }
-  },[params, router])
+  }, [params, isMounted])
+
+  // useEffect(() => {
+  //   if(router.asPath.includes('?') && !router.asPath.includes('utm_source=edpartners&')) {
+  //     UTM_KEYS.forEach(utmKey => {
+  //       deleteCookie(utmKey)
+  //     })
+  //   }
+  // },[params, router])
 }
+
 export default useHandleUtms
