@@ -108,14 +108,6 @@ const FormAlpha = ({
       {} as { [key in (typeof UTM_KEYS)[number]]: string | undefined }
     )
 
-    let params = new URLSearchParams(document.location.search)
-
-    for (let key in utms) {
-      if (utms[key] == undefined && params.get(key)) {
-        utms[key] = params.get(key)
-      }
-    }
-
     data.utms = utms
     const referer = JSON.parse(sessionStorage.getItem('referer'))
     data.referer = referer

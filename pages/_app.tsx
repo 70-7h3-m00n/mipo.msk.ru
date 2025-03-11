@@ -37,6 +37,8 @@ import { getCookie } from 'cookies-next'
 function MyApp({ Component, pageProps }) {
   const route = useRouter()
   const [loading, setLoading] = useState(false)
+
+  // Проверяет параметры URL и устанавливает куки 
   useHandleUtms()
 
   const isEdpartners =
