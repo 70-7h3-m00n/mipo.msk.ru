@@ -4,6 +4,7 @@ import cn from 'classnames'
 import ProgramContext from '@/context/program/programContext'
 import { useContext } from 'react'
 import ProgramDiscountUntil from './ProgramDiscountUntil'
+import { SALE_VALUE, SALE_DATE_VALUE } from '@/lib/constant'
 
 type TypeProgramDiscount = {
   small?: boolean
@@ -41,11 +42,11 @@ const ProgramDiscount = ({
           <span>Скидка до</span>
           <p className={cn(stls.discount, { [stls.altStyles]: altStyles })}>
             {/* {elDiscount} */}
-            -40%
+            -{SALE_VALUE}%
           </p>
           <p className={cn(stls.until, { [stls.altStyles]: altStyles })}>
             {/* <ProgramDiscountUntil /> */}
-            До 21 марта
+            До {SALE_DATE_VALUE}
           </p>
         </div>
       )}

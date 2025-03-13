@@ -11,6 +11,7 @@ import { motion } from 'framer-motion'
 import { useEffect, useRef, useState } from 'react'
 import fetchCourse from '../../../api/fetchCourse'
 import routesBack from '@/config/routesBack'
+import { SALE_VALUE } from '@/lib/constant'
 
 type ScrollPosition = 'left' | 'right'
 
@@ -134,7 +135,7 @@ const ProgramTeachers = ({data}: Props) => {
           <h2 className={styles.header}>Начните обучаться со скидкой</h2>
 
           <h3 className={styles.subHeader}>
-            Забронируйте программу по спеццене — со скидкой 40%
+            Забронируйте программу по спеццене — со скидкой {SALE_VALUE}%
           </h3>
 
           <BtnNewCourse text={'Получить скидку'} className={styles.btn} />
