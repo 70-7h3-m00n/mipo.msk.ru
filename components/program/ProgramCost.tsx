@@ -5,6 +5,7 @@ import ProgramContext from '@/context/program/programContext'
 import toNumberWithSpaces from '@/helpers/toNumberWithSpaces'
 import { discountNum } from '@/data/price'
 import roundingUpPriceOrNumber from '@/helpers/roundingUpPriceOrNumber'
+import { DISPLAY_SALE_VALUE } from '@/lib/constant'
 
 const ProgramCost = ({ withPerMonth = false }) => {
   const { program } = useContext(ProgramContext)
@@ -48,7 +49,7 @@ const ProgramCost = ({ withPerMonth = false }) => {
           {(atProfession || atCourse) && (
             <span className={cn(stls.regular, { [stls.altStyles]: altStyles })}>
               <span className={stls.bold}>
-                {toNumberWithSpaces(Math.round(fullPriceWithSale / 60 * 100 / 12)) || ''}
+                {toNumberWithSpaces(Math.round(fullPriceWithSale / DISPLAY_SALE_VALUE * 100 / 12)) || ''}
               </span>
               <span className={cn(stls.light, stls.perMonth)}>&#8381;/мес</span>
             </span>
@@ -74,7 +75,7 @@ const ProgramCost = ({ withPerMonth = false }) => {
         {(atProfession || atCourse) && (
           <span className={cn(stls.regular, { [stls.altStyles]: altStyles })}>
             <span className={stls.bold}>
-              {toNumberWithSpaces(Math.round(fullPriceWithSale / 60 * 100))}
+              {toNumberWithSpaces(Math.round(fullPriceWithSale / DISPLAY_SALE_VALUE * 100))}
             </span>
             {'\u00A0'}
             <span className={stls.light}>&#8381;</span>

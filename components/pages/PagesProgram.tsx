@@ -51,6 +51,7 @@ import CalculatorPhycho from '../sections/cource-phycho/CalculatorPhycho'
 import PopupTrigger from '../general/PopupTrigger'
 import StudyCoastPhycho from '../sections/cource-phycho/StudyCoastPhycho'
 import LineToScroll from '../sections/cource-phycho/LineToScroll'
+import { SALE_VALUE } from '@/lib/constant'
 
 type PagesProgramType = {
   ofType: TypeCategory
@@ -136,7 +137,7 @@ const PagesProgram = ({ ofType = null, reviews }: PagesProgramType) => {
             <>
               Забронируйте программу по спеццене —{' '}
               <span className={stls.highlightFw}>
-                со скидкой <span className={stls.highlightC}>40%</span>
+                со скидкой <span className={stls.highlightC}>50%</span>
                 <IconGeneralTextDecorativeUnderline
                   classNames={[stls.IconGeneralTextDecorativeUnderline]}
                 />
@@ -166,7 +167,7 @@ const PagesProgram = ({ ofType = null, reviews }: PagesProgramType) => {
                 <span className={stls.highlightFw}>
                   со скидкой{' '}
                   {/* <span className={stls.highlightC}>{discount.substring(1)}</span> */}
-                  <span className={stls.highlightC}>40%</span>
+                  <span className={stls.highlightC}>{SALE_VALUE}%</span>
                   <IconGeneralTextDecorativeUnderline
                     classNames={[stls.IconGeneralTextDecorativeUnderline]}
                   />
