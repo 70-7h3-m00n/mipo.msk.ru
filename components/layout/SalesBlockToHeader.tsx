@@ -3,6 +3,7 @@ import PopupTrigger from '../general/PopupTrigger'
 import Wrapper from './Wrapper'
 import stls from '@/styles/components/layout/Header.module.sass'
 import { useEffect, useRef } from 'react'
+import { SALE_VALUE } from '@/lib/constant'
 
 const SalesBlockToHeader = () => {
   const saleBlock = useRef<HTMLDivElement>(null)
@@ -28,7 +29,7 @@ const SalesBlockToHeader = () => {
           Распродажа в МИПО
         </span>
         <div className={stls.infoSales}>
-          <div>-40</div>
+          <div>-{SALE_VALUE}</div>
           <div>
             <div>%</div>
             <div>Скидка<br />На все курсы</div>
