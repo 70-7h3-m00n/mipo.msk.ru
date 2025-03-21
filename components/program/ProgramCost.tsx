@@ -27,7 +27,7 @@ const ProgramCost = ({ withPerMonth = false }) => {
   const priceToMounth = roundingUpPriceOrNumber(priceWithoutCeil / 12)
   const salePrice = toNumberWithSpaces(roundingUpPriceOrNumber(priceToMounth * 0.35))
 
-  let fullPriceWithSale = roundingUpPriceOrNumber(priceWithoutCeil * 0.35);
+  let fullPriceWithSale = roundingUpPriceOrNumber(priceWithoutCeil * 0.35 * 0.8);
 
   let priceToMounthWithSale = roundingUpPriceOrNumber(priceToMounth * 0.35);
   
