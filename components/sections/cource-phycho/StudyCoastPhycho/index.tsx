@@ -13,6 +13,7 @@ import roundingUpPriceOrNumber from '@/helpers/roundingUpPriceOrNumber'
 import { number } from '@/data/contact'
 import Popup from 'reactjs-popup'
 import PopupInfoProgram from '@/components/popups/PopupInfoProgram'
+import { SALE_VALUE } from '@/lib/constant'
 
 interface Props {
   isForOtherTariff?: boolean
@@ -41,9 +42,10 @@ const StudyCoastPhycho = ({
     priceWithoutCeil / installmentPeriod
   )
 
-  let fullPriceWithSale = roundingUpPriceOrNumber(priceWithoutCeil * 0.35)
-  let priceToMonthWithSale = roundingUpPriceOrNumber(priceToMounth * 0.35)
+  let fullPriceWithSale = roundingUpPriceOrNumber(priceWithoutCeil * 0.35 * 0.8)
+  let priceToMonthWithSale = roundingUpPriceOrNumber(priceToMounth * 0.35 * 0.8)
 
+  console.log(SALE_VALUE)
   const data = {
     phycho: [
       {
@@ -1278,10 +1280,11 @@ const StudyCoastPhycho = ({
                     {elem.sale
                       ? toNumberWithSpaces(
                           roundingUpPriceOrNumber(
-                            priceToMounth + (priceToMounth / 100) * elem.sale
+                            (priceToMonthWithSale +
+                              (priceToMonthWithSale / 100) * elem.sale) / (100 - SALE_VALUE) * 100
                           )
                         )
-                      : toNumberWithSpaces(priceToMounth)}
+                      : toNumberWithSpaces(roundingUpPriceOrNumber(priceToMonthWithSale / (100 - SALE_VALUE) * 100))}
                     ₽/мес
                   </div>
                   <div className={stls.bigPrice}>
