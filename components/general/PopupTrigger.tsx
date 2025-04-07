@@ -10,7 +10,8 @@ import {
   BtnZeta,
   BtnEta,
   BtnText,
-  BtnTheta
+  BtnTheta,
+  BtnBorderWhite
 } from '@/components/btns'
 
 type PopupTriggerType = {
@@ -24,6 +25,7 @@ type PopupTriggerType = {
     | 'eta'
     | 'theta'
     | 'text'
+    | 'borderButtonWhite'
   cta:
     | 'askQuestion'
     | 'callMeBack'
@@ -47,7 +49,12 @@ type PopupTriggerType = {
   tarifPhycho?: string
 }
 
-const PopupTrigger = ({ btn, cta, formName, tarifPhycho }: PopupTriggerType) => {
+const PopupTrigger = ({
+  btn,
+  cta,
+  formName,
+  tarifPhycho
+}: PopupTriggerType) => {
   const question = cta === 'askQuestion'
   const strs = {
     trigger:
@@ -282,6 +289,8 @@ const PopupTrigger = ({ btn, cta, formName, tarifPhycho }: PopupTriggerType) => 
             <BtnTheta text={strs.trigger} />
           ) : btn === 'text' ? (
             <BtnText text={strs.trigger} ctheta />
+          ) : btn === 'borderButtonWhite' ? (
+            <BtnBorderWhite text={strs.trigger} />
           ) : (
             ''
           )}
