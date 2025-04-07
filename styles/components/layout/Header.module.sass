@@ -145,26 +145,34 @@ $esbp: 850px
   @media screen and (max-width: $esbp)
     display: none
 
-.saleBlock 
+.saleBlock
   position: fixed
   left: 0
   visibility: hidden
   transition: all 0.3s ease-out
   right: 0
   opacity: 0
-  top: 0
-  height: 80px
-  overflow: hidden
-  background: url('/assets/imgs/banners/bannersale.png'), linear-gradient(90deg, #342087 -3.68%, #0F1C2A 100%)
+  bottom: 0
+  height: 75px
+  // overflow: hidden
+  // background: url('/assets/imgs/banners/bannersale.png'), linear-gradient(90deg, #342087 -3.68%, #0F1C2A 100%)
+  background: url('/assets/imgs/banners/bannersale3.svg'), #6AB7FF
+  background-repeat: no-repeat
+  background-position: center
   color: white
   font-size: 24px
-  font-weight: 700
+  font-weight: 500
   line-height: normal
   text-transform: uppercase
+  & .buttons 
+    display: flex
+    gap: 10px
+    > *
+      flex-shrink: 0
   &.wrapper
     & > div
       max-width: 1440px
-      padding: 0 40px
+      padding: 0 100px
   z-index:99
   box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px
   > div 
@@ -173,16 +181,28 @@ $esbp: 850px
       justify-content: space-between
       padding: 10px
       * button 
-        background-color: #fff !important
+        background-color: #fff
         border-radius: 5px !important
-        color: #002C9F !important
+        color: #002C9F
         font-size: 14px !important
         font-weigh: 400 !important
-  @media (max-width: 1200px) 
-    background: linear-gradient(90deg, #00A975 -3.68%, #004F34 100%)
+        max-height: 44px !important
+        display: flex
+        align-items: center
+        justify-content: center
+  & .whiteBg 
+    padding: 5px
+    background-color: c.$color-white
+    color: c.$color-black
+    border-radius: 6px
+    font-size: 18px
+  & .subtitle 
+    font-size: 14px
+    margin-top: 5px
+    // background: linear-gradient(90deg, #00A975 -3.68%, #004F34 100%)
   @include m.media(phone, tablet)
     font-size: 14px
-    background: linear-gradient(90deg, #00A975 -3.68%, #004F34 100%)
+    // background: linear-gradient(90deg, #00A975 -3.68%, #004F34 100%)
     * button 
       font-size: 12px
     > div
@@ -191,6 +211,29 @@ $esbp: 850px
       padding: 5px 10px
       * button 
         min-width: 170px
+  @media ( max-width: 1300px )
+    font-size: 16px
+    & .secondButton 
+      display: none
+    & .subtitle 
+      display: none
+    &.wrapper
+      & > div
+        padding: 0 20px
+    & .whiteBg 
+      font-size: 10px
+  @media ( max-width: 500px ) 
+    font-size: 12px
+    & .whiteBg 
+      font-size: 8px
+    & .buttons * 
+      flex-shrink: 1
+    & > div * button 
+      padding: 10px
+      min-width: auto
+    & .whiteBg
+      display: none
+ 
 
 .infoSales
   display: flex
@@ -225,8 +268,6 @@ $esbp: 850px
   @media (max-width: 550px) 
     left: 35%
     opacity: 0.5
-    
-    
 
 // .linkReviewLong
 //   @media screen and ( max-width: 860px )
