@@ -1,0 +1,32 @@
+@use '@/styles/utils/mixin' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/config/Colors.module.sass' as c
+
+.component
+  width: 16px
+  height: 16px
+  background-color: c.$color-white
+  border-radius: 999px
+  color: c.$color-black
+  position: relative
+  display: inline-flex
+  font-size: 12px
+  justify-content: center
+  align-items: center
+  text-transform: lowercase
+  .tooltip 
+    position: absolute
+    background-color: c.$color-white
+    padding: 6px
+    border-radius: 10px
+    top: -40px
+    opacity: 0
+    left: 0
+    transition: opacity 0.3s ease
+    z-index: 99999
+    right: 0
+    min-width: 300px
+    @media (max-width: 700px)
+      min-width: 200px
+    &.show 
+      opacity: 1

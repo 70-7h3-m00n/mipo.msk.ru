@@ -22,7 +22,7 @@ import BtnPhone from '@/components/btns/BtnPhone'
 import BtnHumburger from '@/components/btns/BtnHumburger'
 import { useRouter } from 'next/router'
 import colors from '@/config/colors'
-import SalesBlockToHeader from './SalesBlockToHeader'
+import SalesBlockToHeaderBottom from './SalesBlockToHeaderBottom'
 
 const Header = () => {
   const router = useRouter()
@@ -72,7 +72,7 @@ const Header = () => {
         [stls.phychologyHeader]: isForPhychology
       })}>
       {program?.category?.type !== 'mba' && !router.asPath.includes('mba') && (
-        <SalesBlockToHeader />
+        <SalesBlockToHeaderBottom />
       )}
       <MenuMobile />
 
