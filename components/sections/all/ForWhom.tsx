@@ -54,8 +54,8 @@ const ForWhom = () => {
               width: 708,
               widthInitial: program?.forWhomPicture?.width,
               heightInitial: program?.forWhomPicture?.height
-            })}
-          />
+            })}  
+          /> 
         </div>
         <div className={stls.right}>
           <ul className={cn(stls.list, { [stls.altStyles]: altStyles })}>

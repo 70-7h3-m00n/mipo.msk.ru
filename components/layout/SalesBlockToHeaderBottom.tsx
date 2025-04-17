@@ -3,7 +3,7 @@ import PopupTrigger from '../general/PopupTrigger'
 import Wrapper from './Wrapper'
 import stls from '@/styles/components/layout/Header.module.sass'
 import { useEffect, useRef } from 'react'
-import { SALE_VALUE } from '@/lib/constant'
+import { SALE_DATE_VALUE, SALE_VALUE } from '@/lib/constant'
 import { BtnTooltip } from '../btns'
 
 const SalesBlockToHeaderBottom = () => {
@@ -36,12 +36,12 @@ const SalesBlockToHeaderBottom = () => {
             
           </div>
           <div className={stls.subtitle}>
-            на все программы и курсы до 31 марта
+            на все программы и курсы до {SALE_DATE_VALUE}
           </div>
         </div>
 
         <div className={stls.buttons}>
-          <span id='header-button'>
+          <span id='header-button' className={stls.firstButton}>
             <PopupTrigger btn='epsilon' cta='signUpForCourse' />
           </span>
           <span className={stls.secondButton}>
