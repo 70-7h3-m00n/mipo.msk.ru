@@ -1,0 +1,51 @@
+@use '@/styles/utils/mixin' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/config/Colors.module.sass' as c
+    
+.component
+    background-color: c.$mu-2
+    padding-top: 20px
+    .textAndImg 
+        color: c.$color-white
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 30px
+        .text 
+            font-size: 20px
+            margin-top: 30px
+            font-weight: 500
+        .image
+            border-radius: 0 100px 0 100px
+            min-height: 370px
+            position: relative
+            overflow: hidden
+            img
+                width: 100%
+                height: 100%
+        @media (max-width: 768px)
+            grid-template-columns: 1fr
+            .title 
+                font-size: 26px !important
+            .text
+                margin-top: 0
+                font-size: 16px
+                margin-top: 20px
+            .image
+                min-height: 200px
+                border-radius: 0 50px 0 50px
+    .factoidsWithIcon
+        margin-top: 50px
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 30px
+        @media (max-width: 768px)
+            grid-template-columns: 1fr
+            gap: 20px
+    .factoidsWithoutIcon
+        margin-top: 50px
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr
+        gap: 30px
+        @media (max-width: 768px)
+            grid-template-columns: 1fr
+            gap: 20px

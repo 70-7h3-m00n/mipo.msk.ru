@@ -32,17 +32,18 @@ const Header = () => {
 
   const { program } = useContext(ProgramContext)
 
-  const isForPhychology =
-    !!program &&
-    [
-      'Psychology',
-      'prakticheskaya-psihologiya-m-sh-pp',
-      'obshhaya-psihologiya'
-    ].includes(program.study_field?.slug)
+  const [hasMounted, setHasMounted] = useState(false)
+  const [isForHigherEducation, setIsForHigherEducation] = useState(false)
 
-  const altStyles =
-    program?.category?.type === 'mba' ||
-    program?.category?.type === 'profession'
+  useEffect(() => {
+    setHasMounted(true)
+    const isHE = window.location.href.includes('highereducation')
+    setIsForHigherEducation(isHE)
+  }, [])
+
+  const isForPhychology = !!program && ['Psychology', 'prakticheskaya-psihologiya-m-sh-pp', 'obshhaya-psihologiya'].includes(program.study_field?.slug)
+
+  const altStyles = program?.category?.type === 'mba' || program?.category?.type === 'profession'
 
   useEffect(() => {
     handleSwipedEvt({ menuIsOpen, closeMenu })
@@ -64,6 +65,9 @@ const Header = () => {
   ]
 
   const redirectHeader = router.asPath.includes('new-courses')
+
+  if (!hasMounted) return null
+  if (isForHigherEducation) return null
 
   return (
     <header
@@ -131,8 +135,8 @@ const Header = () => {
             <Logo atHeader isForPhychology={isForPhychology} />
 
             <div className={stls.btns}>
-              <BtnPhone colorText={isForPhychology ? 'black' : 'white'}/>
-              <BtnHumburger isForPhychology={isForPhychology}/>
+              <BtnPhone colorText={isForPhychology ? 'black' : 'white'} />
+              <BtnHumburger isForPhychology={isForPhychology} />
             </div>
 
             <div className={stls.btnFields}>

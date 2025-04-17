@@ -1,0 +1,32 @@
+@use '@/styles/utils/mixin' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/config/Colors.module.sass' as c
+
+.component
+    padding: 2px
+    background: linear-gradient(to right, #2663F0, #77A0FF)
+    border-radius: 20px
+    overflow: hidden
+    .content 
+        padding: 30px
+        background-color: c.$mu-2
+        display: grid
+        grid-template-columns: 1fr
+        border-radius: 18px
+        gap: 10px
+        z-index: 1
+    .title
+        background: linear-gradient(to right, #2663F0, #77A0FF)
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+        white-space: nowrap
+        display: inline
+    .desc 
+        color: c.$color-white
+        font-size: 20px
+        font-weight: 500
+    @media (max-width: 768px)
+        .title 
+            font-size: 48px !important
+        .desc
+            font-size: 16px
