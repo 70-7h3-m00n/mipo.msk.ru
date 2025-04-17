@@ -4,5 +4,10 @@
 @use '@/styles/utils/mixin/media' as bp
 
 .container
+  position: relative
+  
   @include m.flex
   display: flex
+
+  @media (max-width: 768px)
+    min-height: 200px
