@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-      <yml_catalog date="2025-04-07 18:02">
+      <yml_catalog date="2025-04-24 00:24">
         <shop>
             <name>Московский институт профессионального образования</name>
             <company>Фид для Яндекс&quot;</company>
@@ -819,8 +819,8 @@
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1642076534/19_3e29734204.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/jekonomika/oczenka-stoimosti-nedvizhimosti</url>
                                 <count>9999</count>
-                                <price>27105</price>
-                                <oldprice>45176</oldprice>
+                                <price>26990</price>
+                                <oldprice>44984</oldprice>
                                 <currencyId>RUR</currencyId> 
                                 <categoryId>766199767651</categoryId>         
                             </offer><offer id="6214ffe4d5434e0016c344c8">
@@ -2342,6 +2342,15 @@
                                 <count>9999</count>
                                 <price>52596</price>
                                 <oldprice>87660</oldprice>
+                                <currencyId>RUR</currencyId> 
+                                <categoryId>766199767651</categoryId>         
+                            </offer><offer id="67f4e17d924a31001cc4f21b">
+                                <name>Профессия «Нутрициолог»</name>
+                                <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1665062247/63adf83f_3342550e2f.jpg</picture>
+                                <url>https://mipo.msk.ru/professions/nutriciologiya/professiya-nutricziolog</url>
+                                <count>9999</count>
+                                <price>71000</price>
+                                <oldprice>118334</oldprice>
                                 <currencyId>RUR</currencyId> 
                                 <categoryId>766199767651</categoryId>         
                             </offer>

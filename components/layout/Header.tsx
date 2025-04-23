@@ -34,16 +34,29 @@ const Header = () => {
 
   const [hasMounted, setHasMounted] = useState(false)
   const [isForHigherEducation, setIsForHigherEducation] = useState(false)
-
+  const [isInnerPageHigherEducation, setIsInnerPageHigherEducation] =
+    useState(false)
   useEffect(() => {
     setHasMounted(true)
     const isHE = window.location.href.includes('highereducation')
     setIsForHigherEducation(isHE)
+    setIsInnerPageHigherEducation(
+      /\/highereducation\/[^/]+\/[^/]+$/.test(window.location.href)
+    )
   }, [])
 
-  const isForPhychology = !!program && ['Psychology', 'prakticheskaya-psihologiya-m-sh-pp', 'obshhaya-psihologiya'].includes(program.study_field?.slug)
+  const isForPhychology =
+    (!!program &&
+      [
+        'Psychology',
+        'prakticheskaya-psihologiya-m-sh-pp',
+        'obshhaya-psihologiya'
+      ].includes(program.study_field?.slug)) ||
+    isInnerPageHigherEducation
 
-  const altStyles = program?.category?.type === 'mba' || program?.category?.type === 'profession'
+  const altStyles =
+    program?.category?.type === 'mba' ||
+    program?.category?.type === 'profession'
 
   useEffect(() => {
     handleSwipedEvt({ menuIsOpen, closeMenu })
@@ -67,7 +80,7 @@ const Header = () => {
   const redirectHeader = router.asPath.includes('new-courses')
 
   if (!hasMounted) return null
-  if (isForHigherEducation) return null
+  if (isForHigherEducation && !isInnerPageHigherEducation) return null
 
   return (
     <header
@@ -132,17 +145,24 @@ const Header = () => {
           </div>
 
           <div className={stls.row}>
-            <Logo atHeader isForPhychology={isForPhychology} />
+            <Logo
+              atHeader
+              isForPhychology={isForPhychology}
+              isInnerPageHigherEducation={isInnerPageHigherEducation}
+            />
 
             <div className={stls.btns}>
               <BtnPhone colorText={isForPhychology ? 'black' : 'white'} />
               <BtnHumburger isForPhychology={isForPhychology} />
             </div>
 
-            <div className={stls.btnFields}>
-              <BtnFields isForPhychology={isForPhychology} />
-            </div>
-            {list.map((item, idx) => (
+            {!isInnerPageHigherEducation && (
+              <div className={stls.btnFields}>
+                <BtnFields isForPhychology={isForPhychology} />
+              </div>
+            )}
+
+            {!isInnerPageHigherEducation && list.map((item, idx) => (
               <Link key={item.href + item.val} href={item.href}>
                 <a
                   className={cn(

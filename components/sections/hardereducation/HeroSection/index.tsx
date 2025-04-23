@@ -36,7 +36,7 @@ const HeroSection = () => {
           Высшее образование по востребованным профессиям онлайн
         </p>
         <div className={stls.buttons}>
-          <UniversalButton idToScroll='testid' bgColor='blue'>
+          <UniversalButton idToScroll='catalog' bgColor='blue'>
             Выбрать направление
           </UniversalButton>
           <Popup

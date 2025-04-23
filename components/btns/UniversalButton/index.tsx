@@ -1,4 +1,3 @@
-import { color } from 'framer-motion'
 import stls from './index.module.sass'
 import cn from 'classnames'
 
@@ -9,6 +8,8 @@ interface UniversalButtonProps {
   bgColor?: 'blue' | 'white'
   borderColor?: 'blue' | 'white'
   borderPx?: number
+  colorText?: string
+  className?: string
 }
 
 const UniversalButton = ({
@@ -17,8 +18,12 @@ const UniversalButton = ({
   idToScroll,
   bgColor,
   borderColor,
-  borderPx
+  borderPx,
+  colorText,
+  className
 }: UniversalButtonProps) => {
+  const classNames = cn(stls.component, stls[bgColor], className)
+
   const scrollToBlock = (id: string) => {
     const el = document.getElementById(id)
     if (el) {
@@ -38,10 +43,13 @@ const UniversalButton = ({
   }
 
   const style = {
-    border: borderPx ? `${borderPx}px solid ${borderColor ? borderColor : undefined}` : undefined,
+    border: borderPx
+      ? `${borderPx}px solid ${borderColor ? borderColor : undefined}`
+      : undefined,
+    color: colorText ? colorText : undefined
   }
   return (
-    <button className={cn(stls.component, stls[bgColor])} onClick={handleClick} style={style}>
+    <button className={classNames} onClick={handleClick} style={style}>
       {children}
     </button>
   )

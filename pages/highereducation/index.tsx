@@ -9,7 +9,6 @@ import { PagesHigherEducation } from '@/components/pages'
 import { EducationProvider } from '@/context/highereducation/EducationContext'
 
 const ProgramsPage = ({ facultets, programs }) => {
-  console.log(facultets)
   return (
     <>
       {/*//@ts-ignore */}

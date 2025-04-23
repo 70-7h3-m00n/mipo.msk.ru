@@ -17,14 +17,14 @@ const CardWithiImage = ({
   imageSrc = '/assets/imgs/hardereducation/nofoto.jpeg'
 }: Props) => {
   return (
-    <a href={lintTo}>
+    <a href={`/highereducation/${lintTo}`}>
       <div className={stls.component}>
         <div className={stls.image}>
           <Image alt='Факультет' src={imageSrc} layout='fill' />
         </div>
         <div className={stls.container}>
           <h3>{title}</h3>
-          <div>{countPrograms} программ</div>
+          <div>{countPrograms} программ(а)</div>
         </div>
 
         <IconArrowRight classNames={[stls.icon]} />

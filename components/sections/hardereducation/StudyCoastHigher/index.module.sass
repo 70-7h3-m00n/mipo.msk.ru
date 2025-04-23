@@ -1,0 +1,175 @@
+@use '@/styles/utils/mixin' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/config/Colors.module.sass' as c
+
+.container
+  &.blackbg 
+    background-color: c.$color-black
+  @include m.media(phone, tablet)
+    margin-bottom: f.px(50)
+    padding-top: f.px(50)
+    padding-bottom: f.px(50)
+  @include m.media(laptop, desktop)
+    padding-top: f.px(100)
+    padding-bottom: f.px(50)
+  .columns
+    display: grid
+    margin-top: 50px
+    grid-template-columns: 1fr 1fr 1fr
+    @include m.media(phone, tablet)
+      grid-template-columns: 1fr
+    font-size: 14px
+    font-weight: 350
+    line-height: 1.3
+    gap: 30px
+    .title
+      font-size: 22px
+      font-weight: 500
+      display: flex
+      align-items: center
+    .duration
+      font-weight: 500
+      & > span:nth-child(2)
+        color: c.$color-blue
+    .subtitle 
+      font-size: 14px
+      font-weight: 500
+      margin-top: 20px
+    .colum
+      display: flex
+      flex-direction: column
+    .label
+      font-size: 14px
+      font-style: normal
+      font-weight: 500
+      display: inline-flex
+      padding: 3px 10px
+      justify-content: center
+      align-items: center
+      border-radius: 41px
+      color: c.$color-blue
+      background: c.$color-white
+      margin-left: auto
+    .image
+      width: 136px
+      height: 101px
+      position: relative
+      margin-left: auto
+    .addTariff
+      background-color: c.$color-blue
+      padding: 10px
+      color: c.$color-white
+      text-align: center
+      font-size: 14px
+      font-weight: 600
+      display: flex
+      flex-direction: column
+      gap: 10px
+      border-radius: 15px 2px 2px 2px
+      margin-top: 15px
+      & > div:first-child
+        font-size: 12px
+        font-weight: 400
+    .list, & li
+      margin: 0
+      padding: 0  
+      list-style: none
+    .list
+      margin-top: 15px
+    .priveBlock
+      margin-top: auto
+      & > div:first-child
+        font-size: 16px
+        font-weight: 350
+        color: c.$color-dark-grey
+        text-decoration: line-through
+        line-height: 1.2
+      .bigPrice
+        margin-top: 10px
+        font-size: 38px
+        font-weight: 500
+      .smallPrice
+        margin-top: 20px
+        font-size: 22px
+        font-weight: 500
+      .btn
+        margin-top: 30px
+    & li
+      display: flex
+      justify-content: start
+      align-items: start
+      &:not(:nth-child(1))
+        margin-top: 10px
+  
+    & li > span
+      width: 20px
+      height: 20px
+      margin-right: 10px
+      flex-grow: 0
+      flex-shrink: 0
+    & > div 
+      border: 1px solid c.$color-blue
+      padding: 30px
+      border-radius: 25px
+      & button
+        width: 100%
+    & > div:nth-child(1)
+      & ul
+        margin-top: 10px
+    & > div:nth-child(2)
+      background-color: c.$color-blue
+      color: c.$color-white
+      .duration
+        & > span:nth-child(2)
+          color: c.$color-white
+      .addTariff
+        background-color: c.$color-white
+        color: c.$color-black
+        & > div:last-child
+          color: c.$color-blue
+      .priveBlock
+        & button
+          background: none
+          border-color: c.$color-white
+    & > div:nth-child(3)
+      background-color: c.$color-verywhite-blue
+      border: 1px solid c.$color-verywhite-blue
+    &.blackbg > div:nth-child(1), &.blackbg > div:nth-child(3)
+      border-color: c.$color-white
+    &.blackbg > div:nth-child(3)
+      background-color: transparent
+    &.blackbg
+      color: c.$color-white
+    
+.priceDesc
+  font-size: 14px
+  font-weight: 350
+  line-height: 1.2
+  color: c.$color-dark-grey
+
+.blockAfter
+  margin-top: 30px
+  border: 1px solid c.$color-blue
+  border-radius: 10px 10px 65px 10px
+  padding: 50px 30px
+  display: grid
+  grid-template-columns: 1fr 1fr 1fr
+  @include m.media(phone, tablet)
+    grid-template-columns: 1fr
+    gap: 20px
+  & > div
+    max-width: 300px
+    & > h3 
+      color: c.$color-blue
+      font-size: 22px
+      font-weight: 500
+    & > div
+      color: c.$color-dark-grey
+      font-size: 18px
+      font-weight: 350
+      & a 
+        color: c.$color-dark-grey
+        border-bottom: 1px solid c.$color-dark-grey
+
+.link
+  text-decoration: underline

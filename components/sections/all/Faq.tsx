@@ -16,6 +16,33 @@ const Faq = ({ isForPhychology = false }) => {
     program?.category?.type === 'mba' ||
     program?.category?.type === 'profession'
 
+  const data = program?.questions || [
+    {
+      question: 'Как проходит обучение в группах?',
+      answer: 'Лекционные и полезные дополнительные материалы к дисциплинам'
+    },
+    {
+      question: 'Какой график обучения? Получится ли совмещать его с работой?',
+      answer: 'Лекционные и полезные дополнительные материалы к дисциплинам'
+    },
+    ,
+    {
+      question: 'Специальная психология и дефектология',
+      answer: 'Лекционные и полезные дополнительные материалы к дисциплинам'
+    },
+    {
+      question: 'Как проходит обучение в группах?',
+      answer: 'Лекционные и полезные дополнительные материалы к дисциплинам'
+    },
+    {
+      question: 'Какой график обучения? Получится ли совмещать его с работой?',
+      answer: 'Лекционные и полезные дополнительные материалы к дисциплинам'
+    },
+    {
+      question: 'Специальная психология и дефектология',
+      answer: 'Лекционные и полезные дополнительные материалы к дисциплинам'
+    }
+  ]
   // const topics = getListItemsInnerHtml(questions)
   // const titles = getParagraphInnerHtml(questions)
 
@@ -62,8 +89,8 @@ const Faq = ({ isForPhychology = false }) => {
 
         <div className={stls.content}>
           <ul className={stls.list}>
-            {program?.questions &&
-              program.questions.map(({ question, answer }, idx) => (
+            {data &&
+              data.map(({ question, answer }, idx) => (
                 <FaqAnswer
                   key={question + idx}
                   question={question}
