@@ -1,0 +1,46 @@
+@use '@/styles/utils/mixin' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/config/Colors.module.sass' as c
+    
+.component
+    background-color: c.$color-grey-bg
+    padding-top: 50px
+    .text
+      font-size: 20px
+      line-height: 130%
+      margin-top: 30px
+    .sliders
+      margin-top: 50px
+      display: grid
+      grid-template-columns: 1fr
+      gap: 30px
+    .sliderContainer
+        width: 100vw
+        overflow: hidden
+        position: relative
+    .sliderTrackFirst
+        display: flex
+        gap: 30px
+        flex-wrap: nowrap
+        animation: scroll-left 10s linear infinite
+    .sliderTrackSecond
+       display: flex
+       gap: 30px
+       flex-wrap: nowrap
+       animation: scroll-left-second 10s linear infinite
+
+@keyframes scroll-left
+  0%
+    transform: translateX(0)
+  50%
+    transform: translateX(-50%)
+  100%
+    transform: translateX(0)
+
+@keyframes scroll-left-second
+  0%
+    transform: translateX(-50%)
+  50%
+    transform: translateX(0)
+  100%
+    transform: translateX(-50%)

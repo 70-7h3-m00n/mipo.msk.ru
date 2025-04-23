@@ -11,7 +11,7 @@ type PagesProgramsType = {
   ofType?: TypeCategory
 }
 
-const PagesPrograms = ({ ofType }: PagesProgramsType) => {
+const PagesHigherEducation= ({ ofType }: PagesProgramsType) => {
   return (
     <>
       <HeroPrograms ofType={ofType} />
@@ -33,4 +33,4 @@ const PagesPrograms = ({ ofType }: PagesProgramsType) => {
   )
 }
 
-export default PagesPrograms
+export default PagesHigherEducation

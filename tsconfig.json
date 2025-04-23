@@ -30,6 +30,13 @@
     "downlevelIteration": true,
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "hooks/listRedirects.js", "components/sections/cource-phycho/HeroProgramPhycho"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "hooks/listRedirects.js",
+    "components/sections/cource-phycho/HeroProgramPhycho",
+    "components/sections/hardereducation/HeroSection"
+  ],
   "exclude": ["node_modules"]
 }

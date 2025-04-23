@@ -1,0 +1,41 @@
+@use '@/styles/utils/mixin' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/config/Colors.module.sass' as c
+    
+.component
+    background-color: c.$color-grey-bg
+    padding-top: 100px
+
+    .wrapper 
+        display: flex
+        flex-direction: column
+    .titleBlock
+        display: flex
+        justify-content: space-between
+        font-size: 18px
+        line-height: 120%
+        font-weight: 500
+        & div
+            display: flex
+            align-items: center
+            justify-content: center
+            gap: 10px
+            flex-shrink: 0
+            span
+                display: inline-block
+                color: c.$color-white
+                background-color: c.$color-blue
+                width: 40px
+                height: 40px
+                border-radius: 50%
+                display: flex
+                justify-content: center
+                align-items: center
+    .cards
+        display: grid
+        grid-template-columns: repeat(4, 1fr)
+        gap: 30px
+        margin-top: 50px
+    .button 
+        margin: 0 auto
+        margin-top: 50px

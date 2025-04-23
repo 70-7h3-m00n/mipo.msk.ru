@@ -12,52 +12,72 @@ import Image from 'next/image'
 const Logo = ({
   atHeader = false,
   withTitle = true,
-  isForPhychology = false
+  isForPhychology = false,
+  isInnerPageHigherEducation = false
 }) => {
   const router = useRouter()
   const redirectHeader = router.asPath.includes('new-courses')
-  
+
   return (
     <div className={stls.container}>
-      {isForPhychology ? (
+      {isInnerPageHigherEducation && (
         <Link href={routeHome} passHref>
           <a>
-            <Image src={logoPhycho} alt='Логотип МИПО Психология' width={233} height={70}/>
+            <Image
+              src='/assets/imgs/hardereducation/logohigheredication.svg'
+              alt='Логотип МИПО Высшее образование'
+              width={233}
+              height={70}
+            />
+          </a>
+        </Link>
+      )}
+      {isForPhychology && !isInnerPageHigherEducation ? (
+        <Link href={routeHome} passHref>
+          <a>
+            <Image
+              src={logoPhycho}
+              alt='Логотип МИПО Психология'
+              width={233}
+              height={70}
+            />
           </a>
         </Link>
       ) : (
-        <Link href={routeHome}>
-          <a
-            className={classNames({
-              [stls.logo]: true,
-              [stls.atHeader]: atHeader
-            })}>
-            {!redirectHeader ? (
-              <IconGeneralLogo classNames={[stls.icon]} color={colors.nu} />
-            ) : (
-              <div className={stls.newIcon}>
-                <Image
-                  src={newLogoUrl}
-                  width={50}
-                  height={75}
-                  alt='Логотип МИПО'
-                />
-              </div>
-            )}
+        !isInnerPageHigherEducation && (
+          <Link href={routeHome}>
+            <a
+              className={classNames({
+                [stls.logo]: true,
+                [stls.atHeader]: atHeader
+              })}>
+              {!redirectHeader ? (
+                <IconGeneralLogo classNames={[stls.icon]} color={colors.nu} />
+              ) : (
+                <div className={stls.newIcon}>
+                  <Image
+                    src={newLogoUrl}
+                    width={50}
+                    height={75}
+                    alt='Логотип МИПО'
+                  />
+                </div>
+              )}
 
-            {withTitle && (
-              <p
-                className={stls.title}
-                style={{
-                  color: redirectHeader ? 'black' : ''
-                }}>
-                Московский Институт <br />
-                Профессионального <br />
-                Образования
-              </p>
-            )}
-          </a>
-        </Link>
+              {withTitle && !isInnerPageHigherEducation && (
+                <p
+                  className={stls.title}
+                  style={{
+                    color: redirectHeader ? 'black' : ''
+                  }}>
+                  Московский Институт <br />
+                  Профессионального <br />
+                  Образования
+                </p>
+              )}
+            </a>
+          </Link>
+        )
       )}
     </div>
   )
