@@ -1,0 +1,85 @@
+@use '@/styles/utils/mixin' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/config/Colors.module.sass' as c
+    
+.component
+    background-color: c.$color-grey-bg
+    padding-top: 100px
+
+    .wrapper 
+        display: flex
+        flex-direction: column
+
+    .linkBlock 
+        margin-top: 50px
+        display: flex
+        flex-wrap: wrap
+        gap: 10px
+        font-weight: 500
+        & .link
+            padding: 10px 20px
+            border: 1px solid c.$color-white-grey
+            color: c.$color-black
+            font-size: 16px
+            border-radius: 50px
+        & span
+            &.link
+                background-color: c.$color-blue
+                color: c.$color-white
+    .cardsWrapper
+        display: grid
+        grid-template-columns: 1fr 3fr
+        gap: 30px
+        margin-top: 50px
+        .cards
+            display: grid
+            grid-template-columns: 1fr 1fr
+            gap: 30px
+    .generalInfo
+        margin-top: 100px
+        display: grid
+        grid-template-columns: 1fr 2fr 1fr 
+        gap: 30px
+        align-items: start
+        .direction
+            margin-left: auto
+            display: flex
+            gap: 10px
+            align-items: center
+            span
+                display: inline-block
+                color: c.$color-white
+                background-color: c.$color-blue
+                width: 40px
+                height: 40px
+                border-radius: 50%
+                display: flex
+                justify-content: center
+                flex-shrink: 0
+                align-items: center
+    .text
+        font-size: 18px
+        font-weight: 500
+    .price
+        margin-top:30px
+        & > div:nth-child(1)
+            display: flex
+            gap: 10px
+            align-items: center
+            input
+                width: 100%
+                padding: 10px 20px
+                border-radius: 6px
+                border: 1px solid c.$color-white-grey
+                font-size: 16px
+                color: c.$color-black
+                &::-webkit-outer-spin-button,
+                &::-webkit-inner-spin-button
+                    -webkit-appearance: none
+                    margin: 0
+        .slider
+            margin-top: 20px
+    .duration
+        margin-top: 50px
+    .checkboxes
+        margin-top: 30px

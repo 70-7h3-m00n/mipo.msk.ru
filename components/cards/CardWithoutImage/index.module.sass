@@ -1,0 +1,38 @@
+@use '@/styles/utils/mixin' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/config/Colors.module.sass' as c
+    
+.component 
+    background-color: c.$color-white
+    border-radius: 25px
+    position: relative
+    overflow: hidden
+    min-height: 200px
+ 
+    .container
+        padding: 30px
+        display: flex
+        justify-content: space-between
+        h3
+            font-size: 18px
+            font-weight: 500
+            color: c.$color-black
+        div
+            font-size: 14px
+            color: c.$color-dark-grey
+    .icon 
+        position: absolute
+        right: 0
+        bottom: 0
+        background-color: c.$color-blue
+        width: 50px
+        height: 50px
+        border-radius: 25px 0 25px 0
+        padding: 15px
+    @media (max-width: 768px)
+        display: flex
+        .image 
+            width: 30%
+        .container
+            flex-direction: column
+            justify-content: start

@@ -1,0 +1,55 @@
+@use '@/styles/utils/mixin' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/config/Colors.module.sass' as c
+    
+.component
+    background-color: c.$color-white
+    padding: 30px 30px 0 30px
+    margin-top: 80px
+    border-radius: 20px
+    z-index: 1
+    position: relative
+    overflow: hidden
+    .information
+        display: flex
+        gap: 50px
+        align-items: start
+        justify-content: center
+        font-weight: 500
+        margin-top: 30px
+    .title 
+        text-align: center
+        & > span
+            color: c.$color-blue
+    .image
+        width: 394px
+        height: 250px
+        position: relative
+        flex-shrink: 0
+        img
+            object-fit: cover
+            object-position: top
+            top: 0
+            width: 100%
+            height: auto
+    .subtitle
+        font-size: 20px
+        line-height: 130%
+        margin-top: 30px
+        & > span
+            color: c.$color-blue
+    @media (max-width: 768px)
+        min-height: 550px
+        .information
+            margin-top: 20px 
+        .title
+            font-size: 26px !important
+            text-align: start
+        .h3
+            font-size: 20px !important
+        .subtitle
+            font-size: 15px
+            margin-top: 20px
+        .image
+            position: absolute
+            bottom: -40px

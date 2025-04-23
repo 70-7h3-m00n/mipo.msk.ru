@@ -7,17 +7,32 @@ interface Props {
   color?: 'white' | 'black' | 'purple'
   text?: string
   needIcon?: boolean
+  bgColor?: string
+  className?: string
 }
 
-const ProgramLabel = ({ color = 'white', text, needIcon = false }: Props) => {
+const ProgramLabel = ({
+  color = 'white',
+  text,
+  needIcon = false,
+  bgColor,
+  className
+}: Props) => {
   const { program } = useContext(ProgramContext)
 
-  const containerClass = cn(stls.container, stls[color])
+  const containerClass = cn(stls.container, stls[color], className)
   const textClass = cn(stls.p, stls[color])
   const label = text ?? program?.category?.label
 
+  const styleBlock = {
+    backgroundColor: bgColor ? bgColor : undefined,
+    border: bgColor ? 'none' : undefined,
+  }
+
   return (
-    <div className={containerClass}>
+    <div
+      className={containerClass}
+      style={styleBlock}>
       <p className={textClass}>{label}</p>
       {needIcon && (
         <span className={stls.icon}>
