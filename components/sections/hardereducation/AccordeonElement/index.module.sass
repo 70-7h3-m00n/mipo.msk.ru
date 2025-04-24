@@ -1,0 +1,24 @@
+@use '@/styles/utils/mixin' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/config/Colors.module.sass' as c
+
+.component
+    padding: 20px 0
+    border-bottom: 1px solid c.$color-blue
+    overflow: hidden
+    .title
+        font-size: 22px
+        display: flex
+        align-items: center
+        gap: 30px
+        cursor: pointer
+        padding: 0 20px
+        
+    .content
+        overflow: hidden
+        max-height: 0
+        transition: all 0.3s ease
+        visibility: hidden
+        &.active
+            max-height: 600px
+            visibility: visible

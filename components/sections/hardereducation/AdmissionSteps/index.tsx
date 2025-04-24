@@ -38,16 +38,24 @@ const AdmissionSteps = ({ backGroundColor }: Props) => {
   ]
 
   return (
-    <section className={cn(stls.component, backGroundColor && stls[backGroundColor])}>
+    <section
+      className={cn(stls.component, backGroundColor && stls[backGroundColor])}
+      id='howcanistudy'>
       <Wrapper classNames={[stls.wrapper]}>
-        <Title fontSize={44} color={backGroundColor == 'white' ? 'black' : 'white'} >
+        <Title
+          fontSize={44}
+          color={backGroundColor == 'white' ? 'black' : 'white'}
+          className={stls.title}>
           Что нужно для поступления? <br />4 легких шага в поступлении:
         </Title>
         <div className={stls.stepsBlock}>
           <div className={stls.steps}>
             {dataToSteps.map((element, key) => (
               <div
-                className={cn(key === selectedPoint && stls.active, backGroundColor && stls.blackColor)}
+                className={cn(
+                  key === selectedPoint && stls.active,
+                  backGroundColor && stls.blackColor
+                )}
                 key={key}
                 onClick={() => setSelectedPoint(key)}>
                 {key + 1}. {element.title}
@@ -66,7 +74,7 @@ const AdmissionSteps = ({ backGroundColor }: Props) => {
           </div>
         </div>
         <div className={stls.information}>
-          <Title as='div' color='black' fontSize={28}>
+          <Title as='div' color='black' fontSize={28} className={stls.title}>
             Для поступления потребуется минимум документов:
           </Title>
           <div>
@@ -98,7 +106,9 @@ const AdmissionSteps = ({ backGroundColor }: Props) => {
             </ul>
           </div>
         </div>
-        <BlockDoubtingYourScores textColor={backGroundColor == 'white' ? 'black' : backGroundColor}/>
+        <BlockDoubtingYourScores
+          textColor={backGroundColor == 'white' ? 'black' : backGroundColor}
+        />
       </Wrapper>
     </section>
   )

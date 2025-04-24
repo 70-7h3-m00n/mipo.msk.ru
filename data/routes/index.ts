@@ -11,7 +11,7 @@ const routeProfessions = '/professions'
 const routeMBA = '/mba'
 const routePayment = '/payment'
 const routePoliciesPrivacy = '/policies/privacy.pdf'
-const routePoliciesTerms = '/policies/mipo-oferta-2024-new.pdf'
+const routePoliciesTerms = '/policies/mipo-oferta-2025-new.pdf'
 
 export {
   routeHome,

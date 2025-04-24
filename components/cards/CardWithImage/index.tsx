@@ -24,7 +24,7 @@ const CardWithiImage = ({
         </div>
         <div className={stls.container}>
           <h3>{title}</h3>
-          <div>{countPrograms} программ(а)</div>
+          <div className={stls.count}>{countPrograms} программ(а)</div>
         </div>
 
         <IconArrowRight classNames={[stls.icon]} />

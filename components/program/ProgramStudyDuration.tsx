@@ -18,6 +18,7 @@ const ProgramStudyDuration = ({
   const years = Math.floor(+studyMonthsDuration / 12)
   const months = +studyMonthsDuration - 12 * years
 
+  
   const output = monthsOnly
     ? getCasedRuMonthString({ months: studyMonthsDuration })
     : `${getCasedRuYearString({ years })} ${getCasedRuMonthString({ months })}`

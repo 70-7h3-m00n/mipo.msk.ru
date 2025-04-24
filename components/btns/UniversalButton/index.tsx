@@ -1,15 +1,18 @@
+import Link from 'next/link'
 import stls from './index.module.sass'
 import cn from 'classnames'
+import { useRouter } from 'next/router'
 
 interface UniversalButtonProps {
   children?: React.ReactNode
   onClick?: () => void
   idToScroll?: string
   bgColor?: 'blue' | 'white'
-  borderColor?: 'blue' | 'white'
+  borderColor?: 'blue' | 'white' | 'black'
   borderPx?: number
   colorText?: string
   className?: string
+  linkTo?: string
 }
 
 const UniversalButton = ({
@@ -20,6 +23,7 @@ const UniversalButton = ({
   borderColor,
   borderPx,
   colorText,
+  linkTo,
   className
 }: UniversalButtonProps) => {
   const classNames = cn(stls.component, stls[bgColor], className)
@@ -42,14 +46,24 @@ const UniversalButton = ({
     }
   }
 
+  const router = useRouter()
+
+  const goToLink = () => {
+    router.push(linkTo)
+  }
+
   const style = {
     border: borderPx
       ? `${borderPx}px solid ${borderColor ? borderColor : undefined}`
       : undefined,
     color: colorText ? colorText : undefined
   }
+
   return (
-    <button className={classNames} onClick={handleClick} style={style}>
+    <button
+      className={classNames}
+      onClick={linkTo ? goToLink : handleClick}
+      style={style}>
       {children}
     </button>
   )

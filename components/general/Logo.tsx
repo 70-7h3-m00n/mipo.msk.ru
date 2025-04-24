@@ -26,8 +26,8 @@ const Logo = ({
             <Image
               src='/assets/imgs/hardereducation/logohigheredication.svg'
               alt='Логотип МИПО Высшее образование'
-              width={233}
-              height={70}
+              width={331}
+              height={63}
             />
           </a>
         </Link>

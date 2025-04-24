@@ -17,7 +17,7 @@ const PagesHigherFacultet = ({ name, slug, image }: Props) => {
     <>
       <HeroSectionFacultet name={name} />
       <UniversalProgramInfo/>
-      <AreasOfStudy nameFacultet={name}/>
+      <AreasOfStudy nameFacultet={name ? name : 'Все факультеты'}/>
       <AdmissionSteps />
       <TextBlockWithSlider />
       <FormSimpleBlock />
