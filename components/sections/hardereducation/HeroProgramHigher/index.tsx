@@ -1,5 +1,5 @@
 import stls from './index.module.sass'
-import { useContext } from 'react'
+import { useContext, useState } from 'react'
 import cn from 'classnames'
 import parse from 'html-react-parser'
 import marked from 'marked'
@@ -15,21 +15,34 @@ import { OpenForm } from '@/components/forms'
 import Image from 'next/image'
 import { useHigherProgramContext } from '@/context/highereducation/ProgramHigherContext'
 import UniversalProgramInfo from '@/components/program/UniversalProgramInfo'
+import Link from 'next/link'
 
 const HeroProgramHigher = () => {
   const program = useHigherProgramContext()
 
-  const { curProgramsType } = useContext(ProgramsContext)
-
   const rootClassNames = cn(stls.container, selectors.sectionHero)
 
   const altStyles = true
+
+  console.log(program)
+
+  const [openFullText, setOpenFullText] = useState<boolean>(false)
 
   return (
     <section className={rootClassNames}>
       <Wrapper>
         <div className={cn(stls.top, stls.gridTemplate)}>
           <div className={cn(stls.heading)}>
+            <div className={stls.breadcreambs}>
+              <Link href='/'>Главная</Link>
+              {' / '}
+              <Link
+                href={`/highereducation/${program['faculties_higher_educations'][0].slug}`}>
+                {program['faculties_higher_educations'][0].name}
+              </Link>
+              {' / '}
+              <span>{program.name}</span>
+            </div>
             <div className={stls.label}>
               <ProgramLabel color='black' text='Онлайн-бакалавриат' />
             </div>
@@ -37,43 +50,24 @@ const HeroProgramHigher = () => {
               <ProgramLabel color='purple' text='Расширенный курc' needIcon />
             </div> */}
             <h1 className={stls.title}>{program?.name}</h1>
-            <div className={cn(stls.description)}>
+            <div className={cn(stls.description, !openFullText && stls.hidden)}>
               {program?.informationOfDirection &&
                 parse(marked(program.informationOfDirection))}
+              <div
+                className={stls.btnOpenText}
+                onClick={() => setOpenFullText(!openFullText)}>
+                {openFullText ? 'Скрыть' : 'Читать далее'}
+              </div>
             </div>
+
             <div className={stls.btnsMobile}>
-              <PopupTrigger
-                btn='alpha'
-                cta={
-                  curProgramsType === 'course'
-                    ? 'signUpForCourse'
-                    : curProgramsType === 'profession'
-                    ? 'signUpForProfession'
-                    : curProgramsType === 'mba'
-                    ? 'sighUpForMBA'
-                    : 'signUp'
-                }
-              />
+              <PopupTrigger btn='alpha' cta='signUpForCourse' />
               <PopupTrigger btn='theta' cta='askQuestion' />
             </div>
             <div className={cn(stls.btnsDesktop)}>
-              <PopupTrigger
-                btn='alpha'
-                cta={
-                  curProgramsType === 'course'
-                    ? 'signUpForCourse'
-                    : curProgramsType === 'profession'
-                    ? 'signUpForProfession'
-                    : curProgramsType === 'mba'
-                    ? 'sighUpForMBA'
-                    : 'signUp'
-                }
-              />
+              <PopupTrigger btn='alpha' cta='signUpForCourse' />
 
-              <BtnBorderBlack
-                text='Посмотреть программу'
-                scrollToID='program'
-              />
+              <BtnBorderBlack text='Как поступить' scrollToID='howcanistudy' />
             </div>
           </div>
 
@@ -87,23 +81,23 @@ const HeroProgramHigher = () => {
                 />
               </div>
             </div>
-            <div className={stls.treePictureContainer}>
-              <div className={stls.treePicture}>
-                <Image
-                  src='/assets/imgs/new-course/tree.png'
-                  alt='Ветка'
-                  layout='fill'
-                />
-              </div>
-            </div>
 
-            <OpenForm />
+            <OpenForm isHigherEducation={true} cta='Получить консультацию'/>
           </div>
           <div className={stls.info}>
-            <ProgramInfoAlt />
+            <ProgramInfoAlt isHigherEducation={true}/>
           </div>
         </div>
       </Wrapper>
+      <div className={stls.treePictureContainer}>
+        <div className={stls.treePicture}>
+          <Image
+            src='/assets/imgs/hardereducation/bgElipses.png'
+            alt='Фон'
+            layout='fill'
+          />
+        </div>
+      </div>
     </section>
   )
 }

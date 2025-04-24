@@ -40,7 +40,7 @@ const AreasOfStudy = ({ nameFacultet, className }: Props) => {
   const filteredFacultets = useMemo(() => {
     let filteredPrograms = programs
 
-    if (nameFacultet) {
+    if (nameFacultet && nameFacultet !== 'Все факультеты') {
       filteredPrograms = programs.filter(program =>
         program['faculties_higher_educations'].some(
           category => category.name === nameFacultet
@@ -142,10 +142,12 @@ const AreasOfStudy = ({ nameFacultet, className }: Props) => {
       }))
     }
   }
+
+  console.log(programs)
   return (
     <section className={stls.component} id='catalog'>
       <Wrapper classNames={[stls.wrapper]}>
-        <Title fontSize={44} as='h1'>
+        <Title fontSize={44} as='h1' className={stls.title}>
           Направления в обучении
         </Title>
         <div className={stls.linkBlock}>
@@ -165,7 +167,7 @@ const AreasOfStudy = ({ nameFacultet, className }: Props) => {
           <UniversalSearchDesktop onInput={onInput} />
 
           <div>
-            <Title fontSize={30} as='h2'>
+            <Title fontSize={30} as='h2' className={stls.title}>
               {nameFacultet ? `Программы по ${nameFacultet}` : 'Все программы'}
             </Title>
           </div>
@@ -233,8 +235,10 @@ const AreasOfStudy = ({ nameFacultet, className }: Props) => {
               return (
                 <CardWithoutImage
                   key={program.id}
+                  displayLabels={true}
                   title={program.name}
                   lintTo={`/highereducation/${program['faculties_higher_educations'][0].slug}/${program.slug}`}
+                  {...program}
                 />
               )
             })}

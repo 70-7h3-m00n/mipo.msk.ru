@@ -5,7 +5,7 @@ import Wrapper from '@/components/layout/Wrapper'
 import Logo from '@/components/general/Logo'
 import MenuMobile from '@/components/layout/MenuMobile'
 import { city, street } from '@/data/location'
-import { IconGeneralLogo, IconLocation } from '@/components/icons'
+import { IconGeneralLogo, IconLocation, IconPhone } from '@/components/icons'
 import { BtnFields } from '@/components/btns'
 import {
   routeContact,
@@ -23,6 +23,9 @@ import BtnHumburger from '@/components/btns/BtnHumburger'
 import { useRouter } from 'next/router'
 import colors from '@/config/colors'
 import SalesBlockToHeaderBottom from './SalesBlockToHeaderBottom'
+import { PopupCta } from '../popups'
+import Popup from 'reactjs-popup'
+import UniversalButton from '../btns/UniversalButton'
 
 const Header = () => {
   const router = useRouter()
@@ -43,7 +46,7 @@ const Header = () => {
     setIsInnerPageHigherEducation(
       /\/highereducation\/[^/]+\/[^/]+$/.test(window.location.href)
     )
-  }, [])
+  }, [router.asPath])
 
   const isForPhychology =
     (!!program &&
@@ -88,7 +91,7 @@ const Header = () => {
         [stls.altStyles]: altStyles,
         [stls.phychologyHeader]: isForPhychology
       })}>
-      {program?.category?.type !== 'mba' && !router.asPath.includes('mba') && (
+      {program?.category?.type !== 'mba' && !router.asPath.includes('mba') && !isInnerPageHigherEducation && (
         <SalesBlockToHeaderBottom />
       )}
       <MenuMobile />
@@ -123,24 +126,51 @@ const Header = () => {
             </div>
             <div className={stls.topright}>
               <div className={stls.wrapperPhones}>
-                <div className={stls.phone}>
-                  <BtnPhone
-                    withNumber
-                    colorText={isForPhychology && '#1A1A1A'}
-                  />
-                </div>
-                <div className={stls.phone}>
-                  <BtnPhone
-                    withNumber
-                    colorText={isForPhychology && '#1A1A1A'}
-                    isSecondNumber
-                  />
-                </div>
+                {!isInnerPageHigherEducation ? (
+                  <>
+                    <div className={stls.phone}>
+                      <BtnPhone
+                        withNumber
+                        colorText={isForPhychology && '#1A1A1A'}
+                      />
+                    </div>
+                    <div className={stls.phone}>
+                      <BtnPhone
+                        withNumber
+                        colorText={isForPhychology && '#1A1A1A'}
+                        isSecondNumber
+                      />
+                    </div>
+                  </>
+                ) : (
+                  <div className={stls.phoneHigherEdicationBlock}>
+                    <div>
+                      <IconPhone />
+                      +7 (495) 648-62-26
+                    </div>
+
+                    <Popup
+                      trigger={<div>Заказать обратный звонок</div>}
+                      modal
+                      nested>
+                      {close => (
+                        <PopupCta
+                          title='Заказать обратный звонок'
+                          close={close}
+                        />
+                      )}
+                    </Popup>
+                  </div>
+                )}
               </div>
               <div className={stls.phoneNoNum}>
                 <BtnPhone />
               </div>
-              <PopupTrigger btn='epsilon' cta='callMeBack' />
+              {isInnerPageHigherEducation ? (
+                <UniversalButton className={stls.newBtn} linkTo='/' borderColor='black' borderPx={1} colorText='black' >Войти</UniversalButton>
+              ) : (
+                <PopupTrigger btn='epsilon' cta='callMeBack' />
+              )}
             </div>
           </div>
 
@@ -162,19 +192,20 @@ const Header = () => {
               </div>
             )}
 
-            {!isInnerPageHigherEducation && list.map((item, idx) => (
-              <Link key={item.href + item.val} href={item.href}>
-                <a
-                  className={cn(
-                    stls.link,
-                    idx === 0 && stls.linkFirst,
-                    idx === 2 && stls.linkThird,
-                    isForPhychology && stls.forPhycho
-                  )}>
-                  {item.val}
-                </a>
-              </Link>
-            ))}
+            {!isInnerPageHigherEducation &&
+              list.map((item, idx) => (
+                <Link key={item.href + item.val} href={item.href}>
+                  <a
+                    className={cn(
+                      stls.link,
+                      idx === 0 && stls.linkFirst,
+                      idx === 2 && stls.linkThird,
+                      isForPhychology && stls.forPhycho
+                    )}>
+                    {item.val}
+                  </a>
+                </Link>
+              ))}
           </div>
         </Wrapper>
       ) : (

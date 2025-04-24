@@ -1,0 +1,21 @@
+@use '@/styles/utils/mixin' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/config/Colors.module.sass' as c
+
+.component
+    overflow: hidden
+    margin-top: 20px 
+    font-size: 18px
+    padding: 0 20px
+    .title 
+        cursor: pointer
+    .content
+        max-height: 0
+        padding: 0 40px
+        
+        font-size: 16px
+        visibility: hidden
+        &.active
+            margin-top: 20px
+            max-height: 500px
+            visibility: visible

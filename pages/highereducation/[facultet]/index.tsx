@@ -26,7 +26,7 @@ const CatalogHigherPrograms = ({ facultets, programs, thisFacultet }) => {
         canonical={`${routesFront.root}${routeCourses}`}
       />
       <EducationProvider facultets={facultets} programs={programs}>
-        <PagesHigherFacultet {...thisFacultet}/>
+        <PagesHigherFacultet {...thisFacultet} />
       </EducationProvider>
     </>
   )
@@ -39,6 +39,10 @@ export const getStaticPaths = async () => {
   const paths = data.map(elem => ({
     params: { facultet: elem.slug }
   }))
+
+  paths.push({
+    params: { facultet: 'all' }
+  })
 
   return {
     paths,
@@ -63,7 +67,11 @@ export const getStaticProps = async context => {
   const dataFacultet = await resFacultet.json()
   const dataPrograms = await resPrograms.json()
 
-  if (!dataFacultet || dataFacultet.length === 0 || !thisFacultet || thisFacultet.length === 0) {
+  if (
+    !dataFacultet ||
+    dataFacultet.length === 0 ||
+    ((!thisFacultet || thisFacultet.length === 0) && facultet !== 'all')
+  ) {
     return {
       notFound: true
     }
@@ -73,7 +81,7 @@ export const getStaticProps = async context => {
     props: {
       facultets: dataFacultet,
       programs: dataPrograms,
-      thisFacultet: thisFacultet[0]
+      thisFacultet: facultet !== 'all' && thisFacultet.length > 0 ? thisFacultet[0] : null
     }
   }
 }

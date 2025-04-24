@@ -15,6 +15,7 @@ import axios from 'axios'
 import ProgramDiscount from '@/components/program/ProgramDiscount'
 import { discountNum } from '@/data/price'
 import roundingUpPriceOrNumber from '@/helpers/roundingUpPriceOrNumber'
+import ProgramDiscountHigher from '@/components/program/ProgramDiscountHigher'
 
 type FormValues = {
   name: string
@@ -24,6 +25,7 @@ type FormValues = {
   question: string
   leadPage: string
   formName?: string | null
+  isHigherEducation?: boolean
 }
 
 const OpenForm = ({
@@ -33,7 +35,8 @@ const OpenForm = ({
   atFooter = false,
   agreement = false,
   formName = null,
-  tarifPhycho = ''
+  tarifPhycho = '',
+  isHigherEducation = false
 }) => {
   const {
     register,
@@ -188,10 +191,17 @@ const OpenForm = ({
 
       <form method='post' onSubmit={handleSubmit(data => onSubmit(data))}>
         <div className={classNames(stls.component)}>
-          <div className={stls.discount}>
-            {program?.category?.type !== 'mba' && <ProgramDiscount />}
+          <div className={classNames(stls.discount, stls.altStyles)}>
+            {program?.category?.type !== 'mba' &&
+              (isHigherEducation ? (
+                <ProgramDiscountHigher />
+              ) : (
+                <ProgramDiscount />
+              ))}
           </div>
-          <div className={stls.title}>Поможем подобрать обучение</div>
+          <div className={stls.title}>
+            Поможем подобрать {isHigherEducation && <br />} обучение
+          </div>
           <div className={classNames(stls.inpt, stls.name)}>
             <input
               type='text'
