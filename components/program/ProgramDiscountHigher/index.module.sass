@@ -1,0 +1,26 @@
+@use '@/styles/utils/mixin' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/config/Colors.module.sass' as c
+
+.container
+  background-color: c.$color-blue
+  padding: 15px
+  color: c.$color-white
+  border-radius: 20px
+  min-width: 200px
+  position: relative
+  .discount
+    font-size: 34px
+  .until
+    font-size: 16px4
+  &::before
+    content: ''
+    width: 15px
+    height: 15px
+    border-radius: 99%
+    background-color: c.$color-white
+    position: absolute
+    right: 10px
+    top: 50%
+    transform: translateY(-50%)
+

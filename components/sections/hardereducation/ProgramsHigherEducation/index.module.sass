@@ -5,7 +5,8 @@
 .component
     background-color: c.$color-grey-bg
     padding-top: 100px
-
+    @media (max-width : 1200px)
+        padding-top: 40px
     .wrapper 
         display: flex
         flex-direction: column
@@ -31,11 +32,19 @@
                 display: flex
                 justify-content: center
                 align-items: center
+        @media (max-width : 1200px)
+            flex-direction: column
+            gap: 10px
+            .title
+                font-size: 26px !important
     .cards
         display: grid
         grid-template-columns: repeat(4, 1fr)
         gap: 30px
         margin-top: 50px
+        @media (max-width : 1200px)
+            grid-template-columns: 1fr
+            margin-top: 20px
     .button 
         margin: 0 auto
         margin-top: 50px

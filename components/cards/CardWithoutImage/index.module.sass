@@ -13,6 +13,7 @@
         padding: 30px
         display: flex
         justify-content: space-between
+        flex-direction: column
         h3
             font-size: 18px
             font-weight: 500
@@ -29,6 +30,22 @@
         height: 50px
         border-radius: 25px 0 25px 0
         padding: 15px
+    .labels
+        display: flex
+        flex-wrap: wrap
+        gap: 10px
+        margin-bottom: 10px
+        & span
+            // display: inline-block
+            padding: 5px 10px
+            border-radius: 50px
+            border: 1px solid c.$color-white-grey
+            color: c.$color-black
+            font-weight: 500
+            &.popular
+                background-color: c.$color-blue
+                border: none
+                color: c.$color-white
     @media (max-width: 768px)
         display: flex
         .image 

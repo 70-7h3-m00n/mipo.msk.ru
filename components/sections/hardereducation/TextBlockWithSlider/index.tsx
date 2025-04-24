@@ -1,10 +1,6 @@
 import Wrapper from '@/components/layout/Wrapper'
 import stls from './index.module.sass'
 import Title from '@/components/parts/Title'
-import CardWithiImage from '@/components/cards/CardWithImage'
-import { useEducation } from '@/context/highereducation/EducationContext'
-import { useState } from 'react'
-import UniversalButton from '@/components/btns/UniversalButton'
 import { useKeenSlider } from 'keen-slider/react'
 import ImagePartnerBlock from '@/components/cards/ImagePartnerBlock'
 

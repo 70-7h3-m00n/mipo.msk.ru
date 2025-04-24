@@ -18,12 +18,16 @@ import {
 
 type TProgramInfoAltProps = TPropClassNames
 
-const ProgramInfoAlt: FC<TProgramInfoAltProps> = ({ classNames }) => {
-  const { program } = useContext(ProgramContext)
+const ProgramInfoAlt: FC<TProgramInfoAltProps> = ({
+  isHigherEducation,
+  classNames
+}) => {
+  let { program } = useContext(ProgramContext)
+
   const altStyles = program?.category?.type === 'profession'
   const atMba = program?.category?.type === 'mba'
   const atCourse = program?.category?.type === 'course'
-  
+
   const vals = [
     {
       key: 'Ближайшее зачисление:',
@@ -66,15 +70,22 @@ const ProgramInfoAlt: FC<TProgramInfoAltProps> = ({ classNames }) => {
     //   val: program?.study_form && program?.study_form?.label,
     //   icon: IconGeneralUsers
     // },
-   
+
     {
       key: 'Количество часов:',
-      val: `${program?.timenprice?.[0]?.studyHoursString || program?.timenprice?.[0]?.studyHours} ч`,
+      val: `${
+        program?.timenprice?.[0]?.studyHoursString ||
+        program?.timenprice?.[0]?.studyHours
+      } ч`,
       icon: IconGeneralClockAlt
     },
     {
       key: 'Документ об окончании:',
-      val: atCourse ? 'Удостоверение' : atMba ? 'Диплом MBA' : 'Диплом о переподготовке',
+      val: atCourse
+        ? 'Удостоверение'
+        : atMba
+        ? 'Диплом MBA'
+        : 'Диплом о переподготовке',
       icon: IconGeneralDocument,
       info: {
         label: (
@@ -95,7 +106,7 @@ const ProgramInfoAlt: FC<TProgramInfoAltProps> = ({ classNames }) => {
                 : 'Диплом о переподготовке — это официальный документ, который даёт право вести профессиональную деятельность по полученной специальности.'}
             </p>
             <p className={stls.infoContentP}>
-                Выданный диплом вносится в{' '}
+              Выданный диплом вносится в{' '}
               <span
                 className={cn(stls.highlight, { [stls.altStyles]: altStyles })}>
                 ФРДО — Федеральный реестр сведений о документах об образовании
@@ -107,12 +118,90 @@ const ProgramInfoAlt: FC<TProgramInfoAltProps> = ({ classNames }) => {
     }
   ]
 
+  const higherEducationData = [
+    {
+      key: 'Когда:',
+      val: <ProgramAdmission />,
+      icon: IconGeneralClockAlt
+    },
+    {
+      key: 'Срок обучения:',
+      val: (
+        <ProgramStudyDuration
+          studyMonthsDuration={
+            program?.timenprice && program?.timenprice?.[0]?.studyMonthsDuration
+          }
+        />
+      ),
+      icon: IconGeneralCalendarAlt,
+      // info: {
+      //   label: 'Как сократить?',
+      //   content: (
+      //     <>
+      //       <p className={stls.infoContentP}>
+      //         Можно окончить экстерном, тем самым сократив срок обучения до{' '}
+      //         <span
+      //           className={cn(stls.highlight, { [stls.altStyles]: altStyles })}>
+      //           <ProgramStudyDuration
+      //             studyMonthsDuration={
+      //               program?.timenprice?.[0]?.studyMonthsDuration / 2 || 0
+      //             }
+      //             nonBrakingSpace
+      //           />
+      //         </span>
+      //       </p>
+      //       {/* <span className={cn(stls.highlight, {[stls.altStyles]: altStyles})}> до 1 года 8 мес.</span> */}
+      //     </>
+      //   )
+      // }
+    },
+    {
+      key: 'Система образования:',
+      val: `Бакалавриат`,
+      icon: IconGeneralMap
+    },
+    {
+      key: 'Документ об окончании:',
+      val: 'Диплом балакавра гос. образца',
+      icon: IconGeneralDocument,
+      info: {
+        // label: (
+        //   <IconGeneralInfo
+        //     classNames={[stls.IconGeneralInfo]}
+        //     color={altStyles ? colors['xi-2'] : undefined}
+        //   />
+        // ),
+        content: (
+          <>
+            <p className={stls.infoContentP}>
+              {atCourse
+                ? 'Удостоверение о повышении квалификации, это официальный документ свидетельствующий, об актуализации теоретических и практических знаний'
+                : altStyles
+                ? 'Диплом о переподготовке — это официальный документ, который подтверждает прохождение программы.'
+                : atMba
+                ? 'После окончания обучения и защиты дипломного проекта каждый выпускник получает: Диплом «Мастер делового администрирования — Master of Business Administration (MBA)». Диплом о профессиональной переподготовке, установленного образца Министерством образования и науки. Общеевропейское приложение к диплому (Diploma Supplement), не требующее дополнительного перевода или заверения для предъявления в зарубежных организациях.'
+                : 'Диплом о переподготовке — это официальный документ, который даёт право вести профессиональную деятельность по полученной специальности.'}
+            </p>
+            <p className={stls.infoContentP}>
+              Выданный диплом вносится в{' '}
+              <span
+                className={cn(stls.highlight, { [stls.altStyles]: altStyles })}>
+                ФРДО — Федеральный реестр сведений о документах об образовании
+              </span>
+            </p>
+          </>
+        )
+      }
+    }
+  ]
+
+  const data = isHigherEducation ? higherEducationData : vals
   return (
     <div
       className={
         cn(stls.container, getClassNames({ classNames })) || undefined
       }>
-      {vals.map(({ key, val, icon: Icon, info }, idx) => (
+      {data.map(({ key, val, icon: Icon, info }, idx) => (
         <div
           key={key + val + idx}
           className={cn(stls.group, {

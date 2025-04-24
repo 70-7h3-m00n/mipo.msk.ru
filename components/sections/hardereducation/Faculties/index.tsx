@@ -17,9 +17,7 @@ const Faculties = () => {
 
   const getCountPrograms = (id: string) => {
     const count = programs.filter(elem => {
-      const faculty = elem['faculties_higher_education']
-      console.log(faculty)
-      return faculty && faculty.id === id
+      return elem['faculties_higher_educations'].some(elem => elem.id === id)
     })
 
     return count.length
@@ -28,7 +26,7 @@ const Faculties = () => {
   return (
     <section className={stls.component} id='catalog'>
       <Wrapper classNames={[stls.wrapper]}>
-        <Title as='h2' fontSize={44}>
+        <Title as='h2' fontSize={44} className={stls.title}>
           Факультеты
         </Title>
 

@@ -45,6 +45,7 @@ type PopupTriggerType = {
     | 'consultMe'
     | 'getProgram'
     | 'choosePlan'
+    | 'callMeBackNew'
   formName?: string
   tarifPhycho?: string
 }
@@ -264,6 +265,8 @@ const PopupTrigger = ({
         ? 'Получить программу'
         : cta === 'choosePlan'
         ? 'Выбрать план'
+        : cta === 'callMeBackNew'
+        ? 'Заказать обратный звонок'
         : ''
   }
 
