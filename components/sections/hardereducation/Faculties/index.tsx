@@ -36,7 +36,7 @@ const Faculties = () => {
               key={item.id}
               lintTo={item.slug ? item.slug : '#'}
               title={item.name}
-              imageSrc={item.image[0].url}
+              imageSrc={item.image[0].formats.small.url}
               countPrograms={getCountPrograms(item.id)}
             />
           ))}

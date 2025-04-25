@@ -2,6 +2,7 @@ import cn from 'classnames'
 import stls from './index.module.sass'
 import { IconArrowRight } from '@/components/icons'
 import Image from 'next/image'
+import { useState } from 'react'
 
 interface Props {
   title: string
@@ -16,11 +17,13 @@ const CardWithiImage = ({
   lintTo,
   imageSrc = '/assets/imgs/hardereducation/nofoto.jpeg'
 }: Props) => {
+  const [loaded, setLoaded] = useState(false)
+
   return (
     <a href={`/highereducation/${lintTo}`}>
       <div className={stls.component}>
-        <div className={stls.image}>
-          <Image alt='Факультет' src={imageSrc} layout='fill' />
+        <div className={cn(stls.image, loaded && stls.imageLoaded  )}>
+          <Image alt='Факультет' src={imageSrc} layout='fill' onLoad={() => setLoaded(true)}/>
         </div>
         <div className={stls.container}>
           <h3>{title}</h3>

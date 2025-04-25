@@ -1,13 +1,7 @@
 import Wrapper from '@/components/layout/Wrapper'
 import stls from './index.module.sass'
 import Image from 'next/image'
-import ProgramLabel from '@/components/program/ProgramLabel'
 import Title from '@/components/parts/Title'
-import UniversalButton from '@/components/btns/UniversalButton'
-import PopupTrigger from '@/components/general/PopupTrigger'
-import Popup from 'reactjs-popup'
-import { PopupCta } from '@/components/popups'
-import BlockDiploma from '@/components/sections/hardereducation/BlockDiploma'
 import FactoidWithIcon from '@/components/parts/FactoidWithIcon'
 import FactoidWithoutIcon from '@/components/parts/FactoidWithoutIcon'
 
