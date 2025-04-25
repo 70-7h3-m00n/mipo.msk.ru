@@ -8,9 +8,10 @@ import PopupTrigger from '@/components/general/PopupTrigger'
 
 interface Props {
   isForPhychology?: boolean
+  isHigherEducation?: boolean
 }
 
-const Faq = ({ isForPhychology = false }) => {
+const Faq = ({ isForPhychology = false, isHigherEducation = false }: Props) => {
   const { program } = useContext(ProgramContext)
   const altStyles =
     program?.category?.type === 'mba' ||
@@ -96,6 +97,7 @@ const Faq = ({ isForPhychology = false }) => {
                   question={question}
                   answer={answer}
                   isForPhychology
+                  isHigherEducation
                 />
               ))}
           </ul>

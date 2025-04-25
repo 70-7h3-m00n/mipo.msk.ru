@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-      <yml_catalog date="2025-04-25 00:07">
+      <yml_catalog date="2025-04-25 14:19">
         <shop>
             <name>Московский институт профессионального образования</name>
             <company>Фид для Яндекс&quot;</company>
@@ -17,7 +17,7 @@
                                 <name>Управление IT-продуктом</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1668772191/U76c261bc4b364c2ba666e76368e95049_I_f419a8e456.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/upravlenie-biznesom/upravlenie-it-produktom</url>
-                                <count>9999</count>
+                                
                                 <price>51443</price>
                                 <oldprice>85738</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -26,7 +26,7 @@
                                 <name>Риэлтор</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1642076534/19_3e29734204.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Jurisprudence/rieltor</url>
-                                <count>9999</count>
+                                
                                 <price>66437</price>
                                 <oldprice>110729</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -35,7 +35,7 @@
                                 <name>Профессия Графический дизайнер</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1712837792/Gifka_dlya_MIPO_2_500c30f124.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Design/graphic-designer</url>
-                                <count>9999</count>
+                                
                                 <price>160326</price>
                                 <oldprice>267210</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -44,7 +44,7 @@
                                 <name>Графический дизайнер с нуля до PRO</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1667839853/design_decoration_4cd8652081.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Design/graficheskij-dizajner-s-nulya-do-pro</url>
-                                <count>9999</count>
+                                
                                 <price>81316</price>
                                 <oldprice>135527</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -53,7 +53,7 @@
                                 <name>Профессия Коммерческий иллюстратор</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1667841595/1663260777_21_phonoteka_org_p_art_dizainer_pinterest_23_7e0446932e.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Design/professiya-kommercheskij-illyustrator</url>
-                                <count>9999</count>
+                                
                                 <price>73819</price>
                                 <oldprice>123032</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -62,7 +62,7 @@
                                 <name>Профессия Дизайнер интерьеров</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1667832423/dizaynerskaya_mebel_v_interiere_118_d17b07a09a.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Design/professiya-dizajner-intererov</url>
-                                <count>9999</count>
+                                
                                 <price>75895</price>
                                 <oldprice>126492</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -71,7 +71,7 @@
                                 <name>Профессия Ландшафтный дизайнер</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1667843950/20z8f9ahb7l0dapb_1408fe5af2.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Design/professiya-landshaftnyj-dizajner</url>
-                                <count>9999</count>
+                                
                                 <price>81316</price>
                                 <oldprice>135527</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -80,7 +80,7 @@
                                 <name>Профессия Концепт-художник с нуля до PRO</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1667843060/a17b71461b6e1f72f443dfab0ac6d856_05cf1bf259.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Design/professiya-konczept-hudozhnik-s-nulya-do-pro</url>
-                                <count>9999</count>
+                                
                                 <price>61016</price>
                                 <oldprice>101694</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -89,7 +89,7 @@
                                 <name>Бизнес-курс для Флористов</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1667824476/flower_shop_02_c43e3594cf.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Design/biznes-kurs-dlya-floristov</url>
-                                <count>9999</count>
+                                
                                 <price>47290</price>
                                 <oldprice>78817</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -98,7 +98,7 @@
                                 <name>Адвокатура</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1641892967/court_hammer_books_judgment_law_concept_144627_30452_78d72d5073.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Jurisprudence/advokatura</url>
-                                <count>9999</count>
+                                
                                 <price>66322</price>
                                 <oldprice>110537</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -107,7 +107,7 @@
                                 <name>Административное право</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1641906029/7_4d597e3474.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Jurisprudence/administrativnoe-pravo</url>
-                                <count>9999</count>
+                                
                                 <price>66322</price>
                                 <oldprice>110537</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -116,7 +116,7 @@
                                 <name>Арбитражное антикризисное управление</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1641906863/notarius_sdelka_2356132543.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Jurisprudence/arbitrazhnoe-antikrizisnoe-upravlenie</url>
-                                <count>9999</count>
+                                
                                 <price>66322</price>
                                 <oldprice>110537</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -125,7 +125,7 @@
                                 <name>Гражданское право</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1641908641/me_b08a0e6b1e.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Jurisprudence/grazhdanskoe-pravo</url>
-                                <count>9999</count>
+                                
                                 <price>66322</price>
                                 <oldprice>110537</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -134,7 +134,7 @@
                                 <name> Договорное право</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1641914219/m_e1c7cbd18b.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Jurisprudence/dogovornoe-pravo</url>
-                                <count>9999</count>
+                                
                                 <price>56402</price>
                                 <oldprice>94004</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -143,7 +143,7 @@
                                 <name>Земельное право</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1641979275/zemlyanoe_2b7de68db6.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Jurisprudence/zemelnoe-pravo</url>
-                                <count>9999</count>
+                                
                                 <price>66322</price>
                                 <oldprice>110537</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -152,7 +152,7 @@
                                 <name>Конкурентное право</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1641983634/sdeelka_e6aa482754.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Jurisprudence/konkurentnoe-pravo</url>
-                                <count>9999</count>
+                                
                                 <price>66322</price>
                                 <oldprice>110537</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -161,7 +161,7 @@
                                 <name>Медицинское право</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1641997348/med_b8d1e6b4f9.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Jurisprudence/mediczinskoe-pravo</url>
-                                <count>9999</count>
+                                
                                 <price>66322</price>
                                 <oldprice>110537</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -170,7 +170,7 @@
                                 <name>Международное право и международные отношения</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1642192262/mezhdunarodnye_ot_ya_07d7151e35.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Jurisprudence/mezhdunarodnoe-pravo-i-mezhdunarodnye-otnosheniya</url>
-                                <count>9999</count>
+                                
                                 <price>66322</price>
                                 <oldprice>110537</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -179,7 +179,7 @@
                                 <name>Налоговое право</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1642076534/19_3e29734204.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Jurisprudence/nalogovoe-pravo</url>
-                                <count>9999</count>
+                                
                                 <price>66322</price>
                                 <oldprice>110537</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -188,7 +188,7 @@
                                 <name>1С: Бухгалтерия</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1646139111/buhgaltersha_4662be6545.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/accounting/1-c-buhgalteriya</url>
-                                <count>9999</count>
+                                
                                 <price>47290</price>
                                 <oldprice>78817</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -197,7 +197,7 @@
                                 <name>Патентоведение</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1642416730/patent_efe741e1bb.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Jurisprudence/patentovedenie</url>
-                                <count>9999</count>
+                                
                                 <price>58133</price>
                                 <oldprice>96888</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -206,7 +206,7 @@
                                 <name>Правоведение</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1642420928/pr_c88a1404cf.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Jurisprudence/pravovedenie</url>
-                                <count>9999</count>
+                                
                                 <price>66322</price>
                                 <oldprice>110537</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -215,7 +215,7 @@
                                 <name>Правовое регулирование в туризме</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1642427454/ec121baa46b88e01348a89b558957d97_636be3a52f.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Jurisprudence/pravovoe-regulirovanie-v-turizme</url>
-                                <count>9999</count>
+                                
                                 <price>58133</price>
                                 <oldprice>96888</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -224,7 +224,7 @@
                                 <name>Правовое сопровождение социального обеспечения граждан РФ</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1642432132/speczialist_po_d_eb52719e8d.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Jurisprudence/pravovoe-soprovozhdenie-soczialnogo-obespecheniya-grazhdan-rf</url>
-                                <count>9999</count>
+                                
                                 <price>66322</price>
                                 <oldprice>110537</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -233,7 +233,7 @@
                                 <name>Правоохранительная деятельность</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1642441130/sud_banner_a737ceb1e4.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Jurisprudence/pravoohranitelnaya-deyatelnost</url>
-                                <count>9999</count>
+                                
                                 <price>66322</price>
                                 <oldprice>110537</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -242,7 +242,7 @@
                                 <name> Сделки с недвижимостью</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1642584288/rietoo_a273c28856.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Jurisprudence/sdelki-s-nedvizhimostyu</url>
-                                <count>9999</count>
+                                
                                 <price>66322</price>
                                 <oldprice>110537</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -251,7 +251,7 @@
                                 <name>Профессия Специалист по трафику</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1667919216/517141236_cc824bba97.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Marketing/professiya-speczialist-po-trafiku</url>
-                                <count>9999</count>
+                                
                                 <price>51789</price>
                                 <oldprice>86315</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -260,7 +260,7 @@
                                 <name>Семейное право</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1642586235/semjnoe_pravo_4112637899.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Jurisprudence/semejnoe-pravo</url>
-                                <count>9999</count>
+                                
                                 <price>60901</price>
                                 <oldprice>101501</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -269,7 +269,7 @@
                                 <name>Специалист договорного отдела</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1642602480/sdelka_c39bcecd87.webp</picture>
                                 <url>https://mipo.msk.ru/professions/Jurisprudence/speczialist-dogovornogo-otdela</url>
-                                <count>9999</count>
+                                
                                 <price>68402</price>
                                 <oldprice>114003</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -278,7 +278,7 @@
                                 <name>Трудовое право</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1642603616/dogovoo_1_092d3cecb3.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Jurisprudence/trudovoe-pravo</url>
-                                <count>9999</count>
+                                
                                 <price>66322</price>
                                 <oldprice>110537</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -287,7 +287,7 @@
                                 <name>Уголовное право</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1642607435/yuri_1_b0bdf33b9f.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Jurisprudence/ugolovnoe-pravo</url>
-                                <count>9999</count>
+                                
                                 <price>66322</price>
                                 <oldprice>110537</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -296,7 +296,7 @@
                                 <name>Цифровое право</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1642609707/23_247d37e89a.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Jurisprudence/czifrovoe-pravo</url>
-                                <count>9999</count>
+                                
                                 <price>58248</price>
                                 <oldprice>97080</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -305,7 +305,7 @@
                                 <name>Клинический психолог-нутрициолог</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1734699058/29799_kopiya_cfb3011ba3.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/nutriciologiya/klinicheskiy-psiholog-nutriciolog</url>
-                                <count>9999</count>
+                                
                                 <price>117374</price>
                                 <oldprice>195623</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -314,7 +314,7 @@
                                 <name>Психолог-нутрициолог</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1734699058/29799_kopiya_cfb3011ba3.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/nutriciologiya/psiholog-nutriciolog</url>
-                                <count>9999</count>
+                                
                                 <price>117374</price>
                                 <oldprice>195623</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -323,7 +323,7 @@
                                 <name>Клинический фитнес-нутрициолог</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1734699263/2211_kopiya_b7006b9d1c.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/nutriciologiya/klinicheskiy-fitnes-nutriciolog</url>
-                                <count>9999</count>
+                                
                                 <price>71875</price>
                                 <oldprice>119791</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -332,7 +332,7 @@
                                 <name>Фитнес-нутрициолог. Эксперт</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1734699465/Snimok_ekrana_2024_12_20_155708_aa31e9eed1.png</picture>
                                 <url>https://mipo.msk.ru/professions/nutriciologiya/fitnes-nutriciolog-ekspert</url>
-                                <count>9999</count>
+                                
                                 <price>71875</price>
                                 <oldprice>119791</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -341,7 +341,7 @@
                                 <name>Клинический нутрициолог</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1734698503/caju_gomes_Q_Dq3_Yli_Zg48_unsplash_kopiya_856a77fc0e.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/nutriciologiya/klinicheskiy-nutriciolog</url>
-                                <count>9999</count>
+                                
                                 <price>99124</price>
                                 <oldprice>165207</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -350,7 +350,7 @@
                                 <name>Эксперт-нутрициолог</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1734699263/2211_kopiya_b7006b9d1c.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/nutriciologiya/ekspert-nutriciolog</url>
-                                <count>9999</count>
+                                
                                 <price>99124</price>
                                 <oldprice>165207</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -359,7 +359,7 @@
                                 <name>Юридические аспекты управления в сфере ЖКХ</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1642752855/zhhk_9c044fb9bc.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Jurisprudence/yuridicheskie-aspekty-upravleniya-v-sfere-zh-kh</url>
-                                <count>9999</count>
+                                
                                 <price>58248</price>
                                 <oldprice>97080</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -368,7 +368,7 @@
                                 <name>Веб-мастер</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1642076534/19_3e29734204.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/IT technologies/vebmaster</url>
-                                <count>9999</count>
+                                
                                 <price>74050</price>
                                 <oldprice>123416</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -377,7 +377,7 @@
                                 <name>Юриспруденция</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1642756277/pr_1_07aa8e2ea0.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Jurisprudence/yurisprudencziya</url>
-                                <count>9999</count>
+                                
                                 <price>67821</price>
                                 <oldprice>113036</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -386,7 +386,7 @@
                                 <name>Инфокоммуникационные технологии и системы связи</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1642076534/19_3e29734204.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/IT technologies/infokommunikaczionnye-tehnologii-i-sistemy-svyazi</url>
-                                <count>9999</count>
+                                
                                 <price>64938</price>
                                 <oldprice>108230</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -395,7 +395,7 @@
                                 <name>Информационные системы и технологии</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1642076534/19_3e29734204.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/IT technologies/informaczionnye-sistemy-i-tehnologii</url>
-                                <count>9999</count>
+                                
                                 <price>74396</price>
                                 <oldprice>123993</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -404,7 +404,7 @@
                                 <name>Юриспруденция: гражданско-правовой профиль</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1642757255/m_2bd2a42fa0.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Jurisprudence/yurisprudencziya-grazhdansko-pravovoj-profil</url>
-                                <count>9999</count>
+                                
                                 <price>66322</price>
                                 <oldprice>110537</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -413,7 +413,7 @@
                                 <name>Юриспруденция и медиация</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1642759958/12_1_cab391543d.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Jurisprudence/yurisprudencziya-i-mediacziya</url>
-                                <count>9999</count>
+                                
                                 <price>66322</price>
                                 <oldprice>110537</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -422,7 +422,7 @@
                                 <name>Юрист в сфере здравоохранения</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1642760570/yurist_zdravo_1_1e898cd98e.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Jurisprudence/yurist-v-sfere-zdravoohraneniya</url>
-                                <count>9999</count>
+                                
                                 <price>66322</price>
                                 <oldprice>110537</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -431,7 +431,7 @@
                                 <name>Закупочная логистика</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1642076534/19_3e29734204.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Logistic/zakupochnaya-logistika</url>
-                                <count>9999</count>
+                                
                                 <price>70627</price>
                                 <oldprice>117711</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -440,7 +440,7 @@
                                 <name>Комплектовщик автоматизированного склада</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1642076534/19_3e29734204.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Logistic/komplektovshhik-avtomaticheskogo-sklada</url>
-                                <count>9999</count>
+                                
                                 <price>57556</price>
                                 <oldprice>95927</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -449,7 +449,7 @@
                                 <name>Комплектовщик механизированного склада</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1642076534/19_3e29734204.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Logistic/komplektovshhik-mehanizirovannogo-sklada</url>
-                                <count>9999</count>
+                                
                                 <price>52712</price>
                                 <oldprice>87853</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -458,7 +458,7 @@
                                 <name>Логистика общая</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1642076534/19_3e29734204.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Logistic/logistika-obshhaya</url>
-                                <count>9999</count>
+                                
                                 <price>52712</price>
                                 <oldprice>87853</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -467,7 +467,7 @@
                                 <name>Складская логистика</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1642076534/19_3e29734204.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Logistic/skladskaya-logistika</url>
-                                <count>9999</count>
+                                
                                 <price>85340</price>
                                 <oldprice>142233</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -476,7 +476,7 @@
                                 <name>Специалист-технолог по транспортировке продукции</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1642076534/19_3e29734204.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Logistic/speczialist-tehnolog-po-transportirovke-produkczii</url>
-                                <count>9999</count>
+                                
                                 <price>52712</price>
                                 <oldprice>87853</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -485,7 +485,7 @@
                                 <name>Специалист по логистике</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1642076534/19_3e29734204.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Logistic/speczialist-po-logistike</url>
-                                <count>9999</count>
+                                
                                 <price>52712</price>
                                 <oldprice>87853</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -494,7 +494,7 @@
                                 <name>Акмеология и психология развития</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1642076534/19_3e29734204.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Psychology/akmeologiya-i-psihologiya-razvitiya</url>
-                                <count>9999</count>
+                                
                                 <price>52596</price>
                                 <oldprice>87660</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -503,7 +503,7 @@
                                 <name>Арт-терапия в практической психологической помощи</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1642076534/19_3e29734204.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Psychology/art-terapiya</url>
-                                <count>9999</count>
+                                
                                 <price>70590</price>
                                 <oldprice>117649</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -512,7 +512,7 @@
                                 <name>«Гештальт-терапевт» + MBA</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1712682978/friendly_female_psychologist_holding_hands_girl_therapy_session_722006936f.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/prakticheskaya-psihologiya-m-sh-pp/geshtalt-terapevt-mba</url>
-                                <count>9999</count>
+                                
                                 <price>145332</price>
                                 <oldprice>242219</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -521,7 +521,7 @@
                                 <name>Детская нейропсихология</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1642076534/19_3e29734204.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Psychology/detskaya-nejropsihologiya</url>
-                                <count>9999</count>
+                                
                                 <price>53980</price>
                                 <oldprice>89967</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -530,7 +530,7 @@
                                 <name>Зоопсихология</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1642076534/19_3e29734204.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Psychology/zoopsihologiya</url>
-                                <count>9999</count>
+                                
                                 <price>49136</price>
                                 <oldprice>81893</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -539,7 +539,7 @@
                                 <name>Иппотерапия</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1642076534/19_3e29734204.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Psychology/ippoterapiya</url>
-                                <count>9999</count>
+                                
                                 <price>34603</price>
                                 <oldprice>57671</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -548,7 +548,7 @@
                                 <name>Клиническая психология</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1642076534/19_3e29734204.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Psychology/klinicheskaya-psihologiya</url>
-                                <count>9999</count>
+                                
                                 <price>80970</price>
                                 <oldprice>134951</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -557,7 +557,7 @@
                                 <name>Практическая психология с доп. квалификацией Психолог-психотерапевт</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1642076534/19_3e29734204.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Psychology/prakticheskaya-psihologiya-s-dop-kvalifikacziej-psiholog-psihoterapevt</url>
-                                <count>9999</count>
+                                
                                 <price>92043</price>
                                 <oldprice>153406</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -566,7 +566,7 @@
                                 <name>Практическая психология с доп. квалификацией Педагог-психолог</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1642076534/19_3e29734204.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Psychology/prakticheskaya-psihologiya-s-dop-kvalifikacziej-pedagog-psiholog</url>
-                                <count>9999</count>
+                                
                                 <price>91351</price>
                                 <oldprice>152252</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -575,7 +575,7 @@
                                 <name>Социальная психология в бизнесе</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1642076534/19_3e29734204.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Psychology/soczialnaya-psihologiya-v-biznese</url>
-                                <count>9999</count>
+                                
                                 <price>79586</price>
                                 <oldprice>132644</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -584,7 +584,7 @@
                                 <name>Администрирование в спортивных клубах и фитнес-центрах</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1642076534/19_3e29734204.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Management/administrirovanie-v-sportivnyh-klubah-i-fitnes-czentrah</url>
-                                <count>9999</count>
+                                
                                 <price>46022</price>
                                 <oldprice>76703</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -593,7 +593,7 @@
                                 <name>Энергетический менеджмент</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1669129692/fsafsfafsa_b06a706ab0.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/upravlenie-biznesom/energeticheskij-menedzhment</url>
-                                <count>9999</count>
+                                
                                 <price>50059</price>
                                 <oldprice>83431</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -602,7 +602,7 @@
                                 <name>Антикризисное управление</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1668773692/attorney_2_393fbb8042.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/antikrizisnoe-upravlenie/antikrizisnoe-upravlenie-1</url>
-                                <count>9999</count>
+                                
                                 <price>52712</price>
                                 <oldprice>87853</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -611,7 +611,7 @@
                                 <name>Финансовый менеджмент</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1642076534/19_3e29734204.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/finansovyj-menedzhment/finansovyj-menedzhment</url>
-                                <count>9999</count>
+                                
                                 <price>57556</price>
                                 <oldprice>95927</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -620,7 +620,7 @@
                                 <name>Управление проектами</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1642076534/19_3e29734204.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/upravlenie-proektami/upravlenie-proektami</url>
-                                <count>9999</count>
+                                
                                 <price>60901</price>
                                 <oldprice>101501</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -629,7 +629,7 @@
                                 <name>Управление инновационными проектами</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1642076534/19_3e29734204.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/upravlenie-proektami/upravlenie-innovaczionnymi-proektami</url>
-                                <count>9999</count>
+                                
                                 <price>57556</price>
                                 <oldprice>95927</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -638,7 +638,7 @@
                                 <name>Тайм-менеджмент</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1668786189/stopwatch_5382626_1280_83f66f1d75.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/upravlenie-proektami/tajm-menedzhment</url>
-                                <count>9999</count>
+                                
                                 <price>47290</price>
                                 <oldprice>78817</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -647,7 +647,7 @@
                                 <name>Менеджмент и маркетинг в индустрии спорта</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1668786805/NC_6g_WD_6_Ey_CO_k_g_V5nw_G62dl9_IT_Ni6_QI_2kc9_Yr_S_Ys7_WD_5_F3_WD_3_Mv_Ewkhz_I3_Hc_Fa_E_Sf_XZ_6yq_74b395bcf2.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/upravlenie-biznesom/sportivnyj-menedzhment</url>
-                                <count>9999</count>
+                                
                                 <price>45330</price>
                                 <oldprice>75549</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -656,7 +656,7 @@
                                 <name>Логистика и управление цепями поставок</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1669040901/convenio_especial_dfa8dea326.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Logistic/logisticheskij-menedzhment</url>
-                                <count>9999</count>
+                                
                                 <price>37832</price>
                                 <oldprice>63054</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -665,7 +665,7 @@
                                 <name>Менеджер по продажам</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1642076534/19_3e29734204.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/upravlenie-prodazhami/menedzher-po-prodazham</url>
-                                <count>9999</count>
+                                
                                 <price>52712</price>
                                 <oldprice>87853</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -674,7 +674,7 @@
                                 <name>Менеджмент в агропромышленном комплексе</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1669130747/gmsdmg_d859c3322f.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/upravlenie-biznesom/menedzhment-v-agropromyshlennom-komplekse</url>
-                                <count>9999</count>
+                                
                                 <price>50059</price>
                                 <oldprice>83431</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -683,7 +683,7 @@
                                 <name>Менеджмент в индустрии красоты</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1668789608/Jqm8n6_Oo2_AI_5cf072cfea.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/upravlenie-biznesom/menedzhment-v-industrii-krasoty</url>
-                                <count>9999</count>
+                                
                                 <price>50866</price>
                                 <oldprice>84777</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -692,7 +692,7 @@
                                 <name>Профессия Арт-менеджер</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1668870807/1662179216_15_phonoteka_org_p_oboi_iskusstvo_krasivo_23_4adbd19794.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/upravlenie-biznesom/professiya-art-menedzher</url>
-                                <count>9999</count>
+                                
                                 <price>50866</price>
                                 <oldprice>84777</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -701,7 +701,7 @@
                                 <name>Управление производством</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1668872556/14943843_0_0_1680_1120_85f6bbef3b.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/antikrizisnoe-upravlenie/upravlenie-proizvodstvom</url>
-                                <count>9999</count>
+                                
                                 <price>47982</price>
                                 <oldprice>79971</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -710,7 +710,7 @@
                                 <name>Управление современной школой</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1668873154/78068d80cb4948c99e47c7f663cec830_b6cf863c97.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/upravlenie-biznesom/upravlenie-sovremennoj-shkoloj</url>
-                                <count>9999</count>
+                                
                                 <price>43369</price>
                                 <oldprice>72281</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -719,7 +719,7 @@
                                 <name>Эффективный руководитель</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1668874022/image_blog_targe_6ef50f1e6f.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/hr-i-upravlenie-personalom/effektivnyj-rukovoditel-1</url>
-                                <count>9999</count>
+                                
                                 <price>103347</price>
                                 <oldprice>172245</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -728,7 +728,7 @@
                                 <name>Управление процессами качества на предприятии</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1668874461/https_blogs_images_forbes_com_forbestechcouncil_files_2019_01_canva_photo_editor_29_1_500x500_0f52786bfc.png</picture>
                                 <url>https://mipo.msk.ru/professions/antikrizisnoe-upravlenie/upravlenie-proczessami-kachestva-na-predpriyatii</url>
-                                <count>9999</count>
+                                
                                 <price>43945</price>
                                 <oldprice>73242</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -737,7 +737,7 @@
                                 <name>Руководитель спортивной организации</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1668874904/diritto_sportivo_1024x730_0759d36eb7.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/upravlenie-biznesom/rukovoditel-sportivnoj-organizaczii</url>
-                                <count>9999</count>
+                                
                                 <price>57095</price>
                                 <oldprice>95158</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -746,7 +746,7 @@
                                 <name>Управление в ресторанном бизнесе</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1668875327/working_with_an_insurance_broker_7f18950527.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/upravlenie-biznesom/upravlenie-v-restorannom-biznese</url>
-                                <count>9999</count>
+                                
                                 <price>56287</price>
                                 <oldprice>93812</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -755,7 +755,7 @@
                                 <name>Event-менеджер с нуля</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1668875858/8a8559_c28c3549e2064d2b9ce7685b614c561e_mv2_35fd1d4aa3.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/upravlenie-biznesom/event-menedzher-s-nulya</url>
-                                <count>9999</count>
+                                
                                 <price>62400</price>
                                 <oldprice>104000</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -764,7 +764,7 @@
                                 <name>Производственный менеджмент</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1669131960/yfvyfvyfv_0241f92943.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/upravlenie-biznesom/proizvodstvennyj-menedzhment</url>
-                                <count>9999</count>
+                                
                                 <price>52712</price>
                                 <oldprice>87853</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -773,7 +773,7 @@
                                 <name>Управление рисками</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1668876394/shutterstock_1837034656_768x512_4aa17f7708.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/antikrizisnoe-upravlenie/upravlenie-riskami-2</url>
-                                <count>9999</count>
+                                
                                 <price>52135</price>
                                 <oldprice>86891</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -782,7 +782,7 @@
                                 <name>Профессия Менеджмент в онлайн-образовании</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1668876810/Golden_Brothers_Egy_technika_amivel_otszor_tobb_erdeklodot_tudtunk_szerezn_2114fffd27.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/upravlenie-biznesom/menedzhment-v-sfere-doshkolnogo-obrazovaniya</url>
-                                <count>9999</count>
+                                
                                 <price>57556</price>
                                 <oldprice>95927</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -791,7 +791,7 @@
                                 <name>Менеджмент в торговле</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1669042550/Frame_14_ed7c9675c3.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/upravlenie-biznesom/menedzhment-v-torgovli</url>
-                                <count>9999</count>
+                                
                                 <price>56287</price>
                                 <oldprice>93812</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -800,7 +800,7 @@
                                 <name>Менеджмент в гостиничном бизнесе</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1669042230/Frame_14_5eadc8c353.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/upravlenie-biznesom/menedzhment-v-gostinichnom-biznese-2</url>
-                                <count>9999</count>
+                                
                                 <price>44176</price>
                                 <oldprice>73627</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -809,7 +809,7 @@
                                 <name>Управление в сфере строительства</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1669041766/Frame_14_5207fdb70b.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/upravlenie-biznesom/upravlenie-v-sfere-stroitelstva-2</url>
-                                <count>9999</count>
+                                
                                 <price>57556</price>
                                 <oldprice>95927</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -818,7 +818,7 @@
                                 <name>Оценка стоимости недвижимости</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1642076534/19_3e29734204.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/jekonomika/oczenka-stoimosti-nedvizhimosti</url>
-                                <count>9999</count>
+                                
                                 <price>26990</price>
                                 <oldprice>44984</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -827,7 +827,7 @@
                                 <name>Аудитор</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1642076534/19_3e29734204.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/jekonomika/auditor</url>
-                                <count>9999</count>
+                                
                                 <price>50059</price>
                                 <oldprice>83431</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -836,7 +836,7 @@
                                 <name>Рынок ценных бумаг</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1642076534/19_3e29734204.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/jekonomika/rynok-czennyh-bumag</url>
-                                <count>9999</count>
+                                
                                 <price>50059</price>
                                 <oldprice>83431</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -845,7 +845,7 @@
                                 <name>Экономическая безопасность</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1642076534/19_3e29734204.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/jekonomika/ekonomicheskaya-bezopasnost</url>
-                                <count>9999</count>
+                                
                                 <price>66322</price>
                                 <oldprice>110537</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -854,7 +854,7 @@
                                 <name>Внешнеэкономическая деятельность</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1642076534/19_3e29734204.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/jekonomika/vneshneekonomicheskaya-deyatelnost</url>
-                                <count>9999</count>
+                                
                                 <price>47060</price>
                                 <oldprice>78433</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -863,7 +863,7 @@
                                 <name>Финансовый анализ</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1642076534/19_3e29734204.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/jekonomika/finansovyj-analiz</url>
-                                <count>9999</count>
+                                
                                 <price>58248</price>
                                 <oldprice>97080</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -872,7 +872,7 @@
                                 <name>Экономика</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1642076534/19_3e29734204.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/jekonomika/ekonomika-1</url>
-                                <count>9999</count>
+                                
                                 <price>66322</price>
                                 <oldprice>110537</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -881,7 +881,7 @@
                                 <name>Международные отношения</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1642076534/19_3e29734204.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/jekonomika/mezhdunarodnye-otnosheniya-1</url>
-                                <count>9999</count>
+                                
                                 <price>47290</price>
                                 <oldprice>78817</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -890,7 +890,7 @@
                                 <name>Налоги и налогообложение</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1642076534/19_3e29734204.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/jekonomika/nalogi-i-nalogooblozhenie-1</url>
-                                <count>9999</count>
+                                
                                 <price>47290</price>
                                 <oldprice>78817</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -899,7 +899,7 @@
                                 <name>Страхование</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1642076534/19_3e29734204.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/jekonomika/strahovanie</url>
-                                <count>9999</count>
+                                
                                 <price>44638</price>
                                 <oldprice>74396</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -908,7 +908,7 @@
                                 <name>Промышленное и гражданское строительство</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1642076534/19_3e29734204.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Construction/promyshlennoe-i-grazhdanskoe-stroitelstvo</url>
-                                <count>9999</count>
+                                
                                 <price>93434</price>
                                 <oldprice>155724</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -917,7 +917,7 @@
                                 <name>Проектирование зданий и сооружений (ПЗС)</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1642076534/19_3e29734204.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Construction/proektirovanie-zdanij-i-sooruzhenij-pzs</url>
-                                <count>9999</count>
+                                
                                 <price>84315</price>
                                 <oldprice>140526</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -926,7 +926,7 @@
                                 <name>Психология</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1647958496/ocr_2a0d64613a.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Psychology/psihologiya-1</url>
-                                <count>9999</count>
+                                
                                 <price>89275</price>
                                 <oldprice>148792</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -935,7 +935,7 @@
                                 <name>Психологическое консультирование и психодиагностика</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1647958496/ocr_2a0d64613a.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Psychology/psihologicheskoe-konsultirovanie-i-psihodiagnostika</url>
-                                <count>9999</count>
+                                
                                 <price>61798</price>
                                 <oldprice>102997</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -944,7 +944,7 @@
                                 <name>Экономика и управление на предприятии</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1647958496/ocr_2a0d64613a.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/jekonomika/ekonomika-i-upravlenie-na-predpriyatii</url>
-                                <count>9999</count>
+                                
                                 <price>52712</price>
                                 <oldprice>87853</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -953,7 +953,7 @@
                                 <name>Психиатрия для психологов</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1642076534/19_3e29734204.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Psychology/psihiatriya-1</url>
-                                <count>9999</count>
+                                
                                 <price>63669</price>
                                 <oldprice>106115</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -962,7 +962,7 @@
                                 <name>Конфликтология</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1642076534/19_3e29734204.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Psychology/konfliktologiya</url>
-                                <count>9999</count>
+                                
                                 <price>39447</price>
                                 <oldprice>65745</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -971,7 +971,7 @@
                                 <name>Нейрореабилитация. Реабилитация лиц, перенесших поражение головного мозга</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1642076534/19_3e29734204.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Psychology/nejroreabilitacziya-reabilitacziya-licz-perenesshih-porazhenie-golovnogo-mozga</url>
-                                <count>9999</count>
+                                
                                 <price>36679</price>
                                 <oldprice>61132</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -980,7 +980,7 @@
                                 <name>Нейропсихология</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1642076534/19_3e29734204.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Psychology/nejropsihologiya-1</url>
-                                <count>9999</count>
+                                
                                 <price>53980</price>
                                 <oldprice>89967</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -989,7 +989,7 @@
                                 <name>Практическая психология</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1642076534/19_3e29734204.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Psychology/prakticheskaya-psihologiya-1</url>
-                                <count>9999</count>
+                                
                                 <price>80970</price>
                                 <oldprice>134951</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -998,7 +998,7 @@
                                 <name>Психиатрия-наркология</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1642076534/19_3e29734204.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Psychology/psihiatriya-narkologiya</url>
-                                <count>9999</count>
+                                
                                 <price>31142</price>
                                 <oldprice>51904</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1007,7 +1007,7 @@
                                 <name>Психолог-тренер</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1642076534/19_3e29734204.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Psychology/psiholog-trener</url>
-                                <count>9999</count>
+                                
                                 <price>46368</price>
                                 <oldprice>77279</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1016,7 +1016,7 @@
                                 <name>Психолог ДОУ</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1642076534/19_3e29734204.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Psychology/psiholog-dou</url>
-                                <count>9999</count>
+                                
                                 <price>24222</price>
                                 <oldprice>40370</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1025,7 +1025,7 @@
                                 <name>Психологическое консультирование, конфликтология и медиация в социальной сфере</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1642076534/19_3e29734204.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Psychology/psihologicheskoe-konsultirovanie-konfliktologiya-i-mediacziya-v-soczialnoj-sfere</url>
-                                <count>9999</count>
+                                
                                 <price>81662</price>
                                 <oldprice>136104</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1034,7 +1034,7 @@
                                 <name>Психотерапия</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1642076534/19_3e29734204.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Psychology/psihoterapiya</url>
-                                <count>9999</count>
+                                
                                 <price>80278</price>
                                 <oldprice>133797</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1043,7 +1043,7 @@
                                 <name>Психология дошкольного образования в условиях реализации ФГОС ДО</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1642076534/19_3e29734204.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Psychology/psihologiya-doshkolnogo-obrazovaniya-v-usloviyah-realizaczii-fgos-do</url>
-                                <count>9999</count>
+                                
                                 <price>18685</price>
                                 <oldprice>31142</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1052,7 +1052,7 @@
                                 <name>Психология личности</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1642076534/19_3e29734204.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Psychology/psihologiya-lichnosti</url>
-                                <count>9999</count>
+                                
                                 <price>60901</price>
                                 <oldprice>101501</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1061,7 +1061,7 @@
                                 <name>Спортивная психология</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1642076534/19_3e29734204.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Psychology/sportivnaya-psihologiya-1</url>
-                                <count>9999</count>
+                                
                                 <price>60901</price>
                                 <oldprice>101501</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1070,7 +1070,7 @@
                                 <name>Психология семьи с основами психотерапии</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1642076534/19_3e29734204.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Psychology/psihologiya-semi-s-osnovami-psihoterapii</url>
-                                <count>9999</count>
+                                
                                 <price>67821</price>
                                 <oldprice>113036</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1079,7 +1079,7 @@
                                 <name>Психология служебной деятельности</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1642076534/19_3e29734204.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Psychology/psihologiya-sluzhebnoj-deyatelnosti</url>
-                                <count>9999</count>
+                                
                                 <price>49136</price>
                                 <oldprice>81893</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1088,7 +1088,7 @@
                                 <name>Современные технологии в психологической практике</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1642076534/19_3e29734204.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Psychology/sovremennye-tehnologii-v-psihologicheskoj-praktike</url>
-                                <count>9999</count>
+                                
                                 <price>67821</price>
                                 <oldprice>113036</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1097,7 +1097,7 @@
                                 <name>Современные технологии в психологии личности</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1642076534/19_3e29734204.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Psychology/sovremennye-tehnologii-v-psihologii-lichnosti</url>
-                                <count>9999</count>
+                                
                                 <price>67821</price>
                                 <oldprice>113036</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1106,7 +1106,7 @@
                                 <name>Социальная психология</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1642076534/19_3e29734204.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Psychology/soczialnaya-psihologiya-1</url>
-                                <count>9999</count>
+                                
                                 <price>49136</price>
                                 <oldprice>81893</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1115,7 +1115,7 @@
                                 <name>Супервизия в практике психологического консультирования и психотерапии</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1642076534/19_3e29734204.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Psychology/superviziya-v-praktike-psihologicheskogo-konsultirovaniya-i-psihoterapii</url>
-                                <count>9999</count>
+                                
                                 <price>51904</price>
                                 <oldprice>86507</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1124,7 +1124,7 @@
                                 <name>Школьный психолог</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1642076534/19_3e29734204.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Psychology/shkolnyj-psiholog</url>
-                                <count>9999</count>
+                                
                                 <price>52970</price>
                                 <oldprice>88283</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1133,7 +1133,7 @@
                                 <name>Экспериментальная психология</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1642076534/19_3e29734204.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Psychology/eksperimentalnaya-psihologiya</url>
-                                <count>9999</count>
+                                
                                 <price>43369</price>
                                 <oldprice>72281</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1142,7 +1142,7 @@
                                 <name>Экстремальная психология</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1642076534/19_3e29734204.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Psychology/ekstremalnaya-psihologiya</url>
-                                <count>9999</count>
+                                
                                 <price>43369</price>
                                 <oldprice>72281</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1151,7 +1151,7 @@
                                 <name>Профессия Промышленный дизайнер</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1667827131/4f28bc6dc471b5a484ff33843cfcdc5c_design_presentation_the_future_e6d65c7515.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Design/professiya-promyshlennyj-dizajner</url>
-                                <count>9999</count>
+                                
                                 <price>50059</price>
                                 <oldprice>83431</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1160,7 +1160,7 @@
                                 <name>Архитектура</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1651053285/stroitelstvo_37cb9be335.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Construction/arhitektura-3</url>
-                                <count>9999</count>
+                                
                                 <price>52712</price>
                                 <oldprice>87853</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1169,7 +1169,7 @@
                                 <name>Диспетчеризация, автоматизация и управление инженерными системами на объектах повышенного уровня</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1651053285/stroitelstvo_37cb9be335.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Construction/dispetcherizacziya-avtomatizacziya-i-upravlenie-inzhenernymi-sistemami-na-obektah-povyshennogo-urovnya</url>
-                                <count>9999</count>
+                                
                                 <price>44868</price>
                                 <oldprice>74780</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1178,7 +1178,7 @@
                                 <name>Аналитическая психология</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1647958496/ocr_2a0d64613a.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Psychology/analiticheskaya-psihologiya</url>
-                                <count>9999</count>
+                                
                                 <price>43273</price>
                                 <oldprice>72122</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1187,7 +1187,7 @@
                                 <name>Ароматерапия в практике психолога</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1647958496/ocr_2a0d64613a.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Psychology/aromaterapiya-v-praktike-psihologa</url>
-                                <count>9999</count>
+                                
                                 <price>25952</price>
                                 <oldprice>43253</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1196,7 +1196,7 @@
                                 <name>Детская психология. Практическая психологическая помощь детям и подросткам</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1647958496/ocr_2a0d64613a.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Psychology/detskaya-psihologiya-prakticheskaya-psihologicheskaya-pomoshh-detyam-i-podrostkam</url>
-                                <count>9999</count>
+                                
                                 <price>49292</price>
                                 <oldprice>82153</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1205,7 +1205,7 @@
                                 <name>Клиническая психология. Психологическая диагностика и психотерапия в клинической и психолого-педагогической практике со специализацией в патопсихологии</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1647958496/ocr_2a0d64613a.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Psychology/klinicheskaya-psihologiya-psihologicheskaya-diagnostika-i-psihoterapiya-v-klinicheskoj-i-psihologo-pedagogicheskoj-praktike-so-speczializacziej-v-patopsihologii</url>
-                                <count>9999</count>
+                                
                                 <price>83047</price>
                                 <oldprice>138411</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1214,7 +1214,7 @@
                                 <name>Клиническая и кризисная психология</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1647958496/ocr_2a0d64613a.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Psychology/klinicheskaya-psihologiya-psihologicheskaya-diagnostika-i-psihoterapiya-v-klinicheskoj-i-psihologo-pedagogicheskoj-praktike-so-speczializacziej-v-psihologii-ekstremalnyh-situaczij</url>
-                                <count>9999</count>
+                                
                                 <price>84085</price>
                                 <oldprice>140141</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1223,7 +1223,7 @@
                                 <name>Клиент-центрированная психотерапия</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1647958496/ocr_2a0d64613a.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Psychology/klient-czentrirovannaya-psihoterapiya</url>
-                                <count>9999</count>
+                                
                                 <price>48790</price>
                                 <oldprice>81316</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1232,7 +1232,7 @@
                                 <name>Когнитивно-поведенческая психотерапия в практике психолога</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1647958496/ocr_2a0d64613a.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Psychology/kognitivno-povedencheskaya-psihoterapiya-v-praktike-psihologa</url>
-                                <count>9999</count>
+                                
                                 <price>69206</price>
                                 <oldprice>115343</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1241,7 +1241,7 @@
                                 <name>Комплексная реабилитационная помощь уязвимым категориям граждан</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1647958496/ocr_2a0d64613a.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Psychology/kompleksnaya-reabilitaczionnaya-pomoshh-uyazvimym-kategoriyam-grazhdan</url>
-                                <count>9999</count>
+                                
                                 <price>32527</price>
                                 <oldprice>54211</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1250,7 +1250,7 @@
                                 <name>Коучинг в обучении и профессиональном развитии персонала</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1647958496/ocr_2a0d64613a.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Psychology/kouching-v-obuchenii-i-professionalnom-razvitii-personala</url>
-                                <count>9999</count>
+                                
                                 <price>54211</price>
                                 <oldprice>90352</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1259,7 +1259,7 @@
                                 <name>Кризисная психология. Оказание психологической помощи в экстремальных ситуациях и при психологических травмах</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1647958496/ocr_2a0d64613a.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Psychology/krizisnaya-psihologiya-okazanie-psihologicheskoj-pomoshhi-v-ekstremalnyh-situacziyah-i-pri-psihologicheskih-travmah</url>
-                                <count>9999</count>
+                                
                                 <price>48790</price>
                                 <oldprice>81316</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1268,7 +1268,7 @@
                                 <name>Метафорические ассоциативные карты в практике работы психолога</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1647958496/ocr_2a0d64613a.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Psychology/metaforicheskie-assocziativnye-karty-v-praktike-raboty-psihologa</url>
-                                <count>9999</count>
+                                
                                 <price>67302</price>
                                 <oldprice>112171</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1277,7 +1277,7 @@
                                 <name>Нарративный подход в практике психолога</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1647958496/ocr_2a0d64613a.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Psychology/narrativnyj-podhod-v-praktike-psihologa</url>
-                                <count>9999</count>
+                                
                                 <price>48790</price>
                                 <oldprice>81316</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1286,7 +1286,7 @@
                                 <name>Методика обучения технике нейрофитнеса</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1647958496/ocr_2a0d64613a.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Psychology/metodika-obucheniya-tehnike-nejrofitnesa</url>
-                                <count>9999</count>
+                                
                                 <price>48790</price>
                                 <oldprice>81316</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1295,7 +1295,7 @@
                                 <name>Наркологическая превентология. Профилактика зависимости от психоактивных веществ (ПАВ)</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1647958496/ocr_2a0d64613a.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Psychology/narkologicheskaya-preventologiya-profilaktika-zavisimosti-ot-psihoaktivnyh-veshhestv-pav</url>
-                                <count>9999</count>
+                                
                                 <price>35064</price>
                                 <oldprice>58440</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1304,7 +1304,7 @@
                                 <name>Нейропсихология взрослых. Принципы и алгоритмы психологической помощи и реабилитации</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1647958496/ocr_2a0d64613a.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Psychology/nejropsihologiya-vzroslyh-princzipy-i-algoritmy-psihologicheskoj-pomoshhi-i-reabilitaczii</url>
-                                <count>9999</count>
+                                
                                 <price>48790</price>
                                 <oldprice>81316</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1313,7 +1313,7 @@
                                 <name>Нейропсихологическая диагностика и коррекция в детском возрасте</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1647958496/ocr_2a0d64613a.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Psychology/nejropsihologicheskaya-diagnostika-i-korrekcziya-v-detskom-vozraste</url>
-                                <count>9999</count>
+                                
                                 <price>36794</price>
                                 <oldprice>61324</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1322,7 +1322,7 @@
                                 <name>Организационная психология и управление персоналом</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1647958496/ocr_2a0d64613a.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Psychology/organizaczionnaya-psihologiya-psihologiya-menedzhmenta</url>
-                                <count>9999</count>
+                                
                                 <price>47290</price>
                                 <oldprice>78817</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1331,7 +1331,7 @@
                                 <name>Позитивная психотерапия</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1647958496/ocr_2a0d64613a.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Psychology/pozitivnaya-psihoterapiya</url>
-                                <count>9999</count>
+                                
                                 <price>43369</price>
                                 <oldprice>72281</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1340,7 +1340,7 @@
                                 <name>Предоставление психологических услуг в социальной сфере </name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1647958496/ocr_2a0d64613a.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Psychology/predostavlenie-psihologicheskih-uslug-v-soczialnoj-sfere</url>
-                                <count>9999</count>
+                                
                                 <price>43369</price>
                                 <oldprice>72281</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1349,7 +1349,7 @@
                                 <name>Прикладной анализ поведения (АВА-терапия): коррекция поведенческих расстройств и развитие адаптивных форм поведения </name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1647958496/ocr_2a0d64613a.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Psychology/prikladnoj-analiz-povedeniya-ava-terapiya-korrekcziya-povedencheskih-rasstrojstv-i-razvitie-adaptivnyh-form-povedeniya</url>
-                                <count>9999</count>
+                                
                                 <price>83039</price>
                                 <oldprice>138398</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1358,7 +1358,7 @@
                                 <name>Психодиагностика в психологическом консультировании</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1647958496/ocr_2a0d64613a.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Psychology/psihodiagnostika-v-psihologicheskom-konsultirovanii</url>
-                                <count>9999</count>
+                                
                                 <price>24453</price>
                                 <oldprice>40754</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1367,7 +1367,7 @@
                                 <name>Профориентационная работа в образовательном учреждении</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1647958496/ocr_2a0d64613a.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Psychology/proforientaczionnaya-rabota-v-obrazovatelnom-uchrezhdenii</url>
-                                <count>9999</count>
+                                
                                 <price>47290</price>
                                 <oldprice>78817</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1376,7 +1376,7 @@
                                 <name>Профориентационная работа со взрослыми</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1647958496/ocr_2a0d64613a.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Psychology/proforientaczionnaya-rabota-so-vzroslymi</url>
-                                <count>9999</count>
+                                
                                 <price>51558</price>
                                 <oldprice>85930</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1385,7 +1385,7 @@
                                 <name>Психолог-консультант с дополнительной специализацией в области перинатальной психологии и психотерапии. Социально-психологическое сопровождение беременности, родов и послеродового периода</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1647958496/ocr_2a0d64613a.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Psychology/psiholog-konsultant-s-dopolnitelnoj-speczializacziej-v-oblasti-perinatalnoj-psihologii-i-psihoterapii-soczialno-psihologicheskoe-soprovozhdenie-beremennosti-rodov-i-poslerodovogo-perioda</url>
-                                <count>9999</count>
+                                
                                 <price>73242</price>
                                 <oldprice>122071</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1394,7 +1394,7 @@
                                 <name>Психолог-консультант с дополнительной специализацией в области психоанализа. Методы и технологии оказания психологических услуг населению и организациям</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1647958496/ocr_2a0d64613a.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Psychology/psiholog-konsultant-s-dopolnitelnoj-speczializacziej-v-oblasti-psihoanaliza-metody-i-tehnologii-okazaniya-psihologicheskih-uslug-naseleniyu-i-organizacziyam</url>
-                                <count>9999</count>
+                                
                                 <price>122032</price>
                                 <oldprice>203387</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1403,7 +1403,7 @@
                                 <name>Психолог-консультант с дополнительной специализацией в области когнитивно-поведенческой терапии</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1647958496/ocr_2a0d64613a.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Psychology/psiholog-konsultant-s-dopolnitelnoj-speczializacziej-v-oblasti-kognitivno-povedencheskoj-terapii</url>
-                                <count>9999</count>
+                                
                                 <price>101732</price>
                                 <oldprice>169553</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1412,7 +1412,7 @@
                                 <name>Главный инженер</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1651053285/stroitelstvo_37cb9be335.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Construction/glavnyj-inzhener-1</url>
-                                <count>9999</count>
+                                
                                 <price>66322</price>
                                 <oldprice>110537</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1421,7 +1421,7 @@
                                 <name>Архитектурно-строительное материаловедение </name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1651053285/stroitelstvo_37cb9be335.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Construction/arhitekturno-stroitelnoe-materialovedenie-1</url>
-                                <count>9999</count>
+                                
                                 <price>52712</price>
                                 <oldprice>87853</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1430,7 +1430,7 @@
                                 <name>Инженер ПТО</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1651053285/stroitelstvo_37cb9be335.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Construction/inzhener-pto-1</url>
-                                <count>9999</count>
+                                
                                 <price>66322</price>
                                 <oldprice>110537</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1439,7 +1439,7 @@
                                 <name>Инженер-конструктор</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1651053285/stroitelstvo_37cb9be335.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Construction/inzhener-konstruktor-1</url>
-                                <count>9999</count>
+                                
                                 <price>66322</price>
                                 <oldprice>110537</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1448,7 +1448,7 @@
                                 <name>Изыскания для строительства зданий и сооружений</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1651053285/stroitelstvo_37cb9be335.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Construction/izyskaniya-dlya-stroitelstva-zdanij-i-sooruzhenij-1</url>
-                                <count>9999</count>
+                                
                                 <price>44868</price>
                                 <oldprice>74780</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1457,7 +1457,7 @@
                                 <name>Инженерно-геологические изыскания</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1651053285/stroitelstvo_37cb9be335.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Construction/inzhenerno-geodezicheskie-izyskaniya-1</url>
-                                <count>9999</count>
+                                
                                 <price>52712</price>
                                 <oldprice>87853</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1466,7 +1466,7 @@
                                 <name>Водоотведение и очистка сточных вод</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1651053285/stroitelstvo_37cb9be335.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Construction/inzhenerno-geodezicheskie-izyskaniya-2</url>
-                                <count>9999</count>
+                                
                                 <price>52712</price>
                                 <oldprice>87853</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1475,7 +1475,7 @@
                                 <name>Инженерно-экологические изыскания</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1651053285/stroitelstvo_37cb9be335.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Construction/inzhenerno-ekologicheskie-izyskaniya-1</url>
-                                <count>9999</count>
+                                
                                 <price>52712</price>
                                 <oldprice>87853</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1484,7 +1484,7 @@
                                 <name>Инженер-радиометрист</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1651053285/stroitelstvo_37cb9be335.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Construction/inzhener-radiometrist-1</url>
-                                <count>9999</count>
+                                
                                 <price>52712</price>
                                 <oldprice>87853</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1493,7 +1493,7 @@
                                 <name>Инженер-технолог</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1651053285/stroitelstvo_37cb9be335.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Construction/inzhener-tehnolog-1</url>
-                                <count>9999</count>
+                                
                                 <price>56749</price>
                                 <oldprice>94581</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1502,7 +1502,7 @@
                                 <name>Интеллектуальные системы и автоматика в строительстве</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1651053285/stroitelstvo_37cb9be335.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Construction/intellektualnye-sistemy-i-avtomatika-v-stroitelstve-1</url>
-                                <count>9999</count>
+                                
                                 <price>52712</price>
                                 <oldprice>87853</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1511,7 +1511,7 @@
                                 <name>Информационные системы обеспечения градостроительной деятельности</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1651053285/stroitelstvo_37cb9be335.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Construction/informaczionnye-sistemy-obespecheniya-gradostroitelnoj-deyatelnosti-1</url>
-                                <count>9999</count>
+                                
                                 <price>52712</price>
                                 <oldprice>87853</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1520,7 +1520,7 @@
                                 <name>Каркасное строительство</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1651053285/stroitelstvo_37cb9be335.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Construction/karkasnoe-stroitelstvo-1</url>
-                                <count>9999</count>
+                                
                                 <price>52712</price>
                                 <oldprice>87853</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1529,7 +1529,7 @@
                                 <name>Механизация и автоматизация строительства</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1651053285/stroitelstvo_37cb9be335.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Construction/mehanizacziya-i-avtomatizacziya-stroitelstva-1</url>
-                                <count>9999</count>
+                                
                                 <price>66322</price>
                                 <oldprice>110537</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1538,7 +1538,7 @@
                                 <name>Инженерно-геодезические изыскания</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1651053285/stroitelstvo_37cb9be335.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Construction/inzhenerno-geodezicheskie-izyskaniya-3</url>
-                                <count>9999</count>
+                                
                                 <price>52712</price>
                                 <oldprice>87853</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1547,7 +1547,7 @@
                                 <name>Наружные системы отопления, вентиляции и водоснабжения</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1651053285/stroitelstvo_37cb9be335.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Construction/naruzhnye-sistemy-otopleniya-ventilyaczii-i-vodosnabzheniya-1</url>
-                                <count>9999</count>
+                                
                                 <price>52712</price>
                                 <oldprice>87853</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1556,7 +1556,7 @@
                                 <name>Оборудование и технология сварочного производства</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1651053285/stroitelstvo_37cb9be335.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Construction/oborudovanie-i-tehnologiya-svarochnogo-proizvodstva-1</url>
-                                <count>9999</count>
+                                
                                 <price>52712</price>
                                 <oldprice>87853</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1565,7 +1565,7 @@
                                 <name>Основания и фундаменты</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1651053285/stroitelstvo_37cb9be335.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Construction/osnovaniya-i-fundamenty-1</url>
-                                <count>9999</count>
+                                
                                 <price>52712</price>
                                 <oldprice>87853</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1574,7 +1574,7 @@
                                 <name>Производство строительных материалов</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1651053285/stroitelstvo_37cb9be335.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Construction/proizvodstvo-stroitelnyh-materialov-1</url>
-                                <count>9999</count>
+                                
                                 <price>66322</price>
                                 <oldprice>110537</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1583,7 +1583,7 @@
                                 <name>Реконструкция и реставрация зданий и сооружений</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1651053285/stroitelstvo_37cb9be335.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Construction/rekonstrukcziya-i-restavracziya-zdanij-i-sooruzhenij</url>
-                                <count>9999</count>
+                                
                                 <price>52712</price>
                                 <oldprice>87853</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1592,7 +1592,7 @@
                                 <name>Системы автоматизированного проектирования</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1651053285/stroitelstvo_37cb9be335.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Construction/sistemy-avtomatizirovannogo-proektirovaniya-1</url>
-                                <count>9999</count>
+                                
                                 <price>52712</price>
                                 <oldprice>87853</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1601,7 +1601,7 @@
                                 <name>Специалист по механике грунтов</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1651053285/stroitelstvo_37cb9be335.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Construction/speczialist-po-mehanike-gruntov-1</url>
-                                <count>9999</count>
+                                
                                 <price>52712</price>
                                 <oldprice>87853</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1610,7 +1610,7 @@
                                 <name>Специалист по информационному моделированию в сфере строительства</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1651053285/stroitelstvo_37cb9be335.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Construction/speczialist-po-informaczionnomu-modelirovaniyu-v-sfere-stroitelstva-1</url>
-                                <count>9999</count>
+                                
                                 <price>52712</price>
                                 <oldprice>87853</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1619,7 +1619,7 @@
                                 <name>Строительный контроль и промышленная безопасность</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1651053285/stroitelstvo_37cb9be335.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Construction/stroitelnyj-kontrol-i-promyshlennaya-bezopasnost-1</url>
-                                <count>9999</count>
+                                
                                 <price>52712</price>
                                 <oldprice>87853</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1628,7 +1628,7 @@
                                 <name>Строительный контроль и управление качеством в строительстве</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1651053285/stroitelstvo_37cb9be335.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Construction/stroitelnyj-kontrol-i-upravlenie-kachestvom-v-stroitelstve-1</url>
-                                <count>9999</count>
+                                
                                 <price>52712</price>
                                 <oldprice>87853</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1637,7 +1637,7 @@
                                 <name>Строительство водопроводных и канализационных сетей и сооружений</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1651053285/stroitelstvo_37cb9be335.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Construction/stroitelstvo-vodoprovodnyh-i-kanalizaczionnyh-setej-i-sooruzhenij-1</url>
-                                <count>9999</count>
+                                
                                 <price>52712</price>
                                 <oldprice>87853</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1646,7 +1646,7 @@
                                 <name>Строительство высотных и большепролетных зданий и сооружений</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1651053285/stroitelstvo_37cb9be335.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Construction/stroitelstvo-vysotnyh-i-bolsheproletnyh-zdanij-i-sooruzhenij-1</url>
-                                <count>9999</count>
+                                
                                 <price>52712</price>
                                 <oldprice>87853</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1655,7 +1655,7 @@
                                 <name>Строительство гидротехнических сооружений повышенной ответственности</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1651053285/stroitelstvo_37cb9be335.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Construction/stroitelstvo-gidrotehnicheskih-sooruzhenij-povyshennoj-otvetstvennosti-1</url>
-                                <count>9999</count>
+                                
                                 <price>52712</price>
                                 <oldprice>87853</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1664,7 +1664,7 @@
                                 <name>Строительство горных предприятий и подземных сооружений</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1651053285/stroitelstvo_37cb9be335.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Construction/stroitelstvo-gornyh-predpriyatij-i-podzemnyh-sooruzhenij-2</url>
-                                <count>9999</count>
+                                
                                 <price>52712</price>
                                 <oldprice>87853</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1673,7 +1673,7 @@
                                 <name> Строительство мостов и качество их устройства</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1651053285/stroitelstvo_37cb9be335.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Construction/stroitelstvo-mostov-i-kachestvo-ih-ustrojstva-1</url>
-                                <count>9999</count>
+                                
                                 <price>52712</price>
                                 <oldprice>87853</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1682,7 +1682,7 @@
                                 <name>Психолог-консультант с дополнительной специализацией по семейной психологии. Семейное и детское психологическое консультирование. Системная семейная психотерапия</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1647958496/ocr_2a0d64613a.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Psychology/psiholog-konsultant-s-dopolnitelnoj-speczializacziej-po-semejnoj-psihologii-semejnoe-i-detskoe-psihologicheskoe-konsultirovanie-sistemnaya-semejnaya-psihoterapiya</url>
-                                <count>9999</count>
+                                
                                 <price>91961</price>
                                 <oldprice>153269</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1691,7 +1691,7 @@
                                 <name>Строительство и качество устройства электрических систем</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1651053285/stroitelstvo_37cb9be335.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Construction/stroitelstvo-i-kachestvo-ustrojstva-elektricheskih-sistem-1</url>
-                                <count>9999</count>
+                                
                                 <price>52712</price>
                                 <oldprice>87853</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1700,7 +1700,7 @@
                                 <name>Строительство дорог и аэродромов</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1651053285/stroitelstvo_37cb9be335.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Construction/stroitelstvo-dorog-i-aerodromov-1</url>
-                                <count>9999</count>
+                                
                                 <price>52712</price>
                                 <oldprice>87853</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1709,7 +1709,7 @@
                                 <name>Строительство и качество общестроительных работ</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1651053285/stroitelstvo_37cb9be335.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Construction/stroitelstvo-i-kachestvo-obshhestroitelnyh-rabot-1</url>
-                                <count>9999</count>
+                                
                                 <price>52712</price>
                                 <oldprice>87853</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1718,7 +1718,7 @@
                                 <name>Строительство и качество опасных объектов</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1651053285/stroitelstvo_37cb9be335.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Construction/stroitelstvo-i-kachestvo-opasnyh-obektov-1</url>
-                                <count>9999</count>
+                                
                                 <price>52712</price>
                                 <oldprice>87853</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1727,7 +1727,7 @@
                                 <name>Психолог-консультант с расширенной подготовкой в области коучинга</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1647958496/ocr_2a0d64613a.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Psychology/psiholog-konsultant-s-rasshirennoj-podgotovkoj-v-oblasti-kouchinga</url>
-                                <count>9999</count>
+                                
                                 <price>88122</price>
                                 <oldprice>146869</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1736,7 +1736,7 @@
                                 <name>Строительство и качество устройства инженерных систем</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1651053285/stroitelstvo_37cb9be335.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Construction/stroitelstvo-i-kachestvo-ustrojstva-inzhenernyh-sistem-1</url>
-                                <count>9999</count>
+                                
                                 <price>52712</price>
                                 <oldprice>87853</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1745,7 +1745,7 @@
                                 <name>Психолог-консультант. Методы и технологии оказания психологических услуг населению и организациям</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1647958496/ocr_2a0d64613a.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Psychology/psiholog-konsultant-metody-i-tehnologii-okazaniya-psihologicheskih-uslug-naseleniyu-i-organizacziyam</url>
-                                <count>9999</count>
+                                
                                 <price>74396</price>
                                 <oldprice>123993</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1754,7 +1754,7 @@
                                 <name>Строительство и эксплуатация магистральных трубопроводов</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1651053285/stroitelstvo_37cb9be335.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Construction/stroitelstvo-i-ekspluatacziya-magistralnyh-truboprovodov-1</url>
-                                <count>9999</count>
+                                
                                 <price>52712</price>
                                 <oldprice>87853</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1763,7 +1763,7 @@
                                 <name>Строительство объектов инженерной инфраструктуры окружающей среды</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1651053285/stroitelstvo_37cb9be335.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Construction/stroitelstvo-obektov-inzhenernoj-infrastruktury-okruzhayushhej-sredy-1</url>
-                                <count>9999</count>
+                                
                                 <price>66322</price>
                                 <oldprice>110537</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1772,7 +1772,7 @@
                                 <name>Строительство объектов электросетевого хозяйства</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1651053285/stroitelstvo_37cb9be335.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Construction/stroitelstvo-obektov-elektrosetevogo-hozyajstva-1</url>
-                                <count>9999</count>
+                                
                                 <price>52712</price>
                                 <oldprice>87853</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1781,7 +1781,7 @@
                                 <name>Строительство ядерных установок</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1651053285/stroitelstvo_37cb9be335.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Construction/stroitelstvo-yadernyh-ustanovok-1</url>
-                                <count>9999</count>
+                                
                                 <price>52712</price>
                                 <oldprice>87853</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1790,7 +1790,7 @@
                                 <name>Техническое обслуживание объектов жилищно-коммунального хозяйства и городской инфраструктуры</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1651053285/stroitelstvo_37cb9be335.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Construction/tehnicheskoe-obsluzhivanie-obektov-zhilishhno-kommunalnogo-hozyajstva-i-gorodskoj-infrastruktury-1</url>
-                                <count>9999</count>
+                                
                                 <price>52712</price>
                                 <oldprice>87853</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1799,7 +1799,7 @@
                                 <name>Психолог-консультант. Методы и технологии оказания психологических услуг населению и организациям с расширенной подготовкой в области арт-терапии</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1647958496/ocr_2a0d64613a.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Psychology/psiholog-konsultant-metody-i-tehnologii-okazaniya-psihologicheskih-uslug-naseleniyu-i-organizacziyam-s-rasshirennoj-podgotovkoj-v-oblasti-art-terapii</url>
-                                <count>9999</count>
+                                
                                 <price>74396</price>
                                 <oldprice>123993</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1808,7 +1808,7 @@
                                 <name>Эксплуатация зданий и сооружений</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1651053285/stroitelstvo_37cb9be335.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Construction/ekspluatacziya-zdanij-i-sooruzhenij-1</url>
-                                <count>9999</count>
+                                
                                 <price>66322</price>
                                 <oldprice>110537</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1817,7 +1817,7 @@
                                 <name>Психолого-педагогическое сопровождение образовательного процесса в дошкольном образовательном учреждении. Нейропсихологическая диагностика и коррекция в детском возрасте</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1647958496/ocr_2a0d64613a.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Psychology/psihologo-pedagogicheskoe-soprovozhdenie-obrazovatelnogo-proczessa-v-doshkolnom-obrazovatelnom-uchrezhdenii-nejropsihologicheskaya-diagnostika-i-korrekcziya-v-detskom-vozraste</url>
-                                <count>9999</count>
+                                
                                 <price>61016</price>
                                 <oldprice>101694</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1826,7 +1826,7 @@
                                 <name>Психологическая диагностика и психотерапия в клинической и психолого-педагогической практике со специализацией в патопсихологии</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1647958496/ocr_2a0d64613a.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Psychology/psihologicheskaya-diagnostika-i-psihoterapiya-v-klinicheskoj-i-psihologo-pedagogicheskoj-praktike-so-speczializacziej-v-patopsihologii-1</url>
-                                <count>9999</count>
+                                
                                 <price>46137</price>
                                 <oldprice>76895</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1835,7 +1835,7 @@
                                 <name>Психологические основы мотивации занятий фитнесом</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1647958496/ocr_2a0d64613a.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Psychology/psihologicheskie-osnovy-motivaczii-zanyatij-fitnesom</url>
-                                <count>9999</count>
+                                
                                 <price>32527</price>
                                 <oldprice>54211</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1844,7 +1844,7 @@
                                 <name>Психосоматика у детей</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1647958496/ocr_2a0d64613a.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Psychology/psihosomatika-u-detej</url>
-                                <count>9999</count>
+                                
                                 <price>33219</price>
                                 <oldprice>55364</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1853,7 +1853,7 @@
                                 <name>Психосинтез в практике психолога</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1647958496/ocr_2a0d64613a.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Psychology/psihosintez-v-praktike-psihologa</url>
-                                <count>9999</count>
+                                
                                 <price>54211</price>
                                 <oldprice>90352</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1862,7 +1862,7 @@
                                 <name>Психосоматика и телесная психотерапия: теория, практика</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1647958496/ocr_2a0d64613a.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Psychology/psihosomatika-i-telesnaya-psihoterapiya-teoriya-praktika</url>
-                                <count>9999</count>
+                                
                                 <price>62294</price>
                                 <oldprice>103824</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1871,7 +1871,7 @@
                                 <name>Педагог-психолог. Психолого-педагогическое сопровождение образовательного процесса в условиях реализации ФГОС</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1647958496/ocr_2a0d64613a.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Psychology/pedagog-psiholog-psihologo-pedagogicheskoe-soprovozhdenie-obrazovatelnogo-proczessa-v-usloviyah-realizaczii-fgos</url>
-                                <count>9999</count>
+                                
                                 <price>48790</price>
                                 <oldprice>81316</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1880,7 +1880,7 @@
                                 <name>Расстройства пищевого поведения у детей</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1647958496/ocr_2a0d64613a.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Psychology/rasstrojstva-pishhevogo-povedeniya-u-detej</url>
-                                <count>9999</count>
+                                
                                 <price>46137</price>
                                 <oldprice>76895</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1889,7 +1889,7 @@
                                 <name>Сексология в психологическом консультировании</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1647958496/ocr_2a0d64613a.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Psychology/seksologiya-v-psihologicheskom-konsultirovanii</url>
-                                <count>9999</count>
+                                
                                 <price>60382</price>
                                 <oldprice>100636</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1898,7 +1898,7 @@
                                 <name>Семейное и детское психологическое консультирование. Системная семейная психотерапия</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1647958496/ocr_2a0d64613a.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Psychology/semejnoe-i-detskoe-psihologicheskoe-konsultirovanie-sistemnaya-semejnaya-psihoterapiya-1</url>
-                                <count>9999</count>
+                                
                                 <price>60382</price>
                                 <oldprice>100636</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1907,7 +1907,7 @@
                                 <name>Современные методы психодиагностики, психопрофилактики и психологической коррекции несовершеннолетних, склонных к агрессии и аутоагрессии</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1647958496/ocr_2a0d64613a.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Psychology/sovremennye-metody-psihodiagnostiki-psihoprofilaktiki-i-psihologicheskoj-korrekczii-nesovershennoletnih-sklonnyh-k-agressii-i-autoagressii</url>
-                                <count>9999</count>
+                                
                                 <price>51558</price>
                                 <oldprice>85930</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1916,7 +1916,7 @@
                                 <name>Софрология. Обучение техникам и упражнениям релаксации</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1647958496/ocr_2a0d64613a.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Psychology/sofrologiya-obuchenie-tehnikam-i-uprazhneniyam-relaksaczii</url>
-                                <count>9999</count>
+                                
                                 <price>46137</price>
                                 <oldprice>76895</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1925,7 +1925,7 @@
                                 <name>Суицидология. Психологическая диагностика, профилактика и коррекция суицидального поведения</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1647958496/ocr_2a0d64613a.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Psychology/suiczidologiya-psihologicheskaya-diagnostika-profilaktika-i-korrekcziya-suiczidalnogo-povedeniya</url>
-                                <count>9999</count>
+                                
                                 <price>23645</price>
                                 <oldprice>39409</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1934,7 +1934,7 @@
                                 <name>Танцевально-двигательная терапия как метод психокоррекции личности</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1647958496/ocr_2a0d64613a.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Psychology/tanczevalno-dvigatelnaya-terapiya-kak-metod-psihokorrekczii-lichnosti</url>
-                                <count>9999</count>
+                                
                                 <price>51497</price>
                                 <oldprice>85828</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1943,7 +1943,7 @@
                                 <name>Техники гипноза в психологическом консультировании</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1647958496/ocr_2a0d64613a.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Psychology/tehniki-gipnoza-v-psihologicheskom-konsultirovanii</url>
-                                <count>9999</count>
+                                
                                 <price>54211</price>
                                 <oldprice>90352</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1952,7 +1952,7 @@
                                 <name>Экзистенциальный подход в психологическом консультировании</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1647958496/ocr_2a0d64613a.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Psychology/ekzistenczialnyj-podhod-v-psihologicheskom-konsultirovanii</url>
-                                <count>9999</count>
+                                
                                 <price>54211</price>
                                 <oldprice>90352</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1961,7 +1961,7 @@
                                 <name>Экстремальная психология. Психология экстремальных ситуаций</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1647958496/ocr_2a0d64613a.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Psychology/ekstremalnaya-psihologiya-psihologiya-ekstremalnyh-situaczij</url>
-                                <count>9999</count>
+                                
                                 <price>48790</price>
                                 <oldprice>81316</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1970,7 +1970,7 @@
                                 <name>Директор по производству</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1664379684/3245232453426234_a0da2410c9.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/upravlenie-biznesom/direktor-po-proizvodstvu</url>
-                                <count>9999</count>
+                                
                                 <price>43369</price>
                                 <oldprice>72281</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1979,7 +1979,7 @@
                                 <name>Директор по стратегическому развитию</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1664379684/3245232453426234_a0da2410c9.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/upravlenie-biznesom/direktor-po-strategicheskomu-razvitiyu</url>
-                                <count>9999</count>
+                                
                                 <price>43369</price>
                                 <oldprice>72281</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1988,7 +1988,7 @@
                                 <name>Руководитель в ресторанном бизнесе</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1664289074/shutterstock_2892731_f5e30fedb0.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/upravlenie-biznesom/rukovoditel-v-restorannom-biznese</url>
-                                <count>9999</count>
+                                
                                 <price>43369</price>
                                 <oldprice>72281</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -1997,7 +1997,7 @@
                                 <name>Управление рестораном</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1664384019/7_oshibok_v_upravlen00_restoranom_8f4a76a315.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/upravlenie-biznesom/upravlenie-restoranom</url>
-                                <count>9999</count>
+                                
                                 <price>43369</price>
                                 <oldprice>72281</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -2006,7 +2006,7 @@
                                 <name>Директор по продажам</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1664385609/ybn2510k_5b976ec15c.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/upravlenie-prodazhami/direktor-po-prodazham</url>
-                                <count>9999</count>
+                                
                                 <price>56979</price>
                                 <oldprice>94965</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -2015,7 +2015,7 @@
                                 <name>Профессиональные продажи</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1664386946/shutterstock_149002709_1_6265809ed3.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/upravlenie-prodazhami/professionalnye-prodazhi</url>
-                                <count>9999</count>
+                                
                                 <price>39216</price>
                                 <oldprice>65361</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -2024,7 +2024,7 @@
                                 <name>Руководитель отдела продаж</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1664389891/sales_methodologies_ada622cd31.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/upravlenie-prodazhami/rukovoditel-otdela-prodazh-1</url>
-                                <count>9999</count>
+                                
                                 <price>58133</price>
                                 <oldprice>96888</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -2033,7 +2033,7 @@
                                 <name>Система продаж: от стратегии до процессов</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1664470040/rop_1280x0_14e_c8f0dbcf01.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/upravlenie-prodazhami/sistema-prodazh-ot-strategii-do-proczessov</url>
-                                <count>9999</count>
+                                
                                 <price>43369</price>
                                 <oldprice>72281</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -2042,7 +2042,7 @@
                                 <name>Корпоративный психолог</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1664988860/b7b0937260b23f6d66173661c39b10b3_b58bdd8254.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Psychology/korporativnyj-psiholog</url>
-                                <count>9999</count>
+                                
                                 <price>43369</price>
                                 <oldprice>72281</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -2051,7 +2051,7 @@
                                 <name>Психологическая работа с группами</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1664998113/57edc1400b89cc6f9dae320b21826500_b15b76f7ac.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/obshhaya-psihologiya/psihologicheskaya-rabota-s-gruppami</url>
-                                <count>9999</count>
+                                
                                 <price>52596</price>
                                 <oldprice>87660</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -2060,7 +2060,7 @@
                                 <name>Мастерство психологического консультирования</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1664999594/dreamstime_m_123306319_1170x780_cf84d37735.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/obshhaya-psihologiya/masterstvo-psihologicheskogo-konsultirovaniya</url>
-                                <count>9999</count>
+                                
                                 <price>48790</price>
                                 <oldprice>81316</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -2069,7 +2069,7 @@
                                 <name>«Психолог-сексолог» + MBA</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1671786265/kons_sexyal_otn_ad6af5267a.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/prakticheskaya-psihologiya-m-sh-pp/psiholog-seksolog-mba</url>
-                                <count>9999</count>
+                                
                                 <price>137921</price>
                                 <oldprice>229868</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -2078,7 +2078,7 @@
                                 <name>Управление персоналом 2.0</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1665415868/1263916635783fe639ba994_34957057_63f57a035c.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/hr-i-upravlenie-personalom/upravlenie-personalom-2-0</url>
-                                <count>9999</count>
+                                
                                 <price>48444</price>
                                 <oldprice>80740</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -2087,7 +2087,7 @@
                                 <name>Эмоциональный интеллект и лидерство</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1665569604/top_view_boss_s_day_assortment_with_pawns_cf3dda1267.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/hr-i-upravlenie-personalom/emoczionalnyj-intellekt-i-liderstvo</url>
-                                <count>9999</count>
+                                
                                 <price>32757</price>
                                 <oldprice>54595</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -2096,7 +2096,7 @@
                                 <name>Директор по финансам</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1665571161/overworked_focused_diverse_businesspeople_working_in_business_company_meeting_office_room_brainstorming_marketing_strategy_late_at_night_26a9f24cdf.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/finansovyj-menedzhment/direktor-po-finansam</url>
-                                <count>9999</count>
+                                
                                 <price>50059</price>
                                 <oldprice>83431</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -2105,7 +2105,7 @@
                                 <name>Финансовый директор</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1665572129/principales_tendencias_cloud_2021_wingu_networks_5dbd2130d0.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/finansovyj-menedzhment/finansovyj-direktor</url>
-                                <count>9999</count>
+                                
                                 <price>48790</price>
                                 <oldprice>81316</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -2114,7 +2114,7 @@
                                 <name>HR-менеджер с нуля</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1664900668/african_african_american_agenda_agreement_american_black_1431451_pxhere_com_f09a82c5b5.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/hr-i-upravlenie-personalom/hr-menedzher-s-nulya</url>
-                                <count>9999</count>
+                                
                                 <price>65053</price>
                                 <oldprice>108422</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -2123,7 +2123,7 @@
                                 <name>SMM-Специалист: c нуля до Middle</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1667415732/320745_shutterstock_1544535644_sq_s_fa579fdbad.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Marketing/smm-speczialist-c-nulya-do-middle</url>
-                                <count>9999</count>
+                                
                                 <price>65053</price>
                                 <oldprice>108422</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -2132,7 +2132,7 @@
                                 <name>Директор по интернет-маркетингу</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1667416276/entrepreneure_800x800_ad4b98a5ee.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Marketing/direktor-po-internet-marketingu</url>
-                                <count>9999</count>
+                                
                                 <price>47290</price>
                                 <oldprice>78817</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -2141,7 +2141,7 @@
                                 <name>Таргетированная реклама: с нуля до Middle</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1667414959/memory_ab8baad9ad.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Marketing/targetirovannaya-reklama-s-nulya-do-middle</url>
-                                <count>9999</count>
+                                
                                 <price>61016</price>
                                 <oldprice>101694</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -2150,7 +2150,7 @@
                                 <name>Профессия SEO-Специалист: от Junior до Middle</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1667563949/3_J_Jy_Ku_Wt8_Y_Mr0n6a_Jgmzo_Osqg_PTDIPW_8e_G_Zu_Cit_L_Dx_O_02lhk3efgs41_Qd_M_Sf_B_Pr4zb_So_6_F_Io_TM_7s_Yz_Fr9pw_NL_55804a2671.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Marketing/professiya-seo-speczialist-ot-junior-do-middle</url>
-                                <count>9999</count>
+                                
                                 <price>65053</price>
                                 <oldprice>108422</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -2159,7 +2159,7 @@
                                 <name>FULLSTACK маркетолог</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1667566298/25e409a915d1d6629a8aad5c85860a34_3c7508ff50.png</picture>
                                 <url>https://mipo.msk.ru/professions/Marketing/fullstack-marketolog</url>
-                                <count>9999</count>
+                                
                                 <price>47290</price>
                                 <oldprice>78817</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -2168,7 +2168,7 @@
                                 <name>Бизнес-курс для дизайнеров интерьера</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1667836882/700_nw_48a145898f.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Design/biznes-kurs-dlya-dizajnerov-interera</url>
-                                <count>9999</count>
+                                
                                 <price>63092</price>
                                 <oldprice>105154</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -2177,7 +2177,7 @@
                                 <name>Практический нутрициолог</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1668692217/orig4325_a05981e7b3.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/nutriciologiya/prakticheskiy-nutriciolog</url>
-                                <count>9999</count>
+                                
                                 <price>94749</price>
                                 <oldprice>157915</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -2186,7 +2186,7 @@
                                 <name>«Бизнес-психолог»</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1712682978/friendly_female_psychologist_holding_hands_girl_therapy_session_722006936f.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/prakticheskaya-psihologiya-m-sh-pp/biznes-psiholog</url>
-                                <count>9999</count>
+                                
                                 <price>85274</price>
                                 <oldprice>142123</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -2195,7 +2195,7 @@
                                 <name>IT-менеджмент</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1674038066/it_manager_c4cd061deb.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/IT technologies/it-menedzhment</url>
-                                <count>9999</count>
+                                
                                 <price>52712</price>
                                 <oldprice>87853</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -2204,7 +2204,7 @@
                                 <name>Product Manager</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1682504178/notar_public7b_c781db0147.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/antikrizisnoe-upravlenie/product-manager</url>
-                                <count>9999</count>
+                                
                                 <price>43484</price>
                                 <oldprice>72474</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -2213,7 +2213,7 @@
                                 <name>Полное погружение в профессию интернет-маркетолога</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1667919216/517141236_cc824bba97.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Marketing/polnoe-pogruzhenie-v-professiyu-internet-marketologa</url>
-                                <count>9999</count>
+                                
                                 <price>104962</price>
                                 <oldprice>174936</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -2222,7 +2222,7 @@
                                 <name>«Психолог арт-терапевт» + MBA</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1712682978/friendly_female_psychologist_holding_hands_girl_therapy_session_722006936f.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/prakticheskaya-psihologiya-m-sh-pp/psiholog-art-terapevt-mba</url>
-                                <count>9999</count>
+                                
                                 <price>140827</price>
                                 <oldprice>234712</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -2231,7 +2231,7 @@
                                 <name>«Детский психолог» + MBA</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1712682978/friendly_female_psychologist_holding_hands_girl_therapy_session_722006936f.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/prakticheskaya-psihologiya-m-sh-pp/detskij-psiholog-mba</url>
-                                <count>9999</count>
+                                
                                 <price>125954</price>
                                 <oldprice>209923</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -2240,7 +2240,7 @@
                                 <name>Сметное дело (ПГС)</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1642076534/19_3e29734204.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Construction/smetnoe-delo-pgs</url>
-                                <count>9999</count>
+                                
                                 <price>70474</price>
                                 <oldprice>117457</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -2249,7 +2249,7 @@
                                 <name>«Психолог – когнитивно-поведенческий терапевт» + MBA</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1697478797/Pp4i_YYGE_41h_De3hoi1ay_O2lt5_Yzie_Mpj_L_Uj7_P19q6_U_Gaeh6z_NB_Dt_Jvez02pi_Rf_HI_6i_Y1yv_Px_Qr_Pfi_X3rqz_Ckt176_fe2739694f.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/prakticheskaya-psihologiya-m-sh-pp/psiholog-kognitivno-povedencheskij-terapevt-mba</url>
-                                <count>9999</count>
+                                
                                 <price>145332</price>
                                 <oldprice>242219</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -2258,7 +2258,7 @@
                                 <name>«Психолог-коуч» + MBA</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1712682978/friendly_female_psychologist_holding_hands_girl_therapy_session_722006936f.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/prakticheskaya-psihologiya-m-sh-pp/psiholog-kouch-mba</url>
-                                <count>9999</count>
+                                
                                 <price>139518</price>
                                 <oldprice>232530</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -2267,7 +2267,7 @@
                                 <name>«Психолог-практик по метафорическим картам» + MBA</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1697478797/Pp4i_YYGE_41h_De3hoi1ay_O2lt5_Yzie_Mpj_L_Uj7_P19q6_U_Gaeh6z_NB_Dt_Jvez02pi_Rf_HI_6i_Y1yv_Px_Qr_Pfi_X3rqz_Ckt176_fe2739694f.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/prakticheskaya-psihologiya-m-sh-pp/psiholog-praktik-po-metaforicheskim-kartam-mba</url>
-                                <count>9999</count>
+                                
                                 <price>143734</price>
                                 <oldprice>239557</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -2276,7 +2276,7 @@
                                 <name>«Семейный психолог» + MBA</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1712682978/friendly_female_psychologist_holding_hands_girl_therapy_session_722006936f.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/prakticheskaya-psihologiya-m-sh-pp/semejnyj-psiholog-mba</url>
-                                <count>9999</count>
+                                
                                 <price>138357</price>
                                 <oldprice>230595</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -2285,7 +2285,7 @@
                                 <name>Сметное дело и ценообразование в строительстве</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1642584288/rietoo_a273c28856.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Construction/smetnoe-delo-i-czenoobrazovanie-v-stroitelstve</url>
-                                <count>9999</count>
+                                
                                 <price>49828</price>
                                 <oldprice>83047</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -2294,7 +2294,7 @@
                                 <name>Контент-менеджер</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1667919216/517141236_cc824bba97.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Marketing/kontent-menedzher-1</url>
-                                <count>9999</count>
+                                
                                 <price>49828</price>
                                 <oldprice>83047</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -2303,7 +2303,7 @@
                                 <name>Интернет-маркетинг</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1667919216/517141236_cc824bba97.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Marketing/internet-marketing-1</url>
-                                <count>9999</count>
+                                
                                 <price>60901</price>
                                 <oldprice>101501</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -2312,7 +2312,7 @@
                                 <name>Директор по маркетингу</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1667919216/517141236_cc824bba97.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Marketing/direktor-po-marketingu-1</url>
-                                <count>9999</count>
+                                
                                 <price>52596</price>
                                 <oldprice>87660</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -2321,7 +2321,7 @@
                                 <name>Менеджер по маркетингу</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1667919216/517141236_cc824bba97.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Marketing/menedzher-po-marketingu-1</url>
-                                <count>9999</count>
+                                
                                 <price>52596</price>
                                 <oldprice>87660</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -2330,7 +2330,7 @@
                                 <name>PR-менеджер</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1667919216/517141236_cc824bba97.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Marketing/pr-menedzher</url>
-                                <count>9999</count>
+                                
                                 <price>49828</price>
                                 <oldprice>83047</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -2339,7 +2339,7 @@
                                 <name>Бренд-менеджмент</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1667919216/517141236_cc824bba97.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/Marketing/brend-menedzhment-1</url>
-                                <count>9999</count>
+                                
                                 <price>52596</price>
                                 <oldprice>87660</oldprice>
                                 <currencyId>RUR</currencyId> 
@@ -2348,7 +2348,7 @@
                                 <name>Профессия «Нутрициолог»</name>
                                 <picture>https://res.cloudinary.com/mipo-msk-ru/image/upload/v1665062247/63adf83f_3342550e2f.jpg</picture>
                                 <url>https://mipo.msk.ru/professions/nutriciologiya/professiya-nutricziolog</url>
-                                <count>9999</count>
+                                
                                 <price>71000</price>
                                 <oldprice>118334</oldprice>
                                 <currencyId>RUR</currencyId> 

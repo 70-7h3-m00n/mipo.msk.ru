@@ -5,9 +5,12 @@
 .container
   @include m.media(phone, tablet)
     padding-top: f.px(50)
+    .title 
+      font-size: 22px !important
   @include m.media(laptop, desktop)
     padding-top: f.px(90)
     padding-bottom: f.px(90)
+    
   background-color: c.$color-verywhite-blue
   .active
     background-color: c.$color-blue
@@ -23,6 +26,8 @@
     line-height: 1.2
     margin-top: 50px
     color: c.$color-black
+    @include m.media(phone, tablet)
+      margin-top: 20px
     .imageWrapper
         border-radius: 100px  0 100px 0 
         overflow: hidden
@@ -31,10 +36,13 @@
         & img
           width: 100%
           object-fit: cover
+        @include m.media(phone, tablet)
+          min-height: 200px
         
     @include m.media(phone, tablet)
       gap: 10px
-
+      grid-template-columns: 1fr
+      
     .elemOfLine
       display: flex
       flex-shrink: 0
@@ -57,11 +65,14 @@
         margin-top: 10px
         @include m.media(phone, tablet)
           margin-top: 0
+          font-size: 18px !important
 
       .desc
         font-size: 18px
         font-weight: 500
         margin-top: 20px
+        @include m.media(phone, tablet)
+          font-size: 15px !important
       
       .smalltext
         margin-top: 10px
@@ -89,4 +100,4 @@
             display: inline-block
             width: 20px
             height: 20px
-      
+        

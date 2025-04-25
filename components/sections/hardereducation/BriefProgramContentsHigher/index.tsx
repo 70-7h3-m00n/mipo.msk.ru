@@ -32,7 +32,7 @@ const BriefProgramContentsHigher = () => {
               />
             </div>
             <div className={stls.textBlock}>
-              <Title fontSize={44}>
+              <Title fontSize={44} className={stls.title}>
                 Изучите программу подробнее - скачайте учебный план
               </Title>
             </div>

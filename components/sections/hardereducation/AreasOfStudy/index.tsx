@@ -143,7 +143,6 @@ const AreasOfStudy = ({ nameFacultet, className }: Props) => {
     }
   }
 
-  console.log(programs)
   return (
     <section className={stls.component} id='catalog'>
       <Wrapper classNames={[stls.wrapper]}>

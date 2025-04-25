@@ -16,6 +16,7 @@ import PopupInfoProgram from '@/components/popups/PopupInfoProgram'
 import { SALE_DATE_VALUE, SALE_VALUE } from '@/lib/constant'
 import { useHigherProgramContext } from '@/context/highereducation/ProgramHigherContext'
 import UniversalButton from '@/components/btns/UniversalButton'
+import { PopupCta } from '@/components/popups'
 
 interface Props {
   isForOtherTariff?: boolean
@@ -54,7 +55,7 @@ const StudyCoastHigher = ({}: Props) => {
   return (
     <section className={cn(stls.container)} id='price'>
       <Wrapper>
-        <Title as='h2' color='black'>
+        <Title as='h2' color='black' className={stls.title}>
           Стоимость обучения
         </Title>
 
@@ -97,30 +98,34 @@ const StudyCoastHigher = ({}: Props) => {
               }
               modal
               nested>
-              {close => <div>Тут будет попап</div>}
+              {close => <PopupCta title='Заявка оплата за семестр' close={close} />}
             </Popup>
           </div>
           <div>
-            <Title as='div' color='black' fontSize={22} className={stls.commonTitle}>
-              Стоимость за семестр
+            <Title
+              as='div'
+              color='black'
+              fontSize={22}
+              className={stls.commonTitle}>
+              Стоимость за год
             </Title>
             <div className={stls.label}>Скидка {SALE_VALUE}%</div>
             <div className={stls.oldPrice}>
               {toNumberWithSpaces(
-                roundingUpPriceOrNumber(priceWithoutSale / 24 / 2)
+                roundingUpPriceOrNumber(priceWithoutSale / 24)
               )}
               ₽/мес
             </div>
             <div className={stls.newPrice}>
               <div>
-                {toNumberWithSpaces(roundingUpPriceOrNumber(price / 24 / 2))}
+                {toNumberWithSpaces(roundingUpPriceOrNumber(price / 24))}
                 ₽/мес
               </div>
               <div className={stls.subtitle}>в рассрочку на 24 месяца</div>
             </div>
             <div className={stls.fullPrice}>
               <div>
-                {toNumberWithSpaces(roundingUpPriceOrNumber(price / 2))}
+                {toNumberWithSpaces(roundingUpPriceOrNumber(price))}
                 ₽/мес
               </div>
               <div className={stls.subtitle}>
@@ -139,7 +144,7 @@ const StudyCoastHigher = ({}: Props) => {
               }
               modal
               nested>
-              {close => <div>Тут будет попап</div>}
+              {close => <PopupCta title='Заявка оплата за год' close={close} />}
             </Popup>
           </div>
           <div>

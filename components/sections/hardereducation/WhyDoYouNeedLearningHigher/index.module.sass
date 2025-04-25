@@ -40,16 +40,16 @@
       .desc
         font-size: 16px
         font-weight: 300
+      background-color: transparent
+      border: 1px solid c.$color-blue
+      .title 
+        color: c.$color-blue
+      .desc
+        color: c.$color-black
       &:nth-child(odd)
-        background-color: transparent
-        border: 1px solid c.$color-blue
-        .title 
-          color: c.$color-blue
-        .desc
-          color: c.$color-black
-      &:nth-child(1)
         border-radius: 35px 5px 5px 5px
-      &:nth-child(3)
+       
+      &:nth-child(even)
         border-radius: 5px 35px 5px 5px
       @include m.media(phone, tablet)
         max-width: none

@@ -16,7 +16,11 @@ const AccordeonElement = ({ title, innerData }: Props) => {
   return (
     <div className={stls.component}>
       <div onClick={() => setIsOper(!isOpen)} className={stls.title}>
-        {isOpen ? <IconMinus /> : <IconPlus />}
+        {isOpen ? (
+          <IconMinus circleColor='#fff' elementColor='#000' />
+        ) : (
+          <IconPlus circleColor='#2663F0' elementColor='#fff' />
+        )}
         {title}
       </div>
       <div className={cn(stls.content, isOpen && stls.active)}>

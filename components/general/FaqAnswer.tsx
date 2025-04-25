@@ -9,7 +9,8 @@ import { IconMinus, IconPlus } from '@/components/icons'
 const FaqAnswer = ({
   question = null,
   answer = null,
-  isForPhychology = false
+  isForPhychology = false,
+  isHigherEducation = false
 }) => {
   const [isOpen, setOpen] = useState(false)
 
@@ -29,7 +30,17 @@ const FaqAnswer = ({
         className={cn(stls.title, isForPhychology && stls.forPhychology)}
         onClick={() => setOpen(!isOpen)}>
         <div className={cn(stls.icon, { [stls.altStyles]: altStyles })}>
-          {isOpen ? <IconMinus /> : <IconPlus />}
+          {isOpen ? (
+            <IconMinus
+              circleColor={isHigherEducation && '#fff'}
+              elementColor={isHigherEducation && '#000'}
+            />
+          ) : (
+            <IconPlus
+              circleColor={isHigherEducation && '#2663F0'}
+              elementColor={isHigherEducation && '#fff'}
+            />
+          )}
         </div>
         <p
           className={cn(stls.p, {
