@@ -29,7 +29,8 @@ const contact = async (req: NextApiRequest, res: NextApiResponse) => {
     name_programm,
     category_programm,
     price_programm,
-    full_link
+    full_link,
+    isHighEducation
   } = req.body
 
   if (name?.includes('@')) {
@@ -188,11 +189,19 @@ const contact = async (req: NextApiRequest, res: NextApiResponse) => {
   // F5 BEGIN
   // https://tglk.ru/in/MX4bxnhq9LCnZWR5
 
+  console.log(isHighEducation)
+  console.log(
+    isHighEducation
+      ? `https://tglk.ru/in/YMNnks9zDCEBwoR5`
+      : `https://tglk.ru/in/MX4bxnhq9LCnZWR5`
+  )
   try {
     await axios.request({
       method: 'POST',
       maxBodyLength: Infinity,
-      url: `https://tglk.ru/in/MX4bxnhq9LCnZWR5`,
+      url: isHighEducation
+        ? `https://tglk.ru/in/YMNnks9zDCEBwoR5`
+        : `https://tglk.ru/in/MX4bxnhq9LCnZWR5`,
       headers: {
         'Content-Type': 'application/json'
       },

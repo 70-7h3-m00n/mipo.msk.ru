@@ -19,7 +19,7 @@ const WhatYouWillLearnHigher = () => {
   return (
     <section className={cn(stls.container)} id='skills'>
       <Wrapper>
-        <Title as='h2' color='black'>
+        <Title as='h2' color='black' className={stls.title}>
           Чему вы научитесь
         </Title>
 

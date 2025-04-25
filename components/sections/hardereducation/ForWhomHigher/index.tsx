@@ -43,7 +43,7 @@ const ForWhomHigher = () => {
   return (
     <section className={cn(stls.container)}>
       <Wrapper>
-        <Title as='h2'>Для кого программа</Title>
+        <Title as='h2' className={stls.title}>Для кого программа</Title>
 
         <div className={stls.lineElements}>
           <div className={stls.imageWrapper}>
