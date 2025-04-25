@@ -21,7 +21,7 @@ const BlockDoubtingYourScores = ({
           <Image src={image} alt='Картинка с девушкой' layout='fill' />
         </div>
         <div className={stls.textBlock}>
-          <Title color={textColor} fontSize={44}>
+          <Title color={textColor} fontSize={44} className={stls.title}>
             Сомневаешься в своих баллах?
           </Title>
           <p className={stls[textColor]}>

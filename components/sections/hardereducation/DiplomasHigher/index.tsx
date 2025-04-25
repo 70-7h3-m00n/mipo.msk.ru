@@ -65,7 +65,7 @@ const DiplomasHigher = ({ classNames }: TSectionYourDiplomasAlt) => {
     <div className={stls.container} id='diplom'>
       <Wrapper>
         <div>
-          <Title>
+          <Title className={stls.title}>
             Диплом о профессиональной переподготовке подтвердит вашу квалификацию
           </Title>
           <div className={stls.content}>
@@ -84,7 +84,7 @@ const DiplomasHigher = ({ classNames }: TSectionYourDiplomasAlt) => {
                   cn(stls.licenceLink, { [stls.altStyles]: altStyles })
                 ]}>
                 <span>
-                  Уведомление о предоставлении лицензии{' '}
+                  Уведомление о предоставлении лицензии <br />
                   <span className={stls.highlight}>№041221</span>
                 </span>
                 <IconGeneralArrowRightAlt
@@ -120,7 +120,7 @@ const DiplomasHigher = ({ classNames }: TSectionYourDiplomasAlt) => {
                 {data[activeTab - 1].list &&
                   data[activeTab - 1].list.map((li, index) => (
                     <li key={index}>
-                      <IconGeneralCircleCheckAlt color1='#AC94F4' />
+                      <IconGeneralCircleCheckAlt color1='#2663F0' />
                       <span dangerouslySetInnerHTML={{ __html: li }}></span>
                     </li>
                   ))}

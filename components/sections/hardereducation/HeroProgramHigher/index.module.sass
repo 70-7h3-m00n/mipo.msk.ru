@@ -35,7 +35,11 @@ $heading_ld_altStyles_mr: 12%
   position: absolute
   bottom: -400px
   right: 100px
+  bottom: -300px
+  right: 335px
   z-index: -1
+  width: 800px
+  height: 800px
   .treePicture 
     width: 800px
     height: 800px
@@ -47,7 +51,7 @@ $heading_ld_altStyles_mr: 12%
 
 .giftPictureContainer
   position: absolute
-  top: -145px
+  top: -120px
   left: -155px
   transform: rotate(-20deg)
   .giftPicture 
@@ -93,6 +97,8 @@ $heading_ld_altStyles_mr: 12%
     width: fit-content
     cursor: pointer
     border-bottom: 1px solid
+    @media (max-width: 720px)
+      margin-top: 10px
 
   @include m.media(laptop, desktop)
     align-self: flex-start
@@ -202,6 +208,8 @@ $heading_ld_altStyles_mr: 12%
     & > div:last-child
       border: 1px solid black
       border-radius: 15px
+    @media (max-width: 720px)
+      margin-top: 20px
       
   @include m.media(laptop, desktop)
     display: none

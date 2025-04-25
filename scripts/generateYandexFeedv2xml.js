@@ -67,7 +67,7 @@ async function generateYandexFeed() {
                                 <url>${escapeXml(
                                 `https://mipo.msk.ru/professions/${elem.study_field.slug}/${elem.slug}`
                                 )}</url>
-                                <count>9999</count>
+                                
                                 <price>${Math.round(
                                 (elem.timenprice[0].ref.price / (100 - 40)) *
                                     100 *

@@ -24,8 +24,6 @@ const HeroProgramHigher = () => {
 
   const altStyles = true
 
-  console.log(program)
-
   const [openFullText, setOpenFullText] = useState<boolean>(false)
 
   return (
