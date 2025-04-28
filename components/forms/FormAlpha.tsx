@@ -96,9 +96,12 @@ const FormAlpha = ({
     if (hasItBeenSentBefore) return
     localStorage.setItem('timeAfterSend', new Date().toISOString())
 
-    let price = Boolean(+program?.timenprice[0]?.price)
-      ? +program?.timenprice[0]?.price
-      : null
+    let price
+    if (Array.isArray(program?.timenprice) && program.timenprice[0]?.price) {
+      price = +program.timenprice[0].price
+    } else {
+      price = null
+    }
     setIsDisabled(true)
     setThanksIsOpen(true)
     // handle loader
@@ -118,7 +121,8 @@ const FormAlpha = ({
 
     const title = program?.title ?? null
     const category = program?.study_field?.title ?? null
-    const priceProduct = roundingUpPriceOrNumber(priceWithoutCeil * 0.35) ?? null
+    const priceProduct =
+      roundingUpPriceOrNumber(priceWithoutCeil * 0.35) ?? null
 
     const req = await hitContactRoute({
       ...data,
