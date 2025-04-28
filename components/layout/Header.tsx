@@ -91,9 +91,9 @@ const Header = () => {
         [stls.altStyles]: altStyles,
         [stls.phychologyHeader]: isForPhychology
       })}>
-      {program?.category?.type !== 'mba' && !router.asPath.includes('mba') && !isInnerPageHigherEducation && (
-        <SalesBlockToHeaderBottom />
-      )}
+      {program?.category?.type !== 'mba' &&
+        !router.asPath.includes('mba') &&
+        !isInnerPageHigherEducation && <SalesBlockToHeaderBottom />}
       <MenuMobile />
 
       {!redirectHeader ? (
@@ -144,13 +144,13 @@ const Header = () => {
                   </>
                 ) : (
                   <div className={stls.phoneHigherEdicationBlock}>
-                    <div>
+                    {/* <div>
                       <IconPhone />
                       +7 (495) 648-62-26
-                    </div>
+                    </div> */}
 
                     <Popup
-                      trigger={<div>Заказать обратный звонок</div>}
+                      trigger={<a>Заказать обратный звонок</a>}
                       modal
                       nested>
                       {close => (
@@ -167,7 +167,16 @@ const Header = () => {
                 <BtnPhone />
               </div>
               {isInnerPageHigherEducation ? (
-                <UniversalButton className={stls.newBtn} linkTo='/' borderColor='black' borderPx={1} colorText='black' >Войти</UniversalButton>
+                <>
+                  {/* <UniversalButton
+                    className={stls.newBtn}
+                    linkTo='/'
+                    borderColor='black'
+                    borderPx={1}
+                    colorText='black'>
+                    Войти
+                  </UniversalButton> */}
+                </>
               ) : (
                 <PopupTrigger btn='epsilon' cta='callMeBack' />
               )}

@@ -119,7 +119,7 @@ const contact = async (req: NextApiRequest, res: NextApiResponse) => {
 
   const locationData = await getUserLocation()
 
-  const data = {
+  const dataToMIPOAmo = {
     id: id || null,
     date: now.format('DD-MM-YYYY') || null,
     time: now.format('HH:mm:ss') || null,
@@ -166,34 +166,67 @@ const contact = async (req: NextApiRequest, res: NextApiResponse) => {
     full_link: full_link || null
   }
 
-  // try {
-  //   const queryParams = Object.entries(data)
-  //     .map(([key, value]) => `${key}=${value}`)
-  //     .join('&')
-
-  //   await axios.request({
-  //     method: 'GET',
-  //     url: `https://tglk.ru/in/MX4bxnhq9LCnZWR5?${encodeURIComponent(
-  //       queryParams
-  //     )}`,
-  //     headers: {
-  //       'Content-Type': 'application/json'
-  //     }
-  //   })
-  //   console.log('Успешная отправка')
-  // } catch (e) {
-  //   console.log('При отправке произошла ошибка')
-  //   console.error(e)
-  // }
+  const dataToHigherEducationAMO = {
+    id: id || null,
+    date: now.format('DD-MM-YYYY') || null,
+    time: now.format('HH:mm:ss') || null,
+    utc: now.format('Z') || null,
+    name: name || null,
+    phone: phone || null,
+    email: email || null,
+    vk: vk || null,
+    post_promocode: post_promocode || null,
+    contactWay: contactWay || null,
+    contactMethod: contactMethod || null,
+    question: question || null,
+    root: root || null,
+    leadpage: full_link || null,
+    ip: ip || null,
+    ymUid: ymUid || null,
+    cityEn: (locationData && locationData.city.names.en) || null,
+    cityRu: (locationData && locationData.city.names.ru) || null,
+    countryCode: (locationData && locationData.country.code) || null,
+    countryEn: (locationData && locationData.country.names.en) || null,
+    countryRu: (locationData && locationData.country.names.ru) || null,
+    continentCode: (locationData && locationData.continent.code) || null,
+    continentEn: (locationData && locationData.continent.names.en) || null,
+    continentRu: (locationData && locationData.continent.names.ru) || null,
+    accuracyRadius:
+      (locationData && locationData.coordinates.accuracyRadius) || null,
+    latitude: (locationData && locationData.coordinates.latitude) || null,
+    longitude: (locationData && locationData.coordinates.longitude) || null,
+    timeZone: (locationData && locationData.timeZone) || null,
+    postalCode: (locationData && locationData.postalCode) || null,
+    programtitle: programTitle || null,
+    utmsource: (utms && utms.utm_source) || referer || null,
+    utmmedium: (utms && utms.utm_medium) || null,
+    utmcampaign: (utms && utms.utm_campaign) || null,
+    utmcontent: (utms && utms.utm_content) || null,
+    utmterm: (utms && utms.utm_term) || null,
+    cluid: utms?.cl_uid || null,
+    clickid: clickid || null,
+    formName: formName || null,
+    type_tariff: tarifPhycho || null,
+    name_programm: name_programm || null,
+    category_programm: category_programm || null,
+    price_programm: price_programm || null,
+    full_link: full_link || null
+  }
 
   // F5 BEGIN
   // https://tglk.ru/in/MX4bxnhq9LCnZWR5
+
+  const urlToAmo = !!isHighEducation
+    ? 'https://tglk.ru/in/YMNnks9zDCEBwoR5'
+    : 'https://tglk.ru/in/MX4bxnhq9LCnZWR5'
+
+  const data = !!isHighEducation ? dataToHigherEducationAMO : dataToMIPOAmo
 
   try {
     await axios.request({
       method: 'POST',
       maxBodyLength: Infinity,
-      url: `https://tglk.ru/in/MX4bxnhq9LCnZWR5`,
+      url: urlToAmo,
       headers: {
         'Content-Type': 'application/json'
       },
@@ -205,6 +238,7 @@ const contact = async (req: NextApiRequest, res: NextApiResponse) => {
     console.log('error in f5 request')
     console.error(e)
   }
+
   //  F5 END
 
   const subject = 'Новая заявка с mipo.msk.ru'
