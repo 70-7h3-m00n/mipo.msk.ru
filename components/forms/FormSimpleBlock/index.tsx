@@ -37,7 +37,7 @@ const FormSimpleBlock = ({
   agreement = false,
   formName = null,
   tarifPhycho = '',
-  isBlackBackground = false,
+  isBlackBackground = false
 }) => {
   const {
     register,
@@ -97,9 +97,12 @@ const FormSimpleBlock = ({
     if (hasItBeenSentBefore) return
     localStorage.setItem('timeAfterSend', new Date().toISOString())
 
-    let price = Boolean(+program?.timenprice[0]?.price)
-      ? +program?.timenprice[0]?.price
-      : null
+    let price
+    if (Array.isArray(program?.timenprice) && program.timenprice[0]?.price) {
+      price = +program.timenprice[0].price
+    } else {
+      price = null
+    }
     setIsDisabled(true)
     setThanksIsOpen(true)
     // handle loader
@@ -153,7 +156,6 @@ const FormSimpleBlock = ({
     }
   }
 
-  console.log(isBlackBackground)
   return (
     <div className={stls.wrapper}>
       <Wrapper>
@@ -171,7 +173,10 @@ const FormSimpleBlock = ({
         <form
           method='post'
           onSubmit={handleSubmit(data => onSubmit(data))}
-          className={classNames(stls.component, isBlackBackground && stls.blackBackgroud)}>
+          className={classNames(
+            stls.component,
+            isBlackBackground && stls.blackBackgroud
+          )}>
           <Title as='h2' fontSize={44} className={stls.title} color='white'>
             Остались вопросы?
           </Title>

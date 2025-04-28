@@ -189,12 +189,6 @@ const contact = async (req: NextApiRequest, res: NextApiResponse) => {
   // F5 BEGIN
   // https://tglk.ru/in/MX4bxnhq9LCnZWR5
 
-  console.log(isHighEducation)
-  console.log(
-    isHighEducation
-      ? `https://tglk.ru/in/YMNnks9zDCEBwoR5`
-      : `https://tglk.ru/in/MX4bxnhq9LCnZWR5`
-  )
   try {
     await axios.request({
       method: 'POST',

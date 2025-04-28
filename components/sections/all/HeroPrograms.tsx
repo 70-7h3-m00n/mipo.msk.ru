@@ -50,6 +50,15 @@ const HeroPrograms = ({ ofType = null }) => {
               <span className={stls.phonetablet}>MBA</span>
             </a>
           </Link>
+          <Link href={`/highereducation`}>
+            <a
+              className={cn([stls.link], {
+                [stls.active]: curProgramsType === 'mba'
+              })}>
+              <span className={stls.laptopdesktop}>Высшее образование</span>
+              <span className={stls.phonetablet}>Высшее образование</span>
+            </a>
+          </Link>
         </div>
       </Wrapper>
     </section>
