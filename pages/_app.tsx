@@ -46,6 +46,8 @@ function MyApp({ Component, pageProps }) {
     !getCookie('cl_uid') &&
     !route.asPath.includes('edpartners')
 
+  
+  const isHigherEducationPage = route.asPath.includes('highereducation');
   const userUuid = uuidv4()
 
   useEffect(() => {
@@ -236,7 +238,7 @@ function MyApp({ Component, pageProps }) {
         <Script id={'dmp'} src='https://dmp.one/sync' async charSet='UTF-8' />
       )}
 
-      {!dev && isEdpartners && (
+      {!dev && isEdpartners && !isHigherEducationPage && (
         <Script
           id='marquiz-script-start'
           dangerouslySetInnerHTML={{
@@ -250,7 +252,7 @@ function MyApp({ Component, pageProps }) {
         />
       )}
 
-      {!dev && isEdpartners && (
+      {!dev && isEdpartners && !isHigherEducationPage && (
         <Script
           id='marquiz'
           dangerouslySetInnerHTML={{
