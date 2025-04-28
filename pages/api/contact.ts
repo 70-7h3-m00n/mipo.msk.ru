@@ -193,9 +193,7 @@ const contact = async (req: NextApiRequest, res: NextApiResponse) => {
     await axios.request({
       method: 'POST',
       maxBodyLength: Infinity,
-      url: isHighEducation
-        ? `https://tglk.ru/in/YMNnks9zDCEBwoR5`
-        : `https://tglk.ru/in/MX4bxnhq9LCnZWR5`,
+      url: `https://tglk.ru/in/MX4bxnhq9LCnZWR5`,
       headers: {
         'Content-Type': 'application/json'
       },
