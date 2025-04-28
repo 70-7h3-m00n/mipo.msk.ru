@@ -100,9 +100,12 @@ const OpenForm = ({
     if (hasItBeenSentBefore) return
     localStorage.setItem('timeAfterSend', new Date().toISOString())
 
-    let price = Boolean(+program?.timenprice[0]?.price)
-      ? +program?.timenprice[0]?.price
-      : null
+    let price
+    if (Array.isArray(program?.timenprice) && program.timenprice[0]?.price) {
+      price = +program.timenprice[0].price
+    } else {
+      price = null
+    }
     setIsDisabled(true)
     setThanksIsOpen(true)
     // handle loader
