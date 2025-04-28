@@ -260,139 +260,139 @@ const contact = async (req: NextApiRequest, res: NextApiResponse) => {
     const tbodyTrs = [
       {
         tdKey: 'ID',
-        tdVal: data.id
+        tdVal: dataToMIPOAmo.id
       },
       {
         tdKey: 'Дата',
-        tdVal: data.date
+        tdVal: dataToMIPOAmo.date
       },
       {
         tdKey: 'Время',
-        tdVal: data.time
+        tdVal: dataToMIPOAmo.time
       },
       {
         tdKey: 'UTC',
-        tdVal: data.utc
+        tdVal: dataToMIPOAmo.utc
       },
       {
         tdKey: 'Имя',
-        tdVal: data.post_name
+        tdVal: dataToMIPOAmo.post_name
       },
       {
         tdKey: 'Телефон',
-        tdVal: data.post_phone
+        tdVal: dataToMIPOAmo.post_phone
       },
       {
         tdKey: 'Почта',
-        tdVal: data.post_email
+        tdVal: dataToMIPOAmo.post_email
       },
       {
         tdKey: 'ВКонтакте',
-        tdVal: data.vk
+        tdVal: dataToMIPOAmo.vk
       },
       {
         tdKey: 'Промокод',
-        tdVal: data.post_promocode
+        tdVal: dataToMIPOAmo.post_promocode
       },
       {
         tdKey: 'Способ связи',
-        tdVal: data.contactWay
+        tdVal: dataToMIPOAmo.contactWay
       },
       {
         tdKey: 'Название программы',
-        tdVal: data.name_programm
+        tdVal: dataToMIPOAmo.name_programm
       },
       {
         tdKey: 'Тариф для психологии',
-        tdVal: data.type_tariff
+        tdVal: dataToMIPOAmo.type_tariff
       },
       {
         tdKey: 'Категория программы',
-        tdVal: data.category_programm
+        tdVal: dataToMIPOAmo.category_programm
       },
       {
         tdKey: 'Полная стоимость программы',
-        tdVal: data.price_programm
+        tdVal: dataToMIPOAmo.price_programm
       },
       {
         tdKey: 'Ссылка на страницу',
-        tdVal: data.full_link
+        tdVal: dataToMIPOAmo.full_link
       },
       {
         tdKey: 'Как связаться',
-        tdVal: data.contactMethod
+        tdVal: dataToMIPOAmo.contactMethod
       },
       {
         tdKey: 'Вопрос',
-        tdVal: data.question
+        tdVal: dataToMIPOAmo.question
       },
       {
         tdKey: 'Лид сайт',
-        tdVal: data.root
+        tdVal: dataToMIPOAmo.root
       },
       {
         tdKey: 'Лид страница',
-        tdVal: data.full_link
+        tdVal: dataToMIPOAmo.full_link
       },
       {
         tdKey: 'IP',
-        tdVal: data.ip
+        tdVal: dataToMIPOAmo.ip
       },
       {
         tdKey: 'Город (en)',
-        tdVal: data.cityEn
+        tdVal: dataToMIPOAmo.cityEn
       },
       {
         tdKey: 'Город (ru)',
-        tdVal: data.cityRu
+        tdVal: dataToMIPOAmo.cityRu
       },
       {
         tdKey: 'Код страны',
-        tdVal: data.countryCode
+        tdVal: dataToMIPOAmo.countryCode
       },
       {
         tdKey: 'Страна (en)',
-        tdVal: data.countryEn
+        tdVal: dataToMIPOAmo.countryEn
       },
       {
         tdKey: 'Страна (ru)',
-        tdVal: data.countryRu
+        tdVal: dataToMIPOAmo.countryRu
       },
       {
         tdKey: 'Континент код',
-        tdVal: data.continentCode
+        tdVal: dataToMIPOAmo.continentCode
       },
       {
         tdKey: 'Континент (en)',
-        tdVal: data.continentEn
+        tdVal: dataToMIPOAmo.continentEn
       },
       {
         tdKey: 'Континент (ru)',
-        tdVal: data.continentRu
+        tdVal: dataToMIPOAmo.continentRu
       },
       {
         tdKey: 'Погрешность (м)',
-        tdVal: data.accuracyRadius
+        tdVal: dataToMIPOAmo.accuracyRadius
       },
       {
         tdKey: 'Широта',
-        tdVal: data.latitude
+        tdVal: dataToMIPOAmo.latitude
       },
       {
         tdKey: 'Долгота',
-        tdVal: data.longitude
+        tdVal: dataToMIPOAmo.longitude
       },
       {
         tdKey: 'Часовой пояс',
-        tdVal: data.timeZone
+        tdVal: dataToMIPOAmo.timeZone
       },
       {
         tdKey: 'Зип код',
-        tdVal: data.postalCode
+        tdVal: dataToMIPOAmo.postalCode
       },
       {
         tdKey: 'Направление',
-        tdVal: data.programTitle
+        tdVal: dataToMIPOAmo.programTitle
       },
       {
         tdKey: 'Университет',
@@ -412,31 +412,31 @@ const contact = async (req: NextApiRequest, res: NextApiResponse) => {
       },
       {
         tdKey: 'Источник рекламы',
-        tdVal: data.utmSource
+        tdVal: dataToMIPOAmo.utmSource
       },
       {
         tdKey: 'Тип трафика',
-        tdVal: data.utmMedium
+        tdVal: dataToMIPOAmo.utmMedium
       },
       {
         tdKey: 'Название РК',
-        tdVal: data.utmCampaign
+        tdVal: dataToMIPOAmo.utmCampaign
       },
       {
         tdKey: 'Объявление',
-        tdVal: data.utmContent
+        tdVal: dataToMIPOAmo.utmContent
       },
       {
         tdKey: 'Ключевое слово',
-        tdVal: data.utmTerm
+        tdVal: dataToMIPOAmo.utmTerm
       },
       {
         tdKey: 'Affise clUid',
-        tdVal: data.clUid
+        tdVal: dataToMIPOAmo.clUid
       },
       {
         tdKey: 'Affise clickid',
-        tdVal: data.clickid
+        tdVal: dataToMIPOAmo.clickid
       },
       {
         tdKey: 'Дубль',
@@ -444,7 +444,7 @@ const contact = async (req: NextApiRequest, res: NextApiResponse) => {
       },
       {
         tdKey: 'Информация для менеджера по продажам',
-        tdVal: data.formName
+        tdVal: dataToMIPOAmo.formName
       }
     ]
 
