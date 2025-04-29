@@ -46,7 +46,6 @@ function MyApp({ Component, pageProps }) {
     !getCookie('cl_uid') &&
     !route.asPath.includes('edpartners')
 
-  
   const isHigherEducationPage = route.asPath.includes('highereducation');
   const userUuid = uuidv4()
 

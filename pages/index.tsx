@@ -7,17 +7,14 @@ import { routeHome } from '@/data/routes'
 import companyName from '@/data/companyName'
 import {
   Hero,
-  WhyBother,
   About,
-  HowProcessGoes,
-  Programs,
   SectionStudyFields,
   TrustedBy,
   Cta,
-  Reviews,
-  Webinars
+  Reviews
 } from '@/components/sections'
 import Script from 'next/script'
+import SliderCommon from '@/components/sections/new-common/SliderCommon'
 
 const HomePage = ({ programs, reviews }) => {
   usePageHandleContext({ programs })
@@ -34,7 +31,11 @@ const HomePage = ({ programs, reviews }) => {
         )}
         canonical={`${routesFront.root}${routeHome}`}
       />
-      <Script id="xcntmyAsync" type="text/javascript" dangerouslySetInnerHTML={{__html: `
+      <Script
+        id='xcntmyAsync'
+        type='text/javascript'
+        dangerouslySetInnerHTML={{
+          __html: `
           (function(d){
           var xscr = d.createElement( 'script' ); 
           xscr.async = 1; 
@@ -42,10 +43,12 @@ const HomePage = ({ programs, reviews }) => {
           var x= d.getElementById( 'xcntmyAsync' ); 
           x.parentNode.insertBefore( xscr, x );
           })(document);
-        `}}
+        `
+        }}
       />
 
-      <Hero />
+      {/* <Hero /> */}
+      <SliderCommon />
       {/* <Programs withTitle withBtn atIndex /> */}
       <SectionStudyFields withTitle withBtn atIndex />
       {/* <WhyBother /> */}
