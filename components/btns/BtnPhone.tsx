@@ -16,17 +16,17 @@ const BtnPhone = ({
   isSecondNumber = false,
   colorText
 }: Props) => {
-  const [validComponent, setValidComponent] = useState(null)
+  // const [validComponent, setValidComponent] = useState(null)
 
-  useEffect(() => {
-    if (getCookie('utm_source') !== undefined) {
-      setValidComponent(true)
-    } else {
-      setValidComponent(false)
-    }
-  }, [])
+  // useEffect(() => {
+  //   if (getCookie('utm_source') !== undefined) {
+  //     setValidComponent(true)
+  //   } else {
+  //     setValidComponent(false)
+  //   }
+  // }, [])
 
-  if (validComponent || validComponent === null) return <></>
+  // if (validComponent || validComponent === null) return <></>
 
   const numberString = isSecondNumber ? number.newVal : number.val
   const hrefString = isSecondNumber ? number.newHref : number.href
