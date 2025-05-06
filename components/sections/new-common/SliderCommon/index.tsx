@@ -59,7 +59,7 @@ export default function MySlider() {
                 style={{ backgroundImage: `url(${elem.bgImage})` }}
                 className={stls.slide}>
                 <div className={stls.content}>
-                  <Title fontSize={50} color={elem.color}>
+                  <Title fontSize={50} color={elem.color} className={stls.title}>
                     {elem.title}
                   </Title>
                   <div className={cn(stls.desc, stls[elem.color])}>

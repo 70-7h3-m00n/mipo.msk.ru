@@ -1,0 +1,42 @@
+@use '@/styles/utils/mixin' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/config/Colors.module.sass' as c
+
+.container
+    backgroubd-color: c.$color-white
+    padding: 30px
+    position: relative
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px 0px
+    background-color: c.$color-white
+    border-radius: 20px
+    &::after
+        position: absolute
+        right: -15px
+        top: -15px
+        width: 65px
+        height: 65px
+        background-color: c.$color-grey-bg
+        content: ''
+        z-index: 1
+        border-radius: 50px
+    .img
+        position: absolute
+        top: -10px
+        right: -10px
+        width: 50px
+        height: 50px
+        border-radius: 50px 0 50px 50px
+        overflow: hidden
+        z-index: 2
+    .title
+        font-size: 20px
+        font-weight: 400
+    .text
+        .name
+            font-size: 18px
+            font-weight: 500
+        .occupation
+            font-size: 14px
+            font-weight: 500
+            margin-top: 5px
+            color: c.$kappa

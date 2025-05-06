@@ -2,13 +2,14 @@ import Link from 'next/link'
 import stls from './index.module.sass'
 import cn from 'classnames'
 import { useRouter } from 'next/router'
+import { ReactElement } from 'react'
 
 interface UniversalButtonProps {
   children?: React.ReactNode
   onClick?: () => void
   idToScroll?: string
   bgColor?: 'blue' | 'white'
-  borderColor?: 'blue' | 'white' | 'black'
+  borderColor?: 'blue' | 'white' | 'black' | 'lightblue'
   borderPx?: number
   colorText?: string
   className?: string

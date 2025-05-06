@@ -33,12 +33,13 @@ import { dev } from 'config'
 
 import { useHandleUtms } from '@/hooks/index'
 import { getCookie } from 'cookies-next'
+import NewHeader from '@/components/layout/NewHeader'
 
 function MyApp({ Component, pageProps }) {
   const route = useRouter()
   const [loading, setLoading] = useState(false)
 
-  // Проверяет параметры URL и устанавливает куки 
+  // Проверяет параметры URL и устанавливает куки
   useHandleUtms()
 
   const isEdpartners =
@@ -46,7 +47,7 @@ function MyApp({ Component, pageProps }) {
     !getCookie('cl_uid') &&
     !route.asPath.includes('edpartners')
 
-  const isHigherEducationPage = route.asPath.includes('highereducation');
+  const isHigherEducationPage = route.asPath.includes('highereducation')
   const userUuid = uuidv4()
 
   useEffect(() => {
@@ -98,14 +99,13 @@ function MyApp({ Component, pageProps }) {
       <ProgramsState pageProps={pageProps}>
         <ProgramState pageProps={pageProps}>
           <MenuState>
-           
             <FieldsTooltipState>
               <div
                 style={{
                   opacity: 1
                 }}>
-                <Header />
-                
+                {isHigherEducationPage ? <Header /> : <NewHeader />}
+
                 <main>
                   <Component {...pageProps} />
                 </main>

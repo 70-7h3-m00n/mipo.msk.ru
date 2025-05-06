@@ -4,16 +4,23 @@
     
 .component 
     background-color: c.$color-white
+    &.lightBlue
+        background-color: c.$color-verywhite-blue
     border-radius: 25px
     position: relative
     overflow: hidden
+    display: flex
+    flex-direction: column
     min-height: 200px
  
     .container
         padding: 30px
         display: flex
+        flex-grow: 1
         justify-content: space-between
         flex-direction: column
+        height: inherit
+        justify-content: start
         h3
             font-size: 18px
             font-weight: 500
@@ -21,6 +28,8 @@
         div
             font-size: 14px
             color: c.$color-dark-grey
+        .textDown
+            margin-top: auto
     .icon 
         position: absolute
         right: 0

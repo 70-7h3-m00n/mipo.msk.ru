@@ -62,7 +62,10 @@ const ProgramsState = props => {
         : [],
     studyFieldsMbas:
       studyFieldsMbas && studyFieldsMbas?.length ? studyFieldsMbas : [],
-    studyFieldsNewCourse: studyFieldsNewCourse && studyFieldsNewCourse?.length ? studyFieldsNewCourse : [],
+    studyFieldsNewCourse:
+      studyFieldsNewCourse && studyFieldsNewCourse?.length
+        ? studyFieldsNewCourse
+        : [],
     curProgramsType: props?.pageProps?.program?.category?.type || null,
     curProgramsStudyFieldSlug:
       props?.pageProps?.program?.study_field?.slug || null,
@@ -94,6 +97,7 @@ const ProgramsState = props => {
     })
   }
 
+  const facultets = props?.pageProps?.facultets || []
   return (
     <ProgramsContext.Provider
       value={{
@@ -113,7 +117,8 @@ const ProgramsState = props => {
         setSearchTerm,
         setPrograms,
         setCurProgramsType,
-        setCurProgramsStudyFieldSlug
+        setCurProgramsStudyFieldSlug,
+        facultets
       }}>
       {props.children}
     </ProgramsContext.Provider>

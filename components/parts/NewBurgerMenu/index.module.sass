@@ -1,0 +1,77 @@
+@use '@/styles/utils/mixin' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/config/Colors.module.sass' as c
+
+.component
+
+    .menu
+        background-color: c.$color-white
+        position: fixed
+        top: 70px
+        left: 0
+        right: 0
+        bottom: 0
+        z-index: 12
+        display: flex
+        flex-direction: column
+        padding: 20px
+        overflow-x: auto
+        .linksColumn
+            margin-top: 20px
+            display: flex
+            flex-direction: column
+            gap: 10px
+            min-height: 85%
+        .btnClose
+            position: absolute
+            top: 14px
+            right: 35px
+        .input
+            width: 100%
+            max-width: none
+        .btnAboutInst
+            display: flex
+            gap: 15px
+        .links
+            display: none
+            flex-direction: column
+            font-size: 15px
+            gap: 15px
+            margin-left: 30px
+            max-height: 0
+            transition: all 0.3s ease
+            overflow: hidden
+            &.active
+                max-height: 600px
+                display: flex
+                overflow: visible
+        .contacts
+            margin-top: auto
+            & > div
+                margin-top: 10px
+        .phones
+            color: c.$color-black
+            display: flex
+            flex-direction: column
+            gap: 10px
+            justify-content: space-between
+            margin-top: 20px
+        .buttons 
+            display: flex
+            flex-direction: column
+            align-items: start
+            gap: 10px
+            margin-top: 10px
+            justify-content: space-between
+            .btnBlue
+                display: flex
+                align-items: center
+                gap: 10px
+                background-color: c.$color-blue
+                color: c.$color-white !important
+                padding: 10px
+                max-height: 45px
+                padding: 15px 20px
+                border-radius: 15px
+                &.whatsapp
+                    background-color: #23D366
