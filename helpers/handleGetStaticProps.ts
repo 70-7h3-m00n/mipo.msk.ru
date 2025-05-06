@@ -43,7 +43,6 @@ const handleGetStaticProps = async ({
     res.data.teachers = teachers.data.teachers
   }
 
-  console.log(res)
   let program = null
   if (slug) {
     const programFiltered = res.data.programs.filter(
