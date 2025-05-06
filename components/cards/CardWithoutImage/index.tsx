@@ -7,7 +7,10 @@ interface Props {
   lintTo?: string
   isPopural?: boolean
   timenprice?: { studyMonthsDuration: number }[]
-  displayLabels: boolean
+  displayLabels?: boolean
+  bgColor?: 'lightBlue'
+  textDown?: string
+  className?: string
 }
 
 const CardWithoutImage = ({
@@ -15,11 +18,14 @@ const CardWithoutImage = ({
   lintTo,
   isPopural,
   timenprice,
-  displayLabels = false
+  displayLabels = false,
+  bgColor,
+  textDown,
+  className
 }: Props) => {
   return (
     <a href={lintTo}>
-      <div className={stls.component}>
+      <div className={cn(stls.component, stls[bgColor], className)}>
         <div className={stls.container}>
           {displayLabels && (
             <div className={stls.labels}>
@@ -34,6 +40,7 @@ const CardWithoutImage = ({
           )}
 
           <h3>{title}</h3>
+          {textDown && <div className={stls.textDown}>{textDown}</div>}
         </div>
 
         <IconArrowRight classNames={[stls.icon]} />

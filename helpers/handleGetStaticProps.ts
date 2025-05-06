@@ -25,8 +25,23 @@ const handleGetStaticProps = async ({
   type = null
 }: TypeHandleGetStaticProps) => {
   const res = await axios.get(
-    `${routesBack.root}${routesBack.getStaticProps}${page}`
+    // `${routesBack.root}${routesBack.getStaticProps}${page}`
+    `${routesBack.root}${routesBack.getStaticProps}/index`
   )
+
+  if (page == '/webinars') {
+    const webinars = await axios.get(
+      `${routesBack.root}${routesBack.getStaticProps}/webinars`
+    )
+    res.data.webinars = webinars.data.webinars
+  }
+
+  if (page == '/teachers') {
+    const teachers = await axios.get(
+      `${routesBack.root}${routesBack.getStaticProps}/teachers`
+    )
+    res.data.teachers = teachers.data.teachers
+  }
 
   let program = null
   if (slug) {
@@ -57,8 +72,14 @@ const handleGetStaticProps = async ({
     program = programRes ? programRes.data : {}
   }
 
+  // Получает факультеты высшего образования
+
+  const facultets = await axios.get(
+    `https://api.mipo.msk.ru/faculties-higher-educations`
+  )
+
   return {
-    props: { ...res.data, studyFieldSlug, program },
+    props: { ...res.data, studyFieldSlug, program, facultets: facultets.data },
     revalidate: revalidate.default
   }
 }

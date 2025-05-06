@@ -1,0 +1,45 @@
+@use '@/styles/utils/mixin' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/config/Colors.module.sass' as c
+
+.component
+    display: flex
+    position: relative
+    .buttonMenu
+        display: flex
+        gap: 10px
+        cursor: pointer
+        transition: color 0.3s ease
+        & > div
+            transition: transform 0.3s ease
+        &.active
+            & > div
+                transform: rotate(180deg)
+        &:hover
+            color: c.$color-dark-grey
+    .openMenu
+        position: absolute
+        left: 0
+        top: 35px
+        padding: 30px
+        gap: 20px
+        flex-direction: column
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px
+        z-index: 6
+        border-radius: 20px
+        background-color: c.$color-white
+        display: none
+        &.active
+            display: flex
+        & > a
+            display: flex
+            font-weight: 500
+            justify-content: center
+            padding: 10px 30px
+            border-radius: 12px
+            border: 1px solid c.$color-white-grey
+            transition: all 0.3s ease
+            &:hover
+                background-color: c.$color-blue
+                color: c.$color-white
+    

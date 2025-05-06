@@ -1,0 +1,45 @@
+@use '@/styles/utils/mixin' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/config/Colors.module.sass' as c
+
+.component
+    padding-bottom: 50px
+    .slide
+        display: flex
+        align-items: center
+        padding: 100px 75px
+        border-radius: 30px
+        overflow: hidden
+        height: 400px
+        background-size: cover
+        background-position: center
+        background-repeat: no-repeat
+        @media ( max-width: 1200px )
+            padding: 20px
+            
+
+        .content 
+            max-width: 60%
+            @media ( max-width: 1200px )
+                max-width: none
+                .title
+                    font-size: 22px !important
+            .desc 
+                font-size: 20px
+                margin-top: 30px
+                @media ( max-width: 1200px )
+                    font-size: 16px
+                    margin-top: 20px
+                &.black
+                    color: c.$color-black
+                &.white
+                    color: c.$color-white
+            .btn
+                margin-top: 50px
+                @media ( max-width: 1200px )
+                    margin-top: 20px
+                &.darkBlueBgBtn
+                    background-color: c.$color-dark-blue
+                &.blueBgBtn
+                    background-color: c.$color-blue-v3
+
