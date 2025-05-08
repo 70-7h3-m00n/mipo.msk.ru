@@ -1,11 +1,7 @@
 import stls from './index.module.sass'
-import IconSearchForInput from '@/components/icons/IconSearchForInput'
-import { useContext, useEffect, useMemo, useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
 import cn from 'classnames'
-import programsContext from '@/context/programs/programsContext'
 import Link from 'next/link'
-import generateLinkFromType from '@/helpers/generateLinkFromType'
-import UniversalButton from '@/components/btns/UniversalButton'
 import { useRouter } from 'next/router'
 import { IconArrowRight, IconHumburger, IconPhone, IconSearch, IconWhatsapp } from '@/components/icons'
 import IconCross from '@/components/icons/IconCross'
@@ -27,7 +23,7 @@ const NewBurgerMenu = ({ menuLinks }: Props) => {
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden'
-      document.body.style.maxHeight = '100vh'
+      document.body.style.maxHeight = '90vh'
     } else {
       document.body.style.overflow = ''
       document.body.style.maxHeight = ''
@@ -38,6 +34,10 @@ const NewBurgerMenu = ({ menuLinks }: Props) => {
       document.body.style.maxHeight = ''
     }
   }, [isOpen])
+
+  const route = useRouter()
+
+  useEffect(() => setIsOpen(false), [route.asPath]);
 
   return (
     <div className={stls.component}>
