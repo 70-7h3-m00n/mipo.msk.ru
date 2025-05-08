@@ -30,7 +30,7 @@ const Cta = ({
   title = null,
   desc = null,
   cta,
-  isForPhychology = false
+  isForPhychology = false,
 }: CtaType) => {
   const { program } = useContext(ProgramContext)
   const altStyles =

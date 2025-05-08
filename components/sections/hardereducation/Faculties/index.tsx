@@ -34,7 +34,7 @@ const Faculties = () => {
           {facultets.slice(0, displayCount).map(item => (
             <CardWithiImage
               key={item.id}
-              lintTo={item.slug ? item.slug : '#'}
+              lintTo={item.slug ? `/highereducation/${item.slug}` : '#'}
               title={item.name}
               imageSrc={item.image[0].formats.small.url}
               countPrograms={getCountPrograms(item.id)}

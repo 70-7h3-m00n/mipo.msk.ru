@@ -4,12 +4,13 @@
 @use '@/styles/utils/mixin/media' as bp
 
 .container
+  
   & > *
     @include m.media(laptop, desktop)
       @include m.flex
     @media screen and (min-width: bp.$tablet) and ( max-width:  990px)
       @include m.flex($display: false, $fd: column)
-
+  padding-bottom: 20px !important
 .standalone
   @include m.media(phone, tablet)
     @include m.gap($mt: f.px(38))
@@ -29,7 +30,7 @@
     width: 100%
     max-width: 100%
     @include m.gap($mb: f.px(33))
-
+  
 
 .circle
   @include m.flex($display: false, $fb: 50%)

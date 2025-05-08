@@ -5,21 +5,17 @@ import { routesFront } from '@/config/index'
 import { usePageHandleContext } from '@/hooks/index'
 import { routeHome } from '@/data/routes'
 import companyName from '@/data/companyName'
-import {
-  Hero,
-  WhyBother,
-  About,
-  HowProcessGoes,
-  Programs,
-  SectionStudyFields,
-  TrustedBy,
-  Cta,
-  Reviews,
-  Webinars
-} from '@/components/sections'
+import { About, TrustedBy, Cta } from '@/components/sections'
 import Script from 'next/script'
+import SliderCommon from '@/components/sections/new-common/SliderCommon'
+import Directions from '@/components/sections/new-common/Directions'
+import PopularProgram from '@/components/sections/new-common/PopularProgram'
+import DiplomasHigher from '@/components/sections/hardereducation/DiplomasHigher'
+import FormSimpleBlock from '@/components/forms/FormSimpleBlock'
+import NewReviews from '@/components/sections/new-common/NewReviews'
+import DiplomasCommon from '@/components/sections/new-common/DiplomasCommon'
 
-const HomePage = ({ programs, reviews }) => {
+const HomePage = ({ programs, reviews, facultets }) => {
   usePageHandleContext({ programs })
 
   return (
@@ -34,7 +30,11 @@ const HomePage = ({ programs, reviews }) => {
         )}
         canonical={`${routesFront.root}${routeHome}`}
       />
-      <Script id="xcntmyAsync" type="text/javascript" dangerouslySetInnerHTML={{__html: `
+      <Script
+        id='xcntmyAsync'
+        type='text/javascript'
+        dangerouslySetInnerHTML={{
+          __html: `
           (function(d){
           var xscr = d.createElement( 'script' ); 
           xscr.async = 1; 
@@ -42,22 +42,37 @@ const HomePage = ({ programs, reviews }) => {
           var x= d.getElementById( 'xcntmyAsync' ); 
           x.parentNode.insertBefore( xscr, x );
           })(document);
-        `}}
+        `
+        }}
       />
 
-      <Hero />
+      {/* <Hero /> */}
+      <SliderCommon />
+      <Directions />
+      <PopularProgram />
       {/* <Programs withTitle withBtn atIndex /> */}
-      <SectionStudyFields withTitle withBtn atIndex />
+      {/* <SectionStudyFields withTitle withBtn atIndex /> */}
       {/* <WhyBother /> */}
-      <About />
-      <TrustedBy />
-      {/* <HowProcessGoes /> */}
       <Cta
         title={'Подберите программу'}
         desc={'Ответьте на несколько вопросов и подберите программу обучения'}
         cta='chooseProgram'
       />
-      <Reviews reviews={reviews} />
+
+      <About />
+      <DiplomasCommon />
+      <TrustedBy />
+      <NewReviews reviews={reviews} />
+      {/* <Reviews reviews={reviews} /> */}
+      <FormSimpleBlock />
+
+      {/* <HowProcessGoes /> */}
+      {/* <Cta
+        title={'Подберите программу'}
+        desc={'Ответьте на несколько вопросов и подберите программу обучения'}
+        cta='chooseProgram'
+      /> */}
+
       {/* <Webinars /> */}
     </>
   )
