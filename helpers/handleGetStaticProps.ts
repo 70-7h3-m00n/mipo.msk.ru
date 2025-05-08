@@ -30,10 +30,8 @@ const handleGetStaticProps = async ({
   )
 
   if (page == '/webinars') {
-    const webinars = await axios.get(
-      `${routesBack.root}${routesBack.getStaticProps}/webinars`
-    )
-    res.data.webinars = webinars.data.webinars
+    const webinars = await axios.get(`https://api.mipo.msk.ru/webinars`)
+    res.data.webinars = webinars.data
   }
 
   if (page == '/teachers') {

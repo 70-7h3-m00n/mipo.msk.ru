@@ -22,17 +22,25 @@
   @include m.media(laptop, desktop)
     @include m.flex($fw: wrap)
   @include m.gap($m: 0, $p: 0)
+  margin-top: 30px
 
-.webinar
+// .webinar
+//   @include m.media(phone, tablet)
+//     @include m.flex
+//     @include m.gap($mb: f.px(50))
+//   @include m.media(laptop, desktop)
+//     @include m.flex($fb: 32%)
+//     @include m.gap($mr: 2%, $mb: f.px(31))
+//     &:nth-child(3n)
+//       @include m.gap($mr: 0)
+
+.webinars
+  display: grid
+  grid-template-columns: 1fr 1fr 1fr
+  gap: 30px
   @include m.media(phone, tablet)
-    @include m.flex
-    @include m.gap($mb: f.px(50))
-  @include m.media(laptop, desktop)
-    @include m.flex($fb: 32%)
-    @include m.gap($mr: 2%, $mb: f.px(31))
-    &:nth-child(3n)
-      @include m.gap($mr: 0)
-
+    grid-template-columns: 1fr
+    
 .trigger
   width: 100%
 
@@ -44,3 +52,22 @@
       width: 100%
   @include m.media(laptop, desktop)
     @include m.gap($mb: f.px(100))
+  margin-top: 20px
+
+.sections
+  display: flex
+  flex-wrap: wrap
+  gap: 20px
+  @include m.media(laptop, desktop)
+    gap: 10px
+  .catalogLink
+    padding: 10px 20px
+    border: 1px solid c.$color-dark-grey
+    border-radius: 30px
+    color: c.$color-black
+    @include m.media(laptop, desktop)
+      font-size: 12px
+      
+    &.active
+      background-color: c.$color-dark-blue
+      color: c.$color-white
