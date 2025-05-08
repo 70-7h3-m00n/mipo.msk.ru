@@ -259,7 +259,7 @@ function MyApp({ Component, pageProps }) {
             function() {Marquiz.add([t, p])})})('Pop', {id: '65c3391e3e254300269228bc', 
             title: 'ПОЛУЧИТЬ ИНДИВИДУАЛЬНОЕ ПРЕДЛОЖЕНИЕ', text: 'ДЛЯ ВАС ПОДАРОК ОТ ИНСТИТУТА', 
             delay: 2, textColor: '#ffffff', bgColor: '#3846c8', svgColor: '#ffffff', closeColor: '#ffffff', bonusCount: 2, 
-            bonusText: 'Вам доступны бонусы и скидка', type: 'full', position: 'position_top', shadow: 'rgba(56, 70, 200, 0)', 
+            bonusText: 'Вам доступны бонусы и скидка', type: 'full', position: 'position_bottom', shadow: 'rgba(56, 70, 200, 0)', 
             blicked: true, pulse: 'rgba(56, 70, 200, 0.4)'})`
           }}
         />
