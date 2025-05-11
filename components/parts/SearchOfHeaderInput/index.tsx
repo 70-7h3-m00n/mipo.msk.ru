@@ -12,7 +12,7 @@ interface Props {
   className?: string
 }
 
-const SearchOfHeaderInput = ({className}: Props) => {
+const SearchOfHeaderInput = ({ className }: Props) => {
   const [isFocused, setIsFocused] = useState<boolean>(false)
   const [inputText, setInputText] = useState<string>('')
   const route = useRouter()
@@ -38,6 +38,8 @@ const SearchOfHeaderInput = ({className}: Props) => {
         !wrapperRef.current.contains(event.target as Node)
       ) {
         setIsFocused(false)
+      } else {
+        setIsFocused(true)
       }
     }
 
@@ -67,7 +69,6 @@ const SearchOfHeaderInput = ({className}: Props) => {
           className={stls.inputField}
           placeholder='Введите запрос'
           onFocus={() => setIsFocused(true)}
-          onBlur={() => setTimeout(() => setIsFocused(false), 100)}
         />
 
         <IconSearchForInput />
@@ -82,20 +83,20 @@ const SearchOfHeaderInput = ({className}: Props) => {
                   href={`/${generateLinkFromType(elem.category.type)}/${
                     elem.study_field.slug
                   }/${elem.slug}`}>
-                  <a>{elem.title}</a>
+                  <a className={stls.link}>{elem.title}</a>
                 </Link>
               )
           )
         ) : (
-          <div>
-            <div>К сожалению мы не нашли таких программ</div>
+          <div className={stls.empty}>
+            <div>Кажется, что по вашему запросу ничего не нашлось</div>
             <UniversalButton
               className={stls.button}
               linkTo='/professions'
               colorText='#0072E5'
               borderPx={1}
               borderColor='blue'>
-              Смотреть все
+              Посмотреть все программы
             </UniversalButton>
           </div>
         )}
