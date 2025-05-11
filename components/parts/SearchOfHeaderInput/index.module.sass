@@ -10,8 +10,11 @@
         border: 1px solid c.$color-dark-grey
         border-radius: 15px
         overflow: visible
-        max-width: fit-content
         padding: 12px 20px
+        transition: all 0.3s ease
+        width: 250px        
+        &.active
+            width: 300px
         .inputField
             flex-grow: 1
         & input
@@ -42,7 +45,22 @@
     display: none
     &.active
         display: grid
+    .empty
+        & > div:first-child
+            font-size: 15px
+            font-weight: 400
     .button
         font-size: 14px !important
         height: 26px
         margin-top: 10px
+        background-color: c.$color-dark-blue
+        color: c.$color-white !important
+        padding: 10px 20px
+        height: 40px
+        transition: transform 0.2s ease
+        &:hover
+            transform: scale(1.05)
+    .link
+        font-size: 18px
+        font-weight: 500
+            
