@@ -1,5 +1,6 @@
 import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
+import { Autoplay, Pagination, Navigation } from 'swiper'
 import 'swiper/css'
 import 'swiper/css/pagination'
 import Wrapper from '@/components/layout/Wrapper'
@@ -52,14 +53,20 @@ export default function MySlider() {
           spaceBetween={50}
           slidesPerView={1}
           pagination={{ clickable: true }}
-          onSlideChange={() => console.log('slide change')}>
+          onSlideChange={() => console.log('slide change')}
+          autoplay={{ delay: 3000, disableOnInteraction: false }}
+          modules={[Autoplay, Pagination, Navigation]}
+          navigation={true}>
           {data.map((elem, idx) => (
             <SwiperSlide key={idx}>
               <div
                 style={{ backgroundImage: `url(${elem.bgImage})` }}
                 className={stls.slide}>
                 <div className={stls.content}>
-                  <Title fontSize={50} color={elem.color} className={stls.title}>
+                  <Title
+                    fontSize={50}
+                    color={elem.color}
+                    className={stls.title}>
                     {elem.title}
                   </Title>
                   <div className={cn(stls.desc, stls[elem.color])}>
@@ -92,8 +99,12 @@ export default function MySlider() {
                     <UniversalButton
                       colorText='white'
                       borderColor='white'
-                      borderPx={idx !== 1 && idx !== 2  && 1}
-                      className={cn(stls.btn, idx == 1 && stls.darkBlueBgBtn, idx == 2 && stls.blueBgBtn)}
+                      borderPx={idx !== 1 && idx !== 2 && 1}
+                      className={cn(
+                        stls.btn,
+                        idx == 1 && stls.darkBlueBgBtn,
+                        idx == 2 && stls.blueBgBtn
+                      )}
                       linkTo='/programs'>
                       Выбрать направление
                     </UniversalButton>
