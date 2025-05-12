@@ -67,7 +67,7 @@ const NewHeader = () => {
             <SearchOfHeaderInput />
             <div className={stls.phone}>
               <IconPhone />
-              <a href='tel:+7 (495) 648-62-26'>+7 (495) 648-62-26</a>
+              <a href='tel:+7 (800) 700-31-34'>8 800 700 31-34</a>
             </div>
             <div className={stls.wrapperPhonesWrapper} ref={wrapperPopupPhones}>
               <UniversalButton
@@ -92,7 +92,7 @@ const NewHeader = () => {
                 <div>
                   <Title fontSize={20}>Кураторский отдел</Title>
                   <div className={stls.phones}>
-                    <a href='tel:+7 (499) 110-72-48'>8 (499) 110-72-48</a>
+                    <a href='tel:+7 (800) 101-45-08'>8 (800) 101-45-08</a>
                   </div>
                 </div>
                 <div className={stls.buttons}>
@@ -160,7 +160,7 @@ const NewHeader = () => {
             </Link>
           </div>
           <div className={stls.icons}>
-            <a href='tel:+7 (495) 648-62-26'>
+            <a href='tel:+7 (800) 700-31-34'> 
               <IconPhone />
             </a>
 

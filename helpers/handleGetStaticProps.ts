@@ -30,7 +30,7 @@ const handleGetStaticProps = async ({
   )
 
   if (page == '/webinars') {
-    const webinars = await axios.get(`https://api.mipo.msk.ru/webinars`)
+    const webinars = await axios.get(`https://api.mipo.msk.ru/webinars?_limit=-1`)
     res.data.webinars = webinars.data
   }
 

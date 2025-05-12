@@ -71,6 +71,11 @@
   @include m.gap($mr: f.px(22))
   overflow: hidden
   border-radius: 50%
+  position: relative
+  & img
+    width: 100%
+    height: 100%
+    object-fit: cover
 
 .right
   @include m.flex($fd: column)
