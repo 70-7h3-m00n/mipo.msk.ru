@@ -6,11 +6,12 @@ import {
   addOptionalZeroToMinutes,
   addOptionalZeroToHours
 } from '@/helpers/index'
+import Image from 'next/image'
 
 type CardWebinarAltType = {
   date: Date
   name: string
-  picture: any
+  picture: string
   title: string
   category?: string
 }
@@ -44,7 +45,7 @@ const CardWebinarNew = ({
           <span className={stls.dayOfWeek}>{daysOfWeek[newDate.getDay()]}</span>
         </div>
         <div className={stls.speaker}>
-          <div className={stls.img}>{picture}</div>
+          <div className={stls.img}><Image src={picture} alt='Ведущий вебинара МИПО' layout='fill'/> </div>
           <div className={stls.right}>
             <span className={stls.label}>Спикер:</span>
             <p className={stls.name}>{name}</p>

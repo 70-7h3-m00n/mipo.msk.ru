@@ -87,7 +87,7 @@ const NewBurgerMenu = ({ menuLinks }: Props) => {
               <div>
                 <Title fontSize={20}>Кураторский отдел</Title>
                 <div className={stls.phones}>
-                  <a href='tel:+7 (499) 110-72-48'>8 (499) 110-72-48</a>
+                  <a href='tel:+7 (800) 101-45-08'>8 (800) 101-45-08</a>
                 </div>
               </div>
               <div className={stls.buttons}>

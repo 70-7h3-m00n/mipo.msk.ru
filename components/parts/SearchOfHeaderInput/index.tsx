@@ -50,7 +50,10 @@ const SearchOfHeaderInput = ({ className }: Props) => {
     }
   }, [])
 
-  useEffect(() => setInputText(''), [route.asPath])
+  useEffect(() => {
+    setInputText('')
+    setIsFocused(false)
+  }, [route.asPath])
 
   const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInputText(e.currentTarget.value)
