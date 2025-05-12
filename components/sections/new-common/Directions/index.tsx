@@ -20,7 +20,7 @@ export default function Directions() {
       link: '/professions'
     },
     {
-      title: 'Профессиональная переподготовка',
+      title: 'Повышение квалификации',
       textDown: `${getCategoryFromPrograms(data.courses).length} направлений`,
       link: '/courses'
     },
