@@ -25,6 +25,8 @@ const WebinarsAlt = ({ webinars = null }: WebinarsAltType) => {
     return 0
   })
 
+  console.log(webinarsASC.length)
+  console.log(webinars.length)
   const route = useRouter()
 
   const sections = [
@@ -43,10 +45,10 @@ const WebinarsAlt = ({ webinars = null }: WebinarsAltType) => {
 
   const webinarsFiltered = useMemo(() => {
     if (route.query.type && isRouteExist)
-      return webinars.filter(web => web.category === route.query.type)
-    return webinars
+      return webinarsASC.filter(web => web.category === route.query.type)
+    return webinarsASC
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [route.query.type, webinars])
+  }, [route.query.type, webinarsASC])
 
   return (
     <section className={stls.container}>
@@ -58,7 +60,9 @@ const WebinarsAlt = ({ webinars = null }: WebinarsAltType) => {
               <a
                 className={cn(
                   stls.catalogLink,
-                  (!route.query.type || !isRouteExist) && idx === 0  && stls.active,
+                  (!route.query.type || !isRouteExist) &&
+                    idx === 0 &&
+                    stls.active,
                   route.query.type === elem.title && stls.active
                 )}>
                 {elem.title}
@@ -78,18 +82,7 @@ const WebinarsAlt = ({ webinars = null }: WebinarsAltType) => {
                         date={webinar?.date}
                         name={webinar?.name}
                         category={webinar?.category}
-                        picture={
-                          <ImgWebinar
-                            src={webinar?.picture?.url}
-                            alt={webinar?.title}
-                            width={webinar?.picture?.width && 70}
-                            height={getImageHeight({
-                              width: 70,
-                              widthInitial: webinar?.picture?.width,
-                              heightInitial: webinar?.picture?.height
-                            })}
-                          />
-                        }
+                        picture={webinar?.picture?.url}
                         title={webinar?.title}
                       />
                     </a>
