@@ -559,6 +559,20 @@ const contact = async (req: NextApiRequest, res: NextApiResponse) => {
     res.status(500).json({ status: 500, err, msg: 'Unexpected server error' })
     console.error(err)
   }
+
+  const sendUnisenderMain = async (email: string) => {
+    try {
+      const key = '6n5zjpn19n8af3kr4sw7pgdmpryooziha6s99f6y'
+      const unisendlerRes =
+        await axios.get(`https://api.unisender.com/ru/api/subscribe?format=json&api_key=${key}&list_ids=7&fields[email]=${email}&tags=MIPO&double_optin=3&overwrite=0
+`)
+      console.log('Unisender request successful:', unisendlerRes.data)
+    } catch (error) {
+      console.error('Unisender in request:', error)
+    }
+  }
+
+  sendUnisenderMain(email)
 }
 
 export default contact
