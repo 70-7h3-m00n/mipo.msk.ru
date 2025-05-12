@@ -26,18 +26,6 @@ const sendLeadMagnitRequest = async (click_id: string, email: string) => {
   }
 }
 
-const sendUnisenderMain = async (email: string) => {
-  try {
-    const key = '6n5zjpn19n8af3kr4sw7pgdmpryooziha6s99f6y'
-    const unisendlerRes =
-      await axios.get(`https://api.unisender.com/ru/api/subscribe?format=json&api_key=${key}&list_ids=7&fields[email]=${email}&tags=MIPO&double_optin=3&overwrite=0
-`)
-    console.log('Unisender request successful:', unisendlerRes.data)
-  } catch (error) {
-    console.error('Unisender in request:', error)
-  }
-}
-
 const hitContactRoute = async values => {
   try {
     const res = await axios.post(`${routesFront.root}/api/contact`, {
@@ -63,7 +51,6 @@ const hitContactRoute = async values => {
       values.utms.utm_term
     ) {
       await sendLeadMagnitRequest(values.utms.utm_term, values.email)
-      await sendUnisenderMain(values.email)
     }
 
     return output
