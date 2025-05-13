@@ -1,14 +1,15 @@
 import stls from '@/styles/components/general/SwiperContainer.module.sass'
-import { useContext } from 'react'
+import { useContext, useRef } from 'react'
 import { useMediaQuery } from 'react-responsive'
 import Popup from 'reactjs-popup'
-import SwiperCore, { Navigation, Pagination, Grid } from 'swiper'
+import SwiperCore, { Navigation, Pagination, Grid, Autoplay } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import classNames from 'classnames'
 import ProgramContext from '@/context/program/programContext'
 import { PopupImage } from '../popups'
+import { IconArrowRight } from '../icons'
 
-SwiperCore.use([Navigation, Pagination])
+SwiperCore.use([Navigation])
 
 const SwiperContainer = ({
   teachers = false,
@@ -90,36 +91,52 @@ const SwiperContainer = ({
     return swiperOptions[currentLayoutKey].spaceBetween
   }
 
+  const swiperRef = useRef(null)
+  const handlePrev = () => swiperRef.current?.slidePrev()
+  const handleNext = () => swiperRef.current?.slideNext()
+  
   return (
-    <Swiper
-      enabled={checkIfSwiperEnabled()}
-      spaceBetween={getSpaceBetween()}
-      slidesPerView={assignNumOfSlidesPerView()}
-      modules={[Grid]}
-      grid={{
-        rows: isMultiRow && (isLaptopLayout || isDesktopLayout) ? 2 : 1,
-        fill: !isMobileLayout ? 'row' : 'column'
-      }}
-      pagination={{ clickable: true, dynamicBullets: true }}
-      className={classNames({
-        [stls.container]: true,
-        [stls.teachers]: teachers,
-        [stls.diplomas]: diplomas,
-        [stls.altStyles]: altStyles
-      })}>
-      {slides &&
-        slides.map((slide, idx) => (
-          <SwiperSlide key={`slide-${idx}`}>
-            {diplomas ? (
-              <Popup trigger={<div>{slide}</div>} modal nested>
-                {close => <PopupImage image={slide} close={close} />}
-              </Popup>
-            ) : (
-              slide
-            )}
-          </SwiperSlide>
-        ))}
-    </Swiper>
+    <>
+      <Swiper
+        enabled={checkIfSwiperEnabled()}
+        spaceBetween={getSpaceBetween()}
+        slidesPerView={assignNumOfSlidesPerView()}
+        modules={[Grid, Autoplay]}
+        autoplay={{ delay: 4000, disableOnInteraction: false }}
+        grid={{
+          rows: isMultiRow && (isLaptopLayout || isDesktopLayout) ? 2 : 1,
+          fill: !isMobileLayout ? 'row' : 'column'
+        }}
+        pagination={{ clickable: true, dynamicBullets: true }}
+        onSwiper={swiper => (swiperRef.current = swiper)}
+        className={classNames({
+          [stls.container]: true,
+          [stls.teachers]: teachers,
+          [stls.diplomas]: diplomas,
+          [stls.altStyles]: altStyles
+        })}>
+        {slides &&
+          slides.map((slide, idx) => (
+            <SwiperSlide key={`slide-${idx}`}>
+              {diplomas ? (
+                <Popup trigger={<div>{slide}</div>} modal nested>
+                  {close => <PopupImage image={slide} close={close} />}
+                </Popup>
+              ) : (
+                slide
+              )}
+            </SwiperSlide>
+          ))}
+      </Swiper>
+      <div className={stls.sliderControls}>
+        <button onClick={handlePrev} className={stls.controlBtn}>
+          <IconArrowRight classNames={[stls.left]} />
+        </button>
+        <button onClick={handleNext} className={stls.controlBtn}>
+          <IconArrowRight />
+        </button>
+      </div>
+    </>
   )
 }
 

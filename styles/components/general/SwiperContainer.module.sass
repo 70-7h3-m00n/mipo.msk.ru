@@ -40,3 +40,23 @@
     & > *:nth-child(1)
       & > *
         @include m.dye(bg, c.$nu-2)
+
+.sliderControls
+        display: flex
+        justify-content: center
+        gap: 10px
+        margin-top: 30px
+        & .left
+            transform: rotate(180deg)
+            
+.controlBtn
+    background-color: c.$color-blue-v3
+    color: c.$color-white
+    width: 42px
+    height: 42px
+    border-radius: 50%
+    display: flex
+    align-items: center
+    justify-content: center
+    & > div
+        width: 8px

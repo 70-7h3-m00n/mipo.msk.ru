@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Autoplay, Pagination, Navigation } from 'swiper'
+import { Autoplay, Pagination } from 'swiper'
 import 'swiper/css'
 import 'swiper/css/pagination'
 import Wrapper from '@/components/layout/Wrapper'
@@ -10,6 +10,7 @@ import cn from 'classnames'
 import Popup from 'reactjs-popup'
 import UniversalButton from '@/components/btns/UniversalButton'
 import { PopupCta } from '@/components/popups'
+import { IconArrowRight } from '@/components/icons'
 
 type SliderElement = {
   title: string
@@ -19,6 +20,8 @@ type SliderElement = {
 }
 
 export default function MySlider() {
+  const swiperRef = useRef(null)
+
   const data: SliderElement[] = [
     {
       title: 'Московский институт профессионального образования',
@@ -46,6 +49,9 @@ export default function MySlider() {
     }
   ]
 
+  const handlePrev = () => swiperRef.current?.slidePrev()
+  const handleNext = () => swiperRef.current?.slideNext()
+
   return (
     <section className={stls.component}>
       <Wrapper>
@@ -54,9 +60,10 @@ export default function MySlider() {
           slidesPerView={1}
           pagination={{ clickable: true }}
           onSlideChange={() => console.log('slide change')}
-          autoplay={{ delay: 3000, disableOnInteraction: false }}
-          modules={[Autoplay, Pagination, Navigation]}
-          navigation={true}>
+          autoplay={{ delay: 4000, disableOnInteraction: false }}
+          modules={[Autoplay, Pagination]}
+          navigation={false}
+          onSwiper={swiper => (swiperRef.current = swiper)}>
           {data.map((elem, idx) => (
             <SwiperSlide key={idx}>
               <div
@@ -114,6 +121,14 @@ export default function MySlider() {
             </SwiperSlide>
           ))}
         </Swiper>
+        <div className={stls.sliderControls}>
+          <button onClick={handlePrev} className={stls.controlBtn}>
+            <IconArrowRight classNames={[stls.left]}/>
+          </button>
+          <button onClick={handleNext} className={stls.controlBtn}>
+            <IconArrowRight  />
+          </button>
+        </div>
       </Wrapper>
     </section>
   )
