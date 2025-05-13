@@ -64,7 +64,7 @@ const HomePage = ({ programs, reviews, facultets }) => {
       <TrustedBy />
       <NewReviews reviews={reviews} />
       {/* <Reviews reviews={reviews} /> */}
-      <FormSimpleBlock />
+      <FormSimpleBlock newCommonPage={true}/>
 
       {/* <HowProcessGoes /> */}
       {/* <Cta
