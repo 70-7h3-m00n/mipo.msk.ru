@@ -27,6 +27,7 @@ type FormValues = {
   leadPage: string
   formName?: string | null
   isBlackBackground?: boolean
+  newCommonPage? : boolean
 }
 
 const FormSimpleBlock = ({
@@ -37,7 +38,8 @@ const FormSimpleBlock = ({
   agreement = false,
   formName = null,
   tarifPhycho = '',
-  isBlackBackground = false
+  isBlackBackground = false,
+  newCommonPage = false
 }) => {
   const {
     register,
@@ -157,7 +159,7 @@ const FormSimpleBlock = ({
   }
 
   return (
-    <div className={stls.wrapper}>
+    <div className={classNames(stls.wrapper, newCommonPage && stls.newCommonPage)}>
       <Wrapper>
         <Popup
           open={thanksIsOpen}

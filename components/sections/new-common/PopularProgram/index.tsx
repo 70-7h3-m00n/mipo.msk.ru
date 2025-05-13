@@ -12,6 +12,7 @@ import programsContext from '@/context/programs/programsContext'
 import CardWithiImage from '@/components/cards/CardWithImage'
 import CardWithoutImage from '@/components/cards/CardWithoutImage'
 import UniversalButton from '@/components/btns/UniversalButton'
+import Title from '@/components/parts/Title'
 
 type TSectionYourDiplomasAlt = TPropClassNames
 
@@ -79,6 +80,9 @@ const PopularProgram = ({ classNames }: TSectionYourDiplomasAlt) => {
   return (
     <div className={stls.container}>
       <Wrapper classNames={[stls.wrapper]}>
+        <Title fontSize={44} className={stls.title}>
+          Популярные программы
+        </Title>
         <div>
           <div className={stls.tabsblock}>
             {data.map((elem, index) => {

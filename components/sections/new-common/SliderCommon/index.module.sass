@@ -3,27 +3,8 @@
 @use '@/styles/config/Colors.module.sass' as c
 
 .component
-    position: relative
-    :global(.swiper-button-prev)
-        color: white
-        position: absolute
-        width: 20px
-        height: 20px
-        left: 10px
-
-    :global(.swiper-button-next)
-        color: white
-        position: absolute
-        width: 20px
-        height: 20px
-        right: 10px
-
-    :global(.swiper-button-prev)
-        left: 10px
-    :global(.swiper-button-next)
-        right: 10px
-    
-    padding-bottom: 50px
+    position: relative  
+    padding-bottom: 70px
     .slide
         display: flex
         align-items: center
@@ -63,3 +44,22 @@
                 &.blueBgBtn
                     background-color: c.$color-blue-v3
 
+    .sliderControls
+        display: flex
+        justify-content: center
+        gap: 10px
+        margin-top: 30px
+        & .left
+            transform: rotate(180deg)
+            
+    .controlBtn
+        background-color: c.$color-blue-v3
+        color: c.$color-white
+        width: 42px
+        height: 42px
+        border-radius: 50%
+        display: flex
+        align-items: center
+        justify-content: center
+        & > div
+            width: 8px

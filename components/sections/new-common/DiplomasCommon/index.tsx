@@ -43,7 +43,7 @@ const DiplomasCommon = ({ classNames }: TSectionYourDiplomasAlt) => {
         'Институт имеет лицензию образовательного учреждения. <span>Номер лицензии:</span> Л035-01298-77/00179971.',
         '<span>Диплом регистрируется в Федеральной информационной системе ФРДО</span>, что обеспечивает официальное признание документа на всей территории РФ.'
       ],
-      img: <ImgDiplomaTemplate src='/assets/imgs/hardereducation/bakalavrdiploma.jpg' />
+      img: <ImgDiplomaTemplate src='/assets/imgs/hardereducation/diplom-1.jpg' />
     }, 
     {
       title: 'Сертификат',
@@ -58,7 +58,7 @@ const DiplomasCommon = ({ classNames }: TSectionYourDiplomasAlt) => {
       list: [
         '<span>Диплом MBA</span> признается во всех странах мира, что открывает широкие перспективы для международной карьеры.'
       ],
-      img: <ImgDiplomaInternationalDiplomaSut />
+      img: <ImgDiplomaTemplate src='/assets/imgs/hardereducation/diplom-2.jpg' /> 
     }
   ]
   return (

@@ -3,7 +3,7 @@
 @use '@/styles/config/Colors.module.sass' as c
 
 .component
-    padding-bottom: 50px
+    padding-bottom: 60px
     .title
         @media (max-width: 1200px)
             font-size: 22px !important
@@ -16,3 +16,6 @@
             grid-template-columns: 1fr
     .card
         min-height: 145px
+        transition: transform 0.3s ease
+        &:hover
+            transform: scale(1.05)
