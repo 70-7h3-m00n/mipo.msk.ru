@@ -45,7 +45,7 @@ const NewHeader = () => {
     { title: 'Отзывы', link: '/reviews' },
     { title: 'Вебинары', link: '/webinars' },
     { title: 'Преподаватели', link: '/teachers' },
-    // { title: 'Вакансии', link: '/aboutCompany' }
+    { title: 'Об организации', link: '/legal' }
   ]
 
   return (

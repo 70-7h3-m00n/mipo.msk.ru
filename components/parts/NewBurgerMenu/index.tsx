@@ -23,7 +23,7 @@ const NewBurgerMenu = ({ menuLinks }: Props) => {
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden'
-      document.body.style.maxHeight = '90vh'
+      document.body.style.maxHeight = '80vh'
     } else {
       document.body.style.overflow = ''
       document.body.style.maxHeight = ''

@@ -58,7 +58,7 @@ const DiplomasCommon = ({ classNames }: TSectionYourDiplomasAlt) => {
       list: [
         '<span>Диплом MBA</span> признается во всех странах мира, что открывает широкие перспективы для международной карьеры.'
       ],
-      img: <ImgDiplomaTemplate src='/assets/imgs/hardereducation/diplom-2.jpg' /> 
+      img: <ImgDiplomaTemplate src='/assets/imgs/hardereducation/mba-diploma-2.png' /> 
     }
   ]
   return (
