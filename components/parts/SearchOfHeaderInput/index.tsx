@@ -86,7 +86,12 @@ const SearchOfHeaderInput = ({ className }: Props) => {
                   href={`/${generateLinkFromType(elem.category.type)}/${
                     elem.study_field.slug
                   }/${elem.slug}`}>
-                  <a className={stls.link}>{elem.title}</a>
+                  <a className={stls.link}>
+                    <div>
+                      <div className={stls.label}>{elem.category.label}</div>
+                      <div>{elem.title}</div>
+                    </div>
+                  </a>
                 </Link>
               )
           )
