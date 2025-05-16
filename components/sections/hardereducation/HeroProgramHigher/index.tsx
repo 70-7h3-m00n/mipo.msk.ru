@@ -10,12 +10,14 @@ import Wrapper from '@/components/layout/Wrapper'
 import ProgramLabel from '@/components/program/ProgramLabel'
 import ProgramInfoAlt from '@/components/program/ProgramInfoAlt'
 import PopupTrigger from '@/components/general/PopupTrigger'
-import { BtnBorderBlack } from '@/components/btns'
+import { BtnBorderBlack, BtnBorderWhite } from '@/components/btns'
 import { OpenForm } from '@/components/forms'
 import Image from 'next/image'
 import { useHigherProgramContext } from '@/context/highereducation/ProgramHigherContext'
 import UniversalProgramInfo from '@/components/program/UniversalProgramInfo'
 import Link from 'next/link'
+import IconSpringElement from '@/components/icons/IconSpringElement'
+import IconLineElement from '@/components/icons/IconLineElement'
 
 const HeroProgramHigher = () => {
   const program = useHigherProgramContext()
@@ -30,6 +32,12 @@ const HeroProgramHigher = () => {
     <section className={rootClassNames}>
       <Wrapper>
         <div className={cn(stls.top, stls.gridTemplate)}>
+          <div className={stls.bgElement}>
+            <div className={cn(stls.blurryCircle, stls.down)}></div>
+            <div className={cn(stls.blurryCircle, stls.top)}></div>
+            <div className={stls.springIcon}><IconSpringElement /></div>
+            <div className={stls.lineIcon}><IconLineElement /></div>
+          </div>
           <div className={cn(stls.heading)}>
             <div className={stls.breadcreambs}>
               <Link href='/'>Главная</Link>
@@ -42,7 +50,7 @@ const HeroProgramHigher = () => {
               <span>{program.name}</span>
             </div>
             <div className={stls.label}>
-              <ProgramLabel color='black' text='Онлайн-бакалавриат' />
+              <ProgramLabel color='white' text='Онлайн-бакалавриат' />
             </div>
             {/* <div className={stls.label}>
               <ProgramLabel color='purple' text='Расширенный курc' needIcon />
@@ -64,38 +72,18 @@ const HeroProgramHigher = () => {
             </div>
             <div className={cn(stls.btnsDesktop)}>
               <PopupTrigger btn='alpha' cta='signUpForCourse' />
-
-              <BtnBorderBlack text='Как поступить' scrollToID='howcanistudy' />
+              <BtnBorderWhite text='Как поступить' scrollToID='howcanistudy' />
             </div>
           </div>
 
           <div className={cn(stls.form, altStyles && stls.altStyles)}>
-            <div className={stls.giftPictureContainer}>
-              <div className={stls.giftPicture}>
-                <Image
-                  src='/assets/imgs/new-course/gift.png'
-                  alt='Ветка'
-                  layout='fill'
-                />
-              </div>
-            </div>
-
-            <OpenForm isHigherEducation={true} cta='Получить консультацию'/>
+            <OpenForm isHigherEducation={true} cta='Получить консультацию' />
           </div>
           <div className={stls.info}>
-            <ProgramInfoAlt isHigherEducation={true}/>
+            <ProgramInfoAlt isHigherEducation={true} />
           </div>
         </div>
       </Wrapper>
-      <div className={stls.treePictureContainer}>
-        <div className={stls.treePicture}>
-          <Image
-            src='/assets/imgs/hardereducation/bgElipses.png'
-            alt='Фон'
-            layout='fill'
-          />
-        </div>
-      </div>
     </section>
   )
 }

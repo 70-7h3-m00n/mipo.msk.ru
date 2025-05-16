@@ -3,6 +3,7 @@
 @use '@/styles/config/Colors.module.sass' as c
 
 .container
+  overflow: hidden
   overflow: visible
   & > *
     position: relative
@@ -12,7 +13,8 @@
   @include m.media(laptop, desktop)
     padding-top: f.px(50)
     padding-bottom: f.px(50)
-  display: grid
+  display: grid 
+  padding-top: 50px !important
 
 .top
   @include m.media(laptop, desktop)
@@ -30,34 +32,6 @@ $heading_ld_altStyles_mr: 12%
     justify-content: center
     align-items: start
     margin-right: $heading_ld_altStyles_mr
-
-.treePictureContainer
-  position: absolute
-  bottom: -400px
-  right: 100px
-  bottom: -300px
-  right: 335px
-  z-index: -1
-  width: 800px
-  height: 800px
-  .treePicture 
-    width: 800px
-    height: 800px
-    z-index: -1
-    position: relative
-    img
-      object-fit: contain
-      object-position: center
-
-.giftPictureContainer
-  position: absolute
-  top: -120px
-  left: -155px
-  transform: rotate(-20deg)
-  .giftPicture 
-    width: 395px
-    height: 395px
-    position: relative
 
 .form
   grid-area: form
@@ -81,10 +55,10 @@ $heading_ld_altStyles_mr: 12%
     // max-width: 15ch
     max-width: 20ch
     margin-bottom: f.px(29)
-    font-size: f.px(64)
+    font-size: f.px(60)
   font-weight: 500
   line-height: 110%
-  @include m.dye(c, c.$theta)
+  @include m.dye(c, c.$color-white)
 
 .description
   &.hidden
@@ -110,16 +84,12 @@ $heading_ld_altStyles_mr: 12%
     & p
       max-width: 45ch
       font-size: f.px(20)
-      font-weight: 500
+      font-weight: 400
       &:nth-last-child(1)
         margin-bottom: 0
       & strong
         font-weight: 500
-    &.altStyles
-      & p
-        font-weight: 500
-        line-height: 130%
-  @include m.dye(c, c.$theta)
+  @include m.dye(c, c.$color-white)
   font-weight: 500
   line-height: 1.3
 
@@ -224,10 +194,12 @@ $heading_ld_altStyles_mr: 12%
     display: flex
     align-self: start
     width: 100%
-    & > *
-      width: 100%
-      & > *
-        width: 100%
+    & button
+      width: 270px
+    & > div
+      & button
+        background-color: c.$color-blue
+        border: 0
     & > *:nth-child(1)
       margin-right: f.px(30)
 
@@ -239,11 +211,80 @@ $heading_ld_altStyles_mr: 12%
   @include m.media(laptop, desktop)
     bottom: f.px(-210)
   width: 100%
+  & > div
+    position: relative
+    top: 30px
+    @include m.media(phone, tablet)
+      top: 0
 
 .gridTemplate
+  position: relative
   display: grid
   gap: 40px
   grid-template-areas: "heading form" "info info"
+  .bgElement
+    position: absolute
+    top: -50px
+    border-radius: 50px
+    left: 0
+    width: 115%
+    height: 100%
+    left: 50%
+    transform: translateX(-50%)
+    background-color: c.$mu-2
+    z-index: -1
+    overflow: hidden
+    @include m.media(phone, tablet)
+      border-radius: 20px
+      width: 100vw
+      height: 104%
+      bottom: -50px
+    .blurryCircle
+      width: 450px
+      height: 450px
+      opacity: 0.6
+      background: radial-gradient(circle, c.$color-blue, transparent)
+      filter: blur(50px)
+      border-radius: 50%
+      position: absolute
+      z-index: -1
+      &.down
+        bottom: -100px
+        left: -100px
+        @include m.media(phone, tablet)
+          bottom: 200px
+      &.top
+        top: -50px
+        right: -100px
+        @include m.media(phone, tablet)
+          top: -150px
+          left: -150px
+    .springIcon
+      width: 50px
+      height: 50px
+      position: absolute
+      top: 80px
+      left: 50%
+      transform: translateX(-50%)
+      @include m.media(phone, tablet)
+        left: 10px
+        top: 1300px
+      & svg
+        width: 100%
+        height: 100%
+    .lineIcon
+      width: 350px
+      height: 690px
+      position: absolute
+      top: 120px
+      left: 50%
+      transform: translateX(-50%)
+      @include m.media(phone, tablet)
+        display: none
+      & svg
+        width: 100%
+        height: 100%
+
   @include m.media(phone, tablet)
     gap: 20px
     grid-template-areas: "heading" "info" "form"
