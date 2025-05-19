@@ -1,13 +1,15 @@
 import stls from '@/styles/components/popups/PopupImage.module.sass'
 import { BtnClose } from '@/components/btns'
-
-const PopupImage = ({ image, close }) => {
+import cn from 'classnames'
+const PopupImage = ({ image, close, forDiplomas = false }) => {
   return (
     <div className={stls.container}>
       <div className={stls.close}>
         <BtnClose onClick={close} />
       </div>
-      <div className={stls.image}>{image}</div>
+      <div className={cn(stls.image, forDiplomas && stls.forDiplomas)}>
+        {image}
+      </div>
     </div>
   )
 }

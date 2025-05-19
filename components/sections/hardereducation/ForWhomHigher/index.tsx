@@ -31,41 +31,40 @@ const ForWhomHigher = () => {
       desc: 'Перевод осуществляется без потери курса'
     },
     {
-      title: 'У тебя хорошие баллы ЕГЭ? Получи скидку на обучение!*',
-      desc: '*Скидка 20% при наличии результатов ЕГЭ от 230 баллов по сумме трех предметов'
-    },
-    {
       title: 'У кого уже есть среднее профессиональное или высшее образование',
       desc: 'Без ЕГЭ, вне зависимости имеющегося профиля, по ускоренной программе с сокращением срока обучения до 3.6 лет*'
+    },
+    {
+      title: 'У тебя хорошие баллы ЕГЭ? Получи скидку на обучение!*',
+      desc: '*Скидка 20% при наличии результатов ЕГЭ от 230 баллов по сумме трех предметов'
     }
   ]
 
   return (
     <section className={cn(stls.container)}>
       <Wrapper>
-        <Title as='h2' className={stls.title}>Для кого программа</Title>
+        <Title as='h2' className={stls.title}>
+          Для кого программа
+        </Title>
 
         <div className={stls.lineElements}>
-          <div className={stls.imageWrapper}>
-            <Image
-              alt='Картинка с мужчиной'
-              src='/assets/imgs/hardereducation/man.jpg'
-              layout='fill'
-            />
-          </div>
           {data.map((elem, key) => (
             <div
               key={elem.title}
-              className={cn(stls.elemOfLine, key === 2 && stls.active)}>
+              className={cn(stls.elemOfLine, key === 3 && stls.active)}>
               <div>
                 <div className={stls.title}>{elem.title}</div>
                 <div className={stls.desc}>{elem.desc}</div>
-                {key === 3 && <div className={stls.smalltext}>*при допустимой академической разнице</div>}
+                {key === 2 && (
+                  <div className={stls.smalltext}>
+                    *при допустимой академической разнице
+                  </div>
+                )}
               </div>
             </div>
           ))}
         </div>
-        <BlockDoubtingYourScores textColor='black'/>
+        <BlockDoubtingYourScores textColor='white' backGroundColor='#2663F0' buttonColor='white'/>
       </Wrapper>
     </section>
   )

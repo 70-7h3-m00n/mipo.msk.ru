@@ -17,6 +17,8 @@ import { SALE_DATE_VALUE, SALE_VALUE } from '@/lib/constant'
 import { useHigherProgramContext } from '@/context/highereducation/ProgramHigherContext'
 import UniversalButton from '@/components/btns/UniversalButton'
 import { PopupCta } from '@/components/popups'
+import ProgramAdmission from '@/components/program/ProgramAdmission'
+import calculateClosestAdmission from '@/helpers/calculateClosestAdmission'
 
 interface Props {
   isForOtherTariff?: boolean
@@ -28,24 +30,24 @@ const StudyCoastHigher = ({}: Props) => {
 
   const dataList = [
     {
-      title:
-        'Онлайн вебинары с возможностью просмотра записей в течение всего курса обучения'
+      title: 'Образовательный кредит от Сбера',
+      logo: '/assets/imgs/hardereducation/sber.svg'
     },
     {
-      title: 'Тестирование и работа над ошибками после каждой дисциплины'
+      title: 'Рассрочка от Т-банка',
+      logo: '/assets/imgs/hardereducation/tbank.svg'
     },
     {
-      title: 'Лекционные и полезные дополнительные материалы к дисциплинам'
+      title: 'Длительность обучения - 4 года 6 месяцев'
     },
     {
-      title:
-        'Индивидуальные и групповые домашние задания с обратной связью от преподавателей'
+      title: 'Дистанционно'
     },
     {
-      title: 'Онлайн-встречи с разбором вопросов от слушателей'
+      title: 'Ближайшее зачисление - ' + calculateClosestAdmission()
     },
     {
-      title: 'Практические упражнения с решением ситуационных задач '
+      title: 'Государственный диплом'
     }
   ]
 
@@ -61,30 +63,31 @@ const StudyCoastHigher = ({}: Props) => {
 
         <div className={cn(stls.columns)}>
           <div>
-            <Title as='div' color='black' fontSize={22}>
-              Стоимость за семестр
-            </Title>
-            <div className={stls.label}>Скидка {SALE_VALUE}%</div>
+            <div className={stls.titleWrapper}>
+              <Title
+                as='div'
+                color='black'
+                fontSize={22}
+                className={stls.title}>
+                Оплата за семестр
+              </Title>
+              <div className={stls.label}>- {SALE_VALUE}%</div>
+            </div>
+            <div className={stls.textInstallments}>
+              Можно в рассрочку (при оплате стоимости обучения от 1 года)
+            </div>
+            <div className={stls.subtitleText}>
+              Стоимость программы при оплате за семестр:
+            </div>
             <div className={stls.oldPrice}>
               {toNumberWithSpaces(
-                roundingUpPriceOrNumber(priceWithoutSale / 24 / 2)
-              )}
-              ₽/мес
-            </div>
-            <div className={stls.newPrice}>
-              <div>
-                {toNumberWithSpaces(roundingUpPriceOrNumber(price / 24 / 2))}
-                ₽/мес
-              </div>
-              <div className={stls.subtitle}>в рассрочку на 24 месяца</div>
+                roundingUpPriceOrNumber((price / 2 / 100) * (100 + SALE_VALUE))
+              )}{' '}
+              ₽
             </div>
             <div className={stls.fullPrice}>
               <div>
-                {toNumberWithSpaces(roundingUpPriceOrNumber(price / 2))}
-                ₽/мес
-              </div>
-              <div className={stls.subtitle}>
-                оплата за один семестр обучения
+                {toNumberWithSpaces(roundingUpPriceOrNumber(price / 2))} ₽
               </div>
             </div>
             <Popup
@@ -98,38 +101,48 @@ const StudyCoastHigher = ({}: Props) => {
               }
               modal
               nested>
-              {close => <PopupCta title='Заявка оплата за семестр' close={close} />}
+              {close => (
+                <PopupCta title='Заявка оплата за семестр' close={close} />
+              )}
             </Popup>
           </div>
           <div>
-            <Title
-              as='div'
-              color='black'
-              fontSize={22}
-              className={stls.commonTitle}>
-              Стоимость за год
-            </Title>
-            <div className={stls.label}>Скидка {SALE_VALUE}%</div>
+            <div className={stls.titleWrapper}>
+              <Title
+                as='div'
+                color='black'
+                fontSize={22}
+                className={stls.commonTitle}>
+                Оплата за год
+              </Title>
+              <div className={stls.label}>- {SALE_VALUE}%</div>
+            </div>
+            <div className={cn(stls.subtitleText, stls.whiteText)}>
+              Стоимость программы при оплате за семестр:
+            </div>
+
             <div className={stls.oldPrice}>
               {toNumberWithSpaces(
                 roundingUpPriceOrNumber(priceWithoutSale / 24)
               )}
-              ₽/мес
+              ₽
             </div>
             <div className={stls.newPrice}>
               <div>
-                {toNumberWithSpaces(roundingUpPriceOrNumber(price / 24))}
+                от {toNumberWithSpaces(roundingUpPriceOrNumber(price / 24))}{' '}
                 ₽/мес
               </div>
-              <div className={stls.subtitle}>в рассрочку на 24 месяца</div>
             </div>
-            <div className={stls.fullPrice}>
-              <div>
-                {toNumberWithSpaces(roundingUpPriceOrNumber(price))}
-                ₽/мес
-              </div>
+            <div className={stls.oldFullPrice}>
+              {toNumberWithSpaces(
+                roundingUpPriceOrNumber((price / 100) * (100 + SALE_VALUE))
+              )}
+              ₽
+            </div>
+            <div className={stls.fullPriceCenterBlock}>
+              <div>{toNumberWithSpaces(roundingUpPriceOrNumber(price))}₽</div>
               <div className={stls.subtitle}>
-                оплата за один семестр обучения
+                Беспроцентная рассрочка на 12 месяцев
               </div>
             </div>
             <Popup
@@ -157,6 +170,14 @@ const StudyCoastHigher = ({}: Props) => {
                     classNames={[stls.icon]}
                   />
                   {elem.title}
+                  {elem.logo && (
+                    <Image
+                      src={elem.logo}
+                      width={82}
+                      height={47}
+                      alt='Логотип банка'
+                    />
+                  )}
                 </li>
               ))}
             </ul>

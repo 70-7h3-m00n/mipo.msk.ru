@@ -26,10 +26,11 @@ const PagesHigherProgram = ({ ofType = null, reviews }: PagesProgramType) => {
       <HeroProgramHigher />
       <WhyDoYouNeedLearningHigher />
       <ForWhomHigher />
-      <InformationOnDirection />
-      <WhatYouWillLearnHigher />
       <AdmissionSteps backGroundColor='white' />
+      <InformationOnDirection />
+
       <BriefProgramContentsHigher />
+      <WhatYouWillLearnHigher />
       <DiplomasHigher />
       <StudyCoastHigher />
       <FormSimpleBlock />

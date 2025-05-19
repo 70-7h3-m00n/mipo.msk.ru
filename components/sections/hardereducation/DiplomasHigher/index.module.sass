@@ -125,7 +125,7 @@ $leftright_ld_difference: 1%
     font-size: f.px(15)
   @include m.media(laptop, desktop)
     font-size: f.px(20)
-  font-weight: 500
+  font-weight: 400
   line-height: 130%
   @include m.dye(c, c.$kappa)
 
@@ -142,7 +142,8 @@ $leftright_ld_difference: 1%
     @include m.dye(c, rgba(c.$nu, .5))
   display: flex
   justify-content: space-between
-  font-weight: 300
+  align-items: center
+  font-weight: 500
   @include m.media(phone, tablet)
     margin-top: f.px(50)
     padding: f.px(20)
@@ -155,12 +156,25 @@ $leftright_ld_difference: 1%
   max-height: f.px(14)
   margin-left: 6%
 
+.imagesWrapper
+  display: grid
+  grid-template-columns: 1fr 1fr
+  gap: 30px
+  margin-top: 50px
+  @include m.media(phone, tablet)
+    grid-template-columns: 1fr
+    gap: 0
+    margin-top: 30px
+
 .diploma
   display: block
   max-height: 455px
-  
+  position: relative
+  width: 100%
+  height: 400px
   @include m.media(phone, tablet)
     margin-bottom: f.px(30)
+    height: 300px
   overflow: hidden
   border-radius: f.px(25)
   img 

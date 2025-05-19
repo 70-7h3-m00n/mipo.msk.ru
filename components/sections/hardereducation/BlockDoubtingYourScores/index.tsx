@@ -8,14 +8,20 @@ import { PopupCta } from '@/components/popups'
 interface Props {
   image?: string
   textColor?: 'white' | 'black'
+  backGroundColor?: string
+  buttonColor?: 'white' | 'blue'
 }
 
 const BlockDoubtingYourScores = ({
   image = '/assets/imgs/hardereducation/circleImage.jpg',
-  textColor = 'white'
+  textColor = 'white',
+  backGroundColor,
+  buttonColor = 'blue'
 }: Props) => {
+  const styleRoot = { backgroundColor: backGroundColor || 'transparent' }
+
   return (
-    <div className={stls.component}>
+    <div className={stls.component} style={styleRoot}>
       <div>
         <div className={stls.circleImage}>
           <Image src={image} alt='Картинка с девушкой' layout='fill' />
@@ -33,8 +39,8 @@ const BlockDoubtingYourScores = ({
       <Popup
         trigger={
           <UniversalButton
-            colorText='white'
-            bgColor='blue'
+            colorText={buttonColor === 'white' ? 'black' : 'white'}
+            bgColor={buttonColor === 'white' ? 'white' : 'blue'}
             className={stls.btn}>
             Узнать
           </UniversalButton>
