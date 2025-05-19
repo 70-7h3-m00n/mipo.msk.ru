@@ -12,5 +12,12 @@
   right: f.px(-4)
 
 .image 
+  &.forDiplomas
+    width: 700px
+    height: 500px
+    @media (max-width: 720px)
+      width: 700px
+      min-height: 400px
   img 
     width: 100%
+    object-fit: cover

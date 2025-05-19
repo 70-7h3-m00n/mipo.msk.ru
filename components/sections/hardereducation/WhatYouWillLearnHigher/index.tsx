@@ -4,6 +4,7 @@ import Wrapper from '@/components/layout/Wrapper'
 import ProgramContext from '@/context/program/programContext'
 import { useContext } from 'react'
 import Title from '@/components/parts/Title'
+import IconCircleChecType3 from '@/components/icons/IconCircleChecType3'
 
 const WhatYouWillLearnHigher = () => {
   const { program } = useContext(ProgramContext)
@@ -26,6 +27,7 @@ const WhatYouWillLearnHigher = () => {
         <div className={stls.whatYouWillLearn}>
           {data.map(({ item }, idx: number) => (
             <div key={idx} className={stls.item}>
+              <IconCircleChecType3 />
               {item}
             </div>
           ))}

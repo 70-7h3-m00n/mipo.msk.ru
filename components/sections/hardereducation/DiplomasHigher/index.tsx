@@ -23,51 +23,18 @@ import {
 import { BtnZeta } from '@/components/btns'
 import Title from '@/components/parts/Title'
 import ImgDiplomaInternationalDiplomaSut from '@/components/imgs/diplomas/ImgDiplomaInternationalDiplomaSut'
+import Image from 'next/image'
 
 type TSectionYourDiplomasAlt = TPropClassNames
 
 const DiplomasHigher = ({ classNames }: TSectionYourDiplomasAlt) => {
   const { program } = useContext(ProgramContext)
-  const altStyles =
-    program?.category?.type === 'mba' ||
-    program?.category?.type === 'profession'
 
-  const [activeTab, setActiveTab] = useState<number>(1)
-
-  const data = [
-    {
-      title: 'Диплом',
-      subtitle: 'Диплом установленного образца',
-      text: '<span>Завершив обучение в МИПО, вы получите диплом</span>, признанный на государственном уровне и соответствующий всем стандартам.',
-      list: [
-        'Институт имеет лицензию образовательного учреждения. <span>Номер лицензии:</span> Л035-01298-77/00179971.',
-        '<span>Диплом регистрируется в Федеральной информационной системе ФРДО</span>, что обеспечивает официальное признание документа на всей территории РФ.'
-      ],
-      img: <ImgDiplomaTemplate src='/assets/imgs/hardereducation/bakalavrdiploma.jpg' />
-    }, 
-    {
-      title: 'Сертификат',
-      subtitle: 'Сертификат',
-      text: 'Мы проводим обучение на основании <span>государственной образовательной лицензии</span> №Л035-01298-77/00179971  Наши выпускники также получают электронный сертификат об успешном прохождении курса.',
-      img: <ImgCertificate />
-    },
-    // {
-    //   title: 'MBA',
-    //   subtitle: 'Международный диплом MBA PSY',
-    //   text: 'Наши выпускники получают диплом <span>Master of business psychology</span>',
-    //   list: [
-    //     '<span>Диплом MBA</span> признается во всех странах мира, что открывает широкие перспективы для международной карьеры.'
-    //   ],
-    //   img: <ImgDiplomaInternationalDiplomaSut />
-    // }
-  ]
   return (
     <div className={stls.container} id='diplom'>
       <Wrapper>
         <div>
-          <Title className={stls.title}>
-            Диплом о профессиональной переподготовке подтвердит вашу квалификацию
-          </Title>
+          <Title className={stls.title}>Ваши будущие дипломы</Title>
           <div className={stls.content}>
             <div className={stls.left}>
               <p className={stls.p}>
@@ -80,71 +47,74 @@ const DiplomasHigher = ({ classNames }: TSectionYourDiplomasAlt) => {
               <BtnZeta
                 href={routesExternal.licence}
                 target='_blank'
-                classNames={[
-                  cn(stls.licenceLink, { [stls.altStyles]: altStyles })
-                ]}>
-                <span>
-                  Уведомление о предоставлении лицензии <br />
-                  <span className={stls.highlight}>№041221</span>
-                </span>
-                <IconGeneralArrowRightAlt
-                  classNames={[stls.IconGeneralArrowRightAlt]}
-                />
+                classNames={[cn(stls.licenceLink)]}>
+                <span>Образовательная лицензия</span>
+                <Image
+                  alt='Лицензия'
+                  width={84}
+                  height={105}
+                  src='/assets/imgs/hardereducation/license_prew.png'></Image>
               </BtnZeta>
             </div>
           </div>
         </div>
-        <div>
-          <div className={stls.tabsblock}>
-            {data.map((elem, index) => {
-              return (
-                <div
-                  key={index}
-                  className={activeTab == index + 1 && stls.active}
-                  onClick={() => setActiveTab(index + 1)}>
-                  {elem.title}
-                </div>
-              )
-            })}
-          </div>
-          <div className={stls.innerTabBlock}>
-            <div>
-              <div className={stls.titleTabBlock}>{data[activeTab - 1].subtitle}</div>
-              {data[activeTab - 1].text && (
-                <div className={stls.textTabBlock}
-                  dangerouslySetInnerHTML={{ __html: data[activeTab - 1].text }}
+        <div className={stls.imagesWrapper}>
+          <Popup
+            trigger={
+              <a href='#!' className={stls.diploma}>
+                <Image
+                  layout='fill'
+                  src='/assets/imgs/hardereducation/diplom-1-h.jpg'
+                  alt='Диплом высшего образования'
                 />
-              )}
-
-              <ul className={stls.list}>
-                {data[activeTab - 1].list &&
-                  data[activeTab - 1].list.map((li, index) => (
-                    <li key={index}>
-                      <IconGeneralCircleCheckAlt color1='#2663F0' />
-                      <span dangerouslySetInnerHTML={{ __html: li }}></span>
-                    </li>
-                  ))}
-              </ul>
-            </div>
-            <div>
-              {data[activeTab - 1].img && (
-                <Popup
-                  trigger={
-                    <a href='#!' className={stls.diploma}>
-                      {data[activeTab - 1].img}
-                    </a>
-                  }
-                  modal
-                  lockScroll
-                  nested
-                  closeOnDocumentClick>
-                  {close => (
-                    <PopupImage image={data[activeTab - 1].img} close={close} />
-                  )}
-                </Popup>
-              )}
-            </div>
-          </div>
+              </a>
+            }
+            modal
+            lockScroll
+            nested
+            closeOnDocumentClick>
+            {close => (
+              <PopupImage
+                forDiplomas={true}
+                image={
+                  <Image
+                    layout='fill'
+                    src='/assets/imgs/hardereducation/diplom-1-h.jpg'
+                    alt='Диплом высшего образования'
+                  />
+                }
+                close={close}
+              />
+            )}
+          </Popup>
+          <Popup
+            trigger={
+              <a href='#!' className={stls.diploma}>
+                <Image
+                  layout='fill'
+                  src='/assets/imgs/hardereducation/diplom-2-h.jpg'
+                  alt='Диплом высшего образования'
+                />
+              </a>
+            }
+            modal
+            lockScroll
+            nested
+            closeOnDocumentClick>
+            {close => (
+              <PopupImage
+                forDiplomas={true}
+                image={
+                  <Image
+                    layout='fill'
+                    src='/assets/imgs/hardereducation/diplom-2-h.jpg'
+                    alt='Диплом высшего образования'
+                  />
+                }
+                close={close}
+              />
+            )}
+          </Popup>
         </div>
       </Wrapper>
     </div>

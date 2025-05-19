@@ -8,10 +8,10 @@
     .title 
       font-size: 22px !important
   @include m.media(laptop, desktop)
-    padding-top: f.px(90)
+    padding-top: f.px(0)
     padding-bottom: f.px(90)
     
-  background-color: c.$color-verywhite-blue
+  // background-color: c.$color-verywhite-blue
   .active
     background-color: c.$color-blue
     & .title, & .desc
@@ -28,16 +28,6 @@
     color: c.$color-black
     @include m.media(phone, tablet)
       margin-top: 20px
-    .imageWrapper
-        border-radius: 100px  0 100px 0 
-        overflow: hidden
-        grid-row: span 2
-        position: relative
-        & img
-          width: 100%
-          object-fit: cover
-        @include m.media(phone, tablet)
-          min-height: 200px
         
     @include m.media(phone, tablet)
       gap: 10px
@@ -48,13 +38,15 @@
       flex-shrink: 0
       flex-grow: 0
       gap: 20px
+      min-height: 224px
       flex-direction: column
-      align-items: start
-      justify-content: center
+      align-content: start
+      justify-content: start
       border: 1px solid c.$color-blue
       padding: 30px
       border-radius: 25px
       @include m.media(phone, tablet)
+        min-height: auto
         flex-grow: 1
         max-width: none
         flex-direction: row

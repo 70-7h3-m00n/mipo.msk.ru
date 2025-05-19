@@ -4,57 +4,51 @@
 
 .container
   @include m.media(phone, tablet)
-    padding-top: f.px(50)
+    padding-top: f.px(0)
+    .titleh2
+      font-size: 26px !important
   @include m.media(laptop, desktop)
     padding-top: f.px(50)
     padding-bottom: f.px(137)
 
-  .lineElements
-    display: flex
-    gap: 30px
-    min-height: 270px
-    font-weight: 500
-    line-height: normal
-    color: c.$color-white
+  .gridTemplate
+    display: grid
+    grid-template-columns: 1fr 1fr
+    gap: 20px
     margin-top: 50px
     @include m.media(phone, tablet)
-      flex-direction: column
-
+      grid-template-columns: 1fr
+      gap: 20px
+      margin-top: 30px
+  
+  .imageWrapper
+    position: relative
+    border-radius: 100px 0 100px 0 
+    overflow: hidden
+    & img
+      width: 100%
+      height: 100%
+      object-fit: cover
+      object-position: center
+    @include m.media(phone, tablet)
+      height: 230px
+      width: 100%
+  .lineElements 
+    display: flex
+    flex-direction: column
+    gap: 30px
+    
     .elemOfLine
       display: flex
-      flex-shrink: 0
-      flex-grow: 0
-      max-width: 270px
-      
-      padding: 25px
-      gap: 10px
-      flex-direction: column
-      align-items: center
-      justify-content: center
-      text-align: center
-      background-color: c.$color-blue
-      border-radius: 50%
-      .title
+      gap: 20px
+      align-items: start
+      & .title
         font-size: 22px
-
-      .desc
-        font-size: 16px
-        font-weight: 300
-      background-color: transparent
-      border: 1px solid c.$color-blue
-      .title 
-        color: c.$color-blue
-      .desc
-        color: c.$color-black
-      &:nth-child(odd)
-        border-radius: 35px 5px 5px 5px
-       
-      &:nth-child(even)
-        border-radius: 5px 35px 5px 5px
-      @include m.media(phone, tablet)
-        max-width: none
-        border-radius: 10px
-      
-      
-
-      
+        font-weight: 500
+      & .desc
+        font-size: 18px
+        font-weight: 400
+        margin-top: 20px
+      & svg
+        width: 20px
+        height: 20px
