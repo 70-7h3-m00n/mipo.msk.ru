@@ -9,6 +9,8 @@ import Wrapper from '@/components/layout/Wrapper'
 import { ImgForWhom, ImgForWhomPhoneTablet } from '@/components/imgs'
 import { useRouter } from 'next/router'
 import Title from '@/components/parts/Title'
+import Image from 'next/image'
+import { IconGeneralCircleCheckAlt } from '@/components/icons'
 
 const WhyDoYouNeedLearningHigher = () => {
   const route = useRouter()
@@ -36,14 +38,26 @@ const WhyDoYouNeedLearningHigher = () => {
   return (
     <section className={cn(stls.container)}>
       <Wrapper>
-        <Title as='h2'>Открой для себя новые возможности</Title>
-        <div className={stls.lineElements}>
-          {data.map(elem => (
-            <div key={elem.title} className={stls.elemOfLine}>
-              <div className={stls.title}>{elem.title}</div>
-              <div className={stls.desc}>{elem.desc}</div>
-            </div>
-          ))}
+        <div className={stls.gridTemplate}>
+          <div className={stls.lineElements}>
+            <Title as='h2' className={stls.titleh2}>Открой для себя новые возможности</Title>
+            {data.map(elem => (
+              <div key={elem.title} className={stls.elemOfLine}>
+                <IconGeneralCircleCheckAlt color1='#2663F0' />
+                <div className={stls.textWrapper}>
+                  <div className={stls.title}>{elem.title}</div>
+                  <div className={stls.desc}>{elem.desc}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className={stls.imageWrapper}>
+            <Image
+              alt='Картинка с мужчиной'
+              src='/assets/imgs/hardereducation/man.jpg'
+              layout='fill'
+            />
+          </div>
         </div>
       </Wrapper>
     </section>
