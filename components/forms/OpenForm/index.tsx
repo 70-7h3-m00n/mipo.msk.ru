@@ -25,7 +25,7 @@ type FormValues = {
   question: string
   leadPage: string
   formName?: string | null
-  isHigherEducation?: boolean
+  isHigherEducation?: boolean,
 }
 
 const OpenForm = ({
@@ -36,7 +36,8 @@ const OpenForm = ({
   agreement = false,
   formName = null,
   tarifPhycho = '',
-  isHigherEducation = false
+  isHigherEducation = false,
+  className = ''
 }) => {
   const {
     register,
@@ -193,7 +194,7 @@ const OpenForm = ({
       </Popup>
 
       <form method='post' onSubmit={handleSubmit(data => onSubmit(data))}>
-        <div className={classNames(stls.component)}>
+        <div className={classNames(stls.component, className)}>
           <div className={classNames(stls.discount, stls.altStyles)}>
             {program?.category?.type !== 'mba' &&
               (isHigherEducation ? (
