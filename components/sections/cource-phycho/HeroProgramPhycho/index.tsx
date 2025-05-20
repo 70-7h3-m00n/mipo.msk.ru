@@ -13,6 +13,7 @@ import PopupTrigger from '@/components/general/PopupTrigger'
 import { BtnBorderBlack } from '@/components/btns'
 import { OpenForm } from '@/components/forms'
 import Image from 'next/image'
+import IconPaper from '@/components/icons/phychology/IconPaper'
 
 const HeroProgramPhycho = () => {
   const { program } = useContext(ProgramContext)
@@ -22,10 +23,7 @@ const HeroProgramPhycho = () => {
 
   const { curProgramsType } = useContext(ProgramsContext)
 
-  const rootClassNames = cn(
-    stls.container,
-    selectors.sectionHero
-  )
+  const rootClassNames = cn(stls.container, selectors.sectionHero)
 
   return (
     <section className={rootClassNames}>
@@ -70,8 +68,18 @@ const HeroProgramPhycho = () => {
                     : 'signUp'
                 }
               />
-              
-              <BtnBorderBlack text='Посмотреть программу' scrollToID='program'/>
+
+              <BtnBorderBlack
+                text='Посмотреть программу'
+                scrollToID='program'
+              />
+            </div>
+            <div className={stls.gift}>
+              <div className={stls.giftIcon}>
+                <IconPaper />
+              </div>
+              Оставьте заявку и получите гайд «Основные виды и методы
+              психотерапии и практической психологии» в подарок
             </div>
           </div>
 
@@ -80,12 +88,12 @@ const HeroProgramPhycho = () => {
               <div className={stls.giftPicture}>
                 <Image
                   src='/assets/imgs/new-course/gift.png'
-                  alt='Ветка'
+                  alt='Подарок'
                   layout='fill'
                 />
               </div>
             </div>
-            <div className={stls.treePictureContainer}>
+            {/* <div className={stls.treePictureContainer}>
               <div className={stls.treePicture}>
                 <Image
                   src='/assets/imgs/new-course/tree.png'
@@ -93,9 +101,9 @@ const HeroProgramPhycho = () => {
                   layout='fill'
                 />
               </div>
-            </div>
+            </div> */}
 
-            <OpenForm />
+            <OpenForm className={stls.formWrapper} />
           </div>
           <div className={stls.info}>
             <ProgramInfoAlt />
