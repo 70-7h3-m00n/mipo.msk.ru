@@ -217,7 +217,7 @@ const contact = async (req: NextApiRequest, res: NextApiResponse) => {
   // https://tglk.ru/in/MX4bxnhq9LCnZWR5
 
   const urlToAmo = !!isHighEducation
-    ? 'https://tglk.ru/in/4RonRsOyECa3waNY'
+    ? 'https://hooks.tglk.ru/in/BwPJOY6VJQ3JW4CDarCYeZ79ZGNKaM'
     : 'https://tglk.ru/in/MX4bxnhq9LCnZWR5'
 
   const data = !!isHighEducation ? dataToHigherEducationAMO : dataToMIPOAmo
