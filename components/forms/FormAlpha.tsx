@@ -23,6 +23,7 @@ type FormValues = {
   question: string
   leadPage: string
   formName?: string | null
+  webinarData?: { name: string; date: string; type: string }
 }
 
 const FormAlpha = ({
@@ -32,7 +33,8 @@ const FormAlpha = ({
   atFooter = false,
   agreement = false,
   formName = null,
-  tarifPhycho = ''
+  tarifPhycho = '',
+  webinarData = null
 }) => {
   const {
     register,
@@ -135,7 +137,8 @@ const FormAlpha = ({
       name_programm: title,
       category_programm: category,
       price_programm: priceProduct,
-      full_link: window.location.href
+      full_link: window.location.href,
+      webinarData
     })
 
     try {
