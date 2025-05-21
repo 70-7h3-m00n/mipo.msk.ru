@@ -10,7 +10,8 @@ type TPopupCta = {
   close: MouseEventHandler
   question?: boolean
   formName?: string
-  tarifPhycho?: string
+  tarifPhycho?: string,
+  webinarData? : {name: string, date: string, type: string}
 }
 
 const PopupCta: FC<TPopupCta> = ({
@@ -20,7 +21,8 @@ const PopupCta: FC<TPopupCta> = ({
   close,
   question = false,
   formName,
-  tarifPhycho
+  tarifPhycho,
+  webinarData
 }) => {
   return (
     <div className={stls.container}>
@@ -36,6 +38,7 @@ const PopupCta: FC<TPopupCta> = ({
           popup={true}
           formName={formName}
           tarifPhycho={tarifPhycho}
+          webinarData={webinarData}
         />
       </div>
     </div>

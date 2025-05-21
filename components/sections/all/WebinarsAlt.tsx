@@ -100,6 +100,11 @@ const WebinarsAlt = ({ webinars = null }: WebinarsAltType) => {
                       }
                       cta={'Оставить заявку'}
                       close={close}
+                      webinarData={{
+                        name: webinar?.title,
+                        date: webinar?.date,
+                        type: webinar?.category
+                      }}
                     />
                   )}
                 </Popup>
