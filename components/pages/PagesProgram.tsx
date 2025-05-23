@@ -137,7 +137,7 @@ const PagesProgram = ({ ofType = null, reviews }: PagesProgramType) => {
             <>
               Забронируйте программу по спеццене —{' '}
               <span className={stls.highlightFw}>
-                со скидкой <span className={stls.highlightC}>50%</span>
+                со скидкой <span className={stls.highlightC}>{SALE_VALUE}%</span>
                 <IconGeneralTextDecorativeUnderline
                   classNames={[stls.IconGeneralTextDecorativeUnderline]}
                 />
