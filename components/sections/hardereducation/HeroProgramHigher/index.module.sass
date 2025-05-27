@@ -194,9 +194,13 @@ $heading_ld_altStyles_mr: 12%
       max-width: f.px(570)
     display: flex
     align-self: start
+    align-items: center
     width: 100%
     & button
       width: 270px
+      height: 60px
+      margin: 0
+      border-radius: 15px
     & > div
       & button
         background-color: c.$color-blue
@@ -296,3 +300,7 @@ $heading_ld_altStyles_mr: 12%
   color: c.$color-dark-grey !important
   & a 
     color: c.$color-dark-grey !important
+  @include m.media(phone, tablet)
+    color: c.$color-white !important
+    & a
+      color: c.$color-white !important

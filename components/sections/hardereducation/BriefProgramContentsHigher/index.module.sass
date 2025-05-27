@@ -26,6 +26,8 @@
   border: 1px solid c.$color-blue
   border-radius: 100px 10px 0 0
   border-bottom: none
+  @include m.media(phone, tablet)
+      border-radius: 50px 10px 0 0
 .top
   @include m.media(laptop, desktop)
     @include m.flex($jc: space-between)
@@ -83,6 +85,8 @@
     border: 1px solid c.$color-blue
     align-items: center
     border-radius: 0 0 100px 0
+    @include m.media(phone, tablet)
+      border-radius: 0 0 50px 0
     border-top: none
     background-color: c.$color-white
     overflow: hidden
@@ -116,6 +120,10 @@
     .btn
         flex-grow: 0
         max-height: fit-content
+        border-radius: 15px
+        transition: transform 0.3s ease-in-out
+        &:hover
+            transform: scale(1.05)
 
 .wrapperForForm
   padding: 0

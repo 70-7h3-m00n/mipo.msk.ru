@@ -8,16 +8,16 @@
         background-color: c.$color-verywhite-blue
     padding: 80px 0
     position: relative
-    &::after
-        content: ''
-        top: -150px
-        left: -50px
-        position: absolute
-        width: 534px
-        height: 534px
-        background-image: url('/assets/imgs/hardereducation/bgElipses.png')
-        background-size: contain
-        z-index: 0
+    // &::after
+    //     content: ''
+    //     top: -150px
+    //     left: -50px
+    //     position: absolute
+    //     width: 534px
+    //     height: 534px
+    //     background-image: url('/assets/imgs/hardereducation/bgElipses.png')
+    //     background-size: contain
+    //     z-index: 0
     &::before
         content: ''
         right: -50px
@@ -69,12 +69,13 @@
             border-radius: 25px
             & > div:nth-child(1)
                 font-size: 18px
-                font-weight: 500
+                font-weight: 400
             .imageWrapper
                 border-radius: 25px
                 overflow: hidden
                 position: relative
                 flex-grow: 1
+                min-height: 200px
                 img
                     width: 100%
                     object-fit: cover
@@ -88,6 +89,7 @@
              margin-top: 20px
              .title
                 font-size: 18px !important
+                font-weight: 400
         & > div
             border-radius: 25px
             padding: 30px
@@ -99,6 +101,8 @@
             background-color: c.$color-blue
             color: c.$color-white
             font-size: 20px
+            @media (max-width: 720px)
+                font-size: 18px !important
             & ul, li
                 list-style: none 
                 padding: 0
