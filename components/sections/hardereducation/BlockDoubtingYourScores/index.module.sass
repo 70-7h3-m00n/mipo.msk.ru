@@ -10,7 +10,10 @@
     border: 1px solid c.$color-blue
     align-items: center
     border-radius: 10px 10px 100px 10px
+    .title
+         font-weight: 400 !important
     @media (max-width: 720px)
+        border-radius: 10px 10px 60px 10px
         flex-direction: column
         padding: 30px
         margin-top: 20px
@@ -27,7 +30,7 @@
             margin-top: 20px
             color: c.$color-white
             font-size: 20px
-            font-weight: 500
+            font-weight: 400
             @media (max-width: 720px)
                 font-size: 15px !important
             &.black
@@ -50,4 +53,15 @@
     .btn
         flex-grow: 0
         max-height: fit-content
+        min-width: 300px
+        display: flex
+        justify-content: center
+        border-radius: 15px
+        transition: transform 0.3s ease-in-out
+        &:hover
+            transform: scale(1.05)
+        @media (max-width: 720px)
+            min-width: auto
+            margin-bottom: 20px
+
         
