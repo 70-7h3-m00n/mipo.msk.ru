@@ -75,12 +75,12 @@ const Faq = ({ isForPhychology = false, isHigherEducation = false }: Props) => {
             Часто задаваемые вопросы
           </h2>
           <div
-            className={cn(stls.laptopdesktop, { [stls.altStyles]: altStyles })}>
+            className={cn(stls.laptopdesktop, isHigherEducation && stls.isHigherEducation, { [stls.altStyles]: altStyles })}>
             <p
               className={cn(
                 stls.p,
                 altStyles && stls.altStyles,
-                isForPhychology && stls.forPhychology
+                isForPhychology && stls.forPhychology,
               )}>
               У Вас есть вопросы? Оставьте заявку! <br />И мы перезвоним Вам!
             </p>
@@ -108,7 +108,7 @@ const Faq = ({ isForPhychology = false, isHigherEducation = false }: Props) => {
             </p>
           </div>
         </div>
-        <div className={cn(stls.phonetablet, { [stls.altStyles]: altStyles })}>
+        <div className={cn(stls.phonetablet,  { [stls.altStyles]: altStyles })}>
           <PopupTrigger btn='zeta' cta='askQuestion' />
         </div>
       </Wrapper>

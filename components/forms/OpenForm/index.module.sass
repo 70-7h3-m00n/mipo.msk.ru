@@ -69,12 +69,17 @@
 .btn
   @include m.media(laptop, desktop)
     flex-basis: 100%
+    &.higherEducation
+      & button
+        background-color: c.$color-blue !important
+        border: none !important
+        border-radius: 15px
     & > *
       width: 100%
 
 .agreement
-  margin-top: f.px(30)
-  font-size: f.px(13)
+  margin-top: f.px(10)
+  font-size: f.px(14)
   @include m.dye(c, c.$kappa)
 
 .err

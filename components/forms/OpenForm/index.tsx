@@ -25,7 +25,7 @@ type FormValues = {
   question: string
   leadPage: string
   formName?: string | null
-  isHigherEducation?: boolean,
+  isHigherEducation?: boolean
 }
 
 const OpenForm = ({
@@ -295,16 +295,18 @@ const OpenForm = ({
             </div>
           )}
 
-          <div className={stls.btn}>
+          <div
+            className={classNames(
+              stls.btn,
+              isHigherEducation && stls.higherEducation
+            )}>
             <BtnAlpha text={textButton} isDisabled={isDisabled} />
           </div>
 
-          {agreement && (
-            <p className={stls.agreement}>
-              Нажимая кнопки на сайте Вы даете свое согласие на обработку Ваших
-              персональных данных
-            </p>
-          )}
+          <p className={stls.agreement}>
+            Нажимая кнопку, принимаю условия политики и пользовательского
+            соглашения
+          </p>
         </div>
       </form>
     </>
