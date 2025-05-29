@@ -134,7 +134,7 @@ const NewHeader = () => {
           <OpenMenuPoint />
           <div className={stls.lineSecondMenu}>
             <SecondLvlMenu
-              textPointmenu='Об иснтитуте'
+              textPointmenu='Об институте'
               menuLinks={menuAboutCompany}
             />
             <Link href='/contact'>
