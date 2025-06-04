@@ -162,9 +162,15 @@ const contact = async (req: NextApiRequest, res: NextApiResponse) => {
     formName: formName || null,
     type_tariff: tarifPhycho || null,
     name_programm: name_programm || null,
-    category_programm: category_programm || webinarData.type || null,
-    price_programm: price_programm || (webinarData.name && `Вебинар ${webinarData.name} на ${webinarData.date}`) || null,
-    full_link: full_link || null
+    category_programm:
+      category_programm || (webinarData && webinarData.type) || null,
+    price_programm: price_programm || null,
+    full_link: full_link || null,
+    webinarName:
+      (webinarData &&
+        webinarData.name &&
+        `Вебинар ${webinarData.name} на ${webinarData.date}`) ||
+      null
   }
 
   const dataToHigherEducationAMO = {
