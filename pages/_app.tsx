@@ -241,12 +241,24 @@ function MyApp({ Component, pageProps }) {
         <Script
           id='marquiz-script-start'
           dangerouslySetInnerHTML={{
-            __html: `(function(w, d, s, o){ var j = d.createElement(s); j.async = true; j.src = '//script.marquiz.ru/v2.js';
-            j.onload = function() { if (document.readyState !== 'loading') Marquiz.init(o); 
-            else document.addEventListener("DOMContentLoaded", function() { Marquiz.init(o); }); }; 
-            d.head.insertBefore(j, d.head.firstElementChild); })
-            (window, document, 'script', { host: '//quiz.marquiz.ru', region: 'eu', id: '65c3391e3e254300269228bc', 
-            autoOpen: false, autoOpenFreq: 'once', openOnExit: false, disableOnMobile: false } );`
+            __html: `(function(w, d, s, o){
+                      var j = d.createElement(s); j.async = true; j.src = '//script.marquiz.ru/v2.js';j.onload = function() {
+                        if (document.readyState !== 'loading') Marquiz.init(o);
+                        else document.addEventListener("DOMContentLoaded", function() {
+                          Marquiz.init(o);
+                        });
+                      };
+                      d.head.insertBefore(j, d.head.firstElementChild);
+                    })(window, document, 'script', {
+                        host: '//quiz.marquiz.ru',
+                        region: 'ru',
+                        id: '68400939797a4b001843cfcc',
+                        autoOpen: 20,
+                        autoOpenFreq: 'always',
+                        openOnExit: true,
+                        disableOnMobile: false
+                      }
+                    );`
           }}
         />
       )}
@@ -255,12 +267,7 @@ function MyApp({ Component, pageProps }) {
         <Script
           id='marquiz'
           dangerouslySetInnerHTML={{
-            __html: `(function(t, p) {window.Marquiz ? Marquiz.add([t, p]) : document.addEventListener('marquizLoaded', 
-            function() {Marquiz.add([t, p])})})('Pop', {id: '65c3391e3e254300269228bc', 
-            title: 'ПОЛУЧИТЬ ИНДИВИДУАЛЬНОЕ ПРЕДЛОЖЕНИЕ', text: 'ДЛЯ ВАС ПОДАРОК ОТ ИНСТИТУТА', 
-            delay: 2, textColor: '#ffffff', bgColor: '#3846c8', svgColor: '#ffffff', closeColor: '#ffffff', bonusCount: 2, 
-            bonusText: 'Вам доступны бонусы и скидка', type: 'full', position: 'position_bottom', shadow: 'rgba(56, 70, 200, 0)', 
-            blicked: true, pulse: 'rgba(56, 70, 200, 0.4)'})`
+            __html: `(function(t, p) {window.Marquiz ? Marquiz.add([t, p]) : document.addEventListener('marquizLoaded', function() {Marquiz.add([t, p])})})('Pop', {id: '68400939797a4b001843cfcc', title: 'Поддержка от института МИПО', text: 'Заберите 15.000 бонусов за прохождение опроса', delay: 1, textColor: '#ffffff', bgColor: '#4072d3', svgColor: '#ffffff', closeColor: '#ffffff', bonusCount: 0, bonusText: 'Ваша скидка: 15 000 ₽', type: 'full', position: 'position_bottom'})`
           }}
         />
       )}
