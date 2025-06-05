@@ -24,6 +24,12 @@ export default function MySlider() {
 
   const data: SliderElement[] = [
     {
+      title: 'Пройдите короткий опрос и получите дополнительную выгоду до 15.000р. на любой курс + два курса в подарок!',
+      desc: '*подробности уточняйте у специалиста приемной комиссии',
+      bgImage: '/assets/imgs/banners/slide0.jpg',
+      color: 'white'
+    },
+    {
       title: 'Московский институт профессионального образования',
       desc: 'Получи новую профессию или повысь квалификацию по своему нынешнему направлению дистанционно',
       bgImage: '/assets/imgs/banners/slide1.jpg',
@@ -68,7 +74,7 @@ export default function MySlider() {
             <SwiperSlide key={idx}>
               <div
                 style={{ backgroundImage: `url(${elem.bgImage})` }}
-                className={stls.slide}>
+                className={cn(stls.slide, idx === 0 && stls.firstSlide)}>
                 <div className={stls.content}>
                   <Title
                     fontSize={50}
@@ -79,7 +85,7 @@ export default function MySlider() {
                   <div className={cn(stls.desc, stls[elem.color])}>
                     {elem.desc}
                   </div>
-                  {idx !== 1 && idx !== 2 ? (
+                  {idx !== 0 && idx !== 2 && idx !== 3 ? (
                     <Popup
                       trigger={
                         <UniversalButton
@@ -106,13 +112,13 @@ export default function MySlider() {
                     <UniversalButton
                       colorText='white'
                       borderColor='white'
-                      borderPx={idx !== 1 && idx !== 2 && 1}
+                      borderPx={idx !== 2 && idx !== 3 && 1}
                       className={cn(
                         stls.btn,
-                        idx == 1 && stls.darkBlueBgBtn,
-                        idx == 2 && stls.blueBgBtn
+                        idx == 2 && stls.darkBlueBgBtn,
+                        idx == 3 && stls.blueBgBtn
                       )}
-                      linkTo='/programs'>
+                      linkTo={idx == 0 ? 'https://mrqz.me/6836e1e53845b7001a859d62?utm_source=quiz&utm_medium=cpc&utm_campaign=bannersait' : '/programs'}>
                       Выбрать направление
                     </UniversalButton>
                   )}

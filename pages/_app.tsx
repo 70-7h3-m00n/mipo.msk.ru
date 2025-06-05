@@ -267,7 +267,7 @@ function MyApp({ Component, pageProps }) {
         <Script
           id='marquiz'
           dangerouslySetInnerHTML={{
-            __html: `(function(t, p) {window.Marquiz ? Marquiz.add([t, p]) : document.addEventListener('marquizLoaded', function() {Marquiz.add([t, p])})})('Pop', {id: '68400939797a4b001843cfcc', title: 'Поддержка от института МИПО', text: 'Заберите 15.000 бонусов за прохождение опроса', delay: 1, textColor: '#ffffff', bgColor: '#4072d3', svgColor: '#ffffff', closeColor: '#ffffff', bonusCount: 0, bonusText: 'Ваша скидка: 15 000 ₽', type: 'full', position: 'position_bottom'})`
+            __html: `(function(t, p) {window.Marquiz ? Marquiz.add([t, p]) : document.addEventListener('marquizLoaded', function() {Marquiz.add([t, p])})})('Pop', {id: '68400939797a4b001843cfcc', title: 'Поддержка от института МИПО', text: 'Заберите 15.000 бонусов за прохождение опроса', delay: 1, textColor: '#ffffff', bgColor: '#4072d3', svgColor: '#ffffff', closeColor: '#ffffff', bonusCount: 0, bonusText: 'Ваша скидка: до 15 000 ₽', type: 'full', position: 'position_bottom'})`
           }}
         />
       )}
