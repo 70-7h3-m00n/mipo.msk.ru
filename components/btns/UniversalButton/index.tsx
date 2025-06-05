@@ -47,10 +47,15 @@ const UniversalButton = ({
     }
   }
 
-  const router = useRouter()
+  // const router = useRouter()
 
   const goToLink = () => {
-    router.push(linkTo)
+    // router.push(linkTo)
+    const link = document.createElement('a')
+    link.target = '_blank';
+    link.href = linkTo; 
+    link.click();
+    
   }
 
   const style = {
