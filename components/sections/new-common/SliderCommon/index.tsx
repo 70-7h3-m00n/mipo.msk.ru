@@ -118,7 +118,7 @@ export default function MySlider() {
                         idx == 2 && stls.darkBlueBgBtn,
                         idx == 3 && stls.blueBgBtn
                       )}
-                      linkTo={idx == 0 ? 'https://mrqz.me/6836e1e53845b7001a859d62?utm_source=quiz&utm_medium=cpc&utm_campaign=bannersait' : '/programs'}>
+                      linkTo={idx == 0 ? 'https://mrqz.me/68400939797a4b001843cfcc?utm_source=quizmipo&utm_medium=cpc&utm_campaign=bannersait' : '/programs'}>
                       Выбрать направление
                     </UniversalButton>
                   )}
